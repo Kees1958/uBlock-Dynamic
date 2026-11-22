@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html id="uBO-matrix-panel">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/panel-shared.css">
+<link rel="stylesheet" href="matrix-panel.css">
+<title>DNR tracking filter — uBlock Dynamic</title>
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────────────── -->
+<header id="monitorHeader">
+    <div id="monitorMeta">
+        <span id="panelHost" class="monitor-host">—</span>
+        <span id="timerDisplay" class="monitor-timer">--:--</span>
+        <span id="panelStats" class="matrix-stats">—</span>
+    </div>
+    <div id="monitorControls">
+        <button id="btnRefresh" type="button" class="monitor-btn">Refresh</button>
+        <button id="btnExit" type="button" class="monitor-btn monitor-btn-exit">Exit</button>
+    </div>
+</header>
+
+<!-- ── Intro ───────────────────────────────────────────────────────────── -->
+<!-- Content set dynamically by matrix-panel.js's updateIntroText() — mirrors
+     the BLOCK/ALLOW mode this page is currently in. See that function's
+     own comment for why this isn't static markup. -->
+<p id="monitorHelp"></p>
+
+<!-- ── Filter row — mode switch ────────────────────────────────────────── -->
+<!-- Left: static explanatory text. Right: the actual mode switch, with its
+     own two self-explanatory end-labels (SHOW BLOCKED / SHOW ALLOWED) —
+     no separate checkbox caption needed, unlike the old plain-checkbox
+     version. Defaults to SHOW ALLOWED (unchecked): see matrix-panel.js's
+     currentMode() for what each side actually filters. -->
+<div id="matrixFilterRow">
+    <span id="matrixFilterLabel">Choose what domains to show by using the switch on the right</span>
+    <label id="matrixModeSwitch"
+        title="SHOW BLOCKED: list only domains already blocked (filter lists or overrides) — the ones an ALLOW click can act on. SHOW ALLOWED: list only domains not already blocked — the ones a BLOCK click can act on.">
+        <span class="switch-text switch-text-blocked">SHOW BLOCKED</span>
+        <span class="switch-track">
+            <input type="checkbox" id="matrixShowBlockedToggle">
+            <span class="switch-thumb" aria-hidden="true"></span>
+        </span>
+        <span class="switch-text switch-text-allowed">SHOW ALLOWED</span>
+    </label>
+</div>
+
+<!-- ── Entry table — thead/tbody built dynamically by matrix-panel.js ───── -->
+<div class="table-scroll" id="tableScroll">
+    <table class="entry-table">
+        <thead id="matrixThead">
+        </thead>
+        <tbody id="entryBody">
+        </tbody>
+    </table>
+
+    <p class="monitor-empty" id="emptyState">Waiting for connections…<br>Third-party connections appear here as the page loads.</p>
+</div>
+
+<footer class="panel-footer">User interface inspired by uBO Mv2</footer>
+
+<script src="../js/ui/theme.js" type="module"></script>
+<script src="matrix-panel.js" type="module"></script>
+
+</body>
+</html>

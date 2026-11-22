@@ -1,0 +1,505 @@
+[
+  {
+    "id": 487018,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "japscan.foo",
+        "japscan.lol",
+        "japscan.si",
+        "japscan.vip"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||platform.pubadx.one/pubadx-ad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1032729,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "japscan.foo",
+        "japscan.st"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||platform.pubadx.one/pubadx-ad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1183693,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "commentcamarche.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||c.amazon-adsystem.com/aax2/apstag.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 273457,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "commentcamarche.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||widgets.outbrain.com/outbrain.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1102303,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "jardiner-malin.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn-a.yieldlove.com/yieldlove-bidder.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 612313,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "linternaute.com",
+        "sante.journaldesfemmes.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||dpm.zebestof.com/*/tag.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1509429,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "linternaute.com",
+        "sante.journaldesfemmes.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||amazon-adsystem.com/*/apstag.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1646790,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "linternaute.com",
+        "sante.journaldesfemmes.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.adsafeprotected.com/iaspet.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1461904,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "linternaute.com",
+        "sante.journaldesfemmes.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 423637,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ultimate-catch.eu"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||static.criteo.net/js/px.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1132279,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||ads-canalplus.akamaized.net/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 440004,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||static.canal-plus.net/pub/*/*_*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 660242,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "geo.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||js-sec.indexww.com/ht/p/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 793419,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "geo.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||prismamedia-com.videoplayerhub.com/galleryplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1651785,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "voici.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||js-sec.indexww.com/ht/p/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1018862,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "voici.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||prismamedia-com.videoplayerhub.com/galleryplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 205735,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "capital.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||js-sec.indexww.com/ht/p/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 956236,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "capital.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||prismamedia-com.videoplayerhub.com/galleryplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 324783,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "purepeople.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.lib.getjad.io/library/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1369558,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gala.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||js-sec.indexww.com/ht/p/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 215543,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gala.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||prismamedia-com.videoplayerhub.com/galleryplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 279412,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tf1.fr"
+      ],
+      "urlFilter": "||tf1.fr/assets/js/build/lib/ad",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1256453,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "crunchyscan.fr"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 364701,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "letocard.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1250464,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "deviceType"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||exposure.api.redbee.live/*/customer/rtbf/businessunit/auvio/entitlement/",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

@@ -1,0 +1,2324 @@
+[
+  {
+    "id": 1,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.cz",
+        "downdetector.sk"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/*/settings.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.cz",
+        "downdetector.sk"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/evidon-sitenotice-bundle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nova.cz"
+      ],
+      "urlFilter": "||static.cz.prg.cmestatic.com/static/shared/app/videojs/plugins/ads/videojs.ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 4,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nova.cz"
+      ],
+      "urlFilter": "||static.cz.prg.cmestatic.com/static/shared/app/videojs/plugins/ads/ads.integration.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 5,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 7,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 8,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 9,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 10,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 11,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 12,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 13,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 14,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.cz",
+        "google.sk"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 15,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.sk"
+      ],
+      "urlFilter": "||googleadservices.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 16,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fxstreet.cz",
+        "heureka.cz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 17,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "super-games.cz"
+      ],
+      "regexFilter": "\\/t[a-f0-9v]{10,13}\\.js$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 18,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "bunkr.sk"
+      ],
+      "excludedRequestDomains": [
+        "addtoany.com",
+        "alicdn.com",
+        "amazonaws.com",
+        "aoneroom.com",
+        "appboycdn.com",
+        "awswaf.com",
+        "azurewebsites.net",
+        "b-cdn.net",
+        "blogger.com",
+        "bootstrapcdn.com",
+        "bunnycdn.ru",
+        "bytecdntp.com",
+        "cackle.me",
+        "capo6play.com",
+        "cdn-apple.com",
+        "cdn.ampproject.org",
+        "cdn.staticfile.org",
+        "cdnhop.com",
+        "chatango.com",
+        "clarity.ms",
+        "cleverpush.com",
+        "cloudflare.com",
+        "cloudflare.net",
+        "cloudflareinsights.com",
+        "cloudfront.net",
+        "code.iconify.design",
+        "connatix.com",
+        "cookielaw.org",
+        "cxense.com",
+        "disqus.com",
+        "disquscdn.com",
+        "dmca.com",
+        "doodcdn.io",
+        "dotmetrics.net",
+        "ebacdn.com",
+        "facebook.net",
+        "fastcomments.com",
+        "fastly-insights.com",
+        "fastly.net",
+        "fastlylb.net",
+        "fbcdn.net",
+        "fluidplayer.com",
+        "fontawesome.com",
+        "github.io",
+        "google-analytics.com",
+        "google.com",
+        "googleapis.com",
+        "googleoptimize.com",
+        "googletagmanager.com",
+        "goonbox.cr",
+        "gstatic.com",
+        "hcaptcha.com",
+        "highcharts.com",
+        "hwcdn.net",
+        "idcdn.de",
+        "ilfcdn.li",
+        "imgsmail.ru",
+        "inmobi.com",
+        "instagram.com",
+        "intensedebate.com",
+        "jpg5.su",
+        "jpg6.su",
+        "jquery.com",
+        "jscdnservices.com",
+        "jsdelivr.net",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "k5a.io",
+        "ko-fi.com",
+        "libs.baidu.com",
+        "linkvertise.com",
+        "lulustream.com",
+        "media-imdb.com",
+        "mega.co.nz",
+        "mega.nz",
+        "nocookie.net",
+        "onesignal.com",
+        "onetrust.com",
+        "online-metrix.net",
+        "outbrain.com",
+        "permutive.app",
+        "plyr.io",
+        "polyfill-fastly.io",
+        "primis.tech",
+        "privacy-mgmt.com",
+        "quantserve.com",
+        "rabbitstream.net",
+        "recaptcha.net",
+        "rsc.cdn77.org",
+        "scorecardresearch.com",
+        "sharecast.ws",
+        "sharethis.com",
+        "shrink.pe",
+        "speedcurve.com",
+        "spot.im",
+        "static.bigbrain.gg",
+        "statically.io",
+        "tailwindcss.com",
+        "teads-xo.com",
+        "tinypass.com",
+        "tolstoycomments.com",
+        "trustpilot.com",
+        "tvableon.me",
+        "twimg.com",
+        "twitter.com",
+        "ulogin.ru",
+        "unpkg.com",
+        "userapi.com",
+        "utteranc.es",
+        "viafoura.net",
+        "vidazoo.com",
+        "vixcloud.co",
+        "vk.com",
+        "vuukle.com",
+        "waust.at",
+        "wknd.ai",
+        "workers.dev",
+        "wp.com",
+        "wpmucdn.com",
+        "wsimg.com",
+        "x.com",
+        "yastatic.net",
+        "youtube.com",
+        "ytimg.com",
+        "zencdn.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xnxx.co.cz"
+      ],
+      "urlFilter": "/vast.php?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 20,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "oxtorrent.sk"
+      ],
+      "urlFilter": "||cloudfront.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 21,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "oxtorrent.sk"
+      ],
+      "urlFilter": "||s3.amazonaws.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 22,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myonlineradio.sk"
+      ],
+      "urlFilter": "/inside-banner.mini.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 23,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hurawatch.cz"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "/assets/_bnx/*_*xx.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 24,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "openads.aira.cz",
+        "adactive.cz",
+        "i-reklama.sk",
+        "serve.affiliate.heurekashopping.sk"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "admaster.cz",
+        "vvbox.cz",
+        "bannery.hledejceny.cz",
+        "c.mfstatic.cz",
+        "measure.mf.cz",
+        "webmine.cz"
+      ],
+      "domainType": "thirdParty"
+    }
+  },
+  {
+    "id": 26,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||seznam.cz/*/v2/xhr|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 27,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.telekomunikace.cz/banners",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 28,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||warforum.xyz/ads.js?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 29,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||armyweb.cz/data/presentation/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 30,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||1gr.cz/u/idn4/reklama",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 31,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "titulky.com"
+      ],
+      "urlFilter": "||vlm-ads.aimatch.com/vlm/jserver/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 32,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||titulky.com/mybanalter/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 33,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sector.sk/default-*.aspx",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 34,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sector.sk/scripts/trixam.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 35,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||svetserialu.*/assets/js/popads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 36,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||svetserialu.*/assets/js/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 37,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cnews.cz"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 38,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ewrc.cz"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 39,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||horoskopy.cz/*/html/adform_sync.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 40,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "denik.cz"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 41,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||stream.cz/*/v*/vast",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 42,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||storage.googleapis.com/pravda-ad-script/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 43,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||titulky.com/myban/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 44,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||titulky.com/mybanal/ads-section.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 45,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "titulky.com"
+      ],
+      "urlFilter": "||titulky.com/ads/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 46,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "titulky.com"
+      ],
+      "urlFilter": "||titulky.com/exitpop*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 47,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "titulky.com"
+      ],
+      "urlFilter": "||titulky.com/ads/titulky-ads-banner.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 48,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lexusclub.cz/aaa.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 49,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||storage.googleapis.com/adf-pmmm/impublishertag.repeater.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 50,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fontech.startitup.sk/wp-content/themes/fontech/js/ads_adform.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 51,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "playzone.cz"
+      ],
+      "resourceTypes": [
+        "image",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||cz.mrezadosa.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 52,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ewrc.cz"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 53,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bombuj.si"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 54,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "media.cms.markiza.sk"
+      ],
+      "urlFilter": "||s2.adform.net/banners/scripts/st/trackpoint-async.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 55,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||datashare.spravazeleznic.cz/szdc-apps/theme-szdc/js/cms_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 56,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nextech.sk/files/photo/*top.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 57,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nextech.sk/files/photo/*left.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 58,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nextech.sk/files/photo/*right.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 59,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nikee.net"
+      ],
+      "urlFilter": "||alza.cz^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 60,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "initiatorDomains": [
+        "digimanie.cz",
+        "relaxuj.cz",
+        "svethardware.cz",
+        "svetmobilne.cz"
+      ],
+      "urlFilter": "/_js/pubfig.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 61,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "citroen-club.cz"
+      ],
+      "urlFilter": "||google-analytics.com/analytics.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 62,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.primacdn.cz/sas/sas/sasspa.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 63,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.primacdn.cz/sas/ads/templates/creatives.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 64,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "iprima.cz"
+      ],
+      "urlFilter": "||prima-vod-prep.ssl.cdn.cra.cz/vod_prima/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 65,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "iprima.cz"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||cdn.dopc.cz^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 66,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fiatclub.eu"
+      ],
+      "urlFilter": "||google-analytics.com/analytics.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 67,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||login.dognet.sk/accounts/default1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 68,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "media.joj.sk"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 69,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.freevideo.cz/static/prbn/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 70,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sbazar.cz/*/static/js/ssp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 71,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||svetapple.sk/*/ecophone-banner.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 72,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sport.cz/*/static/js/ssp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 73,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "svetzeny.cz"
+      ],
+      "urlFilter": "||cdn.brandparadise.cz/cache/burda-ads/dist/svetzeny/ads_controller.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 74,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "forum24.cz",
+        "garaz.cz",
+        "nasezahrada.com",
+        "novinky.cz",
+        "prozeny.cz",
+        "seznam.cz",
+        "seznamzpravy.cz",
+        "sport.cz",
+        "super.cz"
+      ],
+      "urlFilter": "/cwl.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 75,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "seznam.cz"
+      ],
+      "urlFilter": "||h.imedia.cz/js/cmp2/scmp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 76,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||seznam.cz/*/v2/vast?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 77,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||seznam.cz/*/static/js/ssp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 78,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||najserialy.io/sk?s=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 79,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||drevostavitel.cz/img/prevleceni",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 80,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "play.joj.sk"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 81,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||stream.cz/*/vast?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 82,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||garaz.cz/*/static/js/ssp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 83,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "penize.cz"
+      ],
+      "urlFilter": "||static-css.pencdn.cz/javascript/www/mafra/*/mafra-pcz-nojq.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 84,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "divoch.cz"
+      ],
+      "urlFilter": "||affil.invia.cz/direct/core/tool_dynamic-banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 85,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zive.cz"
+      ],
+      "urlFilter": "||cdn.cpex.cz/logos/cnc.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 86,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zive.cz"
+      ],
+      "urlFilter": "||cdn.cpex.cz/cmp/v*/cpex-cmp.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 87,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "parlamentnilisty.cz"
+      ],
+      "urlFilter": "||trackad.cz/adtrack.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 89,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "peak.cz"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 90,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cms.nova.cz"
+      ],
+      "urlFilter": "||static.ads-twitter.com/uwt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 92,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nova.cz"
+      ],
+      "urlFilter": "||trackad.cz/adtrack.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 93,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kurzy.cz/*/adv_async.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 94,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||s.kurzy.cz/*/s_back.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 95,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||img.kurzy.cz/*/*/*;ad=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 96,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sledujserialy.io/theme/json/episode.ad.etarget.php?adlink=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 97,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||topspeed.sk/ad-blocker.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 98,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||topspeed.sk/ads-prebid.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 99,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "topspeed.sk"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 100,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zdopravy.cz"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 101,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "letemsvetemapplem.eu",
+        "samsungmagazine.eu"
+      ],
+      "urlFilter": "/amalker/pos/mag_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 102,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||letemsvetemapplem.eu/*/alzafeed_*.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 103,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||diit.cz/sites/default/files/_diit_branding/branding.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 104,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xtv.cz"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 105,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xtv.cz"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 106,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xtv.cz"
+      ],
+      "urlFilter": "||go.eu.bbelements.com/bb/bb_one2n.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 107,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xtv.cz"
+      ],
+      "urlFilter": "||bbcdn.go.eu.bbelements.com/bb/bb_one2n.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 108,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "citroen-club.cz",
+        "renault-club.cz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 109,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "citroen-club.cz",
+        "renault-club.cz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 110,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "citroen-club.cz",
+        "renault-club.cz"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||ad.doubleclick.net/ad/test.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 111,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "refi-reklama.razitko.cz"
+      ],
+      "urlFilter": "||refi-reklama.razitko.cz^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 113,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "toyota-club.eu"
+      ],
+      "urlFilter": "||google-analytics.com/analytics.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 115,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "club-opel.com"
+      ],
+      "urlFilter": "||google-analytics.com/analytics.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 116,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "art-reklama.razitko.cz"
+      ],
+      "urlFilter": "||art-reklama.razitko.cz^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 118,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "markiza.sk",
+        "tvnoviny.sk"
+      ],
+      "urlFilter": "||trackad.cz/adtrack.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 119,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "centrum.cz"
+      ],
+      "urlFilter": "||cz.mrezadosa.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 120,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||photos.iboys.com/live/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 121,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "idnes.cz",
+        "novinky.cz"
+      ],
+      "urlFilter": "||cdn.performax.cz/ads|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 122,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "idnes.cz",
+        "novinky.cz"
+      ],
+      "urlFilter": "||sk.adocean.pl/files/js/ado.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 123,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "idnes.cz",
+        "novinky.cz"
+      ],
+      "urlFilter": "||go.eu.bbelements.com/please/code",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 124,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sector.sk/default-ad.aspx",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 125,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sector.sk/default-ad2.aspx",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 126,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||s.aimg.sk/zive_symfony/build/article-adblock*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 127,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "televizeseznam.cz"
+      ],
+      "urlFilter": "||imedia.cz^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 129,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "svetandroida.cz"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 130,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "antiyoutuber.cz"
+      ],
+      "urlFilter": "||1gr.cz/*/js/uni/paticka.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 131,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "expres.cz"
+      ],
+      "urlFilter": "||1gr.cz/*/js/uni/paticka.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 132,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "idnes.cz"
+      ],
+      "urlFilter": "||1gr.cz/*/js/uni/paticka.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 133,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||diit.cz/sites/default/files/_cdr_branding/branding.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 134,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdr.cz/sites/default/files/_cdr_branding/branding.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 135,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bombuj.tv/adblock/fuckadblock2.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 136,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||auto.cz/js/base-cz/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 137,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||auto.cz/auto/skins/*/js/advertisment.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 138,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sport.cz"
+      ],
+      "urlFilter": "||c.imedia.cz/context?url=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 139,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nova.cz"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 140,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nova.cz"
+      ],
+      "urlFilter": "||pubads.g.doubleclick.net/gampad/ads?*=xml_vast*nova.cz",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 141,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "idos.idnes.cz"
+      ],
+      "urlFilter": "||cz.mrezadosa.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 142,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||1gr.cz/css/idn3/reklama-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 143,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "idnes.cz"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||mfr.cdn.dopc.cz^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 144,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "idnes.cz"
+      ],
+      "urlFilter": "||1gr.cz/reklama/banner.js?clickthru=advert|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 145,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||data.idnes.cz/nocache/dpp/dacan/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 146,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||eurozpravy.cz/etarget.php?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 147,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||img.motorkari.cz/upload/files/banery^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 148,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||zive.cz/client.scripts/advertisment.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 149,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||prima-vod-prep.ssl.cdn.cra.cz/vod_prima^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 150,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||static.cz.prg.cmestatic.com/static/cz/shared/js/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 151,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||eco.cdn.dopc.cz^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 152,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||img.blesk.cz/js/base-cz/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 153,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||img.blesk.cz/static/data/blesk/reklama/advertisment.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 154,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "iprima.cz"
+      ],
+      "urlFilter": "||iprima.cz/*/*tagid=*&keywords=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 155,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "warforum.xyz"
+      ],
+      "urlFilter": "fastshare.cloud/top*?utm_source=*&utm_medium=*&utm_campaign=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 156,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sme.sk"
+      ],
+      "urlFilter": "||cdn.tinypass.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 157,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||extra.cz/*/*pripad",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 158,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mobilmania.cz/rsshubpager.ashx",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 159,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "excludedInitiatorDomains": [
+        "hcplzen.cz"
+      ],
+      "resourceTypes": [
+        "sub_frame",
+        "stylesheet",
+        "script",
+        "image",
+        "font",
+        "xmlhttprequest",
+        "ping",
+        "media",
+        "websocket",
+        "other"
+      ],
+      "urlFilter": ".cz/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 160,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mobilmania.cz"
+      ],
+      "urlFilter": "||googletagmanager.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 161,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mobilmania.cz"
+      ],
+      "urlFilter": "||mfstatic.cz/js/advantage.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 162,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||stream.cz/static/js/stream/issuedetector/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 163,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||egrensis.cz/images/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 164,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "forum.iphone.cz"
+      ],
+      "urlFilter": "||forum.iphone.cz/julek/west-coast-2.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 165,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mobilmania.cz/client.scripts/controls.google.tracker.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 166,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mobilmania.cz/client.scripts/tracking.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 167,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||www2.ebm.cz/include/bannery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 168,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "bannery.navratdoreality.cz",
+        "report.seznamzpravy.cz"
+      ]
+    }
+  },
+  {
+    "id": 169,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "rsz.sk"
+      ],
+      "domainType": "thirdParty"
+    }
+  }
+]

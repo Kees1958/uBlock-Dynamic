@@ -1,0 +1,10 @@
+{
+  "ignores": [
+    "knip",
+    "typescript",
+    "depcheck",
+    "madge",
+    "jscpd",
+    "c8"
+  ]
+}

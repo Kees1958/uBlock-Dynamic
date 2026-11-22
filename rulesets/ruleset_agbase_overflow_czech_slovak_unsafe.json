@@ -1,0 +1,126 @@
+[
+  {
+    "id": 88,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "peak.cz"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 91,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nova.cz"
+      ],
+      "resourceTypes": [
+        "other",
+        "script"
+      ],
+      "urlFilter": "||trackad.cz/adtrack.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 112,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "toyota-club.eu"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||google-analytics.com/analytics.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 114,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "club-opel.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||google-analytics.com/analytics.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 117,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "markiza.sk",
+        "tvnoviny.sk"
+      ],
+      "resourceTypes": [
+        "other",
+        "script"
+      ],
+      "urlFilter": "||trackad.cz/adtrack.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 128,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "svetandroida.cz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

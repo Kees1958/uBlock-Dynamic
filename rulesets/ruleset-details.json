@@ -1,0 +1,1253 @@
+[
+  {
+    "id": "ruleset_kees1958",
+    "name": "Kees1958 most-used EU+US ads & tracking networks",
+    "category": "default",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/master/EU_US_MV3_most_common_ad%2Btracking_networks.txt",
+    "enabled": true,
+    "rawLineCount": 536,
+    "ruleCount": 1,
+    "domainCount": 517,
+    "paramCount": 0,
+    "blockCount": 1,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_adguard_tracking_servers",
+    "name": "AdGuard tracking servers",
+    "category": "default",
+    "locales": [],
+    "enabled": true,
+    "rawLineCount": 4245,
+    "ruleCount": 1,
+    "domainCount": 3906,
+    "paramCount": 0,
+    "blockCount": 1,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_peterlowe",
+    "name": "Peter Lowe advertising & tracking servers",
+    "category": "default",
+    "locales": [],
+    "enabled": true,
+    "rawLineCount": 3555,
+    "ruleCount": 1,
+    "domainCount": 3471,
+    "paramCount": 0,
+    "blockCount": 1,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_badfilter_quickfixes",
+    "name": "Bad filter fixes",
+    "category": "default",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/refs/heads/master/badfilter-quick-fixes.txt",
+    "enabled": true,
+    "rawLineCount": 10,
+    "ruleCount": 6,
+    "domainCount": 1,
+    "paramCount": 0,
+    "blockCount": 3,
+    "allowCount": 3,
+    "redirectCount": 0,
+    "scriptletRuleCount": 1,
+    "cosmeticHostnameCount": 1
+  },
+  {
+    "id": "ruleset_badfilter_quickfixes_unsafe",
+    "name": "Bad filter fixes — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/refs/heads/master/badfilter-quick-fixes.txt",
+    "enabled": true,
+    "ruleCount": 1,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 1,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_annoyances",
+    "name": "AdGuard and EasyList annoyances (specific websites only)",
+    "category": "default",
+    "locales": [],
+    "enabled": true,
+    "rawLineCount": 15983,
+    "ruleCount": 742,
+    "domainCount": 450,
+    "paramCount": 0,
+    "blockCount": 742,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 355,
+    "cosmeticHostnameCount": 7450
+  },
+  {
+    "id": "ruleset_hagezi_light",
+    "name": "HaGeZi's Multi light (known trackers on top-N sites)",
+    "category": "default",
+    "locales": [],
+    "enabled": true,
+    "rawLineCount": 29241,
+    "ruleCount": 7,
+    "domainCount": 27919,
+    "paramCount": 0,
+    "blockCount": 7,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_tracking_servers_allowlist",
+    "name": "AdGuard tracking-server exceptions (hidden)",
+    "category": "default",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/allowlist.txt",
+    "enabled": true,
+    "rawLineCount": 1829,
+    "ruleCount": 1263,
+    "domainCount": 0,
+    "paramCount": 0,
+    "blockCount": 0,
+    "allowCount": 1263,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_adguard_base",
+    "name": "AdGuard Base (block advertising) filter",
+    "category": "default",
+    "locales": [],
+    "enabled": true,
+    "rawLineCount": 30410,
+    "ruleCount": 6126,
+    "domainCount": 1335,
+    "paramCount": 0,
+    "blockCount": 4451,
+    "allowCount": 1675,
+    "redirectCount": 0,
+    "scriptletRuleCount": 2172,
+    "cosmeticHostnameCount": 11027
+  },
+  {
+    "id": "ruleset_adguard_base_unsafe",
+    "name": "AdGuard Base (block advertising) filter — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "enabled": true,
+    "ruleCount": 61,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 61,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_adguard_base_removeparam",
+    "name": "AdGuard Base (block advertising) filter — removeparam companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "enabled": true,
+    "ruleCount": 11,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 11,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_agbase_overflow_dutch_unsafe",
+    "name": "AdGuard Base — Dutch overflow (hidden; auto-enabled with AdGuard Dutch) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 0,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_dutch",
+    "name": "AdGuard Base — Dutch overflow (hidden; auto-enabled with AdGuard Dutch)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 27,
+    "blockCount": 12,
+    "allowCount": 15,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 16,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_german_unsafe",
+    "name": "AdGuard Base — German overflow (hidden; auto-enabled with AdGuard German) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 2,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 2,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_german",
+    "name": "AdGuard Base — German overflow (hidden; auto-enabled with AdGuard German)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 56,
+    "blockCount": 24,
+    "allowCount": 32,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 63,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_french_unsafe",
+    "name": "AdGuard Base — French overflow (hidden; auto-enabled with AdGuard French) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 0,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_french",
+    "name": "AdGuard Base — French overflow (hidden; auto-enabled with AdGuard French)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 31,
+    "blockCount": 11,
+    "allowCount": 20,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 21,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_spanish_unsafe",
+    "name": "AdGuard Base — Spanish overflow (hidden; auto-enabled with AdGuard Spanish) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 0,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_spanish",
+    "name": "AdGuard Base — Spanish overflow (hidden; auto-enabled with AdGuard Spanish)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 25,
+    "blockCount": 10,
+    "allowCount": 15,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 17,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_italian_unsafe",
+    "name": "AdGuard Base — Italian overflow (hidden; auto-enabled with EasyList Italian) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 3,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 3,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_italian",
+    "name": "AdGuard Base — Italian overflow (hidden; auto-enabled with EasyList Italian)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 222,
+    "blockCount": 87,
+    "allowCount": 135,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 251,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_polish_unsafe",
+    "name": "AdGuard Base — Polish overflow (hidden; auto-enabled with EasyList Polish) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 29,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 29,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_polish",
+    "name": "AdGuard Base — Polish overflow (hidden; auto-enabled with EasyList Polish)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 480,
+    "blockCount": 286,
+    "allowCount": 194,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 1120,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_portuguese_unsafe",
+    "name": "AdGuard Base — Portuguese overflow (hidden; auto-enabled with EasyList Portuguese) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 0,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_portuguese",
+    "name": "AdGuard Base — Portuguese overflow (hidden; auto-enabled with EasyList Portuguese)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 15,
+    "blockCount": 2,
+    "allowCount": 13,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 9,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_latvian_unsafe",
+    "name": "AdGuard Base — Baltic states overflow (hidden; auto-enabled with Baltic states filter) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 3,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 3,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_latvian",
+    "name": "AdGuard Base — Baltic states overflow (hidden; auto-enabled with Baltic states filter)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 82,
+    "blockCount": 50,
+    "allowCount": 32,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 96,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_czech_slovak_unsafe",
+    "name": "AdGuard Base — Czech & Slovak overflow (hidden; auto-enabled with EasyList Czech & Slovak) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 6,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 6,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_czech_slovak",
+    "name": "AdGuard Base — Czech & Slovak overflow (hidden; auto-enabled with EasyList Czech & Slovak)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 163,
+    "blockCount": 88,
+    "allowCount": 75,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 210,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_bulgarian_unsafe",
+    "name": "AdGuard Base — Balkan overflow (hidden; auto-enabled with Balkan filter) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 1,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 1,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_bulgarian",
+    "name": "AdGuard Base — Balkan overflow (hidden; auto-enabled with Balkan filter)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 152,
+    "blockCount": 88,
+    "allowCount": 64,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 257,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_nordic_unsafe",
+    "name": "AdGuard Base — Nordic overflow (hidden; auto-enabled with Nordic Filters) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 3,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 3,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_nordic",
+    "name": "AdGuard Base — Nordic overflow (hidden; auto-enabled with Nordic Filters)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 99,
+    "blockCount": 38,
+    "allowCount": 61,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 108,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_hungarian_unsafe",
+    "name": "AdGuard Base — Hungarian overflow (hidden; auto-enabled with Hungarian filter) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 2,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 2,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_hungarian",
+    "name": "AdGuard Base — Hungarian overflow (hidden; auto-enabled with Hungarian filter)",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 63,
+    "blockCount": 34,
+    "allowCount": 29,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 99,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_other_unsafe",
+    "name": "AdGuard Base — Other extended-EU overflow (hidden; auto-enabled by detected browser locale) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 0,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_agbase_overflow_other",
+    "name": "AdGuard Base — Other extended-EU overflow (hidden; auto-enabled by detected browser locale)",
+    "category": "hidden-overflow",
+    "locales": [
+      "el",
+      "lb",
+      "mt"
+    ],
+    "url": "undefined (auto-extracted overflow)",
+    "enabled": false,
+    "ruleCount": 15,
+    "blockCount": 4,
+    "allowCount": 11,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 8,
+    "hidden": true
+  },
+  {
+    "id": "ruleset_adguard_dutch",
+    "name": "Dutch filter (AdGuard & EasyList)",
+    "category": "language-filter",
+    "locales": [
+      "nl"
+    ],
+    "language": "Dutch",
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_8_Dutch/filter.txt",
+    "enabled": false,
+    "rawLineCount": 2272,
+    "ruleCount": 518,
+    "domainCount": 73,
+    "paramCount": 0,
+    "blockCount": 438,
+    "allowCount": 80,
+    "redirectCount": 0,
+    "scriptletRuleCount": 49,
+    "cosmeticHostnameCount": 1186
+  },
+  {
+    "id": "ruleset_adguard_dutch_unsafe",
+    "name": "Dutch filter (AdGuard & EasyList) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_8_Dutch/filter.txt",
+    "enabled": false,
+    "ruleCount": 5,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 5,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_adguard_german",
+    "name": "German filter (AdGuard & EasyList)",
+    "category": "language-filter",
+    "locales": [
+      "de"
+    ],
+    "language": "German",
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_6_German/filter.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_german.txt",
+    "enabled": false,
+    "rawLineCount": 12636,
+    "ruleCount": 2663,
+    "domainCount": 366,
+    "paramCount": 0,
+    "blockCount": 2146,
+    "allowCount": 517,
+    "redirectCount": 0,
+    "scriptletRuleCount": 201,
+    "cosmeticHostnameCount": 3725
+  },
+  {
+    "id": "ruleset_adguard_german_unsafe",
+    "name": "German filter (AdGuard & EasyList) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_6_German/filter.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_german.txt",
+    "enabled": false,
+    "ruleCount": 13,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 13,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_adguard_french",
+    "name": "French filter (AdGuard & EasyList)",
+    "category": "language-filter",
+    "locales": [
+      "fr"
+    ],
+    "language": "French",
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_16_French/filter.txt",
+    "enabled": false,
+    "rawLineCount": 16875,
+    "ruleCount": 4363,
+    "domainCount": 6200,
+    "paramCount": 0,
+    "blockCount": 3700,
+    "allowCount": 663,
+    "redirectCount": 0,
+    "scriptletRuleCount": 203,
+    "cosmeticHostnameCount": 1709
+  },
+  {
+    "id": "ruleset_adguard_french_removeparam",
+    "name": "French filter (AdGuard & EasyList) — removeparam companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_16_French/filter.txt",
+    "enabled": false,
+    "ruleCount": 25,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 25,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_adguard_spanish",
+    "name": "Spanish filter (AdGuard)",
+    "category": "language-filter",
+    "locales": [
+      "es"
+    ],
+    "language": "Spanish",
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_9_Spanish/filter.txt",
+    "enabled": false,
+    "rawLineCount": 6298,
+    "ruleCount": 1130,
+    "domainCount": 176,
+    "paramCount": 0,
+    "blockCount": 678,
+    "allowCount": 452,
+    "redirectCount": 0,
+    "scriptletRuleCount": 591,
+    "cosmeticHostnameCount": 2088
+  },
+  {
+    "id": "ruleset_adguard_spanish_unsafe",
+    "name": "Spanish filter (AdGuard) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_9_Spanish/filter.txt",
+    "enabled": false,
+    "ruleCount": 25,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 25,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_easylist_italian",
+    "name": "Italian filter (EasyList)",
+    "category": "language-filter",
+    "locales": [
+      "it"
+    ],
+    "language": "Italian",
+    "url": "https://raw.githubusercontent.com/easylist/easylistitaly/master/easylistitaly/easylistitaly_adservers.txt",
+    "enabled": false,
+    "rawLineCount": 1428,
+    "ruleCount": 987,
+    "domainCount": 79,
+    "paramCount": 0,
+    "blockCount": 970,
+    "allowCount": 17,
+    "redirectCount": 0,
+    "scriptletRuleCount": 41,
+    "cosmeticHostnameCount": 264
+  },
+  {
+    "id": "ruleset_easylist_italian_unsafe",
+    "name": "Italian filter (EasyList) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/easylist/easylistitaly/master/easylistitaly/easylistitaly_adservers.txt",
+    "enabled": false,
+    "ruleCount": 2,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 2,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_easylist_polish",
+    "name": "Polish filter (MajkiIT)",
+    "category": "language-filter",
+    "locales": [
+      "pl"
+    ],
+    "language": "Polish",
+    "url": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-adblock-filters/adblock.txt",
+    "enabled": false,
+    "rawLineCount": 6420,
+    "ruleCount": 840,
+    "domainCount": 288,
+    "paramCount": 0,
+    "blockCount": 682,
+    "allowCount": 158,
+    "redirectCount": 0,
+    "scriptletRuleCount": 29,
+    "cosmeticHostnameCount": 3692
+  },
+  {
+    "id": "ruleset_easylist_polish_unsafe",
+    "name": "Polish filter (MajkiIT) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-adblock-filters/adblock.txt",
+    "enabled": false,
+    "ruleCount": 3,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 3,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_easylist_portuguese",
+    "name": "Portuguese filter (EasyList & AdGuard)",
+    "category": "language-filter",
+    "locales": [
+      "pt"
+    ],
+    "language": "Portuguese",
+    "url": "https://raw.githubusercontent.com/easylist/easylistportuguese/master/easylistportuguese/easylistportuguese_general_block.txt",
+    "enabled": false,
+    "rawLineCount": 2367,
+    "ruleCount": 426,
+    "domainCount": 80,
+    "paramCount": 0,
+    "blockCount": 354,
+    "allowCount": 72,
+    "redirectCount": 0,
+    "scriptletRuleCount": 198,
+    "cosmeticHostnameCount": 961
+  },
+  {
+    "id": "ruleset_easylist_portuguese_unsafe",
+    "name": "Portuguese filter (EasyList & AdGuard) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/easylist/easylistportuguese/master/easylistportuguese/easylistportuguese_general_block.txt",
+    "enabled": false,
+    "ruleCount": 2,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 2,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_easylist_latvian",
+    "name": "Baltic states filter",
+    "category": "language-filter",
+    "locales": [
+      "et",
+      "fi",
+      "lv",
+      "lt"
+    ],
+    "countries": [
+      {
+        "id": "ee",
+        "name": "Estonia",
+        "language": "Estonian",
+        "locales": [
+          "et"
+        ]
+      },
+      {
+        "id": "fi",
+        "name": "Finland",
+        "language": "Finnish",
+        "locales": [
+          "fi"
+        ]
+      },
+      {
+        "id": "lv",
+        "name": "Latvia",
+        "language": "Latvian",
+        "locales": [
+          "lv"
+        ]
+      },
+      {
+        "id": "lt",
+        "name": "Lithuania",
+        "language": "Lithuanian",
+        "locales": [
+          "lt"
+        ]
+      }
+    ],
+    "url": "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt + https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt + https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt",
+    "enabled": false,
+    "rawLineCount": 2974,
+    "ruleCount": 862,
+    "domainCount": 81,
+    "paramCount": 0,
+    "blockCount": 755,
+    "allowCount": 107,
+    "redirectCount": 0,
+    "scriptletRuleCount": 26,
+    "cosmeticHostnameCount": 1054
+  },
+  {
+    "id": "ruleset_easylist_latvian_unsafe",
+    "name": "Baltic states filter — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt + https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt + https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt",
+    "enabled": false,
+    "ruleCount": 3,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 3,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_hungarian",
+    "name": "Hungarian filter (hufilter & AdGuard)",
+    "category": "language-filter",
+    "locales": [
+      "hu"
+    ],
+    "language": "Hungarian",
+    "url": "https://raw.githubusercontent.com/hufilter/hufilter/master/sections/ads.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/antiadblock.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/trackers.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/unbreak.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/security.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/adguard-specific/ads.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/adguard-specific/antiadblock.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/adguard-specific/unbreak.txt",
+    "enabled": false,
+    "rawLineCount": 1694,
+    "ruleCount": 199,
+    "domainCount": 136,
+    "paramCount": 0,
+    "blockCount": 180,
+    "allowCount": 19,
+    "redirectCount": 0,
+    "scriptletRuleCount": 35,
+    "cosmeticHostnameCount": 467
+  },
+  {
+    "id": "ruleset_hungarian_unsafe",
+    "name": "Hungarian filter (hufilter & AdGuard) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/hufilter/hufilter/master/sections/ads.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/antiadblock.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/trackers.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/unbreak.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/security.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/adguard-specific/ads.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/adguard-specific/antiadblock.txt + https://raw.githubusercontent.com/hufilter/hufilter/master/sections/adguard-specific/unbreak.txt",
+    "enabled": false,
+    "ruleCount": 0,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_easylist_czech_slovak",
+    "name": "Czech & Slovak filter (EasyList)",
+    "category": "language-filter",
+    "locales": [
+      "cs",
+      "sk"
+    ],
+    "countries": [
+      {
+        "id": "cz",
+        "name": "Czechia",
+        "language": "Czech",
+        "locales": [
+          "cs"
+        ]
+      },
+      {
+        "id": "sk",
+        "name": "Slovakia",
+        "language": "Slovak",
+        "locales": [
+          "sk"
+        ]
+      }
+    ],
+    "url": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
+    "enabled": false,
+    "rawLineCount": 815,
+    "ruleCount": 141,
+    "domainCount": 93,
+    "paramCount": 0,
+    "blockCount": 118,
+    "allowCount": 23,
+    "redirectCount": 0,
+    "scriptletRuleCount": 9,
+    "cosmeticHostnameCount": 374
+  },
+  {
+    "id": "ruleset_easylist_czech_slovak_unsafe",
+    "name": "Czech & Slovak filter (EasyList) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
+    "enabled": false,
+    "ruleCount": 0,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_easylist_nordic",
+    "name": "Nordic filter (Dandelion Sprout)",
+    "category": "language-filter",
+    "locales": [
+      "da",
+      "is",
+      "no",
+      "nb",
+      "nn",
+      "sv"
+    ],
+    "countries": [
+      {
+        "id": "dk",
+        "name": "Denmark",
+        "language": "Danish",
+        "locales": [
+          "da"
+        ]
+      },
+      {
+        "id": "is",
+        "name": "Iceland",
+        "language": "Icelandic",
+        "locales": [
+          "is"
+        ]
+      },
+      {
+        "id": "no",
+        "name": "Norway",
+        "language": "Norwegian",
+        "locales": [
+          "no",
+          "nb",
+          "nn"
+        ]
+      },
+      {
+        "id": "se",
+        "name": "Sweden",
+        "language": "Swedish",
+        "locales": [
+          "sv"
+        ]
+      }
+    ],
+    "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt",
+    "enabled": false,
+    "rawLineCount": 3057,
+    "ruleCount": 909,
+    "domainCount": 50,
+    "paramCount": 0,
+    "blockCount": 834,
+    "allowCount": 75,
+    "redirectCount": 0,
+    "scriptletRuleCount": 35,
+    "cosmeticHostnameCount": 894
+  },
+  {
+    "id": "ruleset_easylist_nordic_unsafe",
+    "name": "Nordic filter (Dandelion Sprout) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt",
+    "enabled": false,
+    "ruleCount": 2,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 2,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_easylist_bulgarian",
+    "name": "Balkan filter",
+    "category": "language-filter",
+    "locales": [
+      "sq",
+      "bs",
+      "bg",
+      "hr",
+      "el",
+      "sq-xk",
+      "sr-xk",
+      "cnr",
+      "sr-me",
+      "mk",
+      "ro",
+      "sr",
+      "sl"
+    ],
+    "countries": [
+      {
+        "id": "al",
+        "name": "Albania",
+        "language": "Albanian",
+        "locales": [
+          "sq"
+        ]
+      },
+      {
+        "id": "ba",
+        "name": "Bosnia and Herzegovina",
+        "language": "Bosnian, Croatian, Serbian",
+        "showCountry": true,
+        "locales": [
+          "bs"
+        ]
+      },
+      {
+        "id": "bg",
+        "name": "Bulgaria",
+        "language": "Bulgarian",
+        "locales": [
+          "bg"
+        ]
+      },
+      {
+        "id": "hr",
+        "name": "Croatia",
+        "language": "Croatian",
+        "locales": [
+          "hr"
+        ]
+      },
+      {
+        "id": "gr",
+        "name": "Greece",
+        "language": "Greek",
+        "locales": [
+          "el"
+        ]
+      },
+      {
+        "id": "xk",
+        "name": "Kosovo",
+        "language": "Albanian, Serbian",
+        "showCountry": true,
+        "locales": [
+          "sq-xk",
+          "sr-xk"
+        ]
+      },
+      {
+        "id": "me",
+        "name": "Montenegro",
+        "language": "Montenegrin",
+        "locales": [
+          "cnr",
+          "sr-me"
+        ]
+      },
+      {
+        "id": "mk",
+        "name": "North Macedonia",
+        "language": "Macedonian",
+        "locales": [
+          "mk"
+        ]
+      },
+      {
+        "id": "ro",
+        "name": "Romania",
+        "language": "Romanian",
+        "locales": [
+          "ro"
+        ]
+      },
+      {
+        "id": "rs",
+        "name": "Serbia",
+        "language": "Serbian",
+        "locales": [
+          "sr"
+        ]
+      },
+      {
+        "id": "si",
+        "name": "Slovenia",
+        "language": "Slovenian",
+        "locales": [
+          "sl"
+        ]
+      }
+    ],
+    "url": "https://raw.githubusercontent.com/KokichaKolevTM/BG-Adblock-list/main/BG-Adblock-list.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/CyrillicFilters/Bulgarian/sections/filter.txt + https://raw.githubusercontent.com/DandelionSprout/adfilt/master/SerboCroatianList.txt + https://raw.githubusercontent.com/DeepSpaceHarbor/Macedonian-adBlock-Filters/master/Filters + https://raw.githubusercontent.com/tcptomato/ROad-Block/master/road-block-filters-light.txt",
+    "enabled": false,
+    "rawLineCount": 4462,
+    "ruleCount": 883,
+    "domainCount": 284,
+    "paramCount": 0,
+    "blockCount": 771,
+    "allowCount": 112,
+    "redirectCount": 0,
+    "scriptletRuleCount": 63,
+    "cosmeticHostnameCount": 1545
+  },
+  {
+    "id": "ruleset_easylist_bulgarian_unsafe",
+    "name": "Balkan filter — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/KokichaKolevTM/BG-Adblock-list/main/BG-Adblock-list.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/CyrillicFilters/Bulgarian/sections/filter.txt + https://raw.githubusercontent.com/DandelionSprout/adfilt/master/SerboCroatianList.txt + https://raw.githubusercontent.com/DeepSpaceHarbor/Macedonian-adBlock-Filters/master/Filters + https://raw.githubusercontent.com/tcptomato/ROad-Block/master/road-block-filters-light.txt",
+    "enabled": false,
+    "ruleCount": 1,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 1,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_adguard_antiadblock",
+    "name": "AdGuard and EasyList anti-adblock (specific websites only)",
+    "category": "default",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/antiadblock.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/antiadblock.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_english.txt",
+    "enabled": true,
+    "rawLineCount": 11194,
+    "ruleCount": 2326,
+    "domainCount": 2358,
+    "paramCount": 0,
+    "blockCount": 508,
+    "allowCount": 1818,
+    "redirectCount": 0,
+    "scriptletRuleCount": 1309,
+    "cosmeticHostnameCount": 827
+  },
+  {
+    "id": "ruleset_adguard_antiadblock_unsafe",
+    "name": "AdGuard and EasyList anti-adblock (specific websites only) — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/antiadblock.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/antiadblock.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_english.txt",
+    "enabled": true,
+    "ruleCount": 86,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 86,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_english_outside_top1m",
+    "name": "English language filter for websites outside top 1 Million",
+    "category": "language-filter",
+    "locales": [],
+    "firstLanguage": "en",
+    "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/specific.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/antiadblock.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/antiadblock.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_english.txt",
+    "enabled": false,
+    "rawLineCount": 3316,
+    "ruleCount": 75,
+    "domainCount": 0,
+    "paramCount": 0,
+    "blockCount": 75,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 1225,
+    "cosmeticHostnameCount": 1529
+  },
+  {
+    "id": "ruleset_english_outside_top1m_unsafe",
+    "name": "English language filter for websites outside top 1 Million — unsafe-rule companion",
+    "category": "hidden-overflow",
+    "locales": [],
+    "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/specific.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/antiadblock.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/antiadblock.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_english.txt",
+    "enabled": false,
+    "ruleCount": 82,
+    "blockCount": 0,
+    "allowCount": 0,
+    "redirectCount": 82,
+    "scriptletRuleCount": 0,
+    "cosmeticHostnameCount": 0
+  },
+  {
+    "id": "ruleset_antiadmiral",
+    "name": "Block Admiral anti-adblock (EasyList, HaGeZi, LanikSJ and uBlock Origin)",
+    "category": "default",
+    "locales": [],
+    "enabled": true,
+    "rawLineCount": 3731,
+    "ruleCount": 1,
+    "domainCount": 3721,
+    "paramCount": 0,
+    "blockCount": 1,
+    "allowCount": 0,
+    "redirectCount": 0,
+    "scriptletRuleCount": 7,
+    "cosmeticHostnameCount": 1
+  }
+]

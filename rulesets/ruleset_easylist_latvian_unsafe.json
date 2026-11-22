@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1903578,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "telsu.fi"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||adform.net",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1374817,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "iltalehti.fi"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||adsdk.bing.net/ast/ast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1367110,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "imasdk.googleapis.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pubads.g.doubleclick.net/gampad/ads?*sanavelho",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

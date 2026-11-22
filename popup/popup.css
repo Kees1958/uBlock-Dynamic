@@ -1,0 +1,466 @@
+/* ══════════════════════════════════════════════════════════════
+   1. RESET, VARIABLES & ANIMATIONS
+   ══════════════════════════════════════════════════════════════ */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+@keyframes busy {
+    to { opacity: 90%; }
+}
+
+:root {
+    --popup-min-width: 290px;
+    --action-radius: 6px;
+
+    /* Site mode dot colours */
+    --mode-off-color:           #e55;   /* fills/borders only (UI component, 3:1 bar): 3.04:1 light / 4.94:1 dark vs --surface-1 */
+
+    /* (audit 10.6.4, A8/A9) Off-state TEXT and the solid confirm button. #e55 as 11-12px text was
+       3.04:1 in light mode and white-on-#e55 was 3.46:1 — both under 4.5:1. Values ported from
+       css/panel-shared.css's proven --color-red-text (the popup does not load that file).
+       Text: 5.77:1 light vs --surface-1 (5.08:1 vs --surface-2); 6.36:1 / 4.91:1 dark (dark block below).
+       Button: white on rgb(176,42,30) 6.57:1 in both modes (hover 7.86:1). */
+    --mode-off-text-color:      rgb(176, 42, 30);
+    --mode-off-button-bg:       rgb(176, 42, 30);
+    --mode-indicator-color:    #2259df;  /* generic indicator blue; no longer tied to an "optimal" mode */
+    /* (10.7.9, audit 10.7.8 — A2/A9) Text on the two solid fills above. White on --mode-indicator-color 5.89:1,
+       on --mode-off-button-bg 6.57:1 — both fills are the same in light and dark mode, so this holds in both. */
+    --on-solid-ink:             #fff;
+
+    /* Status colours */
+    --status-active-color:      #27ae60;
+    /* (audit 10.6.4, A5) --mode-standard-color, --warning-color and --warning-color-dark removed:
+       nothing referenced them after the dead userScripts banner (old section 8) went. */
+}
+
+/* Dark-mode text value for --mode-off-text-color — same two paths as css/default.css
+   (system preference, overridable by the manual theme classes set by theme.js on <html>). */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --mode-off-text-color:  #ff7070;
+    }
+}
+:root.dark {
+    --mode-off-text-color:      #ff7070;
+}
+:root.light {
+    --mode-off-text-color:      rgb(176, 42, 30);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   2. BODY & BASE TYPOGRAPHY
+   ══════════════════════════════════════════════════════════════ */
+
+:root body,
+:root.mobile body {
+    --popup-gap: var(--font-size);
+    --popup-gap-thin: calc(0.5 * var(--popup-gap));
+    --popup-gap-extra-thin: calc(0.25 * var(--popup-gap));
+    min-width: var(--popup-min-width);
+}
+:root body.loading {
+    visibility: hidden;
+}
+a {
+    color: var(--ink-1);
+        fill: var(--ink-1);
+    text-decoration: none;
+}
+:focus {
+    outline: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   3. LAYOUT — MAIN & BUSY OVERLAY
+   ══════════════════════════════════════════════════════════════ */
+
+main {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 14px 16px;
+}
+body.busy main {
+    pointer-events: none;
+}
+aside {
+    background-color: var(--surface-1);
+    bottom: 0;
+    display: none;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+aside .fa-icon {
+    animation: spin 1s steps(8) infinite;
+    fill: var(--surface-3);
+    font-size: 4em;
+    margin: 2em;
+}
+body.busy aside {
+    animation: busy 0s step-start 1s;
+    animation-fill-mode: forwards;
+    display: block;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   4. ICON BADGES (JS-injected — class added by fa-icons.js)
+   ══════════════════════════════════════════════════════════════ */
+
+.fa-icon.fa-icon-badged > .fa-icon-badge {
+    bottom: auto;
+    top: -20%;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   5. STATUS BAR
+   ══════════════════════════════════════════════════════════════ */
+
+#statusBar {
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 0.9em;
+}
+
+#statusBar .fa-icon {
+    fill: var(--status-active-color);
+    font-size: 1.1em;
+}
+
+#statusBar .fa-icon.status-off {
+    fill: var(--mode-off-color);
+}
+
+#statusText {
+    color: var(--ink-1);
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   6. SITE MODE SLIDER
+   ══════════════════════════════════════════════════════════════ */
+
+/* Hide slider on non-HTTP pages.
+   !important (v8.3.6 — real, reported bug): `.needHTTP` is meant to be
+   an authoritative "hide no matter what, on a protected tab" utility
+   class, but without !important its specificity (0,3,0 — :root, :not()'s
+   argument, and .needHTTP each count as one class) loses to any later
+   rule that targets the SAME element by ID and sets its own `display`
+   (1,0,0 — a plain ID rule always outranks this class, with or without
+   :root:not() in front of it). Every needHTTP element at the time this
+   was found happened to never set its own `display` in an ID rule, so
+   this never mattered until one did (a since-removed power-tools toggle
+   — the specific element changed, the hazard it demonstrated did not).
+   !important makes this class's whole reason for existing (an
+   unconditional visibility override) actually unconditional, instead of
+   "unconditional unless a future rule happens to out-specificity it." */
+:root:not(.isHTTP) .needHTTP {
+    display: none !important;
+}
+
+#siteModeSelector {
+    border-bottom: 1px solid var(--surface-2);
+    margin-bottom: 0.5em;
+    padding-bottom: 0.75em;
+    }
+
+/* ── Shared action-button box (site mode + temp-disable buttons) ──
+   Both #siteModeButton and #tempDisableButton use this class so they stay
+   the same size/box by construction, not by separately-maintained copies
+   of the same rules that could drift apart. */
+.uBolActionButton {
+    align-items: center;
+    border: 1px solid var(--border-1);
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5em;
+    padding: 0.45em 0.75em;
+    transition: background 0.15s;
+    user-select: none;
+    }
+
+.uBolActionButton:hover {
+    background: var(--surface-2);
+    }
+
+/* ── Site mode toggle button ── */
+
+#siteModeButton.is-off {
+    color: var(--mode-off-text-color);
+    }
+
+#siteModeHostname {
+    color: var(--ink-1);
+    flex: 1;
+    font-size: 12px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+#siteModeLabel {
+    color: var(--ink-2);
+    font-size: 11px;
+    white-space: nowrap;
+    }
+
+#siteModeButton.is-off #siteModeLabel {
+    color: var(--mode-off-text-color);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   6b. TEMPORARY GLOBAL DISABLE
+   ══════════════════════════════════════════════════════════════ */
+
+#tempDisableSelector {
+    border-bottom: 1px solid var(--surface-2);
+    margin-bottom: 0.5em;
+    padding-bottom: 0.75em;
+    }
+
+#tempDisableButtonLabel {
+    color: var(--ink-2);
+    flex: 1;
+    font-size: 12px;
+    font-weight: 600;
+    }
+
+/* Without this, .uBolActionButton's own `display: flex` (an author-
+   stylesheet rule) would beat the browser's default UA `[hidden] {
+   display: none }` rule — author styles always outrank user-agent
+   styles regardless of selector specificity — so the button would stay
+   visible even after JS sets its `hidden` property. Same reason
+   #tempDisableModal below needs its own explicit override too. */
+#tempDisableButton[hidden] { display: none; }
+
+/* Active state ("Enable filtering again" + countdown) — same is-off
+   convention #siteModeButton already uses just above, not a separate
+   color scheme. */
+#tempDisableButton.is-active {
+    border-color: var(--mode-off-color);
+    color: var(--mode-off-text-color);
+    }
+
+#tempDisableButton.is-active #tempDisableButtonLabel {
+    color: var(--mode-off-text-color);
+    }
+
+/* Countdown — lives inside the button itself now (not a separate panel
+   below it): empty/absent while inactive, filled with a live mm:ss
+   readout while a pause is active. tabular-nums keeps the digits from
+   shifting the button's width slightly on every tick as they change. */
+#tempDisableButtonCountdown {
+    color: var(--mode-off-text-color);
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   6c. DURATION-PICKER MODAL
+   ══════════════════════════════════════════════════════════════ */
+
+#tempDisableModal {
+    align-items: center;
+    background: color-mix(in srgb, black 45%, transparent);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2000;
+    }
+
+#tempDisableModal[hidden] { display: none; }
+
+#tempDisableModalPanel {
+    background: var(--surface-1);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px color-mix(in srgb, black 25%, transparent);
+    padding: 1em;
+    width: calc(100% - 2.5em);
+    }
+
+#tempDisableModalTitle {
+    color: var(--ink-1);
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 0.75em;
+    text-align: center;
+    }
+
+#tempDisableDurationChoices {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1em;
+    }
+
+.tempDisableDurationChoice {
+    background: var(--surface-2);
+    border: 1px solid var(--border-1);
+    border-radius: 6px;
+    color: var(--ink-1);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85em;
+    min-height: unset;
+    padding: 0.5em 0;
+    }
+
+.tempDisableDurationChoice:hover {
+    background: var(--surface-3);
+    }
+
+.tempDisableDurationChoice.is-selected {
+    background: var(--mode-indicator-color);
+    border-color: var(--mode-indicator-color);
+    color: var(--on-solid-ink);
+    }
+
+/* Indefinite-pause button — deliberately distinct from the duration
+   chips above (full-width, its own row) since it's a direct action, not
+   a selectable option that still needs a separate Pause click. */
+#tempDisableUntilRestartBtn {
+    background: var(--surface-2);
+    border: 1px solid var(--border-1);
+    border-radius: 6px;
+    color: var(--ink-1);
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    min-height: unset;
+    padding: 0.6em 0;
+    width: 100%;
+    }
+
+#tempDisableUntilRestartBtn:hover {
+    background: var(--surface-3);
+    }
+
+#tempDisableModalActions {
+    display: flex;
+    gap: 0.5em;
+    }
+
+#tempDisableModalActions > button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    font-family: inherit;
+    font-size: 0.85em;
+    font-weight: 600;
+    min-height: unset;
+    padding: 0.5em 0;
+    }
+
+#tempDisableCancelBtn {
+    background: var(--surface-2);
+    color: var(--ink-1);
+    }
+
+#tempDisableCancelBtn:hover {
+    background: var(--surface-3);
+    }
+
+#tempDisableConfirmBtn {
+    background: var(--mode-off-button-bg);
+    color: var(--on-solid-ink);
+    }
+
+#tempDisableConfirmBtn:hover {
+    background: color-mix(in srgb, black 12%, var(--mode-off-button-bg));
+    }
+
+/* Disabled (no duration chosen yet) — kept visually distinct from the
+   active/hover states above so it's clear a choice is still required. */
+#tempDisableConfirmBtn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    }
+
+/* 6d. WORRY-FREE SURFING MODE MODAL — REMOVED v8.3.19.
+   The duration-picker UI moved to an in-page overlay (js/scripting/
+   worry-free-picker.js) instead of a small in-popup modal — see
+   CHANGELOG.md's 8.3.19 entry. #worryFreeLabel (the one-line status on
+   the #gotoWorryFree menu item; #worryFreeCountdown removed 10.7.1) is
+   unrelated and unaffected — they pick up .simpleMenu .menuItem's
+   existing rules, no dedicated CSS of their own either before or after
+   this removal. */
+
+/* (Simplified popup, per explicit request) The whole "6e. POWER-TOOLS
+   MORE/LESS TOGGLE" section that used to live here — #powerToolsMoreLessToggle,
+   #powerToolsMoreLessToggle:hover, #powerToolsMoreLessIcon,
+   #powerToolsSection[hidden], .menuDivider (+ ::before/::after/> span),
+   #essentialsDivider — is REMOVED: the menu is one flat list now, no
+   dividers, no expand/collapse toggle, no wrapper to hide. See
+   popup.html's own comment on the simplified <div class="simpleMenu">
+   block, and popup.js for the single consolidated #gotoSettingsDashboard
+   handler that replaced the five items these dividers used to separate. */
+
+.simpleMenu {
+    border-top: 1px solid var(--surface-2);
+    display: flex;
+    flex-direction: column;
+    margin: 0.4em 0;
+    padding-top: 0.4em;
+}
+/* Descendant selector (not direct-child `>`) — deliberately, so items
+   nested inside #powerToolsSection's wrapper (or any future wrapper)
+   still pick up this styling. BUG FIX (v8.3.5): this was `.simpleMenu >
+   .menuItem` (direct-child only) until now — worked fine while every
+   item was a direct child of .simpleMenu, but silently stopped applying
+   to the six power-tool items the moment they were wrapped in
+   #powerToolsSection for the More/Less toggle (8.3.3/8.3.4) — they
+   stayed in the DOM and became visible when unhidden, just with zero
+   layout/hover/cursor styling, which read as "nothing shows up" even
+   though something technically was there. */
+.simpleMenu .menuItem {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: 0.45em 0.5em 0.45em 0;
+    unicode-bidi: embed;
+}
+#tempDisableSelector.powerToolHidden,
+.simpleMenu .menuItem.powerToolHidden {
+    /* (11.0.0) "I am an advanced user (unhide power tools)" is off — js/data/power-tools.js, popup.js */
+    display: none;
+}
+.simpleMenu .menuItem:hover {
+    background-color: color-mix(in srgb, var(--dashboard-happy-green) 16%, var(--surface-1));
+    color: var(--dashboard-happy-green);
+}
+
+.simpleMenu .menuItem:not(.enabled) {
+    display: none;
+}
+
+/* Mouse-driven devices — JS adds .desktop to :root */
+:root.desktop {
+    display: flex;
+}
+:root.desktop .tool:hover {
+    background-color: var(--popup-toolbar-surface-hover);
+}
+
+/* (audit 10.6.4, A5/C13b) Section 8 "USER SCRIPTS WARNING BANNER" removed: #userScriptsBanner,
+   #userScriptsBannerText and #userScriptsEnableBtn exist nowhere in popup.html or any script since the
+   userScripts permission was dropped (v3.12). Later section numbers are kept unchanged. */

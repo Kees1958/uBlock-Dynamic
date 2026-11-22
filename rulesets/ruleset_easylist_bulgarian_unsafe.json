@@ -1,0 +1,23 @@
+[
+  {
+    "id": 928227,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "routech.ro"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

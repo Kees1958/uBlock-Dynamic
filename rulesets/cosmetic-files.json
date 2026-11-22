@@ -1,0 +1,188 @@
+[
+  {
+    "id": "ruleset_badfilter_quickfixes",
+    "specificDataFile": "rulesets/ruleset_badfilter_quickfixes-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_badfilter_quickfixes-cosmetic-loader.js",
+    "v": "wa8m34"
+  },
+  {
+    "id": "ruleset_annoyances",
+    "specificDataFile": "rulesets/ruleset_annoyances-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_annoyances-cosmetic-loader.js",
+    "v": "1si32f2"
+  },
+  {
+    "id": "ruleset_adguard_base",
+    "specificDataFile": "rulesets/ruleset_adguard_base-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_adguard_base-cosmetic-loader.js",
+    "v": "1rcuztl"
+  },
+  {
+    "id": "ruleset_agbase_overflow_dutch",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_dutch-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_dutch-cosmetic-loader.js",
+    "v": "2e5d7g"
+  },
+  {
+    "id": "ruleset_agbase_overflow_german",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_german-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_german-cosmetic-loader.js",
+    "v": "pawez"
+  },
+  {
+    "id": "ruleset_agbase_overflow_french",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_french-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_french-cosmetic-loader.js",
+    "v": "17o4xy0"
+  },
+  {
+    "id": "ruleset_agbase_overflow_spanish",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_spanish-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_spanish-cosmetic-loader.js",
+    "v": "g33ff5"
+  },
+  {
+    "id": "ruleset_agbase_overflow_italian",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_italian-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_italian-cosmetic-loader.js",
+    "v": "ro5eki"
+  },
+  {
+    "id": "ruleset_agbase_overflow_polish",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_polish-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_polish-cosmetic-loader.js",
+    "v": "13racjf"
+  },
+  {
+    "id": "ruleset_agbase_overflow_portuguese",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_portuguese-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_portuguese-cosmetic-loader.js",
+    "v": "gfqt19"
+  },
+  {
+    "id": "ruleset_agbase_overflow_latvian",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_latvian-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_latvian-cosmetic-loader.js",
+    "v": "rv2voz"
+  },
+  {
+    "id": "ruleset_agbase_overflow_czech_slovak",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_czech_slovak-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_czech_slovak-cosmetic-loader.js",
+    "v": "1jhuwql"
+  },
+  {
+    "id": "ruleset_agbase_overflow_bulgarian",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_bulgarian-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_bulgarian-cosmetic-loader.js",
+    "v": "barnaa"
+  },
+  {
+    "id": "ruleset_agbase_overflow_nordic",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_nordic-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_nordic-cosmetic-loader.js",
+    "v": "19cb0sz"
+  },
+  {
+    "id": "ruleset_agbase_overflow_hungarian",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_hungarian-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_hungarian-cosmetic-loader.js",
+    "v": "1kzclya"
+  },
+  {
+    "id": "ruleset_agbase_overflow_other",
+    "specificDataFile": "rulesets/ruleset_agbase_overflow_other-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_agbase_overflow_other-cosmetic-loader.js",
+    "v": "7dkfhw"
+  },
+  {
+    "id": "ruleset_adguard_dutch",
+    "specificDataFile": "rulesets/ruleset_adguard_dutch-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_adguard_dutch-cosmetic-loader.js",
+    "v": "8lr90v"
+  },
+  {
+    "id": "ruleset_adguard_german",
+    "specificDataFile": "rulesets/ruleset_adguard_german-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_adguard_german-cosmetic-loader.js",
+    "v": "wg2jlt"
+  },
+  {
+    "id": "ruleset_adguard_french",
+    "specificDataFile": "rulesets/ruleset_adguard_french-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_adguard_french-cosmetic-loader.js",
+    "v": "u91662"
+  },
+  {
+    "id": "ruleset_adguard_spanish",
+    "specificDataFile": "rulesets/ruleset_adguard_spanish-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_adguard_spanish-cosmetic-loader.js",
+    "v": "1hm97pn"
+  },
+  {
+    "id": "ruleset_easylist_italian",
+    "specificDataFile": "rulesets/ruleset_easylist_italian-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_easylist_italian-cosmetic-loader.js",
+    "v": "wi31g2"
+  },
+  {
+    "id": "ruleset_easylist_polish",
+    "specificDataFile": "rulesets/ruleset_easylist_polish-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_easylist_polish-cosmetic-loader.js",
+    "v": "nnus0y"
+  },
+  {
+    "id": "ruleset_easylist_portuguese",
+    "specificDataFile": "rulesets/ruleset_easylist_portuguese-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_easylist_portuguese-cosmetic-loader.js",
+    "v": "1l2zhee"
+  },
+  {
+    "id": "ruleset_easylist_latvian",
+    "specificDataFile": "rulesets/ruleset_easylist_latvian-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_easylist_latvian-cosmetic-loader.js",
+    "v": "12wef6b"
+  },
+  {
+    "id": "ruleset_hungarian",
+    "specificDataFile": "rulesets/ruleset_hungarian-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_hungarian-cosmetic-loader.js",
+    "v": "pkwydg"
+  },
+  {
+    "id": "ruleset_easylist_czech_slovak",
+    "specificDataFile": "rulesets/ruleset_easylist_czech_slovak-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_easylist_czech_slovak-cosmetic-loader.js",
+    "v": "zgo6e1"
+  },
+  {
+    "id": "ruleset_easylist_nordic",
+    "specificDataFile": "rulesets/ruleset_easylist_nordic-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_easylist_nordic-cosmetic-loader.js",
+    "v": "9m2xhc"
+  },
+  {
+    "id": "ruleset_easylist_bulgarian",
+    "specificDataFile": "rulesets/ruleset_easylist_bulgarian-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_easylist_bulgarian-cosmetic-loader.js",
+    "v": "1u1yeia"
+  },
+  {
+    "id": "ruleset_adguard_antiadblock",
+    "specificDataFile": "rulesets/ruleset_adguard_antiadblock-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_adguard_antiadblock-cosmetic-loader.js",
+    "v": "uygtse"
+  },
+  {
+    "id": "ruleset_english_outside_top1m",
+    "specificDataFile": "rulesets/ruleset_english_outside_top1m-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_english_outside_top1m-cosmetic-loader.js",
+    "v": "i9t1ng"
+  },
+  {
+    "id": "ruleset_antiadmiral",
+    "specificDataFile": "rulesets/ruleset_antiadmiral-cosmetic-specific.json",
+    "loaderFile": "rulesets/ruleset_antiadmiral-cosmetic-loader.js",
+    "v": "1bamp9r"
+  }
+]

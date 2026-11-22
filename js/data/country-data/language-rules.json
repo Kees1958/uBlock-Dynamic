@@ -1,0 +1,259 @@
+{
+  "_about": "Lookup rules for countries.json. regionTldExceptions: region code → ccTLD (gb → uk). langAliases: normalise before lookup (nb → no). Intelligible lists: language groups treated as understood together / one way. expansionExcludedTlds: never added automatically. regionPairings: '<lang>-<region>' tag → companion countries (same language across a border). langWorldDefaults: a bare world-language tag → its most-read countries. langDefaultCountry: a bare tag → the one country where it is the first language (generated from countries.json: only languages that are first language of exactly ONE country; world languages excluded). euLangs: the 24 official EU languages. (Completed for uBlock Stripped 10.4.5: these four tables were missing in the delivered file.)",
+  "regionTldExceptions": {
+    "gb": "uk"
+  },
+  "langAliases": {
+    "nb": "no",
+    "nn": "no",
+    "tl": "fil",
+    "iw": "he",
+    "in": "id"
+  },
+  "mutuallyIntelligibleLangs": [
+    [
+      "cs",
+      "sk"
+    ],
+    [
+      "sr",
+      "hr",
+      "bs",
+      "cnr"
+    ],
+    [
+      "id",
+      "ms"
+    ],
+    [
+      "da",
+      "no",
+      "sv"
+    ]
+  ],
+  "oneWayIntelligibleLangs": [
+    [
+      "pt",
+      "es"
+    ],
+    [
+      "sl",
+      "hr"
+    ]
+  ],
+  "expansionExcludedTlds": [
+    "ru",
+    "by"
+  ],
+  "regionPairings": {
+    "en-ie": [
+      "uk"
+    ],
+    "ga-ie": [
+      "uk"
+    ],
+    "de-at": [
+      "de"
+    ],
+    "de-ch": [
+      "de"
+    ],
+    "de-li": [
+      "ch"
+    ],
+    "de-lu": [
+      "de"
+    ],
+    "de-be": [
+      "de"
+    ],
+    "fr-be": [
+      "fr"
+    ],
+    "fr-ch": [
+      "fr"
+    ],
+    "fr-lu": [
+      "fr"
+    ],
+    "fr-mc": [
+      "fr"
+    ],
+    "nl-be": [
+      "nl"
+    ],
+    "it-ch": [
+      "it"
+    ],
+    "it-sm": [
+      "it"
+    ],
+    "it-va": [
+      "it"
+    ],
+    "sv-fi": [
+      "se"
+    ],
+    "el-cy": [
+      "gr"
+    ],
+    "sq-xk": [
+      "al"
+    ],
+    "sq-mk": [
+      "al"
+    ],
+    "sr-me": [
+      "rs"
+    ],
+    "sr-ba": [
+      "rs"
+    ],
+    "hr-ba": [
+      "hr"
+    ],
+    "ro-md": [
+      "ro"
+    ],
+    "pt-br": [
+      "pt"
+    ],
+    "es-us": [
+      "mx"
+    ],
+    "en-us": [
+      "ca"
+    ],
+    "en-ca": [
+      "us"
+    ],
+    "fr-ca": [
+      "fr"
+    ]
+  },
+  "langWorldDefaults": {
+    "en": [
+      "uk",
+      "us",
+      "ie",
+      "au",
+      "ca",
+      "nz"
+    ],
+    "es": [
+      "es",
+      "mx",
+      "ar",
+      "co",
+      "cl",
+      "pe"
+    ],
+    "fr": [
+      "fr",
+      "be",
+      "ch",
+      "ca"
+    ],
+    "pt": [
+      "pt",
+      "br"
+    ],
+    "de": [
+      "de",
+      "at",
+      "ch"
+    ]
+  },
+  "langDefaultCountry": {
+    "am": "et",
+    "az": "az",
+    "be": "by",
+    "bg": "bg",
+    "bi": "vu",
+    "bn": "bd",
+    "bs": "ba",
+    "ca": "ad",
+    "cs": "cz",
+    "da": "dk",
+    "dv": "mv",
+    "dz": "bt",
+    "et": "ee",
+    "fa": "ir",
+    "fi": "fi",
+    "fil": "ph",
+    "fo": "fo",
+    "he": "il",
+    "hi": "in",
+    "hr": "hr",
+    "hu": "hu",
+    "hy": "am",
+    "id": "id",
+    "is": "is",
+    "ja": "jp",
+    "ka": "ge",
+    "kk": "kz",
+    "kl": "gl",
+    "km": "kh",
+    "ky": "kg",
+    "lb": "lu",
+    "lo": "la",
+    "lt": "lt",
+    "lv": "lv",
+    "mg": "mg",
+    "mk": "mk",
+    "mn": "mn",
+    "mt": "mt",
+    "my": "mm",
+    "ne": "np",
+    "no": "no",
+    "pl": "pl",
+    "ps": "af",
+    "ru": "ru",
+    "rw": "rw",
+    "si": "lk",
+    "sk": "sk",
+    "sl": "si",
+    "sm": "ws",
+    "so": "so",
+    "sq": "al",
+    "sv": "se",
+    "sw": "tz",
+    "tg": "tj",
+    "th": "th",
+    "ti": "er",
+    "tk": "tm",
+    "to": "to",
+    "tr": "tr",
+    "tvl": "tv",
+    "uk": "ua",
+    "ur": "pk",
+    "uz": "uz",
+    "vi": "vn"
+  },
+  "euLangs": [
+    "bg",
+    "cs",
+    "da",
+    "de",
+    "el",
+    "en",
+    "es",
+    "et",
+    "fi",
+    "fr",
+    "ga",
+    "hr",
+    "hu",
+    "it",
+    "lt",
+    "lv",
+    "mt",
+    "nl",
+    "pl",
+    "pt",
+    "ro",
+    "sk",
+    "sl",
+    "sv"
+  ]
+}

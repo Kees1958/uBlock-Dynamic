@@ -1,0 +1,702 @@
+/* ══════════════════════════════════════════════════════════════
+   1. RESET & CSS VARIABLES
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+    --color-red: #e74c3c;   /* delete hover, clear button hover */
+
+    /* Same semantic amber as css/panel-shared.css's --color-amber —
+       this file can't just inherit that one since dashboard.html doesn't
+       load panel-shared.css (only the Matrix/Privacy Inspector panel
+       pages do). Values and the light/dark split copied verbatim from
+       there (light #f39c12 / dark #ffc947 — dark variant re-tuned there
+       for WCAG AA contrast, see that file's own comment for the measured
+       ratios) so a rule's risk-badge color language stays consistent
+       with this same amber tone wherever it appears in the extension. */
+    --color-amber: #f39c12;
+
+    /* Same reasoning as --color-amber just above, copied from
+       css/panel-shared.css's --color-green (light #27ae60 / dark #4ddb8a
+       — dark variant re-tuned there for WCAG AA contrast against the
+       dark surface, see that file's own comment). Used here as a
+       BACKGROUND fill only (the rule-action dots below), matching the
+       one usage this token is already verified safe for in both themes
+       — never as text. */
+    --color-green: #27ae60;
+
+    /* Text-safe darkened variant of --color-green just above — needed for
+       the toolbar buttons' hover text color (raw --color-green fails even
+       3:1 as text in light mode, 2.52:1 — see the comment on that token).
+       Value copied verbatim from matrix-panel.css's own
+       --color-green-text (5.18:1 light vs surface-1, computed via the
+       WCAG relative-luminance formula — same verification standard this
+       whole guide uses, not eyeballed). Dark mode needs no override:
+       raw --color-green is already 9.62:1 against the dark surface, safe
+       as text as-is. */
+    --color-green-text: rgb(22, 115, 66);
+
+    /* Single source of truth for the "domain a rule applies to" weight —
+       see .rule-domain in section 4a below. Previously this concept had
+       three independent, inconsistent renderings (bold cosmetic hostname
+       at weight 600, dimmed-but-normal-weight DNR site, plain-weight
+       scriptlet hostname) — unified to one shared token/class per
+       feedback, since the domain column is the field every custom-rule
+       row is actually grouped and sorted by, so it should read the same
+       way regardless of which of the three rule categories renders it. */
+    --font-weight-rule-domain: 700;
+
+    /* Fixed alignment-column widths, shared across Dynamic DNR / Privacy
+       (scriptlet) / Cosmetic rows — deliberately in PX, not em or rem.
+       Real, confirmed bug this fixes: two columns that both said
+       "width: 15em" (#matrixRulesList .scriptlet-rule-label and
+       #scriptletRulesList .scriptlet-api-label) rendered at DIFFERENT
+       actual pixel widths (195px vs ~164px) because CSS `em` on `width`
+       resolves against that ELEMENT's OWN font-size — and the two
+       elements deliberately use different font-sizes for their own text
+       (13px vs 0.78em of a 14px parent ≈ 10.9px). Same "15em" ≠ same
+       pixels. `rem` would dodge that specific case (resolves against the
+       root font-size instead) but is still one more relative unit that
+       could silently drift if :root's font-size is ever touched; plain
+       px means these two numbers mean the exact same thing everywhere,
+       permanently, independent of any element's font-size now or later.
+       Values themselves are unchanged from before this fix — computed
+       from the widths that were already effectively in place at the
+       13px (--font-size-smaller) basis .dnr-rule-site / the base
+       .dnr-domain rule already use: 11em × 13px = 143px,
+       15em × 13px = 195px. */
+    --rule-domain-col-width: 143px;  /* column 1: the domain a rule applies to (cosmetic hostname, DNR "on <site>", scriptlet hostname) */
+    --rule-label-col-width: 195px;   /* column 3: the action/API label (DNR "BLOCK 3P-ALL", scriptlet's technical API name) */
+    }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-green-text: var(--color-green); /* already 9.62:1 dark — no darkening needed, matches matrix-panel.css's own reasoning */
+        --color-amber: #ffc947;
+        --color-green: #4ddb8a;
+        }
+    }
+
+:root.dark {
+    --color-amber: #ffc947;
+    --color-green: #4ddb8a;
+    --color-green-text: #4ddb8a; /* already 9.62:1 dark — no darkening needed */
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   2. CUSTOM RULES PANE  —  section container and group layout
+   ══════════════════════════════════════════════════════════════ */
+
+section[data-pane="customrules"] {
+    padding-inline: var(--default-gap-large);
+    }
+
+/* Domain filter — sits above every rule group, filters all three
+   sections at once by a "contains" match (see custom-rules.js's
+   matchesFilter()). Deliberately its own row above .custom-rules-group's
+   own border-bottom rhythm, with an explicit <hr> separating it from the
+   first group, rather than folding it into that group's own header —
+   it isn't scoped to Cosmetic rules, it's global to the whole pane. */
+.custom-rules-filter-row {
+    align-items: center;
+    display: flex;
+    gap: 0.6em;
+    padding-block: 1em;
+    }
+
+.custom-rules-filter-row label {
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-size: var(--font-size-smaller);
+    font-weight: 700;
+    white-space: nowrap;
+    }
+
+#customRulesDomainFilter {
+    background-color: var(--surface-0);
+    border: 1px solid var(--border-1);
+    border-radius: 4px;
+    color: inherit;
+    flex: 1;
+    font-family: var(--font-family);
+    font-size: var(--font-size-smaller);
+    max-width: 22em;
+    padding: 0.35em 0.6em;
+    }
+
+#customRulesDomainFilter:focus {
+    border-color: var(--color-green); /* same "active/positive" accent already established in this file, not a new value */
+    outline: none;
+    }
+
+.custom-rules-filter-separator {
+    border: none;
+    border-top: 1px solid var(--border-1);
+    margin: 0;
+    }
+
+/* Generic, all-sections-at-once toolbar — Delete all / Export / Import.
+   Reuses .custom-rules-clear's existing look for "Delete all rules" (same
+   destructive-action styling already established for the per-section
+   Clear all buttons — consistent language for "this removes things"
+   regardless of scope), and a plain neutral variant for the two
+   non-destructive actions so they don't visually compete with it. */
+.custom-rules-toolbar-row {
+    display: flex;
+    gap: 0.5em;
+    margin-left: auto; /* pins the button group to the right edge of the shared filter row, same technique #matrixModeSwitch already uses in matrix-panel.css */
+    }
+
+.custom-rules-toolbar-btn {
+    background: none;
+    border: 1px solid var(--border-1);
+    border-radius: 4px;
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: var(--font-size-smaller);
+    padding: 0.2em 0.7em;
+    }
+
+.custom-rules-toolbar-btn:hover {
+    border-color: var(--color-green); /* same "active/positive" accent as the filter input's own focus state — border/fill usage, safe as-is */
+    color: var(--color-green-text); /* raw --color-green fails as TEXT (2.52:1 light, computed) — see this file's own comment on that token */
+    }
+
+/* Feedback line for the last export/import action ("Imported: 3 Dynamic
+   DNR rules, 2 cosmetic hostnames" / an error message) — hidden by
+   default via the HTML [hidden] attribute, shown by custom-rules.js only
+   when there's something to report. */
+.custom-rules-toolbar-status {
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    font-size: var(--font-size-smaller);
+    margin: 0 0 1em;
+    }
+
+.custom-rules-toolbar-status.error {
+    /* Not raw var(--color-red) — see .custom-rules-clear:hover's comment
+       above for the same fix, same reason, same computed ratios. */
+    color: color-mix(in srgb, var(--color-red) 70%, currentColor);
+    }
+
+.custom-rules-group {
+    border-bottom: 1px solid var(--border-1);
+    padding-block: 1.4em;
+    }
+
+.custom-rules-group:last-child {
+    border-bottom: none;
+    }
+
+.custom-rules-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 0.8em;
+    }
+
+.custom-rules-title {
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-size: var(--font-size-smaller);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin: 0;
+    text-transform: uppercase;
+    }
+
+/* Troubleshooting hint for the risk badges shown per rule below (see
+   js/data/scriptlet-rule-labels.js). Same amber caution tone as
+   privacy-inspector.css's/panel-shared.css's #monitorHelpWarning, so this
+   reads consistently as the same kind of guidance wherever it shows up —
+   but boxed with its own border-radius/padding instead of that one's flush
+   edge-to-edge banner, since .custom-rules-group is already an inset,
+   padded section here rather than sitting at the panel's outer edge.
+   BUG FIX: this file's own color-mix used 80% amber-into-currentColor —
+   the exact value privacy-inspector.css's own comment documents as having
+   already failed WCAG AA (2.62:1 light) before being corrected to 50%
+   there (4.98:1 light / 9.68:1 dark). That proven fix was never ported to
+   this file (C21) — this file just independently had the old broken value
+   the whole time. Now matches the same proven 50%. */
+.custom-rules-hint {
+    background-color: color-mix(in srgb, var(--color-amber) 10%, var(--surface-1));
+    border: 1px solid color-mix(in srgb, var(--color-amber) 35%, transparent);
+    border-radius: var(--radius-md, 5px);
+    color: color-mix(in srgb, var(--color-amber) 50%, currentColor);
+    font-size: var(--font-size-smaller);
+    line-height: 1.5;
+    margin-block-end: 0.8em;
+    padding: 0.5em 0.7em;
+    }
+
+.custom-rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    }
+
+.custom-rules-empty {
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    font-size: var(--font-size-smaller);
+    font-style: italic;
+    margin: 0.3em 0;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   3. CLEAR ALL BUTTON
+   ══════════════════════════════════════════════════════════════ */
+
+.custom-rules-clear {
+    background: none;
+    border: 1px solid var(--border-1);
+    border-radius: 4px;
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 60% — borderline fails 4.5:1 in light mode (4.44:1); 65% is the nearest proven-safe value (A9) */
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: var(--font-size-smaller);
+    padding: 0.2em 0.7em;
+    }
+
+.custom-rules-clear:hover {
+    border-color: var(--color-red); /* border/fill usage — safe as raw red */
+    /* NOT raw var(--color-red) as text — computed at only 3.36:1 in light
+       mode (STYLE_GUIDE_LIGHT.md: passes 3:1 large/bold text only; this
+       is small, non-bold text). Blended toward the inherited currentColor
+       (~--ink-1) the same way .custom-rules-hint already blends amber,
+       just short of the light-mode-illegible raw token — computed at
+       5.40:1 light / comfortably higher dark, both clearing 4.5:1. */
+    color: color-mix(in srgb, var(--color-red) 70%, currentColor);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   4. COSMETIC RULE ROWS  —  one flat row per selector
+   ══════════════════════════════════════════════════════════════ */
+
+/* Column 1 (domain the rule applies to) — fixed width, same
+   --rule-domain-col-width token as #scriptletRulesList / .dnr-rule-site
+   (sections 5 / 5b), so all three categories' domain columns line up in
+   actual pixels — see that variable's own comment in section 1 for why
+   this is px via a shared token rather than each rule repeating "11em".
+   Replaces the previous "one hostname heading + indented selector rows
+   beneath it" grouping (.cosmetic-hostname-group / .cosmetic-hostname-
+   label, both removed) — the domain is now repeated on every row
+   instead, per feedback asking for cosmetic rules to also be one line
+   each, matching the other two categories' row shape (.dnr-rule-row,
+   shared with sections 5/5b — same padding/hover/gap here too). */
+#cosmeticRulesList .dnr-domain {
+    flex: 0 0 var(--rule-domain-col-width);
+    width: var(--rule-domain-col-width);
+    }
+
+/* Cookie/consent-clicker rows — same flat "one row per rule" shape as
+   the cosmetic rows just above (domain, selector-ish text, date,
+   delete), same fixed domain-column width, so this section's rows line
+   up with cosmetic's too. See dashboard/custom-rules.js's
+   renderCookieClickerRules() for what's actually rendered in each
+   column — the "selector-ish text" column here shows the CSS selector
+   plus (when the button lived in a different frame than the site
+   itself, e.g. a CMP iframe) a small "via <frame hostname>" suffix,
+   which cosmetic rows never need since a cosmetic rule is always
+   evaluated in the frame it was created in. */
+#cookieClickerRulesList .dnr-domain {
+    flex: 0 0 var(--rule-domain-col-width);
+    width: var(--rule-domain-col-width);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   4a. SHARED "DOMAIN A RULE APPLIES TO" TEXT  —  bold, all 3 categories
+   ══════════════════════════════════════════════════════════════ */
+
+/* Applied via JS (custom-rules.js) alongside each category's own class,
+   to exactly the element that names the domain a rule is scoped to:
+     - #cosmeticRulesList .dnr-domain  (Cosmetic — repeated per row)
+     - #cookieClickerRulesList .dnr-domain (Cookie/consent-clicker —
+       repeated per row, same as Cosmetic; NOT the frame-hostname suffix
+       shown in the selector column, see that column's own comment above)
+     - .dnr-rule-site                  (Dynamic DNR — the "on <site>" column)
+     - #scriptletRulesList .dnr-domain (Privacy/scriptlet — the hostname
+       column; NOT the plain .dnr-domain used inside #matrixRulesList,
+       see that rule's own comment just below for why that one is
+       deliberately excluded)
+   One class, one weight, one place to change it — see
+   --font-weight-rule-domain above. */
+.rule-domain {
+    font-weight: var(--font-weight-rule-domain);
+    }
+
+.cosmetic-selector-text {
+    color: color-mix(in srgb, currentColor 90%, transparent);
+    flex: 1 1 auto;
+    font-family: monospace;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+/* The ⚠️ glyph itself already carries the warning color natively
+   (rendered by the OS/browser's own emoji font, not affected by
+   `color`), so no text-color change is needed or attempted here — see
+   STYLE_GUIDE_LIGHT.md's own note that raw --color-amber fails text
+   contrast and is fill/border-only. Bold only, to make the row stand
+   out slightly in the list without touching color. */
+.rule-has-builtin-collision {
+    font-weight: 600;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   5. DNR BLOCK RULE ROWS  —  type + domain rows
+   ══════════════════════════════════════════════════════════════ */
+
+/* .dnr-rule-row is deliberately shared, byte-for-byte, between the
+   Dynamic DNR rows (this section) and the Privacy/scriptlet rows
+   (section 5b below) — both are now a flat six-child structure (domain,
+   dot/badge, technical label, description, date, delete), same gap,
+   same column widths where the two share a role. That's what makes the
+   two sections' columns actually line up rather than just look similar
+   — see the per-column comments below and in section 5b for exactly
+   which column reuses which class/value from the other. */
+.dnr-rule-row {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    gap: 0.75em;
+    padding: 0.3em 0.4em;
+    }
+
+.dnr-rule-row:hover {
+    background-color: var(--surface-2);
+    }
+
+.dnr-domain {
+    flex: 1;
+    font-size: var(--font-size-smaller);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+/* Column 4 (target domain, e.g. "cxense.com") — the one flexible,
+   "whatever's left" column, exactly like #scriptletRulesList's own
+   .scriptlet-rule-label override in section 5b (flex: 1 1 auto). NOT a
+   45/55 proportional split against .dnr-rule-site anymore — that
+   pairing only existed because the site column used to be flexible too;
+   now that .dnr-rule-site is fixed-width (below, matched to the
+   scriptlet domain column), this is the row's only flexible column, so
+   it simply takes everything left over after the three fixed columns
+   before it — same logic, same outcome, as scriptlet rows' description
+   column. */
+#matrixRulesList .dnr-domain {
+    flex: 1 1 auto;
+    text-align: left;
+    /* Deliberately normal weight — this column is the third-party
+       tracker/domain being blocked or allowed (e.g. "cxense.com"), NOT
+       the domain the rule is scoped to (that's .dnr-rule-site, "on
+       bbc.com" — column 1, not adjacent to this one anymore now that
+       the dot and label columns sit between them — but still the one
+       that DOES get the shared bold .rule-domain treatment, see section
+       4a above). Bolding this one too would make both columns compete
+       for attention instead of keeping the actual "applies to" domain
+       as the one bold anchor. */
+    }
+
+/* Column 1 — the site this override is scoped to ("on foxnews.com").
+   Fixed width via the shared --rule-domain-col-width token (section 1),
+   not flex — the SAME token #scriptletRulesList / #cosmeticRulesList's
+   own .dnr-domain rules use, per feedback asking all three sections'
+   domain columns to share a width and therefore line up. (This replaces
+   the previous flex: 45 1 0% / 55 1 0% pairing with #matrixRulesList
+   .dnr-domain above — that scheme kept both columns proportional to the
+   row's own width, which was the correct fix for the narrow-site-column
+   complaint it was written for, but a proportional column can only ever
+   line up with a FIXED-width scriptlet column by coincidence at one
+   specific row width. Fixed-to-fixed is what actually guarantees the
+   match at any width — and a shared token, not each rule repeating its
+   own "11em", is what guarantees the FIXED values themselves can't
+   quietly drift apart again the way #matrixRulesList .scriptlet-rule-
+   label and #scriptletRulesList .scriptlet-api-label did — see the
+   token's own comment in section 1.) */
+.dnr-rule-site {
+    /* Was color-mix(in srgb, currentColor 70%, transparent) — dimmed gray.
+       That's what actually broke the "make it bold" request: at 70%
+       opacity + small font-size, the browser's synthetic/near-bold
+       rendering for weight 700 (this family only ships 400/600 font
+       files — see css/common.css's @font-face block) is visually almost
+       indistinguishable from normal weight, even though .rule-domain's
+       font-weight WAS being applied correctly (confirmed by direct DOM
+       inspection). The other two categories' bold domain text
+       (#cosmeticRulesList .dnr-domain, #scriptletRulesList .dnr-domain) were
+       always full var(--ink-1) opacity, which is why bold read clearly
+       there but not here. Switched to the same var(--ink-1) full-opacity
+       treatment so the shared .rule-domain bold is actually visible and
+       consistent across all three categories, matching what was asked.
+       The "on <site>" wording alone still carries the "this is scoped,
+       not global" meaning without needing a dimmed color on top of it. */
+    color: var(--ink-1);
+    flex: 0 0 var(--rule-domain-col-width);
+    font-size: var(--font-size-smaller);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: var(--rule-domain-col-width);
+    }
+
+/* Column 2 — the rule-action dot's column. Deliberately the row's
+   .scriptlet-risk-badge class itself (section 5b), not a lookalike rule
+   — sharing the actual class guarantees this column's width (1.4em) and
+   centering can't drift out of alignment with the scriptlet dot column
+   even if that one is retuned later. The dot glyph inside it
+   (.rule-action-dot below) still carries its own red/green/split
+   meaning; this wrapper only controls the COLUMN's width/position. */
+#matrixRulesList .scriptlet-risk-badge {
+    /* cursor: help and the fixed width/centering all come from the base
+       .scriptlet-risk-badge rule in section 5b — nothing to override
+       here. This empty-looking rule exists so the "why" is documented
+       at the point of use, not just in section 5b's own comment. */
+    }
+
+/* Rule-action dot — at a glance, is this override a BLOCK or an ALLOW
+   (or, rarely, one of each — 3P-all and 3P-code can legitimately differ,
+   see renderMatrixRules()'s rowAction comment in custom-rules.js). Now
+   wrapped in a .scriptlet-risk-badge column (above) rather than being a
+   flex item itself, so display: inline-block is needed here explicitly
+   for the fixed height/width/border-radius circle to render — the old
+   .dnr-rule-actions wrapper was `display: flex`, which auto-blockified
+   this as a direct flex child; .scriptlet-risk-badge is not a flex
+   container (it centers its content via text-align, matching how it
+   already centers its own 🔴/🟡/🟢 text glyph in scriptlet rows), so
+   this element needs to opt into block-level sizing on its own. Color is
+   a plain background fill only, never text — the one usage
+   --color-red/--color-green are already verified safe for in both
+   themes (see this file's own --color-green comment above).
+   Size: 0.9em, not the smaller 0.55em this used to be — per feedback
+   that the plain colored circle read visibly smaller than the scriptlet
+   rows' own 🔴/🟡/🟢 emoji glyph sharing the same .scriptlet-risk-badge
+   column (an emoji glyph visually fills close to its full font-size em
+   box, a small custom circle at the same em value does not — the two
+   needed different em values to look the same SIZE, not the same
+   number). Both are sized relative to this element's own inherited
+   font-size (from .scriptlet-risk-badge's 0.85em, the same computed
+   value in both the DNR and scriptlet context — see that rule's own
+   comment in section 5b — so, unlike the column-width bug just above,
+   this em value doesn't need to be pixel-pinned: both usages already
+   share the identical font-size basis). */
+.rule-action-dot {
+    border-radius: 50%;
+    display: inline-block;
+    height: 0.9em;
+    width: 0.9em;
+    }
+
+.rule-action-dot-block {
+    background-color: var(--color-red);
+    }
+
+.rule-action-dot-allow {
+    background-color: var(--color-green);
+    }
+
+.rule-action-dot-mixed {
+    background: linear-gradient(135deg, var(--color-red) 50%, var(--color-green) 50%);
+    }
+
+/* Column 3 — action + scope label(s) ("BLOCK 3P-ALL"). Fixed width via
+   the shared --rule-label-col-width token (section 1) — the SAME token
+   #scriptletRulesList .scriptlet-api-label below uses, so that column 4
+   (target domain, above) starts at the same x as scriptlet rows'
+   description column starts, in actual pixels, not just approximately
+   (see the token's own comment in section 1 for the real, confirmed
+   "both said 15em but rendered at different widths" bug this replaces).
+   This is also the fix for a separate, earlier-reported alignment bug:
+   the label's natural content width used to vary row-to-row ("BLOCK
+   3P-ALL" vs. one-character-longer "BLOCK 3P-CODE", or the much longer
+   combined "BLOCK 3P-ALL · ALLOW 3P-CODE" mixed-scope case) when this
+   column had no fixed width of its own — pinning it removes that
+   variance entirely, for both this alignment purpose and that one. The
+   195px value comfortably fits every single-label case ("BLOCK
+   3P-CODE", the longest, at 13 characters); the rare combined
+   mixed-scope string ellipsizes, same trade-off already accepted for
+   scriptlet-api-label's own long outlier ('prevent-canvas', see section
+   5b) — full text remains in .title regardless. */
+#matrixRulesList .scriptlet-rule-label {
+    flex: 0 0 var(--rule-label-col-width);
+    width: var(--rule-label-col-width);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   5b. SCRIPTLET RULE ROWS  —  column-alignment override
+   ══════════════════════════════════════════════════════════════ */
+
+/* Each .dnr-rule-row is its own independent flex container (there's no
+   shared table/grid tying rows together), so a plain `flex: 1` column —
+   what .dnr-domain and .scriptlet-rule-label both used before this rule —
+   sizes itself around only *that row's* content. Two rows with
+   differently-long hostnames or labels then start their next column at a
+   different x position, so nothing lines up top to bottom (the bug this
+   fixes). Fixed widths, scoped here to #scriptletRulesList specifically
+   (paired with #matrixRulesList's own matching fixed widths in section 5
+   above, via the SAME --rule-domain-col-width / --rule-label-col-width
+   tokens — section 1 — not just the same numbers repeated by hand, so
+   the two sections' columns can't drift apart from each other again the
+   way they did before those tokens existed), give every row the same
+   column boundaries regardless of content length. Overflow still
+   ellipsizes via each class's own existing text-overflow rule; full
+   text remains available via each element's .title tooltip. */
+#scriptletRulesList .dnr-domain {
+    flex: 0 0 var(--rule-domain-col-width);
+    width: var(--rule-domain-col-width);
+    }
+
+/* "3P Matrix (block) rules" (#matrixRulesList) deliberately needs NO
+   column-alignment override here — see matrix-block-rules.js's header:
+   ONE override per domain, no scope/tracker/type columns to align, so
+   the base .dnr-domain (flex:1) + .rule-delete-btn from earlier in this
+   file are already correct as-is. This replaces the old DDG (block)
+   rules list's column overrides (domain/label/scope-badge widths, the
+   global/legacy scope-badge color variants, and the optional
+   .dnr-url-info column), all removed along with that list's richer
+   (tracker-badge, scope-badge, edit-scope) row shape. */
+
+#scriptletRulesList .scriptlet-api-label {
+    /* Width picked from actually measuring every known API value (see
+       js/data/scriptlet-rule-labels.js's RULE_INFO), not guessed: longest
+       single value is 'OfflineAudioContext' at 19 characters. The
+       previous 9em was sized for roughly 13-14 characters at this
+       font-size, which is why 'resolvedOptions' (15) and
+       'visibilitychange' (16) were both visibly truncating. 195px
+       (--rule-label-col-width, section 1 — was a locally-repeated 15em
+       here before that token existed; see its own comment for why this
+       is now shared/px rather than each rule saying "15em" separately)
+       covers 19 characters with margin for font-rendering variance
+       across systems. The one 43-character outlier (prevent-canvas's
+       combined method list) still ellipsizes regardless — giving it
+       enough width to never truncate would make every other row's
+       column absurdly wide for one rare case; its full text remains in
+       .title. */
+    flex: 0 0 var(--rule-label-col-width);
+    width: var(--rule-label-col-width);
+    }
+
+#scriptletRulesList .scriptlet-rule-label {
+    /* Deliberately NOT a fixed width like the two columns above — this is
+       the column users actually read, so it gets whatever space is left
+       in the row instead of being capped/ellipsized alongside them. Since
+       hostname/risk-badge/API all precede it with fixed widths (and the
+       delete button after it has its own fixed size), flex: 1 growing
+       into "everything left over" still starts at the same x on every
+       row — the alignment fix doesn't depend on this column being fixed
+       too, only on everything BEFORE it being fixed. */
+    flex: 1 1 auto;
+    }
+
+.scriptlet-rule-label {
+    /* Plain-language rule description (see js/data/scriptlet-rule-labels.js)
+       — a readable phrase, not a short technical token, so this gets its
+       own class instead of reusing .dnr-type-icon's monospace/fixed-width/
+       centered styling (that one stays tuned for the DNR pane's short
+       resourceType icons — see custom-rules.js's typeEl, which still uses
+       it unchanged). Width is fixed by the #scriptletRulesList/
+       #matrixRulesList overrides above (see each one's own comment for
+       why); ellipsis here is what actually handles the overflow once
+       whichever fixed width applies is in place. */
+    font-size: var(--font-size-smaller);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+.scriptlet-risk-badge {
+    /* Breakage-risk indicator (🔴/🟡/🟢) — see
+       js/data/scriptlet-rule-labels.js for the tier rationale. Fixed
+       width regardless of glyph so the label column after it lines up
+       consistently row to row; flex-shrink: 0 so a long .scriptlet-rule-label
+       ellipsis never squeezes this instead of itself. cursor: help signals
+       the title tooltip carries the actual reason, same convention as this
+       project's existing "ⓘ" info dropdowns. Reused as-is (see section 5
+       above) for the Dynamic DNR rows' action-dot column, so this same
+       width/centering also governs that column now — retuning this rule
+       moves both sections' dot/badge column together, by design. */
+    cursor: help;
+    flex-shrink: 0;
+    font-size: 0.85em;
+    line-height: 1;
+    text-align: center;
+    width: 1.4em;
+    }
+
+.scriptlet-api-label {
+    /* Technical API name (see js/data/scriptlet-rule-labels.js's
+       getScriptletRuleApi()) — same monospace/muted treatment as
+       .dnr-type-icon (both show a short technical token), but kept as
+       its own class rather than reusing that one since the two need
+       different fixed widths for their own closed sets of possible
+       values (6em there vs 15em here — prevent-canvas's api value is a
+       comma-separated list of four method names, much longer than any
+       resource-type label). Width is fixed by the #scriptletRulesList
+       override above; ellipsis here handles overflow once that width is
+       in place — the full value is always still available via .title. */
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 60% — borderline fails 4.5:1 in light mode (4.44:1); 65% is the nearest proven-safe value (A9) */
+    flex-shrink: 0;
+    font-family: monospace;
+    font-size: 0.78em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   6. CREATED-DATE COLUMN  —  used in ALL THREE rule-row types
+   ══════════════════════════════════════════════════════════════ */
+
+/* Utmost-right data column (delete button is the only thing after it) —
+   plain YYYY-MM-DD, see js/util/utils.js's todayISODate(). Fixed width
+   (not flex: 1 like .scriptlet-rule-label) so dates line up in a clean
+   right-aligned column down the list regardless of what's in the columns
+   before it on any given row; flex-shrink: 0 so it can never be the
+   column that gets squeezed when a row is tight on space — that should
+   always be whichever column already has its own ellipsis handling
+   (selector text, domain, friendly label), not this one, which has
+   nothing meaningful left to truncate. Monospace + tabular-nums so the
+   ten characters of a YYYY-MM-DD string line up digit-for-digit between
+   rows, the same reasoning css/default.css's monospace token choices
+   elsewhere in this project already follow for columnar data. */
+.rule-created-date {
+    /* 65%, not 55% — this is data the user is meant to actually read
+       (the whole point of the feature), not decorative secondary chrome
+       like .matrix-stats' dimmer 55% tier, which is only verified to
+       3.80:1 (3:1 bar). Computed at 5.21:1, passing the 4.5:1 normal-text
+       bar this needs — same table-header-label tier STYLE_GUIDE_LIGHT.md
+       already documents at exactly this ratio. (.dnr-rule-site is no
+       longer part of this dimmed-text comparison — it moved to full
+       var(--ink-1) opacity so its shared .rule-domain bold weight is
+       actually visible; see that rule's own comment.) */
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    flex-shrink: 0;
+    font-family: monospace;
+    font-size: 0.78em;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    /* Without this, the browser can break the line at either hyphen in
+       "2026-08-04" — hyphens are valid soft-wrap points in CSS by
+       default even with no surrounding whitespace — producing exactly
+       the "2026-08- / 04" two-line wrap this fixes. */
+    white-space: nowrap;
+    width: 8em;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   7. SHARED DELETE BUTTON  —  used in both cosmetic and DNR rows
+   ══════════════════════════════════════════════════════════════ */
+
+.rule-delete-btn {
+    background: none;
+    border: none;
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 35% — a DOCUMENTED FAIL in both style guides' own tables (2.18:1 light / 2.77:1 dark); 65% is a proven-safe value (A9) */
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 1em;
+    line-height: 1;
+    padding: 0.1em 0.3em;
+    }
+
+.rule-delete-btn:hover {
+    /* Not raw var(--color-red) as text (3.36:1 light) — same proven 70% blend
+       as .custom-rules-clear:hover above (5.40:1 light, higher dark; A9/C21). */
+    color: color-mix(in srgb, var(--color-red) 70%, currentColor);
+    }

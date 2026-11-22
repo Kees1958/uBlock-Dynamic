@@ -1,0 +1,403 @@
+{
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "img/icon_16.png",
+      "32": "img/icon_32.png",
+      "64": "img/icon_64.png"
+    }
+  },
+  "author": "Kees1958",
+  "homepage_url": "https://github.com/Kees1958/uBol-stripped",
+  "background": {
+    "service_worker": "/js/workflow/background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none';"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_kees1958",
+        "enabled": true,
+        "path": "rulesets/ruleset_kees1958.json"
+      },
+      {
+        "id": "ruleset_adguard_tracking_servers",
+        "enabled": true,
+        "path": "rulesets/ruleset_adguard_tracking_servers.json"
+      },
+      {
+        "id": "ruleset_peterlowe",
+        "enabled": true,
+        "path": "rulesets/ruleset_peterlowe.json"
+      },
+      {
+        "id": "ruleset_badfilter_quickfixes",
+        "enabled": true,
+        "path": "rulesets/ruleset_badfilter_quickfixes.json"
+      },
+      {
+        "id": "ruleset_badfilter_quickfixes_unsafe",
+        "enabled": true,
+        "path": "rulesets/ruleset_badfilter_quickfixes_unsafe.json"
+      },
+      {
+        "id": "ruleset_annoyances",
+        "enabled": true,
+        "path": "rulesets/ruleset_annoyances.json"
+      },
+      {
+        "id": "ruleset_hagezi_light",
+        "enabled": true,
+        "path": "rulesets/ruleset_hagezi_light.json"
+      },
+      {
+        "id": "ruleset_tracking_servers_allowlist",
+        "enabled": true,
+        "path": "rulesets/ruleset_tracking_servers_allowlist.json"
+      },
+      {
+        "id": "ruleset_adguard_base",
+        "enabled": true,
+        "path": "rulesets/ruleset_adguard_base.json"
+      },
+      {
+        "id": "ruleset_adguard_base_unsafe",
+        "enabled": true,
+        "path": "rulesets/ruleset_adguard_base_unsafe.json"
+      },
+      {
+        "id": "ruleset_adguard_base_removeparam",
+        "enabled": true,
+        "path": "rulesets/ruleset_adguard_base_removeparam.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_dutch_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_dutch_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_dutch",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_dutch.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_german_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_german_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_german",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_german.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_french_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_french_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_french",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_french.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_spanish_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_spanish_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_spanish",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_spanish.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_italian_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_italian_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_italian",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_italian.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_polish_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_polish_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_polish",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_polish.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_portuguese_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_portuguese_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_portuguese",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_portuguese.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_latvian_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_latvian_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_latvian",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_latvian.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_czech_slovak_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_czech_slovak_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_czech_slovak",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_czech_slovak.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_bulgarian_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_bulgarian_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_bulgarian",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_bulgarian.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_nordic_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_nordic_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_nordic",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_nordic.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_hungarian_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_hungarian_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_hungarian",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_hungarian.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_other_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_other_unsafe.json"
+      },
+      {
+        "id": "ruleset_agbase_overflow_other",
+        "enabled": false,
+        "path": "rulesets/ruleset_agbase_overflow_other.json"
+      },
+      {
+        "id": "ruleset_adguard_dutch",
+        "enabled": false,
+        "path": "rulesets/ruleset_adguard_dutch.json"
+      },
+      {
+        "id": "ruleset_adguard_dutch_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_adguard_dutch_unsafe.json"
+      },
+      {
+        "id": "ruleset_adguard_german",
+        "enabled": false,
+        "path": "rulesets/ruleset_adguard_german.json"
+      },
+      {
+        "id": "ruleset_adguard_german_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_adguard_german_unsafe.json"
+      },
+      {
+        "id": "ruleset_adguard_french",
+        "enabled": false,
+        "path": "rulesets/ruleset_adguard_french.json"
+      },
+      {
+        "id": "ruleset_adguard_french_removeparam",
+        "enabled": false,
+        "path": "rulesets/ruleset_adguard_french_removeparam.json"
+      },
+      {
+        "id": "ruleset_adguard_spanish",
+        "enabled": false,
+        "path": "rulesets/ruleset_adguard_spanish.json"
+      },
+      {
+        "id": "ruleset_adguard_spanish_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_adguard_spanish_unsafe.json"
+      },
+      {
+        "id": "ruleset_easylist_italian",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_italian.json"
+      },
+      {
+        "id": "ruleset_easylist_italian_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_italian_unsafe.json"
+      },
+      {
+        "id": "ruleset_easylist_polish",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_polish.json"
+      },
+      {
+        "id": "ruleset_easylist_polish_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_polish_unsafe.json"
+      },
+      {
+        "id": "ruleset_easylist_portuguese",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_portuguese.json"
+      },
+      {
+        "id": "ruleset_easylist_portuguese_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_portuguese_unsafe.json"
+      },
+      {
+        "id": "ruleset_easylist_latvian",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_latvian.json"
+      },
+      {
+        "id": "ruleset_easylist_latvian_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_latvian_unsafe.json"
+      },
+      {
+        "id": "ruleset_hungarian",
+        "enabled": false,
+        "path": "rulesets/ruleset_hungarian.json"
+      },
+      {
+        "id": "ruleset_hungarian_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_hungarian_unsafe.json"
+      },
+      {
+        "id": "ruleset_easylist_czech_slovak",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_czech_slovak.json"
+      },
+      {
+        "id": "ruleset_easylist_czech_slovak_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_czech_slovak_unsafe.json"
+      },
+      {
+        "id": "ruleset_easylist_nordic",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_nordic.json"
+      },
+      {
+        "id": "ruleset_easylist_nordic_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_nordic_unsafe.json"
+      },
+      {
+        "id": "ruleset_easylist_bulgarian",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_bulgarian.json"
+      },
+      {
+        "id": "ruleset_easylist_bulgarian_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_easylist_bulgarian_unsafe.json"
+      },
+      {
+        "id": "ruleset_adguard_antiadblock",
+        "enabled": true,
+        "path": "rulesets/ruleset_adguard_antiadblock.json"
+      },
+      {
+        "id": "ruleset_adguard_antiadblock_unsafe",
+        "enabled": true,
+        "path": "rulesets/ruleset_adguard_antiadblock_unsafe.json"
+      },
+      {
+        "id": "ruleset_english_outside_top1m",
+        "enabled": false,
+        "path": "rulesets/ruleset_english_outside_top1m.json"
+      },
+      {
+        "id": "ruleset_english_outside_top1m_unsafe",
+        "enabled": false,
+        "path": "rulesets/ruleset_english_outside_top1m_unsafe.json"
+      },
+      {
+        "id": "ruleset_antiadmiral",
+        "enabled": true,
+        "path": "rulesets/ruleset_antiadmiral.json"
+      }
+    ]
+  },
+  "default_locale": "en",
+  "description": "__MSG_extShortDesc__",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "incognito": "split",
+  "manifest_version": 3,
+  "minimum_chrome_version": "128.0",
+  "name": "__MSG_extName__",
+  "options_page": "dashboard/dashboard.html",
+  "permissions": [
+    "alarms",
+    "browsingData",
+    "contextMenus",
+    "declarativeNetRequest",
+    "offscreen",
+    "scripting",
+    "storage",
+    "webNavigation",
+    "webRequest"
+  ],
+  "short_name": "uBlock Dynamic",
+  "version": "11.0.3",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/picker/picker.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "use_dynamic_url": true
+    },
+    {
+      "resources": [
+        "web_accessible_resources/noop.js",
+        "web_accessible_resources/noop-1s.mp4"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "use_dynamic_url": true
+    }
+  ],
+  "icons": {
+    "16": "img/icon_16.png",
+    "32": "img/icon_32.png",
+    "64": "img/icon_64.png",
+    "128": "img/icon_128.png"
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 28,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "novekedes.hu"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||gemhu.adocean.pl/files/js/ado.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 34,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "divany.hu",
+        "totalbike.hu",
+        "totalcar.hu"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||ad.adverticum.net/g3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

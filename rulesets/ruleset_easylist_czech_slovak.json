@@ -1,0 +1,1779 @@
+[
+  {
+    "id": 906536,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".com/bannery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1866771,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".cz/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 593710,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".cz/ban/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 421024,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".cz/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 222706,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".cz/bannery_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 207402,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".cz/img/banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 216091,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".etargetnet.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1553427,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".sk/img/banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 132247,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/amalker/pos/mag_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1990400,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/cron.php?rand=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 718308,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/emonitor.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 247087,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/komercni-sdeleni/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1326412,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/push-ads.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 937935,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/reklama_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 945571,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/reklamne-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 366989,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".war-forum.net/images/sh/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1673476,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "idnes.cz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||1gr.cz/js/uni/oldback/logo.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 987529,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||1.im.cz/ad/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 859108,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||1.im.cz/ad/gemius.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 947393,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||alkoholik.cz/zavislost/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 868701,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bcastgw.livebox.cz/ta3_vod_com/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 374583,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdr.cz/sites/default/files/_cdr_branding/branding.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 847177,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||cdn.dopc.cz/adb",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 302530,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cviceni-doma.cz/images/*banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1746116,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||diit.cz/sites/default/files/_cdr_branding/branding.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1434325,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||digitalnitelevize.cz/obrazky/reklamni_odkazy/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1077662,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||drbna.cz/templates/drbna-2019/modal/modal.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1988153,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||espoluprace.cz/affiliate/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1651986,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fdb.cz/ad/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 538919,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||filmporno.cz/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 122521,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hcdukla.cz/adds/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1712215,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hcmotor.cz/adds/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 916858,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hcorli.cz/img/hokejcz/banner_hokejcz.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 269962,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hd-forum.cz/images/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1105124,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hd-forum.cz/images/sberbank.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1306985,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||heureka.cz/direct/bannery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 178296,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||horoskopy.cz/*/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 524477,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||im9.cz/*aukro",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1043307,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||img.cdnprg.webtea.cz/web/pozadi_webu_mc.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 726694,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||jiskra-benesov.cz/images/branding/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 242373,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||jiskra-benesov.cz/webloader/jsloader-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 349161,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||js.tipcars.com/js/*/_view/amalker/amalker.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1859627,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kurzy.cz/e/adv?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1128190,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||img.kurzy.cz/og",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 138144,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kurzy.cz/l/s_back.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1247846,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||img.kurzy.cz/block/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1490283,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "img.kurzy.cz/ban/ad_ads_advert_advertisement_adform_pub_300x250.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 61656,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lamer.cz/images/bg*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 979491,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||letemsvetemapplem.eu/*/alzafeed_cached_js.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 725710,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lphard.cz/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 582148,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mamincinyrecepty.cz/images/banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1681745,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||mediatn.cms.nova.cz/robots.txt",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1535280,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||motorkari.cz^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 931059,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mrk.cz/images/inz/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1641331,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pornuj.cz/files/ntva.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 128810,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||presentation.lmc.cz/aliance/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 267586,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||prvnizpravy.cz/repository/banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1487757,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||rfapi.digicon.cz/img/listovacky-cross/enigmaplus.cz.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 98204,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||romea.cz/images/servis/banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 760928,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ronnie.cz/cache/bannery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 289469,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rs.kurzy.cz/e/adv",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 712196,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rs.kurzy.cz/e/prf",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1721703,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||sauto.cz/*bkeaw9ubgf*.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 280675,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sauto.cz/*ssp*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1879579,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sauto.cz/*w9ub*pkp*gre*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1282859,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sauto.cz/*/v1/xhr",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1250838,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sbazar.cz/*/v1/xhr",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1143237,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sktorrent.eu/torrent/interstitial.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1288570,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||stobklub.cz/images/banners/maintop.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1817507,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "titulky.com/mybanal/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1264312,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||uschovna.cz/branding",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1745517,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||vascak.cz/data/img/adblock.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 130620,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "warcenter.cz/interstitial_fs.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 879782,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||warforum.xyz/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1994833,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wesa.cz/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1020344,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "anglictina-maturita.cz",
+        "biologie-chemie.cz",
+        "ekonomie-ucetnictvi.cz",
+        "rozbor-dila.cz",
+        "rozbor-dila.eu",
+        "rozborknihy.cz",
+        "studijni-svet.cz"
+      ],
+      "urlFilter": "/wp-content/plugins/wp-content-copy-protection/assets/js/script.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1058558,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "anglictina-maturita.cz",
+        "biologie-chemie.cz",
+        "ekonomie-ucetnictvi.cz",
+        "rozbor-dila.cz",
+        "rozbor-dila.eu",
+        "rozborknihy.cz",
+        "studijni-svet.cz"
+      ],
+      "urlFilter": "/wp-content/plugins/wp-content-copy-protection/assets/css/style.min.css",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1305912,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zkouknito.cz/js/js.htmlad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 771343,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zvukarina.cz/forum/images/ostatni/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 482132,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||autobazar.eu/__branding/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 72026,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bmwklub.sk/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 487107,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||eduself.sk/public/js/prebid-ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 515863,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||flirtkontakt.sk/previews/banner*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1327121,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fony.sk/content/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 576535,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||funnyburger.sk/js/anti-theft-system.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1981884,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hojko.com/images/banner*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1460991,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||img.zoznam.sk/adimages/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1973963,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||kosicak.sk/push.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 297021,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mhdba.eu/banerova-reklama-animacia.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 244162,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||michalovskespravy.sk/files/a57xq6rhr5uuzzyf.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 5162,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mojanitra.sk/banery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 220602,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mojanitra.sk//images/banery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 299034,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ourphorum.com/images/banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 759494,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pricemania.sk/pictures/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 213786,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pricemania.sk/pictures/campaigns/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1978879,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "programujte.com/img/pozadi_2024.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1384480,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||radia.sk/_uputavky/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1611256,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radia.sk/scripts/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 851600,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||recycle.zoznam.sk/get.fcgi",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1501463,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||recycle-static.zoznam.sk/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 171617,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rtvs.sk/bs/xml/vast.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 933303,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rtvs.sk/bs/xml/vmap.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 671939,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sector.sk/a/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 522239,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ta3.com/api/v1/livebox/video/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 458403,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||waaw.*/js/script_33.10.js?16",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1715719,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zn.sk/galeria/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1235740,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": ".livebox.cz/ta3_vod_com",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1288999,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||graphics.stdout.cz/b:commercial",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 848148,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||im9.cz/*/vyrobce/*background",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 93409,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||storage.googleapis.com/adela-hb-platform.appspot.com/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 624711,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "garaz.tv"
+      ],
+      "urlFilter": "||firebasestorage.googleapis.com/v0/b/tivio-dev.appspot.com/*vast*.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 893677,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||kariera.zoznam.sk/?page=banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 430953,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||login.dognet.sk/accounts/default1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 574094,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "cas.sk"
+      ],
+      "urlFilter": "||predpredaj.zoznam.sk^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 116171,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||storage.googleapis.com/tivio-production.appspot.com/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1331415,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||ticketportal.sk/carousels^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1310273,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||turbo.web2media.sk",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1340239,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "-reklama.cz",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1897172,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hnonline.sk"
+      ],
+      "urlFilter": "cdn.cpex.cz/cmp/v2/cpex-cmp.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 868939,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hnonline.sk"
+      ],
+      "urlFilter": "cdn.cxense.com/cx.cce.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 739450,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hnonline.sk"
+      ],
+      "urlFilter": "cdn.cxense.com/cx.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 783620,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hnonline.sk"
+      ],
+      "urlFilter": "api.cxense.com/public/widget/data",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 660704,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "decko.ceskatelevize.cz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||decko.ceskatelevize.cz/cms/layouts/js/analytics.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1826441,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||heureka.*/crossdomain.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1763760,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||heureka.*/direct/vyvoj-cen/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1649435,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||heureka.*/ocm/sdk.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1197503,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||iboys.cz/advert-list.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1607200,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "titulky.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||netusers.cz/js/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 919089,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||opti.cz/wp-content/uploads/*/reklama_*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 122992,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||optika-opti.cz/wp-content/uploads/*/reklama_*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 186560,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nova.cz"
+      ],
+      "urlFilter": "||static.cz.prg.cmestatic.com/static/cz/shared/js/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 837660,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "urlFilter": "||www.top-reklama.sk^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1581525,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||api.youradio.cz/v2/ads/preroll",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 239297,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sport.aktuality.sk"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||admedia.joj.sk/outstream/embed?iframe",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1484219,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||ads.eduself.sk/_prebid.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1945777,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||sledujserialy.to/theme/js/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1105195,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myonlineradio.sk"
+      ],
+      "urlFilter": "||connect.facebook.net/en_us/fbevents.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1649036,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myonlineradio.sk"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 41947,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pracezdopravy.cz"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 731320,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "a.blesk.cz",
+        "a.centrum.cz",
+        "a.csfd.cz",
+        "a.denik.cz",
+        "api-exponea.o2.cz",
+        "bannery.ccb.cz",
+        "bannery.navratdoreality.cz",
+        "c.seznam.cz",
+        "cdn.cpex.cz",
+        "liveagent.mobilbonus.cz",
+        "report.seznamzpravy.cz",
+        "report.sport.cz",
+        "ssp.seznam.cz",
+        "stat.novinky.cz",
+        "stat.super.cz",
+        "tracker.cncenter.cz",
+        "videoad.cz",
+        "0af2a962b0102942d9a7df351b20be55.com",
+        "adb.azet.sk",
+        "api-exponea.o2.sk",
+        "bannersector.sector.sk",
+        "image.sector.sk"
+      ]
+    }
+  },
+  {
+    "id": 1751131,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "001shop.cz",
+        "10.im.cz",
+        "ad.autobazar.cz",
+        "ad.citynet.cz",
+        "ad.czechia.com",
+        "ad.eva.cz",
+        "ad.seznam.cz",
+        "ad.surtep.cz",
+        "ad1.kde.cz",
+        "adexpert.cz",
+        "adform.net",
+        "ads.cars.cz",
+        "ads.esports.cz",
+        "adverts.cz",
+        "automodul.cz",
+        "ban.tipsport.cz",
+        "banan.cz",
+        "banner.ifortuna.cz",
+        "banners.onebit.cz",
+        "chrek.stdout.cz",
+        "d.vvbox.cz",
+        "d.wedosas.net",
+        "data.itiscali.cz",
+        "decp.cmscore.cz",
+        "dev.youcan.cz",
+        "dot.idot.cz",
+        "ecigareta.eu",
+        "ehub.cz",
+        "fastshare.cloud",
+        "fastshare.cz",
+        "heureka.cz",
+        "ibillboard.com",
+        "idvert.cz",
+        "imedia.cz",
+        "intext.billboard.cz",
+        "intext.lookit.cz",
+        "intext.wdt.cz",
+        "megadarky.cz",
+        "mer.stdout.cz",
+        "n.hyperinzerce.cz",
+        "netadvert.cz",
+        "out-ng.sklik.cz",
+        "out.sklik.cz",
+        "performax.cz",
+        "pizzamodena.cz",
+        "productads.cz",
+        "r.i0.cz",
+        "r2b2.cz",
+        "reklamy.s3.amazonaws.com",
+        "rival.cz",
+        "screechingstove.com",
+        "sda.online-systemy.cz",
+        "sda.un-42.com",
+        "titulky.com",
+        "trackad.cz",
+        "viadata.store",
+        "xzone.cz",
+        "zombiezone.cz",
+        "zumail.cz",
+        "ban.tipsport.sk",
+        "heureka.sk",
+        "imr.sk",
+        "inclick.sk",
+        "inres.uspech.sk",
+        "netsuccess.sk",
+        "partner.mrtns.eu",
+        "pohodo.sk",
+        "productads.sk",
+        "recycle-static.zoznam.sk",
+        "robene.sk",
+        "zachej.sk"
+      ],
+      "domainType": "thirdParty"
+    }
+  }
+]

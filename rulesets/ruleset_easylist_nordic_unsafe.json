@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1104759,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vgtv.no"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||acdn.adnxs.com/ast/ast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 342957,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vg.no"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||damoh.vgtv.no/hic_qos",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

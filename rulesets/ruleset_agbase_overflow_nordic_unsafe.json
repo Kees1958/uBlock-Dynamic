@@ -1,0 +1,60 @@
+[
+  {
+    "id": 46,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bold.dk"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||freewheel-mtgx-tv.akamaized.net/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 84,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||play.tv3.ee/static/scripts/adroot/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 96,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aftonbladet.se"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||aftonbladet.ooul.tv/nocache/se-aftonbladet/aab/aftonbladet_config.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

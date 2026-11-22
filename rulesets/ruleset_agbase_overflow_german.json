@@ -1,0 +1,1042 @@
+[
+  {
+    "id": 1,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "videobuster.de"
+      ],
+      "urlFilter": "||videobuster.de/js/video-js/nuevo.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dmax.de"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dmax.de"
+      ],
+      "urlFilter": "||cdn.cookielaw.org/scripttemplates/otsdkstub.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 4,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dmax.de"
+      ],
+      "urlFilter": "||cdn.cookielaw.org/consent/*.json",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 5,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "20min.ch"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "noz.de"
+      ],
+      "urlFilter": "||adswizz.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 7,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "oe24.at"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 8,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "phonostar.de"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 9,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ads.springer.de"
+      ],
+      "urlFilter": "||ads.springer.de^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 10,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xn--allestrungen-9ib.de"
+      ],
+      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 11,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xn--allestrungen-9ib.de"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 12,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "amazon.de"
+      ],
+      "urlFilter": "||images-*.ssl-images-amazon.com/images/*/advertising^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 13,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radio.at",
+        "radio.de"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 14,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xn--allestrungen-9ib.at",
+        "xn--allestrungen-9ib.ch",
+        "xn--allestrungen-9ib.de"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/*/settings.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 15,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xn--allestrungen-9ib.at",
+        "xn--allestrungen-9ib.ch",
+        "xn--allestrungen-9ib.de"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/evidon-sitenotice-bundle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 16,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "orf.at"
+      ],
+      "urlFilter": "||cd.adition.com/assets/adition/*/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 17,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sport1.de"
+      ],
+      "urlFilter": "||acdn.adnxs.com/as/1h/pages/sport1.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 18,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvmovie.de"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 19,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kino.de"
+      ],
+      "urlFilter": "||amazon-adsystem.com/aax2/amzn_ads.js^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 20,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kino.de"
+      ],
+      "urlFilter": "||amazon-adsystem.com/e/dtb/bid^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 21,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "wdr.de"
+      ],
+      "urlFilter": "||wdr.ivwbox.de/cgi-bin/ivw/cp/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 22,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 23,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 24,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 25,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 26,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 27,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 28,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 29,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 30,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 31,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 32,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.at",
+        "google.ch",
+        "google.de"
+      ],
+      "urlFilter": "||googleadservices.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 33,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "motor-talk.de"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 34,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autobild.de",
+        "bz-berlin.de",
+        "computerbild.de",
+        "fitbook.de",
+        "hna.de",
+        "mopo.de",
+        "myhomebook.de",
+        "oeffnungszeitenbuch.de",
+        "petbook.de",
+        "techbook.de",
+        "travelbook.de",
+        "welt.de",
+        "wort-suchen.de",
+        "woxikon.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 35,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "petbook.de"
+      ],
+      "urlFilter": "/lib.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 36,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "gruene-zitate.de",
+        "motor-talk.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": ".com/script/*.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 37,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "gruene-zitate.de",
+        "motor-talk.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "://www.*.xyz/script/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 38,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "fr.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/[a-z][a-z][a-z]+\\.[a-z][a-z][a-z][a-z][a-z][a-z][a-z]+\\.[bcimp][a-z][a-z]?[a-z]?\\/[a-z][a-z]+\\/[a-z][a-z]+\\/[a-z][a-z]+\\/[-._a-zA-Z0-9][-._a-zA-Z0-9][-._a-zA-Z0-9][-._a-zA-Z0-9][-._a-zA-Z0-9]+$",
+      "isUrlFilterCaseSensitive": true
+    }
+  },
+  {
+    "id": 39,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autobild.de",
+        "computerbild.de",
+        "raetsel-hilfe.de",
+        "speisekarte.de",
+        "wetteronline.de",
+        "wieistmeineip.at",
+        "wieistmeineip.ch",
+        "wieistmeineip.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 40,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fizzlefakten.de"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 41,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "niederschlagsradar.de"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 42,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "internetradio-horen.de",
+        "radio-osterreich.at"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 43,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kreuzwortraetsel.de",
+        "winfuture.de",
+        "wort-suchen.de",
+        "woxikon.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 44,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "hianime.at"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "regexFilter": "\\/[0-9][0-9][0-9][0-9][0-9][0-9][0-9]$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 45,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "fr.de"
+      ],
+      "excludedRequestDomains": [
+        "addtoany.com",
+        "alicdn.com",
+        "amazonaws.com",
+        "aoneroom.com",
+        "appboycdn.com",
+        "awswaf.com",
+        "azurewebsites.net",
+        "b-cdn.net",
+        "blogger.com",
+        "bootstrapcdn.com",
+        "bunnycdn.ru",
+        "bytecdntp.com",
+        "cackle.me",
+        "capo6play.com",
+        "cdn-apple.com",
+        "cdn.ampproject.org",
+        "cdn.staticfile.org",
+        "cdnhop.com",
+        "chatango.com",
+        "clarity.ms",
+        "cleverpush.com",
+        "cloudflare.com",
+        "cloudflare.net",
+        "cloudflareinsights.com",
+        "cloudfront.net",
+        "code.iconify.design",
+        "connatix.com",
+        "cookielaw.org",
+        "cxense.com",
+        "disqus.com",
+        "disquscdn.com",
+        "dmca.com",
+        "doodcdn.io",
+        "dotmetrics.net",
+        "ebacdn.com",
+        "facebook.net",
+        "fastcomments.com",
+        "fastly-insights.com",
+        "fastly.net",
+        "fastlylb.net",
+        "fbcdn.net",
+        "fluidplayer.com",
+        "fontawesome.com",
+        "github.io",
+        "google-analytics.com",
+        "google.com",
+        "googleapis.com",
+        "googleoptimize.com",
+        "googletagmanager.com",
+        "goonbox.cr",
+        "gstatic.com",
+        "hcaptcha.com",
+        "highcharts.com",
+        "hwcdn.net",
+        "idcdn.de",
+        "ilfcdn.li",
+        "imgsmail.ru",
+        "inmobi.com",
+        "instagram.com",
+        "intensedebate.com",
+        "jpg5.su",
+        "jpg6.su",
+        "jquery.com",
+        "jscdnservices.com",
+        "jsdelivr.net",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "k5a.io",
+        "ko-fi.com",
+        "libs.baidu.com",
+        "linkvertise.com",
+        "lulustream.com",
+        "media-imdb.com",
+        "mega.co.nz",
+        "mega.nz",
+        "nocookie.net",
+        "onesignal.com",
+        "onetrust.com",
+        "online-metrix.net",
+        "outbrain.com",
+        "permutive.app",
+        "plyr.io",
+        "polyfill-fastly.io",
+        "primis.tech",
+        "privacy-mgmt.com",
+        "quantserve.com",
+        "rabbitstream.net",
+        "recaptcha.net",
+        "rsc.cdn77.org",
+        "scorecardresearch.com",
+        "sharecast.ws",
+        "sharethis.com",
+        "shrink.pe",
+        "speedcurve.com",
+        "spot.im",
+        "static.bigbrain.gg",
+        "statically.io",
+        "tailwindcss.com",
+        "teads-xo.com",
+        "tinypass.com",
+        "tolstoycomments.com",
+        "trustpilot.com",
+        "tvableon.me",
+        "twimg.com",
+        "twitter.com",
+        "ulogin.ru",
+        "unpkg.com",
+        "userapi.com",
+        "utteranc.es",
+        "viafoura.net",
+        "vidazoo.com",
+        "vixcloud.co",
+        "vk.com",
+        "vuukle.com",
+        "waust.at",
+        "wknd.ai",
+        "workers.dev",
+        "wp.com",
+        "wpmucdn.com",
+        "wsimg.com",
+        "x.com",
+        "yastatic.net",
+        "youtube.com",
+        "ytimg.com",
+        "zencdn.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xnxx.de"
+      ],
+      "urlFilter": "/vast.php?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 47,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "www.cineby.at"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "\\/scripts\\/[a-z][a-z]\\.js$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 48,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sitenable.ch"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "ly9kmxlizgxnogfvdwzulmnsb3vkznjvbnqubmv0",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 49,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eurosport.de"
+      ],
+      "urlFilter": "||mssl.fwmrm.net/libs/adm/*/admanager.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 50,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "forge.plebmasters.de"
+      ],
+      "urlFilter": "||plebmastersforgeassets.blob.core.windows.net/partneradvertisements/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 51,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "anisearch.de"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||anisearch.*/partner?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 52,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "osiander.de"
+      ],
+      "urlFilter": "||assets.thalia.media/ocsassets/heimdall/consent-banner-bootstrap/main-nomodule.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 53,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fc.de"
+      ],
+      "urlFilter": "/js/nt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 54,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myonlineradio.at",
+        "myonlineradio.de"
+      ],
+      "urlFilter": "/inside-banner.mini.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 57,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "donasi.lk21.de",
+        "loader.motor-talk.de",
+        "asloader.tz.de"
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "trustiseverything.de"
+      ],
+      "domainType": "thirdParty"
+    }
+  }
+]

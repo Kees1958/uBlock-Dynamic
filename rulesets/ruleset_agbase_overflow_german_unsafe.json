@@ -1,0 +1,65 @@
+[
+  {
+    "id": 55,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "deviceAdInsertionTypeOverride"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "/getplaybackresources?",
+      "initiatorDomains": [
+        "amazon.de"
+      ],
+      "resourceTypes": [
+        "font",
+        "image",
+        "main_frame",
+        "media",
+        "object",
+        "other",
+        "ping",
+        "script",
+        "stylesheet",
+        "sub_frame",
+        "websocket",
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 56,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "deviceAdInsertionTypeOverride"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "/getplaybackresources?",
+      "initiatorDomains": [
+        "amazon.de"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

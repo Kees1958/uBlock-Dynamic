@@ -1,0 +1,1783 @@
+[
+  {
+    "id": 1070749,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "1067rock.ca",
+        "921citi.ca",
+        "977rock.ca",
+        "979rock.ca",
+        "country1073.ca",
+        "country935.ca",
+        "easy1013.ca",
+        "jack969.ca",
+        "kiss1023.ca",
+        "krock1057.ca",
+        "sonicradio.ca",
+        "star959.ca"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||utility.rogersmedia.com/utility.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1693422,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "38.242.198.170",
+        "5.182.211.129",
+        "7xm.xyz",
+        "androjungle.com",
+        "animekhor.xyz",
+        "applexgen.com",
+        "azoranov.com",
+        "baominh.tech",
+        "bithub.win",
+        "blog.miuiflash.com",
+        "blogging-techies.com",
+        "bullfrag.com",
+        "captionsgram.com",
+        "cctvwiki.com",
+        "chimicamo.org",
+        "comentariodetexto.com",
+        "conhecimentolivre.net",
+        "cyberdefensemagazine.com",
+        "cyfostreams.com",
+        "dengeki-plusv2.xyz",
+        "downloadcursos.org",
+        "downloadtutorials.net",
+        "drivers.plus",
+        "dvdporngay.com",
+        "eductin.com",
+        "eoydo.com",
+        "fapdrop.com",
+        "filegajah.com",
+        "filmefarsi.com",
+        "freecoursesites.com",
+        "freepreset.net",
+        "freewebcart.com",
+        "gezegenforum.com",
+        "gocmod.com",
+        "godmods.com",
+        "gplastra.com",
+        "grafixfather.com",
+        "hiseku.com",
+        "htstreaming.com",
+        "ipamod.com",
+        "javindo.eu.org",
+        "jojo-themes.net",
+        "kuponigo.com",
+        "legendary-rt-textures.xyz",
+        "magesy.pro",
+        "mangacrab.org",
+        "manyakan.com",
+        "megafire.net",
+        "merkulov.design",
+        "mixrootmods.com",
+        "moviessquad.com",
+        "myqqjd.com",
+        "mytechroad.com",
+        "nulleb.com",
+        "nulljungle.com",
+        "onlinecoursebay.com",
+        "ozabc.com",
+        "pcwarehub.com",
+        "pinsystem.co.uk",
+        "plc4me.com",
+        "porninblack.com",
+        "qcscertification.com",
+        "scrapywar.com",
+        "serverbd247.com",
+        "shineads.org",
+        "snlookup.com",
+        "softwaretotal.net",
+        "sonixgvn.net",
+        "sqlserveregitimleri.com",
+        "ssf-co.com",
+        "superembeds.com",
+        "tech-story.net",
+        "techsmoon.com",
+        "teknotaci.com",
+        "teksnologi.com",
+        "thecustomrom.com",
+        "tinyppt.com",
+        "tokuvn.com",
+        "trgamestudio.com",
+        "tromcap.com",
+        "tuktukcinma.com",
+        "vectogravic.com",
+        "vietnoiket.com",
+        "watchmdh.to",
+        "windowslite.net",
+        "worldpremiumware.online",
+        "ypojie.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 135166,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "canadafreepress.com",
+        "comicallyincorrect.com",
+        "populist.press",
+        "populistpress.com",
+        "thepalmierireport.com",
+        "thepatriotjournal.com",
+        "thepoke.co.uk",
+        "toptenz.net",
+        "welovetrump.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1687399,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "weekendletters.store"
+      ],
+      "urlFilter": "||jwpcdn.com/player/*/googima.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 940271,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vidplayer.live"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1732305,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "15.235.145.185",
+        "beeduballs.com",
+        "bestbookbuddies.com",
+        "ijubes.com",
+        "pfionline.com",
+        "tech-guidance.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 852400,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "4meplayer.pro",
+        "animeshqip.uns.bio",
+        "bigbuttshubvideos.com",
+        "cdnstream.top",
+        "coflix.upn.one",
+        "easyvidplayer.com",
+        "embed4me.com",
+        "flixcdn.cyou",
+        "hlsfast.com",
+        "isekaitube.cfd",
+        "javboys.upn.one",
+        "javlion.xyz",
+        "jhdanime.com",
+        "onion.upns.blog",
+        "rpmstream.live",
+        "rpmvid.com",
+        "rpmvip.com",
+        "securecdn.shop",
+        "seekplays.com",
+        "streamcasthub.store",
+        "strp2p.com",
+        "ultrastream.online",
+        "upns.live",
+        "upns.one",
+        "upns.online",
+        "upns.pro",
+        "upns.xyz",
+        "w1tv.xyz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 317061,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zippyshare.day"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 453769,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "texteditor.nsspot.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/show_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1104577,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dgb.lol"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||tagan.adlightning.com/setupad-hai/op.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 775270,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mtv.co.uk",
+        "mtvema.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/pal/sdkloader/pal.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 269558,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nickjr.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1152320,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "allfaucet.xyz"
+      ],
+      "urlFilter": "||static.surfe.pro/js/net.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1344060,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "allfaucet.xyz"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1576246,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "now.us"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||fundingchoicesmessages.google.com/i/pub",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 471707,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "now.us"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||dn0qt3r0xannq.cloudfront.net/nowgg-*/video/prebid-load.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1707004,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "now.us"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||dn0qt3r0xannq.cloudfront.net/nowgg-*/display/prebid-load.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 221600,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "workink.click"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "regexFilter": "^https?:\\/\\/[0-9a-z]{13,14}\\.cloudfront\\.net\\/\\?[a-z]{3,5}=\\d{6}$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1782591,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "daemonanime.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||a.magsrv.com/video-slider.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1893688,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "earnhub.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.bmcdn3.com/js/*aab.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 982552,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "earnhub.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||googletagmanager.com/gtag/js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1745251,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "watchtv24.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 599512,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "truffeonline.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 594563,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kdbhbd.blogspot.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1950341,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "visalist.io"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 711443,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "faucetofbob.xyz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||googletagmanager.com/gtag/js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1378025,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "itscybertech.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 411438,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "btcbunch.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||googletagmanager.com/gtag/js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1744389,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "coin-free.com"
+      ],
+      "urlFilter": "||googletagmanager.com/gtag/js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1856207,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "poki-gdn.com"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||redirector.gvt1.com/videoplayback/id/*/source/gfp_video_ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1789663,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mangasco.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||services.vlitag.com/adv",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1283484,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "proinfinity.fun"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||googletagmanager.com/gtag/js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1347866,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "diglink.blogspot.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 754244,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "htmlsave.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1474307,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "embed.wcostream.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||platform.pubadx.one/pubadx-ad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1771495,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aumaletv.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1345649,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "freeiptvgen.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 76142,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mix957gr.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 988715,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "beatsnoop.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2019.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1705362,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eviltranslator.xyz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 175094,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sms24.info"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.adoptum.net/ado.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 33424,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "link.rota.cc"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 894540,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "freebinchecker.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1626335,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gbnews.uk"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 778079,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "herokuapp.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/show_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 675769,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "motorsport.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||static.adsafeprotected.com/vans-adapter-google-ima.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1327294,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "10play.com.au"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1743481,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "flowsoft7.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 621494,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "scanner.thetimetube.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/show_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1662751,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "beef1999.blogspot.com",
+        "ustream.to"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||revenuenetworkcpm.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1240944,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "beef1999.blogspot.com",
+        "ustream.to"
+      ],
+      "urlFilter": "||profitabletrustednetwork.com",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 570412,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "driverename.iblogbox.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/show_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1473561,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "961thebreeze.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||adservice.google.com/adsid/integrator.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 776608,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "panoramaviewer.1bestlink.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/show_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1730620,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "camarchive.tv"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||exosrv.com/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1534474,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "raqmedia.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1555931,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "malaysianwireless.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1637659,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "freecourseweb.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1191154,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hqq.to"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||deliver.vkcdnservice.com/vast-im.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1454773,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lumiafirmware.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1053401,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "akunssh.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 891111,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sna3talaflam.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 479049,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "almezoryae.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 711598,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radiotunes.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1778694,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "jazzradio.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1306664,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "943thex.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||adservice.google.com/adsid/integrator.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1700602,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kharisma-adzana.blogspot.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1340773,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "download.shareappscrack.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 125997,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hqq.tv",
+        "meucdn.vip",
+        "waaw.to",
+        "waaw.tv",
+        "waaw1.tv",
+        "yandexcdn.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||deliver.vkcdnservice.com/vast-im.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 736123,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hqq.tv",
+        "waaw.to",
+        "waaw.tv",
+        "waaw1.tv"
+      ],
+      "urlFilter": "||vkcdnservice.com/api/spots/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1739431,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "flashplayer.fullstacks.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/show_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1318022,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "theappstore.org"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1747607,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "a2zupload.com",
+        "unlockapk.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1153248,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mshare.xyz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1753242,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dl.ccbluex.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pub-config/*/ca-pub-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1804813,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xdarom.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 358685,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aerolla.net",
+        "aerowitter.com",
+        "gamerescape.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 8731,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "diynetwork.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||ads.rubiconproject.com/ad/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1061917,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "thehouseofportable.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||adservice.google.*/adsid/integrator.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1612686,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tabstats.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.intergi.com/hera/tyche.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 156488,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "diynetwork.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 235445,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "diffnow.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

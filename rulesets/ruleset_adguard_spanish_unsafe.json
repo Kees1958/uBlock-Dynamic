@@ -1,0 +1,500 @@
+[
+  {
+    "id": 1242987,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "caracoltv.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1487210,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tn.com.ar"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||player.vodgc.net/dist/*/node_modules/videojs-contrib-ads/dist/videojs.ads.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 394919,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "htforum.net"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 296051,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lpfplay.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 144954,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "turismando.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 438303,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "southpark.lat",
+        "southparkstudios.com.br"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/pal/sdkloader/pal.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 353110,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "saludmasya.com",
+        "tipsdesalud.tips"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1900157,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "maringapost.com.br"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 717243,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "stardeos.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 943691,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "elcorreo.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||static.vocento.com/dab/latest/strategy.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 822804,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lawebdelprogramador.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 598114,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cozinha.minhasdelicias.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 12610,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xkekos.tv"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1218106,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "haddoz.net"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 332138,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fantasy.lu"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 191785,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "anihub.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||st.bebi.com/bebi_v*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1961700,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "profesor10demates.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 597592,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "g1novelas.online"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1583692,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sejasaudavel.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 23191,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "atresplayer.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||googleadservices.com/pagead/conversion_async.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 218106,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "impactoespananoticias.com"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||impactoespananoticias.com/download/publicidades.video.*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1365208,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "serieslatinoamerica.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/tghr.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1257763,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||hentaiporno.xxx/wp-content/uploads/*/*_video.mp4.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1357617,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pokyun.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||p.jwpcdn.com/*/vast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 670442,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "electomania.es"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

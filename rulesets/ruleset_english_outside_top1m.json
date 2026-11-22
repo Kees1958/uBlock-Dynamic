@@ -1,0 +1,1541 @@
+[
+  {
+    "id": 1948215,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "manchesterworld.uk"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 697283,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "astraownersnetwork.co.uk",
+        "digitalhome.ca",
+        "hotcopper.co.nz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 19400,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "2008ownersclub.co.uk",
+        "208ownersclub.co.uk",
+        "500xownersclub.co.uk",
+        "a1-forum.co.uk",
+        "abarthforum.co.uk",
+        "aclassclub.co.uk",
+        "adamownersclub.co.uk",
+        "allcorsa.co.uk",
+        "aronaforums.co.uk",
+        "astrakforums.co.uk",
+        "astraownersnetwork.co.uk",
+        "atecaforums.co.uk",
+        "audiforum.us",
+        "bimmerforums.co.uk",
+        "bmaxownersclub.co.uk",
+        "cactusforums.co.uk",
+        "capturownersclub.co.uk",
+        "chevroletownersclub.co.uk",
+        "chrforums.uk",
+        "cmaxownersclub.co.uk",
+        "coffeeforums.co.uk",
+        "corsa-c.co.uk",
+        "corsaeforums.co.uk",
+        "daciaforum.co.uk",
+        "digitalhome.ca",
+        "discosportforums.co.uk",
+        "ds4ownersclub.co.uk",
+        "ecosportownersclub.co.uk",
+        "ehmac.ca",
+        "epaceforums.co.uk",
+        "evoqueownersclub.co.uk",
+        "f650.co.uk",
+        "fertilityfriends.co.uk",
+        "fordtough.ca",
+        "fpaceforums.co.uk",
+        "glaownersclub.co.uk",
+        "gr-yaris.co.uk",
+        "gt86ownersclub.co.uk",
+        "gtr.co.uk",
+        "hondacivicforum.co.uk",
+        "hyundaicoupeclub.co.uk",
+        "ipaceforums.co.uk",
+        "jukeforums.co.uk",
+        "jukeownersclub.co.uk",
+        "kodiaqforums.co.uk",
+        "ktmforum.co.uk",
+        "labradorforums.co.uk",
+        "mgzrownersclub.co.uk",
+        "migweb.co.uk",
+        "mokkaownersclub.co.uk",
+        "noteownersclub.co.uk",
+        "petforums.co.uk",
+        "peugeot108forum.co.uk",
+        "q2forums.co.uk",
+        "q3ownersclub.co.uk",
+        "reptileforums.co.uk",
+        "rodsnsods.co.uk",
+        "runnersforum.co.uk",
+        "scirocconet.co.uk",
+        "seat-forum.co.uk",
+        "stdrivers.co.uk",
+        "tarracoforums.co.uk",
+        "tcrossforums.co.uk",
+        "themgzr.co.uk",
+        "tiguanforums.co.uk",
+        "trocforums.co.uk",
+        "tropicalfishforums.co.uk",
+        "upownersclub.co.uk",
+        "vauxhallownersnetwork.co.uk",
+        "velarforums.co.uk",
+        "volkswagenforum.co.uk",
+        "vwt4forum.co.uk",
+        "x-trail-uk.co.uk",
+        "xeforums.co.uk",
+        "xfforum.co.uk",
+        "xrv.org.uk",
+        "yetiownersclub.co.uk",
+        "zafiraowners.co.uk"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1277510,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cookierun.gg",
+        "dcworldscollide.gg",
+        "dragonball.gg",
+        "endfield.gg",
+        "expedition33.gg",
+        "fabtcg.gg",
+        "lorcana.gg",
+        "lostsword.gg",
+        "moco.gg",
+        "pathofexile.gg",
+        "shadowverse.gg",
+        "snowbreak.gg",
+        "tokon.gg",
+        "umamusume.gg",
+        "wutheringwaves.gg",
+        "ygozone.gg",
+        "zenless.gg"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1921353,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "anguscountyworld.co.uk",
+        "antrimguardian.co.uk",
+        "ballycastlechronicle.co.uk",
+        "ballymenaguardian.co.uk",
+        "ballymenanow.co.uk",
+        "ballymoneychronicle.co.uk",
+        "biggleswadetoday.co.uk",
+        "clarelive.ie",
+        "colerainechronicle.co.uk",
+        "colerainenow.co.uk",
+        "corklive.ie",
+        "daventryexpress.co.uk",
+        "derbyworld.co.uk",
+        "eirebheo.ie",
+        "exetertoday.co.uk",
+        "harboroughmail.co.uk",
+        "hemeltoday.co.uk",
+        "hucknalldispatch.co.uk",
+        "inishlive.ie",
+        "leightonbuzzardonline.co.uk",
+        "letterkennylive.ie",
+        "liverpoolworld.uk",
+        "lurgannow.co.uk",
+        "manchesterworld.uk",
+        "nenaghlive.ie",
+        "northernconstitution.co.uk",
+        "outlooknews.co.uk",
+        "punchestownlive.ie",
+        "stornowaygazette.co.uk",
+        "strabaneweekly.co.uk",
+        "surreyworld.co.uk",
+        "themoorlander.co.uk",
+        "thesouthernreporter.co.uk",
+        "tyronecon.co.uk",
+        "tyronecourier.co.uk",
+        "ulstergazette.co.uk"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 367829,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "erovoice.us"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "://www.*.com/*.css|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1792256,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "gayfor.us"
+      ],
+      "excludedRequestDomains": [
+        "cdn.jsdelivr.net",
+        "cloudflare.com",
+        "cloudflare.net",
+        "disqus.com",
+        "disquscdn.com",
+        "unpkg.com",
+        "widgetlogic.org"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/*/*/*/*/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 18178,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "hianime.nz"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".com^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 17736,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "hianime.nz"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".net^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1910406,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "hianime.nz"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".to^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1075744,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "hianime.nz"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".xyz^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 447531,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "mangaraw.ai",
+        "prmovies.im"
+      ],
+      "excludedRequestDomains": [
+        "addtoany.com",
+        "alicdn.com",
+        "amazonaws.com",
+        "aoneroom.com",
+        "appboycdn.com",
+        "awswaf.com",
+        "azurewebsites.net",
+        "b-cdn.net",
+        "blogger.com",
+        "bootstrapcdn.com",
+        "bunnycdn.ru",
+        "bytecdntp.com",
+        "cackle.me",
+        "capo6play.com",
+        "cdn-apple.com",
+        "cdn.ampproject.org",
+        "cdn.staticfile.org",
+        "cdnhop.com",
+        "chatango.com",
+        "clarity.ms",
+        "cleverpush.com",
+        "cloudflare.com",
+        "cloudflare.net",
+        "cloudflareinsights.com",
+        "cloudfront.net",
+        "code.iconify.design",
+        "connatix.com",
+        "cookielaw.org",
+        "cxense.com",
+        "disqus.com",
+        "disquscdn.com",
+        "dmca.com",
+        "doodcdn.io",
+        "dotmetrics.net",
+        "ebacdn.com",
+        "facebook.net",
+        "fastcomments.com",
+        "fastly-insights.com",
+        "fastly.net",
+        "fastlylb.net",
+        "fbcdn.net",
+        "fluidplayer.com",
+        "fontawesome.com",
+        "github.io",
+        "google-analytics.com",
+        "google.com",
+        "googleapis.com",
+        "googleoptimize.com",
+        "googletagmanager.com",
+        "goonbox.cr",
+        "gstatic.com",
+        "hcaptcha.com",
+        "highcharts.com",
+        "hwcdn.net",
+        "idcdn.de",
+        "ilfcdn.li",
+        "imgsmail.ru",
+        "inmobi.com",
+        "instagram.com",
+        "intensedebate.com",
+        "jpg5.su",
+        "jpg6.su",
+        "jquery.com",
+        "jscdnservices.com",
+        "jsdelivr.net",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "k5a.io",
+        "ko-fi.com",
+        "libs.baidu.com",
+        "linkvertise.com",
+        "lulustream.com",
+        "media-imdb.com",
+        "mega.co.nz",
+        "mega.nz",
+        "nocookie.net",
+        "onesignal.com",
+        "onetrust.com",
+        "online-metrix.net",
+        "outbrain.com",
+        "permutive.app",
+        "plyr.io",
+        "polyfill-fastly.io",
+        "primis.tech",
+        "privacy-mgmt.com",
+        "quantserve.com",
+        "rabbitstream.net",
+        "recaptcha.net",
+        "rsc.cdn77.org",
+        "scorecardresearch.com",
+        "sharecast.ws",
+        "sharethis.com",
+        "shrink.pe",
+        "speedcurve.com",
+        "spot.im",
+        "static.bigbrain.gg",
+        "statically.io",
+        "tailwindcss.com",
+        "teads-xo.com",
+        "tinypass.com",
+        "tolstoycomments.com",
+        "trustpilot.com",
+        "tvableon.me",
+        "twimg.com",
+        "twitter.com",
+        "ulogin.ru",
+        "unpkg.com",
+        "userapi.com",
+        "utteranc.es",
+        "viafoura.net",
+        "vidazoo.com",
+        "vixcloud.co",
+        "vk.com",
+        "vuukle.com",
+        "waust.at",
+        "wknd.ai",
+        "workers.dev",
+        "wp.com",
+        "wpmucdn.com",
+        "wsimg.com",
+        "x.com",
+        "yastatic.net",
+        "youtube.com",
+        "ytimg.com",
+        "zencdn.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 1992662,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aeternum-map.gg"
+      ],
+      "urlFilter": "||embed.twitch.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1746967,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "javhahaha.us"
+      ],
+      "urlFilter": "/assets/jquery/adult*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1159109,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dfmagazine.co.uk"
+      ],
+      "urlFilter": "/asset/*.min.js?*=*&",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 664703,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "uktvplay.co.uk",
+        "uktvplay.uktv.co.uk"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||cdn.http.anno.channel4.com/m/*/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1622120,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tmail.gg"
+      ],
+      "urlFilter": "/img/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1795697,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "icutit.ca"
+      ],
+      "urlFilter": "||youtube.com/embed/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 52345,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "urtech.ca"
+      ],
+      "urlFilter": "||cc.cnetcontent.com/dccn/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 933308,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ckk.ai",
+        "iir.ai",
+        "tei.ai",
+        "tii.ai"
+      ],
+      "urlFilter": "||cloudfront.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1935004,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tpbmirror.us"
+      ],
+      "urlFilter": "/static/img/download-top.png|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 700906,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tpbmirror.us"
+      ],
+      "urlFilter": "/static/img/download.png|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 613894,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kickass.vc"
+      ],
+      "urlFilter": "/r.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 37721,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kickass.vc"
+      ],
+      "urlFilter": "/k.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 684799,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kickass.vc"
+      ],
+      "urlFilter": "/1.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1251840,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kickass.vc"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "\\/....\\/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1343974,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "isohunt.bz"
+      ],
+      "urlFilter": "/x9.php|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 644299,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "isohunt.bz"
+      ],
+      "urlFilter": "/k.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 98261,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "isohunt.bz"
+      ],
+      "urlFilter": "/1.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 840518,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "2ddl.unblocked.vc",
+        "2ddl.vg"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https?:\\/\\/www\\.[a-z]{8,14}\\.(bid|club|co|com|me|pro|info)\\/[a-z]{1,12}\\.js$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 175231,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "bflixs.us"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "regexFilter": "\\/[a-f0-9]{32}\\.js(?:$|\\?)",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1192259,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "articlesjar.com",
+        "ceplik.com",
+        "udemycoursedownloader.com"
+      ],
+      "urlFilter": "/wp-content/plugins/kill-adblock/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 556159,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ad4msan.win",
+        "amirantivirus.com",
+        "avoiderrors.com",
+        "bookflare.org",
+        "canalbpv.com",
+        "chimicamo.org",
+        "civetta.tv",
+        "earmilk.com",
+        "elevatortoday.com",
+        "embetronicx.com",
+        "gamesmagnet.net",
+        "ggwptech.com",
+        "gidabilinci.com",
+        "grafixfather.com",
+        "haberpop.com",
+        "hackinformer.com",
+        "jkmk.net",
+        "jppinto.com",
+        "kindleku.com",
+        "lauxanh.org",
+        "learncpponline.com",
+        "legendas.dev",
+        "mediasobytiya.com",
+        "money-sense.club",
+        "omglyrics.com",
+        "onurcici.com",
+        "otobelgesel.com",
+        "pinsystem.co.uk",
+        "satcesc.com",
+        "sciotocountydailynews.com",
+        "smarteranalyst.com",
+        "thesimarchitect.com",
+        "trgamestudio.com",
+        "turreta.com",
+        "v2rayssr.com",
+        "veezie.st",
+        "wotcheatmods.com",
+        "xingkbjm.com"
+      ],
+      "urlFilter": "/wp-content/uploads/*/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1201938,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "br0wsers.com",
+        "mathsspot.com"
+      ],
+      "urlFilter": "||fundingchoicesmessages.google.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 625829,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rayinfosports.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/rayinfosports\\.com\\/wp-content\\/uploads\\/[a-z]{8}\\.js\\?ver=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1115020,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bestsimsmods.com",
+        "dtbps3games.com",
+        "passionategeekz.com"
+      ],
+      "urlFilter": "/js/detector.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 760551,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "strcsh.xyz",
+        "streamcash.to"
+      ],
+      "urlFilter": "/js/pk-*.js?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1020483,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "strcsh.xyz",
+        "streamcash.to"
+      ],
+      "urlFilter": "/js/detect.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1997023,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dicoall.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||fundingchoicesmessages.google.com/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 159018,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "biovetro.net"
+      ],
+      "urlFilter": "/wp-content/plugins/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 21181,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ibmmainframes.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1511018,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "3dzip.org"
+      ],
+      "urlFilter": "||3dzip.org/wp-content/*/faedbd",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 130532,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "birthdaywishnotes.xyz",
+        "northmiamiwaterdamage.com"
+      ],
+      "urlFilter": "/track/js/power-cdn.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 692067,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nontonx.com"
+      ],
+      "urlFilter": "||raw.githubusercontent.com/*.txt?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 440218,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "keyguardian.org"
+      ],
+      "urlFilter": "||www3.doubleclick.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1483311,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sonixgvn.net"
+      ],
+      "urlFilter": "||blocker.crabdance.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1584870,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "initiatorDomains": [
+        "1337xproxies.com",
+        "extratorrent.bio",
+        "eztvstatus.net",
+        "nyaa.bio",
+        "rarbg.store"
+      ],
+      "urlFilter": "/dectector.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1382751,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hindimearticles.net"
+      ],
+      "urlFilter": "/adblocker.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 83173,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "18comic-gquu.vip",
+        "25img.com",
+        "advertape.net",
+        "animebr.org",
+        "animefire.io",
+        "arigl.com",
+        "celebritydeeplink.com",
+        "fc2ppv.stream",
+        "hentai2w.com",
+        "japaneseholes.com",
+        "javmeta.com",
+        "javpas.com",
+        "javx357.com",
+        "jmanga.coach",
+        "luluvids.top",
+        "mesex.pro",
+        "myvidplay.com",
+        "nsfwyoutube.com",
+        "play.playkrx18.site",
+        "porntin.com",
+        "shinshi-manga.net",
+        "upload18.com",
+        "verhentai.top",
+        "vevocloud.com",
+        "xmalay1.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": ".in/*/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 261972,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "initiatorDomains": [
+        "privatenudes.com"
+      ],
+      "urlFilter": "fag/js/lol.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 112040,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "comohoy.com"
+      ],
+      "urlFilter": "/cloudflare.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1049962,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nilesoft.org"
+      ],
+      "regexFilter": "nilesoft.org\\/assets\\/js\\/lib\\/[a-f0-9]+$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1529728,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "asiaon.top"
+      ],
+      "urlFilter": "/aot-content/assets/*/cb-ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 402314,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lightnovelpub.com",
+        "lightnovelpub.vip",
+        "lightnovelspot.com",
+        "webnovelpub.com"
+      ],
+      "urlFilter": "/xlnuxytj",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1866929,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lightnovelpub.com",
+        "lightnovelpub.vip",
+        "lightnovelspot.com",
+        "webnovelpub.com"
+      ],
+      "urlFilter": "||static.*.com/content/js/abdbundle.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 255562,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fontyukle.net"
+      ],
+      "regexFilter": "fontyukle.net\\/js\\/\\w+.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 654657,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "strikeout.nu"
+      ],
+      "urlFilter": "||googletagmanager.com/gtag/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1426395,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "livenewsus.com"
+      ],
+      "urlFilter": "||cdn.pelcro.com/js/bab/min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 614343,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hardocp.com"
+      ],
+      "urlFilter": "/abb-msg.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 487140,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "androidexplained.com",
+        "czechavfree.com",
+        "magazeta.com",
+        "mur.tv",
+        "o365info.com",
+        "paragezegeni.com",
+        "sovetolog.com",
+        "xiaomitech.net"
+      ],
+      "urlFilter": "/wp-content/uploads/*/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 840376,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bitfitxalltools.com",
+        "coolseotools.com",
+        "digitalvimal.com",
+        "helperseotools.com",
+        "njjfeducationcenter.com",
+        "roxbold.com",
+        "seovaro.com",
+        "seoyandira.com",
+        "topranktech.com",
+        "wapmastazone.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/rainbow/master-js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1380085,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "174.127.195.196",
+        "174.127.195.202",
+        "1g2g3g.com",
+        "1k2k3k.com",
+        "1m1m1m.net",
+        "1x2x3x.com",
+        "1y2y3y.com",
+        "3d3d3d.net",
+        "9dizhi.com",
+        "bluerockcafe.com",
+        "bluerocks.cc",
+        "bobo123.one",
+        "btnihao.com",
+        "catsis.info",
+        "coldrice.net",
+        "d44.icu",
+        "fastspeedtank.net",
+        "gapipi.com",
+        "goeasyspeed.net",
+        "nihao2.net",
+        "nihao3.net",
+        "pinktechmate.net",
+        "sis.xxx",
+        "sis5.net",
+        "sis8.net",
+        "sisav.club",
+        "sisav.one",
+        "sisbuy.net",
+        "stepncafe.com",
+        "thatsucks.info",
+        "twinai.xyz",
+        "v2r.club",
+        "vr1p.com",
+        "win4you.net",
+        "yaayaa.net"
+      ],
+      "urlFilter": "/javascript/adblock.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 620345,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "grix.io",
+        "mageclash.io",
+        "monstermaster.io"
+      ],
+      "urlFilter": "/assets/adblock_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 830168,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "taishin-miyamoto.com"
+      ],
+      "urlFilter": "||fundingchoicesmessages.google.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 611392,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shatter-box.com"
+      ],
+      "regexFilter": ":\\/\\/shatter-box\\.com\\/wp-content\\/uploads\\/[A-Za-z0-9]+\\/[A-Za-z0-9]+\\.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 492753,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tivio.net"
+      ],
+      "urlFilter": "/a-detector/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1919940,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "theregister.co.uk"
+      ],
+      "resourceTypes": [
+        "script",
+        "stylesheet"
+      ],
+      "urlFilter": "/adtoniq-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 439432,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kanalmaras.com",
+        "medya28.com"
+      ],
+      "urlFilter": "/vendor/*/plugins/advert/js/shut-blocker.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1492606,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "damngeeky.com"
+      ],
+      "urlFilter": "||flexinetsolutions.com/cdn/js/detectab.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 972481,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "thehouseofportable.com"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 44486,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "insider.com",
+        "pinknews.co.uk"
+      ],
+      "urlFilter": "||tinypass.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 281381,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "computerhoy.com"
+      ],
+      "urlFilter": "||piano.io/api/tinypass.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1236479,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hardocp.com"
+      ],
+      "urlFilter": "||amazonaws.com^*/abb-msg.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 87337,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "filerev.cc",
+        "pencurimovie.pw"
+      ],
+      "urlFilter": "||corrosif.science^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 634463,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rockradio.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||rockradio.com^*/blockadblock-",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

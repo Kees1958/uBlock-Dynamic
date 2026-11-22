@@ -1,0 +1,457 @@
+/*
+ * matrix-panel.css — Matrix panel additions on top of the shared design
+ * system (../css/default.css, ../css/common.css, ../css/panel-shared.css
+ * — header/timer/exit-button/intro/footer/empty-state all reused as-is,
+ * not duplicated here). Light theme (auto-switches to dark via the same
+ * prefers-color-scheme/.dark-class mechanism every other page in this
+ * extension uses) — matches Privacy Inspector and the dashboard, NOT
+ * 3P-Matrix-lite's own dark branding (which an earlier version of this
+ * file wrongly copied verbatim as a standalone hardcoded palette).
+ */
+
+/* ── Text-safe color variants ──────────────────────────────────────────
+   panel-shared.css's --color-green/--color-amber were only ever WCAG-
+   verified for DARK-mode text (see that file's own comment) and for
+   fill/background usage (mini-squares, badges) in both modes — computed
+   contrast confirms they genuinely fail as LIGHT-mode text: green
+   2.52:1, amber 1.93:1 against surface-1, both under even the lenient
+   3:1 UI-component minimum. Darker, verified-safe light-mode variants
+   defined here; dark mode reuses the shared tokens as-is (already
+   9.62:1/11.16:1, no adjustment needed). See STYLE_GUIDE_LIGHT.md /
+   STYLE_GUIDE_DARK.md for the full computed matrix this is drawn from. */
+:root {
+    --color-green-text: rgb(22, 115, 66);   /* 5.18:1 vs surface-1 (light) */
+    --color-amber-text: rgb(150, 94, 4);    /* 4.73:1 vs surface-1 (light) */
+    /* Fill-only, dedicated to the breakage-risk mini-square (NOT the
+       same variable as --color-amber-text above, which is WCAG-verified
+       for TEXT use elsewhere in this file and must not be touched for
+       that reason) — shared --color-amber (#f39c12, hue 37°) reads as
+       orange at a glance, too close to red (#e74c3c, hue 6°) in a small
+       filled square. Hue shifted to 48° (true yellow, matching flat-UI's
+       "sunflower") without materially changing lightness/saturation —
+       contrast 1.46:1 vs light-mode surface-1, close to the shared
+       token's own 1.93:1; the square's border (not fill-to-surface
+       contrast) is what carries visibility here, same reasoning as any
+       bordered swatch. */
+    --color-yellow-fill: #f1c40f;
+    /* "More info" indicator (replaces the old known-DDG-Tracker column's
+       breakage-risk verdict, judged obsolete now that Worry-Free mode's
+       additional filtering handles most of what that signal was for —
+       see CHANGELOG). Same border-carries-visibility reasoning as
+       --color-yellow-fill above: fill hue chosen to be clearly distinct
+       from red/green/amber/yellow at a glance, not independently
+       WCAG-verified as text (never used as text). Cyan = 0-1 matching
+       rules ("nothing complex"), orange = 2+ ("worth a look") — same
+       threshold this project already used for the expand arrow's own
+       now-removed color-coding (see CHANGELOG), just moved to its own
+       dedicated column instead of overloading the arrow.  */
+    --color-cyan-fill:   #17a2b8;
+    --color-orange-fill: #e67e22;
+    }
+:root.dark {
+    --color-green-text: var(--color-green); /* already 9.62:1 (dark) — no override needed */
+    --color-amber-text: var(--color-amber); /* already 11.16:1 (dark) — no override needed */
+    /* Same hue-shift reasoning as light mode above, lightened further to
+       stay clearly brighter than the shared dark-mode amber (#ffc947,
+       hue 42°) — contrast 13.12:1 vs dark surface-1, well above the
+       shared token's already-generous 11.16:1. */
+    --color-yellow-fill: #ffe066;
+    --color-cyan-fill:   #4ddfff;
+    --color-orange-fill: #ffab5c;
+    }
+
+/* ── Stats line, next to the timer in the shared header ────────────────── */
+
+.matrix-stats {
+    color: color-mix(in srgb, currentColor 55%, transparent);
+    font-size: 0.85em;
+    white-space: nowrap;
+    }
+
+/* Timer near-expiry color change — not part of panel-shared.css's own
+   .monitor-timer (Privacy Inspector doesn't use this), scoped to
+   #timerDisplay specifically so it can't accidentally match an unrelated
+   .warning/.expired class elsewhere on the page. */
+#timerDisplay.warning { color: var(--color-amber-text); }
+#timerDisplay.expired { color: var(--color-red-text); } /* small text — text-safe red from panel-shared.css (5.77:1 light vs surface-1) */
+
+/* ── Filter row — mode switch ──────────────────────────────────────────
+   Explanatory text on the left (#matrixFilterLabel), the switch itself
+   on the right (#matrixModeSwitch), same line — see matrix-panel.html.
+   Switch dimensions are named custom properties, not magic numbers
+   scattered through the rules below, so resizing the control means
+   changing one place. Track/thumb colors reuse --color-red/--color-green
+   (panel-shared.css) strictly as BACKGROUND fills — the one usage those
+   tokens are already verified safe for in both themes (see this file's
+   own top comment on --color-green-text/--color-amber-text, and
+   STYLE_GUIDE_LIGHT.md noting --color-red is text-safe only at
+   large/bold sizes) — never applied as the switch-text color, which
+   instead reuses the same 55%-currentColor de-emphasis already used by
+   .matrix-stats elsewhere in this file, rather than a freshly-invented
+   value (A9). ── */
+
+:root {
+    --switch-track-width:  2.2em;  /* outer pill width */
+    --switch-track-height: 1.2em;  /* outer pill height, also the pill's corner radius */
+    --switch-thumb-inset:  0.15em; /* gap between track edge and thumb on all sides */
+    }
+
+#matrixFilterRow {
+    align-items: center;
+    background-color: var(--surface-1);
+    border-bottom: 1px solid var(--border-1);
+    display: flex;
+    font-size: 0.85em;
+    gap: 0.6em;
+    padding: 0.4em 1em;
+    }
+
+#matrixFilterLabel {
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    }
+
+#matrixModeSwitch {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5em;
+    margin-left: auto; /* pins the switch to the right edge of the row, label stays left */
+    user-select: none;
+    }
+
+#matrixModeSwitch .switch-text {
+    color: color-mix(in srgb, currentColor 55%, transparent); /* same dim value as .matrix-stats — reused, not reinvented */
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    transition: color 0.15s ease;
+    }
+
+/* Active side (matching the switch's current state) shown at full ink,
+   inactive side stays dimmed. Uses :has() on the shared #matrixModeSwitch
+   ancestor rather than a sibling combinator — the .switch-text spans are
+   NOT direct siblings of <input> (input's own parent is .switch-track,
+   nested one level deeper), so `input ~ .switch-text-*` would silently
+   match nothing; :has() correctly reaches across that nesting. No JS
+   needed just to (re-)style label emphasis. */
+#matrixModeSwitch:has(input:checked) .switch-text-blocked,
+#matrixModeSwitch:has(input:not(:checked)) .switch-text-allowed {
+    color: var(--ink-1);
+    }
+
+.switch-track {
+    background-color: var(--color-red);   /* checked = SHOW BLOCKED track color */
+    border-radius: var(--switch-track-height);
+    box-sizing: border-box;
+    display: inline-block;
+    height: var(--switch-track-height);
+    position: relative;
+    transition: background-color 0.15s ease;
+    width: var(--switch-track-width);
+    }
+
+.switch-track:has(input:not(:checked)) {
+    background-color: var(--color-green); /* SHOW ALLOWED side */
+    }
+
+.switch-track input {
+    cursor: pointer;
+    height: 100%;
+    inset: 0;
+    margin: 0;
+    opacity: 0;  /* real checkbox stays functional/focusable, just visually replaced by the track+thumb below */
+    position: absolute;
+    width: 100%;
+    }
+
+.switch-thumb {
+    background-color: var(--surface-0);
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+    height: calc(var(--switch-track-height) - 2 * var(--switch-thumb-inset));
+    left: var(--switch-thumb-inset);
+    position: absolute;
+    top: var(--switch-thumb-inset);
+    transition: transform 0.15s ease;
+    width: calc(var(--switch-track-height) - 2 * var(--switch-thumb-inset));
+    }
+
+/* Unchecked (SHOW ALLOWED, default) slides the thumb to the track's
+   right edge; checked (SHOW BLOCKED) leaves it at its left-edge resting
+   position set above — no transform needed for that state. */
+.switch-track input:not(:checked) ~ .switch-thumb {
+    transform: translateX(calc(var(--switch-track-width) - var(--switch-track-height)));
+    }
+
+/* Input is absolutely positioned to fully cover .switch-track (see
+   `.switch-track input` above), so giving the input itself a focus
+   outline visually outlines the whole track — no need to reach the
+   track via a (nonexistent) sibling relationship. */
+.switch-track input:focus-visible {
+    outline: 2px solid var(--accent-surface-1);
+    outline-offset: 2px;
+    }
+
+/* ── Entry table — one row per third-party domain ───────────────────── */
+
+.table-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    }
+
+.entry-table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+.entry-table thead th {
+    background-color: var(--surface-2);
+    border-bottom: 1px solid var(--border-1);
+    box-sizing: border-box;
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    font-size: 0.7em;
+    font-weight: 700;
+    height: 1.8em;
+    letter-spacing: 0.06em;
+    padding: 0.4em 0.6em;
+    position: sticky;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 1;
+    }
+
+/* Row 1 (rowspan=2 single headers + colspan=2 group headers) sticks at
+   top:0; row 2 (3P-all/3P-code sub-headers) sticks just below row 1 — both
+   rows have a fixed height (above) so this offset is always correct
+   regardless of content. */
+.entry-table thead tr:first-child th { top: 0; }
+.entry-table thead tr:last-child  th { top: 1.8em; }
+.entry-table thead th.th-domain { text-align: left; padding-left: 1em; }
+.entry-table thead th.group-start { border-left: 1px solid var(--border-1); }
+/* Bolder separator, used ONLY for the BLOCK/ALLOWED-group-to-IMAGE
+   boundary (see matrix-panel.js's boldSeparator flag) — thicker and
+   higher-contrast than the ordinary group-start line, so the panel's
+   primary action (the BLOCK/ALLOWED group) reads as visually distinct
+   from the informational columns that follow it. */
+.entry-table thead th.group-start-bold { border-left: 3px solid var(--border-4); }
+.th-line { display: block; line-height: 1.4; }
+
+.entry-table tbody tr {
+    border-bottom: 1px solid var(--border-1);
+    transition: background-color 0.1s;
+    }
+
+.entry-table tbody tr:hover { background-color: var(--surface-1); }
+.entry-table tbody tr.row-hidden { display: none; }
+
+.entry-table td {
+    font-size: 0.85em;
+    padding: 0.4em 0.6em;
+    text-align: center;
+    vertical-align: middle;
+    }
+
+.entry-table td.group-start { border-left: 1px solid var(--border-1); }
+.entry-table td.group-start-bold { border-left: 3px solid var(--border-4); }
+
+.entry-table td.td-tracker {
+    cursor: help; /* title tooltip explains the Y/N — same affordance as td-domain */
+    text-align: center;
+    font-family: monospace;
+    /* --ink-1 (not a de-emphasis opacity): this is the actual answer to
+       "is this a known tracker", not secondary/de-emphasized text — see
+       A8/STYLE_GUIDE_*.md, --ink-1 is already verified text-safe
+       everywhere in both light and dark mode, no new ratio to compute. */
+    }
+
+.entry-table td.td-domain {
+    cursor: help; /* signals the title tooltip carries real info — see blockReasonTitle(), always non-empty now */
+    font-family: monospace;
+    font-size: 0.82em;
+    padding-left: 1em;
+    /* BUG FIX (real, screenshotted report): plain ".td-domain" here used
+       to lose this text-align to the base ".entry-table td" rule above
+       — that rule combines a class with an element selector (specificity
+       0,1,1), which beats a lone class selector (0,1,0) regardless of
+       source order. Qualifying this selector with "td" too fixes the
+       specificity, not just the property list. */
+    text-align: left;
+    /* --border-1, not an ad hoc color-mix opacity — STYLE_GUIDE_LIGHT.md
+       already blesses --border-1 specifically for "decorative divider
+       only, not a meaningful boundary", exactly this underline's role
+       (the tooltip text itself carries the actual information; this is
+       just a hover affordance hint). A freshly-invented opacity value
+       here would need its own contrast verification instead of reusing
+       one already done. */
+    text-decoration: underline dotted var(--border-1) 1px;
+    text-underline-offset: 0.2em;
+    word-break: break-all;
+    }
+
+/* Subdomain child rows — see js/core/matrix-panel.js's maybeTrackSubdomain()
+   for why these only ever appear beneath a CRITICAL RESOURCE-whitelisted
+   parent domain. Visually subordinate: indented domain text with a small
+   "└" connector prefix (via ::before, not real content — screen readers
+   still just read the plain hostname), slightly muted, and a hairline top
+   border so a run of child rows reads as visually grouped under their
+   parent without needing a full extra border around each one. */
+.row-child td.td-domain {
+    color: color-mix(in srgb, currentColor 75%, transparent);
+    font-size: 0.78em;
+    padding-left: 2.2em;
+    }
+
+.row-child .td-domain::before {
+    content: "└ ";
+    opacity: 0.5;
+    }
+
+.row-child {
+    border-top: none;
+    }
+
+.td-check {
+    color: var(--color-green-text);
+    font-size: 1.1em;
+    font-weight: 700;
+    }
+
+.td-check.empty {
+    /* WCAG contrast, computed (not eyeballed) against this codebase's
+       actual --ink-rgb/--surface-1 tokens in both modes: 25% opacity
+       computed to 1.62:1 (light) / 2.03:1 (dark) — both fail even the
+       3:1 minimum for a UI element. 55% computes to 3.80:1 (light) /
+       4.88:1 (dark) — matches the same opacity already proven safe for
+       .matrix-stats above. */
+    color: color-mix(in srgb, currentColor 55%, transparent);
+    font-weight: 400;
+    }
+
+/* Shared small-rounded-square style for the "more info" rule-count
+   indicator (informational, never clickable — replaced the old known-
+   DDG-Tracker breakage-risk column, see CHANGELOG) and the BLOCK/ALLOWED
+   3P-all/3P-code cells (clickable). Color tokens partly from
+   panel-shared.css (fill-green/red/yellow), partly this file's own
+   (fill-cyan/orange, above) — all kept in sync across light/dark. */
+.mini-square {
+    background-color: transparent;
+    border: 1px solid var(--border-1);
+    border-radius: 3px;
+    display: inline-block;
+    height: 0.9em;
+    width: 0.9em;
+    }
+
+.mini-square.filled { border-color: transparent; }
+.td-half.clickable { cursor: pointer; }
+.td-half.clickable:hover .mini-square { border-color: var(--border-4); }
+
+.mini-square.fill-green  { background-color: var(--color-green); }
+.mini-square.fill-red    { background-color: var(--color-red); }
+.mini-square.fill-yellow { background-color: var(--color-yellow-fill); }
+.mini-square.fill-cyan   { background-color: var(--color-cyan-fill); }
+.mini-square.fill-orange { background-color: var(--color-orange-fill); }
+/* Reuses --border-4 directly rather than a fresh token — already this
+   project's own proven "genuinely grey, works in both modes" value (see
+   STYLE_GUIDE_LIGHT.md/DARK.md), and already used elsewhere in this
+   exact file for visible boundaries. */
+.mini-square.fill-grey   { background-color: var(--border-4); }
+
+/* ══════════════════════════════════════════════════════════════
+   Expand column + raw-rule detail row (per explicit request) —
+   see js/core/domain-rule-detail.js's own header for what this
+   deliberately does and does not resolve (raw rule data, no
+   priority/allow-override verdict).
+   ══════════════════════════════════════════════════════════════ */
+
+.td-expand.clickable {
+    cursor: pointer;
+    text-align: center;
+    width: 1.6em;
+    }
+
+/* "More info" column — informational only, not clickable (unlike
+   .td-half above). No overrides needed beyond .entry-table td's own
+   centering; this rule exists so the class has a real CSS anchor (see
+   tools/check-css-class-usage.mjs) and a place to hang future styling. */
+.td-info {
+    text-align: center;
+    }
+
+.expand-marker {
+    display: inline-block;
+    font-size: 0.85em;
+    }
+
+/* Per explicit request: the arrow's color used to hint at what's behind
+   it before clicking. REMOVED — that signal moved to its own dedicated
+   "more info" mini-square column instead (see .mini-square.fill-cyan/
+   -orange above), so the arrow itself no longer needs its own color
+   tier; one signal, one place, rather than two overlapping ones. */
+.td-expand.clickable:hover .expand-marker {
+    color: currentColor;
+    }
+
+.row-detail {
+    border-top: none;
+    background-color: var(--surface-2);
+    }
+
+.row-detail td {
+    padding: 0.6em 1em 0.9em 2.2em;
+    text-align: left;
+    }
+
+.detail-note {
+    /* Same proven 65% de-emphasis as .expand-marker above — this is
+       explanatory text, not primary content. */
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    font-size: 0.82em;
+    margin-block-end: 0.5em;
+    }
+
+.detail-empty {
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    font-size: 0.85em;
+    font-style: italic;
+    }
+
+.detail-rule-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 0.82em;
+    }
+
+.detail-rule {
+    padding: 0.15em 0;
+    word-break: break-all;
+    }
+
+/* --color-red is already fully text-safe in both modes at this weight
+   (see STYLE_GUIDE_LIGHT.md/DARK.md's own core-token tables) — reused
+   directly, not a fresh value. --color-green-text is this project's
+   already-established light-mode-safe variant (--color-green itself is
+   NOT text-safe in light mode — see STYLE_GUIDE_LIGHT.md), aliased
+   straight through to --color-green in dark mode already. */
+.detail-rule-block  { color: var(--color-red-text); } /* text-safe red from panel-shared.css (5.77:1 light vs surface-1) */
+.detail-rule-allow  { color: var(--color-green-text); }
+
+/* Tighter than panel-shared.css's shared .panel-footer default — scoped
+   to this page only (Privacy Inspector's footer is untouched) via the
+   body ID selector's extra specificity, not by editing the shared file.
+   line-height set explicitly (not just padding) so the footer can never
+   render taller than one line of text regardless of inherited font
+   metrics; flex-shrink:0 restated here defensively even though
+   panel-shared.css already sets it, since this is the property that
+   actually matters for "stays exactly one line" once .table-scroll
+   above has flex:1 to absorb any leftover space (see that rule's own
+   comment for why that, not footer padding, was the real fix for the
+   gap this replaces). */
+#uBO-matrix-panel .panel-footer {
+    flex-shrink: 0;
+    line-height: 1.3;
+    padding: 0.3em 0;
+    }

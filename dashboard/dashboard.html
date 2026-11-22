@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="color-scheme" content="light dark" />
+<title data-i18n="dashboardName"></title>
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="dashboard-common.css">
+<link rel="stylesheet" href="filtering-mode.css">
+<link rel="stylesheet" href="settings.css">
+<link rel="stylesheet" href="filter-editor.css">
+<link rel="stylesheet" href="develop.css">
+<link rel="stylesheet" href="custom-rules.css">
+<link rel="icon" type="image/png" href="../img/icon_64.png"/>
+</head>
+
+<body data-pane="filterlists" class="loading">
+
+<!-- ── Navigation ───────────────────────────────────────────────────── -->
+<header>
+    <nav id="dashboard-nav">
+        <!-- (10.5.0) Tabs (order + labels) are built by dashboard.js from js/data/ui-names.js
+             DASHBOARD_TABS — not typed here, so the order and names live in one place (C39a). -->
+    </nav>
+</header>
+
+<!-- ── FILTER LISTS TAB ─────────────────────────────────────────────── -->
+<section data-pane="filterlists">
+
+    <div id="staticFilters">
+        <h3 class="static-filters-heading">Built-in filter lists</h3>
+        <p class="static-filters-desc">
+            Default lists focus on hassle free adblocking without breaking website functionality.
+        </p>
+        <!-- (10.7.6) Chrome's refusal to switch a list on/off — filled by filter-manager-ui.js requestRulesetEnabled() -->
+        <p class="custom-rules-toolbar-status" id="filterListsStatus" hidden></p>
+        <div id="defaultFilterRows" class="static-filter-rows">
+            <!-- Rendered dynamically — see filter-manager-ui.js's
+                 DEFAULT_FILTER_IDS / renderDefaultFilterRow(). -->
+        </div>
+        <p id="defaultFiltersSummary" class="static-filters-desc">
+            <!-- Populated by updateDefaultFiltersSummary() in
+                 filter-manager-ui.js — recomputed on every checkbox
+                 toggle above, from ruleset-details.json's own domainCount/
+                 paramCount/ruleCount fields (build-time-generated — see
+                 B2a: driven from data, not hardcoded here). The trailing
+                 "ⓘ" info-dropdown (createInfoDropdown(), js/ui/info-
+                 tooltip.js — C21, reused, not a new tooltip component)
+                 is appended here too, carrying the performance/scope
+                 explanation that used to sit as a permanent paragraph
+                 below this line. -->
+        </p>
+        <div class="static-filter-rows">
+        </div>
+
+        <!-- v8.6.13 — "Optional filters" section (AdGuard anti-adblock,
+             Anti-Admiral) removed per explicit request. Both are already
+             part of the always-on default set described in the bullet
+             list above (both FILTER_LISTS entries carry enabled:true,
+             unconditionally, per tools/build-rulesets.mjs) — the
+             separate toggle here was misleading: it implied these were
+             genuinely optional when the text above already, correctly,
+             describes them as always on. Removing the toggle UI (not
+             just hiding it) — initRulesetToggles() in filter-manager-
+             ui.js only ever queries `.ruleset-toggle` elements that
+             exist in the DOM, so removing these two leaves nothing
+             dangling and no code path left to disable either ruleset,
+             which is now the intended, honest behavior. -->
+
+        <div id="languageFilters">
+            <div id="languageFilters-header">
+                <span class="language-filters-label">Language filters</span>
+                <select id="languageFilterSelect">
+                    <option value="" selected>— No extra language filter needed —</option>
+                    <!-- AdGuard/EasyList optgroups populated at runtime from
+                         ruleset-details.json's category: 'language-filter'
+                         entries — see filter-manager-ui.js's initRulesetToggles()
+                         (10.0.5). A new country filter needs no edit here. -->
+                </select>
+            </div>
+            <div id="languageFilterRows" class="static-filter-rows">
+                <!-- Enabled language filters rendered dynamically -->
+            </div>
+            <p id="languageFiltersSummary" class="static-filters-desc">
+                <!-- Populated by updateLanguageFiltersSummary() in
+                     filter-manager-ui.js — same shape as
+                     updateDefaultFiltersSummary(), scoped to only the
+                     currently-enabled language filters. Empty/hidden
+                     when no language filter is enabled (nothing to sum). -->
+            </p>
+        </div>
+
+        <!-- ── Automatically enable during Worry-free surfing mode ───
+             v9.1.7 — rebuilt as one flat list, per explicit request: no
+             subheadings, no bullet sub-lists, no grouped "Enable extra
+             blocklist" checkbox (that checkbox and the two things it used
+             to control — EasyList adult ad-servers + transcend.io, and
+             the Disconnect+Ghostery social media list — are removed
+             entirely, not rescoped; see js/data/config.js's own header
+             comment on the retired worryFreeBlocklistEnabled key). Order:
+             the 5 individually-scoped blocklist items first, then
+             Privacy & Security, then TLD-protection, then anti-
+             fingerprint (browser-startup moved to Options, 10.5.0). All rows wired in
+             filter-manager-ui.js via the same data-setting/
+             getSecurityConfig/setSecurityConfig mechanism. -->
+        <div id="worryFreeFilters" class="static-filters-section-spaced">
+            <h3 class="static-filters-heading">Automatically enable during <span data-ui-name="worryFreeMode"></span></h3>
+            <p class="static-filters-desc">
+                <span data-ui-name="worryFree"></span> tries to dismiss cookie-consent prompts and enables additional anti-tracking filters.
+            </p>
+            <div class="static-filter-rows">
+                <!-- (11.0.0, owner's order) HaGeZi Light, Peter Lowe, Kees1958, AdGuard tracking servers, AdGuard tracking
+                     parameters. HaGeZi Light moved here from the always-on default lists. All five only apply during a
+                     Seamless surfing session (js/core/worry-free-extra-manager.js). Disconnect (10.7.1) and Ghostery
+                     rows were removed earlier — see CHANGELOG. -->
+                <div class="static-filter-row">
+                    <input type="checkbox" id="worryFreeHageziToggle" data-setting="worryFreeHageziEnabled">
+                    <label for="worryFreeHageziToggle" class="static-filter-name">HaGeZi&#39;s Multi light (known trackers on top-N sites)</label>
+                </div>
+                <div class="static-filter-row">
+                    <input type="checkbox" id="worryFreePeterloweToggle" data-setting="worryFreePeterloweEnabled">
+                    <label for="worryFreePeterloweToggle" class="static-filter-name">Peter Lowe advertising &amp; tracking servers</label>
+                </div>
+                <div class="static-filter-row">
+                    <input type="checkbox" id="worryFreeKees1958Toggle" data-setting="worryFreeKees1958Enabled">
+                    <label for="worryFreeKees1958Toggle" class="static-filter-name">Kees1958 most-used EU+US ads &amp; tracking networks</label>
+                </div>
+                <div class="static-filter-row">
+                    <input type="checkbox" id="worryFreeAdguardTrackingToggle" data-setting="worryFreeAdguardTrackingEnabled">
+                    <label for="worryFreeAdguardTrackingToggle" class="static-filter-name">AdGuard tracking servers</label>
+                </div>
+                <div class="static-filter-row">
+                    <input type="checkbox" id="worryFreeAdguardRemoveparamToggle" data-setting="worryFreeAdguardRemoveparamEnabled">
+                    <label for="worryFreeAdguardRemoveparamToggle" class="static-filter-name">AdGuard remove tracking parameters</label>
+                </div>
+                <!-- worryFreeGhosteryOtherToggle row REMOVED — ruleset_ghostery_other
+                     removed entirely per explicit request, see CHANGELOG. -->
+                <!-- (10.3.0) The two Worry-free tier checkboxes ("Enable the extra Worry-free surfing
+                     protections" / "Enable the extra 'safer regions' protections additionally") were
+                     REMOVED with the Privacy & Security extra protections, which moved to 3P-Matrix. -->
+                <!-- (10.5.0) "Enable Worry-free surfing at browser startup" moved to the Options tab
+                     (owner's request) — see section data-pane="security" below. -->
+            </div>
+            <p id="worryFreeFiltersSummary" class="static-filters-desc">
+                <!-- Populated by updateWorryFreeFiltersSummary() in
+                     filter-manager-ui.js — same shape as
+                     updateDefaultFiltersSummary() but scoped to only the
+                     5 blocklist items above and their own domainCount/
+                     ruleCount (no tracking-parameter clause — none of
+                     these 5 are $removeparam lists). -->
+            </p>
+        </div>
+
+    </div>
+
+    <!-- (10.3.0) #safeRegionsExceptionsNote (the per-domain "$worryfree / $saferegions" hint) removed,
+         together with the separator line below it. -->
+    <hr class="custom-rules-filter-separator">
+
+    <!-- Broader than "Manage custom rules" tab's own Export/Import
+         (MSG_EXPORT_CUSTOM_RULES/MSG_IMPORT_CUSTOM_RULES) — this covers
+         the full configuration (enabled filter lists, Privacy &
+         Security settings, per-feature allowlists, site modes/Allow
+         list) PLUS the same custom-rules payload nested inside, so one
+         file is a complete backup. Same Export/Import button + hidden
+         file input pattern as that tab (dashboard/custom-rules.js),
+         reused here rather than reinvented — see settings-io.js.
+         Right-aligned via #settingsIoRow's own CSS, same margin-left:
+         auto technique .custom-rules-toolbar-row already uses. Reset
+         to defaults reuses .custom-rules-clear's destructive-action
+         styling, same as "Delete all rules" on the custom rules tab. -->
+    <div class="static-filter-rows">
+        <div class="static-filter-row" id="settingsIoRow">
+            <button id="resetAllSettings" class="custom-rules-clear" type="button">Reset to defaults</button>
+            <button id="importAllSettings" class="custom-rules-toolbar-btn" type="button">Restore settings</button>
+            <button id="exportAllSettings" class="custom-rules-toolbar-btn" type="button">Save settings</button>
+            <input type="file" id="importAllSettingsFile" accept="application/json,.json" hidden>
+        </div>
+    </div>
+    <p class="custom-rules-toolbar-status" id="settingsIoStatus" hidden></p>
+
+</section>
+
+<!-- ── IMPORT ABP RULES TAB ─────────────────────────────────────────── -->
+<!-- Network (||) and cosmetic (##) rules are accepted, as are scriptlet  -->
+<!-- rules in either uBO syntax (##+js(...)) or AdGuard syntax            -->
+<!-- (#%#//scriptlet(...), multi-domain comma lists supported, ~exception -->
+<!-- domains rejected) — parsed by custom-scriptlets.js's                -->
+<!-- syncScriptletRulesFromSandboxText(), invoked from setSandboxFilters()-->
+<!-- in filter-manager.js. Any rejected scriptlet line (unknown name, or  -->
+<!-- an unsupported ~exception domain) is commented out in place with a  -->
+<!-- "! Rejected: ..." explanation line added directly below it, instead -->
+<!-- of being silently dropped. (Older note here previously claimed      -->
+<!-- scriptlet rules were silently dropped at compile time — that was    -->
+<!-- true before this support was added, and was never updated to match.)-->
+<section data-pane="filters">
+    <aside id="sandboxEditor">
+        <div id="abpFormatHint">ℹ <strong>WRITE YOUR OWN RULES IN ABP FORMAT</strong><br>Regular ABP rules are accepted (network and cosmetic), as well as SAFE scriptlet rules in uBO or AdGuard syntax.<br>Unsafe scriptlets are rejected. Rejected rules are commented out, with the reason in red beneath them.<br><br><strong>Annoying pop-ups and pop-unders: three ways, try them in this order:</strong><br>example.com#%#//scriptlet('prevent-window-open', 'adnetwork.com'): stops the site opening a new window or tab to adnetwork.com<br>example.com#%#//scriptlet('prevent-navigation', 'adnetwork.com'): stops the site's page from sending its own tab to adnetwork.com<br>example.com#%#//scriptlet('prevent-popunder', 'adnetwork.com'): stops showing popunder page redirects and page blocked popups</div>
+        <h3 class="sandbox-heading"><span data-i18n="sandboxEditorLabel">_</span><span id="sandboxRuleCount"></span></h3>
+        <div class="custom-rules-toolbar-row" id="sandboxIoRow">
+            <button id="importSandboxFilters" class="custom-rules-toolbar-btn" type="button">Import rules</button>
+            <button id="exportSandboxFilters" class="custom-rules-toolbar-btn" type="button">Export rules</button>
+            <input type="file" id="importSandboxFiltersFile" accept="text/plain,.txt" hidden>
+        </div>
+        <p class="custom-rules-toolbar-status" id="sandboxIoStatus" hidden></p>
+        <div class="cm-container"></div>
+    </aside>
+</section>
+
+<!-- ── ALLOW LIST TAB ───────────────────────────────────────────────── -->
+<section data-pane="develop">
+    <div>
+        <div class="cm-container"></div>
+    </div>
+</section>
+
+<!-- ── OPTIONS TAB (10.5.0; was "Privacy & Security") ──────────────── -->
+<!-- pane key stays "security": it is the stored dashboard.activePane value (contract). -->
+<!-- Redesigned (was "Security & privacy"): flat gated two-column grid   -->
+<!-- behind an "I am an advanced user" confirmation checkbox replaced by  -->
+<!-- three risk-tiered groups, no gate at all — every item uses the same  -->
+<!-- .static-filter-row markup the Filter (block) lists tab's Built-in    -->
+<!-- filter lists section already established. #deleteHistoryGate,       -->
+<!-- #advancedUserGate, and #security-columns are gone entirely; so are   -->
+<!-- security.js's GATE_KEY/loadGateState()/applyGateState()/            -->
+<!-- enableAllProtections() — nothing left to gate or bulk-enable. See    -->
+<!-- CHANGELOG for the full history.                                      -->
+<section data-pane="security">
+
+    <!-- ── 1. ON STARTUP ── (10.5.0: "Safe privacy enhancements (enabled by default)" -> "Privacy
+         enhancements" -> "On startup" — heading renamed again, owner's request, once Worry-free's own
+         startup row (previously its own ungrouped div just below, see old "2. WORRY-FREE SURFING"
+         comment) was folded into this same group as its first row: everything in this group is a
+         browser-start-time action, so one heading naming that, not "privacy enhancements" (worry-free
+         isn't a privacy toggle) nor two headings for what reads as one list to the user. See
+         settings.css for the space added above this heading, this tab's first element and previously
+         flush against the tab bar. Checkboxes and defaults are unchanged by this rename — still
+         independently opt-in/opt-out, still carried by the existing whole-securityConfig export/import. -->
+    <h3 class="static-filters-heading">On startup</h3>
+    <div class="static-filter-rows">
+        <!-- (11.0.0, owner's decision) "Enable Seamless surfing on startup" REMOVED: Seamless surfing is always on
+             (js/data/seamless-switch.js); an advanced user turns it off from its own prompt. -->
+        <!-- (10.5.0) "Block sending (tracking) ping" REMOVED OUTRIGHT, owner's request — low value on
+             its own (most tracking now goes through sendBeacon/fetch keepalive, which this never
+             touched). blockPings' securityConfig/securityAllowlist keys, SECURITY_SCRIPTLETS entry and
+             js/security/sec-pings.js are all deleted too, not just this row — see CHANGELOG_HISTORY.md. -->
+        <!-- (10.5.0) The eight "at browser start" clears grouped together, owner's request — history
+             (always on by default) plus seven opt-in checkboxes (default OFF: downloads, form data,
+             cache, cookies, cacheStorage, indexedDB, localStorage, serviceWorkers), independently
+             remembered and carried by the existing whole-securityConfig export/import (no extra wiring
+             needed there). See js/core/history-cleaner.js for the single key->chrome.browsingData-type
+             map. Labels drop "at browser start" (10.5.0) — the "On startup" heading above already
+             says it once for the whole group; title tooltips keep the full wording. -->
+        <div class="static-filter-row">
+            <input id="deleteHistoryOnStart" type="checkbox" data-setting="deleteHistoryOnStart">
+            <label for="deleteHistoryOnStart" class="static-filter-name" title="Clears your browsing history every time you start the browser. Cookies, cache, passwords and site permissions are never touched.">Clear browsing history.</label>
+        </div>
+        <div class="static-filter-row">
+            <input id="clearDownloadsOnStart" type="checkbox" data-setting="clearDownloadsOnStart">
+            <label for="clearDownloadsOnStart" class="static-filter-name" title="Clears the list of downloaded files (the Downloads page) every time you start the browser. The downloaded files themselves are not deleted, only the record of them.">Clear list of downloaded files.</label>
+        </div>
+        <div class="static-filter-row">
+            <input id="clearFormDataOnStart" type="checkbox" data-setting="clearFormDataOnStart">
+            <label for="clearFormDataOnStart" class="static-filter-name" title="Clears remembered values you typed into search and form fields every time you start the browser. Saved passwords and payment info are never touched.">Clear data typed into search/form fields.</label>
+        </div>
+        <div class="static-filter-row">
+            <input id="clearCacheOnStart" type="checkbox" data-setting="clearCacheOnStart">
+            <label for="clearCacheOnStart" class="static-filter-name" title="Clears cached page resources (images, scripts, stylesheets) every time you start the browser. Pages may load slightly slower right after a restart while the cache rebuilds.">Clear HTTP cache.</label>
+        </div>
+        <div class="static-filter-row">
+            <input id="clearCookiesOnStart" type="checkbox" data-setting="clearCookiesOnStart">
+            <label for="clearCookiesOnStart" class="static-filter-name" title="Clears cookies for every website every time you start the browser — you will be signed out everywhere. Saved passwords are never touched.">Clear cookies.</label>
+        </div>
+        <div class="static-filter-row">
+            <input id="clearCacheStorageOnStart" type="checkbox" data-setting="clearCacheStorageOnStart">
+            <label for="clearCacheStorageOnStart" class="static-filter-name" title="Clears the Cache API storage used by service workers and installable web apps (PWAs) every time you start the browser. This is separate from the ordinary HTTP cache above.">Clear app cache storage.</label>
+        </div>
+        <div class="static-filter-row">
+            <input id="clearIndexedDbOnStart" type="checkbox" data-setting="clearIndexedDbOnStart">
+            <label for="clearIndexedDbOnStart" class="static-filter-name" title="Clears IndexedDB databases that websites create for their own data (shopping carts, offline app data, etc.) every time you start the browser.">Clear site databases (IndexedDB).</label>
+        </div>
+        <div class="static-filter-row">
+            <input id="clearLocalStorageOnStart" type="checkbox" data-setting="clearLocalStorageOnStart">
+            <label for="clearLocalStorageOnStart" class="static-filter-name" title="Clears localStorage/sessionStorage data websites set every time you start the browser.">Clear site storage (localStorage).</label>
+        </div>
+        <div class="static-filter-row">
+            <input id="clearServiceWorkersOnStart" type="checkbox" data-setting="clearServiceWorkersOnStart">
+            <label for="clearServiceWorkersOnStart" class="static-filter-name" title="Unregisters websites' own service workers every time you start the browser. Sites that use one (PWAs, offline-capable sites) will re-register it on your next visit.">Clear site service workers.</label>
+        </div>
+    </div>
+
+    <!-- ── 2. POWER TOOLS ── (11.0.0, owner's decision: above the "protections moved" notice) "I am an advanced user (unhide power
+         tools)" — js/data/power-tools.js. Saved by security.js like every [data-setting] checkbox of this tab. -->
+    <h3 class="static-filters-heading">Power tools</h3>
+    <div class="static-filter-rows">
+        <div class="static-filter-row">
+            <input id="advancedUserToggle" type="checkbox" data-setting="advancedUser">
+            <label for="advancedUserToggle" class="static-filter-name" title="Shows Seamless surfing, Pause filtering, the DNR tracking filter and the Fingerprint Inspector in the toolbar popup and right-click menu. Rules you made with them keep working while they are hidden. Turning this off also ends a pause and turns Seamless surfing on, set to accept, else decline.">I am an advanced user (unhide power tools)</label>
+        </div>
+    </div>
+
+    <!-- ── 3. "Protections moved" notice ── (11.0.0) moved below Power tools, with at least two lines of space above it (settings.css). (10.3.0) The "Security enhancements" rows (payment handlers,
+         Web Bundles, dialog scams), the "Very low" and "Low" website breakage risk groups and the
+         editable "safer region" TLD list were REMOVED — the protections moved to the owner's 3P-Matrix
+         extension. The "Security enhancements" heading that used to sit above this notice was removed in
+         10.5.0 (owner's request) — nothing else is left under it to head, so the notice is now the last
+         thing in this tab, directly above the dashboard footer's separator line. -->
+    <!-- populated from PROTECTIONS_MOVED_NOTICE (js/data/retired-protections.js) by security.js -->
+    <p id="protectionsMovedNotice" class="static-filters-desc"></p>
+</section>
+
+<!-- ── MANAGE CUSTOM RULES TAB ──────────────────────────────────────── -->
+<section data-pane="customrules">
+
+    <!-- Filter on the left, generic all-sections-at-once actions
+         right-aligned on the SAME line — deliberately separate from each
+         section's own per-section "Clear all" button below, which stays
+         scoped to just that one section. -->
+    <div class="custom-rules-filter-row">
+        <label for="customRulesDomainFilter">Filter on domain:</label>
+        <input type="text" id="customRulesDomainFilter" placeholder="e.g. akamaihd.net" autocomplete="off" spellcheck="false">
+        <div class="custom-rules-toolbar-row">
+            <button id="deleteAllCustomRules" class="custom-rules-clear" type="button">Delete all rules</button>
+            <button id="importCustomRules" class="custom-rules-toolbar-btn" type="button">Import rules</button>
+            <button id="exportCustomRules" class="custom-rules-toolbar-btn" type="button">Export rules</button>
+            <input type="file" id="importCustomRulesFile" accept="application/json,.json" hidden>
+        </div>
+    </div>
+    <p class="custom-rules-toolbar-status" id="customRulesToolbarStatus" hidden></p>
+
+    <hr class="custom-rules-filter-separator">
+
+    <div class="custom-rules-group" id="cosmeticRulesGroup">
+        <div class="custom-rules-header">
+            <p class="custom-rules-title">Cosmetic (hide) rules</p>
+        </div>
+        <div id="cosmeticRulesList" class="custom-rules-list">
+            <p class="custom-rules-empty" id="cosmeticEmpty">No cosmetic rules saved.</p>
+        </div>
+    </div>
+
+    <div class="custom-rules-group" id="cookieClickerRulesGroup">
+        <div class="custom-rules-header">
+            <p class="custom-rules-title">Cookie consent-clicker rules</p>
+        </div>
+        <div id="cookieClickerRulesList" class="custom-rules-list">
+            <p class="custom-rules-empty" id="cookieClickerEmpty">No cookie consent-clicker rules saved.</p>
+        </div>
+    </div>
+
+    <div class="custom-rules-group" id="matrixRulesGroup">
+        <div class="custom-rules-header">
+            <p class="custom-rules-title" data-ui-name="dnrTrackingFilterRules"></p>
+        </div>
+        <div id="matrixRulesList" class="custom-rules-list">
+            <p class="custom-rules-empty" id="matrixEmpty">No <span data-ui-name="dnrTrackingFilterRules"></span> saved.</p>
+        </div>
+    </div>
+
+    <div class="custom-rules-group" id="scriptletRulesGroup">
+        <div class="custom-rules-header">
+            <p class="custom-rules-title">Anti-fingerprinting scriptlets</p>
+        </div>
+        <div id="scriptletRulesList" class="custom-rules-list">
+            <p class="custom-rules-empty" id="scriptletEmpty">No Anti-fingerprinting scriptlets saved.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- ── BUSY PANE ────────────────────────────────────────────────────── -->
+<section data-pane="busy">
+    <div></div>
+</section>
+
+<footer id="dashboardFooter">Based on uBO Lite with AdGuard Mv3 functions, refactored for simplicity</footer>
+
+<template class="io-panel">
+    <span class="io-panel">
+        <button id="apply" class="preferred" type="button" disabled><span data-i18n="saveButton">_</span><span class="hover"></span></button>
+        <button id="revert" type="button" disabled><span data-i18n="revertButton">_</span><span class="hover"></span></button>
+    </span>
+</template>
+
+<script src="../lib/codemirror/cm6.bundle.ubol.min.js"></script>
+<script src="../js/ui/theme.js" type="module"></script>
+<script src="../js/ui/i18n.js" type="module"></script>
+<script src="dashboard.js" type="module"></script>
+<script src="settings.js" type="module"></script>
+<script src="filter-manager-ui.js" type="module"></script>
+<script src="settings-io.js" type="module"></script>
+<script src="security.js" type="module"></script>
+<script src="develop.js" type="module"></script>
+<script src="custom-rules.js" type="module"></script>
+
+</body>
+</html>

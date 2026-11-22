@@ -1,0 +1,650 @@
+[
+  {
+    "id": 1,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "digikey.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||analytics.analytics-egain.com/onetag/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "letelegramme.fr"
+      ],
+      "urlFilter": "||ultimedia.com/js/common/smart.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "paroles2chansons.lemonde.fr"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 4,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "meilleurpronostic.fr"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 5,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "amazon.fr"
+      ],
+      "urlFilter": "||images-*.ssl-images-amazon.com/images/*/advertising^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.fr"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/*/settings.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 7,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.fr"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/evidon-sitenotice-bundle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 8,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tube8.fr"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||pornhub.phncdn.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 9,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 10,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 11,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 12,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 13,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 14,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 15,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 16,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 17,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 18,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 19,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.fr"
+      ],
+      "urlFilter": "||googleadservices.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 20,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automobile.fr"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||static.mobile.eu^*/resources/images/ads/superteaser_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 21,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "meteo60.fr"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 22,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "capital.fr",
+        "cotemaison.fr",
+        "geo.fr",
+        "hbrfrance.fr",
+        "lejdd.fr",
+        "voici.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 23,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cinetrafic.fr",
+        "geo.fr",
+        "logicieleducatif.fr",
+        "meteo60.fr",
+        "motscroises.fr",
+        "petitrobert.fr",
+        "scribens.fr",
+        "universalis.fr",
+        "worldle.teuteuf.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 24,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "faitsfizzle.fr"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 25,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "femmeactuelle.fr",
+        "harpersbazaar.fr"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 26,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "femmeactuelle.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 27,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "frisons.fr",
+        "lachesis.fr",
+        "spectaclemagie.fr"
+      ],
+      "excludedRequestDomains": [
+        "cdn.jsdelivr.net",
+        "cloudflare.com",
+        "cloudflare.net",
+        "disqus.com",
+        "disquscdn.com",
+        "unpkg.com",
+        "widgetlogic.org"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/*/*/*/*/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 28,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "tvsportslive.fr"
+      ],
+      "excludedRequestDomains": [
+        "addtoany.com",
+        "alicdn.com",
+        "amazonaws.com",
+        "aoneroom.com",
+        "appboycdn.com",
+        "awswaf.com",
+        "azurewebsites.net",
+        "b-cdn.net",
+        "blogger.com",
+        "bootstrapcdn.com",
+        "bunnycdn.ru",
+        "bytecdntp.com",
+        "cackle.me",
+        "capo6play.com",
+        "cdn-apple.com",
+        "cdn.ampproject.org",
+        "cdn.staticfile.org",
+        "cdnhop.com",
+        "chatango.com",
+        "clarity.ms",
+        "cleverpush.com",
+        "cloudflare.com",
+        "cloudflare.net",
+        "cloudflareinsights.com",
+        "cloudfront.net",
+        "code.iconify.design",
+        "connatix.com",
+        "cookielaw.org",
+        "cxense.com",
+        "disqus.com",
+        "disquscdn.com",
+        "dmca.com",
+        "doodcdn.io",
+        "dotmetrics.net",
+        "ebacdn.com",
+        "facebook.net",
+        "fastcomments.com",
+        "fastly-insights.com",
+        "fastly.net",
+        "fastlylb.net",
+        "fbcdn.net",
+        "fluidplayer.com",
+        "fontawesome.com",
+        "github.io",
+        "google-analytics.com",
+        "google.com",
+        "googleapis.com",
+        "googleoptimize.com",
+        "googletagmanager.com",
+        "goonbox.cr",
+        "gstatic.com",
+        "hcaptcha.com",
+        "highcharts.com",
+        "hwcdn.net",
+        "idcdn.de",
+        "ilfcdn.li",
+        "imgsmail.ru",
+        "inmobi.com",
+        "instagram.com",
+        "intensedebate.com",
+        "jpg5.su",
+        "jpg6.su",
+        "jquery.com",
+        "jscdnservices.com",
+        "jsdelivr.net",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "k5a.io",
+        "ko-fi.com",
+        "libs.baidu.com",
+        "linkvertise.com",
+        "lulustream.com",
+        "media-imdb.com",
+        "mega.co.nz",
+        "mega.nz",
+        "nocookie.net",
+        "onesignal.com",
+        "onetrust.com",
+        "online-metrix.net",
+        "outbrain.com",
+        "permutive.app",
+        "plyr.io",
+        "polyfill-fastly.io",
+        "primis.tech",
+        "privacy-mgmt.com",
+        "quantserve.com",
+        "rabbitstream.net",
+        "recaptcha.net",
+        "rsc.cdn77.org",
+        "scorecardresearch.com",
+        "sharecast.ws",
+        "sharethis.com",
+        "shrink.pe",
+        "speedcurve.com",
+        "spot.im",
+        "static.bigbrain.gg",
+        "statically.io",
+        "tailwindcss.com",
+        "teads-xo.com",
+        "tinypass.com",
+        "tolstoycomments.com",
+        "trustpilot.com",
+        "tvableon.me",
+        "twimg.com",
+        "twitter.com",
+        "ulogin.ru",
+        "unpkg.com",
+        "userapi.com",
+        "utteranc.es",
+        "viafoura.net",
+        "vidazoo.com",
+        "vixcloud.co",
+        "vk.com",
+        "vuukle.com",
+        "waust.at",
+        "wknd.ai",
+        "workers.dev",
+        "wp.com",
+        "wpmucdn.com",
+        "wsimg.com",
+        "x.com",
+        "yastatic.net",
+        "youtube.com",
+        "ytimg.com",
+        "zencdn.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eurosport.fr"
+      ],
+      "urlFilter": "||mssl.fwmrm.net/libs/adm/*/admanager.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 30,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "anisearch.fr"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||anisearch.*/partner?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 31,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myradioendirect.fr"
+      ],
+      "urlFilter": "/inside-banner.mini.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

@@ -1,0 +1,160 @@
+/* ══════════════════════════════════════════════════════════════
+   1. BASE  —  shared visual system, help line, select buttons
+   ══════════════════════════════════════════════════════════════ */
+/* Privacy Inspector uses the Create custom DNR rules visual system. */
+#monitorHelp { width: 100%; max-width: none; }
+.cr-select-btn:disabled { cursor: not-allowed; opacity: 0.5; }
+
+/* ══════════════════════════════════════════════════════════════
+   2. TABLE COLUMNS  —  breakage-risk column
+   ══════════════════════════════════════════════════════════════ */
+/* Emoji glyphs carry their own color — no color-mix/contrast math needed,
+   same reasoning as monitor-panel.css's .col-api-misuse. */
+.col-break-risk {
+    text-align: center;
+    width: 4em;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   3. WARNING LINES  —  static caution line, legit-signals banner
+   ══════════════════════════════════════════════════════════════ */
+/* Warning line directly under the explanation text — same amber tone as
+   the paused banner (--color-amber, monitor-panel.css) so it reads as a
+   caution rather than more neutral help copy. Border-bottom/padding/
+   font-size match #monitorHelp's own layout so the two lines sit flush
+   against each other with no visual seam beyond the color change.
+   Text color mix verified at 50% amber (not 80%, the original value):
+   at 80% the text/background combination only reaches 2.62:1 in light
+   mode (fails WCAG AA's 4.5:1 minimum for this font size — bold 0.82em
+   doesn't qualify for the relaxed large-text 3:1 threshold). 50% reaches
+   4.98:1 light / 9.68:1 dark, comfortably passing both — computed
+   directly from this project's actual --surface-1/--ink-1/--color-amber
+   values in each mode, not assumed from reusing an existing variable. */
+#monitorHelpWarning {
+    background-color: color-mix(in srgb, var(--color-amber) 10%, var(--surface-1));
+    border-bottom: 1px solid var(--border-1);
+    color: color-mix(in srgb, var(--color-amber) 50%, currentColor);
+    font-size: 0.82em;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.45em 0.8em;
+    width: 100%;
+    }
+
+/* Aggregate legit-signals banner — only appears once enough individually-
+   legitimate device/network signals have been read together (see
+   LEGIT_SIGNALS_WARNING_THRESHOLD in privacy-inspector.js). Deliberately a
+   different color (red-leaning) from #monitorHelpWarning's static amber
+   caution line, so an active detection reads as more urgent than the
+   ever-present "don't log in here" reminder above it.
+   Text color mix verified at 60% red (not a higher, more saturated mix)
+   specifically for contrast: at 85% red the text/background combination
+   only reaches 3.66:1 in light mode (fails WCAG AA's 4.5:1 minimum for
+   this font size — bold 0.82em doesn't qualify for the relaxed large-text
+   3:1 threshold). 60% reaches 5.52:1 light / 7.00:1 dark, comfortably
+   passing both — computed directly from this project's actual --surface-1/
+   --ink-1/--color-red values in each mode, not assumed from reusing an
+   existing variable. */
+#fingerprintWarningBanner {
+    background-color: color-mix(in srgb, var(--color-red) 12%, var(--surface-1));
+    border-bottom: 1px solid var(--border-1);
+    color: color-mix(in srgb, var(--color-red) 60%, currentColor);
+    font-size: 0.82em;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.45em 0.8em;
+    width: 100%;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   4. ENTRY TABLE WRAPPER  —  scroll region
+   ══════════════════════════════════════════════════════════════ */
+/* BUG FIX: Privacy Inspector's table wrapper is #monitorTableWrap, not
+   #monitorListWrap (Block Monitor's ID) — the shared monitor-panel.css rule
+   giving that container flex:1 + overflow-y:auto never matched here, so
+   this panel had no scroll behavior at all once entries overflowed the
+   fixed-height popup window.
+   min-height: 0 is required in addition to flex:1: body (monitor-panel.css)
+   is a fixed-height (100vh) flex column with overflow:hidden, and
+   #monitorTableWrap shares that column with #scriptletReference below. A
+   flex item's default min-height is "auto" (≈ its content's natural size),
+   so without this override #monitorTableWrap refuses to shrink past its own
+   content height when #scriptletReference expands — leaving no room for the
+   reference body below and no visible symptom here (its own overflow-y:auto
+   masks it), but it's what caused BUG FIX (below) to still get clipped by
+   body's overflow:hidden instead of scrolling. */
+#monitorTableWrap {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   5. SCRIPTLET REFERENCE  —  collapsible table
+   ══════════════════════════════════════════════════════════════ */
+#scriptletReference {
+    border-top: 1px solid var(--border-1);
+    flex-shrink: 0;
+    font-size: 0.85em;
+    }
+
+/* BUG FIX: all 12 reference rows plus the closing note were previously
+   direct children of <details>, so opening it just grew #scriptletReference
+   past the remaining space in body's fixed-height (100vh, overflow:hidden)
+   flex column — the content was clipped, not scrollable, and only 6 of 12
+   rows were ever reachable. Wrapping everything except <summary> in this
+   dedicated scroll region (kept separate so the "Scriptlet reference"
+   header itself always stays visible, never scrolls out of view) fixes
+   that: bounded to the same min(70vh, 26em) cap already used for the same
+   kind of problem elsewhere in this project (.info-dropdown-panel in
+   monitor-panel.css — a scrollable overlay bounded against viewport
+   height), so this stays consistent with that precedent instead of
+   inventing a new bound. */
+#scriptletReferenceBody {
+    max-height: min(70vh, 26em);
+    overflow-y: auto;
+    }
+
+#scriptletReference summary {
+    background-color: var(--surface-1);
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 60% — borderline fails 4.5:1 in light mode (4.44:1); 65% is the nearest proven-safe value (A9) */
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+    user-select: none;
+    }
+
+#scriptletReference summary:hover {
+    color: currentColor;
+    }
+
+#scriptletReferenceTable {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+#scriptletReferenceTable thead th {
+    background-color: var(--surface-1);
+    border-bottom: 1px solid var(--border-1);
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 50% — fails 4.5:1 in both modes (3.28:1/4.27:1); 65% is the nearest proven-safe value (A9) */
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.35em 0.8em;
+    text-align: left;
+    text-transform: uppercase;
+    }
+
+#scriptletReferenceTable td {
+    border-bottom: 1px solid color-mix(in srgb, var(--border-1) 50%, transparent);
+    padding: 0.35em 0.8em;
+    vertical-align: middle;
+    }
+
+#scriptletReferenceTable code {
+    font-family: monospace;
+    font-size: 0.9em;
+    }

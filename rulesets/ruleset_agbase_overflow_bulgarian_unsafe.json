@@ -1,0 +1,23 @@
+[
+  {
+    "id": 119,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "protvplus.ro"
+      ],
+      "resourceTypes": [
+        "other",
+        "script"
+      ],
+      "urlFilter": "||trackad.cz/adtrack.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

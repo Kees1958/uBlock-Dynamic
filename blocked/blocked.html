@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- ── blocked.html — uBD's block page (10.7.2) ───────────────────────────────────────────────
+     Shown instead of the browser's own error page when a top-level page load was blocked
+     (js/core/block-page.js sends the tab here). NOT web-accessible: only the extension itself can
+     open it. The blocked domain arrives as the "host" query parameter, set by the service worker.
+     Layout like AdGuard's block page: the extension icon left, the text right. Colours: the shared
+     page tokens only (css/default.css, css/common.css) — no new colour values (A8/A9). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="blocked.css">
+<title>This page was blocked</title>
+</head>
+<body>
+<!-- ── 1. BLOCK NOTICE ── -->
+<main id="blockNotice">
+    <img id="blockIcon" src="../img/icon_128.png" width="128" height="128" alt="">
+    <div id="blockText">
+        <h1>This page was blocked</h1>
+        <p id="blockExtName"></p><!-- populated from the extName message (_locales) by blocked.js -->
+        <p>Tries to open: <strong id="blockHost"></strong></p><!-- populated from the "host" query parameter by blocked.js -->
+        <p>Reason: a whole-page block rule (<code>$document</code> or <code>$all</code>)</p>
+        <button id="blockCloseTab" type="button">Close tab</button>
+    </div>
+</main>
+<script src="blocked.js" type="module"></script>
+</body>
+</html>

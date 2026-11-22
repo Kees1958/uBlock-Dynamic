@@ -1,0 +1,311 @@
+[
+  {
+    "id": 6180,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "deviceAdInsertionTypeOverride"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "/getplaybackresources?",
+      "initiatorDomains": [
+        "amazon.co.uk",
+        "amazon.com",
+        "primevideo.com"
+      ],
+      "resourceTypes": [
+        "font",
+        "image",
+        "main_frame",
+        "media",
+        "object",
+        "other",
+        "ping",
+        "script",
+        "stylesheet",
+        "sub_frame",
+        "websocket",
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6181,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "deviceAdInsertionTypeOverride"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "/getplaybackresources?",
+      "initiatorDomains": [
+        "amazon.co.uk",
+        "amazon.com",
+        "primevideo.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6182,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "ssaiProfile"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||ngtv.io/v2/media",
+      "initiatorDomains": [
+        "adultswim.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6183,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "c"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "requestDomains": [
+        "genteelflair.com"
+      ],
+      "urlFilter": "^c=",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6186,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "caid"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||adultswim-vodlive.cdn.turner.com/csmp/live/",
+      "initiatorDomains": [
+        "adultswim.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6187,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "caid"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||warnermediacdn.com/csm/*&caid=",
+      "initiatorDomains": [
+        "adultswim.com",
+        "cnn.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6189,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "adPostroll"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||cxm-api.fifa.com/fifaplusweb/api/video/getverizonpreplayparameters?*&adpostroll",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6190,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "prerollAds"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||cxm-api.fifa.com/fifaplusweb/api/video/getverizonpreplayparameters?*&prerollads",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6193,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "ad_config_id"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||brightcovecdn.com/playback/*/*?ad_config_id=",
+      "initiatorDomains": [
+        "9now.com.au",
+        "nhl.com",
+        "player.stv.tv",
+        "roosterteeth.com",
+        "tvnz.co.nz",
+        "video.telequebec.tv"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6194,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "ad_config_id"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||brightcove.com/playback/*/*?ad_config_id",
+      "initiatorDomains": [
+        "9now.com.au",
+        "nhl.com",
+        "player.stv.tv",
+        "roosterteeth.com",
+        "tvnz.co.nz",
+        "video.telequebec.tv"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6195,
+    "priority": 500,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "prof"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||ssaimanifest.prod.boltdns.net/playback/once/v*/vmap/",
+      "initiatorDomains": [
+        "amcplus.com",
+        "ifc.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

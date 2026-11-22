@@ -1,0 +1,1583 @@
+[
+  {
+    "id": 1,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.dk",
+        "downdetector.no",
+        "downdetector.se"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/*/settings.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.dk",
+        "downdetector.no",
+        "downdetector.se"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/evidon-sitenotice-bundle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vgtv.no"
+      ],
+      "urlFilter": "||cdn.videoplaza.tv/contrib/no-vg/svm/homadconfigvideoplaza-vgtv.json^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 4,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 5,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 7,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 8,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 9,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 10,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 11,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 12,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 13,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.is",
+        "google.no",
+        "google.se"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 14,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.dk",
+        "google.no",
+        "google.se"
+      ],
+      "urlFilter": "||googleadservices.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 15,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "archive.is"
+      ],
+      "urlFilter": "||gyrovague.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 16,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "itavisen.no",
+        "merinfo.se",
+        "notebookcheck.se"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 17,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "notebookcheck.se"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 18,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "my.is"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 19,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radio-danmark.dk"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 20,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "moviesjoy.is"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/[a-z]{3,5}\\.[a-z]{10,14}\\.top\\/[a-z]{10,16}\\/[a-z]{5,6}$",
+      "isUrlFilterCaseSensitive": true
+    }
+  },
+  {
+    "id": 21,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "moviesjoy.is"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/[a-z][a-z][a-z]+\\.[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]+\\.top\\/[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]+\\/[a-z][a-z][a-z][a-z][a-z]+$",
+      "isUrlFilterCaseSensitive": true
+    }
+  },
+  {
+    "id": 22,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "hianime.dk"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "regexFilter": "\\/[0-9][0-9][0-9][0-9][0-9][0-9][0-9]$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 23,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "swatchseries.is",
+        "y2mate.com.se"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".com^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 24,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "swatchseries.is",
+        "y2mate.com.se"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".net^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 25,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "swatchseries.is",
+        "y2mate.com.se"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".to^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 26,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "swatchseries.is",
+        "y2mate.com.se"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".xyz^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 27,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "1377x.is",
+        "erothots.is",
+        "mixdrop.is",
+        "simpcity.is",
+        "y2mate.is"
+      ],
+      "excludedRequestDomains": [
+        "addtoany.com",
+        "alicdn.com",
+        "amazonaws.com",
+        "aoneroom.com",
+        "appboycdn.com",
+        "awswaf.com",
+        "azurewebsites.net",
+        "b-cdn.net",
+        "blogger.com",
+        "bootstrapcdn.com",
+        "bunnycdn.ru",
+        "bytecdntp.com",
+        "cackle.me",
+        "capo6play.com",
+        "cdn-apple.com",
+        "cdn.ampproject.org",
+        "cdn.staticfile.org",
+        "cdnhop.com",
+        "chatango.com",
+        "clarity.ms",
+        "cleverpush.com",
+        "cloudflare.com",
+        "cloudflare.net",
+        "cloudflareinsights.com",
+        "cloudfront.net",
+        "code.iconify.design",
+        "connatix.com",
+        "cookielaw.org",
+        "cxense.com",
+        "disqus.com",
+        "disquscdn.com",
+        "dmca.com",
+        "doodcdn.io",
+        "dotmetrics.net",
+        "ebacdn.com",
+        "facebook.net",
+        "fastcomments.com",
+        "fastly-insights.com",
+        "fastly.net",
+        "fastlylb.net",
+        "fbcdn.net",
+        "fluidplayer.com",
+        "fontawesome.com",
+        "github.io",
+        "google-analytics.com",
+        "google.com",
+        "googleapis.com",
+        "googleoptimize.com",
+        "googletagmanager.com",
+        "goonbox.cr",
+        "gstatic.com",
+        "hcaptcha.com",
+        "highcharts.com",
+        "hwcdn.net",
+        "idcdn.de",
+        "ilfcdn.li",
+        "imgsmail.ru",
+        "inmobi.com",
+        "instagram.com",
+        "intensedebate.com",
+        "jpg5.su",
+        "jpg6.su",
+        "jquery.com",
+        "jscdnservices.com",
+        "jsdelivr.net",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "k5a.io",
+        "ko-fi.com",
+        "libs.baidu.com",
+        "linkvertise.com",
+        "lulustream.com",
+        "media-imdb.com",
+        "mega.co.nz",
+        "mega.nz",
+        "nocookie.net",
+        "onesignal.com",
+        "onetrust.com",
+        "online-metrix.net",
+        "outbrain.com",
+        "permutive.app",
+        "plyr.io",
+        "polyfill-fastly.io",
+        "primis.tech",
+        "privacy-mgmt.com",
+        "quantserve.com",
+        "rabbitstream.net",
+        "recaptcha.net",
+        "rsc.cdn77.org",
+        "scorecardresearch.com",
+        "sharecast.ws",
+        "sharethis.com",
+        "shrink.pe",
+        "speedcurve.com",
+        "spot.im",
+        "static.bigbrain.gg",
+        "statically.io",
+        "tailwindcss.com",
+        "teads-xo.com",
+        "tinypass.com",
+        "tolstoycomments.com",
+        "trustpilot.com",
+        "tvableon.me",
+        "twimg.com",
+        "twitter.com",
+        "ulogin.ru",
+        "unpkg.com",
+        "userapi.com",
+        "utteranc.es",
+        "viafoura.net",
+        "vidazoo.com",
+        "vixcloud.co",
+        "vk.com",
+        "vuukle.com",
+        "waust.at",
+        "wknd.ai",
+        "workers.dev",
+        "wp.com",
+        "wpmucdn.com",
+        "wsimg.com",
+        "x.com",
+        "yastatic.net",
+        "youtube.com",
+        "ytimg.com",
+        "zencdn.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eurosport.dk",
+        "eurosport.no"
+      ],
+      "urlFilter": "||mssl.fwmrm.net/libs/adm/*/admanager.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 29,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "cuevana.is",
+        "jav.com.se",
+        "touchcric.is",
+        "wlext.is"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "regexFilter": "\\/[a-f0-9]{32}\\.js(?:$|\\?)",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 30,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "suntcontent.se",
+        "bonnieradnetwork.se",
+        "converti.se"
+      ],
+      "domainType": "thirdParty"
+    }
+  },
+  {
+    "id": 31,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bold.dk"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/gampad/ads",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 32,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.allermedia.se/se-aller-ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 33,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fuelfinder.dk/js/prettyprint-message-min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 34,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fuelfinder.dk"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 35,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "berlingske.dk",
+        "bt.dk"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 36,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bt.dk"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 37,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "feltet.dk"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 38,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||bt.dk/build/prebid-ads-advertisement_adbanner.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 39,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ekstrabladet.dk"
+      ],
+      "urlFilter": "||v.fwmrm.net/ad/g/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 40,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||img.sofabold.dk/images/banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 41,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||cdn.maskinbladet.dk/*assets/templates/*/img/adblocker/ads.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 42,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||borsen.dk/themes/borsen.dk/js/dfp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 43,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bold.dk"
+      ],
+      "urlFilter": "||v.fwmrm.net/ad/g/1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 44,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bold.dk"
+      ],
+      "urlFilter": "||v.fwmrm.net/ad/l/1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 45,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bold.dk"
+      ],
+      "urlFilter": "||v.fwmrm.net/crossdomain.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 47,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tv3sport.dk"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||freewheel-mtgx-tv.akamaized.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 48,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||dagensbyggeri.dk/assets/templates/dagensbyggeri/gfx/ads.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 49,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||maskinbladet.dk/assets/templates/2016_maskinbladet/images/ads.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 50,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||boost-cdn.manatee.dk/config/mboost",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 51,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||inputmag.dk/wp-content/themes/jannah/js/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 52,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||inputmag.dk/wp-content/uploads/*/*_galaxy-_takeover_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 53,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "other",
+        "script"
+      ],
+      "urlFilter": "||boost.manatee.dk/srx/srx_lib_block_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 54,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||jyllands-posten.dk/app/*ads*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 55,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "finn.no"
+      ],
+      "urlFilter": "||static.finncdn.no/*/travel/*/_next/static/chunks/pages/ad.html-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 56,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vg.no/vgc/cdn/vgno/assets/feature/_astro/gifthelperpymframe.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 57,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "embed.viaplay.com"
+      ],
+      "urlFilter": "||v.fwmrm.net/ad/g/1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 58,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vegetarbloggen.no"
+      ],
+      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 59,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vegetarbloggen.no"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 60,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "klikk.no"
+      ],
+      "urlFilter": "||widgets.sprinklecontent.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 61,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nettavisen.no"
+      ],
+      "urlFilter": "||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 62,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nettavisen.no"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 63,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||deiligejenter.com/testfile23.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 64,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||nettavisen.no/templates/v*/resources/admanager/templates/topover/topover.jsp",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 65,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "jula.no"
+      ],
+      "urlFilter": "||google-analytics.com/analytics.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 66,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nakenprat.com/adfirst*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 67,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nakenprat.com/adlast*.php^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 68,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "e24.no"
+      ],
+      "urlFilter": "||advert.vg.no/1v*.js?v=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 69,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "e24.no"
+      ],
+      "urlFilter": "||advertisement.vg.no/1v*.js?v=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 70,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "urlFilter": "||advert.vg.no/1v*.js?v=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 71,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "urlFilter": "||advertisement.vg.no/1v*.js?v=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 72,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vg.no",
+        "vgtv.no"
+      ],
+      "urlFilter": "||no-vg.videoplaza.tv/proxy/distributor/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 73,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tv4play.se"
+      ],
+      "urlFilter": "||images.woo.a2d.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 74,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swedroid.se"
+      ],
+      "urlFilter": "||lwadm.com/*pbjs?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 75,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mathem.se"
+      ],
+      "urlFilter": "||widget.trustpilot.com/bootstrap/*/tp.widget.bootstrap.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 76,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "happypancake.fi",
+        "happypancake.se"
+      ],
+      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 77,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "happypancake.fi",
+        "happypancake.se"
+      ],
+      "urlFilter": "||happypancake.se/static/prebid.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 78,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "happypancake.fi",
+        "happypancake.se"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 79,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "happypancake.fi",
+        "happypancake.se"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 80,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ilikeradio.se"
+      ],
+      "urlFilter": "||app.khz.se/api/*&ad_type=preroll-channel",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 81,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swehockey.se"
+      ],
+      "urlFilter": "||adtech.de/dt/common/dac.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 82,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mitti.se"
+      ],
+      "urlFilter": "||adtech.de/dt/common/dac.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 83,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fotbolltransfers.com"
+      ],
+      "urlFilter": "||cdnjs.cloudflare.com/ajax/libs/fuckadblock^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 85,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||play.tv3.ee/static/scripts/adroot/dfp.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 86,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||play.tv3.ee/static/scripts/adroot/facebook.net/fbevents.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 87,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||play.tv3.ee/static/scripts/adroot/imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 88,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tv4play.se"
+      ],
+      "urlFilter": "||v.fwmrm.net/ad/g/1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 89,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tv4play.se"
+      ],
+      "urlFilter": "||dbf0a92kfjvxs.cloudfront.net/creatives/assets^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 90,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dplay.se"
+      ],
+      "urlFilter": "||v.fwmrm.net/ad/g/1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 91,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "svd.se"
+      ],
+      "urlFilter": "||acdn.adnxs.com/ast/ast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 92,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||cds.w6x3h2w2.hwcdn.net/ads/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 93,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fusion.expressen.se/script.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 94,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "expressen.se"
+      ],
+      "urlFilter": "||videoplaza.tv/creatives/assets*.mp4^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 95,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aftonbladet.se"
+      ],
+      "urlFilter": "||se-aftonbladet.videoplaza.tv/proxy/distributor/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 97,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aftonbladet.se"
+      ],
+      "urlFilter": "||ib.adnxs.com/ut/v3",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 98,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ekstrabladet.dk"
+      ],
+      "urlFilter": "||adtech.de/dt/common/dac.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 99,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ekstrabladet.dk"
+      ],
+      "urlFilter": "||acdn.adnxs.com/ast/ast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 100,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||login.di.se/assets/adblk.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 101,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "fusion.sydsvenskan.se"
+      ]
+    }
+  },
+  {
+    "id": 102,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "widget.tippebannere.no"
+      ],
+      "domainType": "thirdParty"
+    }
+  }
+]

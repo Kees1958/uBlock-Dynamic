@@ -1,0 +1,81 @@
+/* ══════════════════════════════════════════════════════════════
+   1. ABP FILTER SYNTAX HIGHLIGHTING — CodeMirror token classes for
+      the sandbox ABP rule editor (static-filtering-parser.js output)
+   ══════════════════════════════════════════════════════════════ */
+
+.cm-container .cm-line {
+    word-break: break-all;
+    }
+.sfp_comment {
+    color: var(--sf-comment-ink);
+    }
+.sfp_def {
+    color: var(--sf-def-ink);
+    }
+.sfp_directive {
+    color: var(--sf-directive-ink);
+    font-weight: bold;
+    }
+.sfp_error {
+    color: var(--cm-negative);
+    text-decoration: underline var(--cm-negative) wavy;
+    text-decoration-skip-ink: none;
+    }
+/* (10.7.2) "! Rejected: <reason>" comment lines, in red. NOT --cm-negative: computed against the editor's page
+   surface it reaches only 3.95:1 (vs --surface-1) / 4.49:1 (vs white) in light mode — under the 4.5:1 bar for normal
+   text (A8; a known gap recorded in STYLE_GUIDE_LIGHT.md). Instead the already-verified red text value is reused (C21):
+   rgb(176,42,30) light 5.77:1 vs --surface-1, #ff7070 dark 6.36:1 / 4.91:1 — the same value as popup/popup.css
+   --mode-off-text-color and css/panel-shared.css --color-red-text (this page loads neither file). */
+:root {
+    --sfp-rejected-ink: rgb(176, 42, 30);
+    }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --sfp-rejected-ink: #ff7070;
+        }
+    }
+:root.dark {
+    --sfp-rejected-ink: #ff7070;
+    }
+:root.light {
+    --sfp-rejected-ink: rgb(176, 42, 30);
+    }
+.sfp_rejected {
+    color: var(--sfp-rejected-ink);
+    }
+.sfp-ext-dom {
+    }
+.sfp-ext-html {
+    }
+.sfp-ext-js {
+    }
+.sfp_keyword {
+    color: var(--sf-keyword-ink);
+    }
+.sfp_link {
+    text-decoration: none;
+    }
+.sfp-net {
+    }
+.sfp_notice {
+    text-decoration-color: var(--sf-notice-ink);
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    }
+.sfp_strong {
+    font-weight: bold;
+    }
+.sfp_tag {
+    color: var(--sf-tag-ink);
+    }
+.sfp_unicode {
+    text-decoration-color: var(--sf-unicode-ink);
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+    }
+.sfp_value {
+    color: var(--sf-value-ink);
+    }
+.sfp_variable {
+    color: var(--sf-variable-ink);
+    }

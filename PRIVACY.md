@@ -19,7 +19,7 @@ Filter lists are retrieved from GitHub. No personal data, browsing history, or i
 How uBlock Stripped Works
 The extension registers filtering rules with Chrome's native Declarative Net Request (DNR) engine. These rules block or allow third-party network requests based on the filter rules you have written yourself. The filtering happens entirely inside the browser — the extension never reads, inspects, or transmits the content of any request.
 
-Cosmetic filters (rules that hide page elements or run a scriptlet you authored) are applied locally through Chrome's User Scripts API, using only the filter text you entered in the extension's own filter editor. No filter content, page content, or browsing data ever leaves your device.
+Cosmetic filters (rules that hide page elements or run a scriptlet you authored) are applied locally through Chrome's scripting API (`chrome.scripting.registerContentScripts`), using only the filter text you entered in the extension's own filter editor. No filter content, page content, or browsing data ever leaves your device.
 
 When you toggle filtering on or off for a site from the extension's popup, the extension updates the set of active DNR rules for that domain. Nothing is sent anywhere.
 
@@ -49,4 +49,4 @@ Changes to This Privacy Policy
 This Privacy Policy may be updated from time to time. Any changes will be reflected by updating the "Last Updated" date at the top of this document.
 
 Third-Party Data Attribution
-This extension bundles a compacted subset of DuckDuckGo's Tracker Radar dataset (used only for the Privacy Inspector's own local, on-device display — never transmitted anywhere) and some cookie-consent-handling logic adapted from DuckDuckGo's autoconsent project. Full attribution and license terms for both are in THIRD_PARTY_LICENSES.md.
+This extension bundles a compacted subset of DuckDuckGo's Tracker Radar dataset (used only for the Privacy Inspector's own local, on-device display — never transmitted anywhere), and some cookie-consent-handling logic adapted from DuckDuckGo's autoconsent project and from Consent-O-Matic (CAVI, Aarhus University). Full attribution and license terms for all three are in THIRD_PARTY_LICENSES.md.

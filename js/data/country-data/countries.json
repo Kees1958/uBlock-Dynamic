@@ -1,0 +1,828 @@
+{
+  "_about": "ccTLD (lowercase, no dot) → base language codes, grouped by continent. Source: 3P Matrix data/country-data.js (196 sovereign countries + territories; Antarctica omitted). (10.4.5, uBlock Stripped: languages are OFFICIAL languages only — us and bz lost 'es', dm lost 'fr', which is widely spoken there but not official; Puerto Rico (pr: es, en) added as a territory. Copy back to 3P Matrix to keep both identical.)",
+  "continents": {
+    "AFRICA": "africa",
+    "NORTH_AMERICA": "north-america",
+    "SOUTH_AMERICA": "south-america",
+    "EUROPE": "europe",
+    "ASIA": "asia",
+    "OCEANIA": "oceania"
+  },
+  "countries": {
+    "africa": {
+      "dz": [
+        "ar",
+        "ber"
+      ],
+      "ao": [
+        "pt"
+      ],
+      "bj": [
+        "fr"
+      ],
+      "bw": [
+        "en",
+        "tn"
+      ],
+      "bf": [
+        "fr",
+        "mos"
+      ],
+      "bi": [
+        "fr",
+        "rn",
+        "sw"
+      ],
+      "cv": [
+        "pt",
+        "kea"
+      ],
+      "cm": [
+        "fr",
+        "en"
+      ],
+      "cf": [
+        "fr",
+        "sg"
+      ],
+      "td": [
+        "fr",
+        "ar"
+      ],
+      "km": [
+        "ar",
+        "fr",
+        "swb"
+      ],
+      "cd": [
+        "fr",
+        "sw",
+        "ln"
+      ],
+      "dj": [
+        "fr",
+        "ar",
+        "so",
+        "aa"
+      ],
+      "eg": [
+        "ar"
+      ],
+      "gq": [
+        "es",
+        "fr",
+        "pt"
+      ],
+      "er": [
+        "ti",
+        "ar",
+        "en"
+      ],
+      "sz": [
+        "en",
+        "ss"
+      ],
+      "et": [
+        "am",
+        "om",
+        "ti"
+      ],
+      "ga": [
+        "fr"
+      ],
+      "gm": [
+        "en",
+        "wo",
+        "mnk"
+      ],
+      "gh": [
+        "en",
+        "ak",
+        "ee"
+      ],
+      "gn": [
+        "fr",
+        "sus"
+      ],
+      "gw": [
+        "pt",
+        "pov"
+      ],
+      "ci": [
+        "fr"
+      ],
+      "ke": [
+        "en",
+        "sw"
+      ],
+      "ls": [
+        "en",
+        "st"
+      ],
+      "lr": [
+        "en"
+      ],
+      "ly": [
+        "ar"
+      ],
+      "mg": [
+        "mg",
+        "fr"
+      ],
+      "mw": [
+        "en",
+        "ny"
+      ],
+      "ml": [
+        "fr",
+        "bm"
+      ],
+      "mr": [
+        "ar",
+        "fr"
+      ],
+      "mu": [
+        "en",
+        "fr",
+        "mfe"
+      ],
+      "ma": [
+        "ar",
+        "ber",
+        "fr"
+      ],
+      "mz": [
+        "pt"
+      ],
+      "na": [
+        "en",
+        "af",
+        "de",
+        "na"
+      ],
+      "ne": [
+        "fr",
+        "ha",
+        "dje"
+      ],
+      "ng": [
+        "en",
+        "ha",
+        "yo",
+        "ig"
+      ],
+      "cg": [
+        "fr",
+        "ln"
+      ],
+      "rw": [
+        "rw",
+        "en",
+        "fr",
+        "sw"
+      ],
+      "st": [
+        "pt"
+      ],
+      "sn": [
+        "fr",
+        "wo"
+      ],
+      "sc": [
+        "en",
+        "fr",
+        "crs"
+      ],
+      "sl": [
+        "en",
+        "kri"
+      ],
+      "so": [
+        "so",
+        "ar"
+      ],
+      "za": [
+        "en",
+        "af",
+        "zu",
+        "xh",
+        "st",
+        "tn",
+        "ts",
+        "ss",
+        "ve",
+        "nr",
+        "nso"
+      ],
+      "ss": [
+        "en",
+        "ar"
+      ],
+      "sd": [
+        "ar",
+        "en"
+      ],
+      "tz": [
+        "sw",
+        "en"
+      ],
+      "tg": [
+        "fr",
+        "ee"
+      ],
+      "tn": [
+        "ar",
+        "fr"
+      ],
+      "ug": [
+        "en",
+        "sw",
+        "lg"
+      ],
+      "zm": [
+        "en",
+        "bem",
+        "nya"
+      ],
+      "zw": [
+        "en",
+        "sn",
+        "nd"
+      ]
+    },
+    "north-america": {
+      "ag": [
+        "en"
+      ],
+      "bs": [
+        "en"
+      ],
+      "bb": [
+        "en"
+      ],
+      "bz": [
+        "en"
+      ],
+      "ca": [
+        "en",
+        "fr"
+      ],
+      "cr": [
+        "es"
+      ],
+      "cu": [
+        "es"
+      ],
+      "dm": [
+        "en"
+      ],
+      "do": [
+        "es"
+      ],
+      "sv": [
+        "es"
+      ],
+      "gd": [
+        "en"
+      ],
+      "gt": [
+        "es",
+        "quc"
+      ],
+      "ht": [
+        "fr",
+        "ht"
+      ],
+      "hn": [
+        "es"
+      ],
+      "jm": [
+        "en"
+      ],
+      "mx": [
+        "es"
+      ],
+      "ni": [
+        "es"
+      ],
+      "pa": [
+        "es"
+      ],
+      "kn": [
+        "en"
+      ],
+      "lc": [
+        "en"
+      ],
+      "vc": [
+        "en"
+      ],
+      "tt": [
+        "en"
+      ],
+      "us": [
+        "en"
+      ]
+    },
+    "south-america": {
+      "ar": [
+        "es"
+      ],
+      "bo": [
+        "es",
+        "qu",
+        "ay"
+      ],
+      "br": [
+        "pt"
+      ],
+      "cl": [
+        "es"
+      ],
+      "co": [
+        "es"
+      ],
+      "ec": [
+        "es",
+        "qu"
+      ],
+      "gy": [
+        "en"
+      ],
+      "py": [
+        "es",
+        "gn"
+      ],
+      "pe": [
+        "es",
+        "qu",
+        "ay"
+      ],
+      "sr": [
+        "nl",
+        "srn"
+      ],
+      "uy": [
+        "es"
+      ],
+      "ve": [
+        "es"
+      ]
+    },
+    "europe": {
+      "al": [
+        "sq"
+      ],
+      "ad": [
+        "ca",
+        "es",
+        "fr"
+      ],
+      "at": [
+        "de"
+      ],
+      "by": [
+        "be",
+        "ru"
+      ],
+      "be": [
+        "nl",
+        "fr",
+        "de"
+      ],
+      "ba": [
+        "bs",
+        "hr",
+        "sr"
+      ],
+      "bg": [
+        "bg"
+      ],
+      "hr": [
+        "hr"
+      ],
+      "cy": [
+        "el",
+        "tr"
+      ],
+      "cz": [
+        "cs"
+      ],
+      "dk": [
+        "da"
+      ],
+      "ee": [
+        "et",
+        "ru"
+      ],
+      "fi": [
+        "fi",
+        "sv"
+      ],
+      "fr": [
+        "fr"
+      ],
+      "de": [
+        "de"
+      ],
+      "gr": [
+        "el"
+      ],
+      "hu": [
+        "hu"
+      ],
+      "is": [
+        "is"
+      ],
+      "ie": [
+        "en",
+        "ga"
+      ],
+      "it": [
+        "it"
+      ],
+      "lv": [
+        "lv",
+        "ru"
+      ],
+      "li": [
+        "de"
+      ],
+      "lt": [
+        "lt",
+        "ru"
+      ],
+      "lu": [
+        "lb",
+        "fr",
+        "de"
+      ],
+      "mt": [
+        "mt",
+        "en"
+      ],
+      "md": [
+        "ro",
+        "ru"
+      ],
+      "mc": [
+        "fr"
+      ],
+      "me": [
+        "sr",
+        "bs",
+        "sq"
+      ],
+      "nl": [
+        "nl",
+        "fy"
+      ],
+      "mk": [
+        "mk",
+        "sq"
+      ],
+      "no": [
+        "nb",
+        "nn",
+        "se"
+      ],
+      "pl": [
+        "pl"
+      ],
+      "pt": [
+        "pt"
+      ],
+      "ro": [
+        "ro"
+      ],
+      "ru": [
+        "ru"
+      ],
+      "sm": [
+        "it"
+      ],
+      "rs": [
+        "sr",
+        "hu"
+      ],
+      "sk": [
+        "sk"
+      ],
+      "si": [
+        "sl"
+      ],
+      "es": [
+        "es",
+        "ca",
+        "eu",
+        "gl"
+      ],
+      "se": [
+        "sv"
+      ],
+      "ch": [
+        "de",
+        "fr",
+        "it",
+        "rm"
+      ],
+      "ua": [
+        "uk"
+      ],
+      "uk": [
+        "en",
+        "cy",
+        "gd"
+      ],
+      "va": [
+        "it",
+        "la"
+      ]
+    },
+    "asia": {
+      "af": [
+        "ps",
+        "fa"
+      ],
+      "am": [
+        "hy"
+      ],
+      "az": [
+        "az"
+      ],
+      "bh": [
+        "ar",
+        "en"
+      ],
+      "bd": [
+        "bn"
+      ],
+      "bt": [
+        "dz",
+        "en"
+      ],
+      "bn": [
+        "ms",
+        "en"
+      ],
+      "kh": [
+        "km"
+      ],
+      "cn": [
+        "zh"
+      ],
+      "ge": [
+        "ka"
+      ],
+      "in": [
+        "hi",
+        "en",
+        "bn",
+        "te",
+        "mr",
+        "ta",
+        "gu",
+        "ur",
+        "kn",
+        "ml",
+        "pa"
+      ],
+      "id": [
+        "id",
+        "jv",
+        "su"
+      ],
+      "ir": [
+        "fa"
+      ],
+      "iq": [
+        "ar",
+        "ku"
+      ],
+      "il": [
+        "he",
+        "ar"
+      ],
+      "jp": [
+        "ja"
+      ],
+      "jo": [
+        "ar"
+      ],
+      "kz": [
+        "kk",
+        "ru"
+      ],
+      "kw": [
+        "ar",
+        "en"
+      ],
+      "kg": [
+        "ky",
+        "ru"
+      ],
+      "la": [
+        "lo"
+      ],
+      "lb": [
+        "ar",
+        "fr",
+        "en"
+      ],
+      "my": [
+        "ms",
+        "en",
+        "zh",
+        "ta"
+      ],
+      "mv": [
+        "dv"
+      ],
+      "mn": [
+        "mn"
+      ],
+      "mm": [
+        "my",
+        "en"
+      ],
+      "np": [
+        "ne"
+      ],
+      "kp": [
+        "ko"
+      ],
+      "om": [
+        "ar",
+        "en"
+      ],
+      "pk": [
+        "ur",
+        "en",
+        "pa",
+        "sd"
+      ],
+      "ps": [
+        "ar"
+      ],
+      "ph": [
+        "fil",
+        "en"
+      ],
+      "qa": [
+        "ar",
+        "en"
+      ],
+      "sa": [
+        "ar"
+      ],
+      "sg": [
+        "en",
+        "zh",
+        "ms",
+        "ta"
+      ],
+      "kr": [
+        "ko"
+      ],
+      "lk": [
+        "si",
+        "ta"
+      ],
+      "sy": [
+        "ar"
+      ],
+      "tw": [
+        "zh"
+      ],
+      "tj": [
+        "tg",
+        "ru"
+      ],
+      "th": [
+        "th"
+      ],
+      "tl": [
+        "pt",
+        "tet"
+      ],
+      "tr": [
+        "tr"
+      ],
+      "tm": [
+        "tk"
+      ],
+      "ae": [
+        "ar",
+        "en"
+      ],
+      "uz": [
+        "uz",
+        "ru"
+      ],
+      "vn": [
+        "vi"
+      ],
+      "ye": [
+        "ar"
+      ]
+    },
+    "oceania": {
+      "au": [
+        "en"
+      ],
+      "fj": [
+        "en",
+        "fj",
+        "hi"
+      ],
+      "ki": [
+        "en",
+        "gil"
+      ],
+      "mh": [
+        "en",
+        "mh"
+      ],
+      "fm": [
+        "en"
+      ],
+      "nr": [
+        "en",
+        "na"
+      ],
+      "nz": [
+        "en",
+        "mi"
+      ],
+      "pw": [
+        "en",
+        "pau"
+      ],
+      "pg": [
+        "en",
+        "tpi",
+        "ho"
+      ],
+      "ws": [
+        "sm",
+        "en"
+      ],
+      "sb": [
+        "en"
+      ],
+      "to": [
+        "to",
+        "en"
+      ],
+      "tv": [
+        "tvl",
+        "en"
+      ],
+      "vu": [
+        "bi",
+        "en",
+        "fr"
+      ]
+    }
+  },
+  "territories": {
+    "north-america": {
+      "aw": [
+        "nl",
+        "pap"
+      ],
+      "cw": [
+        "nl",
+        "pap"
+      ],
+      "gl": [
+        "kl",
+        "da"
+      ],
+      "pr": [
+        "es",
+        "en"
+      ]
+    },
+    "europe": {
+      "fo": [
+        "fo",
+        "da"
+      ],
+      "im": [
+        "en",
+        "gv"
+      ]
+    },
+    "asia": {
+      "hk": [
+        "zh",
+        "en"
+      ],
+      "mo": [
+        "zh",
+        "pt"
+      ]
+    }
+  }
+}

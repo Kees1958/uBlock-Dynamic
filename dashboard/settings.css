@@ -1,0 +1,592 @@
+/* ══════════════════════════════════════════════════════════════
+   1. RESET, VARIABLES & ANIMATIONS
+   ══════════════════════════════════════════════════════════════ */
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+    }
+
+:root {
+    /* Status colours used in filter rows and warning banners */
+    --settings-error-bg:     #c0392b;
+    --settings-ok-color:     #27ae60;
+    --settings-error-color:  #e74c3c;
+    /* (audit 10.6.4, A2) Text/thumb white on a coloured fill, declared once. #abpFormatHint:
+       white on rgb(var(--primary-40)) = 6.44:1 in both modes. */
+    --settings-on-fill-ink:  #ffffff;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   2. BODY & BASE TYPOGRAPHY
+   ══════════════════════════════════════════════════════════════ */
+
+body.loading {
+    visibility: hidden;
+    }
+h3 {
+    margin: 1em 0;
+    }
+input, select {
+    min-height: 30px;
+    }
+aside {
+    margin-block-start: 1em;
+    }
+label + legend {
+    color: color-mix(in srgb, currentColor 69%, transparent);
+    font-size: var(--font-size-smaller);
+    margin-inline-start: var(--default-gap-large);
+    }
+
+label:has(input[type="checkbox"][disabled]),
+label:has(input[type="checkbox"][disabled]) + legend {
+    filter: var(--checkbox-disabled-filter);
+    }
+
+h3[data-i18n="filteringMode0Name"]::first-letter {
+    text-transform: capitalize;
+    }
+
+body[data-platform="safari"] [data-platform-exclude="safari"] {
+    display: none;
+    }
+
+body section[data-pane="filters"],
+body section[data-pane="filterlists"] {
+    padding-inline: 0;
+    }
+
+
+#abpFormatHint {
+    background-color: rgb(var(--primary-40));
+    border-radius: 4px;
+    color: var(--settings-on-fill-ink);
+    display: block;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-bottom: 0.75em;
+    padding: 0.6em 0.9em;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   3b. CODEMIRROR EDITOR & BUSY SPINNER
+   ══════════════════════════════════════════════════════════════ */
+
+section[data-pane="filters"] aside#sandboxEditor .cm-scroller {
+    min-height: 120px;
+    max-height: 480px;
+    }
+
+section[data-pane="filters"] aside#sandboxEditor .cm-container {
+    height: auto;
+    }
+
+section[data-pane="filters"] aside#sandboxEditor .cm-container .cm-editor {
+    height: auto;
+    }
+#sandboxRuleCount {
+    background-color: var(--surface-3);
+    border-radius: 1em;
+    color: var(--ink-2);
+    font-size: 0.7em;
+    font-weight: 600;
+    margin-inline-start: 0.6em;
+    padding: 0.15em 0.7em;
+    vertical-align: middle;
+    }
+#sandboxRuleCount:empty {
+    display: none;
+    }
+
+body.busy section[data-pane="busy"]  > div {
+    justify-content: center;
+    display: flex;
+    align-items: stretch;
+}
+body.busy section[data-pane="busy"] .fa-icon {
+    animation: spin 1s steps(8) infinite;
+    fill: var(--surface-3);
+    font-size: 4em;
+    margin: 2em;
+}
+/* ══════════════════════════════════════════════════════════════
+   3. PRIVACY & SECURITY TAB
+   ══════════════════════════════════════════════════════════════ */
+/* Gate section (was: ADVANCED USER GATE) REMOVED — the Privacy & Security
+   tab redesign has no gate at all; every group/item uses the shared
+   .static-filters-heading/.static-filter-rows/.static-filter-row markup
+   the Filter (block) lists tab's Built-in filter lists section already
+   defines, styled once there. See CHANGELOG for the full history. */
+
+/* (10.5.0, explicit request) "Privacy enhancements" is this tab's first element, flush against the tab
+   bar with no room above it — unlike every other tab, whose first heading gets the browser's default
+   top margin from `h3 { margin: 1em 0 }` (dashboard-common.css) MINUS the section's own top edge sitting
+   right under the tab bar, no header/nav gap to show it. Scoped to just this one heading (not every h3 in
+   this tab) via :first-child — the other headings removed in 10.5.0 means it already is the first. */
+section[data-pane="security"] > h3:first-child {
+    /* Was --section-gap (32px), then --default-gap-small (12px), then halved to 6px — halved again to
+       3px per explicit request. No smaller named gap token exists, so this stays derived from
+       --default-gap-small via calc() rather than hardcoding "3px" as an unlinked literal (B1 — one
+       declared value, not two copies that can drift). */
+    margin-top: calc(var(--default-gap-small) / 4);
+    }
+section[data-pane="security"] {
+    padding-inline: var(--default-gap-large);
+    /* (10.5.0, per explicit request) space above the "Privacy enhancement" heading. padding (not the
+       h3's own margin-top) because this section is the heading's parent with no other padding/border
+       above it — its top margin collapses straight through to the section and is absorbed by the
+       sticky nav above, producing no visible gap on its own. padding always creates real space. */
+    padding-top: var(--section-gap);
+    /* (10.5.0) #protectionsMovedNotice is this tab's last element — override the generic
+       `body > section { padding-bottom: var(--section-gap) }` (dashboard.css) that would otherwise
+       stack with the footer's own `margin-top` and leave a doubled gap BELOW the notice. padding-bottom:
+       0 removes this tab's own contribution; see body[data-pane="security"] #dashboardFooter below for
+       the rest of that fix. This is the gap below the notice — see #protectionsMovedNotice below for the
+       (separate, larger, per explicit request) gap ABOVE it. */
+    padding-bottom: 0;
+    }
+/* (10.5.0) The footer's own `margin-top: var(--section-gap)` (2rem — dashboard-common.css) was still a
+   visible gap below the notice on its own once the doubled padding above was gone. Per explicit request
+   the notice should sit close above the footer's separator line — so on this one tab only, shrink the
+   footer's margin-top to a small fixed gap instead of a full section-gap. Scoped to
+   body[data-pane="security"] so every other tab's footer spacing is untouched. */
+body[data-pane="security"] #dashboardFooter {
+    margin-top: var(--default-gap-xsmall);
+    }
+/* (10.5.0, per explicit request + a side-by-side mockup) #protectionsMovedNotice is this tab's last
+   piece of real content — give it clear air ABOVE it (it no longer has a heading of its own to do that
+   job) so it reads as its own paragraph, set apart from the checkbox list above it, while staying close
+   to the footer below it (the two rules above this one handle that side). Reuses the same --section-gap
+   token every other "new group starts here" gap in this file uses (B1/A9 — no new value invented). */
+/* (11.0.0, owner's request) Power tools now sits above the notice, and the notice needs AT LEAST two lines of space
+   above it: 2lh = exactly two of the notice's own lines, whatever its font size. */
+#protectionsMovedNotice {
+    margin-top: 2lh;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   5. FILTER LISTS TAB — STATIC FILTER ROWS
+   ══════════════════════════════════════════════════════════════ */
+
+#staticFilters {
+    padding: 1em var(--default-gap-large) 0.5em;
+    border-bottom: 1px solid var(--border-1);
+    margin-block-end: 0;
+    }
+
+/* Language filter dropdown and dynamic rows */
+#languageFilters {
+    padding-block: 0.75em;
+    border-top: 1px solid var(--border-1);
+    margin-block-start: 0.5em;
+    }
+
+#languageFilters-header {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    }
+
+/* v8.4.2 — real layout bug, not cosmetic: this section had no divider of
+   its own, so it ran straight into #languageFilters above it with no
+   line between them ("de tekst moet tussen de strepen staan" — the text
+   must sit between the lines, matching every other section on this
+   pane). Same border-top/padding/margin treatment #languageFilters
+   itself already uses above — reused, not invented, for the identical
+   "next section in this pane" role. */
+#worryFreeFilters {
+    padding-block: 0.75em;
+    border-top: 1px solid var(--border-1);
+    margin-block-start: 0.5em;
+    }
+
+.language-filters-label {
+    flex-shrink: 0;
+    font-size: var(--font-size-smaller);
+    font-weight: 600;
+    }
+
+#languageFilterSelect {
+    border: 1px solid var(--border-1);
+    border-radius: 4px;
+    background: var(--surface-1);
+    color: var(--fg-1);
+    font-family: inherit;
+    font-size: var(--font-size-smaller);
+    padding: 3px 6px;
+    }
+
+#languageFilterRows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-block-start: 0.5em;
+    }
+
+.language-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    }
+
+.language-filter-remove {
+    background: none;
+    border: none;
+    color: var(--fg-3);
+    cursor: pointer;
+    font-size: 1.1em;
+    line-height: 1;
+    min-height: unset;
+    padding: 0 4px;
+    }
+
+.language-filter-remove:hover {
+    color: var(--fg-1);
+    }
+
+/* Match the static section's horizontal padding so the "Static filters import"
+   and "Dynamic rules import" headings (and their content) share the same left
+   and right edges. */
+#sandboxEditor {
+    padding: 0.5em var(--default-gap-large) 1em;
+    }
+
+/* Same misalignment, same fix (v9.6.1; re-pointed in v9.6.5) — the
+   per-domain safe-regions note sits OUTSIDE #staticFilters (see that rule's
+   own padding-inline, above), so without this it would start ~24px less
+   indented than every row/summary line in the section above it. Was
+   #advancedWorryFreeOptions, the hidden advanced section this note used to
+   live inside — removed in v9.6.5 (the Medium group moved to the Privacy &
+   Security tab), the same fix now applies to the note itself. */
+#safeRegionsExceptionsNote {
+    padding-inline: var(--default-gap-large);
+    }
+
+/* #sandboxEditor is a plain block container, not flex — .custom-rules-
+   toolbar-row's own margin-left: auto trick only works inside a flex
+   parent, so this row needs its own explicit right-alignment instead. */
+#sandboxIoRow {
+    justify-content: flex-end;
+    margin-left: 0;
+    }
+
+.static-filters-heading,
+.sandbox-heading {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0 0 0.5em;
+    color: currentColor;
+    }
+
+.static-filters-desc {
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-size: var(--font-size-smaller);
+    line-height: 1.5;
+    margin: 0 0 0.9em;
+    max-width: 780px;
+    }
+
+/* Reuses .static-filters-desc's own proven color-mix/font-size/line-height
+   exactly (A9 — a value already verified in both modes beats picking a
+   fresh one) for the "Built-in filter lists" bullet list. */
+.static-filters-list {
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-size: var(--font-size-smaller);
+    line-height: 1.5;
+    margin: 0 0 0.9em;
+    max-width: 780px;
+    padding-left: 1.4em;
+    }
+.static-filters-list li {
+    margin: 0.2em 0;
+    }
+
+.static-filters-desc code {
+    background-color: var(--surface-2);
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.95em;
+    padding: 0.05em 0.35em;
+    }
+
+.static-filter-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05em;
+    padding-block-end: 0.2em;
+    }
+
+.static-filter-row {
+    align-items: center;
+    display: flex;
+    gap: 0.75em;
+    }
+
+.static-filter-name {
+    flex: 1;
+    font-size: var(--font-size-smaller);
+    }
+
+/* Editable familiar-TLD list (new feature) — textarea + 3 distinct-outcome
+   buttons (Cancel / restore TLD's / update TLD's). See
+   js/core/worry-free-familiar-tld-manager.js and dashboard.html's own
+   comment on this block for the exact semantics of each button. */
+.static-filters-tld-editor {
+    margin-block-start: 0.8em;
+    }
+
+.static-filters-tld-heading {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0 0 0.3em;
+    color: currentColor;
+    }
+
+#worryFreeTldTextarea {
+    background: var(--surface-1);
+    border: 1px solid var(--border-1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--fg-1);
+    font-family: inherit;
+    font-size: var(--font-size-smaller);
+    padding: 0.6em 0.75em;
+    resize: vertical;
+    width: 100%;
+    }
+
+.static-filters-tld-buttons {
+    display: flex;
+    gap: 0.6em;
+    justify-content: flex-end;
+    margin-block-start: 0.5em;
+    }
+
+.tld-button {
+    background: var(--surface-3);
+    border: 1px solid var(--border-1);
+    border-radius: 4px;
+    color: var(--fg-1);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--font-size-smaller);
+    padding: 0.4em 0.9em;
+    }
+
+.tld-button:hover {
+    background: var(--surface-2);
+    }
+
+.tld-button:disabled {
+    cursor: default;
+    opacity: 0.6;
+    }
+
+/* Explicit request: "buttons on the right" — same margin-left: auto
+   technique dashboard/custom-rules.css's own .custom-rules-toolbar-row
+   already uses to pin its button group to the right edge. */
+/* Spacing fix (v9.6.1, explicit request): this row sat squeezed directly
+   against the separator above it and the page footer below, with no
+   breathing room — margin-top/bottom added, scoped to
+   this one ID rather than .static-filter-rows generally, so no other
+   section's spacing changes. */
+#settingsIoRow {
+    justify-content: flex-end;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    }
+
+/* .static-filter-caveat-inline REMOVED (10.5.0) — its last user, the "(I understand that it can
+   break website functionality)" note after the Worry-free startup option, was removed (owner). */
+
+/* v8.6.1 — shared asterisk footnote marker (rows 3-4) and its explanatory
+   paragraph below the row list, replacing what used to be each row's own
+   repeated TLD-scope parenthetical. Marker matches the row's own label
+   color (not muted) so it reads as part of the label text itself; the
+   footnote paragraph below reuses .static-filters-desc's own muted
+   styling rather than inventing a second one. */
+.static-filter-footnote-marker {
+    font-weight: 700;
+    cursor: help;
+    }
+
+.static-filters-footnote {
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-size: var(--font-size-smaller);
+    line-height: 1.5;
+    margin: 0.6em 0 0;
+    max-width: 780px;
+    }
+
+/* v8.5.5 — one blank-line's worth of extra gap above this section,
+   separating it from the section directly above it, per explicit request
+   ("1 spatie regel tussen de volgende regel"). */
+.static-filters-section-spaced {
+    margin-block-start: 1.25em;
+    }
+
+.static-filter-btn {
+    background-color: var(--surface-2);
+    border: 1px solid var(--border-1);
+    border-radius: 4px;
+    color: var(--ink-1);
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-smaller);
+    padding: 0.25em 0.9em;
+    white-space: nowrap;
+    }
+
+.static-filter-btn:hover {
+    background-color: var(--surface-3);
+    }
+
+.static-filter-btn:disabled {
+    cursor: wait;
+    opacity: 0.55;
+    }
+
+.static-filter-status {
+    color: color-mix(in srgb, currentColor 55%, transparent);
+    font-size: var(--font-size-smaller);
+    font-style: italic;
+    min-width: 6em;
+    white-space: nowrap;
+    }
+
+.static-filter-status.ok {
+    color: var(--settings-ok-color);
+    font-style: normal;
+    font-weight: 600;
+    }
+
+.static-filter-status.err {
+    color: var(--settings-error-color);
+    font-style: normal;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   6. IMPORT ABP RULES TAB — EDITOR & FORMAT HINT
+   ══════════════════════════════════════════════════════════════ */
+
+.sandbox-intro {
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-size: var(--font-size-smaller);
+    line-height: 1.5;
+    margin: 0.8em var(--default-gap-large) 0;
+    max-width: 560px;
+    }
+
+.sandbox-intro code {
+    background-color: var(--surface-2);
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.95em;
+    padding: 0.05em 0.35em;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   7. STATIC FILTER BADGE & TOGGLE SWITCH
+   ══════════════════════════════════════════════════════════════ */
+
+.static-filter-badge {
+    background-color: color-mix(in srgb, var(--dashboard-happy-green) 15%, var(--surface-1));
+    border: 1px solid color-mix(in srgb, var(--dashboard-happy-green) 40%, transparent);
+    border-radius: 4px;
+    color: var(--dashboard-happy-green);
+    flex-shrink: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-smaller);
+    font-weight: 600;
+    padding: 0.2em 0.7em;
+    white-space: nowrap;
+    }
+
+/* ── Static ruleset toggle switch ────────────────────────────────────────── */
+
+.filter-status {
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    height: 10px;
+    width: 10px;
+    }
+
+.filter-status--on {
+    background-color: var(--dashboard-happy-green);
+    }
+
+/* .filter-status--optimal removed — "optimal" mode no longer exists (was uBO-lite 4-mode slider) */
+
+/* Toggle switches — used only for language filters (user-controlled).
+   Dimensions declared once here (single source, per this project's own
+   "no scattered magic numbers" convention) so track/thumb/travel distance
+   can never drift out of sync with each other:
+     --lf-toggle-track-h/w : outer pill size
+     --lf-toggle-pad       : inner padding between track edge and thumb
+     --lf-toggle-thumb     : thumb diameter (= track-h - 2*pad)
+     --lf-toggle-travel    : thumb's checked-state translateX
+                             (= track-w - 2*pad - thumb)
+   Shrunk (10.1.0) from 22x40/18px thumb — visually too tall/blocky for a
+   compact settings row — to 15x28/11px thumb, same proportions. */
+.static-filter-toggle {
+    --lf-toggle-track-h: 15px;
+    --lf-toggle-track-w: 28px;
+    --lf-toggle-pad: 2px;
+    --lf-toggle-thumb: 11px;
+    --lf-toggle-travel: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    }
+
+.static-filter-toggle input[type="checkbox"] {
+    display: none;
+    }
+
+.toggle-track {
+    background-color: var(--surface-3);
+    border-radius: calc(var(--lf-toggle-track-h) / 2);
+    display: inline-flex;
+    align-items: center;
+    height: var(--lf-toggle-track-h);
+    padding: var(--lf-toggle-pad);
+    transition: background-color 0.15s;
+    width: var(--lf-toggle-track-w);
+    }
+
+.static-filter-toggle input:checked + .toggle-track {
+    background-color: var(--dashboard-happy-green);
+    }
+
+.static-filter-toggle input:disabled + .toggle-track {
+    opacity: 0.5;
+    }
+
+.toggle-thumb {
+    background-color: var(--settings-on-fill-ink);
+    border-radius: 50%;
+    height: var(--lf-toggle-thumb);
+    transition: transform 0.15s;
+    width: var(--lf-toggle-thumb);
+    }
+
+.static-filter-toggle input:checked + .toggle-track .toggle-thumb {
+    transform: translateX(var(--lf-toggle-travel));
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   8. (removed — see section 3's own note)
+   ══════════════════════════════════════════════════════════════ */
+/* The two-column aligned grid (#security-columns / .security-column-head /
+   .security-row) that used to live in this section is gone — the
+   Privacy & Security tab redesign uses the shared .static-filter-* rules
+   instead (see section 3 above and CHANGELOG for the full history).
+   .security-exceptions-table (a small responsive tweak that used to sit
+   in this section's mobile media query) had zero references anywhere in
+   dashboard.html / *.js even before this redesign — dropped alongside as
+   dead code, not something the redesign itself touched. */
+

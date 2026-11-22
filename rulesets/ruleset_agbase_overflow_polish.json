@@ -1,0 +1,6348 @@
+[
+  {
+    "id": 1,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gazetakrakowska.pl"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.pl"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/*/settings.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.pl"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/evidon-sitenotice-bundle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 4,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shinden.pl"
+      ],
+      "urlFilter": "||staticxx.facebook.com/connect/xd_arbiter/*.js?version=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 5,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 7,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 8,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 9,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 10,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 11,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 12,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 13,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 14,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 15,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.pl"
+      ],
+      "urlFilter": "||googleadservices.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 16,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "przegladsportowy.onet.pl"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 17,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gry-online.pl",
+        "notebookcheck.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 18,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "edziecko.pl",
+        "gazeta.pl",
+        "moto.pl",
+        "plotek.pl",
+        "satkurier.pl",
+        "shinden.pl",
+        "sport.pl",
+        "tibiopedia.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 19,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dziennik.pl",
+        "forsal.pl",
+        "gazetaprawna.pl",
+        "infor.pl",
+        "notebookcheck.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 20,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "poradyiwskazowki.pl"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 21,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dziennik.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 22,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dziennik.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||content-loader.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 23,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "dzierzoniow24.pl"
+      ],
+      "excludedRequestDomains": [
+        "cdn.jsdelivr.net",
+        "cloudflare.com",
+        "cloudflare.net",
+        "disqus.com",
+        "disquscdn.com",
+        "unpkg.com",
+        "widgetlogic.org"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/*/*/*/*/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 24,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "anime-odcinki.pl"
+      ],
+      "urlFilter": "||cloudfront.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 25,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myradioonline.pl"
+      ],
+      "urlFilter": "/inside-banner.mini.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 26,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "ep.umobile.pl",
+        "ookris.oferty-kredytowe.pl",
+        "advmanager.techfun.pl",
+        "adserwer.xwords.pl",
+        "ads.tvp.pl",
+        "apiads.gg.pl",
+        "rek.www.wp.pl"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "leadstar.com.pl",
+        "bluepartner.pl",
+        "goldsurf24h.pl",
+        "emisja.contentstream.pl",
+        "pocketads.pl",
+        "bidio.pl",
+        "hub.com.pl",
+        "burdaffi.burdadigital.pl",
+        "partnerzyapi.ceneo.pl",
+        "adrino.pl",
+        "clickonometrics.pl"
+      ],
+      "domainType": "thirdParty"
+    }
+  },
+  {
+    "id": 28,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||video.onnetwork.tv/adblock_notify.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 29,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||glospowiatusredzkiego.pl/pl/js/qp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 30,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.questvert.pl/publishers/*/qpscript.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 31,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.files.smcloud.net/t/adquesto_beszamel_se_pl.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 32,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||weszlo.com/wp-content/themes/weszlo/questpass.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 33,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvn.pl"
+      ],
+      "urlFilter": "||lib.wtg-ads.com/prebid/prebid_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 34,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nadmorski24.pl/action/banners",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 35,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nadmorski24.pl"
+      ],
+      "urlFilter": "/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 37,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zgorzelec.info/api/1/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 38,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zgorzelec.info/api/1/smalladds/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 39,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||debica24.pl/static/files/inline_images/*/inline__",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 40,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nbi.com.pl/*/v*/ads",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 41,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||docchi.pl/api/addon/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 42,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||e-katalog.pl/*.php?idb_=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 43,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||smaki.pl/_static/ads-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 44,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.android.com.pl/plugins/acp-campaigns/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 45,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zero.pl/api/be/config/sponsor?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 46,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tarnow.net.pl/uploads/advert/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 47,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gry-online.pl"
+      ],
+      "urlFilter": "||wykop.pl/api/v3/dmz/rss/partners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 48,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||moja-ostroleka.pl/a-many",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 49,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||moja-ostroleka.pl/a-single",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 50,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wizja.cc/embed/adsy/cache/theme-helper-v2.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 51,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rynekinfrastruktury.pl/xml/wklejka.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 52,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||portalrwd.bm5.pl/ajax/getreklamarandom.aspx",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 53,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||echopolski.pl/wp-content/cache/min/1/cr_leadstar.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 54,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ads.zw.pl/www/images/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 55,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tradersarea.pl/wp-content/uploads/2023/06/tradejust-ma.webp",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 56,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||neo24.pl/common-scripts/abtests-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 57,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||slowosportowe.pl/baner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 58,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||inpost.pl/find-parcel-get-banners",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 59,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zabrze24.info/wp-content/plugins/wp-popups-lite/src/assets/*/wppopups",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 60,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vod.naekranie.pl/images/images/placeholder-a.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 61,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mgsm.pl/js/getceneoads2.xhtml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 62,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "partner.ipla.tv"
+      ],
+      "urlFilter": "||gapl.hit.gemius.pl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 63,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "listatv.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 64,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||portal.librus.pl/ad|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 65,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||naszemiasto.pl/ads/_uuid/?id=pubcid",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 66,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||epoznan.pl/getadsyscode?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 67,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "flog.pl",
+        "interpunkcja.pl",
+        "krzyzowki.edu.pl",
+        "match-en-direct-gratuit.fr",
+        "mecz-live.pl",
+        "msze.info",
+        "naukowiec.org",
+        "odleglosci.info",
+        "ops.pl",
+        "ortograf.pl",
+        "partido-en-directo.com",
+        "rymy.eu",
+        "streszczenia.pl"
+      ],
+      "urlFilter": "/js/adsgam.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 68,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wysokomazowiecki24.pl/images/*baner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 69,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wysokomazowiecki24.pl/images/*banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 70,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||myradioonline.pl/public/reklamok/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 71,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zyciepabianic.pl/*/js/modyfikacja-reklam.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 72,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zyciepabianic.pl/*/_ajax/getbanners.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 73,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||poscigi.pl/wp-content/uploads/*/baner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 74,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sad24.pl/wp-content/uploads/*.gif|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 75,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "initiatorDomains": [
+        "24jgora.pl",
+        "24wroclaw.pl",
+        "kulisy.net",
+        "kuriergmin.pl",
+        "myslenice-itv.pl",
+        "nowagazeta.pl"
+      ],
+      "urlFilter": "/static/files/inline_images/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 76,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||niestatystyczny.pl/wp-content/cache/autoptimize/js/autoptimize_single_2343f262534a03ee11866211f8a8792f.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 77,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "jagodowe.pl",
+        "sad24.pl",
+        "warzywa.pl",
+        "wrp.pl"
+      ],
+      "urlFilter": "/templates/site/js/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 78,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "jagodowe.pl",
+        "sad24.pl",
+        "warzywa.pl",
+        "wrp.pl"
+      ],
+      "urlFilter": "||user.com/widget.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 79,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||forumrowerowe.org/vendor/scripts/app/js/adblockdetectaction.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 80,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "donald.pl"
+      ],
+      "urlFilter": "||spolecznosci.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 81,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||hiperinfo.pl/popup3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 82,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ostrow24.tv"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 83,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||polskawliczbach.pl/static/js/pwl.lazy.ab.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 84,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||ads.zw.pl/www/delivery/asyncjs.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 85,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||odleglosci.pl/arcads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 86,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "strimov.site"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 87,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "odsluchane.eu"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 88,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ingksiegowosc.pl"
+      ],
+      "resourceTypes": [
+        "image",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||content.ingbank.pl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 89,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||iswinoujscie.pl/gfx/banery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 90,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcamera.pl/videointro/filead_*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 91,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wiocha.pl/js/placements.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 92,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wiocha.pl/js/plmnts/mrec*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 93,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cowzdrowiu.pl/images/abbot-banner.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 94,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||forum.nissanklub.pl/public/700x150.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 95,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wiescirolnicze.pl/js/ad-gam-ts.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 96,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rmf24.pl/j/videojs/ad-setup.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 97,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vider.*/static/player/*/vast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 98,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "halorzeszow.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 99,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tcz.pl/*/reklama*.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 100,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "poszkole.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 101,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "poszkole.pl"
+      ],
+      "urlFilter": "||redefine.hit.stat24.com/*/ad.xml?id=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 102,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||miastko24.pl/pl/js/trustmeimadolphin",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 103,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kb.pl"
+      ],
+      "urlFilter": "||oferteo.pl/widget/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 104,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gazetaolsztynska.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 105,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||mediateka.pl/media/desktop/zpr_footer/js/adblock_detector.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 106,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||motohigh.pl/wp-content/uploads/2023/02/banner-probuk.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 107,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||motohigh.pl/wp-content/uploads/2023/03/baner_oponeo_lato.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 108,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "motohigh.pl"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||superauto.pl/iframe/configurator",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 109,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||obejrzyj-to.pl/detector.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 110,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||edukacjakrytyczna.pl/detector.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 111,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||kmp*.etransport.pl/run.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 112,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swiatgwiazd.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 113,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "initiatorDomains": [
+        "antonim.net",
+        "dowcip.net",
+        "krzyzowka.net",
+        "odmiana.net",
+        "synonim.net",
+        "zagadkidladzieci.net"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "/adr/*/*.webp",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 114,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "audiostereo.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 115,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bookoflists.pl/detector.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 116,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tyna.info.pl/pl/_ajax/getbanners.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 117,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "discoverychannel.pl",
+        "metro.tv",
+        "ttv.pl",
+        "tvn24.pl",
+        "tvnfabula.pl",
+        "tvnturbo.pl"
+      ],
+      "urlFilter": "||edge.permutive.app/*-web.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 118,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "discoverychannel.pl",
+        "metro.tv",
+        "ttv.pl",
+        "tvn24.pl",
+        "tvnfabula.pl",
+        "tvnturbo.pl"
+      ],
+      "urlFilter": "||tvn.hit.gemius.pl/gplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 119,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "uwaga.tvn.pl"
+      ],
+      "urlFilter": "||tvn.hit.gemius.pl/gstream.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 120,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "uwaga.tvn.pl"
+      ],
+      "urlFilter": "||tvn.hit.gemius.pl/xgemius.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 121,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvn24.pl",
+        "uwaga.tvn.pl"
+      ],
+      "urlFilter": "||tvn.hit.gemius.pl/*/redot.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 122,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||dnarynkow.pl/wp-content/uploads/*/*banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 123,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||dnarynkow.pl/wp-content/uploads/*/1080x1920-18.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 124,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pepper.pl"
+      ],
+      "urlFilter": "||r.linksprf.com/v",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 125,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pepper.pl"
+      ],
+      "urlFilter": "||track.webgains.com/click.html?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 126,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pepper.pl"
+      ],
+      "urlFilter": "||clk.tradedoubler.com/click?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 127,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pepper.pl"
+      ],
+      "urlFilter": "||ad.doubleclick.net/ddm/clk/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 128,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ddtorun.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.onnetwork.tv/js/player",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 129,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||glospowiatusredzkiego.pl/pl/_ajax/getbanners.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 130,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "megane.com.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 131,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aleklasa.pl",
+        "biznesinfo.pl",
+        "domekiogrodek.pl",
+        "goniec.pl",
+        "goracetematy.pl",
+        "lelum.pl",
+        "pacjenci.pl",
+        "portalparentingowy.pl",
+        "rolnikinfo.pl",
+        "rynek-kolejowy.pl",
+        "smakosze.pl",
+        "swiatzwierzat.pl",
+        "turysci.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 132,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "halowies.pl",
+        "tygodnik-rolniczy.pl",
+        "wiadomoscihandlowe.pl",
+        "wiadomoscikosmetyczne.pl"
+      ],
+      "urlFilter": "/templates/site/js/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 133,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tokfm.pl"
+      ],
+      "urlFilter": "||pl-play.adtonos.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 134,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mmarocks.pl/sbt/720x180.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 135,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "slowopodlasia.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 136,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radio-internetowe.com"
+      ],
+      "urlFilter": "||pl-play.adtonos.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 137,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ortograf.pl"
+      ],
+      "urlFilter": "||videoexchanger.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 138,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bielskiedrogi.pl"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||pless-intermedia.pl/public/slajdy/html/*.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 139,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||motomaszyny.pl/web/images/bannery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 140,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||igrit.pl/api/py/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 141,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||grajteraz.pl/bfb/*.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 142,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rmfon.pl"
+      ],
+      "urlFilter": "||cdn.adswizz.com/adswizz/js/synchroclient2.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 143,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||estadion.pl/_next/image?url=https%3a%2f%2fapi.estadion.pl%2fimg%2fads%2f",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 144,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kreskowki.tv/assetcdn/get.php?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 145,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kreskowki.tv/assetcdn/top.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 146,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "benchmark.pl"
+      ],
+      "urlFilter": "||buybox.click^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 147,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||popkulturowykociolek.pl/wp-content/uploads/*/*/*-reklama-baner.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 148,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||popkulturowykociolek.pl/wp-content/uploads/*/*/*-baner-reklama.webp",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 149,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/lvbet-tv.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 150,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/1betsson.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 151,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/kasynos_online.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 152,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/1unibet.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 153,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||polskiprzemysl.com.pl/wp-content/themes/wp_polskiprzemysl/js/fullscreen-ad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 154,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "niezalezna.pl"
+      ],
+      "urlFilter": "||onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 155,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||polskieradio.pl/_images/baner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 156,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "urlFilter": "||senda.pl/ads/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 158,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "senda.pl"
+      ],
+      "urlFilter": "||googletagmanager.com/gtag/js?id=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 159,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "elita-magazyn.pl",
+        "profitechnika.pl",
+        "sadnowoczesny.pl",
+        "warzywaiowoce.pl"
+      ],
+      "urlFilter": "/templates/site/js/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 160,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ssp.wp.pl/bidder/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 161,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ocdn.eu/workshopinforocdn/infor/misc/taboola-assets/taboola_v*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 162,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ocdn.eu/dziennik/infor/adquestoconfig/adquestoconfig_v*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 163,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tarnowska.tv"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 164,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tarnowska.tv"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 165,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "biletomat.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 166,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kanalsportowy.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 167,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||swiatkoni.pl/file/banner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 168,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ithardware.pl/js/mediaexpert-widget.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 169,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vulcan.net.pl"
+      ],
+      "urlFilter": "||vulcanm.home.pl/_uonetads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 170,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pecetowicz.pl/uploads/monthly_2022_08/hostido.webp",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 171,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||milanos.pl/assetcdn/img.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 172,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||realmadryt.pl/build/assets/adblockdetector-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 173,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||realmadryt.pl/build/assets/articlegate-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 174,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||realmadryt.pl/img/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 175,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||waluty360.pl/images/walutomat_*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 176,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mylomza.pl/static/files/inline_images/*/inline__",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 177,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||isbnews.pl/img/advert/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 178,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rmfmaxxx.pl"
+      ],
+      "urlFilter": "||googleads.github.io/videojs-ima/node_modules/video.js/dist/video-js.min.css",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 179,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rmfmaxxx.pl"
+      ],
+      "urlFilter": "||googleads.github.io/videojs-ima/node_modules/video.js/dist/video.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 180,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rmfmaxxx.pl"
+      ],
+      "urlFilter": "||googleads.github.io/videojs-ima/dist/videojs.ima.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 181,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rmfmaxxx.pl"
+      ],
+      "urlFilter": "||googleads.github.io/videojs-ima/node_modules/videojs-contrib-ads/dist/videojs.ads.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 182,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "meczyki.org"
+      ],
+      "urlFilter": "||betonline.net.pl/media/images/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 183,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "elivescore.pl"
+      ],
+      "urlFilter": "||betonline.net.pl/media/images/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 184,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||onetech.pl/wp-content/uploads/*/*/banner1-1.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 185,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zeriun.cc/assets/js/pk.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 186,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zeriun.cc/assets/js/pcm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 187,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zeriun.cc"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 188,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||olawa24.pl/media/campaigns/files/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 189,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tubachorzowa.pl"
+      ],
+      "urlFilter": "||dummyimage.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 190,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||konflikty.pl/wp-content/uploads/*/*/reklama-*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 191,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||e-kg.pl/static/files/inline_images/*/inline__*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 192,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||api.perspektywy.pl/v*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 193,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||i.perspektywy.net/pages/*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 194,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zdrowastrona.pl/images/banners/wez750x100.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 195,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||statix.stockwatch.pl/content/*/js/adso.init.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 196,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zzapolowy.com/wp-content/uploads/*/lv-bet-300x600-pakiet-powitalny.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 197,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tzassets.b-cdn.net/static/js/promo.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 198,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zniwiarz.topagrar.pl/*/ad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 199,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||topagrar.pl/files/js/ado.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 200,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tradingshenzhen.com/img/ets_affiliatemarketing/default_banner.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 201,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||farmer.pl/js/taboola*.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 202,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||farmer.pl/js/modules/ptwp-ad-more-info.module.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 203,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||xgp.pl/wp-content/uploads/*/*/hdrbnr-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 204,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||burdaffi.burdamedia.pl/script/init.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 205,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tools.mamotoja.pl/*/ad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 206,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tools.mamotoja.pl/files/js/ado.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 207,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rynek-kolejowy.pl",
+        "rynek-lotniczy.pl",
+        "rynekinfrastruktury.pl",
+        "transport-publiczny.pl"
+      ],
+      "regexFilter": "\\/js\\/_[a-zA-Z]{17}\\.js$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 208,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||portalcms.bm5.pl/ajax/getreklamarandom.aspx",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 209,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||moja-ostroleka.pl/uploads/banery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 210,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||moja-ostroleka.pl//uploads/banery/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 211,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wielkahistoria.pl/wp-content/uploads/*/*/banner_okupowana.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 212,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mojakoja.pl/anchor.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 213,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tubagliwic.pl"
+      ],
+      "urlFilter": "||dummyimage.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 214,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ppe.pl"
+      ],
+      "urlFilter": "||onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 215,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||joemonster.org/build/js/prebid_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 216,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pasazer.com/_assets/js/ad-connect.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 217,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "budmatauto.pl"
+      ],
+      "urlFilter": "||img.dladealera.pl/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 218,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sportowebeskidy.pl/static/upload/store/*_betters.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 219,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sportowebeskidy.pl/static/thumbnail/bananer/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 220,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||czasdzieci.pl/js/a-d-sync.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 221,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||czasdzieci.pl/js/a-d-manager.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 222,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webmagazyn.pl/*/wp-content/uploads/*/300-250pammm-300x250.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 223,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||juvepoland.com/wp-content/uploads/*/torggler.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 224,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||atleti.pl/wp-content/uploads/*/*/fortuna*-laliga.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 225,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||psgonline.pl/wp-content/uploads/*/*/fortuna*-ligue1*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 226,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||chelseapoland.com/images/noinn.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 227,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||chelseapoland.com/images/baner_vita_chelsea.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 228,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||weszlo.com/cdn-cgi/image/quality=*,format=auto/*/canalpluswidzew.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 229,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||weszlo.com/cdn-cgi/image/quality=*,format=auto/wp-content/uploads/*/cashback*.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 230,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||weszlo.com/wp-content/uploads/*/*/prawdziwycashback_*.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 231,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||chili.com/api/v*/ad-manager/avod/metadata?*videoassetid=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 232,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "chili.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 233,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "olx.pl"
+      ],
+      "urlFilter": "||olx.org/ads/offer-eligibility",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 234,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||miastodzieci.pl/wp-content/uploads/*/*/screening-*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 235,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||virpe.cc/includes/js/adver.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 236,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||skijumping.pl/content/images/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 237,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||beskidlive.pl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 238,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "satkurier.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 239,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tools.party.pl/files/js/ado.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 240,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||cire.pl/files/portal/*/campaign/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 241,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.wgospodarce.pl/images/top_banners",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 242,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||android.com.pl/wp-json/acpl/v1/campaigns/client",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 243,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.android.com.pl/plugins/acpl-campaigns/build/client.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 244,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.12341234.pl/editag/*/prod/editag.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 245,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.12341234.pl/uid/bmid.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 248,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||whitemad.pl/wp-content/uploads/*/oled_whitemad.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 249,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||whitemad.pl/wp-content/uploads/*/baner-internorm-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 250,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||whitemad.pl/wp-content/uploads/*/*-750x300-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 251,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||typuje.pl/rectangle",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 252,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "meczyki.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 253,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "meczyki.pl"
+      ],
+      "urlFilter": "||onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 254,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ustawlige.com/assets/*/sponsors/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 255,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||brief.pl/wp-content/uploads/*/*/*-banner-*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 256,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||obserwatorlogistyczny.pl/wp-content/uploads/*/banner-1pt.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 257,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||pzgolf.pl/wp-content/ad/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 258,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||brd24.pl/wp-content/uploads/*/reklama-alco-sense.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 259,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "videotarget.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 260,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||e-hotelarz.pl/grafika/grafika.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 261,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "newsweek.pl"
+      ],
+      "urlFilter": "||ocdn.eu/ucs/static/*piano/*/build/amd/floatingad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 262,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gifyagusi.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 263,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||lpg-forum.pl/ad-blocker.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 264,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lamoda.pl"
+      ],
+      "urlFilter": "||marketplace.ofeminin.pl/static/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 265,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gry-online.pl"
+      ],
+      "urlFilter": "||assuredwhoa.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 266,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gry-online.pl"
+      ],
+      "urlFilter": "||whoinasmuch.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 267,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gry-online.pl"
+      ],
+      "urlFilter": "||contentyet.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 268,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "urlFilter": "||skmedix.pl/*/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 269,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "skmedix.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 270,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "skmedix.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/r*/show_ads_impl_with_ama_fy2019.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 271,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "demotywatory.pl",
+        "faktopedia.pl",
+        "mistrzowie.org"
+      ],
+      "urlFilter": "/res/*/*prebid-revision*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 272,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "demotywatory.pl"
+      ],
+      "urlFilter": "||video.onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 273,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||kursjs.pl/js/ads-prebid.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 274,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||variatkowo.pl/wp-content/*/dh-anti-adblocker/assets/js/prebid-ads-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 275,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "businessinsider.com.pl"
+      ],
+      "urlFilter": "||gratka.pl/feed/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 276,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||disco-polo.info/uploads/banery/reklama-kup-2021jpg.jpg.webp",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 277,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "soisk.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 278,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ottwow.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 279,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "elle.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 280,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eska.pl"
+      ],
+      "urlFilter": "||ced.sascdn.com/tag/*/smart.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 281,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||poczta.interia.pl/next/adv,advkeyword",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 282,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ebd.cda-hd.co/iw6jcq3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 283,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||krs-online.com.pl/js/showads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 284,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "allegro.pl"
+      ],
+      "urlFilter": "||a.allegroimg.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 285,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "interia.pl",
+        "pomponik.pl"
+      ],
+      "urlFilter": "||iwa3.hit.interia.pl^*/iwa_core?ts=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 286,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||oglaszamy24.pl/*js-css/reklamy/bannery/*/adv.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 287,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||motocaina.pl/acme/*/index.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 288,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||synonimy.pl/s/adsmodal.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 291,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "synonimy.pl"
+      ],
+      "urlFilter": "||smartadserver.com/config.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 292,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "synonimy.pl"
+      ],
+      "urlFilter": "||stats.g.doubleclick.net/dc.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 293,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||filmozercy.com/js/fuckadblock.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 295,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "filmozercy.com"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 296,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||kursjs.pl/js/dfp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 297,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "se.pl"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 298,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fakt.pl"
+      ],
+      "urlFilter": "||fixtures.onet.pl/desktop/superbetwidget/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 299,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||audiostereo.pl/old/images/baner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 300,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||dorzeczy.pl/dorzeczy/_i/button-125x40-app-store.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 301,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||dorzeczy.pl/dorzeczy/_i/button-125x40-google-play.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 302,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||r.trojmiasto.pl/www/delivery/*.php?*=banner*vast",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 304,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "trojmiasto.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 305,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||r.trojmiasto.pl/adxmlrpc/json.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 306,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||resetoff.pl/static/player/*/vast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 307,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||resetoff.pl/static/js/application/views/advertise/advertise_view.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 308,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gazeta.pl"
+      ],
+      "urlFilter": "||video.onnetwork.tv/widget/widget_shorts.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 309,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "edziecko.pl",
+        "gazeta.pl",
+        "haps.pl",
+        "moto.pl",
+        "plotek.pl",
+        "sport.pl"
+      ],
+      "urlFilter": "||c2c24.pl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 310,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||burzowo.info/*.js?&",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 311,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||portel.pl/adex.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 312,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||pisupisu.pl/*/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 313,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "wtk.pl"
+      ],
+      "urlFilter": "||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/*/videojs.ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 314,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zobacz.ws"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 315,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||bham.pl/templates/bham_res/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 316,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||warsztat.pl/includes/ajax.php?request=banerajax&",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 317,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eska.pl",
+        "eskarock.pl",
+        "radiosupernova.pl",
+        "se.pl",
+        "vibefm.pl",
+        "voxfm.pl"
+      ],
+      "urlFilter": "/media/*/js/adblock_detector.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 318,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eska.pl",
+        "eskarock.pl",
+        "radiosupernova.pl",
+        "se.pl",
+        "vibefm.pl",
+        "voxfm.pl"
+      ],
+      "urlFilter": "/media/*/zpr_footer/js/pageear.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 319,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eska.pl",
+        "eskarock.pl",
+        "mediateka.pl",
+        "mjakmama24.pl",
+        "muratordom.pl",
+        "poradnikzdrowie.pl",
+        "radioplus.pl",
+        "radiosupernova.pl",
+        "se.pl",
+        "urzadzamy.pl",
+        "vibefm.pl",
+        "voxfm.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 320,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eska.pl"
+      ],
+      "urlFilter": "||smart.idmnet.pl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 321,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||portalwrc.pl/images/dodaj/reklama_bok2.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 322,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "interia.pl",
+        "js.iplsc.com",
+        "pomponik.pl"
+      ],
+      "urlFilter": "||js.iplsc.com/inpl.abd/latest/ads.js?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 323,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mp.pl"
+      ],
+      "urlFilter": "||adst.mp.pl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 324,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||soisk-me.pl/modules/*/js/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 325,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "jbzd.com.pl"
+      ],
+      "urlFilter": "||video.onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 326,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "jbzd.com.pl"
+      ],
+      "urlFilter": "||taboola.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 327,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ads.allegro.pl"
+      ],
+      "urlFilter": "||ads.allegro.pl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 328,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pixelpost.pl/wp-content/uploads/*-600-x-300_baner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 329,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pixelpost.pl/wp-content/uploads/*-750-x-300-baner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 330,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "audycje.tokfm.pl"
+      ],
+      "urlFilter": "||ssl.images.audycje.tokfm.pl/prodstatic360/img/autopromocja/*.mp3",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 331,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "natemat.pl"
+      ],
+      "urlFilter": "||video.onnetwork.tv/widget/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 332,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "meczyki.pl"
+      ],
+      "urlFilter": "||cdn-a.yieldlove.com/yieldlove-bidder.js?meczyki.pl_mobile",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 333,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "other"
+      ],
+      "urlFilter": "||wfirma.pl/*/add/*?_=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 334,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||m.olx.pl/api/v*/ads/*?adid=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 335,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "telepolis.pl"
+      ],
+      "urlFilter": "||onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 336,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||telepolis.pl/images/*/*/citi_bg.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 337,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||telepolis.pl/images/*/*/citikonto*_*x*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 338,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tblr.pl/dyna/s.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 339,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ads.comperia.pl/www/delivery/afr.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 340,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "k-mag.pl"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||amazonaws.com/kmag/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 341,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||signs.pl/_css/adserver.css",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 342,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||signs.pl/signlink/rl300/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 343,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "poczta.interia.pl"
+      ],
+      "urlFilter": "||interia-v.pluscdn.pl/poczta-newsfeed-*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 344,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "drogerium.pl"
+      ],
+      "urlFilter": "||s0.2mdn.net/ads/studio/enabler.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 345,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/pl/js/system-ba.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 346,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "/pl/_ajax/ablck.php|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 347,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "brzeg24.pl",
+        "ddtorun.pl",
+        "ddwloclawek.pl",
+        "e-krajna.pl",
+        "echo24.tv",
+        "ekstrasierpc.pl",
+        "esopot.pl",
+        "expresskaszubski.pl",
+        "faktypilskie.pl",
+        "gniewkowo.eu",
+        "gorlice24.pl",
+        "gostyn24.pl",
+        "grudziadz365.pl",
+        "gwarek.com.pl",
+        "gwio.pl",
+        "iszczecinek.pl",
+        "ki24.info",
+        "lowiczanin.info",
+        "mielec.pl",
+        "mojakruszwica.pl",
+        "myglogow.pl",
+        "ndz24.pl",
+        "ostrowiecka.pl",
+        "plonskwsieci.pl",
+        "portalsremski.pl",
+        "przegladkoninski.pl",
+        "rzeszow.pl",
+        "sportsinwinter.pl",
+        "spotradomsko.pl",
+        "swiecie24.pl",
+        "tusochaczew.pl",
+        "tvwalbrzych.pl",
+        "tyna.info.pl",
+        "uniejow.net.pl",
+        "walbrzych24.com",
+        "wpu24.pl"
+      ],
+      "urlFilter": "/js/html2canvas.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 348,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ddtorun.pl",
+        "przegladkoninski.pl"
+      ],
+      "urlFilter": "/scripts/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 349,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rzeszow.pl"
+      ],
+      "urlFilter": "/pl/js/questpass-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 350,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ostrowiecka.pl",
+        "rzeszow.pl"
+      ],
+      "urlFilter": "/pl/js/new-system.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 351,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ddtorun.pl",
+        "ddwloclawek.pl"
+      ],
+      "urlFilter": "/js/adinitializer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 352,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||dynacrems.wp.pl/ad/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 353,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pysznosci.pl"
+      ],
+      "urlFilter": "||std.wpcdn.pl/adv/config/inline/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 354,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autocentrum.pl",
+        "autokult.pl",
+        "fotoblogia.pl",
+        "gadzetomania.pl",
+        "pudelek.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 355,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bdr.wpcdn.pl/tag/gaftag.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 362,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||odkrywamyzakryte.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 363,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||autocentrum.pl/system/modules/adblock/js/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 364,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "naszraciborz.pl"
+      ],
+      "urlFilter": "||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 365,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||static.webshark.pl/adserver/*/main_script.js?advertise_check=1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 366,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pilot.wp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||wp.pl/*-fwkqoxhmgz4xcso7ggybphcjkjsyzhs-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 370,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sciaga.pl"
+      ],
+      "urlFilter": "||morfo.*.amazonaws.com/*/banner_*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 371,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sciaga.pl"
+      ],
+      "urlFilter": "||morfo.*.amazonaws.com/*/screning-*_*.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 372,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sciaga.pl"
+      ],
+      "urlFilter": "||video.onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 373,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sadistic.pl"
+      ],
+      "urlFilter": "||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 374,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||napisy24.pl/run/js/blad*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 375,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||static.gazetaprawna.pl/js/adverts.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 376,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||spottedskarzysko.pl/images/data/*/uninet-maj2.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 377,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||static.forsal.pl/js/adverts.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 378,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "font"
+      ],
+      "urlFilter": "||szukajka.tv/static/fonts/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 379,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "szukajka.tv"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||cda.pl/video/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 380,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "szukajka.tv"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||szukajka.tv/link/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 381,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||s-pt.ppstatic.pl/o/js/pp-ads/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 382,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||ppstatic.pl/lib/*/js/ads/*/reklama.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 383,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||towideo.pl/assets/ads_configs/sas_vod.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 384,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||towideo.pl/assets/ads_configs/sasplugindata.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 385,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||towideo.pl/assets/ads_configs/sas_ad_config_vod.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 386,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "towideo.pl"
+      ],
+      "urlFilter": "||sascdn.com/video/controller.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 387,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cw.totolotek.pl/baner/banner*.php?refid",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 388,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||extragoals.com/upload/video/fortuna.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 389,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mecze24.pl",
+        "meczenazywo.pl"
+      ],
+      "urlFilter": "/media/js/jquery.pu.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 390,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pluscdn.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 391,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||kitsune-subs.anime-odcinki.pl/wp-content/themes/fanstrap/lib/js/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 392,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.shortpixel.ai/client/q_lossy,ret_img/https://anime-odcinki.pl/wp-content/uploads/*/ga_banner1.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 393,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||cdn.muratordom.smcloud.net/t/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 394,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mjakmama24.pl"
+      ],
+      "urlFilter": "||sascdn.com/video/controller.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 395,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eskago.pl"
+      ],
+      "urlFilter": "||sascdn.com/video/controller.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 396,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eskago.pl"
+      ],
+      "urlFilter": "||cdnjs.cloudflare.com/ajax/libs/blockadblock/3.2.1/blockadblock.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 397,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eskago.pl"
+      ],
+      "urlFilter": "||cdn.rawgit.com/sitexw/fuckadblock/*/fuckadblock.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 398,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||i.iplsc.com/twoje-zdrowie-banner^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 399,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "wykop.pl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||wykop.pl/api/v3/ads/redirect?data=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 400,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||r.wykop.pl/widget-api/*/widget",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 401,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||wykop.pl/api/v3/tags/reklama/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 402,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wykop.pl/api/v*/ads",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 403,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wykop.pl/static/img/pub/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 404,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wykop.pl/adverts^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 405,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kodyrabatowe.naszemiasto.pl/uploads/banery/afiliacja-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 406,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||s-gr.cdngr.pl/assets/gratka/v*/css/pages/promobutton.css",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 407,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "excludedInitiatorDomains": [
+        "naszemiasto.pl"
+      ],
+      "urlFilter": "||ppstatic.pl/assets/gratka/v*/css/pages/promobutton.css",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 408,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||pcworld.pl/*/news/thumbnails/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 409,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||dziennikwschodni.pl/*/*ads.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 410,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||dziennikwschodni.pl/*/*?ads=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 411,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "samnaprawiam.com"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 412,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "samnaprawiam.com"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/r*/show_ads_impl.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 413,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "skript.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 414,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "skript.pl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 415,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cda.pl/xml_pool/*pool*.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 416,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cda.pl/xml/pool.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 417,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||g.cda.pl/player.php?ads",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 418,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||g.cda.pl/block/block.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 419,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||g.cda.pl/xml_adbc.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 420,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||tools.services.tvn.pl/_ads/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 421,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cache.splashandroll.com/handler.js?pub=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 422,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kwejk.pl",
+        "mistrzowie.org"
+      ],
+      "urlFilter": "||onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 423,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swipeto.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 427,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swipeto.pl",
+        "tvp.info",
+        "tvp.pl",
+        "tvpparlament.pl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 428,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swipeto.pl",
+        "tvp.info",
+        "tvp.pl",
+        "tvpparlament.pl"
+      ],
+      "urlFilter": "||hit.gemius.pl/gplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 429,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swipeto.pl",
+        "tvp.info",
+        "tvp.pl",
+        "tvpparlament.pl"
+      ],
+      "urlFilter": "||hit.gemius.pl/gstream.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 430,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.pl"
+      ],
+      "urlFilter": "||tvp.pl/video/vod/reklamy/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 431,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vod.*.tvp.pl/video/vod/reklamy/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 432,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.pl"
+      ],
+      "resourceTypes": [
+        "other",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||adx.adform.net/adx/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 433,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.pl"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||myao.adocean.pl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 434,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.pl"
+      ],
+      "resourceTypes": [
+        "other",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||myao.adocean.pl/_*/ad.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 435,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.pl"
+      ],
+      "resourceTypes": [
+        "other",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||myao.adocean.pl/*ad.*?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 436,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.pl"
+      ],
+      "resourceTypes": [
+        "other",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||secure.adnxs.com/ptv?id=*&cb=*&pubclick=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 437,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||adservice.google.pl/adsid/integrator.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 438,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.pl"
+      ],
+      "urlFilter": "||myao.adocean.pl/|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 439,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vod.tvp.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/vpaid_adapter.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 440,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.info",
+        "tvp.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 441,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||chamsko.pl/js/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 442,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||naanalle.pl/pb/bid",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 443,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dobreprogramy.pl"
+      ],
+      "urlFilter": "||i.wp.pl/a/i/stg/wpjslib-nojq.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 447,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||images.fm.tuba.pl/tuba*/_js/banner/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 448,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tokfm.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 449,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||images.audycje.tokfm.pl/prodstatic/js/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 450,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tokfm.pl"
+      ],
+      "urlFilter": "||audycje.tokfm.pl/vast/ad/getreklamymultimediavast?advertisement=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 451,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cba.pl/min.cba.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 452,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "initiatorDomains": [
+        "auto-swiat.pl",
+        "komputerswiat.pl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".pl/*/*/tags?domain=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 453,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fwcdn.pl/el/kk/player/032020/672.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 454,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "filmweb.pl"
+      ],
+      "urlFilter": "||fwcdn.pl/front/assets/fastaticbanner-*.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 455,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "filmweb.pl"
+      ],
+      "urlFilter": "||fwcdn.pl/front/assets/welcomescreen.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 456,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "filmweb.pl"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||fwcdn.pl/prt/*/*/index.html?gdpr=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 457,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||filmweb.pl/adbchk?v=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 458,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mmorpg.org.pl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||lib.wtg-ads.com/publisher/mmorpg.org.pl/lib.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 459,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||elektroda.pl/js/window.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 460,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.elektroda.pl/html5/pcim/desktop/index.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 461,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||elektroda.pl/js/modal.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 462,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||elektroda.pl/js/first.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 463,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||elektroda.pl/js/welcome.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 464,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shinden.pl"
+      ],
+      "urlFilter": "||spolecznosci.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 468,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shinden.pl"
+      ],
+      "urlFilter": "||tradeadexchange.com/a/display.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 469,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shinden.pl"
+      ],
+      "urlFilter": "||reklama.shinden.eu^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 470,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shinden.pl"
+      ],
+      "urlFilter": "||cdn.jsdelivr.net/npm/fuckadblock*/fuckadblock.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 471,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||static.videostar.pl/static/assets/js/adcheck.min.js^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 472,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||adv.wp.pl/rm/box/c/b/money_rail_and_frames/money-rail-1.0.2.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 473,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radiozet.pl/extension/radiozet/design/standard/images/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 474,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gfx.radiozet.pl/design/radiozet/javascript/module/radio-sponsor.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 475,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gfx.radiozet.pl/design/radiozet/javascript/lib/radiosponsor.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 477,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "miniminiplus.pl"
+      ],
+      "urlFilter": "||tvn.adocean.pl/ad.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 478,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "miniminiplus.pl"
+      ],
+      "urlFilter": "||tvn.adocean.pl^*/ad.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 479,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||crm.spidersweb.pl/public/products",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 480,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "spidersweb.pl"
+      ],
+      "urlFilter": "||onnetwork.tv^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 481,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||spolecznosci.net/js/reklama/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 482,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||fotka.pl/js/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 483,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "teletoonplus.pl"
+      ],
+      "urlFilter": "||services.*.pl/belka/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 485,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "get.x-link.pl",
+        "player.pl",
+        "teletoonplus.pl"
+      ],
+      "urlFilter": "||tvn.hit.gemius.pl/*redataredir?url=*tvn.adocean.pl*ad.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 486,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "get.x-link.pl",
+        "player.pl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||tvn.adocean.pl/*ad.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 487,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "miniminiplus.pl",
+        "teletoonplus.pl",
+        "tvn.pl",
+        "tvnturbo.pl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||redcdn.pl/*/tvn-adserver/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 488,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "player.pl"
+      ],
+      "urlFilter": "||cdntvn.pl/adscript.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 490,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvn.pl",
+        "tvn24.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 491,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "get.x-link.pl",
+        "player.pl",
+        "tvn24.pl",
+        "vod.pl"
+      ],
+      "urlFilter": "||cdntvn.pl/*/assets/*advert*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 492,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "get.x-link.pl",
+        "player.pl",
+        "tvn24.pl",
+        "vod.pl"
+      ],
+      "urlFilter": "||cdntvn.pl/*/static/ad*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 493,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "get.x-link.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 494,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "player.pl",
+        "vod.pl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 495,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "player.pl",
+        "tvn24.pl",
+        "vod.pl"
+      ],
+      "urlFilter": "||tvn.hit.gemius.pl/*redot.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 496,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "redefine.pl"
+      ],
+      "urlFilter": "||gapl.hit.gemius.pl/gplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 497,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "polsatnews.pl",
+        "polsatsport.pl",
+        "twojapogoda.pl"
+      ],
+      "urlFilter": "||redefineadpl.hit.gemius.pl/*redataredir?url=*.hit.stat24.com*ad.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 498,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "geekweek.pl",
+        "polsatnews.pl",
+        "polsatsport.pl",
+        "twojapogoda.pl"
+      ],
+      "resourceTypes": [
+        "other",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||hit.stat24.com/*ad.xml",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 499,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "geekweek.pl",
+        "polsatboxgo.pl",
+        "polsatnews.pl",
+        "polsatsport.pl",
+        "redcdn.pl",
+        "redefine.pl",
+        "twojapogoda.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 500,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||polvod.pl/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 501,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvnturbo.pl"
+      ],
+      "urlFilter": "||cdntvn.pl/adscript.js?_=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 502,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvnturbo.pl"
+      ],
+      "urlFilter": "||cdn.behavioralengine.com/scripts/btest/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 503,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvnturbo.pl"
+      ],
+      "urlFilter": "||s.tvn.pl/tools/_ads/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 504,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "stooq.com",
+        "stooq.pl"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||stooq.*/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 505,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||adv.wp.pl/bar.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 506,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "wp.pl"
+      ],
+      "urlFilter": "||rek.www.wp.pl/*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 507,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||exsite.pl/kampania/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 508,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "podawacz.cmcmedia.pl",
+        "adc.interia.pl",
+        "llog.pl",
+        "bsxmuny.wp.pl"
+      ]
+    }
+  },
+  {
+    "id": 509,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "c2c24.pl",
+        "cdn.gallery"
+      ],
+      "domainType": "thirdParty"
+    }
+  }
+]

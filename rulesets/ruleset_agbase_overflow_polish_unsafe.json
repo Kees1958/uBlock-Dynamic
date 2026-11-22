@@ -1,0 +1,645 @@
+[
+  {
+    "id": 36,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||tkchopin.pl/cams/video_file/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 157,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "senda.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||googletagmanager.com/gtag/js?id=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 246,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "claudia.pl",
+        "elle.pl",
+        "focus.pl",
+        "glamour.pl",
+        "kobieta.pl",
+        "mojegotowanie.pl",
+        "przyslijprzepis.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 247,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "national-geographic.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 289,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "synonimy.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||smartadserver.com/config.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 290,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "synonimy.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||stats.g.doubleclick.net/dc.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 294,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "filmozercy.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 303,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "||trojmiasto.pl/adxmlrpc/json.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 356,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "videostar.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||wp.hit.gemius.pl/gplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 357,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pilot.wp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js?id=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 358,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "abczdrowie.pl",
+        "autocentrum.pl",
+        "autokult.pl",
+        "fotoblogia.pl",
+        "gadzetomania.pl",
+        "komorkomania.pl",
+        "money.pl",
+        "o2.pl",
+        "parenting.pl",
+        "pudelek.pl",
+        "videostar.pl",
+        "wp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||hit.gemius.pl/xgemius.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 359,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "abczdrowie.pl",
+        "autocentrum.pl",
+        "autokult.pl",
+        "fotoblogia.pl",
+        "gadzetomania.pl",
+        "komorkomania.pl",
+        "money.pl",
+        "o2.pl",
+        "parenting.pl",
+        "pudelek.pl",
+        "videostar.pl",
+        "wp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||static.criteo.net/js/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 360,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "abczdrowie.pl",
+        "autocentrum.pl",
+        "autokult.pl",
+        "fotoblogia.pl",
+        "gadzetomania.pl",
+        "komorkomania.pl",
+        "money.pl",
+        "o2.pl",
+        "parenting.pl",
+        "pudelek.pl",
+        "videostar.pl",
+        "wp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||connect.facebook.net/*/fbevents.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 361,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "abczdrowie.pl",
+        "autocentrum.pl",
+        "autokult.pl",
+        "fotoblogia.pl",
+        "gadzetomania.pl",
+        "komorkomania.pl",
+        "money.pl",
+        "o2.pl",
+        "parenting.pl",
+        "pudelek.pl",
+        "wp.pl"
+      ],
+      "excludedInitiatorDomains": [
+        "pilot.wp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 367,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "legia.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||get.optad360.io/*/plugin.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 368,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "legia.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||lib.wtg-ads.com/lib.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 369,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "legia.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||lib.wtg-ads.com/publisher/legia.net/standard.publisher.config.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 424,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swipeto.pl",
+        "tvp.info",
+        "tvp.pl",
+        "tvpparlament.pl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 425,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swipeto.pl",
+        "tvp.info",
+        "tvp.pl",
+        "tvpparlament.pl"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||hit.gemius.pl/gplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 426,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swipeto.pl",
+        "tvp.info",
+        "tvp.pl",
+        "tvpparlament.pl"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||hit.gemius.pl/gstream.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 444,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dobreprogramy.pl",
+        "money.pl",
+        "o2.pl",
+        "pudelek.pl",
+        "wp.pl"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||oas.wpcdn.pl/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 445,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "abczdrowie.pl",
+        "autocentrum.pl",
+        "autokult.pl",
+        "fotoblogia.pl",
+        "gadzetomania.pl",
+        "genialne.pl",
+        "komorkomania.pl",
+        "money.pl",
+        "o2.pl",
+        "parenting.pl",
+        "polygamia.pl",
+        "pudelek.pl",
+        "pysznosci.pl",
+        "videostar.pl",
+        "wp.pl"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||v.wpimg.pl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 446,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ttv.pl"
+      ],
+      "urlFilter": "||mdsglvod-a.akamaihd.net/vod/2.0/progressive/*/x.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 465,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shinden.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||smartadserver.com/ac",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 466,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shinden.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||ced-ns.sascdn.com/diff/templates/js/sas/sas-browser.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 467,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shinden.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||ced-ns.sascdn.com/diff/templates/js/overslide/sas-overslide-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 476,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||adv.wp.pl/rm/box/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 484,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||redcdn.pl/*adserver/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 489,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "player.pl"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||redcdn.pl/*/tvn-adserver/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

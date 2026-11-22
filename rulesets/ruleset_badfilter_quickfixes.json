@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1384408,
+    "priority": 600000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bbc.com"
+      ],
+      "urlFilter": "||fwmrm.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1143771,
+    "priority": 600000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bbc.com"
+      ],
+      "urlFilter": "||emp.bbc.co.uk^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1374448,
+    "priority": 600000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bbc.com"
+      ],
+      "urlFilter": "||pub.doubleverify.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 169469,
+    "priority": 600000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "coveryourtracks.eff.org"
+      ],
+      "urlFilter": "||trackersimulator.org",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 78952,
+    "priority": 600000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "coveryourtracks.eff.org"
+      ],
+      "urlFilter": "||eviltracker.net",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1791771,
+    "priority": 600000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "topspin.npo.nl"
+      ]
+    }
+  }
+]

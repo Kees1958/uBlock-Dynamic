@@ -1,0 +1,1 @@
+self.specificImports=['ruleset_easylist_bulgarian'];

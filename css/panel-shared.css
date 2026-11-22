@@ -1,0 +1,655 @@
+/*
+ * panel-shared.css — Shared base styling for extension-page session panels
+ *
+ * Originally monitor/monitor-panel.css (the standalone "DDG Tracker Radar"
+ * Block Monitor panel's stylesheet). That panel was removed in
+ * uBlock-Stripped-Dynamic (superseded by the Matrix panel — see
+ * CHANGELOG), but this file's .monitor-* classes (monitorHeader,
+ * monitorHost, monitorTimer, monitorBtn, etc.) turned out to be shared
+ * infrastructure, not monitor-specific: privacy/privacy-inspector.html
+ * already depended on it too. Moved to css/ and renamed accordingly
+ * rather than deleted — the class names themselves are left unchanged
+ * (still `.monitor-*`) since renaming every class here would mean editing
+ * every consumer's HTML/JS in lockstep for a purely cosmetic naming
+ * cleanup with real regression risk and no functional benefit.
+ * matrix/matrix-panel.html reuses this same stylesheet for the same
+ * header/timer/button chrome, rather than duplicating it a third time.
+ */
+
+/* ══════════════════════════════════════════════════════════════
+   1. RESET & CSS VARIABLES
+   ══════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    }
+
+/* The HTML `hidden` attribute must always win. Without this, ID-based rules
+   like `#monitorPausedBanner { display: flex }` have higher specificity than
+   the attribute's implicit `display: none`, so elements set to `.hidden = true`
+   in JS would stay visible. This one rule makes `hidden` authoritative for
+   every element in the panel (banner, block column, buttons, indicators). */
+[hidden] {
+    display: none !important;
+    }
+
+:root {
+    /* Semantic colour tokens for the monitor panel.
+       Surface/ink/border tokens are inherited from default.css / common.css. */
+    --color-red:    #e74c3c;   /* exit button, stop banner, block header, delete hover, block-all button */
+    --color-green:  #27ae60;   /* resume button */
+    --color-amber:  #f39c12;   /* paused banner */
+
+    /* Text-safe darkened variant of --color-green above — raw --color-green
+       fails even 3:1 as TEXT in light mode (2.52:1 — see .monitor-btn-resume
+       below, which was the actual bug: fine as border/background fill,
+       broken as the button's own text color). Value copied verbatim from
+       matrix-panel.css's / dashboard/custom-rules.css's own already-computed
+       --color-green-text (5.18:1 light vs surface-1, real WCAG
+       relative-luminance formula, not eyeballed) — reusing the proven value
+       rather than recomputing a fresh one (A9). Dark mode needs no override:
+       raw --color-green is already 9.62:1 against the dark surface, safe as
+       text as-is (dark block below). */
+    --color-green-text: rgb(22, 115, 66);
+
+    /* Text-safe darkened variant of --color-red above — raw --color-red is
+       only 3.36:1 (surface-1) / 2.96:1 (surface-2) in light mode, which
+       passes 3:1 for large/bold text at best and fails outright for the
+       small or surface-2-backed text it was used for (stop banner, Exit
+       button label, Block column header). Computed with the WCAG relative-
+       luminance formula against the real light tokens: 5.77:1 vs
+       surface-1, 5.08:1 vs surface-2, 3.86:1 vs surface-3 (button hover
+       background, non-text/large use only). Dark mode needs no override
+       beyond aliasing to raw --color-red (already 6.36:1 / 4.91:1 —
+       STYLE_GUIDE_DARK.md), see the dark blocks below. */
+    --color-red-text: rgb(176, 42, 30);
+
+    /* Shared radius values */
+    --radius-sm: 4px;
+    --radius-md: 5px;
+
+    /* Single source of truth for the gap between adjacent buttons in a
+       button group — shared by #monitorControls (Pause/Exit) and
+       #monitorPausedActions (Block All/Resume) so the two groups always
+       line up with identical spacing, even though they sit in different
+       rows of the panel. */
+    --btn-group-gap: 0.5em;
+
+    /* Blocked-row red — readable on both light and dark surfaces.
+       Light: dark crimson (#c0392b); Dark: bright red (#ff6b6b).
+       Overridden below by :root.dark so both system-pref and manual
+       theme toggle are covered. */
+    --color-blocked-row: #c0392b;
+    }
+
+/* Dark-mode overrides — all four semantic colours are shifted to higher
+   luminance values so they remain distinct and pass WCAG AA (≥ 4.5:1)
+   against the dark surface tokens (gray-10 / gray-20) from default.css.
+   Contrast ratios vs dark surface-1 (rgb 27 27 35):
+     --color-red    #ff7070  → 6.4:1   (was #e74c3c  4.5:1  — barely passing)
+     --color-green  #4ddb8a  → 9.6:1   (was #27ae60  5.9:1)
+     --color-amber  #ffc947  → 11.2:1  (was #f39c12  7.8:1)
+     --color-blocked-row #ff8585 → 7.3:1 (was #ff6b6b 6.2:1)
+   System-preference path: */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-red:         #ff7070;
+        --color-green:       #4ddb8a;
+        --color-amber:       #ffc947;
+        --color-blocked-row: #ff8585;
+        --color-green-text:  var(--color-green); /* already 9.62:1 dark — no darkening needed, matches matrix-panel.css's/custom-rules.css's own reasoning */
+        --color-red-text:    var(--color-red);   /* already 6.36:1 / 4.91:1 dark — no darkening needed */
+    }
+}
+
+/* Manual theme-toggle path (class set by theme.js on <html>): */
+:root.dark {
+    --color-red:         #ff7070;
+    --color-green:       #4ddb8a;
+    --color-amber:       #ffc947;
+    --color-blocked-row: #ff8585;
+    --color-green-text:  #4ddb8a; /* already 9.62:1 dark — no darkening needed */
+    --color-red-text:    #ff7070; /* already 6.36:1 / 4.91:1 dark — no darkening needed */
+}
+
+/* ══════════════════════════════════════════════════════════════
+   2. BODY & BASE
+   ══════════════════════════════════════════════════════════════ */
+
+body {
+    background-color: var(--surface-1);
+    color: var(--ink-1);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   3. HEADER  —  host, timer, pause indicator, control buttons
+   ══════════════════════════════════════════════════════════════ */
+
+#monitorHeader {
+    align-items: center;
+    background-color: var(--surface-1);
+    border-bottom: 1px solid var(--border-1);
+    display: flex;
+    flex-shrink: 0;
+    gap: 1em;
+    justify-content: space-between;
+    padding: 0.65em 1em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    }
+
+#monitorMeta {
+    align-items: center;
+    display: flex;
+    gap: 0.75em;
+    min-width: 0;
+    }
+
+.monitor-host {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+.monitor-timer {
+    background-color: var(--surface-2);
+    border-radius: var(--radius-sm);
+    color: var(--ink-2);
+    font-size: 0.85em;
+    font-variant-numeric: tabular-nums;
+    padding: 0.1em 0.5em;
+    white-space: nowrap;
+    }
+
+.monitor-pause-indicator {
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-size: 0.85em;
+    font-style: italic;
+    white-space: nowrap;
+    }
+
+#monitorControls {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--btn-group-gap);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   4. BUTTONS  —  base, exit variant, resume variant
+   ══════════════════════════════════════════════════════════════ */
+
+.monitor-btn {
+    background-color: var(--surface-2);
+    border: 1px solid var(--border-1);
+    border-radius: var(--radius-md);
+    color: var(--ink-1);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 0.85em;
+    padding: 0.3em 0.85em;
+    white-space: nowrap;
+    }
+
+.monitor-btn:hover {
+    background-color: var(--surface-3);
+    }
+
+.monitor-btn-exit {
+    border-color: color-mix(in srgb, var(--color-red) 40%, var(--border-1));
+    color: var(--color-red-text);
+    }
+
+.monitor-btn-exit:hover {
+    background-color: color-mix(in srgb, var(--color-red) 10%, var(--surface-1));
+    border-color: var(--color-red);
+    }
+
+.monitor-btn-resume {
+    background-color: color-mix(in srgb, var(--color-green) 15%, var(--surface-1));
+    border-color: var(--color-green);
+    color: var(--color-green-text); /* BUG FIX: raw --color-green fails as TEXT (2.52:1 light) — see :root's own comment on --color-green-text above. Border/background fill usage above is unaffected (never the bug). */
+    }
+
+.monitor-btn-resume:hover {
+    background-color: color-mix(in srgb, var(--color-green) 25%, var(--surface-1));
+    }
+
+/* Block All — solid fill (rather than Exit's outline-only red) so it reads
+   as the stronger, list-wide action while still sharing --color-red's
+   "block/danger" semantics with Exit and the blocked-row colour. */
+.monitor-btn-blockall {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+    /* BUG FIX (found while adding the Low/Medium tier buttons below):
+       white text here only reaches 3.82:1 (light) / 2.69:1 (dark) —
+       both fail the 4.5:1 minimum for this button's actual text size
+       (0.85em, not large/bold, so the 3:1 exception doesn't apply).
+       Black text reaches 5.50:1 / 7.80:1 — verified, not eyeballed,
+       same computation method as every other ratio in this codebase. */
+    color: black;
+    }
+
+.monitor-btn-blockall:hover {
+    background-color: color-mix(in srgb, var(--color-red) 85%, black);
+    }
+
+/* Disabled while nothing blockable is currently visible (all rows filtered
+   out, or every listed signal already has a rule) — same dimmed treatment
+   as the per-row cr-select-btn's disabled state (privacy-inspector.css). */
+.monitor-btn-blockall:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    }
+
+.monitor-btn-blockall:disabled:hover {
+    background-color: var(--color-red);
+    }
+
+/* Block Low Risk / Block Medium — same solid-fill pattern as Block All
+   above (verified black text, not white — see that rule's own comment),
+   using the two other risk-tier colours already proven safe elsewhere in
+   this project (RISK_BADGE's own 🟢/🟡 glyphs, same semantic meaning).
+   Cumulative by design: Low blocks only Low-risk rows; Medium blocks
+   Low+Medium together (a risk THRESHOLD, not an exact-tier filter) — see
+   blockableRowsUpToRisk() in privacy-inspector.js for why. */
+.monitor-btn-blocklow {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+    color: black; /* 7.31:1 light / 11.82:1 dark — verified */
+    }
+
+.monitor-btn-blocklow:hover {
+    background-color: color-mix(in srgb, var(--color-green) 85%, black);
+    }
+
+.monitor-btn-blocklow:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    }
+
+.monitor-btn-blocklow:disabled:hover {
+    background-color: var(--color-green);
+    }
+
+.monitor-btn-blockmedium {
+    background-color: var(--color-amber);
+    border-color: var(--color-amber);
+    color: black; /* 9.58:1 light / 13.70:1 dark — verified */
+    }
+
+.monitor-btn-blockmedium:hover {
+    background-color: color-mix(in srgb, var(--color-amber) 85%, black);
+    }
+
+.monitor-btn-blockmedium:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    }
+
+.monitor-btn-blockmedium:disabled:hover {
+    background-color: var(--color-amber);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   5. TYPE FILTER BAR  —  Show: checkboxes row
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Help text ───────────────────────────────────────────────── */
+#monitorHelp {
+    border-bottom: 1px solid var(--border-1);
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 60% — borderline fails 4.5:1 in light mode (4.44:1); 65% is the nearest proven-safe value (A9) */
+    font-size: 0.82em;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    padding: 0.55em 0.8em;
+    }
+
+#monitorHelp strong {
+    color: inherit;
+    font-weight: 600;
+    }
+
+/* Tracker Radar mode only (toggled by monitor-panel.js render()) — same
+   amber caution styling as Privacy Inspector's own #monitorHelpWarning,
+   including the same verified 50%-amber text mix (see that file's comment
+   for the full contrast numbers: 80% failed WCAG AA at 2.62:1 in light
+   mode; 50% reaches 4.98:1 light / 9.68:1 dark). */
+#monitorHelpWarning {
+    background-color: color-mix(in srgb, var(--color-amber) 10%, var(--surface-1));
+    border-bottom: 1px solid var(--border-1);
+    color: color-mix(in srgb, var(--color-amber) 50%, currentColor);
+    font-size: 0.82em;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.45em 0.8em;
+    width: 100%;
+    }
+
+/* --type-filter-item-height: one shared box height for checkbox labels and "[all … risk]" markers, so a marker
+   lines up with its row's checkboxes even when a taller item (the ⓘ button) shares the row (all are top-aligned). */
+#monitorTypeFilters {
+    --type-filter-item-height: 1.6em;
+    align-items: flex-start;
+    background-color: var(--surface-2);
+    border-bottom: 1px solid var(--border-1);
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 0.3em 0.6em;
+    padding: 0.4em 0.8em;
+    }
+
+/* Full instructional sentence now (was a short "Show:" caption) — styled
+   like this project's own #monitorHelp explanatory text above, not like
+   a short shouty caption anymore. Per explicit request: colors/settings
+   per the style guide, improved readability.
+   - Opacity bumped 55% -> 65%: 55% only reaches 3.80:1, which this
+     project's own style guide explicitly documents as "passes 3:1 only,
+     safe for large/bold text" — this label is neither (0.82em, regular
+     weight). 65% reaches 5.21:1 (light) / 6.28:1 (dark), clearing the
+     4.5:1 body-text minimum — same value, same reasoning, as the prior
+     #monitorHelp fix directly above this rule in the file.
+   - text-transform: uppercase / letter-spacing removed — appropriate for
+     a 5-character caption, actively harder to read as a full sentence.
+   - font-weight normal (was 600) — bold reads as shouting across a full
+     sentence; regular weight matches #monitorHelp's own treatment.
+   - flex-basis: 100% forces every checkbox after it onto new line(s)
+     below, per explicit request — flex-wrap (already set on the parent)
+     does the rest without any HTML/JS restructuring needed. */
+.type-filter-label {
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    display: block;
+    flex-basis: 100%;
+    font-size: 0.82em;
+    line-height: 1.5;
+    margin-bottom: 0.25em;
+    }
+
+/* (10.7.0) "[all low risk]" marker after the last checkbox of each risk tier (privacy-inspector.js
+   TIER_MARKERS). Same proven de-emphasis as .type-filter-label just above: 65% of currentColor,
+   5.21:1 light / 6.28:1 dark (STYLE_GUIDE_LIGHT/DARK.md) — reused, not a new value (A9). */
+.type-filter-tier {
+    align-items: center;
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    display: flex;
+    font-size: 0.78em;
+    min-height: var(--type-filter-item-height);
+    user-select: none;
+    white-space: nowrap;
+    }
+
+/* (10.7.0) Zero-height full-width flex item after each tier marker: starts the next risk tier on a new row. */
+.type-filter-row-break {
+    flex-basis: 100%;
+    height: 0;
+    }
+
+#monitorTypeFilters label {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 0.78em;
+    min-height: var(--type-filter-item-height);
+    gap: 0.25em;
+    white-space: nowrap;
+    }
+
+#monitorTypeFilters input[type="checkbox"] {
+    cursor: pointer;
+    margin: 0;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   5b. INFO DROPDOWN  —  "ⓘ" button + panel, shared by Monitor and
+       Privacy Inspector's filter bars (js/ui/info-tooltip.js)
+   ══════════════════════════════════════════════════════════════ */
+
+.info-dropdown-wrap {
+    margin-left: auto;
+    position: relative;
+    }
+
+.info-dropdown-toggle {
+    background: none;
+    border: none;
+    color: color-mix(in srgb, currentColor 55%, transparent);
+    cursor: pointer;
+    font-size: 1.1em;
+    line-height: 1;
+    padding: 0 0.2em;
+    }
+
+.info-dropdown-toggle:hover,
+.info-dropdown-toggle[aria-expanded="true"] {
+    color: currentColor;
+    }
+
+.info-dropdown-panel {
+    background-color: var(--surface-1);
+    border-radius: var(--radius-md);
+    box-shadow: 0 0.4em 1.5em color-mix(in srgb, black 25%, transparent);
+    max-height: min(70vh, 26em);
+    max-width: 26em;
+    overflow-y: auto;
+    padding: 0.5em 0.8em;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.3em);
+    z-index: 20;
+    }
+
+.info-dropdown-row {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.92em;
+    gap: 0.15em;
+    padding: 0.5em 0;
+    }
+
+.info-dropdown-row + .info-dropdown-row {
+    border-top: 1px solid var(--border-1);
+    }
+
+.info-dropdown-row strong {
+    font-weight: 600;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   6. PAUSED BANNER  —  amber info row shown while paused
+   ══════════════════════════════════════════════════════════════ */
+
+#monitorPausedBanner {
+    align-items: center;
+    background-color: color-mix(in srgb, var(--color-amber) 10%, var(--surface-1));
+    border-bottom: 1px solid color-mix(in srgb, var(--color-amber) 35%, transparent);
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    }
+
+/* Block All + Resume, grouped — Block All sits to the left of Resume,
+   sharing --btn-group-gap with #monitorControls (Pause/Exit) so the two
+   button rows read as visually consistent even though they live in
+   different parts of the panel. */
+#monitorPausedActions {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--btn-group-gap);
+    }
+
+.monitor-paused-text p {
+    font-size: 0.85em;
+    font-weight: 600;
+    margin: 0;
+    }
+
+.monitor-paused-note {
+    /* Lower specificity than .monitor-paused-text p — !important removed
+       by using a more specific selector instead */
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 60% — borderline fails 4.5:1 in light mode (4.44:1); 65% is the nearest proven-safe value (A9) */
+    font-weight: 400;
+    margin-block-start: 0.15em;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   7. STOP BANNER  —  red info row shown on session end
+   ══════════════════════════════════════════════════════════════ */
+
+#monitorStopBanner {
+    background-color: color-mix(in srgb, var(--color-red) 10%, var(--surface-1));
+    border-bottom: 1px solid color-mix(in srgb, var(--color-red) 30%, transparent);
+    flex-shrink: 0;
+    padding: 0.7em 1em;
+    }
+
+#monitorStopBanner p {
+    color: var(--color-red-text);
+    font-size: 0.85em;
+    font-weight: 600;
+    margin: 0;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   8. ENTRY LIST  —  scrollable table of captured requests
+   ══════════════════════════════════════════════════════════════ */
+
+#monitorListWrap {
+    flex: 1;
+    overflow-y: auto;
+    }
+
+#monitorTable {
+    border-collapse: collapse;
+    font-size: 0.85em;
+    width: 100%;
+    }
+
+#monitorTable thead th {
+    background-color: var(--surface-1);
+    border-bottom: 1px solid var(--border-1);
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 50% — fails 4.5:1 in both modes (3.28:1/4.27:1); 65% is the nearest proven-safe value (A9) */
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.4em 0.6em;
+    position: sticky;
+    text-align: left;
+    text-transform: uppercase;
+    top: 0;
+    }
+
+/* Block column header — higher specificity than thead th to avoid !important */
+#monitorTable thead th#colBlockHeader {
+    color: var(--color-red-text);
+    font-size: 1em;
+    font-weight: 700;
+    }
+
+.monitor-row td {
+    border-bottom: 1px solid color-mix(in srgb, var(--border-1) 50%, transparent);
+    padding: 0.35em 0.6em;
+    vertical-align: middle;
+    }
+
+.monitor-row:hover td {
+    background-color: var(--surface-2);
+    }
+
+/* .monitor-row--blocked (strikethrough already-mitigated/blocked row style)
+   removed: both Block Monitor and Privacy Inspector now hide these rows
+   entirely via applyRowVisibility() in their respective panel scripts
+   instead of showing them struck-through — see CHANGELOG. Kept
+   --color-blocked-row itself defined above in case a future feature wants
+   a visible-but-marked state again. */
+
+.col-elapsed {
+    /* BUG FIX (found during this session's readability pass): 55% only
+       reaches 3.80:1 — fine for an icon-only control (A8's 3:1 bar), but
+       this is genuine readable data text (an elapsed-time value), which
+       needs the full 4.5:1 body-text minimum. 65% reaches 5.21:1 light /
+       6.28:1 dark — same already-proven value used throughout this file. */
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    width: 4.5em;
+    }
+
+.col-type {
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-family: monospace;
+    font-size: 0.85em;
+    white-space: nowrap;
+    width: 7em;
+    }
+
+.col-domain {
+    white-space: nowrap;
+    width: 10em;
+    }
+
+.col-tracker {
+    color: color-mix(in srgb, currentColor 85%, transparent);
+    font-weight: 600;
+    white-space: nowrap;
+    width: 9em;
+    }
+
+.col-details {
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 60% — borderline fails 4.5:1 in light mode (4.44:1); 65% is the nearest proven-safe value (A9) */
+    font-family: monospace;
+    font-size: 0.8em;
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+.col-block {
+    text-align: center;
+    width: 5em;
+    }
+
+.monitor-empty {
+    color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 40% — fails even 3:1 in light mode (2.48:1), fails 4.5:1 in dark (3.21:1); 65% is the nearest proven-safe value (A9) */
+    font-size: 0.85em;
+    font-style: italic;
+    padding: 1.2em 1em;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   9. PANEL FOOTER  —  small credit line, shared by every page that
+      includes this stylesheet (Matrix panel, Privacy Inspector).
+      Mirrors the dashboard's own #dashboardFooter
+      (dashboard/dashboard.css) — same subdued/centered/top-bordered
+      treatment — kept as a separate rule rather than reused directly
+      since dashboard.css's version depends on --section-gap, a variable
+      local to the dashboard page.
+   ══════════════════════════════════════════════════════════════ */
+
+.panel-footer {
+    border-top: 1px solid var(--border-1);
+    /* BUG FIX (same readability pass as .col-elapsed above): 55% only
+       reaches 3.80:1 — this is real footer text, not an icon, so it
+       needs 4.5:1. Bumped to the same already-proven 65% used
+       throughout this file. */
+    color: color-mix(in srgb, currentColor 65%, transparent);
+    flex-shrink: 0;
+    font-size: 0.75em;
+    padding: 0.6em 0 0.5em;
+    text-align: center;
+    }

@@ -1,0 +1,100 @@
+/* ══════════════════════════════════════════════════════════════
+   1. LOCAL VARIABLES — allow-list toggle switch dimensions
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+    --filtering-toggle-width: 64px;
+    --filtering-toggle-height: 34px;
+    --filtering-toggle-thumb: 26px;
+    --filtering-toggle-track-background: var(--surface-3);  /* track colour for the on/off toggle; renamed from --filtering-mode-slider-background (old 4-mode slider remnant) */
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   2. ALLOW LIST TOGGLE SWITCH — per-hostname on/off control
+   ══════════════════════════════════════════════════════════════ */
+
+.filteringToggleRow {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    margin: 0.5em 0;
+    padding: 12px 0;
+    }
+
+.toggleSwitch {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    }
+
+.toggleSwitch input[type="checkbox"] {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    }
+
+.toggleTrack {
+    background-color: var(--filtering-toggle-track-background);
+    border-radius: calc(var(--filtering-toggle-height) / 2);
+    display: block;
+    height: var(--filtering-toggle-height);
+    position: relative;
+    transition: background-color 0.15s ease;
+    width: var(--filtering-toggle-width);
+    }
+
+.toggleThumb {
+    background-color: var(--surface-1);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    display: block;
+    height: var(--filtering-toggle-thumb);
+    left: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.15s ease;
+    width: var(--filtering-toggle-thumb);
+    }
+
+.toggleSwitch input[type="checkbox"]:checked ~ .toggleTrack {
+    background-color: var(--accent-surface-1);
+    }
+
+.toggleSwitch input[type="checkbox"]:checked ~ .toggleTrack .toggleThumb {
+    left: calc(var(--filtering-toggle-width) - var(--filtering-toggle-thumb) - 4px);
+    }
+
+.toggleSwitch:hover .toggleThumb {
+    filter: brightness(0.95);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   3. HIGH CONTRAST  —  allow-list toggle in a forced-colors theme
+   ══════════════════════════════════════════════════════════════ */
+/* (10.7.8) The track's on/off state is only a background colour, which a
+   contrast theme replaces; draw it with an outline and system colours. */
+@media (forced-colors: active) {
+    .toggleTrack {
+        border: 1px solid CanvasText;
+        forced-color-adjust: none;
+        background-color: Canvas;
+        }
+    .toggleThumb {
+        background-color: CanvasText;
+        box-shadow: none;
+        }
+    .toggleSwitch input[type="checkbox"]:checked ~ .toggleTrack {
+        background-color: Highlight;
+        border-color: Highlight;
+        }
+    .toggleSwitch input[type="checkbox"]:checked ~ .toggleTrack .toggleThumb {
+        background-color: HighlightText;
+        }
+    .toggleSwitch input[type="checkbox"]:focus-visible ~ .toggleTrack {
+        outline: 2px solid Highlight;
+        outline-offset: 2px;
+        }
+    }

@@ -1,0 +1,19 @@
+[
+  {
+    "id": 606601,
+    "priority": 600000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nos.nl"
+      ],
+      "urlFilter": "||cdn-ster-nl.akamaized.net/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

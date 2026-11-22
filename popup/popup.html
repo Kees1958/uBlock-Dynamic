@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html id="uBO-popup-panel" class="desktop">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark" />
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/fa-icons.css">
+<link rel="stylesheet" href="popup.css">
+<title data-i18n="extName"></title>
+</head>
+
+<body class="loading busy">
+
+<main>
+    <!-- ── 1. STATUS BAR ── -->
+    <div id="statusBar">
+        <span id="statusIcon" class="fa-icon">power-off</span>
+        <span id="statusText">Filtering active</span>
+    </div>
+
+    <!-- ── 2. SITE MODE BUTTON ── -->
+    <div id="siteModeSelector" class="needHTTP">
+        <div id="siteModeButton" class="uBolActionButton">
+            <span id="siteModeHostname"></span>
+            <span id="siteModeLabel">Turn off</span>
+        </div>
+    </div>
+
+    <!-- ── 2b. TEMPORARY GLOBAL DISABLE ──
+         Same box/size as #siteModeButton above (both share the
+         .uBolActionButton class — see popup.css). Deliberately its own
+         wrapper, NOT nested inside #siteModeSelector: unlike the site
+         mode button, this isn't scoped to the current site or gated by
+         needHTTP — it pauses filtering everywhere, for a fixed duration,
+         regardless of what kind of page the popup happened to be opened
+         on. See js/core/temp-disable-manager.js for the backend.
+         Single control, same principle as the site mode turn-off/turn-on
+         button: label and countdown both live in this one element and
+         flip with the current state — "Pause filtering…" normally;
+         "Enable filtering again" plus a live mm:ss countdown while
+         active. Clicking it ends the pause directly when active, or
+         opens the duration picker when not. -->
+    <div id="tempDisableSelector">
+        <div id="tempDisableButton" class="uBolActionButton">
+            <span id="tempDisableButtonLabel">Pause filtering…</span>
+            <span id="tempDisableButtonCountdown"></span>
+        </div>
+    </div>
+
+    <!-- ── 1. WORRY-FREE SURFING MODE ──
+         A plain menu item (same shape/styling as every other item in
+         .simpleMenu). v8.3.19 — clicking this now launches an in-page
+         picker overlay in the current tab (js/scripting/worry-free-
+         picker.js), same mechanism the Cookie-consent-clicker power
+         tool already uses (chrome.scripting.executeScript from
+         js/workflow/cookie-clicker-routes.js's handleWorryFreeLaunch-
+         Picker()) — replaces the earlier small in-popup modal entirely.
+         See popup/worry-free-ui.js for the fire-and-forget-and-close
+         click handler and the live countdown this item still shows.
+         needHTTP added this same pass — same mechanism as Cookie-
+         consent-clicker now means same treatment as Cookie-consent-
+         clicker: it lives inside needHTTP's power-tools section, so a
+         quick-access item using the identical page-injection mechanism
+         doesn't get a special exemption just because of where it's
+         positioned in the menu. Positioning (Quick Access vs. Power
+         tools) and injection-capability requirement are two independent
+         questions; only the second one decides needHTTP. -->
+
+    <!-- ── 2-7. NAVIGATION MENU — simplified (per explicit request): one
+         flat list, no "Quick Access"/"Power tools" dividers, no
+         More/Less expand toggle (popup/power-tools-ui.js and every
+         element it managed — #essentialsDivider, #powerToolsSection,
+         #powerToolsDivider, #powerToolsMoreLessToggle — all removed).
+         #gotoFilterLists, #gotoFilteringMode, #gotoCustomRules,
+         #gotoDashboard ("Import ABP rules") and #gotoSecurity
+         ("Privacy & Security extra's") — the five items that each
+         opened a different dashboard PANE — are consolidated into the
+         one #gotoSettingsDashboard item below, which just opens the
+         dashboard (no pane override): every one of those five panes is
+         still reachable from inside the dashboard itself, as a tab. ── -->
+    <div class="simpleMenu">
+        <span id="gotoWorryFree" class="menuItem enabled needHTTP" tabindex="0">
+            <span id="worryFreeLabel" data-ui-name="worryFreeMode"></span>
+        </span>
+        <!-- (11.0.0) Ad leftover cleaner, directly under Seamless surfing (owner) — on demand, this page only (js/data/ad-cleaner.js). Fire-and-forget launch
+             (popup closes at once), same shape as #gotoCookieClicker. Label set by popup.js from ui-names.js. -->
+        <span id="gotoAdCleaner" class="menuItem enabled needHTTP" tabindex="0" title="Remove ad leftovers on this page">
+            <span id="adCleanerLabel"></span>
+        </span>
+        <!-- The remaining four power tools each still need an actual
+             HTTP(S) page to act on (content-script injection or a
+             tabId-scoped session) — needHTTP now lives directly on each
+             one, since the #powerToolsSection wrapper that used to carry
+             it for all of them together is gone. -->
+        <span id="gotoPicker" class="menuItem enabled needHTTP" tabindex="0">
+            <span>Cosmetic element picker</span>
+        </span>
+        <!-- v8.5.1 — plain, static menu item; no live countdown or
+             active-state label swap anymore (moved to the Worry-free
+             item, popup/worry-free-ui.js, since that's the only place
+             a "Never consent" session can be started from now).
+             #gotoCookieClicker's own click handler (popup.js) always
+             just launches the one-off Cancel/Automate picker,
+             unconditionally — no session-state branching here. -->
+        <span id="gotoCookieClicker" class="menuItem enabled needHTTP" tabindex="0">
+            <span id="cookieClickerAutoDenyLabel">Cookie consent clicker</span>
+        </span>
+        <!-- (10.3.0) Tooltip states the per-website scope, matching the Matrix panel's own capitalised intro line. -->
+        <span id="gotoMatrixPanel" class="menuItem enabled needHTTP" tabindex="0" title="Block or allow third-party domains on the current website only">
+            <span id="dnrTrackingFilterLabel"></span>
+        </span>
+        <!-- v8.5.2 — plain, static menu item; the dynamic
+             "(anti-fingerprint subset active)" note removed, per
+             explicit request, same reasoning as #gotoCookieClicker's
+             own simplification just above: the click handler always
+             just opens Privacy Inspector unconditionally, and this
+             note was the only remaining state-dependent text on this
+             item. -->
+        <span id="gotoPrivacyInspector" class="menuItem enabled needHTTP" tabindex="0">
+            <span>Fingerprint Inspector</span>
+        </span>
+        <!-- No needHTTP: opens the dashboard in its own tab, no page
+             injection into the current tab at all (same reasoning the
+             five consolidated items this replaces already had). -->
+        <span id="gotoSettingsDashboard" class="menuItem enabled" tabindex="0">
+            <span>Settings dashboard</span>
+        </span>
+    </div>
+</main>
+
+<!-- ── DURATION-PICKER MODAL ──
+     Hidden by default; shown as a full-popup overlay when
+     #tempDisableButton is clicked. See popup/temp-disable-ui.js. -->
+<div id="tempDisableModal" hidden>
+    <div id="tempDisableModalPanel">
+        <div id="tempDisableModalTitle">Pause filtering for…</div>
+        <div id="tempDisableDurationChoices">
+            <!-- Populated by popup/temp-disable-ui.js's renderDurationChoices()
+                 from the backend's getAllowedDurationsMinutes() (temp-disable-
+                 manager.js) — was 3 hardcoded buttons here, a real B2a-class
+                 duplication (this exact list already existed as a named backend
+                 constant, ALLOWED_DURATIONS_MINUTES, that nothing rendered from).
+                 Currently safe only by coincidence (both copies happened to say
+                 5/15/30) — the file's own top comment listing "5/10/15/30/60"
+                 already having drifted from BOTH copies (the real list was
+                 trimmed in 6.1.9, this comment never was) was the concrete
+                 sign a manually-kept-in-sync pair like this doesn't reliably
+                 stay in sync. -->
+        </div>
+        <!-- Indefinite pause — its own direct-action button, not a chip:
+             clicking it commits immediately (no separate Pause click
+             needed afterward), since there's no duration to also select
+             first. Ended only by a genuine browser restart — see
+             js/core/temp-disable-manager.js's
+             clearTempDisableOnBrowserStartup(). -->
+        <button type="button" id="tempDisableUntilRestartBtn">Until browser restart</button>
+        <div id="tempDisableModalActions">
+            <button type="button" id="tempDisableCancelBtn">Cancel</button>
+            <button type="button" id="tempDisableConfirmBtn" disabled>Pause</button>
+        </div>
+    </div>
+</div>
+
+<!-- #worryFreeModal (in-popup duration picker) REMOVED v8.3.19 — the
+     duration-choosing UI moved to an in-page overlay instead, injected
+     into the current tab on #gotoWorryFree click (see js/scripting/
+     worry-free-picker.js and popup/worry-free-ui.js), same mechanism
+     js/scripting/cookie-clicker-picker.js's own dialog already uses.
+     Explanation text that used to live in this modal now lives in that
+     content script instead — see CHANGELOG.md's 8.3.19 entry. -->
+
+<script src="../js/ui/theme.js" type="module"></script>
+<script src="../js/ui/fa-icons.js" type="module"></script>
+<script src="../js/ui/i18n.js" type="module"></script>
+<script src="popup.js" type="module"></script>
+<script src="site-mode-ui.js" type="module"></script>
+<script src="temp-disable-ui.js" type="module"></script>
+<script src="cookie-clicker-autodeny-ui.js" type="module"></script>
+<script src="worry-free-ui.js" type="module"></script>
+
+</body>
+</html>

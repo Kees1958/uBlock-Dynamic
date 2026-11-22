@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/panel-shared.css">
+<link rel="stylesheet" href="privacy-inspector.css">
+<title>Fingerprint Inspector — uBlock Dynamic</title>
+</head>
+<body>
+<header id="monitorHeader">
+    <div id="monitorMeta">
+        <span id="monitorHost" class="monitor-host"></span>
+        <span id="monitorTimer" class="monitor-timer"></span><!-- (10.5.0) filled from TIMEOUT_MS by privacy-inspector.js (C39a) -->
+        <span id="monitorPauseIndicator" class="monitor-pause-indicator" hidden>Paused</span>
+    </div>
+    <div id="monitorControls">
+        <button id="monitorPause" class="monitor-btn" type="button">Pause</button>
+        <button id="monitorExit" class="monitor-btn monitor-btn-exit" type="button">Exit</button>
+    </div>
+</header>
+<p id="monitorHelp">Shows privacy-sensitive API calls made by the current website. Pause the inspector, then use <strong>Select</strong> where a precise website-specific rule is available.</p>
+<p id="monitorHelpWarning">Only use Fingerprint Inspector on websites you visit often but never log in to.</p>
+<div id="fingerprintWarningBanner" hidden></div>
+<div id="monitorTypeFilters"><span class="type-filter-label">Search for the fingerprint signals below. The color gives an indication of the website breakage risk when blocking these fingerprint signals.</span></div>
+<div id="monitorPausedBanner" hidden>
+    <div class="monitor-paused-text"><p>Fingerprint Inspector paused</p><p class="monitor-paused-note">Select an event to create a website-specific rule, or resume inspection.</p></div>
+    <div id="monitorPausedActions">
+        <button id="monitorBlockLow" class="monitor-btn monitor-btn-blocklow" type="button" title="Create a website-specific rule for every currently visible Low-risk signal">Block Low Risk</button>
+        <button id="monitorBlockMedium" class="monitor-btn monitor-btn-blockmedium" type="button" title="Create a website-specific rule for every currently visible Low- or Medium-risk signal">Block Medium</button>
+        <button id="monitorBlockAll" class="monitor-btn monitor-btn-blockall" type="button" title="Create a website-specific rule for every listed signal that has an available protection">Block All</button>
+        <button id="monitorResume" class="monitor-btn monitor-btn-resume" type="button">Resume</button>
+    </div>
+</div>
+<div id="monitorTableWrap">
+<table id="monitorTable">
+<thead><tr><th class="col-elapsed">Elapsed</th><th class="col-type">Protection</th><th class="col-domain">API</th><th class="col-break-risk" id="colBreakRiskHeader">Break risk</th><th class="col-details">Details</th><th class="col-block" hidden>Action</th></tr></thead>
+<tbody id="monitorBody"></tbody>
+</table>
+<p id="monitorEmpty" class="monitor-empty">Waiting for privacy-related activity…</p>
+</div>
+<details id="scriptletReference">
+<summary>Scriptlet reference</summary>
+<!-- Scrollable body, separate from <summary> so the header stays put and
+     only this region scrolls — see #scriptletReferenceBody in
+     privacy-inspector.css for why this wrapper exists (all 12 rows were
+     previously clipped, not scrollable, once the popup ran out of height). -->
+<div id="scriptletReferenceBody">
+<table id="scriptletReferenceTable">
+<thead><tr><th>Detection</th><th>Available scriptlet</th><th>Likely ABP rule</th></tr></thead>
+<tbody>
+<tr><td>Audio sound card fingerprint</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, OfflineAudioContext)</code></td></tr>
+<tr><td>Clipboard reading</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.clipboard.readText)</code></td></tr>
+<tr><td>Clipboard writing</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.clipboard.writeText)</code></td></tr>
+<tr><td>CPU core count</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.hardwareConcurrency)</code></td></tr>
+<tr><td>Device hardware info (example: battery status)</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.getBattery)</code></td></tr>
+<tr><td>Device memory</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.deviceMemory)</code></td></tr>
+<tr><td>Gamepad presence</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.getGamepads)</code></td></tr>
+<tr><td>Graphics card fingerprint (GPU-fingerprint)</td><td><code>prevent-canvas</code></td><td><code>example.com##+js(prevent-canvas)</code></td></tr>
+<tr><td>Hidden canvas drawing test</td><td><code>prevent-canvas</code></td><td><code>example.com##+js(prevent-canvas)</code></td></tr>
+<tr><td>Idle activity tracking</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, IdleDetector)</code></td></tr>
+<tr><td>Installed plugins list</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.plugins)</code></td></tr>
+<tr><td>NFC wireless tap access</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, NDEFReader)</code></td></tr>
+<tr><td>Network connection info</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.connection)</code></td></tr>
+<tr><td>Permission snooping</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.permissions.query)</code></td></tr>
+<tr><td>Silent beacon tracking</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.sendBeacon)</code></td></tr>
+<tr><td>Time zone check</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, Intl.DateTimeFormat.prototype.resolvedOptions)</code></td></tr>
+<tr><td>Touch-point support</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.maxTouchPoints)</code></td></tr>
+<tr><td>WebGL Graphics access</td><td><code>prevent-canvas</code></td><td><code>example.com##+js(prevent-canvas)</code></td></tr>
+<tr><td>WebRTC IP address leak</td><td><code>nowebrtc</code></td><td><code>example.com##+js(nowebrtc)</code></td></tr>
+</tbody>
+</table>
+<p class="scriptlet-reference-note">Window (name) snooping and tab monitoring aren't detected events like the rows above — they're applied automatically the first time you click "Block All" for a site (not on an individual "Select"). They still appear as ordinary rules in Manage custom rules → Privacy (scriptlet) rules once applied, and can be deleted by hand there like any other rule.</p>
+</div>
+</details>
+<footer id="privacyInspectorFooter" class="panel-footer">Fingerprinting signal list inspired by the JShelter project, user interface inspired on NoScript</footer>
+<script src="../js/ui/theme.js" type="module"></script>
+<script src="privacy-inspector.js" type="module"></script>
+</body>
+</html>

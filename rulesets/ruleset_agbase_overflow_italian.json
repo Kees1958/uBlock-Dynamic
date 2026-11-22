@@ -1,0 +1,2945 @@
+[
+  {
+    "id": 1,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nuovavenezia.it"
+      ],
+      "urlFilter": "||tg1.aniview.com/api/adserver/spt?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nuovavenezia.it"
+      ],
+      "urlFilter": "||player.avplayer.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lastampa.it"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 4,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "repubblica.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_debug.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 5,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.it"
+      ],
+      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 6,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.gazzetta.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 7,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kataweb.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup_pcmp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 8,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "amazon.it"
+      ],
+      "urlFilter": "||images-*.ssl-images-amazon.com/images/*/advertising^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 9,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.it"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/*/settings.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 10,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "downdetector.it"
+      ],
+      "urlFilter": "||static.ziffdavis.com/sitenotice/evidon-sitenotice-bundle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 11,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.repubblica.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup.real.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 12,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ilrestodelcarlino.it"
+      ],
+      "urlFilter": "||ads.viralize.tv/player/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 13,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ilrestodelcarlino.it"
+      ],
+      "urlFilter": "||ads.viralize.tv/display/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 14,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.lastampa.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 15,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "motociclismo.it"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 16,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.repubblica.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 17,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "repubblica.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 18,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.corriere.it"
+      ],
+      "urlFilter": "||c.betrad.com/geo/h1.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 19,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.corriere.it"
+      ],
+      "urlFilter": "||c.betrad.com/pub/c/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 20,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 21,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 22,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 23,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 24,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 25,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 26,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adsense.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 27,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://adwords.google.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 28,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adsense",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 29,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "https://www.google.*/adwords",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 30,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "google.it"
+      ],
+      "urlFilter": "||googleadservices.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 31,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automobile.it"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||static.mobile.eu^*/resources/images/ads/superteaser_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 32,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "notebookcheck.it",
+        "oraridiapertura24.it"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 33,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "briscolapiu.spaghetti-interactive.it",
+        "cruciverba.it",
+        "laleggepertutti.it",
+        "notebookcheck.it"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 34,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "bitchyx.it"
+      ],
+      "regexFilter": ".com\\/[a-z0-9][a-z0-9]\\/[a-z0-9][a-z0-9]\\/.*.js$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 35,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "freshplaza.it"
+      ],
+      "urlFilter": "/remote/https/*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 36,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "freshplaza.it"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "/remote/https/*/b/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 37,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eurosport.it"
+      ],
+      "urlFilter": "||mssl.fwmrm.net/libs/adm/*/admanager.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 38,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "adshrink.it"
+      ],
+      "urlFilter": "||wikipedia.org/w/api.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 39,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "adshrink.it"
+      ],
+      "urlFilter": "||shrink-service.it/v*/public/api/prototype/news/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 40,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ilgiornale.it"
+      ],
+      "urlFilter": "||p.jwpcdn.com/*/vast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 41,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fc.it"
+      ],
+      "urlFilter": "/js/nt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 42,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myradioonline.it"
+      ],
+      "urlFilter": "/inside-banner.mini.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 43,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "evolutionadv.it"
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "m2o.it"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 45,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||assets.fanpage.it/ciaoprebid-js/*/adstack/sdk/doprebid.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 46,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hdblog.it/new_files/ajax/prime_bf.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 47,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||milanworld.net/js/siropu/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 48,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gazzettinodelchianti.it"
+      ],
+      "urlFilter": "||gazzettinodelchianti.it/wp-content/uploads/pum/pum-site-scripts.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 49,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||blogo.it/app/plugins/toopib/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 50,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vistanet.it/*/wp-content/plugins/vistanet-plugins/js/clienti_adv.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 51,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||api.everyeye.it/amazon/topskin/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 52,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ispazio.net/wp-content/themes/ispazio-theme/assets/js/gate.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 53,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ispazio.net"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 54,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||meteolive.it/wp-content/cache/min/1/azrn_grd.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 55,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "libero.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 56,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sportitalialive.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 57,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autopareri.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 58,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||virgilio.it/public/*/js/adv.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 59,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "virgilio.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 60,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "thefork.it"
+      ],
+      "urlFilter": "||js.datadome.co/tags.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 61,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||j2.res.24o.it/js/2022/chkablock*.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 62,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "deejay.it"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 63,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||afdigitale.it/wp-content/uploads/2024/04/banner-goldenear-2.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 64,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||afdigitale.it/wp-content/uploads/2024/10/animazione_thesis-copia-esec.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 65,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "unionesarda.it"
+      ],
+      "urlFilter": "||googleads.github.io/videojs-ima/node_modules/video.js/dist/video.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 66,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||subito.it/static/script/subito-adv.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 67,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automap.it"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 68,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rendimentibtp.it"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 69,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "adnkronos.com"
+      ],
+      "urlFilter": "||player.aniview.com/script/*/avmanager.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 70,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "adnkronos.com"
+      ],
+      "urlFilter": "||player.avplayer.com/script/2/v/avcplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 71,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "adnkronos.com"
+      ],
+      "urlFilter": "||assets.evolutionadv.it/prebid/*/prebid.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 72,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "adnkronos.com"
+      ],
+      "urlFilter": "||cdn.confiant-integrations.net/*/gpt_and_prebid/config.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 73,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "adnkronos.com"
+      ],
+      "urlFilter": "||assets.evolutionadv.it/optiload/*/optiload_video.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 75,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "iodonna.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 76,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||libero.it/public/*/js/adv.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 77,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automoto.it",
+        "moto.it"
+      ],
+      "urlFilter": "||ads.viralize.tv/player/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 78,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automoto.it",
+        "moto.it"
+      ],
+      "urlFilter": "||ads.viralize.tv/display/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 79,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automoto.it",
+        "moto.it"
+      ],
+      "urlFilter": "||ads.viralize.tv/t-bid-opportunity/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 80,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automoto.it",
+        "moto.it"
+      ],
+      "urlFilter": "||ads.viralize.tv/d-vast/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 81,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automoto.it",
+        "moto.it"
+      ],
+      "urlFilter": "||ads.viralize.tv^|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 82,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "automoto.it",
+        "moto.it"
+      ],
+      "urlFilter": "||monetize-static.viralize.tv/prebid.min.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 83,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "oggi.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 84,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||components2.*.it/rcs_tealium/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 85,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "highlights.legaseriea.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 86,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||domhouse.it/wp-content/themes/soledad/js/detector.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 87,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvserial.it"
+      ],
+      "urlFilter": "||hls.exmarketplace.com/*.ts",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 88,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvserial.it"
+      ],
+      "urlFilter": "||hls.exmarketplace.com/*.m3u8",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 89,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvserial.it"
+      ],
+      "urlFilter": "||cdn.exmarketplace.com/bidder/video_scripts/video_updated_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 90,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tiscali.it/export/system/modules/*/resources/script/planner.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 91,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "facciabuco.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||secure.quantserve.com/|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 92,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "facciabuco.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 93,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||components2.rcsobjects.it/rcs_anti-adblocker-verticali/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 94,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pad.mymovies.it/*/include/adv/manzoni/*/mnz_adsetup_online.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 95,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tiscali.it/export/system/modules/it.tiscali.portal.homepage.v2/resources/js/shp-pasyc.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 96,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tiscali.it/shared/autopromohp/tagliacosti_canali.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 97,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||neveitalia.it/assets/images/logo-gds-bianco.svg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 99,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "genova24.it"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 100,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tuttoabruzzo.it"
+      ],
+      "urlFilter": "||giornal.it/wp-content/uploads/2022/08/aloe-ultra.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 101,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||truffeonline.com/js/pubpolicy/ads-prebid.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 102,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "webmail.email.it"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 103,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rendimentibtp.it"
+      ],
+      "urlFilter": "||assets.evolutionadv.it/rendimentibtp_it/rendimentibtp_it.new.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 104,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||piacenza24.eu/wp-content/uploads/*/banner*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 105,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tecnoandroid.it/wp-content/uploads/*/vivo",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 106,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ilmeteo.it"
+      ],
+      "urlFilter": "||4strokemedia.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 107,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.corriere.it"
+      ],
+      "urlFilter": "||feed.4strokemedia.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 108,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.corriere.it"
+      ],
+      "urlFilter": "||cdnb.4strokemedia.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 109,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.corriere.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 110,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "liberoquotidiano.it"
+      ],
+      "urlFilter": "||mkt.forebase.com/plugin/loader.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 111,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||98zero.com/static/js/check.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 112,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||email.it/js/prebid-ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 113,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||primochef.it/adblock-tracking.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 114,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "freeonline.org"
+      ],
+      "urlFilter": "||comunicati-stampa.net/images/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 115,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||newsmondo.it/adblock-tracking.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 116,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ludicer.it/template/checkp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 117,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gizchina.it/wp-content/uploads/*/*/skin-zte-esterno.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 118,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||igizmo.it/wp-content/uploads/*/*/top-skin-1920x90-1.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 119,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "repubblica.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup_cmp.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 120,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||okfirenze.com/*/app/assets/js/prebid-ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 121,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "laleggepertutti.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 122,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||components2.gazzettaobjects.it/rcs_anti-adblocker/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 123,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||homepage.tiscali.it/int/static/js/plnr.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 124,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "oggimilazzo.it"
+      ],
+      "urlFilter": "/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 125,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||oggimilazzo.it/*/index.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 126,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ivg.it/wp-content/plugins/edinet_giornali_swg_plugin/js/dist/swg_bundle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 127,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ivg.it/wp-content/plugins/edinet_giornali_swg_plugin/assets/css/style.css",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 128,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||devapp.it/wordpress/wp-content/uploads/*-300x250.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 129,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ivg.it/wp-content/plugins/edinet_giornali_swg_plugin/js/ackdet.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 130,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||gdr-online.com/adv/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 131,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||inpiega.it/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 132,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||startmag.it/wp-content/uploads/skin_startmeg-1.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 133,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "isnews.it"
+      ],
+      "urlFilter": "||isnews.it/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 134,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.gazzetta.it"
+      ],
+      "urlFilter": "||feed.4strokemedia.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 135,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.gazzetta.it"
+      ],
+      "urlFilter": "||cdnb.4strokemedia.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 136,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "money.it"
+      ],
+      "urlFilter": "||cdn.evolutionadv.it/money.it/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 137,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sunhope.it"
+      ],
+      "urlFilter": "||ad.altervista.org/js.ad/size=*/?ref=www.sunhope.it",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 138,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||grandhotelcalciomercato.com/js/prebid-ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 139,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||blograffo.net/wp-content/uploads/*/amazon-offerte-del-giorno.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 140,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rtl.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 141,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lavorincasa.it/content/js/new/adb/doubleclick.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 142,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||saggiamente.com/wp-content/themes/*/ad/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 143,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tio.ch"
+      ],
+      "urlFilter": "||ad*.adbreak.ch/*ad_block=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 144,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tio.ch"
+      ],
+      "resourceTypes": [
+        "other",
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||ad.*.ch^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 145,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tio.ch"
+      ],
+      "resourceTypes": [
+        "other",
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||adv.*.ch^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 146,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tio.ch"
+      ],
+      "resourceTypes": [
+        "other",
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||ads.*.ch^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 147,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tio.ch"
+      ],
+      "urlFilter": "||ad1.adbreak.ch/*/?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 148,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tio.ch"
+      ],
+      "urlFilter": "||cdn.adsafeprotected.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 149,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tio.ch"
+      ],
+      "urlFilter": "||pixel.adsafeprotected.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 150,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rockit.it"
+      ],
+      "urlFilter": "||rockitecn.nohup.it/*/js/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 151,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||laleggepertutti.it/wp-content/themes/llpt-child/images/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 152,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.lastampa.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 153,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "huffingtonpost.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 154,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||media.wired.it/static_wired/js/misc/cn-adv.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 155,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||ticonsiglio.com/wp-content/*/plugins/ad-ace/includes/adblock-detector/advertisement-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 156,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "3bmeteo.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 157,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ilmeteo.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 158,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ilmeteo.it"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 159,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ilmeteo.it"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/r*/show_ads_impl_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 160,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vivereurbino.it"
+      ],
+      "urlFilter": "/images/banners_x_cliente/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 161,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.deejay.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 162,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.deejay.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup.real.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 163,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.deejay.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 164,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "badtaste.it"
+      ],
+      "urlFilter": "||adv.bebad.it/js/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 165,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||insidemarketing.eu/cdn/lib/js/adsframe.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 166,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.capital.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 167,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.capital.it"
+      ],
+      "urlFilter": "||oasjs.kataweb.it/adsetup.real.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 168,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.capital.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 169,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||forum.tomshw.it/*/amazon/getdata*.php?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 170,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fcinternews.it"
+      ],
+      "urlFilter": "||player.performgroup.com/eplayer.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 171,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sottomarina.net/image/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 173,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rollingstone.it"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 174,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "marketmovers.it"
+      ],
+      "urlFilter": ".jpg#",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 175,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||dniadops-a.akamaihd.net/ads/scripts/fwconfig/2/configs/italy-dplay2live.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 176,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||citynow.it/wp-content/uploads/*/336x250-gla.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 177,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||citynow.it/wp-content/uploads/*/skinsitomotorshow2mari.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 178,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||svapo.it/dev/adblock.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 179,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||larena.it/gfx/siti/*/images/advertising_banner_300.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 180,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||mrwebmaster.it/adserver/adview.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 181,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||youmath.it/_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 182,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||youmath.it/*/prebid/prebid_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 183,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||youmath.it/sidebar-ad-/-doubleclick.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 184,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||youmath.it/media/base-dfp-prebid-script.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 185,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "youmath.it"
+      ],
+      "urlFilter": "||htlb.casalemedia.com/openrtb/pbjs",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 186,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "youmath.it"
+      ],
+      "urlFilter": "||ib.adnxs.com/ut/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 187,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "corrieredellosport.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 188,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||assets.deltapictures.it/js/adblock/adblock.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 189,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tv8.it"
+      ],
+      "urlFilter": "||cmp.sky.it/wrappermessagingwithoutdetection.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 190,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.huffingtonpost.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 191,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "popcorntv.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 192,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||ilpuntotecnico.com/forum/realpopup/blockadblock.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 193,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||static-js.net-cdn.it/the-purge^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 194,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "italiamac.it"
+      ],
+      "urlFilter": "||googletagservices.com/dcm/dcmads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 195,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "italiamac.it"
+      ],
+      "urlFilter": "||adspremium.it/adserver/www/delivery/lg.php?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 196,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "italiamac.it"
+      ],
+      "urlFilter": "||adspremium.it/adserver/www/delivery/ajs.php?zoneid=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 197,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "androidaba.com"
+      ],
+      "urlFilter": "||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 198,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hdblog.it"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 199,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||cdn.mangaeden.com/js/ad/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 200,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.androidiani.com/wp-content/themes/androidianiv*/js/fckblock.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 201,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||v.fwmrm.net/ad/g/1?*discoveryintl_brightcovej*&csid=vvvvid_italy_*vast",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 202,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vvvvid.it"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 203,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "imasdk.googleapis.com"
+      ],
+      "urlFilter": "||ads.mperience.net/vast",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 204,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vvvvid.it"
+      ],
+      "urlFilter": "||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 205,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||flashondemand.top-ix.org/video-omg/channels/mlogo_0.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 206,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||flashondemand.top-ix.org/video-omg/vvvvid^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 207,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "video.virgilio.it"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/ads/adv/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 208,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||latin.it/banner.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 209,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zeusnews.it/antiadb.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 210,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||tradingmania.it/wp-content/uploads/*bdswiss",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 211,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tradingmania.it/wp-content/uploads/2016/09/corso-trading-online.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 212,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tradingmania.it/wp-content/uploads/2016/06/bonus-100-mania.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 213,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||calciomercato.com/promodisplay",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 214,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lffl.org/wp-content/uploads/*/techrepair.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 215,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lffl.org/wp-content/uploads/*/scopri-il-gm6.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 216,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lffl.org/wp-content/uploads/*/mrdeals-banner.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 217,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lffl.org/wp-content/uploads/*/techbannerino320x100.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 218,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||filmstreaminghd.biz/player/play.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 219,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||filmstreaminghd.biz/player/banner.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 220,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ilsussidiario.net/images/banner_*.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 221,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||artimondo.it/promo^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 222,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ilsussidiario.net/images/banner-*.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 223,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||beppegrillo.it/js/cadetect.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 224,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aranzulla.it"
+      ],
+      "urlFilter": "||aranzulla.it^*ads",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 225,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "adm.3labs.it",
+        "banner.tp24.it",
+        "ad.citynews.it",
+        "planner.tiscali.it"
+      ]
+    }
+  }
+]

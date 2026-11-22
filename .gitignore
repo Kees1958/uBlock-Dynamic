@@ -1,0 +1,9 @@
+# Installed dependencies (recreated with: npm install)
+node_modules/
+
+# Release zips are attached to GitHub Releases, not committed
+*.zip
+
+# OS clutter
+.DS_Store
+Thumbs.db

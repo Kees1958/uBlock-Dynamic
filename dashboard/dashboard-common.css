@@ -1,0 +1,62 @@
+/* ══════════════════════════════════════════════════════════════
+   1. BODY LAYOUT — flex column, centered max-width content column
+   ══════════════════════════════════════════════════════════════ */
+
+body {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    }
+body > * {
+    width: min(860px, 100%);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   2. BASE TYPOGRAPHY — headings and links
+   ══════════════════════════════════════════════════════════════ */
+
+h2, h3 {
+    margin: 1em 0;
+    }
+h2 {
+    font-size: 18px;
+    }
+h3 {
+    font-size: 16px;
+    }
+
+a {
+    text-decoration: none;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   3. FORM ELEMENT RESETS
+   ══════════════════════════════════════════════════════════════ */
+
+input[type="file"] {
+    display: none;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   4. RESPONSIVE / MOBILE OVERRIDES
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-height: 640px), (max-height: 800px) and (max-width: 480px) {
+    .body > p,
+    .body > ul {
+        margin: 0.5em 0;
+        }
+    }
+/**
+    On mobile device, the on-screen keyboard may take up
+    so much space that it overlaps the content being edited.
+    The rule below makes it possible to scroll the edited
+    content within view.
+*/
+:root.mobile {
+    overflow: auto;
+    }
+:root.mobile body {
+    min-height: 600px;
+    }

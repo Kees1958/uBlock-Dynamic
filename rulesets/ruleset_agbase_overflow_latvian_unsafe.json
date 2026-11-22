@@ -1,0 +1,73 @@
+[
+  {
+    "id": 39,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ruutu.fi"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 54,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tv3play.skaties.lv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||mssl.fwmrm.net/libs/adm/*/linktag2.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 84,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "caid"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "requestDomains": [
+        "stream.broadpeak.io"
+      ],
+      "urlFilter": "^caid=",
+      "initiatorDomains": [
+        "go3.ee",
+        "go3.lt",
+        "go3.lv"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

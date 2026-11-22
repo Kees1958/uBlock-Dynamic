@@ -1,0 +1,31 @@
+/* ══════════════════════════════════════════════════════════════
+   1. BLOCK NOTICE  —  icon left, text right, centred on the page
+   Layout only: colours and fonts come from css/default.css and
+   css/common.css (the shared page tokens), so both themes are
+   already covered by their verified values (A8/A9).
+   ══════════════════════════════════════════════════════════════ */
+:root {
+    --block-gap: 48px;          /* space between the icon and the text */
+    --block-max-width: 720px;   /* keeps the text block readable on wide screens */
+    --block-top: 20vh;          /* vertical position of the notice */
+    }
+#blockNotice {
+    align-items: center;
+    display: flex;
+    gap: var(--block-gap);
+    margin: var(--block-top) auto 0;
+    max-width: var(--block-max-width);
+    padding: 0 var(--block-gap);
+    }
+#blockIcon {
+    flex-shrink: 0;
+    }
+#blockText h1 {
+    margin: 0 0 0.5em;
+    }
+#blockText p {
+    margin: 0 0 0.75em;
+    }
+#blockText button {
+    margin-top: 0.5em;
+    }

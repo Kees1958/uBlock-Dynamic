@@ -1,0 +1,81 @@
+[
+  {
+    "id": "ruleset_badfilter_quickfixes",
+    "file": "rulesets/ruleset_badfilter_quickfixes-scriptlets.js"
+  },
+  {
+    "id": "ruleset_annoyances",
+    "file": "rulesets/ruleset_annoyances-scriptlets.js"
+  },
+  {
+    "id": "ruleset_adguard_base",
+    "file": "rulesets/ruleset_adguard_base-scriptlets.js",
+    "entityFile": "rulesets/ruleset_adguard_base-scriptlets-entity.js"
+  },
+  {
+    "id": "ruleset_adguard_dutch",
+    "file": "rulesets/ruleset_adguard_dutch-scriptlets.js"
+  },
+  {
+    "id": "ruleset_adguard_german",
+    "file": "rulesets/ruleset_adguard_german-scriptlets.js",
+    "entityFile": "rulesets/ruleset_adguard_german-scriptlets-entity.js"
+  },
+  {
+    "id": "ruleset_adguard_french",
+    "file": "rulesets/ruleset_adguard_french-scriptlets.js",
+    "entityFile": "rulesets/ruleset_adguard_french-scriptlets-entity.js"
+  },
+  {
+    "id": "ruleset_adguard_spanish",
+    "file": "rulesets/ruleset_adguard_spanish-scriptlets.js",
+    "entityFile": "rulesets/ruleset_adguard_spanish-scriptlets-entity.js"
+  },
+  {
+    "id": "ruleset_easylist_italian",
+    "file": "rulesets/ruleset_easylist_italian-scriptlets.js"
+  },
+  {
+    "id": "ruleset_easylist_polish",
+    "file": "rulesets/ruleset_easylist_polish-scriptlets.js"
+  },
+  {
+    "id": "ruleset_easylist_portuguese",
+    "file": "rulesets/ruleset_easylist_portuguese-scriptlets.js",
+    "entityFile": "rulesets/ruleset_easylist_portuguese-scriptlets-entity.js"
+  },
+  {
+    "id": "ruleset_easylist_latvian",
+    "file": "rulesets/ruleset_easylist_latvian-scriptlets.js"
+  },
+  {
+    "id": "ruleset_hungarian",
+    "file": "rulesets/ruleset_hungarian-scriptlets.js"
+  },
+  {
+    "id": "ruleset_easylist_czech_slovak",
+    "file": "rulesets/ruleset_easylist_czech_slovak-scriptlets.js"
+  },
+  {
+    "id": "ruleset_easylist_nordic",
+    "file": "rulesets/ruleset_easylist_nordic-scriptlets.js"
+  },
+  {
+    "id": "ruleset_easylist_bulgarian",
+    "file": "rulesets/ruleset_easylist_bulgarian-scriptlets.js",
+    "entityFile": "rulesets/ruleset_easylist_bulgarian-scriptlets-entity.js"
+  },
+  {
+    "id": "ruleset_adguard_antiadblock",
+    "file": "rulesets/ruleset_adguard_antiadblock-scriptlets.js",
+    "entityFile": "rulesets/ruleset_adguard_antiadblock-scriptlets-entity.js"
+  },
+  {
+    "id": "ruleset_english_outside_top1m",
+    "file": "rulesets/ruleset_english_outside_top1m-scriptlets.js"
+  },
+  {
+    "id": "ruleset_antiadmiral",
+    "file": "rulesets/ruleset_antiadmiral-scriptlets.js"
+  }
+]

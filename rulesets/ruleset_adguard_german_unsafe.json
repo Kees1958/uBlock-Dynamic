@@ -1,0 +1,276 @@
+[
+  {
+    "id": 1089560,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||stern.de/resource/themes/stern/vendor/msg-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1913482,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cdntrf.com/tarnkappe-info.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 804721,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "quermania.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||s.d.adup-tech.com/ads/display.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 830281,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sport1.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||asadcdn.com/adlib/pages/sport1.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 192074,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "xnxx-sexfilme.com"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||twincdn.com/video/susilive/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1710215,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "media"
+      ],
+      "urlFilter": "||pmdipads-a.akamaihd.net/*/watchbox/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1988894,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vidapi*.threepi.de/storage*/media^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1959745,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "spiegel.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||widgets.outbrain.com/outbrain.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 18596,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "beeg-pornos.com",
+        "deinesexfilme.com",
+        "deutscherporno.biz",
+        "einfachtitten.com",
+        "gutesexfilme.com",
+        "halloporno.net",
+        "hd-pornos.info",
+        "hd-sexfilme.com",
+        "hdpornos.net",
+        "herzporno.com",
+        "kornhub.co",
+        "lesbenhd.com",
+        "meinyouporn.com",
+        "nursexfilme.com",
+        "pornhub-sexfilme.net",
+        "pornhutdeutsch.com",
+        "pornoaffe.net",
+        "pornodavid.com",
+        "pornoente.tv",
+        "pornofisch.com",
+        "pornohammer.com",
+        "pornohans.com",
+        "pornohirsch.net",
+        "pornohutdeutsch.net",
+        "pornojenny.com",
+        "pornoklinge.com",
+        "pornoleon.com",
+        "pornolisa.com",
+        "pornoritze.com",
+        "pornoschlange.com",
+        "pornosusi.com",
+        "pornotanja.com",
+        "pornotom.com",
+        "pornovideos-hd.com",
+        "pornozebra.com",
+        "sexente.com",
+        "sexfilme-gratis.com",
+        "sexfilme24.org",
+        "sexhamster.biz",
+        "sexvideos-gratis.com",
+        "sexvideos-hd.com",
+        "tube8-pornos.com",
+        "xnxx-porno.com",
+        "xnxx-pornos.xxx",
+        "xnxx-sexfilme.com"
+      ],
+      "urlFilter": "||twincdn.com/video/suslive/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 807005,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "toggo.de"
+      ],
+      "urlFilter": "||ccstatic.toggo.de/cc-static-files/bumper-video/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 117243,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "toggo.de"
+      ],
+      "urlFilter": "||flashtalking.com^*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 519391,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "toggo.de"
+      ],
+      "urlFilter": "||smartclip.net/creatives/uploads/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 862368,
+    "priority": 10000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mtv.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/pal/sdkloader/pal.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

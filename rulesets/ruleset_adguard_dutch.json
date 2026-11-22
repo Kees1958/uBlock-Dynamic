@@ -1,0 +1,6194 @@
+[
+  {
+    "id": 277089,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "-reclameplaatjes/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1744445,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/adbron.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1952360,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/adtwee/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1138443,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/adv_tekstlinks.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1159548,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/adverteerders/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1433426,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/advertentie-banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 221992,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "excludedInitiatorDomains": [
+        "anzeigen-aufgabe-alpha.de",
+        "anzeigen-aufgabe-beta.de",
+        "anzeigen-aufgabe-test.de",
+        "araba.nl",
+        "rd.nl"
+      ],
+      "urlFilter": "/advertentie.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 826231,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "excludedInitiatorDomains": [
+        "anzeigen-aufgabe-alpha.de",
+        "anzeigen-aufgabe-beta.de",
+        "anzeigen-aufgabe-test.de",
+        "araba.nl",
+        "rd.nl"
+      ],
+      "urlFilter": "/advertentie/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 471537,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/advertentie1.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1481513,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/advertentie2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 683205,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/advertentie_head.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 380902,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/advertentieblokje120x20.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 77806,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/advertentieblokje300x20.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 59967,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/advertenties.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1062416,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/advertenties/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 224157,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/bannerlookup.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1537335,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/big_reclames/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1523961,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/bolcom-partnerprogramma-wordpress-plugin/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1662940,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/img/recl/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1117262,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/mediahuis-ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 490874,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/nmc/adv/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1023042,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/pebble-adhese.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 340734,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/prikbordadvertentie_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 45977,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/reclame-extra.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 79420,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/reclame-nieuws.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1283396,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/reclame2.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 679916,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/reclamebanners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 388322,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/small_reclames/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1816673,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/tekst_advertentie_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 853429,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/topadvertentie.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 250424,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "://promotie.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1259733,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "_advertentie300x250_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 809608,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "_advertentieleaderboardhome.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 748350,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "start-player.npo.nl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": ".nl/adurl/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 883630,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||bnpparibasmarkets.nl/widget/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 308348,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bol.com/nl/upload/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1901519,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bol.com/nl/upload/partnerprogramma/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 615095,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||centraal.helpmij.nl/images/nieuwsbrief/nod32-colofon.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 994403,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "feyenoord.nl"
+      ],
+      "urlFilter": "||cloudfront.net/-/media/6-parnerships/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1079256,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "feyenoord.nl"
+      ],
+      "urlFilter": "||cloudfront.net/assets/images/partners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 338873,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eredivisie.nl"
+      ],
+      "urlFilter": "||cloudfront.net/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1530210,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||feenstra-internetservices.nl/?_dnid=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 50010,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||flexwebhosting.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1318814,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||fx.nl/_ext/widget/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1560804,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||infotalia.com/worktalia_promo_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1376905,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||jobat.be/extra/trackuityhn/ticker_new.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1106178,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||jobfish.nl/widget/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1428790,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mmcdn.nl/tags/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1876292,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "viafora.nl"
+      ],
+      "urlFilter": "||ouders.nl/uploads/alt/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1333446,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "intermediair.nl"
+      ],
+      "urlFilter": "||pexi.nl/dpos/widget-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1911918,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||pornokartel.nl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 514529,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pubble.nl/content.svc/getadcollection?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1803407,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||recreatief.nl/kerstarrangementen.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 644699,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||s-bol.com/nl/upload/partnerprogramma/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 471413,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||search-result.com^*/klokad2.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 192025,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sedproductions.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 561536,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||seks.com/img/bnr.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1777612,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||seksbuddy.nl/img/frontend/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1213130,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||sociaaldigitaal.nl/img/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1639190,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||stepstone.be/*?event=widgettool.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1117213,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||strafrechtadvocaten.nl/media/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 750855,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||swpportal.com/upload/squarebanners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 188401,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "albrandswaardsdagblad.nl",
+        "barendrechtsdagblad.nl",
+        "dagblad010.nl",
+        "dagblad070.nl",
+        "goudsdagblad.nl",
+        "ridderkerksdagblad.nl",
+        "rijswijksdagblad.nl",
+        "sgxl.nl",
+        "startpagina.nl",
+        "voorburgsdagblad.nl",
+        "zoetermeersdagblad.nl"
+      ],
+      "urlFilter": "||viralize.tv/display/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 891496,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||wertuipsertj34.azurewebsites.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 186647,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nzbserver.com"
+      ],
+      "urlFilter": "||widget.vpnnederland.nl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1464287,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "puuropreis.nl"
+      ],
+      "urlFilter": "||widgets.skyscanner.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1598757,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "agf.nl",
+        "bpnieuws.nl",
+        "groentennieuws.nl",
+        "uiennieuws.nl"
+      ],
+      "urlFilter": "||windows.net/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 424835,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/www.bol.com/nl/upload/partnerprogramma/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 465950,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||xmissy.nl/admnfiles1809/sinclub/freechatbanner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1630289,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||123video.nl^*/300x100_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1965454,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||1twente.nl/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 120731,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||24cars.nl/api/advertise-deliver/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1463336,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||2link.be/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 674334,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||aafm.nl/cms/wp-content/themes/omroepalmelo/img/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 330363,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||abcsuriname.com/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 762552,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||adodenhaag.nl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1362199,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||agconnect.nl/sites/ag/files/styles/partner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 919558,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||am-forum.nl/upload/logo_elektrodump.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1039674,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||antilliaansdagblad.com/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 300495,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||apintie.sr/bannerz/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1696492,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||autosport.nl/images/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1983273,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||autosport.nl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1932830,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||baarsclassicrock.nl/wp-content/uploads/*/banner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1710728,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bdsm-vrienden.nl/sb_data/modules/mod_aav/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1563917,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bdsmgirl.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 585538,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bdsmgirl.nl^*/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1217369,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||belgiancycling.be^*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 895000,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||belgiancycling.be^*/logo%27s%20partners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 100272,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bloovi.be/frontend/files/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1938105,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bodemvondstenwereld.nl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1042439,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||boek9.nl/sites/default/files/advertisements/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1048119,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||boek9.nl/sites/default/files/rotating-banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1682706,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||bol-an.nl/wp-content/uploads/*/adv_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1787551,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||brandweerspotters.nl/modules/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 980723,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||buzzbie.nl/uploads/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1175873,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn-tmo.nl^*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 994369,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn-webcam-harlingen.nl/adv/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1302181,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||chatmetvreemden.be/static/html/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1152332,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||chatmetvreemden.nl/static/html/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1205447,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||christelijknieuws.nl^*/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1991331,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ciaotutti.nl/wp-content/uploads/banner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1436667,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||clubbrugge.be^*/partner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 971383,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||coastline945fm.nl/cache/partners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 194961,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||coastlinefm.nl/cache/partners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 895245,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cryptobenelux.com/wp-content/uploads/*-banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1002048,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cryptobenelux.com/wp-content/uploads/*-banner.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 868561,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cryptobenelux.com/wp-content/uploads/*/banner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 523982,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cryptoprijzen.com/cryptoprijzen-widget/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 641570,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||debestevpn.nl/wp-content/*-banner.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 749584,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||decibel.nl/wp-content/uploads/*/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1714792,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||dewereldmorgen.be/wp-content/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1737693,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||digitaalburg.com/rn02/wp-content/uploads/*/cornetanimationa-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 459940,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||digitaalburg.com/rn02/wp-content/uploads/*/merkx11.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1914733,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||digitaalburg.com/rn02/wp-content/uploads/*/roel.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 774369,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||digitaalburg.com/rn02/wp-content/uploads/*/uitwaard21.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 658654,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||digitaalburg.com/rn02/wp-content/uploads/*/vacature-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 298965,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||digitaalburg.com/rn02/wp-content/uploads/*/vertiadvies_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1168509,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||digitaalburg.com/rn02/wp-content/uploads/*/webbanner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 899985,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||dolcevia.com^*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 561315,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||duurzaam-actueel.nl^*banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1982584,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||edelmetaal-info.nl/cdfund-336x280.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1821365,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||edelmetaal-info.nl/wp-content/uploads/images/goudpensioen/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 184120,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||eredivisie.nl/images/logos/partners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 879548,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||excellentfm.nl/images/aanbieding/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1292339,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fanclubbarcelona.nl/viewfile/mainbanner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 717865,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||farmaline.be/assets/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 356789,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fcupdate.nl/js/adslot.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 656910,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fcutrecht.net/img/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1229569,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||flirtmee.nl/img/160x70_sponsor-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1335972,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||floranews.com/img/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1140294,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fonkmagazine.nl/adds/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1672161,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fonkonline.nl/adds/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1371245,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||forum.spaarinformatie.nl/si-info.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 746482,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||genemuidenactueel.nl^*banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 891917,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gic.nl/uploads/fckconnector/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 57695,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gigantfm.nl/upload/20170420110645812.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1370658,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gigantfm.nl/upload/20210730122903794.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 414980,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gigantfm.nl/upload/autoonderdelen24_1.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1150320,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gigantfm.nl/upload/onderdelenshop.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1465115,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||goedkoopstekeukensduitsland.nl/wp-content/uploads/*/i-kook-banner.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 382450,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||goedkoopstekeukensduitsland.nl/wp-content/uploads/*/keuken-ontwerp-aan-huis.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 884056,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||goedkoopstekeukensduitsland.nl/wp-content/uploads/*/keukenplaats.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 733200,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||golf.be/files/bannerimage/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1544032,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gratissextube.be/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1957262,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||greenkeeper.nl/upload/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1453270,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||greenkeeper.nl/upload/relaties/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1765808,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||groentennieuws.nl^*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1475911,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||halstadcentraal.nl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1639523,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||handbalstartpunt.nl/content/schoonkapje.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 912622,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||handbalstartpunt.nl/images/mizuno-small.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 294092,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hoekschnieuws.nl/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1063566,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hoekschnieuws.nl/wp-content/uploads/*/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1034767,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hotradiohits.nl/image/picture/*_banner.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1009512,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||htforum.nl/yabbse/*-banner2.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 64923,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||htforum.nl/yabbse/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1113139,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||htforum.nl/yabbse/topframe_v3.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1084958,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||iex.nl/uploads/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 144312,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||katholiek.nl/wp-content/uploads/*/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 998638,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kavelplatform.nl/assets/uploads/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1642518,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kilroynews.net^*banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1523587,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||klokradio.nl/wp-content/uploads/*/adv-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1130885,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||kranenwebsite.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1932638,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||landenweb.nl/imgboeking/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 908763,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||linqmedia.nl/cwm/fm/userfiles/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1828405,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||loemedia.nl/wp-content/uploads/*/bannerpruisschilderwerken-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1827778,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||loemedia.nl/wp-content/uploads/*/hemabannergroot-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 140429,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lokaleomroepzeewolde.nl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 834450,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||luister.nl/wp-content/uploads/*/banner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1537640,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||maarkelsnieuws.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1770198,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||maaslandradio.nl/wp-content/uploads/*/autodoc.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1332828,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||maaslandradio.nl/wp-content/uploads/*/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 358537,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||maaslandradio.nl/wp-content/uploads/*/hekwerkland.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1779778,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mandelnieuws.be^*/sponsors/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 857391,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mannennieuws.nl/wp-content/uploads/*-banner.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1109240,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||marktplaats.nl/*/api/complementary-listings?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 324658,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||meerdangewenst.nl^*/sponsors/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 115825,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||metalfan.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 471219,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||midvliet.nl/images/advertenties-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1141691,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mo.be/sites/default/files/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1467375,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||motocrossplanet.nl/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 412144,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||motocrossplanet.nl/wwwuploads/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1245281,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||motokicx.com/wp-content/uploads/*/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1538888,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||motokicx.com/wp-content/uploads/*/website-ad-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 978456,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||netonline.be/slices/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1394687,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nevobo.nl^*/sponsor/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 701685,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||niburu.co/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 504601,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nieuwsopbeeld.nl/wp-content/uploads/*/advertentie-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 522297,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nieuwsuitnijmegen.nl/gfx/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 511434,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nieuwsuitnijmegen.nl/uploads/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 789504,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||noordkopcentraal.nl^*/banner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1466055,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||notebookcheck.nl/fileadmin/sonstiges/amaz_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1248422,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nrc.nl/tag/tag.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 224826,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||omroeppenm.nl^*/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 145398,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||onderwijsland.com/files/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 167744,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||onderwijsland.com/files/partners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 642889,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||onlinecorrectie.nl/cnc/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1122596,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ontdek-amerika.nl/marketing/bartsbanner.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1159492,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||oogtv.nl/wp-content/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 226615,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||oops.nl/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1817842,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||openingsurengids.be/includes/js/checkblockv2.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 491875,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||openingsurengids.be/template/images/publi/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1502746,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||opwindend.net/promotie/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 712102,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pdd-nos.nl/footer.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1487771,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||persberichten.com/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1657729,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||persberichten.com/images/marcommit/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1785785,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||popinstituut.nl/wp-content/uploads/2014/02/huren.nl",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1181713,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pornokartel.nl/wp-content/uploads/*/wp-script-leaderboard.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1822375,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||promootjesite.nl/images/affliatebanner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 600456,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||propertynl.com/media/organization/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1228026,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||puurnaturisme.nl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 769684,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||racexpress.nl/advertising/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 4341,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||racingnews365.nl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 593116,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radioacacia.nl/sponsoren/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1995032,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radioeenhoorn.nl/images/maxaro-badkamers-tegels.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 279957,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radiolelystad.nl/images/stories/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1927591,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radioluisteren.fm/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1527227,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radionl.fm/wp-content/uploads/*/maxiaxi_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 664487,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radiostadmontfoort.nl/cms/img/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 400350,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||radiovisie.eu/wp-content/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 705838,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||railhobby.nl/wp-content/uploads/*_banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 687485,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rd.nl/deliver.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1546175,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "topgear.nl",
+        "voetbalverslaafd.nl"
+      ],
+      "urlFilter": "||resources.planetnine.com/scripts/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 831550,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||retaildetail.be/sites/default/files/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1847789,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||retaildetail.nl/sites/default/files/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 668233,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rickfm.nl/cwm/fm/userfiles/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1640222,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rivierenland-radio.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 670164,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rtvdordrecht.nl/cwm/fm/userfiles/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 400054,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rtveen.nl/wp-content/uploads/*-banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1549672,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rtveen.nl/wp-content/uploads/*/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1235767,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rtvlansingerland.nl/wp-content/uploads/*/zorgvilla.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 123207,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rtvmaastricht.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 852751,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||rtvnof.nl/prowurk/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1463544,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||schie.nu/images/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1702854,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||schuttevaer.nl/partnersites/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 941251,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||seksverhalen.org/telefoonsex.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1599599,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||seksverhalen.org/vluggertjes.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 151549,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sexchatlounge.nl/bannerlinks.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1475691,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sexchatlounge.nl/bannerrechts.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1662449,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sexervaringendelen.nl/porno/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1690131,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||simone.nl/wp-content/uploads/*-banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 177702,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||simone.nl/wp-content/uploads/*-besteonderdelen.nl-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 912769,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||simone.nl/wp-content/uploads/*-onderdelenexpert.nl-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1891969,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||simone.nl/wp-content/uploads/*/tijdelijkkkkk.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1601306,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||solarmagazine.nl/u/edwin/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1461933,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||spreekbuis.nl/wp-content/uploads/*-banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1086179,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||spreekbuis.nl/wp-content/uploads/*/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1070583,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||srherald.com/wp-content/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 245325,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||streamwijzer.be/wp-content/uploads/*-banner.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 197579,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||te-les-koop.nl/images/b_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 849401,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||techgaming.nl/image_uploads/sponsored/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 203644,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tennisplaza.be/wp-content/uploads/*/tennisdirect-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1209418,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tennisvlaanderen.be/documents/*/19sponsorblok-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 499373,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tennisvlaanderen.be/documents/*/21sponsorblok-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1237587,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tijd.be/ad/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 540650,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||touretappe.nl/images/topposblock.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 428927,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||touretappe.nl/images/xtra/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1831715,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tpo.nl/broodplank/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 791614,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tradeidee.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 796574,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||transport-online.nl/site/includes/uploads/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 514124,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tvvisie.be/textads/textads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1195007,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||twentefm.nl/directcast/custom/rtvnot/playout/commercials/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1372865,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||uecl-voetbal.nl/derden/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1867730,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||uel-voetbal.nl/derden/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1327442,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||uitslagen.nl/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1299655,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||unity.nu^*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 456973,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vagina.nl/fish-hooks/fetch.json",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1679035,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vbro.be/wp-content/uploads/*/autoonderdelen24_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 179078,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||verkeerplaza.nl/js/banner.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 531068,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||visserijnieuws.nl/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 593059,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vitesse.nl/assets/img/layout/etoro-logo.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1617504,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vitesse.nl^*_sponsors_footer.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1303405,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vives.nl/wp-content/uploads/*-banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 753452,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||vives.nl/wp-content/uploads/banner_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1118422,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||voetbalkrant.com/images/pub/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 624951,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||voetbalnederland.nl/img/bravo.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 559945,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||voetbalrotterdam.nl/wp-content/uploads/*/soccerdealbanner1170.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1704613,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||volleybal.nl/uploads/images/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1598456,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||volleybal.nl/uploads/images/logos/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 501871,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "koken.vtm.be"
+      ],
+      "urlFilter": "||vtm.be^*-achtergrond-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1336831,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "koken.vtm.be"
+      ],
+      "urlFilter": "||vtm.be^*-header-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1153554,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||waarzo.nl/imagestore/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 663806,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||waarzo.nl/imagestore/site-banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 821976,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||waldnet.nl/images/ac/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1065636,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wanttoknow.nl^*banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 578107,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||watersport-tv.nl/content/31400/pages/clnt/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 836684,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-aalsmeer.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1019850,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-aalsmeer.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 894363,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-airport.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 827923,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-airport.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1780824,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-binnenvaart.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 379550,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-binnenvaart.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 313629,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-blokzijl.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1738197,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-blokzijl.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 137806,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-brandaris.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 642548,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-brandaris.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1570192,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-delfzijl.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1576870,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-delfzijl.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 250059,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-denhelder.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 482307,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-denhelder.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 893402,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-denoever.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 601176,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-denoever.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 32091,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-dokkum.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 981203,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-dokkum.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1612851,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-dordrecht.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1327643,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-dordrecht.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1155747,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-enkhuizen.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1621067,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-enkhuizen.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 707077,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-friesemeren.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1003245,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-friesemeren.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1954327,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-grou.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1590455,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-grou.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1640944,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-harlingen.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1174150,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-harlingen.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 771831,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-havenijmuiden.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1033111,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-havenijmuiden.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 958021,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-hindeloopen.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1531693,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-hindeloopen.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1542894,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-hoekvanholland.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1765268,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-hoekvanholland.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1078752,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-kampen.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1681526,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-kampen.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 958614,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-lauwersoog.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 94636,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-lauwersoog.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1774698,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-leeuwarden.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1249832,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-leeuwarden.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 639756,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-lelystad.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 426250,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-lelystad.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1130532,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-maassluis.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 881234,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-maassluis.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1346374,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-maastricht.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 706268,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-maastricht.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1528684,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-marken.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1995498,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-marken.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 840806,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-monnickendam.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 420476,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-monnickendam.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1065222,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-rotterdam.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1353116,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-rotterdam.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1564764,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-sneek.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 13530,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-sneek.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1497718,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-terneuzen.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1748108,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-terneuzen.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 208825,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-vlaardingen.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1924569,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-vlaardingen.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1415238,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-volendam.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1797468,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-volendam.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1139642,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-workum.nl//media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1964953,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-workum.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1295580,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-zaanzicht.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 878298,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-zaanzicht.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1026493,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-zoutkamp.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1323381,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-zoutkamp.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 491832,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-zwartsluis.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1381502,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcam-zwartsluis.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 694097,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcams-ameland.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 859329,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcams-ameland.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 986600,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcams-scheveningen.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1659118,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcams-scheveningen.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1980801,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcams-texel.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1711601,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcams-texel.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1749003,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcams-vlissingen.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 930627,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcams-vlissingen.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1998432,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcamschiermonnikoog.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1249526,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcamschiermonnikoog.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 891740,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcamvlieland.nl/media/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 492890,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webcamvlieland.nl/media/banners2/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 71392,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||webstick.nl/images/images-ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1841550,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wereldstopcontacten.nl/wp-content/uploads/*/image-aff-nl.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1188731,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wieringernieuws.nl/gfx/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 451764,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wijchensnieuws.nl/uploads/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1899367,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wildfm.nl/wp-content/uploads/*/thumbnail_image002.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1867125,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||willem-ii.nl/banner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1576937,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/amsterdamactueel.nl/wp-content/uploads/*/728x60_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 774771,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/romagazine.nl/14nwsite/wp-content/uploads/2021/07/amstelveen.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 195700,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/romagazine.nl/14nwsite/wp-content/uploads/2021/07/coordinatoromgevingsvergunningen-rijksoverheid-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1678528,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/romagazine.nl/14nwsite/wp-content/uploads/2021/07/enschede.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 323470,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/romagazine.nl/14nwsite/wp-content/uploads/2021/07/rijksoverheid-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1823253,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/romagazine.nl/14nwsite/wp-content/uploads/2021/07/seniorprojectleideralmelo.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1520648,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/www.appletips.nl/wp-content/uploads/amacdeals.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 874599,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/www.appletips.nl/wp-content/uploads/cnmx.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1614596,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/www.appletips.nl/wp-content/uploads/upgreatest1.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1479688,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/www.regionoordkop.nl/wp-content/uploads/*/banner-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 453167,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/www.regionoordkop.nl/wp-content/uploads/*/bdijknov2016336x280.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1901176,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wp.com/www.regionoordkop.nl/wp-content/uploads/*/costa.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 643286,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||yachtfocus.com^*/bnr/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1194266,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zilverengoudkopen.nl/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1177760,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zoekhulp.nl/img/bnr-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1979428,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zwartewaterfm.nl/images/sponsorenzwartewaterfm.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1551157,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autoblog.bbvms.com",
+        "omroepbrabant.nl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||2mdn.net/instream/html5/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1863015,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vi.nl"
+      ],
+      "urlFilter": "||ads.nextday.media/prebid/jw-video/7.43.0.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 114079,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "crime-nieuws.nl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||ads.viralize.tv/display/?zid=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1606958,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sportnieuws.nl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||advertising-module.api.dpgmedia.cloud/video/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1303692,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radioluisteren.fm"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||aka.spotxcdn.com/integration/ados/v1/ados.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 735255,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autoblog.bbvms.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.bluebillywig.com/scripts/prebid/*/bluebillywig_pbjs.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1225604,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radioluisteren.fm"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.spotxcdn.com/integration/easi/v1/easi.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1281202,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||files.skoften.net/website/lib/vjs/plugins/ads/videojs.ads.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1590806,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "crime-nieuws.nl",
+        "dailybuzz.nl",
+        "goplay.be",
+        "skoften.net",
+        "sportnieuws.nl",
+        "vtm.be",
+        "weerplaza.nl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 949658,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1527304,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "spelletjes.nl"
+      ],
+      "urlFilter": "||improvedigital.com/pbw/headerlift.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 715297,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radioluisteren.fm"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||js.spotx.tv/ados/v1/106185.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1887565,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dailybuzz.nl",
+        "radio.nl",
+        "welingelichtekringen.nl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||massariuscdn.com/pubs/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 981226,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vkmag.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||mmcdn.nl/tags/vkmag.com/pagina.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 860689,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "crime-nieuws.nl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||monetize-static.viralize.tv/viralize_player_content.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 265024,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radioluisteren.fm"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||search.spotxchange.com/js/spotx.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 988465,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radioluisteren.fm"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||sync.search.spotxchange.com/partner?source=easi",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1927352,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "flirtmee.nl"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||tools.vpscash.nl/datingv3/docs/plug_and_play/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 938053,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "2dehands.be"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||images.2dehands.com/api/v1/listing-twh-p/images/ad/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1690083,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||showmodeluitverkoop.nl/upload/advertentie/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 608741,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||sliedrecht24.nl/wp-content/uploads/2022/02/banner-300x250-1.jpg.webp",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 545775,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||te-les-koop.nl/advertenties.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1170026,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||zilverengoudkopen.nl/banners/header.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1656517,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||zilverengoudkopen.nl/banners/onder.jpg",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 435393,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||vinatera.be/wp-content/uploads/*_300x600.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1773432,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||h3v9p8x2q1r7-agckaeh6g2ehcaes.*.azurewebsites.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 733721,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "computerworld.nl",
+        "webwereld.nl"
+      ],
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "/ad_pics/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1780521,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||tweakers.net/i^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1769964,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hardware.info"
+      ],
+      "urlFilter": "||content.hwigroup.net/images^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 773124,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||waldnet.nl/assets/js/abd.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1550543,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "webcams-vlissingen.nl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 507689,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "538.nl",
+        "hartvannederland.nl",
+        "nieuwsvandedag.nl",
+        "vandaaginside.nl"
+      ],
+      "urlFilter": "||assets.prod.webx.talpa.digital/ad/view/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1730050,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "filmvandaag.nl"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 463252,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||looopings.nl/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 81038,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "webcam-binnenvaart.nl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 964440,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vtmgo.be"
+      ],
+      "urlFilter": "||5e124.v.fwmrm.net/ad/g/1?prof=385316%3adpg_csai_html5&nw=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 97321,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "webcams-texel.nl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1543134,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tweakers.net"
+      ],
+      "urlFilter": "||aa.tweakers.nl/json",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 316613,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be",
+        "play.tv"
+      ],
+      "urlFilter": "||pubads.g.doubleclick.net/ondemand/*/content/*/vid/*/streams",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1465624,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be",
+        "play.tv"
+      ],
+      "urlFilter": "||pubads.g.doubleclick.net/ondemand/*/content/*/vid/*/streams/*/time-events.json",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 428344,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be",
+        "play.tv"
+      ],
+      "urlFilter": "||dai.google.com/ondemand/dash/content/*/time-events.json",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1038474,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be",
+        "play.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 725323,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be",
+        "play.tv"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1483961,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be",
+        "play.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/omsdk/releases/live/omweb-v1.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 175269,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||sdk.privacy-center.org^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1982776,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "goplay.be"
+      ],
+      "urlFilter": "||pubads.g.doubleclick.net/gampad/ads?*&output=vast&",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 893947,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "play.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/*gpt",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1104827,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||goplay.be/js/sourcepoint/msg?v=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 669237,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||ab.tweakers.nl/pool/lib/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1562517,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vtm.be"
+      ],
+      "urlFilter": "||videoplayer.dpgmedia.net/*/ad_smartads_.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 489625,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||knack.be/js/responsive/rmgadcheck.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1303602,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||indeleiderstrui.nl/media/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1984009,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vtm.be"
+      ],
+      "urlFilter": "||videoplayer.persgroep.be/*/ad_smartads_.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 8781,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "embed.kijk.nl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||embed.kijk.nl/talpa-jw-skin/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1771276,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||static.webwereld.nl/javascripts/advert.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 855173,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "player.medialaancdn.be",
+        "vtm.be"
+      ],
+      "urlFilter": "||v.fwmrm.net/ad/g/1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1518704,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||static.buienradar.nl/resources/js/advertisement.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1663213,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||static.fd.nl/assets/fdmg-ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1758684,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ad.nl"
+      ],
+      "urlFilter": "||cdn.optoutadvertising.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1391744,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||resources.planetnine.com/scripts/f1maximaal.nl.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 366352,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "matele.be"
+      ],
+      "urlFilter": "||ssl.p.jwpcdn.com/player/v/*/vast.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 377979,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "538.nl",
+        "hartvannederland.nl",
+        "kijk.nl",
+        "nieuwsvandedag.nl",
+        "radio10.nl",
+        "vandaaginside.nl"
+      ],
+      "urlFilter": "||ssl.p.jwpcdn.com/player/v/*/freewheel.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 48320,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zeilen.nl/builds/zeilen/assets/taboola-page-view-id-*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 658689,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||service-api.nl/api/v2/ad?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1232880,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gp33.nl/assets/common/ads-helper.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 307158,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||azurewebsites.net/*?player_*[max_ad_dur]=*[adslot]=*&vpaid=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1077293,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||boodschappen.nl/wp-json/boodschappen/v1/banners/get_banners",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 731593,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||boodschappen.nl/wp-json/boodschappen/v1/banners/get_advertorial",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 66824,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||boodschappen.nl/wp-json/boodschappen/v1/banners/get_native_banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1995360,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "npo.nl"
+      ],
+      "urlFilter": "||cdn-ster-nl.akamaized.net/sterad_*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 495363,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nos.nl"
+      ],
+      "urlFilter": "||adconfig.ster.nl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 796628,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||hfg.iuknyw5evnygw9v.nl/*?*=omroepzeeland&direct=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 74134,
+    "priority": 10001,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "omroepzeeland.nl"
+      ],
+      "urlFilter": "||2mdn.net/instream/html5/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 134200,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||biernet.nl/site/plugins/bja_new/redirect.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 586626,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.aa.onstuimig.nl/mega-publishers/nieuwspaal.nl.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 51559,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||e*.knack.be/rest/dialogues/files/*/banner_notificaties_appinstall",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1217178,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tweakers.net/*/build/banners.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1201191,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||itnijs.frl/wp-content/uploads/2017/10/banneritnijs",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1879441,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nzbserver.com"
+      ],
+      "urlFilter": "||widget.vpnnederland.nl/vpnnederland-widget.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1889334,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||almere-nieuws.nl/banners_*.html",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1773577,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||cdn.ster.nl/banners^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 473828,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||handbalstartpunt.nl/*/uploads_filemanager/banner",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1776915,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||gic.nl/uploads/fckconnector/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1940547,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nnieuws.be/sites/default/files/banner-*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1978297,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||nnieuws.be/sites/default/files/*-300x300*.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1103194,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||oozo.nl/images/zzpbanner.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1736152,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mediareader.omroepwest.nl/gaslicht^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 148717,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||unity.nu/media/*/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1817037,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||topomania.net/sites/topomania.net/images/pacnum-promo.png",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 716018,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pornozot.com/js/compiled/exo-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1337978,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pornozot.com/js/compiled/custom-vendor.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1286066,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "allaboutphones.nl"
+      ],
+      "urlFilter": "||iframe.gsminfo.nl/*/populair-beknopt^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1086390,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kijk.nl"
+      ],
+      "urlFilter": "||bs.serving-sys.com/burstingpipe/adserver.bs",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1971558,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kijk.nl"
+      ],
+      "urlFilter": "||cdn.sbsnet.nl/creatives/assets/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1138490,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nl.express.live"
+      ],
+      "urlFilter": "||d33t3vvu2t2yu5.cloudfront.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1450936,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||diomerc.com/baner/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1870379,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||m.telegraaf.nl/static/lib/bva-widget.html?without-raid",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1338749,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||pcnltelecom.tdsapi.com/portal/iframe.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 44088,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kijk.nl"
+      ],
+      "urlFilter": "||serving-sys.com/*.mp4^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1762179,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||totaaltv.nl/upload/banner-sep-astrasat.gif",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 373575,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "moviemeter.nl"
+      ],
+      "urlFilter": "||content.adswag.nl/bcfeed/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1928080,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "puna.bbvms.com",
+        "puna.nl"
+      ],
+      "urlFilter": "||2mdn.net/instream/html5/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1251709,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "viraal.nl"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 364132,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vkmag.com"
+      ],
+      "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1742125,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vkmag.com"
+      ],
+      "urlFilter": "||tags.refinery89.com/vkmagcom.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1628622,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||mmcdn.nl/tags/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1644512,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||mmcdn.nl/tags/vkmag.com/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1248695,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||marktplaats.nl/link/advertenties/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1601159,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||markup.nieuwsblad.be/extra/assets/advertising/dfp-setup.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1090279,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||markup.nieuwsblad.be/extra/assets/advertising/prebid.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1357535,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "standaard.be"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 59328,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "standaard.be"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 33671,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||markup.standaard.be/extra/assets/advertising/dfp-setup.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1113191,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||markup.standaard.be/extra/assets/advertising/prebid.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 7768,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "qmusic.nl"
+      ],
+      "urlFilter": "||player.ooyala.com/static/*/ad-plugin/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 409989,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "urlFilter": "||kpn.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1301612,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "telegraaf.nl"
+      ],
+      "urlFilter": "||media.boomads.com/images^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 53210,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cinema.nl"
+      ],
+      "resourceTypes": [
+        "script",
+        "stylesheet"
+      ],
+      "urlFilter": "||publiekeomroep.nl^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1241639,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||videoplayer.persgroep.be/v*/player/ad_smartads_.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 582984,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "medialaancdn.be"
+      ],
+      "urlFilter": "||v.fwmrm.net/ad/g/1",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1669906,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||flair.be/js/default/*_jq.",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 307896,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "an1me.nl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 421287,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "an1me.nl"
+      ],
+      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 336525,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "31mag.nl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 706279,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myonlineradio.nl"
+      ],
+      "urlFilter": "||connect.facebook.net/en_us/fbevents.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 183696,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "myonlineradio.nl"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 841814,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "notebookcheck.nl"
+      ],
+      "urlFilter": "/nbc-ad*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1168863,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "notebookcheck.nl"
+      ],
+      "urlFilter": "/ads.*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 999935,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "notebookcheck.nl"
+      ],
+      "urlFilter": "||snigelweb-com.videoplayerhub.com/videoloader.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 405408,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "crnsgngrpj.nl",
+        "dntblckmpls.nl",
+        "mt67.net",
+        "nojazz.eu",
+        "publize.net",
+        "trickyrock.com",
+        "viadata.store",
+        "ads.nextday.media",
+        "advertising-cdn.dpgmedia.cloud",
+        "advertising-module.api.dpgmedia.cloud",
+        "go2.go2cloud.org",
+        "kjdsfjisdfjr23.azurewebsites.net",
+        "nextdaymedia-ads.s3.amazonaws.com",
+        "traffic.12flirt.com",
+        "aa.tweakers.nl",
+        "content1.pcmweb.nl",
+        "content1.pu.nl",
+        "content1.wasmachines.nl",
+        "content1.zoom.nl",
+        "content2.besteproduct.nl",
+        "content2.kieskeurig.nl",
+        "content2.pu.nl",
+        "content2.wasmachines.nl",
+        "content2.zoom.nl",
+        "preroll.omroepvenlo.nl",
+        "proxy.optoutadserving.com",
+        "cryptosplash.care",
+        "cryptobeneluxbanner.care",
+        "cdn.optoutadvertising.com",
+        "zsp1.ah.be",
+        "zsp1.ah.nl",
+        "x9t7g4m2qk2.azurewebsites.net",
+        "kjdsfjisdfjr23.azurewebsites.net",
+        "content2.nrc.nl",
+        "aa.hwigroup.com",
+        "ab.hwigroup.com",
+        "aa.tweakers.nl",
+        "ab.tweakers.nl",
+        "a.medialaancdn.be",
+        "https-filtering-check.adtidy.org"
+      ]
+    }
+  },
+  {
+    "id": 227031,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "2k19.nl",
+        "adrequest.net",
+        "adshim.com",
+        "adswag.nl",
+        "affilaxy.com",
+        "affiliatepartners.com",
+        "affiliateprogramma.eu",
+        "banner-online.nl",
+        "believe-the-hype.be",
+        "botndm.nl",
+        "cashpartners.eu",
+        "ds1.nl",
+        "dt51.net",
+        "dt71.net",
+        "gratis-neuken.com",
+        "nonstoppartner.net",
+        "online-banners.nl",
+        "optoutadvertising.com",
+        "sponsorkliks.com",
+        "static-dscn.net",
+        "tools-affil2.com",
+        "tools.islive.nl",
+        "travelads.be",
+        "vpscash.nl",
+        "xpartners.nl",
+        "adcdn.ster.nl",
+        "bannersimages.s-bol.com",
+        "partner.bol.com",
+        "partnerprogramma.bol.com",
+        "sp.dpgmedia.net",
+        "t.bazarow.com",
+        "pexi.nl",
+        "adconfigproxy.azurewebsites.net"
+      ],
+      "domainType": "thirdParty"
+    }
+  }
+]

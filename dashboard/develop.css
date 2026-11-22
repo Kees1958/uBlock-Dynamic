@@ -1,0 +1,146 @@
+/* ══════════════════════════════════════════════════════════════
+   1. ALLOW LIST PANE LAYOUT
+   ══════════════════════════════════════════════════════════════ */
+
+body[data-pane="develop"] {
+    height: 100vh;
+    }
+
+section[data-pane="develop"] {
+    display: none;
+    flex-grow: 1;
+    overflow: hidden;
+    }
+
+section[data-pane="develop"] > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    }
+
+section[data-pane="develop"] > div > * {
+    margin-bottom: 0;
+    margin-top: 1em;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   2. CODEMIRROR EDITOR — container and boundary markers
+   ══════════════════════════════════════════════════════════════ */
+
+.cm-container {
+    flex-grow: 1;
+    font-size: var(--monospace-size);
+    height: 90%;
+    padding-bottom: 2em;
+    }
+
+/* https://discuss.codemirror.net/t/how-to-set-max-height-of-the-editor/2882/2 */
+.cm-container .cm-editor {
+    background-color: var(--surface-0);
+    height: 100%;
+    }
+
+.cm-container .cm-editor .cm-line:has(.ubol-boundary) {
+    background-image: url('line-hor-dashed.png'), url('line-hor-dashed.png');
+    background-position: left 3px, left calc(100% - 3px);
+    background-repeat: repeat-x;
+    }
+.cm-container .cm-editor {
+    color: var(--ink-1);
+    }
+:root.dark .cm-container .cm-editor {
+    color: var(--ink-2);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   3. ALLOW LIST SYNTAX COLOURS — comment / keyword / literal tokens
+   ══════════════════════════════════════════════════════════════ */
+
+/* (audit 10.6.4, A2) Colours declared once as tokens. Contrast vs the editor background
+   (--surface-0): light 4.86:1 (white), dark 7.37:1 (black) — all six pass 4.5:1. */
+:root {
+    --ubol-syntax-comment: #ba5300;
+    --ubol-syntax-keyword: #ae42be;
+    --ubol-syntax-literal: #168156;
+    }
+:root.dark {
+    --ubol-syntax-comment: #fa7000;
+    --ubol-syntax-keyword: #ea59ff;
+    --ubol-syntax-literal: #1dae74;
+    }
+.cm-container .cm-editor .cm-line .ubol-comment {
+    color: var(--ubol-syntax-comment);
+    }
+.cm-container .cm-editor .cm-line .ubol-keyword {
+    color: var(--ubol-syntax-keyword);
+    }
+.cm-container .cm-editor .cm-line .ubol-literal {
+    color: var(--ubol-syntax-literal);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   4. CODEMIRROR SEARCH PANEL
+   ══════════════════════════════════════════════════════════════ */
+
+.cm-container .cm-editor .cm-panel.cm-search {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    font-size: var(--font-size);
+    gap: 0.5em 1em;
+    padding: 0.5em 1.5em 0.5em 0.5em;
+    }
+
+.cm-container .cm-editor .cm-panel.cm-search > * {
+    margin: 0;
+    }
+
+.cm-container .cm-editor .cm-panel.cm-search .cm-textfield,
+.cm-container .cm-editor .cm-panel.cm-search .cm-button,
+.cm-container .cm-editor .cm-panel.cm-search label {
+    background-image: inherit;
+    border: inherit;
+    flex-grow: 0;
+    font-size: var(--button-font-size);
+    min-height: calc(var(--button-font-size) * 1.8);
+    }
+
+.cm-container .cm-editor .cm-panel .warning {
+    color: var(--info3-ink);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   5. SAVE/REVERT (IO) PANEL
+   ══════════════════════════════════════════════════════════════ */
+
+.cm-container .cm-editor .cm-panel.io-panel {
+    background-color: var(--surface-1);
+    box-sizing: border-box;
+    display: inline-flex;
+    gap: 0.25em;
+    padding: 0.25em;
+    padding-inline-start: 0;
+    width: 100%;
+    }
+.cm-container .cm-editor .cm-panel.io-panel button {
+    min-height: 30px;
+    }
+.cm-container .cm-editor .cm-panel.io-panel button#revert {
+    margin-inline-end: 1em;
+    }
+.cm-container .cm-editor .cm-panel.io-panel:not([data-io~="apply"]) button#apply {
+    display: none;
+    }
+.cm-container .cm-editor .cm-panel.io-panel:not([data-io~="revert"]) button#revert {
+    display: none;
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   6. GUTTER
+   ══════════════════════════════════════════════════════════════ */
+
+.cm-container .cm-editor .cm-gutterElement {
+    cursor: default;
+    user-select: none;
+    }

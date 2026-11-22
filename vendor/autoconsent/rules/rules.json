@@ -1,0 +1,666 @@
+{
+  "_comment": "Vendored, pinned data. Each entry: `name` (display name, matches cmpName in detection results), `detect` (how js/scripting/autodeny-snippets.generated.js recognizes the CMP at reject-action time — `global`: a window property that exists when this CMP is present; `selector`: a CSS selector for that CMP's own banner root, used as a fallback when the global isn't reliably present before the banner itself renders — kept deliberately SPECIFIC, since this same field also gates whether the CMP is considered 'detected' at all: a selector too generic risks false-positive detection on unrelated sites), `hideSelector` (OPTIONAL — the cosmetic-hide fallback's own target set, DISTINCT from `detect.selector` on purpose — see Sourcepoint's own entry for why), `action` (the FNS key in eval-snippets.js that performs the reject-all click for this CMP, or null when the CMP is recognized but only cosmetically — D12 — with no safe unattended action).",
+  "_provenance": "MIXED provenance, marked per-entry via each rule's own `_source` field: `hand-authored` entries were written directly against each CMP's own public documentation/markup, confirmed via live-site Inspect-element evidence during real testing this session (design doc D2's original 'starter subset' approach). `ddg-autoconsent` entries are ADAPTED (not copy-pasted) from duckduckgo/autoconsent's own real, tested rule definitions — read directly from that project's public GitHub repo (github.com/duckduckgo/autoconsent, commit 9e4e640df401bb68c7e70d520d1174c133d20658, MPL-2.0 licensed) and translated from that project's own JSON step-sequence rule format into this project's plain-function eval-snippets.js format; simplified in places (dropping some of the upstream rule's own secondary fallback branches) rather than reproduced verbatim. `consent-o-matic` entries (added 8.4.7, two batches) are ADAPTED the same way, from cavi-au/Consent-O-Matic's own real, tested rule definitions (github.com/cavi-au/Consent-O-Matic, MIT licensed — confirmed via that repo's own LICENSE file) — read directly from their public per-CMP rule files (rules-list.json), translated from their detector/consent-toggle/save JSON schema into this project's plain-function format. Batch 1: TYPO3 Cookieman, tarteaucitron.js, Piwik PRO Consent Manager. Batch 2: GDPR Modal, Drupal EU Cookie Compliance. Batch 3: Evidon, ST CMP v2, DPDPA-style consent popup (Thai market) — all three generalized from English-text category matching to a blanket uncheck-all, avoiding language-dependency. Only entries whose action selectors were confirmed STABLE (semantic IDs/class names, generalized to attribute-prefix selectors where the naming convention allowed) were included; candidates using build-hash-dependent CSS-in-JS class names (batch 1: Admiral, Mediavine's save button; batch 2: Schibsted; batch 3: google_cwiz, whose fragility (Google's own opaque MDC classnames plus position-dependent nth-child selectors) wasn't caught by the earlier automated stability scan, found only on manual inspection) were deliberately excluded as too fragile to translate faithfully — see CHANGELOG for the full list and reasoning. None of the three categories is a fork of its respective upstream project as a whole. Batch 4 (8.4.9) draws from duckduckgo/autoconsent's own separate rules directory (334 files total, distinct from the earlier 12-entry batch's source) — fetched from the `main` branch rather than a pinned commit (GitHub's commit API was rate-limited at fetch time). 11 entries added: HubSpot, Adopt, AdRoll, Webflow, Wix, TagConcierge, Privado, Axeptio, TermsFeed, DataGrail, and Moove (direct reject-button path only — its settings-modal fallback depends on DDG's own separate EVAL_MOOVE_0 helper, not visible in the rule file itself, so dropped rather than guessed at). Two candidates deliberately deferred, not included in this batch: Transcend (DDG's own optOut action only hides the widget via CSS, never clicks an actual reject control — materially weaker than every other entry here) and Sirdata (technically stable selector, but its real value is 15+ language-specific xpath text matches — an English-only simplification would defeat the point). (11.0.0, owner's decision 2026-11-19) Both now ADDED as decline-by-hiding entries (EVAL_HIDE_ONLY, the XenForo mechanism of 10.7.16) — see their own entries. Status of the other excluded candidates in 11.0.0: Mediavine replaced its in-house CMP with consentmanager (already covered by the ConsentManager entry; scripts.mediavine.com, which loads it, is also on the Peter Lowe and HaGeZi lists); Schibsted's dialog is Sourcepoint served from its own cmp.<site> host, so js/data/cmp-loader-blocks.js's path-anchored Sourcepoint loader block applies there in decline mode (verified live 2026-11-19: vg.no loads cmp.vg.no/unified/wrapperMessagingWithoutDetection.js; NOT yet verified with the block active — Schibsted runs 'pay or okay', so the dialog may also be its content gate); Admiral's CMP ships in Admiral's one tag, which ruleset_antiadmiral and the Fox News Quick-fixes rule already stop; google_cwiz (consent.google.com) stays out — neither a loader block nor a hide fits a full-page Google consent screen.",
+  "rules": [
+    {
+      "name": "OneTrust",
+      "detect": {
+        "global": "OneTrust",
+        "selector": "#onetrust-banner-sdk, #onetrust-consent-sdk, .onetrust-pc-dark-filter"
+      },
+      "action": "EVAL_ONETRUST_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "api": "ONETRUST",
+        "selectors": [
+          "#onetrust-accept-btn-handler",
+          ".onetrust-close-btn-handler.accept-all"
+        ]
+      }
+    },
+    {
+      "name": "Cookiebot",
+      "detect": {
+        "global": "Cookiebot",
+        "selector": "#CybotCookiebotDialog"
+      },
+      "action": "EVAL_COOKIEBOT_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "api": "COOKIEBOT",
+        "selectors": [
+          "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+          "#CybotCookiebotDialogBodyButtonAccept"
+        ]
+      }
+    },
+    {
+      "name": "Klaro",
+      "detect": {
+        "global": "klaro",
+        "selector": ".klaro .cm-modal"
+      },
+      "action": "EVAL_KLARO_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "api": "KLARO",
+        "selectors": [
+          ".cm-btn-accept-all",
+          ".cm-btn-success"
+        ]
+      }
+    },
+    {
+      "name": "CookieYes",
+      "detect": {
+        "global": "CookieYes",
+        "selector": "#cookie-law-info-bar, .cky-consent-container"
+      },
+      "action": "EVAL_COOKIEYES_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "selectors": [
+          ".cky-btn-accept",
+          "#cookie_action_close_header"
+        ]
+      }
+    },
+    {
+      "name": "Complianz",
+      "detect": {
+        "global": "complianz",
+        "selector": "#cmplz-cookiebanner-container"
+      },
+      "action": "EVAL_COMPLIANZ_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "selectors": [
+          ".cmplz-btn.cmplz-accept",
+          ".cmplz-accept"
+        ]
+      }
+    },
+    {
+      "name": "Osano",
+      "detect": {
+        "global": "Osano",
+        "selector": ".osano-cm-dialog"
+      },
+      "action": "EVAL_OSANO_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "selectors": [
+          ".osano-cm-accept-all",
+          ".osano-cm-accept"
+        ]
+      }
+    },
+    {
+      "name": "Termly",
+      "detect": {
+        "global": "displayPreferenceModal",
+        "selector": "#termly-code-snippet-support"
+      },
+      "action": "EVAL_TERMLY_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "selectors": [
+          "[data-tid=\"banner-accept\"]"
+        ]
+      }
+    },
+    {
+      "name": "Didomi",
+      "detect": {
+        "global": "Didomi",
+        "selector": "#didomi-host"
+      },
+      "action": "EVAL_DIDOMI_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "api": "DIDOMI",
+        "selectors": [
+          "#didomi-notice-agree-button"
+        ]
+      }
+    },
+    {
+      "name": "Sourcepoint",
+      "detect": {
+        "global": "_sp_",
+        "selector": "[id^='sp_message_container_'], iframe[id^='sp_message_iframe_']"
+      },
+      "hideSelector": "[id^='sp_message_container_'], iframe[id^='sp_message_iframe_'], .message-overlay, .message-container",
+      "action": "EVAL_SOURCEPOINT_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "scope": "document",
+        "selectors": [
+          "button.sp_choice_type_11",
+          "button[title=\"Accept all\"]",
+          "button[title=\"Accept\"]"
+        ]
+      }
+    },
+    {
+      "name": "Fides",
+      "detect": {
+        "global": "Fides",
+        "selector": "#fides-banner, #fides-modal, #fides-overlay"
+      },
+      "action": "EVAL_FIDES_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "selectors": [
+          ".fides-accept-all-button"
+        ]
+      }
+    },
+    {
+      "name": "Usercentrics",
+      "detect": {
+        "selector": "#usercentrics-root"
+      },
+      "action": "EVAL_USERCENTRICS_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "api": "USERCENTRICS",
+        "selectors": [
+          "[data-testid=\"uc-accept-all-button\"]"
+        ]
+      }
+    },
+    {
+      "name": "UserWay",
+      "detect": {
+        "selector": "#cookie_consent_banner_main_app"
+      },
+      "action": "EVAL_USERWAY_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "selectors": []
+      }
+    },
+    {
+      "name": "Shopify",
+      "detect": {
+        "selector": "#shopify-pc__banner"
+      },
+      "action": "EVAL_SHOPIFY_REJECT",
+      "_source": "hand-authored",
+      "accept": {
+        "selectors": [
+          "#shopify-pc__banner__btn-accept"
+        ]
+      }
+    },
+    {
+      "name": "TrustArc",
+      "detect": {
+        "global": "truste",
+        "selector": ".truste_popframe.trustarc_newcm_container"
+      },
+      "action": "EVAL_TRUSTARC_REJECT",
+      "_source": "ddg-autoconsent (trustarc-newcm.json) — upgraded from detection-only (8.2.24) once the real container/button selectors were found in DDG's own tested rule",
+      "accept": {
+        "selectors": [
+          "#truste-consent-button"
+        ]
+      }
+    },
+    {
+      "name": "Quantcast Choice / InMobi CMP",
+      "detect": {
+        "global": "__cmp",
+        "selector": "#qc-cmp2-container"
+      },
+      "action": "EVAL_QUANTCAST_REJECT",
+      "_source": "ddg-autoconsent (quantcast.json) — upgraded from detection-only (8.2.24)",
+      "accept": {
+        "selectors": [
+          ".qc-cmp2-summary-buttons button[mode=\"primary\"]"
+        ]
+      }
+    },
+    {
+      "name": "iubenda",
+      "detect": {
+        "global": "_iub",
+        "selector": "#iubenda-cs-banner"
+      },
+      "action": "EVAL_IUBENDA_REJECT",
+      "_source": "ddg-autoconsent (iubenda.json) — upgraded from detection-only (8.2.24); DDG's own rule confirms a real one-click '.iubenda-cs-reject-btn' that this session's own web research never surfaced",
+      "accept": {
+        "selectors": [
+          ".iubenda-cs-accept-btn"
+        ]
+      }
+    },
+    {
+      "name": "ConsentManager",
+      "detect": {
+        "selector": "#ncmp__tool .ncmp__banner.ncmp__active"
+      },
+      "action": "EVAL_CONSENTMANAGER_REJECT",
+      "_source": "ddg-autoconsent (consentmanager-ncmp.json) — this session's own web research found real config-API evidence but no working reject action; DDG's rule confirms a genuine JS API (window.__npcmp('reject'))",
+      "accept": {
+        "api": "CONSENTMANAGER",
+        "selectors": []
+      }
+    },
+    {
+      "name": "Borlabs Cookie",
+      "detect": {
+        "global": "BorlabsCookie",
+        "selector": "._brlbs-block-content, .brlbs-cmpnt-dialog, #BorlabsCookieBox"
+      },
+      "action": "EVAL_BORLABS_REJECT",
+      "_source": "ddg-autoconsent (borlabs.json) — this session's own web research confirmed the global/container but not a reject selector; DDG's rule supplies one",
+      "accept": {
+        "selectors": [
+          "a[data-cookie-accept-all]",
+          ".brlbs-btn-accept-all",
+          "._brlbs-btn-accept-all"
+        ]
+      }
+    },
+    {
+      "name": "CookieFirst",
+      "detect": {
+        "selector": "#cookiefirst-root, .cookiefirst-root"
+      },
+      "action": "EVAL_COOKIEFIRST_REJECT",
+      "_source": "ddg-autoconsent (cookiefirst.json)",
+      "accept": {
+        "selectors": [
+          "[data-cookiefirst-action=\"accept\"]"
+        ]
+      }
+    },
+    {
+      "name": "Cookie Script",
+      "detect": {
+        "selector": "#cookiescript_injected"
+      },
+      "action": "EVAL_COOKIESCRIPT_REJECT",
+      "_source": "ddg-autoconsent (cookie-script.json)",
+      "accept": {
+        "selectors": [
+          "#cookiescript_accept"
+        ]
+      }
+    },
+    {
+      "name": "Civic Cookie Control",
+      "detect": {
+        "selector": "#ccc-module, #ccc-notify"
+      },
+      "action": "EVAL_CIVICCOOKIECONTROL_REJECT",
+      "_source": "ddg-autoconsent (civic-cookie-control.json)",
+      "accept": {
+        "selectors": [
+          "#ccc-notify-accept",
+          "#ccc-recommended-settings"
+        ]
+      }
+    },
+    {
+      "name": "Cookie Information",
+      "detect": {
+        "selector": "#cookie-information-template-wrapper"
+      },
+      "action": "EVAL_COOKIEINFORMATION_REJECT",
+      "_source": "ddg-autoconsent (cookieinformation.json) — real JS API (CookieInformation.declineAllCategories()); this session's own web research separately found real, confirmed CSS classes (.coi-banner__decline) for the same CMP that were never used since the API call is more direct/reliable",
+      "accept": {
+        "api": "COOKIEINFORMATION",
+        "selectors": []
+      }
+    },
+    {
+      "name": "Ketch",
+      "detect": {
+        "selector": "#lanyard_root div[role='dialog'], #ketch-banner, #ketch-modal"
+      },
+      "action": "EVAL_KETCH_REJECT",
+      "_source": "ddg-autoconsent (ketch.json) — simplified from DDG's own considerably more elaborate multi-path rule; covers the common banner-level reject and the preferences-modal reject/uncheck-all fallback, not every edge case DDG's rule handles",
+      "accept": {
+        "selectors": [
+          "#ketch-banner-button-primary"
+        ]
+      }
+    },
+    {
+      "name": "Real Cookie Banner",
+      "detect": {
+        "selector": "div[consent-skip-blocker=\"1\"][id][data-bg]"
+      },
+      "action": "EVAL_REALCOOKIEBANNER_REJECT",
+      "_source": "ddg-autoconsent (real-cookie-banner.json) — this session's own web research found only tutorials, no real markup at all; DDG's rule was the only real evidence found for this CMP",
+      "accept": {
+        "selectors": []
+      }
+    },
+    {
+      "name": "Silktide",
+      "detect": {
+        "selector": "#silktide-wrapper, #silktide-banner"
+      },
+      "action": "EVAL_SILKTIDE_REJECT",
+      "_source": "hand-authored — confirmed via multiple independent real production deployments (several UK university/government sites) all matching the same container/class structure, plus Silktide's own public open-source config schema (github.com/silktide/consent-manager) confirming the real default reject-button text",
+      "accept": {
+        "selectors": [
+          ".accept-all"
+        ]
+      }
+    },
+    {
+      "name": "Generic cosmetic banner",
+      "detect": {
+        "selector": "[class*='cookie-banner'],[id*='cookie-banner'],[class*='consent-banner']"
+      },
+      "action": null,
+      "_source": "hand-authored"
+    },
+    {
+      "name": "TYPO3 Cookieman",
+      "detect": {
+        "selector": "#cookieman-modal"
+      },
+      "action": "EVAL_TYPO3COOKIEMAN_REJECT",
+      "_source": "consent-o-matic (typo3cookieman.json, cavi-au/Consent-O-Matic, MIT) — checkbox categories + save button, no single-click shortcut; translated to uncheck-if-checked + save",
+      "accept": {
+        "selectors": [
+          "[data-cookieman-accept-all]"
+        ]
+      }
+    },
+    {
+      "name": "tarteaucitron.js",
+      "detect": {
+        "selector": "#tarteaucitronRoot, #tarteaucitronAlertBig, #tarteaucitronAlertSmall"
+      },
+      "action": "EVAL_TARTEAUCITRON_REJECT",
+      "_source": "consent-o-matic (tarteaucitron.json, cavi-au/Consent-O-Matic, MIT) — all 9 of its own consent categories share the same .tarteaucitronAllow/.tarteaucitronDeny class pair, confirmed faithful to click all .tarteaucitronDeny rather than category-by-category",
+      "accept": {
+        "api": "TARTEAUCITRON",
+        "selectors": [
+          "#tarteaucitronPersonalize2",
+          "#tarteaucitronAllAllowed"
+        ]
+      }
+    },
+    {
+      "name": "Piwik PRO Consent Manager",
+      "detect": {
+        "selector": "#ppms_cm_popup_overlay, #ppms_cm_bar_overlay"
+      },
+      "action": "EVAL_PIWIKPRO_REJECT",
+      "_source": "consent-o-matic (piwikproconsent.json, cavi-au/Consent-O-Matic, MIT) — 4 named toggle switches (analytics, remarketing, feedback, custom_consent), all stable IDs",
+      "accept": {
+        "selectors": [
+          "#ppms_cm_agree-to-all"
+        ]
+      }
+    },
+    {
+      "name": "GDPR Modal",
+      "detect": {
+        "selector": "#gdpr-modal #gdpr-consent-content"
+      },
+      "action": "EVAL_GDPRMODAL_REJECT",
+      "_source": "consent-o-matic (gdprmodal.json, cavi-au/Consent-O-Matic, MIT) — 9 named per-service checkboxes, generalized to an attribute-prefix selector rather than hardcoding each service name",
+      "accept": {
+        "selectors": []
+      }
+    },
+    {
+      "name": "Drupal EU Cookie Compliance",
+      "detect": {
+        "selector": ".eu-cookie-compliance-banner"
+      },
+      "action": "EVAL_DRUPALEUCC_REJECT",
+      "_source": "consent-o-matic (drupalEUCC.json, cavi-au/Consent-O-Matic, MIT) — 5 named checkbox categories, generalized to an attribute-prefix selector",
+      "accept": {
+        "selectors": [
+          ".agree-button"
+        ]
+      }
+    },
+    {
+      "name": "Evidon",
+      "detect": {
+        "selector": ".footer .evidon-footer-image"
+      },
+      "action": "EVAL_EVIDON_REJECT",
+      "_source": "consent-o-matic (evidon_iframe.json, cavi-au/Consent-O-Matic, MIT) — English-text category matching generalized to a blanket uncheck-all, avoiding language-dependency",
+      "accept": {
+        "selectors": [
+          "#_evidon-accept-button"
+        ]
+      }
+    },
+    {
+      "name": "ST CMP v2",
+      "detect": {
+        "selector": "#st-cmp-v2, .st-cmp-app"
+      },
+      "action": "EVAL_STCMPV2_REJECT",
+      "_source": "consent-o-matic (stcmpv2.json, cavi-au/Consent-O-Matic, MIT) — English-text category matching generalized to a blanket uncheck-all",
+      "accept": {
+        "selectors": []
+      }
+    },
+    {
+      "name": "DPDPA-style consent popup (Thai market)",
+      "detect": {
+        "selector": ".dpdpa--popup"
+      },
+      "action": "EVAL_DESIGNILPDPA_REJECT",
+      "_source": "consent-o-matic (designilpdpa.json, cavi-au/Consent-O-Matic, MIT) — filename suggests India, actual detector/consent text is Thai (confirmed by inspecting real content); category matching generalized to a blanket uncheck-all",
+      "accept": {
+        "selectors": []
+      }
+    },
+    {
+      "name": "HubSpot",
+      "detect": {
+        "selector": "#hs-eu-cookie-confirmation"
+      },
+      "action": "EVAL_HUBSPOT_REJECT",
+      "_source": "ddg-autoconsent (hubspot.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          "#hs-eu-confirmation-button"
+        ]
+      }
+    },
+    {
+      "name": "Adopt",
+      "detect": {
+        "selector": "#adopt-controller-button"
+      },
+      "action": "EVAL_ADOPT_REJECT",
+      "_source": "ddg-autoconsent (adopt.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          "#adopt-accept-all-button"
+        ]
+      }
+    },
+    {
+      "name": "AdRoll",
+      "detect": {
+        "selector": "#adroll_consent_container"
+      },
+      "action": "EVAL_ADROLL_REJECT",
+      "_source": "ddg-autoconsent (adroll.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          "#adroll_consent_accept"
+        ]
+      }
+    },
+    {
+      "name": "Webflow",
+      "detect": {
+        "selector": ".fs-cc-components, [fs-cc=banner]"
+      },
+      "action": "EVAL_WEBFLOW_REJECT",
+      "_source": "ddg-autoconsent (webflow.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          "[fs-cc=\"allow\"]"
+        ]
+      }
+    },
+    {
+      "name": "Wix",
+      "detect": {
+        "selector": "[data-comp-type=cookie-banner-root-wix], [data-hook=ccsu-banner-wrapper]"
+      },
+      "action": "EVAL_WIX_REJECT",
+      "_source": "ddg-autoconsent (wix.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          "[data-hook=\"consent-banner-apply-button\"]"
+        ]
+      }
+    },
+    {
+      "name": "TagConcierge",
+      "detect": {
+        "selector": "#consent-banner-main"
+      },
+      "action": "EVAL_TAGCONCIERGE_REJECT",
+      "_source": "ddg-autoconsent (tagconcierge.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": []
+      }
+    },
+    {
+      "name": "Privado",
+      "detect": {
+        "selector": "#cookie-consent-banner #accept-button"
+      },
+      "action": "EVAL_PRIVADO_REJECT",
+      "_source": "ddg-autoconsent (privado.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          "#accept-button"
+        ]
+      }
+    },
+    {
+      "name": "Axeptio",
+      "detect": {
+        "selector": ".axeptio_widget, .axeptio_mount"
+      },
+      "action": "EVAL_AXEPTIO_REJECT",
+      "_source": "ddg-autoconsent (axeptio.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          "#axeptio_btn_acceptAll"
+        ]
+      }
+    },
+    {
+      "name": "TermsFeed",
+      "detect": {
+        "selector": ".termsfeed-com---nb"
+      },
+      "action": "EVAL_TERMSFEED_REJECT",
+      "_source": "ddg-autoconsent (termsfeed.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          ".cc-nb-okagree"
+        ]
+      }
+    },
+    {
+      "name": "DataGrail",
+      "detect": {
+        "selector": ".dg-consent-banner"
+      },
+      "action": "EVAL_DATAGRAIL_REJECT",
+      "_source": "ddg-autoconsent (datagrail.json) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          "button.dg-button.accept_all"
+        ]
+      }
+    },
+    {
+      "name": "Moove GDPR",
+      "detect": {
+        "selector": "#moove_gdpr_cookie_info_bar"
+      },
+      "action": "EVAL_MOOVE_REJECT",
+      "_source": "ddg-autoconsent (moove-gdpr.json) — direct reject-button path only, settings-modal fallback dropped (depends on DDG's own separate EVAL_MOOVE_0 helper, not visible in the rule file itself) (ddg-autoconsent batch 4, fetched from duckduckgo/autoconsent's main branch — dated, not commit-pinned, GitHub's commit API was rate-limited at fetch time)",
+      "accept": {
+        "selectors": [
+          ".moove-gdpr-infobar-allow-all"
+        ]
+      }
+    },
+    {
+      "name": "XenForo",
+      "detect": {
+        "selector": ".notice.notice--cookieAdvanced[data-notice-id=\"-1\"]"
+      },
+      "hideSelector": ".notice.notice--cookieAdvanced[data-notice-id=\"-1\"]",
+      "action": "EVAL_HIDE_ONLY",
+      "_source": "hand-authored",
+      "_comment": "(10.7.16, owner's decision 2026-11-19) XenForo forum software's own cookie notice (verified on malwaretips.com). ALWAYS declined by hiding, in both modes: its buttons are links that navigate away and back (a click looped on malwaretips), and XenForo consent is opt-in, so an unanswered notice means essential cookies only. Decline: EVAL_HIDE_ONLY. Accept: accept.hideOnly.",
+      "accept": {
+        "selectors": [],
+        "hideOnly": true
+      }
+    },
+    {
+      "name": "Sirdata",
+      "detect": {
+        "selector": "#sd-cmp"
+      },
+      "hideSelector": "#sd-cmp",
+      "action": "EVAL_HIDE_ONLY",
+      "_source": "adapted from ddg-autoconsent (sirdata.json) — selectors only, read 2026-11-19 from duckduckgo/autoconsent's main branch (rules/autoconsent/sirdata.json)",
+      "_comment": "(11.0.0, owner's decision 2026-11-19) Sirdata / ABconsent CMP (France, Spain, Morocco; verified live on kotaku.com 2026-11-19: #sd-cmp present with a role=dialog, accept selector hits 'Alles accepteren', page scroll not locked, no full-screen overlay left after hiding #sd-cmp. Note: clubic.com, listed by third-party trackers as Sirdata, now uses Didomi). DECLINE by HIDING, not by blocking its loader (cache./choices.consentframework.com): AdGuard French needs an allow rule for choices.consentframework.com on frandroid.com, so blocking it breaks sites. Sirdata is an IAB TCF CMP: an unanswered dialog means no consent. Its real reject control is a localized text match (15+ languages in DDG's rule) — the reason it was deferred in 8.4.9. Accept: DDG's own opt-in button inside #sd-cmp.",
+      "accept": {
+        "selectors": [
+          "button:last-child > [data-sd-override=\"choiceButtons\"]"
+        ]
+      }
+    },
+    {
+      "name": "Transcend",
+      "detect": {
+        "selector": "#transcend-consent-manager"
+      },
+      "hideSelector": "#transcend-consent-manager",
+      "action": "EVAL_HIDE_ONLY",
+      "_source": "adapted from ddg-autoconsent (transcend.json) — selectors only, read 2026-11-19 from duckduckgo/autoconsent's main branch (rules/autoconsent/transcend.json)",
+      "_comment": "(11.0.0, owner's decision 2026-11-19) Transcend Consent (airgap.js). DECLINE by HIDING its banner host (open shadow root) — the same as DDG's own optOut, which only hides it. NOT by blocking airgap.js: that file is Transcend's consent ENFORCER as well as the banner's loader, and sites wait on airgap.ready(). EU visitors are opted out by default, so a hidden banner means declined. Accept: DDG's own opt-in button inside the open shadow root (EVAL_ACCEPT_ALL searches it); the accept bundle hides the host afterwards, like every CMP.",
+      "accept": {
+        "selectors": [
+          "#consentManagerMainDialog .inner-container button"
+        ]
+      }
+    },
+    {
+      "name": "Google Funding Choices",
+      "detect": {
+        "selector": ".fc-consent-root"
+      },
+      "hideSelector": ".fc-consent-root",
+      "action": "EVAL_GOOGLEFC_REJECT",
+      "_source": "adapted from ddg-autoconsent (fundingchoices.json) — selectors only, read 2026-11-19 from duckduckgo/autoconsent's main branch",
+      "_comment": "(11.0.0, owner's report 2026-11-19) Google's own consent dialog (IAB TCF). bbc.com shows it to EU visitors instead of Sourcepoint, so the Sourcepoint loader block had nothing to block there. Decline: 'Do not consent' when offered, else hidden (unanswered TCF = no consent). Accept: 'Consent'.",
+      "accept": {
+        "selectors": [
+          ".fc-cta-consent"
+        ]
+      }
+    }
+  ],
+  "_comment_accept": "(10.7.1) `accept` — data for EVAL_ACCEPT_ALL in eval-snippets.js, used only by the ACCEPT bundle (autoaccept-snippets.generated.js, registered while the person deletes cookies at every browser start): `api` (optional) names a documented accept-all call in that function's ACCEPT_APIS; `selectors` the CMP's own accept-all button(s), most specific first; `scope` 'document' only for a CMP whose banner is its own iframe. Empty selectors = exact-label text fallback inside the CMP's own root only. Every actionable rule has one (tools/check-autoconsent-cmp-consistency.mjs). (10.7.16) `hideOnly: true` (optional): never click this CMP, not even in the accept bundle — only hide its banner (owner's decision for XenForo: always declined)."
+}
