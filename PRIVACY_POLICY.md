@@ -1,13 +1,13 @@
-Privacy Policy for uBlock Stripped
+Privacy Policy for uBlock Dynamic
 Last Updated: August 2026
 
 Introduction
-uBlock Stripped is committed to protecting your privacy. This Privacy Policy explains what information the extension processes and how it is used.
+uBlock Dynamic is committed to protecting your privacy. This Privacy Policy explains what information the extension processes and how it is used.
 
 Information We Collect
-uBlock Stripped does not collect, store, transmit, or share any personal information about users.
+uBlock Dynamic does not collect, store, transmit, or share any personal information about users.
 
-Specifically, uBlock Stripped does not:
+Specifically, uBlock Dynamic does not:
 - Collect personally identifiable information (PII)
 - Track user activity or browsing behaviour
 - Store or transmit browsing history
@@ -16,7 +16,7 @@ Specifically, uBlock Stripped does not:
 
 Filter lists are retrieved from GitHub. No personal data, browsing history, or identifiers are included in these requests.
 
-How uBlock Stripped Works
+How uBlock Dynamic Works
 The extension registers filtering rules with Chrome's native Declarative Net Request (DNR) engine. These rules block or allow third-party network requests based on the filter rules you have written yourself. The filtering happens entirely inside the browser — the extension never reads, inspects, or transmits the content of any request.
 
 Cosmetic filters (rules that hide page elements or run a scriptlet you authored) are applied locally through Chrome's scripting API (`chrome.scripting.registerContentScripts`), using only the filter text you entered in the extension's own filter editor. No filter content, page content, or browsing data ever leaves your device.
@@ -26,7 +26,7 @@ When you toggle filtering on or off for a site from the extension's popup, the e
 The "uBO dynamic filtering" panel works the same way: while it's open, it lists the third-party connections the current tab makes and lets you block or allow specific ones, per site. That per-site list is the same kind of local, on-device state as the per-site filtering toggle above — see Data Storage below — and is never transmitted anywhere.
 
 Third-Party Services
-uBlock Stripped does not use any third-party analytics, tracking, or advertising services. Filter lists are retrieved from GitHub. All other processing happens locally within your browser using Chrome's built-in extension APIs.
+uBlock Dynamic does not use any third-party analytics, tracking, or advertising services. Filter lists are retrieved from GitHub. All other processing happens locally within your browser using Chrome's built-in extension APIs.
 
 Data Storage
 The following data is stored locally on your device using chrome.storage.local:
@@ -38,7 +38,7 @@ The following data is stored locally on your device using chrome.storage.local:
 None of this data is ever transmitted outside your browser.
 
 Important Notice
-uBlock Stripped does not upload, transmit, or share:
+uBlock Dynamic does not upload, transmit, or share:
 - The content of any web page you visit
 - Any request payload or response data
 - Any personal data of any kind
