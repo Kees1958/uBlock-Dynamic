@@ -17,6 +17,21 @@ exception: every tools version still gets at least a one-line
 Entries below 9.7.1 were all written under the older every-version
 convention and are kept as they are.
 
+## 11.0.4 — Optimizely redirect stand-in (uBO e68e05cde0)
+**Source version.** Working from 11.0.3 (extension 11.0.3 / tools 3.0.6 / docs 11.0.3), GitHub Kees1958/uBlock-Dynamic 8ff62c6.
+**What / why.** Ported uBlock Origin commit e68e05cde0 (Fanboynz): `web_accessible_resources/optimizely.js`, a surrogate
+for the Optimizely Web Experimentation snippet (`cdn.optimizely.com/js/<id>.js`, `/public/…_edge_helper.js`). It keeps a
+working but empty `window.optimizely`, so sites that call it unguarded keep working; no experiments, cookies, storage,
+beacons or site-owner projectJS. Before, `$redirect=optimizely.js` was dropped by the build and refused by the Import ABP
+box ("redirect target … is not included"). None of the bundled lists uses it; the owner added the two redirect lines to
+his Bad filter fixes list, where priority 600,000 outranks the `@@` rules that let Optimizely load (AdGuard Base 10,000,
+tracking-servers allowlist 8,000).
+**How.** One entry in `js/core/redirect-resources.js` (read by the shared parser for build and import alike), one
+`web_accessible_resources` entry in manifest.json; the file is upstream's, unchanged except the project header lines.
+Redirect rules land in the list's unsafe companion, so this is a normal-review release.
+**tools 3.0.7:** `tools/test-network-translation.mjs` gains the Optimizely redirect case (build and ABP import);
+`tools/package-release.mjs` DOC_FILES now lists the GitHub repo's `README.md` and `PRIVACY.md` and `vendor/autoconsent/README.md` (DOCS_EXTRA_FILES) — docs zip, never the extension.
+
 ## 11.0.3 — Input size before reading, tier direction (manual v15)
 **Source version.** Working from the released 11.0.2 zips (extension 11.0.2 / tools 3.0.5 / docs 11.0.2).
 **What / why.** The 11.0.2 standards audit (claude/AUDIT_11.0.2_release_findings.md) and the v15 review found that the

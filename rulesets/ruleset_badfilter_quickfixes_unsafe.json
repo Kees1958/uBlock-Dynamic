@@ -15,5 +15,39 @@
       "urlFilter": "||cdn-ster-nl.akamaized.net/*.mp4",
       "isUrlFilterCaseSensitive": false
     }
+  },
+  {
+    "id": 1433849,
+    "priority": 600000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/optimizely.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.optimizely.com/js/*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 492280,
+    "priority": 600000,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/optimizely.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||cdn.optimizely.com/public/*_edge_helper.js",
+      "isUrlFilterCaseSensitive": false
+    }
   }
 ]

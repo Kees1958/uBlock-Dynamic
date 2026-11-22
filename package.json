@@ -1,6 +1,6 @@
 {
   "name": "ubol-stripped",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "private": true,
   "type": "module",
   "description": "uBlock Stripped — dev tooling only. The extension itself has zero runtime npm dependencies; this file exists for lint tooling and the build script's Node engine requirement. Repository name (ubol-stripped) kept as-is to match the existing GitHub repo at the URL below — the extension's own display name changed, this package's identifier deliberately did not.",

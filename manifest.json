@@ -372,7 +372,7 @@
     "webRequest"
   ],
   "short_name": "uBlock Dynamic",
-  "version": "11.0.3",
+  "version": "11.0.4",
   "web_accessible_resources": [
     {
       "resources": [
@@ -386,7 +386,8 @@
     {
       "resources": [
         "web_accessible_resources/noop.js",
-        "web_accessible_resources/noop-1s.mp4"
+        "web_accessible_resources/noop-1s.mp4",
+        "web_accessible_resources/optimizely.js"
       ],
       "matches": [
         "<all_urls>"

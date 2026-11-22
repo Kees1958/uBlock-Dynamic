@@ -60329,6 +60329,16 @@
     "hostnames": [
       "zeta-ai.io"
     ],
+    "name": "prevent-fetch",
+    "args": [
+      "tpc.googlesyndication.com/sodar/sodar2.js"
+    ],
+    "ruleset": "ruleset_adguard_antiadblock"
+  },
+  {
+    "hostnames": [
+      "zeta-ai.io"
+    ],
     "name": "prevent-element-src-loading",
     "args": [
       "script",

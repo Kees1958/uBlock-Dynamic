@@ -74,6 +74,11 @@ const DOC_FILES = [
     // here so guardInit()'s drift check doesn't fail on it and so it
     // doesn't fall through to the extension artifact by default.
     'popup-popunder-abp-import-voorstel.md',
+    // GitHub repository front page and the repo copy of the privacy text
+    // (added with the Kees1958/uBlock-Dynamic repo, 2026-11-22). Repo/
+    // project documents only — never part of the extension upload.
+    'README.md',
+    'PRIVACY.md',
     // Working performance-optimization tracker — analysis + implementation
     // plan, same genre as the Xplainer_* files and the proposal doc above.
     // Added here for the same reason: keeps guardInit()'s drift check
@@ -181,6 +186,9 @@ const DOCS_EXTRA_FILES = [
     // in NEVER_SHIP (excluded from every zip); removed from there to ship here instead, and explicitly
     // excluded from toolsSet in resolveArtifactFiles() so it ships once, not doubled into tools.zip too.
     path.join(TOOLS_DIR, 'package-release-state.json'),
+    // (11.0.4) Notes on vendor/autoconsent's licence split — present in the GitHub repo; project
+    // documentation, never part of the Chrome Web Store upload (the MPL LICENSE file itself still ships).
+    path.join('vendor', 'autoconsent', 'README.md'),
 ];
 
 // LICENSE.txt deliberately ships in the EXTENSION zip, not docs — it's a

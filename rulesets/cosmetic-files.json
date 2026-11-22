@@ -129,7 +129,7 @@
     "id": "ruleset_easylist_polish",
     "specificDataFile": "rulesets/ruleset_easylist_polish-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_polish-cosmetic-loader.js",
-    "v": "nnus0y"
+    "v": "9wp6hq"
   },
   {
     "id": "ruleset_easylist_portuguese",
@@ -141,7 +141,7 @@
     "id": "ruleset_easylist_latvian",
     "specificDataFile": "rulesets/ruleset_easylist_latvian-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_latvian-cosmetic-loader.js",
-    "v": "12wef6b"
+    "v": "qy7hyc"
   },
   {
     "id": "ruleset_hungarian",

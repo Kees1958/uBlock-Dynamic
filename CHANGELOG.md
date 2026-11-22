@@ -4,6 +4,12 @@ Short, per-release summary of what changed — no implementation detail.
 Lives in the project's docs (since 10.1.4 it is no longer shipped inside the
 extension). The full technical account is CHANGELOG_HISTORY.md.
 
+## 11.0.4
+- **Optimizely can now be redirected to a harmless stand-in** (from uBlock Origin). A line such as
+  `||cdn.optimizely.com/js/*.js$script,redirect=optimizely.js` now works in the Bad filter fixes list and in the
+  Import ABP box (it was refused before). Websites that use Optimizely keep working and show their default
+  version, without its A/B tests, cookies or tracking.
+
 ## 11.0.3
 - **All filter lists refreshed** (full update, 2026-11-22).
 - **Importing a file that is too large is now refused straight away, with a clear message** (Restore settings,

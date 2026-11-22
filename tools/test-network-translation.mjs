@@ -60,6 +60,8 @@ const BUILD_CASES = [
     [ 'plain $match-case WITH upper case is dropped (the parser lower-cases)', '||x.com/Ad.js$match-case', null ],
     [ '$redirect to a bundled file becomes a redirect', '||npttech.com^$script,redirect=noopjs',
         { urlFilter: '||npttech.com^', action: 'redirect', extensionPath: '/web_accessible_resources/noop.js' } ],
+    [ '$redirect to the bundled Optimizely surrogate (11.0.4)', '||cdn.optimizely.com/js/*.js$script,redirect=optimizely.js',
+        { urlFilter: '||cdn.optimizely.com/js/*.js', action: 'redirect', extensionPath: '/web_accessible_resources/optimizely.js' } ],
     [ '$redirect to a file we do not bundle drops the line', '||x.com^$script,redirect=googletagmanager_gtm.js', null ],
     [ '$denyallow with sites: block all but the listed hosts', '*$script,3p,denyallow=a.com|b.com,domain=c.com',
         { excludedRequestDomains: [ 'a.com', 'b.com' ], initiatorDomains: [ 'c.com' ], domainType: 'thirdParty' } ],

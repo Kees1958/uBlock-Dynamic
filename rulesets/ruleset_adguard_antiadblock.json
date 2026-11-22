@@ -1089,6 +1089,23 @@
     }
   },
   {
+    "id": 1256327,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zeta-ai.io"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||tpc.googlesyndication.com/sodar/sodar2.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 1276902,
     "priority": 10000,
     "action": {

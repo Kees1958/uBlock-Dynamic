@@ -26,9 +26,13 @@
 
 // The resources referenced below are found in ./web_accessible_resources/
 //
-// Trimmed down to only the two $redirect= targets actually used:
-//   - noop.js      (dpgmedia.nl/dpgmedia.com$redirect=noop.js)
-//   - noop-1s.mp4  (cdn-ster-nl.akamaized.net/*.mp4$redirect=noopmp4-1s, on nos.nl)
+// Only the $redirect= targets this extension bundles (any other target drops the line, in the build and in
+// the Import ABP box alike — both read this table through js/core/ubo-parser.js):
+//   - noop.js        (dpgmedia.nl/dpgmedia.com$redirect=noop.js)
+//   - noop-1s.mp4    (cdn-ster-nl.akamaized.net/*.mp4$redirect=noopmp4-1s, on nos.nl)
+//   - optimizely.js  (11.0.4, uBO e68e05cde0) surrogate for cdn.optimizely.com/js/<id>.js and
+//                    /public/…_edge_helper.js: a working but empty window.optimizely, no experiments,
+//                    no cookies/storage, no beacons. Used from the owner's Quick-fixes list.
 
 export default new Map([
     [ 'noop.js', {
@@ -38,5 +42,8 @@ export default new Map([
     [ 'noop-1s.mp4', {
         alias: [ 'noopmp4-1s', 'abp-resource:blank-mp4' ],
         data: 'blob',
+    } ],
+    [ 'optimizely.js', {
+        data: 'text',
     } ],
 ]);

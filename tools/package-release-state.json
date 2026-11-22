@@ -1,18 +1,18 @@
 {
   "docs": {
-    "hash": "96d6f0b3de0b3049ec6f8677e23c93b503ba44716ec753ba52daffa896a0cbdf",
-    "version": "11.0.3",
-    "files": 14
+    "hash": "758919eaf37aa5c7930e7012a588eb9a6f1eab68f47cfebfece539fc7f1b51d3",
+    "version": "11.0.4",
+    "files": 17
   },
   "tools": {
-    "hash": "2eca2f95372d5556518cdec122c604bff40a5b001c90e0c6f07be7c730076705",
-    "version": "3.0.6",
+    "hash": "6f6996b539d5f97b597adfb4b34c17dbbfde404c7d69f481f691f6fb3dacadc8",
+    "version": "3.0.7",
     "files": 156
   },
   "extension": {
-    "hash": "5cb3bebcd030bc6c7e16d39347b5b82a25d20214fc5659b1d99d6df8cf08877a",
-    "version": "11.0.3",
-    "files": 521,
+    "hash": "d8bf09ef703906c8a50917653ac8a211cd757f9c539fe76096729df594b8c63e",
+    "version": "11.0.4",
+    "files": 523,
     "shippedPermissions": {
       "permissions": [
         "alarms",

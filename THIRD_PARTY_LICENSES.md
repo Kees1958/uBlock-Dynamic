@@ -73,6 +73,10 @@ code is used unchanged.
   bundling adds no restriction. Raymond Hill's copyright line and the GPL
   notice stay in every derived file (GPL-3.0 section 4); that is the
   attribution.
+- **`web_accessible_resources/optimizely.js`** (added 11.0.4): uBlock Origin's
+  Optimizely redirect surrogate (commit e68e05cde0), `Copyright (C)
+  2026-present Fanboynz`, GPL-3.0-or-later. Code unchanged; only the header
+  gained this project's lines next to the original copyright line.
 
 ---
 
