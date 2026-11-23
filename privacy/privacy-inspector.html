@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/common.css">
 <link rel="stylesheet" href="../css/panel-shared.css">
 <link rel="stylesheet" href="privacy-inspector.css">
-<title>Fingerprint Inspector — uBlock Dynamic</title>
+<title>Fingerprint inspector — uBlock Dynamic</title>
 </head>
 <body>
 <header id="monitorHeader">
@@ -23,16 +23,20 @@
     </div>
 </header>
 <p id="monitorHelp">Shows privacy-sensitive API calls made by the current website. Pause the inspector, then use <strong>Select</strong> where a precise website-specific rule is available.</p>
-<p id="monitorHelpWarning">Only use Fingerprint Inspector on websites you visit often but never log in to.</p>
-<div id="fingerprintWarningBanner" hidden></div>
+<!-- (11.1.0, owner) One yellow banner, two lines (was this line plus a separate red banner with the advice). -->
+<div id="monitorHelpWarning">
+    <p>Only use the Fingerprint inspector on websites you visit often but never log in to.</p>
+    <p>Start with blocking low or medium risk fingerprints. When a website breaks, try blocking individual signals one by one.</p>
+</div>
 <div id="monitorTypeFilters"><span class="type-filter-label">Search for the fingerprint signals below. The color gives an indication of the website breakage risk when blocking these fingerprint signals.</span></div>
 <div id="monitorPausedBanner" hidden>
-    <div class="monitor-paused-text"><p>Fingerprint Inspector paused</p><p class="monitor-paused-note">Select an event to create a website-specific rule, or resume inspection.</p></div>
+    <div class="monitor-paused-text"><p>Fingerprint inspector paused</p><p class="monitor-paused-note">Select an individual event or block a risk category.</p></div>
     <div id="monitorPausedActions">
-        <button id="monitorBlockLow" class="monitor-btn monitor-btn-blocklow" type="button" title="Create a website-specific rule for every currently visible Low-risk signal">Block Low Risk</button>
-        <button id="monitorBlockMedium" class="monitor-btn monitor-btn-blockmedium" type="button" title="Create a website-specific rule for every currently visible Low- or Medium-risk signal">Block Medium</button>
-        <button id="monitorBlockAll" class="monitor-btn monitor-btn-blockall" type="button" title="Create a website-specific rule for every listed signal that has an available protection">Block All</button>
+        <!-- (11.1.0, owner) Resume first, then the risk buttons; sentence-case labels. -->
         <button id="monitorResume" class="monitor-btn monitor-btn-resume" type="button">Resume</button>
+        <button id="monitorBlockLow" class="monitor-btn monitor-btn-blocklow" type="button" title="Create a website-specific rule for every currently visible low-risk signal">Block low risk</button>
+        <button id="monitorBlockMedium" class="monitor-btn monitor-btn-blockmedium" type="button" title="Create a website-specific rule for every currently visible low- or medium-risk signal">Block medium</button>
+        <button id="monitorBlockAll" class="monitor-btn monitor-btn-blockall" type="button" title="Create a website-specific rule for every listed signal that has an available protection">Block all</button>
     </div>
 </div>
 <div id="monitorTableWrap">
@@ -69,14 +73,14 @@
 <tr><td>Silent beacon tracking</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.sendBeacon)</code></td></tr>
 <tr><td>Time zone check</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, Intl.DateTimeFormat.prototype.resolvedOptions)</code></td></tr>
 <tr><td>Touch-point support</td><td><code>abort-on-property-read</code></td><td><code>example.com##+js(abort-on-property-read, navigator.maxTouchPoints)</code></td></tr>
-<tr><td>WebGL Graphics access</td><td><code>prevent-canvas</code></td><td><code>example.com##+js(prevent-canvas)</code></td></tr>
+<tr><td>WebGL graphics access</td><td><code>prevent-canvas</code></td><td><code>example.com##+js(prevent-canvas)</code></td></tr>
 <tr><td>WebRTC IP address leak</td><td><code>nowebrtc</code></td><td><code>example.com##+js(nowebrtc)</code></td></tr>
 </tbody>
 </table>
 <p class="scriptlet-reference-note">Window (name) snooping and tab monitoring aren't detected events like the rows above — they're applied automatically the first time you click "Block All" for a site (not on an individual "Select"). They still appear as ordinary rules in Manage custom rules → Privacy (scriptlet) rules once applied, and can be deleted by hand there like any other rule.</p>
 </div>
 </details>
-<footer id="privacyInspectorFooter" class="panel-footer">Fingerprinting signal list inspired by the JShelter project, user interface inspired on NoScript</footer>
+<footer id="privacyInspectorFooter" class="panel-footer">Fingerprinting signal list inspired by the JShelter project, user interface inspired by NoScript</footer>
 <script src="../js/ui/theme.js" type="module"></script>
 <script src="privacy-inspector.js" type="module"></script>
 </body>

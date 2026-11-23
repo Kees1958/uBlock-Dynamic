@@ -6,9 +6,9 @@
     "locales": [],
     "url": "https://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/master/EU_US_MV3_most_common_ad%2Btracking_networks.txt",
     "enabled": true,
-    "rawLineCount": 536,
+    "rawLineCount": 544,
     "ruleCount": 1,
-    "domainCount": 517,
+    "domainCount": 530,
     "paramCount": 0,
     "blockCount": 1,
     "allowCount": 0,
@@ -22,9 +22,9 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 4245,
+    "rawLineCount": 4247,
     "ruleCount": 1,
-    "domainCount": 3906,
+    "domainCount": 3908,
     "paramCount": 0,
     "blockCount": 1,
     "allowCount": 0,
@@ -55,7 +55,7 @@
     "locales": [],
     "url": "https://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/refs/heads/master/badfilter-quick-fixes.txt",
     "enabled": true,
-    "rawLineCount": 12,
+    "rawLineCount": 15,
     "ruleCount": 6,
     "domainCount": 1,
     "paramCount": 0,
@@ -63,7 +63,7 @@
     "allowCount": 3,
     "redirectCount": 0,
     "scriptletRuleCount": 1,
-    "cosmeticHostnameCount": 1
+    "cosmeticHostnameCount": 2
   },
   {
     "id": "ruleset_badfilter_quickfixes_unsafe",
@@ -85,15 +85,15 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 15983,
+    "rawLineCount": 15997,
     "ruleCount": 742,
-    "domainCount": 450,
+    "domainCount": 449,
     "paramCount": 0,
     "blockCount": 742,
     "allowCount": 0,
     "redirectCount": 0,
     "scriptletRuleCount": 355,
-    "cosmeticHostnameCount": 7450
+    "cosmeticHostnameCount": 7453
   },
   {
     "id": "ruleset_hagezi_light",
@@ -101,9 +101,9 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 29293,
+    "rawLineCount": 29090,
     "ruleCount": 7,
-    "domainCount": 27966,
+    "domainCount": 27771,
     "paramCount": 0,
     "blockCount": 7,
     "allowCount": 0,
@@ -119,11 +119,11 @@
     "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/allowlist.txt",
     "enabled": true,
     "rawLineCount": 1829,
-    "ruleCount": 1263,
+    "ruleCount": 1264,
     "domainCount": 0,
     "paramCount": 0,
     "blockCount": 0,
-    "allowCount": 1263,
+    "allowCount": 1264,
     "redirectCount": 0,
     "scriptletRuleCount": 0,
     "cosmeticHostnameCount": 0
@@ -134,15 +134,15 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 30410,
-    "ruleCount": 6126,
-    "domainCount": 1335,
+    "rawLineCount": 30430,
+    "ruleCount": 6131,
+    "domainCount": 1337,
     "paramCount": 0,
-    "blockCount": 4451,
-    "allowCount": 1675,
+    "blockCount": 4453,
+    "allowCount": 1678,
     "redirectCount": 0,
-    "scriptletRuleCount": 2172,
-    "cosmeticHostnameCount": 11027
+    "scriptletRuleCount": 2174,
+    "cosmeticHostnameCount": 11031
   },
   {
     "id": "ruleset_adguard_base_unsafe",
@@ -684,7 +684,7 @@
     "allowCount": 452,
     "redirectCount": 0,
     "scriptletRuleCount": 591,
-    "cosmeticHostnameCount": 2088
+    "cosmeticHostnameCount": 2087
   },
   {
     "id": "ruleset_adguard_spanish_unsafe",
@@ -786,7 +786,7 @@
     "allowCount": 72,
     "redirectCount": 0,
     "scriptletRuleCount": 198,
-    "cosmeticHostnameCount": 961
+    "cosmeticHostnameCount": 960
   },
   {
     "id": "ruleset_easylist_portuguese_unsafe",
@@ -1147,7 +1147,7 @@
     ],
     "url": "https://raw.githubusercontent.com/KokichaKolevTM/BG-Adblock-list/main/BG-Adblock-list.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/CyrillicFilters/Bulgarian/sections/filter.txt + https://raw.githubusercontent.com/DandelionSprout/adfilt/master/SerboCroatianList.txt + https://raw.githubusercontent.com/DeepSpaceHarbor/Macedonian-adBlock-Filters/master/Filters + https://raw.githubusercontent.com/tcptomato/ROad-Block/master/road-block-filters-light.txt",
     "enabled": false,
-    "rawLineCount": 4462,
+    "rawLineCount": 4466,
     "ruleCount": 883,
     "domainCount": 284,
     "paramCount": 0,
@@ -1155,7 +1155,7 @@
     "allowCount": 112,
     "redirectCount": 0,
     "scriptletRuleCount": 63,
-    "cosmeticHostnameCount": 1545
+    "cosmeticHostnameCount": 1547
   },
   {
     "id": "ruleset_easylist_bulgarian_unsafe",
@@ -1178,15 +1178,15 @@
     "locales": [],
     "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/antiadblock.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/antiadblock.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_english.txt",
     "enabled": true,
-    "rawLineCount": 11196,
+    "rawLineCount": 11199,
     "ruleCount": 2327,
     "domainCount": 2358,
     "paramCount": 0,
     "blockCount": 508,
     "allowCount": 1819,
     "redirectCount": 0,
-    "scriptletRuleCount": 1310,
-    "cosmeticHostnameCount": 827
+    "scriptletRuleCount": 1311,
+    "cosmeticHostnameCount": 828
   },
   {
     "id": "ruleset_adguard_antiadblock_unsafe",
@@ -1240,9 +1240,9 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 3747,
+    "rawLineCount": 3756,
     "ruleCount": 1,
-    "domainCount": 3737,
+    "domainCount": 3746,
     "paramCount": 0,
     "blockCount": 1,
     "allowCount": 0,

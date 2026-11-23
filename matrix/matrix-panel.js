@@ -48,6 +48,11 @@
  *     info" indicator (see infoMarkerState() below) showing only
  *     whether this domain has more than one matching filter rule worth
  *     looking at — no risk judgment implied.
+ *     (11.1.0, owner's request) A breakage-risk column is BACK, as "Break
+ *     risk", on new evidence: built-in whitelist = high, a tracker-list
+ *     allow exception (AdGuard / EFF Privacy Badger) = medium, DDG Tracker
+ *     Radar = low, none = unknown — see js/core/breakage-risk.js. Same
+ *     badges and reason tooltips as the Fingerprint Inspector.
  *   SCRIPT/FRAME (separate Allow/Block columns) -> one informational
  *     "3P CODE" checkmark column (uses 3P script and/or frame requests,
  *     yes/no — not clickable) plus the new BLOCK/ALLOW 3P-all/3P-code
@@ -80,6 +85,8 @@ import { loadRulesetDetailsMap } from '../js/data/ruleset-details-loader.js';
 import { isDescendantHostnameOfIter } from '../js/util/utils.js';
 import { DEFAULT_SESSION_TIMEOUT_MS } from '../js/data/timing-constants.js';
 import { DNR_TRACKING_FILTER_NAME, WORRY_FREE_NAME } from '../js/data/ui-names.js';
+import { RISK_HIGH, RISK_MEDIUM, RISK_LOW } from '../js/data/scriptlet-rule-labels.js';
+import { RISK_BADGE, RISK_UNKNOWN, DOMAIN_RISK_REASON } from '../js/data/risk-badge.js';
 import {
     MSG_MATRIX_ENTRY,
     MSG_MATRIX_CLOSED,
@@ -87,6 +94,7 @@ import {
     MSG_STOP_MATRIX,
     MSG_GET_MATRIX_DATA,
     MSG_MATRIX_SET_OVERRIDE,
+    MSG_MATRIX_SET_OVERRIDES,
     MSG_RELOAD_MATRIX_TAB,
     MSG_GET_DOMAIN_RULE_DETAIL,
 } from '../js/data/message-types.js';
@@ -142,10 +150,52 @@ const WHITELIST_LEVEL_NOTES = Object.freeze({
     grey:  'GREY list: anyone can publish here — filter lists and protections apply',
 });
 
+// (11.1.0) BREAK RISK column — same badges as the Fingerprint Inspector (js/data/risk-badge.js), one verdict per
+// domain from js/core/breakage-risk.js. Legend order (low first) and the advice sentence are declared once, here.
+const BREAK_RISK_LEGEND_ORDER = Object.freeze([ RISK_LOW, RISK_MEDIUM, RISK_HIGH, RISK_UNKNOWN ]);
+const BREAK_RISK_LEGEND_WORD = Object.freeze({
+    [RISK_LOW]: 'low', [RISK_MEDIUM]: 'medium', [RISK_HIGH]: 'high', [RISK_UNKNOWN]: 'unknown',
+});
+
+// (11.1.0, owner's request) Bulk buttons by Break risk — the Fingerprint inspector's Block low risk / Block medium /
+// Block all, for domains. Cumulative thresholds (Medium = low + medium). ⚪ unknown only through the "All" button
+// (owner). BLOCK mode climbs from low risk up; ALLOW mode (repairing a broken website) works from high risk down.
+// Each writes the current mode's action as a 3P-all override for every VISIBLE row in its levels that does not have
+// it yet — the same override a click on that row's 3P-all square writes, for this website only. Same button colours
+// as the Inspector (css/panel-shared.css).
+const BULK_SCOPE = 'all';
+const BULK_ALL_LEVELS = BREAK_RISK_LEGEND_ORDER;   // every level, ⚪ unknown included
+const BULK_BUTTONS_BY_MODE = Object.freeze({
+    block: Object.freeze([
+        { levels: [ RISK_LOW ], label: 'Block low risk', className: 'monitor-btn-blocklow',
+            title: 'Block all third-party requests (3P-all) on this website from every listed low-risk domain' },
+        { levels: [ RISK_LOW, RISK_MEDIUM ], label: 'Block medium', className: 'monitor-btn-blockmedium',
+            title: 'Block all third-party requests (3P-all) on this website from every listed low- or medium-risk domain' },
+        { levels: BULK_ALL_LEVELS, label: 'Block all', className: 'monitor-btn-blockall',
+            title: 'Block all third-party requests (3P-all) on this website from every listed domain, including high and unknown risk' },
+    ]),
+    allow: Object.freeze([
+        { levels: [ RISK_HIGH ], label: 'Allow high risk', className: 'monitor-btn-blockall',
+            title: 'Allow all third-party requests (3P-all) on this website from every listed high-risk domain' },
+        { levels: [ RISK_HIGH, RISK_MEDIUM ], label: 'Allow medium', className: 'monitor-btn-blockmedium',
+            title: 'Allow all third-party requests (3P-all) on this website from every listed high- or medium-risk domain' },
+        { levels: BULK_ALL_LEVELS, label: 'Allow all', className: 'monitor-btn-blocklow',
+            title: 'Allow all third-party requests (3P-all) on this website from every listed domain, including low and unknown risk' },
+    ]),
+});
+
+// (11.1.0, owner's wording) Intro legend: one bullet per informational column, each on ONE line at the panel window's
+// width (js/core/panel-window.js PANEL_WINDOW_CONFIG.WIDTH — re-measure if a bullet grows). Tier values, colours and
+// badges are read from their own constants, never retyped.
+const LEGEND_TITLE = 'Explanation of information shown:';
+
 // Expand-column marker glyphs (closed / open) and the type-column check marks.
 const EXPAND_MARKER_CLOSED = '▶';
 const EXPAND_MARKER_OPEN = '▼';
 const CHECK_MARK_YES = '✓';
+// Known tracker cell values (renderTrackerCell) — the legend names them too.
+const CHECK_TRACKER_YES = 'Y';
+const CHECK_TRACKER_NO = 'N';
 const CHECK_MARK_NO = '—';
 
 // mini-square state -> fill class (miniSquareCell()). Written out literally so the CSS class
@@ -186,6 +236,8 @@ const elBody = qs$('#entryBody');
 const elEmpty = qs$('#emptyState');
 const showBlockedToggle = qs$('#matrixShowBlockedToggle');
 const elIntro = qs$('#monitorHelp');
+const elLegend = qs$('#matrixLegend');   // (11.1.0, owner) below the yellow advice banner
+const elBulkButtons = qs$('#matrixBulkButtons');
 
 /* ══════════════════════════════════════════════════════════════
    4. PANEL STATE
@@ -195,6 +247,7 @@ let clock = null;       // the session clock's setInterval handle
 let currentHost = '';   // the monitored site, set once the snapshot arrives
 let pollHandle = null;  // the poll safety net's setInterval handle
 let refreshInFlight = false; // re-entrancy guard: a rapid double-click must not fire two overlapping tab reloads
+let bulkInFlight = false;    // (11.1.0) re-entrancy guard: a second bulk click must not start an overlapping batch
 
 // Column model (section 6) — rebuilt by buildHeader() whenever the mode changes.
 let columnGroups = buildColumnGroups();
@@ -295,6 +348,12 @@ function buildColumnGroups() {
     groups.push({ label: '', subs: [
         { key: 'tracker', kind: 'tracker', label: [ 'Known', 'tracker' ],
             title: 'Y if this domain matches an entry in the bundled DuckDuckGo Tracker Radar dataset, N otherwise. Informational only — not a block/allow verdict.' },
+    ] });
+
+    // (11.1.0, owner's request) Break risk — right of "Known tracker", before "Domains connected".
+    groups.push({ label: '', subs: [
+        { key: 'breakRisk', kind: 'breakRisk', label: [ 'Break', 'risk' ],
+            title: 'How likely blocking this domain is to break the website. Hover a badge for the reason.' },
     ] });
 
     groups.push({ label: 'Domains connected', subs: [
@@ -400,9 +459,25 @@ function updateIntroText() {
     appendBold(elIntro, '3P-CODE');
     appendText(elIntro, ' to only ');
     appendBold(elIntro, action);
-    appendText(elIntro, ' third-party scripts and frames from that domain. ');
-    appendText(elIntro, `The color in the "more info" column shows how many filter rules match this domain: hover over it for explanation (0=${INFO_TIER_NONE}, ${INFO_TIER_SINGLE_COUNT}=${INFO_TIER_SINGLE}, more=${INFO_TIER_MULTIPLE}). `);
-    appendText(elIntro, '"Known tracker" shows Y if the domain is in the bundled DuckDuckGo Tracker Radar dataset, N otherwise — informational only.');
+    appendText(elIntro, ' third-party scripts and frames from that domain.');
+
+    const title = dom.create('p');
+    title.className = 'intro-legend-title';
+    title.textContent = LEGEND_TITLE;
+    const list = dom.create('ul');
+    list.className = 'intro-legend';
+    const badges = BREAK_RISK_LEGEND_ORDER.map(level => `${RISK_BADGE[level].glyph} ${BREAK_RISK_LEGEND_WORD[level]}`).join(', ');
+    for ( const line of [
+        `More info shows how many filter rules apply (0=${INFO_TIER_NONE}, ${INFO_TIER_SINGLE_COUNT}=${INFO_TIER_SINGLE}, more=${INFO_TIER_MULTIPLE}).`,
+        `Known tracker shows whether the domain is in the DuckDuckGo Tracker Radar dataset (${CHECK_TRACKER_YES}/${CHECK_TRACKER_NO}).`,
+        `Break risk shows the risk of blocking that domain (${badges}).`,
+    ] ) {
+        const item = dom.create('li');
+        item.textContent = line;
+        list.appendChild(item);
+    }
+    elLegend.textContent = '';
+    elLegend.append(title, list);
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -455,6 +530,7 @@ function appendGroupHeaderCells(group, isGroupStart, row1, row2) {
 
 function buildHeader() {
     updateIntroText(); // mode-dependent, same triggers as the column header below
+    renderBulkButtons(); // (11.1.0) mode-dependent too
     columnGroups = buildColumnGroups();
     columns = flattenColumns(columnGroups);
 
@@ -651,10 +727,22 @@ function renderInfoCell(col, entry) {
 function renderTrackerCell(col, entry) {
     const td = dom.create('td');
     td.className = 'td-tracker';
-    td.textContent = entry.ddgTracker ? 'Y' : 'N';
+    td.textContent = entry.ddgTracker ? CHECK_TRACKER_YES : CHECK_TRACKER_NO;
     td.title = entry.ddgTracker
         ? 'Matches a domain in the bundled DuckDuckGo Tracker Radar dataset'
         : 'Not found in the bundled DuckDuckGo Tracker Radar dataset';
+    return td;
+}
+
+// (11.1.0) A row from before this field existed (a session persisted by 11.0.4) has no breakageRisk: ⚪ unknown.
+function renderBreakRiskCell(col, entry) {
+    const level = RISK_BADGE[entry.breakageRisk] !== undefined ? entry.breakageRisk : RISK_UNKNOWN;
+    const td = dom.create('td');
+    td.className = 'td-break-risk';
+    td.textContent = RISK_BADGE[level].glyph;
+    td.title = DOMAIN_RISK_REASON[level];
+    td.setAttribute('role', 'img');
+    td.setAttribute('aria-label', `${RISK_BADGE[level].srLabel}: ${DOMAIN_RISK_REASON[level]}`);
     return td;
 }
 
@@ -704,6 +792,7 @@ const CELL_RENDERERS = Object.freeze({
     expand: renderExpandCell,
     info: renderInfoCell,
     tracker: renderTrackerCell,
+    breakRisk: renderBreakRiskCell,
     domain: renderDomainCell,
     single: renderTypeCheckCell,
     usesType: renderTypeCheckCell,
@@ -770,7 +859,7 @@ function upsertEntry(entry, options = {}) {
         upsertSubdomainRows(entry.subdomains, newRow, options);
     }
 
-    if ( !options.deferStats ) { renderStats(); }
+    if ( !options.deferStats ) { renderStats(); updateBulkButtons(); }
 }
 
 // Renders/updates each subdomain's child row directly beneath its parent row.
@@ -802,6 +891,7 @@ function refreshMatrixView() {
         const entry = entryRegistry.get(domain);
         if ( entry ) { applyRowVisibility(row, entry); }
     }
+    updateBulkButtons();
 }
 
 function renderStats() {
@@ -1120,6 +1210,68 @@ async function onScopeCellClick(ev) {
     }
 }
 
+// (11.1.0) Bulk buttons by Break risk — see BULK_BUTTONS_BY_MODE (Config).
+// A row qualifies when it is visible in the current mode, its risk is one of the button's levels, and its 3P-all
+// override is not yet the current mode's action. A row persisted without a risk reads as unknown (renderBreakRiskCell).
+function bulkTargets(levels) {
+    const action = currentModeAction();
+    const targets = [];
+    for ( const [ domain, row ] of rowRegistry ) {
+        const entry = entryRegistry.get(domain);
+        if ( !entry || row.classList.contains('row-hidden') ) { continue; }
+        const level = RISK_BADGE[entry.breakageRisk] !== undefined ? entry.breakageRisk : RISK_UNKNOWN;
+        if ( !levels.includes(level) || entry.override?.[BULK_SCOPE] === action ) { continue; }
+        targets.push(entry);
+    }
+    return targets;
+}
+
+function renderBulkButtons() {
+    elBulkButtons.textContent = '';
+    for ( const spec of BULK_BUTTONS_BY_MODE[currentMode()] ) {
+        const button = dom.create('button');
+        button.type = 'button';
+        button.classList.add('monitor-btn', spec.className);
+        button.textContent = spec.label;
+        button.title = spec.title;
+        button.addEventListener('click', ( ) => { onBulkButtonClick(spec.levels); });
+        elBulkButtons.appendChild(button);
+    }
+    updateBulkButtons();
+}
+
+// Disabled while a batch runs, or while the button has nothing to do.
+function updateBulkButtons() {
+    const specs = BULK_BUTTONS_BY_MODE[currentMode()];
+    elBulkButtons.querySelectorAll('button').forEach((button, i) => {
+        button.disabled = bulkInFlight || bulkTargets(specs[i].levels).length === 0;
+    });
+}
+
+async function onBulkButtonClick(levels) {
+    if ( bulkInFlight ) { return; }
+    const targets = bulkTargets(levels);
+    if ( targets.length === 0 ) { return; }
+    const action = currentModeAction();
+    bulkInFlight = true;   // GUARD (init): no overlapping batch
+    updateBulkButtons();
+    try {
+        const changes = targets.map(entry => ({ domain: entry.domain, scope: BULK_SCOPE, action }));
+        const resp = await sendMessage({ what: MSG_MATRIX_SET_OVERRIDES, changes });
+        if ( !resp?.ok ) { return; }
+        // Same local update as one click (onScopeCellClick): the rows keep their place until REFRESH.
+        for ( const entry of targets ) {
+            entry.override = entry.override ?? { all: null, code: null };
+            entry.override[BULK_SCOPE] = action;
+            upsertEntry(entry, { skipVisibilityUpdate: true, deferStats: true });
+        }
+        renderStats();
+    } finally {
+        bulkInFlight = false;   // GUARD (release): always re-enabled, also after a failed send
+        updateBulkButtons();
+    }
+}
+
 function onModeSwitchChange() {
     // BUG FIX (real, screenshotted report): applyRowVisibility() (called
     // via refreshMatrixView() below) only toggles the 'row-hidden' class
@@ -1289,6 +1441,7 @@ function renderSnapshot(snapshot) {
     for ( const entry of snapshot.entries ) { upsertEntry(entry, { fragment, deferStats: true }); }
     elBody.appendChild(fragment);
     renderStats();
+    updateBulkButtons();   // (11.1.0) rows are in the DOM now, so their visibility can be read
     startClock(snapshot.session.startTime, snapshot.session.timeElapsed);
     startPoll();
 }

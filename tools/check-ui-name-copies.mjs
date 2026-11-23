@@ -38,7 +38,10 @@ const RETIRED_VISIBLE_TEXT = Object.freeze([
     { label: '"Dynamic DNR" (renamed "DNR tracking filter", 11.0.0)', re: /dynamic dnr/i },
     // (11.0.2) The product is "uBlock Dynamic" (manifest extName). The old names lingered in 3 window titles and the
     // Settings page title. Credits ("Based on uBlock Origin Lite", "inspired by uBO") are a different name: not matched.
-    { label: '"uBlock Stripped" / "uBOL Stripped" (product renamed "uBlock Dynamic")', re: /u(?:block|bol)[ -]stripped/i },   // space/hyphen only: internal ids like 'uBolStrippedDynamic.picker' stay (contract)
+    { label: '"uBlock Stripped" / "uBOL Stripped" (product renamed "uBlock Dynamic")', re: /u(?:block|bol)[ -]stripped/i },
+    // (11.1.0, owner) Tool names in sentence case: the first word only.
+    { label: '"Fingerprint Inspector" (now "Fingerprint inspector", sentence case, 11.1.0)', re: /Fingerprint Inspector/ },
+    { label: '"Cookie consent-clicker" (the tool is "Cookie consent clicker")', re: /Cookie consent-clicker/ },   // space/hyphen only: internal ids like 'uBolStrippedDynamic.picker' stay (contract)
 ]);
 const JS_STRING_RE = /(['"`])((?:\\.|(?!\1)[^\\])*?)\1/g;
 const NOT_UI_STRING_RE = /^(?:\.{0,2}\/|\[uBlock-Dynamic\])|\.m?js$/;   // './x.js', '/js/x.js', '[uBlock-Dynamic] …'

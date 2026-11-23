@@ -644,18 +644,17 @@ export async function catchUpAlreadyOpenTabsForScriptlets() {
 // mitigation now means reverting to the 7.7.9 zip (which still has the
 // rollback flag) rather than flipping a switch in this version.
 //
-// Per-ruleset registration loads FOUR small shared/tiny files instead of
+// (11.1.0) ONE registration for every list (COSMETIC_CS_ID — see there for why), loading small files instead of
 // one large embedded-blob file:
 //   css-api.js       — self.cssAPI.insert(), messages the background to
 //                       call browser.scripting.insertCSS() (SAME file for
 //                       every ruleset — shared, not duplicated per-ruleset)
 //   isolated-api.js  — self.isolatedAPI (hostname-walk, binarySearch())
 //                       (SAME file for every ruleset)
-//   <id>-cosmetic-loader.js — ONE LINE, per-ruleset: sets
-//                       self.specificImports=['<id>'] so the shared
-//                       css-specific.js below knows which
-//                       chrome.storage.local key is this registration's
-//                       own data
+//   <id>-cosmetic-loader.js — ONE LINE per list, every wanted list's one:
+//                       appends '<id>' to self.specificImports so the
+//                       shared css-specific.js below knows which
+//                       chrome.storage.local keys to read
 //   css-specific.js  — reads chrome.storage.local['css.specific.<id>'],
 //                       applies matching selectors (SAME file for every
 //                       ruleset)
@@ -673,6 +672,15 @@ export async function catchUpAlreadyOpenTabsForScriptlets() {
 /******************************************************************************/
 
 const COSMETIC_CS_PREFIX = 'ag-cosmetic-';
+// (11.1.0) BUG FIX — the ONE cosmetic registration: the two shared files, EVERY wanted list's loader, then the shared
+// reader css-specific.js, as uBOL does. Replaces one registration per list (`ag-cosmetic-<ruleset id>`), which broke
+// site-specific hide rules for every list but one: Chrome runs an extension file only once per page, so css-specific.js
+// ran once, for whichever list's loader came first, and every other list's site rules were never read (reproduced in
+// Chrome: only ruleset_adguard_antiadblock was read on cnn.com/bbc.com; owner's report: the Bad filter fixes rules for
+// cnn.com and bbc.com did nothing). The scriptlet registrations had the same bug, fixed in 10.7.4
+// (SCRIPTLET_SITES_CS_ID above) — this is that fix swept to the cosmetic side. The per-list ids share
+// COSMETIC_CS_PREFIX, so the first registration pass after the update unregisters them.
+const COSMETIC_CS_ID = `${COSMETIC_CS_PREFIX}specific`;
 
 // Same caching rationale as scriptletFilesCache above.
 let cosmeticFilesCache;
@@ -745,20 +753,18 @@ async function registerCosmeticContentScriptsImpl(precomputedScope, bypassAlways
         Boolean(specificDataFile) && Boolean(loaderFile)
     );
 
-    const toRegister = wantedEntries.map(entry => {
-        const directive = {
-            id: `${COSMETIC_CS_PREFIX}${entry.id}`,
-            js: [ ...COSMETIC_SPECIFIC_SHARED_JS, `/${entry.loaderFile}`, COSMETIC_SPECIFIC_READER_JS ],
-            matches: siteModeMatches,
-            world: 'ISOLATED',
-            allFrames: true,
-            runAt: 'document_start',
-        };
-        if ( siteModeExcludes.length > 0 ) {
-            directive.excludeMatches = siteModeExcludes;
-        }
-        return directive;
-    });
+    // (11.1.0) One directive for all wanted lists (COSMETIC_CS_ID); none when no list is wanted.
+    const toRegister = wantedEntries.length === 0 ? [] : [ {
+        id: COSMETIC_CS_ID,
+        js: [ ...COSMETIC_SPECIFIC_SHARED_JS, ...wantedEntries.map(entry => `/${entry.loaderFile}`), COSMETIC_SPECIFIC_READER_JS ],
+        matches: siteModeMatches,
+        world: 'ISOLATED',
+        allFrames: true,
+        runAt: 'document_start',
+    } ];
+    if ( toRegister.length > 0 && siteModeExcludes.length > 0 ) {
+        toRegister[0].excludeMatches = siteModeExcludes;
+    }
 
     // ── GUARD: init — ensure chrome.storage.local has fresh data for every
     // ruleset about to be registered. Version-checked
@@ -815,11 +821,12 @@ async function registerCosmeticContentScriptsImpl(precomputedScope, bypassAlways
         });
     }
 
+    // Every registration with the prefix — the one current id AND the per-list ids from 11.0.4 and earlier, so the
+    // stale ones are unregistered just below (GUARD: release).
     let existing = [];
     try {
-        existing = await browser.scripting.getRegisteredContentScripts({
-            ids: cosmeticFiles.map(f => `${COSMETIC_CS_PREFIX}${f.id}`),
-        });
+        existing = (await browser.scripting.getRegisteredContentScripts())
+            .filter(s => s.id.startsWith(COSMETIC_CS_PREFIX));
     } catch {
         existing = [];
     }
@@ -836,6 +843,12 @@ async function registerCosmeticContentScriptsImpl(precomputedScope, bypassAlways
         updateErrorLabel: '[uBlock-Dynamic] updateContentScripts (cosmetic):',
         registerErrorLabel: '[uBlock-Dynamic] registerContentScripts (cosmetic):',
     });
+    // (11.1.0) GUARD (clear): the per-site cache holds the selectors of the lists registered when a site was last
+    // visited. Only the full registerContentScripts() cleared it; a list switched on or off in Filter lists
+    // (ruleset-routes.js) and the Seamless surfing passes (cookie-clicker-autodeny-manager.js) call this function
+    // alone, so a site visited before kept the old lists' selectors until the browser restarted. Masked until now by
+    // the one-reader bug (COSMETIC_CS_ID): the cache then held one list's selectors only.
+    await resetCSSCache();
 }
 
 /******************************************************************************/

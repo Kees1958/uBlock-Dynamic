@@ -108,7 +108,11 @@ function directiveFor(kind, id) {
         return [ ...registered.values() ].find(d => d.id.includes(kind) &&
             ((d.js ?? []).includes(`/rulesets/${id}-scriptlets.js`) || (d.js ?? []).includes(`/rulesets/${id}-scriptlets-entity.js`)));
     }
-    return [ ...registered.values() ].find(d => d.id.endsWith(id) && d.id.toLowerCase().includes(kind));
+    // (11.1.0) Hide rules: ONE shared registration (scripting-manager.js COSMETIC_CS_ID) — a list "is registered" when
+    // its loader file is in that registration's js list, before the shared reader css-specific.js (last).
+    const loader = cosmeticFiles.find(f => f.id === id)?.loaderFile;
+    return [ ...registered.values() ].find(d => d.id.toLowerCase().includes(kind) && loader !== undefined &&
+        (d.js ?? []).includes(`/${loader}`));
 }
 async function registerBoth(bypassAlwaysOnIds) {
     await manager.registerScriptletContentScripts(bypassAlwaysOnIds);
@@ -154,6 +158,16 @@ try {
         sites.js.filter(f => f === '/rulesets/scriptlet-library-end.js').length === 1);
     check('…and no 10.6.0-style per-list SITES registration is left', combined.every(d => !d.id.startsWith('ag-scriptlets-sites-')));
     check('no session: an ordinary list IS still registered (hide rules)', directiveFor('cosmetic', ORDINARY) !== undefined);
+    // (11.1.0) The cosmetic fix: Chrome runs a file once per page, so every list's loader must sit in ONE registration
+    // ahead of the ONE reader — per-list registrations let only the first list's site rules be read.
+    const cosmetic = [ ...registered.values() ].filter(d => d.id.startsWith('ag-cosmetic-'));
+    const reader = '/js/scripting/css-specific.js';
+    check('hide rules: exactly ONE registration, both lists\' loaders in it, ONE reader, last',
+        cosmetic.length === 1 && cosmetic[0].js.at(-1) === reader && cosmetic[0].js.filter(f => f === reader).length === 1 &&
+        [ ANNOY, ORDINARY ].every(id => cosmetic[0].js.includes(`/${cosmeticFiles.find(f => f.id === id).loaderFile}`)),
+        cosmetic.map(d => d.id).join(', '));
+    check('hide rules: every loader appends to self.specificImports (never replaces it)',
+        cosmeticFiles.every(f => fs.readFileSync(path.join(path.dirname(RULESETS), f.loaderFile), 'utf8').startsWith('(self.specificImports=self.specificImports||[]).push(')));
     check('no session: the hide-rule data WAS written to storage (same as an ordinary list)', [ ...storage.keys() ].some(k => k.includes(ANNOY)));
 
     // 2 — session on: no change (not session-gated any more).

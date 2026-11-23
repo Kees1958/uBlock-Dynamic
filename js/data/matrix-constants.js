@@ -5,6 +5,7 @@
  *   MULTI_PART_SUFFIXES  — common multi-part public suffixes (etldPlusOne)
  *   MATRIX_RESOURCE_TYPES — full third-party webRequest resource type list
  *   MATRIX_CAP            — max FIFO entries per tab session
+ *   MATRIX_BULK_OVERRIDES_MAX — max changes in one bulk override message (11.1.0)
  *   BUILTIN_DOMAINS        — domain -> {script, frame} whitelist (CRITICAL
  *                             RESOURCE column, green marker)
  *   SIGNAL_DOMAINS          — domain -> {script, frame} "commonly needed for
@@ -69,6 +70,11 @@ export const MATRIX_RESOURCE_TYPES = [
 
 // independent modules and may need to diverge later).
 export const MATRIX_CAP = 100;
+
+// (11.1.0) Input limit (C49) for MSG_MATRIX_SET_OVERRIDES — the tracking filter's bulk Block/Allow buttons. One change
+// per visible row: at most MATRIX_CAP domain rows plus the subdomain rows of whitelisted domains under them. Generous
+// on purpose (a real session stays far below it); a larger message is refused whole, never half-applied.
+export const MATRIX_BULK_OVERRIDES_MAX = MATRIX_CAP * 5;
 
 // REMOVED (audit after 9.7.5): MATRIX_DURATION — never imported anywhere.
 // The Matrix panel's session length comes from DEFAULT_SESSION_TIMEOUT_MS

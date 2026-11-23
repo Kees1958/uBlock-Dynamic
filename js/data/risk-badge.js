@@ -8,6 +8,9 @@
  *     before any rule exists — see getScriptletRuleRisk() in
  *     scriptlet-rule-labels.js, fed a hypothetical {name, args} built by
  *     that page's own scriptletMappingFor())
+ *   - matrix/matrix-panel.js (11.1.0 — a third-party DOMAIN's breakage risk
+ *     in the DNR tracking filter, computed by js/core/breakage-risk.js;
+ *     its hover reasons are DOMAIN_RISK_REASON below)
  *
  * 'unknown' is this module's own addition, not one of the three tiers
  * js/data/scriptlet-rule-labels.js classifies rules into — it's the
@@ -34,3 +37,16 @@ export const UNKNOWN_RISK_REASON_RULE =
 
 export const UNKNOWN_RISK_REASON_SIGNAL =
     'No breakage-risk data available for this signal — there is no precise website-specific protection to assess yet.';
+
+// (11.1.0) DNR tracking filter — hover reason per level, one per rule in js/core/breakage-risk.js (same order).
+// Written from the user's side: what the domain is, and what blocking it is likely to do.
+export const DOMAIN_RISK_REASON = Object.freeze({
+    [RISK_HIGH]:
+        'On the built-in whitelist of services websites need (payment, sign-in, CAPTCHA, video, code libraries). Blocking it will likely break this website.',
+    [RISK_MEDIUM]:
+        'Websites need this domain (or part of it): the tracker filter lists make an allow exception for it because blocking it broke websites (AdGuard, EFF Privacy Badger), or Disconnect or Ghostery list it as a tracker sites need (content, players, hosting, consent, chat, fraud protection). Blocking it may break this website.',
+    [RISK_LOW]:
+        'A known tracker (DuckDuckGo Tracker Radar) without an allow exception. Usually safe to block.',
+    [RISK_UNKNOWN]:
+        'Not on the built-in whitelist, the tracker exceptions or DuckDuckGo Tracker Radar: no breakage information for this domain.',
+});

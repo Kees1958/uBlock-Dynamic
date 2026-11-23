@@ -108,14 +108,27 @@
 
 #matrixFilterLabel {
     color: color-mix(in srgb, currentColor 65%, transparent);
+    white-space: nowrap; /* (11.1.0) one line: label and switch left, bulk buttons right */
     }
+
+/* (11.1.0) Block/Allow by Break risk buttons — after the mode switch, right-aligned; colours and disabled state
+   come from css/panel-shared.css (.monitor-btn-blocklow / -blockmedium / -blockall, shared with the Inspector). */
+#matrixBulkButtons {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto; /* (11.1.0, owner) pinned to the right edge; label and switch stay left */
+    gap: 0.4em;
+    white-space: nowrap; /* one line each: the label to their left is the part that may wrap */
+    }
+
+#matrixModeSwitch .switch-text { white-space: nowrap; } /* (11.1.0) the bulk buttons share this row now */
 
 #matrixModeSwitch {
     align-items: center;
     cursor: pointer;
     display: flex;
     gap: 0.5em;
-    margin-left: auto; /* pins the switch to the right edge of the row, label stays left */
+    /* (11.1.0, owner) Left, right after the label; the bulk buttons take the right edge (#matrixBulkButtons). */
     user-select: none;
     }
 
@@ -263,6 +276,13 @@
        "is this a known tracker", not secondary/de-emphasized text — see
        A8/STYLE_GUIDE_*.md, --ink-1 is already verified text-safe
        everywhere in both light and dark mode, no new ratio to compute. */
+    }
+
+/* (11.1.0) Break risk badge — same glyphs as the Fingerprint Inspector's own column (privacy-inspector.css
+   .col-break-risk); the title tooltip carries the reason, same affordance as td-tracker. */
+.entry-table td.td-break-risk {
+    cursor: help;
+    text-align: center;
     }
 
 .entry-table td.td-domain {
@@ -454,4 +474,19 @@
     flex-shrink: 0;
     line-height: 1.3;
     padding: 0.3em 0;
+    }
+
+/* (11.1.0) Intro legend — one bullet per informational column, each kept on ONE line (owner): nowrap, and the
+   window is wide enough (js/core/panel-window.js PANEL_WINDOW_CONFIG.WIDTH, measured in Chrome). */
+#matrixLegend .intro-legend-title {
+    margin: 0;
+    }
+
+#matrixLegend .intro-legend {
+    margin: 0;
+    padding-left: 1.4em;
+    }
+
+#matrixLegend .intro-legend li {
+    white-space: nowrap;
     }

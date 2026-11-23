@@ -31,7 +31,9 @@ import {
     deleteMatrixBlockRule,
     clearMatrixBlockRules,
     setMatrixOverride,
+    setMatrixOverrides,
 } from '../core/matrix-block-rules.js';
+import { MATRIX_BULK_OVERRIDES_MAX } from '../data/matrix-constants.js';
 
 import {
     startMatrix,
@@ -73,6 +75,22 @@ export async function handleMatrixSetOverride(request) {
     const site = getCurrentSessionSite();
     if ( !site ) { return { ok: false, error: 'no active Matrix session' }; }
     await setMatrixOverride(site, request.domain, request.scope, request.action ?? null);
+    await refreshOverridesCache();
+    return { ok: true };
+}
+
+// (11.1.0) The tracking filter's Block/Allow-by-risk buttons — many overrides in one message. Input checked before
+// anything is written (C49): an array, at most MATRIX_BULK_OVERRIDES_MAX entries; a larger or malformed message is
+// refused whole. Per-entry checks (domain string, scope, action) are setMatrixOverrides()'s, the same as one click.
+// Site from the current session only, as handleMatrixSetOverride() above.
+export async function handleMatrixSetOverrides(request) {
+    const site = getCurrentSessionSite();
+    if ( !site ) { return { ok: false, error: 'no active Matrix session' }; }
+    const changes = request.changes;
+    if ( !Array.isArray(changes) || changes.length > MATRIX_BULK_OVERRIDES_MAX ) {
+        return { ok: false, error: 'invalid bulk override request' };
+    }
+    await setMatrixOverrides(site, changes.map(c => ({ domain: c?.domain, scope: c?.scope, action: c?.action ?? null })));
     await refreshOverridesCache();
     return { ok: true };
 }

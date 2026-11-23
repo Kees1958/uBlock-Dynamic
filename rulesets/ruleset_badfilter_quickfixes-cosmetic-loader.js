@@ -1,1 +1,1 @@
-self.specificImports=['ruleset_badfilter_quickfixes'];
+(self.specificImports=self.specificImports||[]).push('ruleset_badfilter_quickfixes');

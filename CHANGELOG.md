@@ -4,6 +4,44 @@ Short, per-release summary of what changed — no implementation detail.
 Lives in the project's docs (since 10.1.4 it is no longer shipped inside the
 extension). The full technical account is CHANGELOG_HISTORY.md.
 
+## 11.1.0
+- **Fixed: site-specific hide rules of most filter lists did nothing.** Only one list's rules for a website were
+  read; every other list's were skipped. Your Bad filter fixes rules for CNN and BBC are among the ones that now work,
+  and many more hide rules from AdGuard and the other lists now apply as intended (for example 14 on cnn.com, where
+  there were none). Websites may look cleaner; if one breaks, use "Pause filtering" as usual and report it.
+- **Consistent capitalisation in every tool:** buttons, headings, hover texts and messages capitalise only the first
+  word. The "Fingerprint Inspector" is now the "Fingerprint inspector" (popup, right-click menu, its own window), its
+  buttons read "Block low risk", "Block medium" and "Block all", and "Cookie consent-clicker rules" is now
+  "Cookie consent clicker rules" in Manage custom rules.
+- **One yellow advice banner** in the Fingerprint inspector (the "only use it on sites you never log in to" line and
+  the "start with low or medium risk" advice, which used to be a separate red banner), and a matching one in the
+  DNR tracking filter: "Start with blocking low or medium risk tracking networks. When a website breaks, try
+  blocking individual trackers one by one."
+- **Fingerprint inspector:** when paused, "Resume" now comes first, before the risk buttons, and the line under
+  "paused" reads "Select an individual event or block a risk category."
+- **Fixed: switching a filter list on or off now applies at once to sites you visited before.** Their hide rules were
+  kept until the browser restarted.
+- **DuckDuckGo Tracker Radar data refreshed** (2026-11-23: 1,991 tracker domains, was 2,034).
+- **All filter lists refreshed** (full update, 2026-11-23), including the latest Bad filter fixes (new CNN and BBC
+  ad-slot hiding).
+- **The DNR tracking filter shows a breakage risk per domain again**, in a new "Break risk" column right of
+  "Known tracker", with the same badges as the Fingerprint inspector. Hover a badge for the reason.
+  - 🔴 high: on the built-in whitelist (payment, sign-in, CAPTCHA, video, code libraries).
+  - 🟡 medium: websites need it. The tracker filter lists make an allow exception for it because blocking it
+    broke websites (AdGuard's tracker exceptions, EFF Privacy Badger), or Disconnect or Ghostery list it as a
+    tracker sites need (content, players, hosting, consent, chat, fraud protection).
+  - 🟢 low: a known tracker (DuckDuckGo Tracker Radar) without such an exception.
+  - ⚪ unknown: on none of these lists.
+  The panel's help text is shorter, with a legend: one line each for More info, Known tracker and Break risk.
+  The panel's bottom line credits the data sources.
+- **Block or allow by risk in one click** (DNR tracking filter), as in the Fingerprint inspector. In BLOCK mode:
+  "Block low risk", "Block medium" (low and medium) and "Block all". In ALLOW mode, to repair a broken website:
+  "Allow high risk", "Allow medium" (high and medium) and "Allow all". Each sets 3P-all for the listed domains on
+  this website only, the same as clicking their 3P-all squares. Domains with unknown risk are only included by
+  "Block all" / "Allow all".
+- The "Known tracker" column could show N for the first domains of a session (its data was still loading).
+  It is now loaded before the page reloads.
+
 ## 11.0.4
 - **Optimizely can now be redirected to a harmless stand-in** (from uBlock Origin). A line such as
   `||cdn.optimizely.com/js/*.js$script,redirect=optimizely.js` now works in the Bad filter fixes list and in the

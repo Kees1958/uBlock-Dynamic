@@ -73,7 +73,8 @@ import { USER_RULES_BASE_ID, USER_RULES_MAX } from './dnr-budgets.js';
 import { etldPlusOne, isBuiltinWhitelisted, isSignalDomain, getBuiltinCategory, getWhitelistLevel, getGreyReason } from './matrix-classifier.js';
 import { getMatrixOverridesForSite } from './matrix-block-rules.js';
 import { isDomainStaticallyBlocked, ensureStaticBlockSetReady, SIMPLE_DOMAIN_RULE } from './static-block-check.js';
-import { isKnownTracker, preloadTrackerRadarData } from './tracker-radar-lookup.js';
+import { isKnownTracker } from './tracker-radar-lookup.js';
+import { breakageRiskOf, ensureBreakageRiskDataReady, resetBreakageRiskCache } from './breakage-risk.js';
 import { catchExpected, EXPECTED_ERRORS } from '../data/expected-errors.js';
 
 const SESSION_TIMEOUT_MS = DEFAULT_SESSION_TIMEOUT_MS;
@@ -163,12 +164,16 @@ function clearSessionTimeoutHandle() {
 /******************************************************************************/
 
 export async function startMatrix(tabId, host) {
-    preloadTrackerRadarData(); // fire-and-forget — see call's own header comment
     await ensureHydrated();
     // 'clash' — same reasoning as privacy-inspector.js's startPrivacyInspector():
     // a second tab starting the Matrix panel properly notifies the first
     // panel to close instead of abandoning it.
     await stopMatrix('clash');
+    // (11.1.0) Started here — AFTER stopMatrix(), which releases this data — so the fetches overlap the steps below,
+    // and AWAITED before the tab reload: the Known tracker and Break risk columns are computed once, when a domain's
+    // first request arrives, so the data must be loaded by then. The DDG preload used to be fire-and-forget, which
+    // could leave the first rows of a session on "N".
+    const riskDataReady = ensureBreakageRiskDataReady();
     entriesByDomain = new Map();
     session = {
         tabId,
@@ -195,6 +200,7 @@ export async function startMatrix(tabId, host) {
     await ensureStaticBlockSetReady();
     await refreshOverridesCache();
     await refreshUserRuleBlockCache();
+    await riskDataReady;
     await browser.tabs.reload(tabId).catch(catchExpected('reload Matrix tab', [ EXPECTED_ERRORS.TAB_GONE ]));
 }
 
@@ -209,6 +215,7 @@ export async function stopMatrix(reason = 'user') {
     // drop them with it (rebuilt by refreshUserRuleBlockCache() on the next start/reconcile).
     userRuleBlockedDomains = new Set();
     userRuleAllowedDomains = new Set();
+    resetBreakageRiskCache();   // GUARD (release, 11.1.0): the exception host sets go with the session
     syncRequestListener();   // GUARD (release): no request listener outlives the session
     await persist();
     if ( hadSession ) {
@@ -269,6 +276,8 @@ function newEntry(hostname) {
         // breakage-risk verdict this dataset used to power — this is a
         // simple Y/N informational signal, not a block/allow decision.
         ddgTracker: isKnownTracker(hostname),
+        // (11.1.0) BREAK RISK column — high/medium/low/unknown, one verdict per domain (js/core/breakage-risk.js).
+        breakageRisk: breakageRiskOf(hostname),
         override: matrixOverridesCache.get(hostname) ?? { all: null, code: null },
         // Observed FULL hostnames under this domain (e.g. accounts.google.com
         // under google.com) — ONLY populated for CRITICAL RESOURCE-whitelisted
@@ -313,6 +322,7 @@ function newSubdomainEntry(fullHost) {
         staticallyBlocked: isDomainStaticallyBlocked(fullHost),
         userRuleBlocked: isUserRuleBlocked(fullHost),
         ddgTracker: isKnownTracker(fullHost),
+        breakageRisk: breakageRiskOf(fullHost),
         override: matrixOverridesCache.get(fullHost) ?? { all: null, code: null },
     };
 }
@@ -546,6 +556,7 @@ export async function reconcileMatrixCaches() {
     await ensureHydrated();
     if ( !session || session.phase !== 'running' ) { return; }
     await ensureStaticBlockSetReady();
+    await ensureBreakageRiskDataReady();   // (11.1.0) lost on SW restart, like the caches below
     await refreshOverridesCache();
     // (10.6.4) refreshUserRuleBlockCache() joins the same reconcile-on-
     // every-SW-wake call — it's exactly the same "async cache, module-
@@ -563,10 +574,16 @@ export async function reconcileMatrixCaches() {
     // extended here to staticallyBlocked, so a domain recorded before
     // this reconciliation ran is corrected retroactively, not just future
     // ones recorded after it.
+    // (11.1.0) ddgTracker and breakageRisk too: a row recorded while the worker was still reloading their data
+    // after a restart would otherwise keep "N" / "unknown" for the rest of the session.
     for ( const [ domain, entry ] of entriesByDomain ) {
         entry.staticallyBlocked = isDomainStaticallyBlocked(domain);
+        entry.ddgTracker = isKnownTracker(domain);
+        entry.breakageRisk = breakageRiskOf(domain);
         for ( const sub of entry.subdomains ) {
             sub.staticallyBlocked = isDomainStaticallyBlocked(sub.domain);
+            sub.ddgTracker = isKnownTracker(sub.domain);
+            sub.breakageRisk = breakageRiskOf(sub.domain);
         }
     }
     await persist();

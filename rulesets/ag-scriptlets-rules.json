@@ -6289,6 +6289,7 @@
   },
   {
     "hostnames": [
+      "hianimes.se",
       "vidstuck.xyz",
       "komiku.org",
       "kaliscan.com",
@@ -6395,6 +6396,7 @@
   },
   {
     "hostnames": [
+      "hianimes.se",
       "vidstuck.xyz",
       "komiku.org",
       "kaliscan.com",
@@ -25329,6 +25331,7 @@
   },
   {
     "hostnames": [
+      "cherryonmysundae.com",
       "techjunkie.com",
       "ootrandomizer.com",
       "cookedandloved.com",
@@ -25742,6 +25745,7 @@
   },
   {
     "hostnames": [
+      "cherryonmysundae.com",
       "techjunkie.com",
       "ootrandomizer.com",
       "cookedandloved.com",
@@ -26794,6 +26798,7 @@
   },
   {
     "hostnames": [
+      "chamsko.pl",
       "lifeintheuktestweb.co.uk",
       "androidauthority.com",
       "shinden.pl",
@@ -30831,6 +30836,8 @@
   },
   {
     "hostnames": [
+      "chamsko.pl",
+      "theverge.com",
       "notebookcheck.com",
       "notebookcheck.net",
       "notebookcheck.org",
@@ -30855,6 +30862,8 @@
   },
   {
     "hostnames": [
+      "chamsko.pl",
+      "theverge.com",
       "notebookcheck.com",
       "notebookcheck.net",
       "notebookcheck.org",
@@ -30980,6 +30989,30 @@
     "args": [
       "sp-message-open",
       "html.sp-message-open"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
+      "chamsko.pl",
+      "theverge.com"
+    ],
+    "name": "prevent-innerHTML",
+    "args": [
+      "head, body",
+      "/^$/"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
+      "chamsko.pl",
+      "theverge.com"
+    ],
+    "name": "set-constant",
+    "args": [
+      "HTMLBodyElement.prototype.remove",
+      "noopFunc"
     ],
     "ruleset": "ruleset_adguard_base"
   },
@@ -31621,6 +31654,7 @@
   },
   {
     "hostnames": [
+      "czzbgnw.com",
       "allpornstream.com"
     ],
     "name": "prevent-window-open",
@@ -70818,6 +70852,16 @@
   },
   {
     "hostnames": [
+      "leagueofgraphs.com"
+    ],
+    "name": "prevent-setTimeout",
+    "args": [
+      "if (blocked())"
+    ],
+    "ruleset": "ruleset_adguard_antiadblock"
+  },
+  {
+    "hostnames": [
       "romatoday.it"
     ],
     "name": "prevent-setTimeout",
@@ -79824,6 +79868,7 @@
   },
   {
     "hostnames": [
+      "fhjabs.com",
       "gobsao8u.com",
       "as9u7bgh9.com",
       "viderea.site",
@@ -79845,6 +79890,7 @@
   },
   {
     "hostnames": [
+      "fhjabs.com",
       "gobsao8u.com",
       "as9u7bgh9.com",
       "viderea.site",
@@ -79867,6 +79913,7 @@
   },
   {
     "hostnames": [
+      "fhjabs.com",
       "gobsao8u.com",
       "as9u7bgh9.com",
       "viderea.site",

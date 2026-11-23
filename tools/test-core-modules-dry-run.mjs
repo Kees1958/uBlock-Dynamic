@@ -153,6 +153,46 @@ await checkAsync('getMatrixOverridesForSite returns only that site\'s overrides'
     assert.deepStrictEqual(forUnknown, {});
 });
 
+// (11.1.0) Bulk form — the tracking filter's Block/Allow-by-risk buttons.
+await checkAsync('setMatrixOverrides applies every valid change with ONE DNR sync, skips invalid ones', async () => {
+    const before = (await mbr.getMatrixBlockRules()).length;
+    let syncs = 0;
+    const realUpdate = dnrMock.updateDynamicRules;
+    dnrMock.updateDynamicRules = async function(arg) { syncs++; return realUpdate.call(this, arg); };
+    try {
+        await mbr.setMatrixOverrides('bulk-site.com', [
+            { domain: 'a.example', scope: 'all', action: 'block' },
+            { domain: 'b.example', scope: 'all', action: 'block' },
+            { domain: 'c.example', scope: 'nope', action: 'block' },   // invalid scope — skipped
+            { domain: 42, scope: 'all', action: 'block' },            // invalid domain — skipped
+        ]);
+    } finally {
+        dnrMock.updateDynamicRules = realUpdate;   // GUARD (release): the mock is shared by later sections
+    }
+    assert.strictEqual(syncs, 1);
+    const forBulk = await mbr.getMatrixOverridesForSite('bulk-site.com');
+    assert.deepStrictEqual(Object.keys(forBulk).sort(), [ 'a.example', 'b.example' ]);
+    assert.strictEqual(forBulk['a.example'].all, 'block');
+    assert.strictEqual((await mbr.getMatrixBlockRules()).length, before + 2);
+    await mbr.setMatrixOverrides('bulk-site.com', [   // clean up: null clears
+        { domain: 'a.example', scope: 'all', action: null }, { domain: 'b.example', scope: 'all', action: null },
+    ]);
+    assert.strictEqual((await mbr.getMatrixBlockRules()).length, before);
+});
+
+await checkAsync('setMatrixOverrides with nothing valid writes nothing (no DNR sync)', async () => {
+    let syncs = 0;
+    const realUpdate = dnrMock.updateDynamicRules;
+    dnrMock.updateDynamicRules = async function(arg) { syncs++; return realUpdate.call(this, arg); };
+    try {
+        await mbr.setMatrixOverrides('bulk-site.com', [ { domain: '', scope: 'all', action: 'block' } ]);
+        await mbr.setMatrixOverrides('bulk-site.com', 'not an array');
+    } finally {
+        dnrMock.updateDynamicRules = realUpdate;
+    }
+    assert.strictEqual(syncs, 0);
+});
+
 await checkAsync('deleteMatrixOverridesMatching deletes only matching entries (site OR domain substring)', async () => {
     await mbr.setMatrixOverride('another.com', 'akamaihd.net', 'all', 'block');
     const deleted = await mbr.deleteMatrixOverridesMatching('akamaihd');

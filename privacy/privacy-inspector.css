@@ -30,43 +30,10 @@
    4.98:1 light / 9.68:1 dark, comfortably passing both — computed
    directly from this project's actual --surface-1/--ink-1/--color-amber
    values in each mode, not assumed from reusing an existing variable. */
-#monitorHelpWarning {
-    background-color: color-mix(in srgb, var(--color-amber) 10%, var(--surface-1));
-    border-bottom: 1px solid var(--border-1);
-    color: color-mix(in srgb, var(--color-amber) 50%, currentColor);
-    font-size: 0.82em;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0.45em 0.8em;
-    width: 100%;
-    }
+/* (11.1.0) #monitorHelpWarning: the shared yellow banner rule in css/panel-shared.css (one copy, also used by the
+   DNR tracking filter); this file's duplicate was removed. */
 
-/* Aggregate legit-signals banner — only appears once enough individually-
-   legitimate device/network signals have been read together (see
-   LEGIT_SIGNALS_WARNING_THRESHOLD in privacy-inspector.js). Deliberately a
-   different color (red-leaning) from #monitorHelpWarning's static amber
-   caution line, so an active detection reads as more urgent than the
-   ever-present "don't log in here" reminder above it.
-   Text color mix verified at 60% red (not a higher, more saturated mix)
-   specifically for contrast: at 85% red the text/background combination
-   only reaches 3.66:1 in light mode (fails WCAG AA's 4.5:1 minimum for
-   this font size — bold 0.82em doesn't qualify for the relaxed large-text
-   3:1 threshold). 60% reaches 5.52:1 light / 7.00:1 dark, comfortably
-   passing both — computed directly from this project's actual --surface-1/
-   --ink-1/--color-red values in each mode, not assumed from reusing an
-   existing variable. */
-#fingerprintWarningBanner {
-    background-color: color-mix(in srgb, var(--color-red) 12%, var(--surface-1));
-    border-bottom: 1px solid var(--border-1);
-    color: color-mix(in srgb, var(--color-red) 60%, currentColor);
-    font-size: 0.82em;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0.45em 0.8em;
-    width: 100%;
-    }
+/* (11.1.0) #fingerprintWarningBanner removed: its advice is the second line of #monitorHelpWarning. */
 
 /* ══════════════════════════════════════════════════════════════
    4. ENTRY TABLE WRAPPER  —  scroll region

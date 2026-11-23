@@ -1938,20 +1938,6 @@
     }
   },
   {
-    "id": 243480,
-    "priority": 8000,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "smartstore.naver.com"
-      ],
-      "urlFilter": "||connect.facebook.net/*/fbevents.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1040392,
     "priority": 8000,
     "action": {
@@ -16718,6 +16704,28 @@
     },
     "condition": {
       "urlFilter": "|http://f55685555563t3i3o3a3b3n3n0079556626.us-5.evergage.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1913193,
+    "priority": 8000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "|https://fwmrm.net^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 791220,
+    "priority": 8000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "|http://fwmrm.net^",
       "isUrlFilterCaseSensitive": false
     }
   },

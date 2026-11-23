@@ -6,8 +6,9 @@
  *   preloadTrackerRadarData() — kicks off (and caches) the lazy fetch() of
  *                              the ~200KB dataset. Call once, as early as
  *                              possible, from a moment that can absorb the
- *                              load — matrix-panel.js's startMatrix() calls
- *                              this alongside its other setup steps, well
+ *                              load — (11.1.0) breakage-risk.js's
+ *                              ensureBreakageRiskDataReady() calls it, and
+ *                              matrix-panel.js's startMatrix() AWAITS that
  *                              before its own tab-reload lets any real
  *                              request reach lookupTracker()/isKnownTracker()
  *                              below. NOT required before calling either of

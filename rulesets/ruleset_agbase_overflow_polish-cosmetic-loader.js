@@ -1,1 +1,1 @@
-self.specificImports=['ruleset_agbase_overflow_polish'];
+(self.specificImports=self.specificImports||[]).push('ruleset_agbase_overflow_polish');

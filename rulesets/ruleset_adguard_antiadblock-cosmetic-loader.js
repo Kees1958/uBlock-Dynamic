@@ -1,1 +1,1 @@
-self.specificImports=['ruleset_adguard_antiadblock'];
+(self.specificImports=self.specificImports||[]).push('ruleset_adguard_antiadblock');

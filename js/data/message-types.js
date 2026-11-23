@@ -38,6 +38,10 @@ export const MSG_GET_MATRIX_DATA   = 'getMatrixData';   // fetch FIFO array + se
 // header for the full per-site design (deliberately NOT global, unlike
 // real 3P-Matrix-lite's own domain overrides).
 export const MSG_MATRIX_SET_OVERRIDE = 'matrixSetOverride';
+// (11.1.0) Bulk form of MSG_MATRIX_SET_OVERRIDE, for the tracking filter's Block/Allow-by-risk buttons:
+// { changes: [ { domain, scope, action }, … ] } (at most MATRIX_BULK_OVERRIDES_MAX). Same site rule: the site
+// comes from the running session, never from the payload. One storage write and one DNR sync for the batch.
+export const MSG_MATRIX_SET_OVERRIDES = 'matrixSetOverrides';
 // Reloads the tab the current Matrix session is watching — sent by the
 // panel's REFRESH button. Separate from the row-list re-evaluation
 // refreshMatrixView() already does locally in the panel (see

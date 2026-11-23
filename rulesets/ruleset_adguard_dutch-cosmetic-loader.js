@@ -1,1 +1,1 @@
-self.specificImports=['ruleset_adguard_dutch'];
+(self.specificImports=self.specificImports||[]).push('ruleset_adguard_dutch');

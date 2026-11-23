@@ -247,6 +247,7 @@
     },
     "condition": {
       "initiatorDomains": [
+        "chamsko.pl",
         "przegladsportowy.onet.pl"
       ],
       "urlFilter": "||html-load.com^",
@@ -279,6 +280,7 @@
     },
     "condition": {
       "initiatorDomains": [
+        "chamsko.pl",
         "edziecko.pl",
         "gazeta.pl",
         "moto.pl",

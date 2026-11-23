@@ -204,7 +204,7 @@ const FILTER_GROUPS = [
     // there was nothing actionable to show. Per explicit follow-up
     // request, both are now checked by default like every other group —
     // now that they're properly classified (High risk) and explained by
-    // fingerprintWarningBanner below, hiding them by default no longer fits
+    // the yellow banner (#monitorHelpWarning), hiding them by default no longer fits
     // the rest of this session's design (a real signal a user should see
     // by default, not an edge case to opt into). Labels fall back to
     // SHORT_LABELS — 'Tracking beacons' for beacon, 'Device & network'
@@ -427,7 +427,6 @@ typeFilters.addEventListener('change', event => {
     for ( const row of body.querySelectorAll('tr.monitor-row') ) {
         applyRowVisibility(row);
     }
-    updateFingerprintWarningBanner();
     updateEmpty(); updateBlockAllAvailability();
 });
 
@@ -501,32 +500,8 @@ function startClock(startTime, elapsed) {
     }
     tick(); clock = setInterval(tick, CLOCK_TICK_MS);
 }
-// Aggregate fingerprinting-signal warning banner. Retargeted this
-// session, per explicit request (see CHANGELOG) — used to fire once a
-// 5-distinct-signal aggregate threshold was reached, gated on the
-// "Legitimate signals"/"Beacon" checkboxes being checked, with text
-// describing that count. Now fires for ANY High-risk row regardless of
-// category (webrtc/webgl/clipboard/tz-fingerprint qualify too, not just
-// legit-signals/beacon), with different, more general guidance text —
-// no longer a signal-count readout, a general strategy tip. No longer
-// gated on any specific filter-bar checkbox — High-risk categories are
-// mostly visible by default, so a checkbox-visibility gate no longer
-// matches this broader trigger. The old counting apparatus
-// (legitSignalsSeen/thresholdReached/noteLegitSignal(), 5-signal
-// threshold) is gone entirely, not left half-used — nothing else read
-// it. "Seen once, stays shown" for the rest of the session.
-const fingerprintWarningBanner = document.querySelector('#fingerprintWarningBanner');
-let hasHighRiskSignal = false;
-
-function updateFingerprintWarningBanner() {
-    if ( fingerprintWarningBanner.hidden === !hasHighRiskSignal ) { return; }
-    if ( hasHighRiskSignal ) {
-        fingerprintWarningBanner.textContent =
-            'Start with blocking low or medium risk fingerprints. When a website breaks, ' +
-            'try blocking individual signals one by one.';
-    }
-    fingerprintWarningBanner.hidden = !hasHighRiskSignal;
-}
+// (11.1.0, owner) The "start with low or medium risk" advice is no longer a separate red banner shown after the first
+// high-risk row: it is the second line of the one static yellow banner (#monitorHelpWarning, privacy-inspector.html).
 
 function buildRow(entry) {
     const row = document.createElement('tr');
@@ -561,19 +536,6 @@ function buildRow(entry) {
     // RULE_INFO uses to justify High elsewhere.
     const risk = computeRisk(entry, scriptletMapping);
     const riskBadge = risk ? RISK_BADGE[risk.level] : RISK_BADGE[RISK_UNKNOWN];
-    // Per explicit request: this banner (the red aggregate one, at the
-    // top of the panel) used to fire once a 5-signal aggregate threshold
-    // was reached (see updateFingerprintWarningBanner()'s own comment for
-    // the full history). Retargeted to fire for ANY High-risk row,
-    // regardless of category — webrtc/webgl/clipboard/tz-fingerprint all
-    // qualify now too, not just legit-signals/beacon. Checked here,
-    // unconditionally, right after risk is computed — not inside the
-    // button-disabled branch below, since High-risk categories WITH a
-    // working Select button should trigger this too.
-    if ( risk?.level === RISK_HIGH ) {
-        hasHighRiskSignal = true;
-        updateFingerprintWarningBanner();
-    }
     const riskCell = document.createElement('td');
     riskCell.className = 'col-break-risk';
     riskCell.textContent = riskBadge.glyph;

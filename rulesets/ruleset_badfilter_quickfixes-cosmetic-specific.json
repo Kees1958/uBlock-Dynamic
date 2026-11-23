@@ -1,1 +1,1 @@
-{"hostnames":["bbc.com"],"selectorListRefs":[0],"selectorLists":["0,1"],"selectors":["div[class*=\"AdSlot\"], div[id*=\"AdSlot\"]","iframe[name*=\"offer\"]"],"hasEntities":false,"regexes":[],"v":"wa8m34"}
+{"hostnames":["bbc.com","cnn.com"],"selectorListRefs":[0,1],"selectorLists":["0,1,2","3"],"selectors":["div[class*=\"AdSlot\"], div[id*=\"AdSlot\"]","div[data-component=\"ad-slot\"]","iframe[name*=\"offer\"]","div.ad-slot-header__wrapper"],"hasEntities":false,"regexes":[],"v":"zhvrsg"}

@@ -305,7 +305,9 @@ body {
    ══════════════════════════════════════════════════════════════ */
 
 /* ── Help text ───────────────────────────────────────────────── */
-#monitorHelp {
+/* (11.1.0) #matrixLegend: the DNR tracking filter's column explanation, same look as the help text above it. */
+#monitorHelp,
+#matrixLegend {
     border-bottom: 1px solid var(--border-1);
     color: color-mix(in srgb, currentColor 65%, transparent); /* BUG FIX: was 60% — borderline fails 4.5:1 in light mode (4.44:1); 65% is the nearest proven-safe value (A9) */
     font-size: 0.82em;
@@ -315,6 +317,8 @@ body {
     width: 100%;
     padding: 0.55em 0.8em;
     }
+
+#monitorHelpWarning p { margin: 0; }   /* (11.1.0) one line per advice, no gap */
 
 #monitorHelp strong {
     color: inherit;
@@ -326,10 +330,12 @@ body {
    including the same verified 50%-amber text mix (see that file's comment
    for the full contrast numbers: 80% failed WCAG AA at 2.62:1 in light
    mode; 50% reaches 4.98:1 light / 9.68:1 dark). */
+/* (11.1.0, owner) Yellow: a stronger amber fill with the page's own text colour (--ink-1, verified text-safe in both
+   modes) instead of amber-tinted text on a pale fill. Used by the Fingerprint inspector and the DNR tracking filter. */
 #monitorHelpWarning {
-    background-color: color-mix(in srgb, var(--color-amber) 10%, var(--surface-1));
+    background-color: color-mix(in srgb, var(--color-amber) 30%, var(--surface-1));
     border-bottom: 1px solid var(--border-1);
-    color: color-mix(in srgb, var(--color-amber) 50%, currentColor);
+    color: var(--ink-1);
     font-size: 0.82em;
     font-weight: 600;
     line-height: 1.5;

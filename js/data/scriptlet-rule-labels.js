@@ -75,7 +75,7 @@
 
 export const LOGICAL_LABELS = {
     webrtc: 'WebRTC IP address leak',
-    webgl: 'WebGL Graphics access',
+    webgl: 'WebGL graphics access',
     canvas: 'Hidden canvas drawing test',
     'webgl-fingerprint': 'Graphics card fingerprint',
     audio: 'Audio sound card fingerprint',
@@ -160,7 +160,7 @@ const RULE_INFO = [
     // still gets a sensible risk badge instead of falling through to
     // "no data available".
     { name: 'prevent-canvas', match: a => arg0(a) === 'webgl',
-      label: 'WebGL Graphics access',
+      label: 'WebGL graphics access',
       risk: RISK_HIGH,
       reason: 'Blocks WebGL/WebGL2 context creation outright. Real, common uses beyond fingerprinting — WebGL-based games, 3D visualizations, map renderers, some video effects — stop working entirely, not just degrade.',
       api: ( ) => 'getContext' },
@@ -285,7 +285,7 @@ function findRuleInfo(rule) {
         if ( entry.name !== rule.name ) { continue; }
         try {
             if ( entry.match(rule.args) ) { return entry; }
-        } catch { /* malformed args on a hand-edited rule — fall through */ }
+        } catch { /* benign: malformed args on a hand-edited rule — fall through (11.1.0: module now in the SW graph via breakage-risk.js) */ }
     }
     return null;
 }

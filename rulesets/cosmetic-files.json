@@ -3,19 +3,19 @@
     "id": "ruleset_badfilter_quickfixes",
     "specificDataFile": "rulesets/ruleset_badfilter_quickfixes-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_badfilter_quickfixes-cosmetic-loader.js",
-    "v": "wa8m34"
+    "v": "zhvrsg"
   },
   {
     "id": "ruleset_annoyances",
     "specificDataFile": "rulesets/ruleset_annoyances-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_annoyances-cosmetic-loader.js",
-    "v": "1si32f2"
+    "v": "y52088"
   },
   {
     "id": "ruleset_adguard_base",
     "specificDataFile": "rulesets/ruleset_adguard_base-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_base-cosmetic-loader.js",
-    "v": "1rcuztl"
+    "v": "16r0ljn"
   },
   {
     "id": "ruleset_agbase_overflow_dutch",
@@ -117,7 +117,7 @@
     "id": "ruleset_adguard_spanish",
     "specificDataFile": "rulesets/ruleset_adguard_spanish-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_spanish-cosmetic-loader.js",
-    "v": "1hm97pn"
+    "v": "ifuabf"
   },
   {
     "id": "ruleset_easylist_italian",
@@ -135,7 +135,7 @@
     "id": "ruleset_easylist_portuguese",
     "specificDataFile": "rulesets/ruleset_easylist_portuguese-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_portuguese-cosmetic-loader.js",
-    "v": "1l2zhee"
+    "v": "1sqnonp"
   },
   {
     "id": "ruleset_easylist_latvian",
@@ -165,19 +165,19 @@
     "id": "ruleset_easylist_bulgarian",
     "specificDataFile": "rulesets/ruleset_easylist_bulgarian-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_bulgarian-cosmetic-loader.js",
-    "v": "1u1yeia"
+    "v": "1ptt8ny"
   },
   {
     "id": "ruleset_adguard_antiadblock",
     "specificDataFile": "rulesets/ruleset_adguard_antiadblock-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_antiadblock-cosmetic-loader.js",
-    "v": "uygtse"
+    "v": "5erzjl"
   },
   {
     "id": "ruleset_english_outside_top1m",
     "specificDataFile": "rulesets/ruleset_english_outside_top1m-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_english_outside_top1m-cosmetic-loader.js",
-    "v": "i9t1ng"
+    "v": "nr2om4"
   },
   {
     "id": "ruleset_antiadmiral",

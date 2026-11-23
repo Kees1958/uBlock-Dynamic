@@ -17,6 +17,125 @@ exception: every tools version still gets at least a one-line
 Entries below 9.7.1 were all written under the older every-version
 convention and are kept as they are.
 
+## 11.1.0 — DNR tracking filter: Break risk column (owner's decision 2026-11-23)
+**Source version.** Working from 11.0.4 rebuilt (extension 11.0.4 / tools 3.0.8 / docs 11.0.4), GitHub
+Kees1958/uBlock-Dynamic 101237a. **tools 3.0.9** (bumped by the packager: new steps 94, build-needed-trackers.mjs,
+test changes for the cosmetic registration and bulk overrides).
+**What / why.** Owner asked for the Fingerprint Inspector's low / medium / high breakage advice in the DNR tracking
+filter. A red/yellow/green verdict existed here before (9.x–10.x: whitelist = red, Peter Lowe = green, rest = yellow)
+and was removed on request as redundant with Seamless surfing; it returns on new, owner-chosen evidence, first match wins:
+- **high** — built-in whitelist (`matrix-classifier.js` isBuiltinWhitelisted, the old rule kept on request);
+- **medium** — needed by sites, for the domain, a parent (`||host` rules, listed domains), or a host under it (a
+  3P-all/3P-code click on the domain would also block that host): (a) an allow in the hidden tracker-exception ruleset
+  `ruleset_tracking_servers_allowlist` (AdGuard tracker exceptions + EFF Privacy Badger cookieblock hosts, i.e. the
+  exceptions that keep Kees1958 / Peter Lowe / AdGuard tracking servers / HaGeZi Light from breaking sites), or (b)
+  (owner, same session) a Disconnect "Content" / "Anti-fraud" / "ConsentManagers" or Ghostery "audio_video_player" /
+  "hosting" / "utilities" / "consent" / "customer_interaction" domain (Ghostery has no "essential" category any more);
+- **low** — in the bundled DuckDuckGo Tracker Radar dataset;
+- **unknown** (⚪) — none of these, shown explicitly as the Inspector does ("no data", never "safe").
+One badge per domain (owner: the lists rate domains, not request types). Column placed right of "Known tracker".
+**How.**
+- `js/core/breakage-risk.js` (new): the rule (`classifyBreakageRisk`, pure), the ruleset parser
+  (`extractExceptionHosts`: `||host`, `|http(s)://host^`, `://host`; on 11.0.4 1,263 rules -> 334 anchored + 75 exact
+  hosts, 1 skipped: `.2o7.net/`, already covered by `||2o7.net`), and the lookup. Reads the SHIPPED ruleset (one source
+  of truth, no second build artifact). Lazy fetch (import() is disallowed in a SW), loaded per session and released by
+  `stopMatrix()` (`resetBreakageRiskCache`, generation guard so a load in flight never writes back after release).
+- `js/core/matrix-panel.js`: `breakageRisk` on every entry and subdomain entry; `startMatrix()` now AWAITS the data
+  before its tab reload (started after `stopMatrix('clash')`, which releases it). This also fixes a pre-existing race:
+  the Tracker Radar preload was fire-and-forget, so the first rows could read "N". `reconcileMatrixCaches()` reloads
+  the data after a worker restart and refreshes `ddgTracker` and `breakageRisk` of existing rows in place.
+- `tools/build-needed-trackers.mjs` (new, `npm run update:needed-trackers`): Disconnect `services.json` via
+  `fetchJsonData()`, Ghostery `db/patterns/*.eno` via a shallow sparse clone in a temp folder (always removed); writes
+  `js/data/needed-trackers-data.json` (2026-11-23: 1,405 domains — Disconnect 438, Ghostery 1,054). Not-near-empty
+  guards; nothing written on a failed download. Both sources CC BY-NC-SA 4.0 (verified against each LICENSE), credited
+  in THIRD_PARTY_LICENSES.md (new section) and in the tracking filter's footer (owner's request), with Tracker Radar,
+  EFF Privacy Badger and AdGuard. Run it with every normal release, like `update:tracker-radar`.
+- `js/data/risk-badge.js`: `DOMAIN_RISK_REASON` (hover text per level) next to the shared badges; the panel imports both,
+  no second copy of glyphs or labels. `matrix/matrix-panel.js`: column `breakRisk`, renderer, legend + advice sentence in
+  the intro (declared once in Config). A row persisted by 11.0.4 (no field) renders as unknown.
+- `js/data/scriptlet-rule-labels.js` is now in the service-worker graph (risk constants): its parse-fallback catch got
+  the `/* benign: */` marker step 72 requires.
+**BUG FIX: one cosmetic registration for every list (owner's report: Bad filter fixes hide rules for cnn.com / bbc.com
+did nothing).** Root cause, reproduced in real Chrome (host-mapped cnn.com / bbc.com test pages): since the per-list
+storage-backed format, every cosmetic list had its OWN registration `ag-cosmetic-<id>` = css-api.js, isolated-api.js,
+its loader, css-specific.js. Chrome runs an extension file only once per page, so css-specific.js ran ONCE, for the
+first list's loader (`self.specificImports=['<id>']`, replaced by each loader), and every other list's site-specific
+selectors were never read — on cnn.com/bbc.com only ruleset_adguard_antiadblock was read (0 selectors). The SAME bug
+was found and fixed for scriptlets in 10.7.4 (`SCRIPTLET_SITES_CS_ID`) but not swept to the cosmetic side.
+**Fix (uBOL's own structure):** `COSMETIC_CS_ID` (`ag-cosmetic-specific`) — the two shared files, EVERY wanted list's
+loader, then css-specific.js once; loaders now APPEND their id (`tools/build/cosmetic-data.mjs`
+buildCosmeticSpecificLoader). The per-site cache key stays per site (correct again: one reader run per page holds
+every list's selectors). Old per-list registrations share the prefix and are unregistered by the first pass (GUARD:
+release). **Verified in Chrome:** cnn.com hides `div.ad-slot-header__wrapper` (+13 other lists' selectors), bbc.com
+hides the three AdSlot/ad-slot/offer selectors; unrelated elements untouched. **Check:** step 45
+(`test-annoyances-registration.mjs`) now requires exactly one cosmetic registration, every loader in it, one reader
+last, and appending loaders. **Behaviour change:** many more site-specific hide rules now apply on every site — the
+intended result, but new breakage reports are possible. Full filter update rerun (2026-11-23) to regenerate loaders.
+
+**Per-site cosmetic cache cleared on every cosmetic registration (owner's question).** `resetCSSCache()` ran only in the
+full `registerContentScripts()` (browser start, ABP import, picker/clicker saves, settings and rules import, site modes,
+Pause filtering — all fine). A Filter lists toggle (`ruleset-routes.js`) and the Seamless surfing passes
+(`cookie-clicker-autodeny-manager.js`) call `registerCosmeticContentScripts()` alone, so a visited site kept the old
+lists' selectors until restart (masked until now: the one-reader bug left one list's selectors in the cache). Now the
+end of `registerCosmeticContentScriptsImpl()` clears it too. Verified in Chrome: bbc.com with Bad filter fixes on =
+slot hidden; list switched off = visible again (without the fix: still hidden). User cosmetic rules and power-tool rules
+never used this cache.
+
+**Version 11.1.0 (owner, was being prepared as 11.0.5; never released under that number):** a minor bump for the new
+features. Every "(11.0.5)" marker in code and docs from this work now reads "(11.1.0)".
+
+**One yellow advice banner (owner).** Fingerprint inspector: the static warning line and the dynamic red
+`#fingerprintWarningBanner` (shown after the first high-risk row) are one static banner `#monitorHelpWarning` with two
+lines; the banner's element, its CSS and its JS (`hasHighRiskSignal`, `updateFingerprintWarningBanner`) are removed,
+and the duplicate `#monitorHelpWarning` rule in privacy-inspector.css with them — css/panel-shared.css holds the one rule,
+now yellow (amber 30 % fill, text `--ink-1`, the verified text colour). The DNR tracking filter gets the same banner with
+its own advice sentence (owner's wording, double space fixed). Its column explanation moved below the banner into its own `#matrixLegend`
+(same look as the help text: one shared rule in panel-shared.css), titled "Explanation of information shown:" (owner).
+
+**Sentence case across the tools (owner).** UI text capitalises the first word only (all-caps emphasis such as SHOW
+BLOCKED stays). `FINGERPRINT_INSPECTOR_NAME = 'Fingerprint inspector'` joins ui-names.js (popup via data-ui-name,
+right-click menu, inspector window title/texts, dashboard hover; the right-click menu now also takes
+`COOKIE_CLICKER_NAME` instead of a typed copy); Inspector and tracking-filter bulk buttons and their hovers
+("Block low risk" …); "No anti-fingerprinting scriptlets …"; the custom-rules section title now `${COOKIE_CLICKER_NAME}
+rules` (was "Cookie consent-clicker rules", hyphen) and the delete-confirm text names the sections the same way; the
+custom-rules API hover no longer says "Monitor-equivalent" (old internal name) but names the Fingerprint inspector;
+LOGICAL_LABELS "WebGL graphics access" (labels are display-only; stored rules are matched by name/args, not label).
+`tools/check-ui-name-copies.mjs` now rejects "Fingerprint Inspector" and "Cookie consent-clicker" in user-visible text.
+Inspector paused bar (owner): Resume first, then the risk buttons; note "Select an individual event or block a risk
+category." README body text updated; its all-caps tool headings stay.
+
+**Bulk Block/Allow by risk (owner, same session).** The Inspector's Block Low Risk / Block Medium / Block All, for
+domains. BLOCK mode: low; low+medium; all. ALLOW mode (repair): high; high+medium; all — highest risk first. ⚪ unknown
+only via the "All" buttons (owner, as the Inspector). Writes the mode's action as a 3P-all override for every VISIBLE
+row in the levels that lacks it (same override as a click; rows keep their place until REFRESH, as after a click).
+- `js/core/matrix-block-rules.js`: `setMatrixOverrides(site, changes)` — validation and the cap per change exactly as
+  before, then ONE persist and ONE DNR sync (a per-row loop would rebuild all matrix DNR rules once per row);
+  `setMatrixOverride()` is now this with one change (no second copy of the checks).
+- New message `MSG_MATRIX_SET_OVERRIDES` (extension pages only, requiresInit), `handleMatrixSetOverrides` in
+  matrix-routes.js: site from the session, never the payload; array of at most `MATRIX_BULK_OVERRIDES_MAX`
+  (= MATRIX_CAP × 5, matrix-constants.js) or refused whole (C49).
+- Panel: `BULK_BUTTONS_BY_MODE` (Config: levels, label, colour class, hover), built per mode by
+  `renderBulkButtons()`, enabled only when they have work (`updateBulkButtons()`, after every row change, the view
+  refresh and the mode switch), re-entrancy guard released in `finally`. Colours are the Inspector's shared
+  `.monitor-btn-block*` classes.
+- Checked in headless Chrome against a stubbed worker (layout, enable/disable per mode, the message sent).
+- Intro text rewritten to the owner's wording: scope + mode sentence, then a "Legenda:" list (More info, Known tracker,
+  Break risk), one bullet per line (`white-space: nowrap`; measured in Chrome at 900 px inner width — fits the 916 px
+  panel window, PANEL_WINDOW_CONFIG unchanged). Tier values, Y/N and badges come from their constants. The advice
+  sentence was dropped (not in the owner's text). `#monitorHelp` is a div here now (a list may not sit in a p).
+- Filter row (owner): label and mode switch left, bulk buttons pinned right (`margin-left: auto` moved from the switch
+  to `#matrixBulkButtons`); label shortened to "Choose what to show with the switch:" and kept on one line.
+**Consumers checked.** Known tracker column and its intro text (unchanged, now loaded before reload); domain hover text
+(`blockReasonTitle`, unchanged: it explains why a domain is blocked, not the risk); Fingerprint Inspector and dashboard
+custom-rules badges (same `RISK_BADGE`, untouched); the old removed verdict code (none left to revive); tracker-radar
+preload's other caller (tests only).
+**Checks.** New step 94 `tools/test-breakage-risk.mjs`: all 8 rule combinations, shipped-ruleset parse (≤ 2 skipped),
+the Disconnect / Ghostery build parsers (needed categories only),
+one real domain per tier read from the shipped data, subdomain/parent coverage, load/release/generation guard,
+every verdict displayable.
+**Known limitations.** The README screenshot of the panel predates the new column. Not tried in a real browser here
+(no Chrome in this environment; suite step 91 skipped).
+
 ## 11.0.4 — Optimizely redirect stand-in (uBO e68e05cde0)
 **Source version.** Working from 11.0.3 (extension 11.0.3 / tools 3.0.6 / docs 11.0.3), GitHub Kees1958/uBlock-Dynamic 8ff62c6.
 **What / why.** Ported uBlock Origin commit e68e05cde0 (Fanboynz): `web_accessible_resources/optimizely.js`, a surrogate

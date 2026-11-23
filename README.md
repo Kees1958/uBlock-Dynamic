@@ -4,7 +4,7 @@ uBLOCK DYNAMIC — SMART, LEAN AD AND TRACKER BLOCKER
 
 Blocks advertisements and  trackers. Your browser stays fast and does this without requiring user script permissions.  Secure by default. Want to know what happens behind the scenes of a website. Tick "I am an advanced user" in Options to show the power tools.
 
-It brings AdGuard's power with the speed of uBlock Origin Lite. And it adds tools you won't find in other adblockers. Seamless surfing, Ad leftover cleaner, Cookie consent clicker, DNR tracking filter and Fingerprint Inspector.
+It brings AdGuard's power with the speed of uBlock Origin Lite. And it adds tools you won't find in other adblockers. Seamless surfing, Ad leftover cleaner, Cookie consent clicker, DNR tracking filter and Fingerprint inspector.
 
 
 SEAMLESS SURFING
@@ -29,7 +29,7 @@ uBlock Origin's element picker (only with a better explanation at start). Point 
 
 DNR TRACKING FILTER
 
-Decide which third parties a site may load. To help you decide, it shows whether this domain is linsted in the DuckDuckGo tarcker databas. Block or allow everything from a domain, or only its scripts and frames. One switch shows what is blocked and what is allowed. Inspired by uBlock Origin's Mv2 classic (dynamic filtering) matrix.
+Decide which third parties a site may load. To help you decide, it shows whether a domain is listed in the DuckDuckGo tracker database, and its breakage risk: low, medium or high, the same badges as the Fingerprint inspector. Block or allow everything from a domain, or only its scripts and frames. One switch shows what is blocked and what is allowed. Inspired by uBlock Origin's Mv2 classic (dynamic filtering) matrix.
 
 
 FINGERPRINT INSPECTOR

@@ -29,6 +29,8 @@ export const AD_CLEANER_NAME = 'Ad leftover cleaner';
 // storage keys, file names) keep the old wording on purpose: they are contracts, not user text.
 /** @public read by the popup, the right-click menu, the panel, Manage custom rules and settings import/export */
 export const DNR_TRACKING_FILTER_NAME = 'DNR tracking filter';
+// (11.1.0, owner) Sentence case like every other tool name (was "Fingerprint Inspector").
+export const FINGERPRINT_INSPECTOR_NAME = 'Fingerprint inspector';
 
 // Dashboard tabs, in display order (owner, 10.5.0: Filter (block) lists first, Allow list after
 // Manage custom rules, "Privacy & Security" renamed to "Options").
@@ -60,4 +62,6 @@ export const UI_NAMES = Object.freeze({
     // (11.0.0) worryFreeStartupLabel REMOVED with the "Enable Seamless surfing on startup" option.
     adCleaner: AD_CLEANER_NAME,   // (11.0.0) popup line
     dnrTrackingFilterRules: `${DNR_TRACKING_FILTER_NAME} rules`,   // (11.0.0) Manage custom rules section
+    fingerprintInspector: FINGERPRINT_INSPECTOR_NAME,   // (11.1.0) popup line
+    cookieClickerRules: `${COOKIE_CLICKER_NAME} rules`,   // (11.1.0) Manage custom rules section (was "Cookie consent-clicker rules")
 });

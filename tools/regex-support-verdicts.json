@@ -1113,6 +1113,10 @@
       "supported": true,
       "chrome": "Chrome/153.0.8010.12"
     },
+    "cs:\\.com\\/[_a-zA-Z0-9]+\\.js\\?": {
+      "supported": true,
+      "chrome": "Chrome/153.0.8010.12"
+    },
     "cs:\\.goplay\\.su\\/[a-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z]+\\/[0-9][0-9][0-9][0-9]?[0-9]?[0-9]?$": {
       "supported": true,
       "chrome": "Chrome/153.0.8010.12"

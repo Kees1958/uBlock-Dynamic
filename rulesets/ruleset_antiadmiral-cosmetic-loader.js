@@ -1,1 +1,1 @@
-self.specificImports=['ruleset_antiadmiral'];
+(self.specificImports=self.specificImports||[]).push('ruleset_antiadmiral');

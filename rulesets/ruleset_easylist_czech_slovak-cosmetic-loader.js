@@ -1,1 +1,1 @@
-self.specificImports=['ruleset_easylist_czech_slovak'];
+(self.specificImports=self.specificImports||[]).push('ruleset_easylist_czech_slovak');

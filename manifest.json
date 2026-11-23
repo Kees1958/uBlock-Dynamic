@@ -372,7 +372,7 @@
     "webRequest"
   ],
   "short_name": "uBlock Dynamic",
-  "version": "11.0.4",
+  "version": "11.1.0",
   "web_accessible_resources": [
     {
       "resources": [

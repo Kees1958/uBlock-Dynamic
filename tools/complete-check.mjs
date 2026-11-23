@@ -849,6 +849,12 @@ await run('93. Tier direction — downward imports only, no route file imports a
     execFileSync(process.execPath, [ 'tools/check-tier-direction.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
 
+// (11.1.0, owner's request) DNR tracking filter Break risk: whitelist = high, tracker-list allow exception = medium,
+// DDG Tracker Radar = low, none = unknown — rule, shipped-data parse, per-tier examples, load/release, display.
+await run('94. DNR tracking filter Break risk — rule, shipped data, lifecycle, every verdict displayable', () => {
+    execFileSync(process.execPath, [ 'tools/test-breakage-risk.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+
 // ── Summary ───────────────────────────────────────────────────────────
 console.log(`\n${'═'.repeat(70)}\nSUMMARY\n${'═'.repeat(70)}`);
 for ( const r of results ) {

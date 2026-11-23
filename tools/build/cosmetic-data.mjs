@@ -368,7 +368,9 @@ export function stampCosmeticSpecificData(data) {
 // CHANGELOG.md's 5.7.0/7.7.9 entries): a single-element array literal is
 // bytes, not kilobytes, regardless of how many hostnames the ruleset it
 // points to actually has.
+// (11.1.0) APPENDS its id instead of replacing the array: all loaders now run in ONE registration, before the one
+// shared css-specific.js (js/core/scripting-manager.js COSMETIC_CS_ID), as in uBOL.
 export function buildCosmeticSpecificLoader(rulesetId) {
     const esc = rulesetId.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-    return `self.specificImports=['${esc}'];`;
+    return `(self.specificImports=self.specificImports||[]).push('${esc}');`;
 }

@@ -9,6 +9,10 @@
  *   setMatrixOverride(site, domain, scope, action)
  *                                    — scope: 'all' | 'code'
  *                                      action: 'block' | 'allow' | null (clears)
+ *   setMatrixOverrides(site, changes) — (11.1.0) many [{ domain, scope, action }]
+ *                                      for one site, ONE storage write and ONE
+ *                                      DNR sync (the bulk Block/Allow buttons);
+ *                                      setMatrixOverride() is this with one change
  *   getMatrixBlockRules()           — one entry per (site, domain) pair
  *                                      with ANY active override, block OR
  *                                      allow (name kept for API stability
@@ -264,16 +268,34 @@ export async function getMatrixOverridesForSite(site) {
 }
 
 export async function setMatrixOverride(site, domain, scope, action) {
+    await setMatrixOverrides(site, [ { domain, scope, action } ]);
+}
+
+// (11.1.0) Bulk form — every change is checked and applied in memory exactly as a single click is, then storage
+// and the DNR rules are written ONCE (a per-row loop would rebuild every matrix DNR rule once per row).
+export async function setMatrixOverrides(site, changes) {
     await ensureLoaded();
-    if ( !site || !domain ) { return; }
-    if ( scope !== 'all' && scope !== 'code' ) { return; }
+    if ( !site || !Array.isArray(changes) ) { return; }
+    let changed = false;
+    for ( const { domain, scope, action } of changes ) {
+        if ( applyOverrideChange(site, domain, scope, action) ) { changed = true; }
+    }
+    if ( !changed ) { return; }
+    await persistOverrides();
+    await syncDNRRules();
+}
+
+// One change, in memory only. Returns true when it was applied (false: invalid, or refused by the cap).
+function applyOverrideChange(site, domain, scope, action) {
+    if ( !domain || typeof domain !== 'string' ) { return false; }
+    if ( scope !== 'all' && scope !== 'code' ) { return false; }
     const siteEntries = overrides.get(site) ?? new Map();
     const isNewPair = !siteEntries.has(domain);
     // MATRIX_OVERRIDES_MAX guard — only a genuinely NEW (site, domain)
     // pair counts against the cap; toggling an existing pair's scope
     // never increases total count, so it must never be blocked by this
     // check regardless of how full storage already is.
-    if ( isNewPair && totalOverrideCount() >= MATRIX_OVERRIDES_MAX ) { return; }
+    if ( isNewPair && totalOverrideCount() >= MATRIX_OVERRIDES_MAX ) { return false; }
     // createdAt is stamped ONCE, the first time this (site, domain) pair
     // gets any override at all, and preserved across every later toggle
     // (e.g. adding a 3P-code override to a domain that already has a
@@ -292,8 +314,7 @@ export async function setMatrixOverride(site, domain, scope, action) {
     } else {
         overrides.set(site, siteEntries);
     }
-    await persistOverrides();
-    await syncDNRRules();
+    return true;
 }
 
 // Despite the name (kept for API stability — see message-types.js), this

@@ -29,7 +29,13 @@
 <!-- Content set dynamically by matrix-panel.js's updateIntroText() — mirrors
      the BLOCK/ALLOW mode this page is currently in. See that function's
      own comment for why this isn't static markup. -->
-<p id="monitorHelp"></p>
+<div id="monitorHelp"></div>
+<!-- (11.1.0, owner) Same yellow advice banner as the Fingerprint inspector (css/panel-shared.css #monitorHelpWarning). -->
+<div id="monitorHelpWarning">
+    <p>Start with blocking low or medium risk tracking networks. When a website breaks, try blocking individual trackers one by one.</p>
+</div>
+<!-- (11.1.0, owner) Explanation of the informational columns, after the banner; filled by updateIntroText(). -->
+<div id="matrixLegend"></div>
 
 <!-- ── Filter row — mode switch ────────────────────────────────────────── -->
 <!-- Left: static explanatory text. Right: the actual mode switch, with its
@@ -38,7 +44,7 @@
      version. Defaults to SHOW ALLOWED (unchecked): see matrix-panel.js's
      currentMode() for what each side actually filters. -->
 <div id="matrixFilterRow">
-    <span id="matrixFilterLabel">Choose what domains to show by using the switch on the right</span>
+    <span id="matrixFilterLabel">Choose what to show with the switch:</span>
     <label id="matrixModeSwitch"
         title="SHOW BLOCKED: list only domains already blocked (filter lists or overrides) — the ones an ALLOW click can act on. SHOW ALLOWED: list only domains not already blocked — the ones a BLOCK click can act on.">
         <span class="switch-text switch-text-blocked">SHOW BLOCKED</span>
@@ -48,6 +54,9 @@
         </span>
         <span class="switch-text switch-text-allowed">SHOW ALLOWED</span>
     </label>
+    <!-- (11.1.0) Block/Allow by Break risk — after the switch, aligned right (owner); built per mode by
+         matrix-panel.js renderBulkButtons(). -->
+    <span id="matrixBulkButtons"></span>
 </div>
 
 <!-- ── Entry table — thead/tbody built dynamically by matrix-panel.js ───── -->
@@ -62,7 +71,7 @@
     <p class="monitor-empty" id="emptyState">Waiting for connections…<br>Third-party connections appear here as the page loads.</p>
 </div>
 
-<footer class="panel-footer">User interface inspired by uBO Mv2</footer>
+<footer class="panel-footer">User interface inspired by uBO Mv2 · Break risk data: DuckDuckGo Tracker Radar, Disconnect, Ghostery, EFF Privacy Badger, AdGuard</footer>
 
 <script src="../js/ui/theme.js" type="module"></script>
 <script src="matrix-panel.js" type="module"></script>

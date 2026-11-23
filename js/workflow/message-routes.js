@@ -67,6 +67,7 @@ import {
     MSG_STOP_MATRIX,
     MSG_GET_MATRIX_DATA,
     MSG_MATRIX_SET_OVERRIDE,
+    MSG_MATRIX_SET_OVERRIDES,
     MSG_RELOAD_MATRIX_TAB,
     MSG_GET_DOMAIN_RULE_DETAIL,
     MSG_EXPORT_CUSTOM_RULES,
@@ -602,6 +603,10 @@ export const MESSAGE_ROUTES = Object.freeze({
         allowedSenders: SENDER_KINDS.EXTENSION_PAGE,
     }),
     [MSG_MATRIX_SET_OVERRIDE]: Object.freeze({
+        requiresInit: true,
+        allowedSenders: SENDER_KINDS.EXTENSION_PAGE,
+    }),
+    [MSG_MATRIX_SET_OVERRIDES]: Object.freeze({
         requiresInit: true,
         allowedSenders: SENDER_KINDS.EXTENSION_PAGE,
     }),

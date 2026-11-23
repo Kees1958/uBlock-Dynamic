@@ -1,1 +1,1 @@
-self.specificImports=['ruleset_agbase_overflow_bulgarian'];
+(self.specificImports=self.specificImports||[]).push('ruleset_agbase_overflow_bulgarian');

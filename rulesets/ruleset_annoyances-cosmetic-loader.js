@@ -1,1 +1,1 @@
-self.specificImports=['ruleset_annoyances'];
+(self.specificImports=self.specificImports||[]).push('ruleset_annoyances');

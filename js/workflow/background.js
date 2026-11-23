@@ -168,6 +168,7 @@ import {
     handleGetMatrixBlockRules,
     handleGetMatrixData,
     handleMatrixSetOverride,
+    handleMatrixSetOverrides,
     handleReloadMatrixTab,
     handleStartMatrix,
     handleStopMatrix,
@@ -320,6 +321,7 @@ import {
     MSG_STOP_MATRIX,
     MSG_GET_MATRIX_DATA,
     MSG_MATRIX_SET_OVERRIDE,
+    MSG_MATRIX_SET_OVERRIDES,
     MSG_RELOAD_MATRIX_TAB,
     MSG_GET_DOMAIN_RULE_DETAIL,
     MSG_EXPORT_CUSTOM_RULES,
@@ -340,7 +342,7 @@ import {
     MSG_AD_CLEANER_LAUNCH,
     MSG_AD_CLEANER_KEEP,
 } from '../data/message-types.js';
-import { AD_CLEANER_NAME, DNR_TRACKING_FILTER_NAME } from '../data/ui-names.js';   // (11.0.0) right-click item titles
+import { AD_CLEANER_NAME, COOKIE_CLICKER_NAME, DNR_TRACKING_FILTER_NAME, FINGERPRINT_INSPECTOR_NAME } from '../data/ui-names.js';   // (11.0.0) right-click item titles
 import { SEAMLESS_ENABLED_SETTING_KEY, isSeamlessSurfingEnabled } from '../data/seamless-switch.js';   // (11.0.0) Seamless surfing always on
 
 // ── Tier 4 — util/ ──────────────────────────────────────────────────────────
@@ -669,6 +671,7 @@ const ROUTE_HANDLERS = {
     [MSG_STOP_MATRIX]: handleStopMatrix,
     [MSG_GET_MATRIX_DATA]: handleGetMatrixData,
     [MSG_MATRIX_SET_OVERRIDE]: handleMatrixSetOverride,
+    [MSG_MATRIX_SET_OVERRIDES]: handleMatrixSetOverrides,
     [MSG_RELOAD_MATRIX_TAB]: handleReloadMatrixTab,
     [MSG_GET_DOMAIN_RULE_DETAIL]: handleGetDomainRuleDetail,
 };
@@ -1428,7 +1431,7 @@ const CONTEXT_MENU_ITEMS = Object.freeze([
     },
     {
         id: CONTEXT_MENU_IDS.COOKIE_CLICKER,
-        title: 'Cookie consent clicker',
+        title: COOKIE_CLICKER_NAME,
         contexts: [ 'page', 'frame' ],
     },
     {
@@ -1438,7 +1441,7 @@ const CONTEXT_MENU_ITEMS = Object.freeze([
     },
     {
         id: CONTEXT_MENU_IDS.PRIVACY_INSPECTOR,
-        title: 'Fingerprint Inspector',
+        title: FINGERPRINT_INSPECTOR_NAME,
         contexts: [ 'page', 'frame' ],
     },
 ]);

@@ -47,7 +47,7 @@
 
 import { dom, qs$ } from '../js/ui/dom.js';
 import { browser, sendMessage } from '../js/data/ext.js';
-import { DNR_TRACKING_FILTER_NAME } from '../js/data/ui-names.js';   // (11.0.0) was "Dynamic DNR"
+import { COOKIE_CLICKER_NAME, DNR_TRACKING_FILTER_NAME, FINGERPRINT_INSPECTOR_NAME } from '../js/data/ui-names.js';   // (11.0.0) was "Dynamic DNR"
 import {
     describeScriptletRule,
     getScriptletRuleRisk,
@@ -520,14 +520,14 @@ function renderScriptletRules(rules) {
     });
 
     if ( !rules || rules.length === 0 ) {
-        emptyMsg.textContent = 'No Anti-fingerprinting scriptlets saved.';
+        emptyMsg.textContent = 'No anti-fingerprinting scriptlets saved.';
         emptyMsg.style.display = '';
         return;
     }
 
     const visible = rules.filter(rule => matchesFilter(rule.hostname));
     if ( visible.length === 0 ) {
-        emptyMsg.textContent = 'No Anti-fingerprinting scriptlets match this filter.';
+        emptyMsg.textContent = 'No anti-fingerprinting scriptlets match this filter.';
         emptyMsg.style.display = '';
         return;
     }
@@ -598,7 +598,7 @@ function renderScriptletRules(rules) {
         const apiEl = dom.create('span');
         apiEl.className = 'scriptlet-api-label';
         apiEl.textContent = api ?? '—';
-        apiEl.title = api ? `API: ${api}` : 'No Monitor-equivalent API value for this rule';
+        apiEl.title = api ? `API: ${api}` : `No ${FINGERPRINT_INSPECTOR_NAME} API name for this rule`;
 
         const dateEl = createRuleDateCell(rule.createdAt);
 
@@ -732,8 +732,8 @@ dom.on('#deleteAllCustomRules', 'click', async ev => {
     // otherwise, so this can't be misread as always meaning "everything"
     // regardless of what's currently searched.
     const scopeText = domainFilter === ''
-        ? `ALL custom rules — Cosmetic, Cookie consent-clicker, ${DNR_TRACKING_FILTER_NAME}, and Anti-fingerprinting scriptlets`
-        : `all custom rules matching "${domainFilter}" — Cosmetic, Cookie consent-clicker, ${DNR_TRACKING_FILTER_NAME}, and Anti-fingerprinting scriptlets`;
+        ? `ALL custom rules — cosmetic (hide) rules, ${COOKIE_CLICKER_NAME} rules, ${DNR_TRACKING_FILTER_NAME} rules and anti-fingerprinting scriptlets`
+        : `all custom rules matching "${domainFilter}" — cosmetic (hide) rules, ${COOKIE_CLICKER_NAME} rules, ${DNR_TRACKING_FILTER_NAME} rules and anti-fingerprinting scriptlets`;
     if ( !confirm(`Delete ${scopeText}? This cannot be undone.`) ) { return; }
     const result = await sendMessage({ what: MSG_DELETE_FILTERED_CUSTOM_RULES, filter: domainFilter });
     if ( !result?.ok ) {
