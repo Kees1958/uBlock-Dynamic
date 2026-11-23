@@ -4,6 +4,10 @@ Short, per-release summary of what changed — no implementation detail.
 Lives in the project's docs (since 10.1.4 it is no longer shipped inside the
 extension). The full technical account is CHANGELOG_HISTORY.md.
 
+## 11.1.1
+- **DNR tracking filter:** its yellow banner now starts with the same line as the Fingerprint inspector's:
+  "Only use the DNR tracking filter on websites you visit often but never log in to."
+
 ## 11.1.0
 - **Fixed: site-specific hide rules of most filter lists did nothing.** Only one list's rules for a website were
   read; every other list's were skipped. Your Bad filter fixes rules for CNN and BBC are among the ones that now work,
