@@ -36,7 +36,7 @@ export const AD_CLEANER_DATA_VERSION = 2;
 export const AD_CLEANER_SCRIPT_FILES = Object.freeze([ '/js/scripting/css-api.js', '/js/scripting/ad-cleaner.js' ]);
 // Page global the launch sets and the page script reads and deletes at once (isolated world: the page cannot see it).
 export const AD_CLEANER_DATA_GLOBAL = '__usd_ad_cleaner_data_7c41e2';
-// Most selectors one "Keep for this site" may save (a busy page matches tens; the cap stops a runaway message).
+// Most selectors one "Remove them" may save (a busy page matches tens; the cap stops a runaway message).
 export const AD_CLEANER_KEEP_MAX = 500;
 // Hash "type" seeds: '#' for ids, '.' for classes (the same seeds uBOL's generic cosmetic filter used).
 export const AD_CLEANER_HASH_TYPES = Object.freeze({ ID: 0x23, CLASS: 0x2E });

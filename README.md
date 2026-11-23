@@ -19,7 +19,7 @@ Did a cookie prompt slipped through? Click its button once. The extension rememb
 
 AD LEFTOVER CLEANER
 
-Blocked advertisements can leave empty boxes behind. Ad leftover cleans them with one clock. See what it removed. Undo it, or keep it for that site. Powered by the general hiding rules of EasyList and AdGuard only applied smart per website.
+Blocked advertisements can leave empty boxes behind. Ad leftover cleans them with one clock. See what it found. Undo it, or remove them on that site for good. Powered by the general hiding rules of EasyList and AdGuard only applied smart per website.
 
 
 COSMETIC ELEMENT PICKER

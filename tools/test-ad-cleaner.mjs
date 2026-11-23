@@ -11,6 +11,9 @@
 //   5. Routes (real js/workflow/ad-cleaner-routes.js, chrome mocked): launch injects data + scripts into frame 0 of an
 //      http(s) tab with only this site's exceptions; keep saves only shipped, non-exempted selectors from this
 //      extension's top-frame content script, under the sender's hostname.
+//   6. Always hidden from now on (11.0.4, owner's request): after "Remove them" the saved selectors are hidden on every
+//      later visit of that site — the page script is registered for it, a new page load gets the hiding CSS (also
+//      after a service-worker restart, i.e. rebuilt from storage), and another site gets nothing.
 // Outcomes (C38): PASS / FINDINGS (fails) / DID NOT RUN (fails).
 
 import fs from 'fs';
@@ -164,7 +167,7 @@ try {
     const css = page.inserted.join('\n');
     check('hides a keyed match and an unkeyed match', css.includes(knownKeyed) && css.includes(knownUnkeyed), css.slice(0, 120));
     check('hides nothing that is not on the page', page.inserted.join('').split(',').length <= 4);
-    check('panel reports the count', panelText(page) === 'Removed 2 ad leftovers.', panelText(page));
+    check('panel reports the count', panelText(page) === 'Found 2 ad leftovers.', panelText(page));
     check('untrusted click is ignored', click(page, 'stop', false) && page.timers.size > 0);
     click(page, 'undo');
     const removed = page.sent.filter(m => m.what === 'removeCSS').map(m => m.css);
@@ -188,7 +191,7 @@ try {
     await tick(10);
     const keep = re.sent.find(m => m.what === msgs.MSG_AD_CLEANER_KEEP);
     check('Keep sends only the matched selectors', JSON.stringify(keep?.selectors) === JSON.stringify([ knownKeyed ]));
-    check('Keep ends the run and says so', re.timers.size === 0 && panelText(re) === 'Kept for this site.', panelText(re));
+    check('Keep ends the run and says so', re.timers.size === 0 && panelText(re) === 'Removed on this site from now on.', panelText(re));
 
     const late = makePage('<p>start</p>');
     launch(late);
@@ -231,6 +234,8 @@ function mkArea(store) { return {
     setAccessLevel: async () => {},
 }; }
 const injected = [];
+const registered = [];   // section 6: content scripts registered
+const insertedCss = [];  // section 6: CSS inserted into a page
 let tabUrl = CONFIG.TAB_URL;
 globalThis.self = globalThis;
 globalThis.chrome = globalThis.browser = {
@@ -242,8 +247,9 @@ globalThis.chrome = globalThis.browser = {
         isRegexSupported: async () => ({ isSupported: true }),
     },
     scripting: {
-        getRegisteredContentScripts: async () => [], registerContentScripts: async () => {}, updateContentScripts: async () => {},
+        getRegisteredContentScripts: async () => [], registerContentScripts: async d => { registered.push(...d); }, updateContentScripts: async d => { registered.push(...d); },
         unregisterContentScripts: async () => {}, executeScript: async d => { injected.push(d); return []; },
+        insertCSS: async d => { insertedCss.push(d); },
     },
     tabs: { query: async () => [], get: async () => ({ url: tabUrl }), sendMessage: async () => {} },
     permissions: { contains: async () => true, getAll: async () => ({ origins: [ '<all_urls>' ] }) },
@@ -273,6 +279,31 @@ try {
     const ok = await routes.handleAdCleanerKeep({ selectors: [ knownKeyed ] }, sender);
     check('keep: saves a shipped selector under the sender\'s hostname', ok.ok === true && local.get('site.www.example.com')?.includes(knownKeyed) === true,
         JSON.stringify(local.get('site.www.example.com')));
+    // ── 6. Always hidden from now on ───────────────────────────────────────────
+    console.log('--- 6. always hidden from now on ---');
+    const SITE = new URL(CONFIG.TAB_URL).hostname;
+    const OTHER_SITE = 'www.another-site.org';
+    const userScript = registered.find(d => d.id === 'css-user');
+    check('after Remove them: the page script is registered for this site',
+        userScript?.js?.includes('/js/scripting/css-user.js') === true && userScript.matches.some(m => m.includes(SITE)),
+        JSON.stringify(userScript?.matches));
+    check('after Remove them: the page script is not registered for another site',
+        userScript?.matches.some(m => m.includes(OTHER_SITE)) === false);
+    const fm = await import(path.join(ROOT, 'js/core/filter-manager.js'));
+    async function cssOnNextVisit(manager, hostname) {
+        insertedCss.length = 0;
+        await manager.injectCustomFilters(7, 0, hostname);
+        return insertedCss.map(d => d.css).join('');
+    }
+    function hides(css) { return css.includes(knownKeyed) && css.includes('{display:none!important;}'); }
+    const next = await cssOnNextVisit(fm, SITE);
+    check('next visit of this site: the leftover is hidden', hides(next), next.slice(0, 120));
+    check('next visit of another site: nothing is hidden', await cssOnNextVisit(fm, OTHER_SITE) === '');
+    // A fresh module instance = a service-worker restart: the index is rebuilt from storage alone.
+    const fmRestarted = await import(`${path.join(ROOT, 'js/core/filter-manager.js')}?sw-restart`);
+    const afterRestart = await cssOnNextVisit(fmRestarted, SITE);
+    check('after a service-worker restart: still hidden on this site', hides(afterRestart), afterRestart.slice(0, 120));
+
     check('keep: refuses a selector not in the list', (await routes.handleAdCleanerKeep({ selectors: [ 'body' ] }, sender)).ok === false);
     check('keep: refuses another extension', (await routes.handleAdCleanerKeep({ selectors: [ knownKeyed ] }, { ...sender, id: 'other' })).ok === false);
     check('keep: refuses a sub-frame', (await routes.handleAdCleanerKeep({ selectors: [ knownKeyed ] }, { ...sender, frameId: 3 })).ok === false);

@@ -9,6 +9,8 @@ extension). The full technical account is CHANGELOG_HISTORY.md.
   `||cdn.optimizely.com/js/*.js$script,redirect=optimizely.js` now works in the Bad filter fixes list and in the
   Import ABP box (it was refused before). Websites that use Optimizely keep working and show their default
   version, without its A/B tests, cookies or tracking.
+- **Ad leftover cleaner wording:** the panel now says "Found 6 ad leftovers." (it hides them, it never removed
+  them), and its "Keep for this site" button is now "Remove them" (hides them on every later visit to that site).
 
 ## 11.0.3
 - **All filter lists refreshed** (full update, 2026-11-22).

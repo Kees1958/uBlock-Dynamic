@@ -38,8 +38,8 @@
 //   A second launch in the same page ends the first run (Undo of its hiding) before starting.
 //
 // Reports (owner 2026-11-19 — "keep it simple, the main message"):
-//   the person  — the in-page panel: how many ad leftovers were removed, and whether it is still looking;
-//   background  — only on "Keep for this site" (MSG adCleanerKeep: the matched selectors; the hostname is taken from
+//   the person  — the in-page panel: how many ad leftovers were found (and hidden), and whether it is still looking;
+//   background  — only on "Remove them" (MSG adCleanerKeep: the matched selectors; the hostname is taken from
 //                 the sender by the background, never from this script);
 //   console     — one line per run with the stop reason.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -106,7 +106,7 @@ const STOP_REASONS = Object.freeze({
     TIME:      'time-limit',     // MAX_RUN_MS reached
     USER:      'stopped',        // Stop button
     UNDO:      'undone',         // Undo button
-    KEPT:      'kept',           // Keep for this site
+    KEPT:      'kept',           // "Remove them" (button label since 11.0.4, was "Keep for this site"; key unchanged)
     LEFT:      'page-left',      // navigated away
     RESTARTED: 'restarted',      // a new launch replaced this run
     NO_DATA:   'no-data',        // launched without (valid) data
@@ -423,7 +423,7 @@ function buildPanel() {
             <div class="message"></div>
             <div class="status"></div>
             <div class="row">
-                <button type="button" data-action="keep">Keep for this site</button>
+                <button type="button" data-action="keep">Remove them</button>
                 <button type="button" data-action="undo">Undo</button>
                 <button type="button" data-action="stop">Stop</button>
                 <button type="button" data-action="close">Close</button>
@@ -450,7 +450,7 @@ function showButton(action, visible) {
 function renderPanel() {
     if ( run.panel === null || run.panel.done ) { return; }
     const n = run.hiddenCount;
-    setText('.message', n === 0 ? 'No ad leftovers found.' : `Removed ${n} ad leftover${n === 1 ? '' : 's'}.`);
+    setText('.message', n === 0 ? 'No ad leftovers found.' : `Found ${n} ad leftover${n === 1 ? '' : 's'}.`);
     const stopped = run.phase === PHASES.STOPPED;
     setText('.status', stopped ? (STATUS_TEXT[run.stopReason] ?? '') : STATUS_TEXT.watching);
     showButton('keep', run.matched.size !== 0);
@@ -486,7 +486,7 @@ async function keepForSite() {
     } catch (reason) {
         console.warn(`${LOG_PREFIX} keep failed:`, reason);
     }
-    renderDone(response?.ok === true ? 'Kept for this site.' : 'Could not keep these for this site.');
+    renderDone(response?.ok === true ? 'Removed on this site from now on.' : 'Could not save this for this site.');
 }
 
 function onPanelClick(ev) {

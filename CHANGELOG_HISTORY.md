@@ -31,6 +31,12 @@ tracking-servers allowlist 8,000).
 Redirect rules land in the list's unsafe companion, so this is a normal-review release.
 **tools 3.0.7:** `tools/test-network-translation.mjs` gains the Optimizely redirect case (build and ABP import);
 `tools/package-release.mjs` DOC_FILES now lists the GitHub repo's `README.md` and `PRIVACY.md` and `vendor/autoconsent/README.md` (DOCS_EXTRA_FILES) — docs zip, never the extension.
+**Rebuilt in place (2026-11-23, extension and docs stay 11.0.4 — wording only, never bumps; tools 3.0.8, its test changed):** Ad leftover
+cleaner panel "Removed N ad leftovers." → "Found N …" (it hides, it does not remove); button "Keep for this site" →
+"Remove them", done text "Removed on this site from now on.", failure "Could not save this for this site." (message
+type and `data-action="keep"` unchanged — contracts). `tools/test-ad-cleaner.mjs` section 6 (owner's request): after
+"Remove them" the css-user script is registered for that site only, the next visit gets the hiding CSS, also after a
+service-worker restart (index rebuilt from storage), and another site gets nothing. **tools 3.0.8:** that test section. Two different packages carry 11.0.4.
 
 ## 11.0.3 — Input size before reading, tier direction (manual v15)
 **Source version.** Working from the released 11.0.2 zips (extension 11.0.2 / tools 3.0.5 / docs 11.0.2).
