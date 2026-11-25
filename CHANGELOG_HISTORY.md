@@ -19,8 +19,8 @@ convention and are kept as they are.
 
 ## 11.1.4 — Platform directives, IMA SDK surrogate, clicker-rule restore, uBO rmnt arguments (owner's reports 2026-11-25)
 **Source version.** Working from 11.1.3 as committed (extension 11.1.3 / **tools 3.0.10** / docs 11.1.3, GitHub
-Kees1958/uBlock-Dynamic 7d68e84; 11.1.3 was never published, but the owner chose a new number). Tools changes (the
-packager bumps the tools version): new `tools/build/list-directives.mjs`, new steps 96 `tools/test-list-directives.mjs`
+Kees1958/uBlock-Dynamic 7d68e84; 11.1.3 was never published, but the owner chose a new number). **tools 3.0.11**
+(bumped by the packager): new `tools/build/list-directives.mjs`, new steps 96 `tools/test-list-directives.mjs`
 and 97 `tools/test-ubo-scriptlet-args.mjs`, new report `dropped-platform-rules.txt`; test-network-translation and
 test-picker-hardening extended.
 
