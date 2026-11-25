@@ -111,7 +111,8 @@
  *    600 000  BADFILTER_QUICKFIXES_PRIORITY                static      Badfilter quick-fix allows
  *    400 000  MATRIX_RULES_ALL_PRIORITY (+1 = _CODE)       dynamic     Matrix panel rules
  *    200 000  USER_RULES_PRIORITY (+10 block, +11 redirect, +30 allow)  dynamic  ABP-import / custom rules
- *     10 000  STATIC_FILTER_LIST_PRIORITY                  static      Default filter lists (block AND @@ allow)
+ *     10 000  STATIC_FILTER_LIST_PRIORITY                  static      Default filter lists: block; (11.1.3) +1 $redirect,
+ *                                                                      +2 @@ allow, +3 $important (STATIC_*_PRIORITY_OFFSET)
  *      9 500  WORRY_FREE_SITE_ALLOW_PRIORITY               dynamic     "@@site$worryfree": that site is outside Worry-free
  *                                                                      altogether (the extra lists AND every protection below)
  *      9 200  CMP_LOADER_BLOCK_PRIORITY                    session     (10.7.16) CMP loader block while Seamless surfing
@@ -355,11 +356,19 @@ export const LOGIN_WITH_RULES_RETIRED_MAX_DNR = 2;
 // security-toggle rules (1 000); the adult-site headers (11 000) sit just above.
 export const STATIC_FILTER_LIST_PRIORITY = 10_000;   // 9.9.1 ladder: was 1 000
 
-// (10.7.6) "$important" in a static list: the rule is raised this far above ITS OWN list's priority, so it beats
-// that tier's "@@" exceptions (AdGuard's meaning) and nothing else — 10 001 for the default lists, 8 001 for the
-// Worry-free extra lists (still below their 9 000 off-switch), never near the next tier up. Applies to block and
-// $redirect rules (tools/build/rule-parsers.mjs parseBlockRule()).
-export const STATIC_IMPORTANT_PRIORITY_OFFSET = 1;
+// (11.1.3, owner's decision) The order WITHIN one static list's tier, as uBO and AdGuard apply it and as the user-rule
+// tier already does (+10 block, +11 redirect, +30 allow): block < $redirect < "@@" exception < "$important". Each
+// kind gets its own step above ITS OWN list's priority, so the order never depends on Chrome's tie-break (on equal
+// priority Chrome lets a block beat a redirect, which left $redirect rules dead wherever any list blocked the same
+// request — e.g. Ad-Shield's loader redirected to an empty script under HaGeZi's block of the same host). Highest step
+// 10 003 for the default lists, 8 003 for the Worry-free extra lists (still below their 9 000 off-switch), never near
+// the next tier up. Applied by tools/build/rule-parsers.mjs parseBlockRule(). $removeparam redirects stay at the
+// list's own priority (a blocked request needs no parameters stripped).
+export const STATIC_REDIRECT_PRIORITY_OFFSET  = 1;   // $redirect=<bundled file>: above the plain blocks
+export const STATIC_EXCEPTION_PRIORITY_OFFSET = 2;   // "@@" exceptions (allow / allowAllRequests): above redirects
+// (10.7.6) "$important" in a static list: above that tier's "@@" exceptions (AdGuard's meaning) and nothing else.
+// Was 1 until 11.1.3, when exceptions still shared the list's own priority.
+export const STATIC_IMPORTANT_PRIORITY_OFFSET = 3;
 
 // ── Worry-free extra blocklist (v8.3.6 — RESERVED, not yet wired to any
 // v8.3.7 — RESERVED tier now BUILT: reserved-tier extra blocklist (v8.3.6)

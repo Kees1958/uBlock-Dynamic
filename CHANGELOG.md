@@ -4,6 +4,27 @@ Short, per-release summary of what changed — no implementation detail.
 Lives in the project's docs (since 10.1.4 it is no longer shipped inside the
 extension). The full technical account is CHANGELOG_HISTORY.md.
 
+## 11.1.3
+- **Fixed: Tom's Hardware (and other sites using the Ad-Shield anti-adblock) kept reloading the page** every few
+  seconds and could end on an "error-report.com" page. The anti-adblock list is now called "Block Admiral and
+  Ad-Shield anti-adblock" and also includes uBlock Origin's complete Admiral and Ad-Shield fixes (466 rules), so
+  Ad-Shield's reload trick is switched off where it used to be only blocked. Tom's Guide, PC Gamer, TechRadar and
+  the other Future plc sites get the same fix.
+- **More uBlock Origin fixes now work, still without trusted scriptlets from other lists:** 37 rules that needed a
+  "trusted" scriptlet (allowed only from AdGuard's own lists) now run as a safe equivalent that can insert nothing of
+  the rule's choosing — new built-in scriptlets blank-setattribute-value, set-storage-item-now and set-data-attr, or
+  the ordinary non-trusted version of the same scriptlet. In Manage custom rules, such a rule is still refused, but
+  the message now names the safe equivalent to use instead.
+- **Fixed: filter-list redirect rules did nothing where another list blocked the same address.** A redirect (for
+  example to an empty script, so a site's anti-adblock fallback never runs) now comes before a plain block, as in
+  uBlock Origin and AdGuard; a list's exceptions and "important" rules keep the last word.
+- **Fixed: the once-after-update Seamless surfing question was lost** when the first page after the update was one
+  the browser does not let extensions touch (such as the Chrome Web Store), and an error was logged. It now waits
+  for the next ordinary page.
+- **All filter lists refreshed** (full update, 2026-11-25), including the hide rules and scriptlets the 11.1.2 SAFE
+  update had to leave out. Bad filter fixes: the CNN ad-slot hide rule and the Fox News scriptlet are gone, as in the
+  list itself.
+
 ## 11.1.2
 - **SAFE filter update (skip-review) against the published 11.1.1:** network rules refreshed from their live sources
   (2026-11-25) for AdGuard Base, AdGuard tracking servers, AdGuard German and French, the German and Polish AdGuard

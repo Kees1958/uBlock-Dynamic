@@ -39,6 +39,7 @@
  *   scriptletPolicyViolation(name, args)   — rules B and C: a reason string, or null when the rule may run
  *   isBlockedScriptletFamily(name)         — rule D: true for a json-edit-family name (any alias spelling)
  *   scriptletViolationAnySource(name, args) — rules D+B+C for every source (build, suite): a reason, or null
+ *   safeReplacementFor(name, args)         — rule A's safe equivalent of a trusted rule ({ name, args }), or null
  *   scriptletRuleRejection(name, args)     — rules D+A+B+C for rules from an untrusted source (user input):
  *                                            a user-facing message, or null
  * Pure functions and frozen data — nothing to initialise, clear or release.
@@ -67,7 +68,96 @@ export const SCRIPTLET_POLICY = Object.freeze({
     // Rule D — alias spellings uBO accepts for the same scriptlet ("ubo-json-edit.js" = "json-edit").
     ALIAS_PREFIX: 'ubo-',
     ALIAS_SUFFIX: '.js',
+    // (11.1.3, owner's decision) Safe replacements for rule A. A rule refused for needing trust is not simply dropped
+    // when its arguments have exactly a known, harmless shape: it is replaced by a scriptlet that does that one job and
+    // can insert nothing of the rule's choosing — a project-own scriptlet (js/resources/ubo-patch-scriptlets-source.mjs)
+    // or the trusted scriptlet's own non-trusted AdGuard twin. Every other argument shape stays refused.
+    BLANK_SETATTRIBUTE_VALUE_NAME: 'blank-setattribute-value',
+    SET_STORAGE_ITEM_NOW_NAME:     'set-storage-item-now',
+    SET_DATA_ATTR_NAME:            'set-data-attr',
+    // The value token of the trusted storage setters meaning "the current time".
+    NOW_VALUE_TOKEN:               '$now$',
+    // set-storage-item-now's first argument.
+    STORAGE_KINDS:                 Object.freeze({ LOCAL: 'local', SESSION: 'session' }),
+    // set-data-attr: only data-* attributes (never run as code by a browser) and a short plain word as value.
+    DATA_ATTR_NAME_RE:             /^data-[a-z0-9-]{1,64}$/i,
+    DATA_ATTR_VALUE_RE:            /^[A-Za-z0-9_-]{1,32}$/,
+    // A storage key or cookie name the replacements accept (non-empty, bounded).
+    MAX_KEY_LENGTH:                256,
+    // Trusted setter -> its non-trusted AdGuard twin, which applies ONLY its own list of safe values at run time
+    // (AdGuard's design: set-cookie, set-local-storage-item, … ignore any other value). Mapped only when the call has
+    // the twin's argument layout (name, value — set-attr: selector, attribute, value) and the value is a plain word or
+    // a small number (TWIN_VALUE_RE), so a JSON blob or code is never reported as "replaced" for a twin to refuse.
+    TWINS: Object.freeze({
+        'trusted-set-cookie':               Object.freeze({ twin: 'set-cookie',               argCount: 2, valueAt: 1 }),
+        'trusted-set-local-storage-item':   Object.freeze({ twin: 'set-local-storage-item',   argCount: 2, valueAt: 1 }),
+        'trusted-set-session-storage-item': Object.freeze({ twin: 'set-session-storage-item', argCount: 2, valueAt: 1 }),
+        'trusted-set-constant':             Object.freeze({ twin: 'set-constant',             argCount: 2, valueAt: 1 }),
+        // set-attr accepts far fewer values than the setters above (true, false or a small number only), so it carries
+        // its own, narrower shape; the others use TWIN_VALUE_RE.
+        'trusted-set-attr':                 Object.freeze({ twin: 'set-attr',                 argCount: 3, valueAt: 2, valueRe: /^(?:true|false|\d{1,5})$/ }),
+    }),
+    TWIN_VALUE_RE:                 /^(?:[A-Za-z_$]{1,32}|-?\d{1,5})$/,
+    REASON_REPLACED:               'trusted scriptlet replaced by a safe equivalent',
 });
+
+// The replacement table (rule A, see SCRIPTLET_POLICY above), tried IN ORDER — the specific shapes before the general
+// twin mapping. Each entry: the trusted scriptlet (base name, or null = any name in TWINS) and replace(base, args) ->
+// { name, args } of the safe equivalent, or null when this call does not have the entry's shape. Pure.
+function isBoundedKey(value) {
+    return typeof value === 'string' && value.trim() !== '' && value.length <= SCRIPTLET_POLICY.MAX_KEY_LENGTH;
+}
+const SAFE_SCRIPTLET_REPLACEMENTS = Object.freeze([
+    Object.freeze({
+        // uBlock Origin (uAssets, Ad-Shield section):
+        //   site##+js(trusted-replace-argument, Element.prototype.setAttribute, 1, , condition, /pattern/)
+        // = "when a setAttribute VALUE matches the pattern, set it to the empty string". The safe scriptlet can only
+        // ever blank a matching value, so it inserts nothing.
+        trustedName: 'trusted-replace-argument',
+        replace(base, args) {
+            const FIXED = [ 'Element.prototype.setAttribute', '1', '', 'condition' ];
+            if ( args.length !== FIXED.length + 1 || FIXED.some((v, i) => String(args[i]).trim() !== v) ) { return null; }
+            const pattern = String(args[FIXED.length]);
+            return pattern.trim() === '' ? null : { name: SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME, args: [ pattern ] };
+        },
+    }),
+    Object.freeze({
+        // site##+js(trusted-set-local-storage-item, key, $now$) — and the session-storage form: "remember when the ad
+        // was last shown", so pop-unders and interstitials wait. The safe scriptlet writes only the current time.
+        trustedName: null,
+        replace(base, args) {
+            const KIND_BY_NAME = {
+                'trusted-set-local-storage-item':   SCRIPTLET_POLICY.STORAGE_KINDS.LOCAL,
+                'trusted-set-session-storage-item': SCRIPTLET_POLICY.STORAGE_KINDS.SESSION,
+            };
+            const kind = KIND_BY_NAME[base];
+            if ( kind === undefined || args.length !== 2 || String(args[1]).trim() !== SCRIPTLET_POLICY.NOW_VALUE_TOKEN ) { return null; }
+            return isBoundedKey(args[0]) ? { name: SCRIPTLET_POLICY.SET_STORAGE_ITEM_NOW_NAME, args: [ kind, String(args[0]) ] } : null;
+        },
+    }),
+    Object.freeze({
+        // site##+js(trusted-set-attr, selector, data-x, word) — a page probe ("data-allok=y"). Only data-* names and a
+        // short plain word, which a browser never runs as code.
+        trustedName: 'trusted-set-attr',
+        replace(base, args) {
+            if ( args.length !== 3 || String(args[0]).trim() === '' ) { return null; }
+            const [ selector, attr, value ] = args.map(String);
+            if ( SCRIPTLET_POLICY.DATA_ATTR_NAME_RE.test(attr) === false || SCRIPTLET_POLICY.DATA_ATTR_VALUE_RE.test(value) === false ) { return null; }
+            return { name: SCRIPTLET_POLICY.SET_DATA_ATTR_NAME, args: [ selector, attr, value ] };
+        },
+    }),
+    Object.freeze({
+        // Trusted setter -> non-trusted AdGuard twin (TWINS above), all arguments kept.
+        trustedName: null,
+        replace(base, args) {
+            const spec = SCRIPTLET_POLICY.TWINS[base];
+            if ( spec === undefined || args.length !== spec.argCount ) { return null; }
+            if ( isBoundedKey(args[0]) === false ) { return null; }
+            if ( (spec.valueRe ?? SCRIPTLET_POLICY.TWIN_VALUE_RE).test(String(args[spec.valueAt]).trim()) === false ) { return null; }
+            return { name: spec.twin, args: args.map(String) };
+        },
+    }),
+]);
 
 // The scriptlet's own name without uBO's alias spellings: "ubo-x.js" / "ubo-x" / "x.js" -> "x" (lower case).
 // (audit 10.6.4) Shared by rules A and D, so an alias spelling can never slip past either one — e.g. the build turns
@@ -104,6 +194,7 @@ export function scriptletPolicyViolation(name, args) {
         'trusted-create-element':         [ -1 ],   // parent, tag, attributes, text
         'trusted-set-attr':               [ 2 ],    // selector, attribute, VALUE
         'set-attr':                       [ 2 ],
+        'set-data-attr':                  [ 2 ],    // (11.1.3) project scriptlet: selector, data-attribute, VALUE
         'trusted-replace-argument':       [ 2 ],    // method, index, VALUE, pattern
         'trusted-replace-node-text':      [ 3 ],    // node, text match, pattern, REPLACEMENT
         'trusted-replace-fetch-response': [ 1 ],    // pattern, REPLACEMENT
@@ -144,6 +235,19 @@ export function scriptletViolationAnySource(name, args) {
     return scriptletPolicyViolation(name, args);
 }
 
+// Rule A's safe replacement (see SAFE_SCRIPTLET_REPLACEMENTS): { name, args } of the project scriptlet that does the
+// same job, or null when this trusted rule has no safe equivalent. Pure.
+export function safeReplacementFor(name, args) {
+    if ( typeof name !== 'string' || Array.isArray(args) === false ) { return null; }
+    const base = baseScriptletName(name);
+    for ( const entry of SAFE_SCRIPTLET_REPLACEMENTS ) {
+        if ( entry.trustedName !== null && entry.trustedName !== base ) { continue; }
+        const safe = entry.replace(base, args);
+        if ( safe !== null ) { return safe; }
+    }
+    return null;
+}
+
 // For rules that do NOT come from an AdGuard Team source (Custom Rules, ABP import): rule D refuses the blocked
 // families, rule A every trusted scriptlet, then rules B and C. Returns the message to show the user, or null.
 export function scriptletRuleRejection(name, args) {
@@ -151,7 +255,12 @@ export function scriptletRuleRejection(name, args) {
         return `Scriptlet "${name}" refused: ${SCRIPTLET_POLICY.REASON_BLOCKED_FAMILY}.`;
     }
     if ( requiresTrust(name) ) {
-        return `Scriptlet "${name}" needs trust and is only accepted from AdGuard filter lists, not from own rules.`;
+        // (11.1.3) Point the user to the safe equivalent when this exact rule has one.
+        const safe = safeReplacementFor(name, Array.isArray(args) ? args : []);
+        return safe === null
+            ? `Scriptlet "${name}" needs trust and is only accepted from AdGuard filter lists, not from own rules.`
+            : `Scriptlet "${name}" needs trust and is only accepted from AdGuard filter lists. ` +
+              `Use ${safe.name}(${safe.args.join(', ')}) instead: it does the same here without needing trust.`;
     }
     const violation = scriptletPolicyViolation(name, args);
     return violation === null ? null : `Scriptlet "${name}" refused: ${violation}.`;

@@ -12,11 +12,12 @@
 //   COOKIE_PROMPT_ANSWERED_MARKER_KEY (storage.local)   — the extension version in which it was answered
 //   COOKIE_PROMPT_OFFERED_SESSION_KEY (storage.session) — true once offered in this browser session
 // Marker lifecycle (C41): Created by markCookiePromptAnswered() (start or dismiss message from the prompt) /
-// markCookiePromptOffered() (background, right before injecting); Read by isCookiePromptDue(); Deleted by "Reset to
-// defaults" (storage.local.clear — the prompt is then offered once more) and, for the session key, by the browser
-// at session end.
+// markCookiePromptOffered() (background, right before injecting); Updated back to false by unmarkCookiePromptOffered()
+// (11.1.3: the injection failed, e.g. on the Chrome Web Store, so it was never shown — offered on the next page load);
+// Read by isCookiePromptDue(); Deleted by "Reset to defaults" (storage.local.clear — the prompt is then offered once
+// more) and, for the session key, by the browser at session end.
 //
-// Public interface: isCookiePromptDue(), markCookiePromptOffered(), markCookiePromptAnswered()
+// Public interface: isCookiePromptDue(), markCookiePromptOffered(), unmarkCookiePromptOffered(), markCookiePromptAnswered()
 // Dependencies: js/data/ext.js (storage), js/util/version-compare.js (isVersionOlderThan — one comparator).
 // State owned: none in memory — both markers live in storage, so a service-worker restart changes nothing.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -46,6 +47,11 @@ export async function isCookiePromptDue() {
 
 export async function markCookiePromptOffered() {
     return sessionWrite(COOKIE_PROMPT_OFFERED_SESSION_KEY, true);
+}
+
+// (11.1.3) The offer could not be shown (the injection failed): give it back, so the next page load offers it.
+export async function unmarkCookiePromptOffered() {
+    return sessionWrite(COOKIE_PROMPT_OFFERED_SESSION_KEY, false);
 }
 
 export async function markCookiePromptAnswered() {

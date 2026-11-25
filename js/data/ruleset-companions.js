@@ -32,8 +32,9 @@
 // them written to its own companion ruleset declared HERE, so a refresh of the list's safe main file still
 // qualifies. The owner's rule: every list AdGuard itself curates (10.2.1 — AdGuard Base with its hidden
 // country-overflow buckets, AdGuard anti-adblock, the AdGuard language filters), the
-// remaining country filters and the quick-fixes list have a companion. Not AdGuard tracking servers (the build
-// keeps only plain ||domain^ lines, so it can never carry one) and not the annoyances list (AdGuard and
+// remaining country filters, the quick-fixes list and (11.1.3) Anti-Admiral have a companion. Not AdGuard
+// tracking servers (the build keeps only plain ||domain^ lines, so it can never carry one) and not the
+// annoyances list (AdGuard and
 // EasyList merged — owner's decision). An unsafe rule produced by ANY other list is dropped with a warning
 // (tools/build/build-steps.mjs). A companion is declared even while empty ([]), so a list that starts
 // producing unsafe rules later needs no manifest change.
@@ -74,6 +75,10 @@ export const UNSAFE_RULE_COMPANIONS = Object.freeze({
     ruleset_agbase_overflow_nordic:       'ruleset_agbase_overflow_nordic_unsafe',
     ruleset_agbase_overflow_other:        'ruleset_agbase_overflow_other_unsafe',
     ruleset_agbase_overflow_hungarian:    'ruleset_agbase_overflow_hungarian_unsafe',   // (10.4.5)
+    // (11.1.3, owner's decision) Anti-Admiral now takes uBlock Origin's whole Admiral and Ad-Shield sections, whose
+    // $redirect rules (Ad-Shield's loader redirected to an empty script, so its fallback never runs) and $csp rules are
+    // unsafe for skip-review.
+    ruleset_antiadmiral:                  'ruleset_antiadmiral_unsafe',
 });
 
 // (10.7.6) Removeparam companions — a list listed here sends its $removeparam rules (redirect with a

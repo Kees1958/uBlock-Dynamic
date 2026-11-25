@@ -9,8 +9,10 @@
 // Public interface: fetchList, applyScriptletTrustGate
 // Dependencies: see the imports below (strictly acyclic; no module imports one that imports it).
 import { withRetry, fetchWithTimeout } from '../lib/fetch-with-retry.mjs';
-import { isTrustedScriptletSource, requiresTrust, SCRIPTLET_POLICY } from '../../js/data/scriptlet-policy.js';
+import { isTrustedScriptletSource, requiresTrust, safeReplacementFor, SCRIPTLET_POLICY } from '../../js/data/scriptlet-policy.js';
 import { droppedPolicyScriptlets } from './build-state.mjs';
+import { formatAdguardScriptletLine, parseUboScriptletLine } from './ubo-scriptlet-syntax.mjs';
+import { parseScriptletRules } from './scriptlet-rules.mjs';
 
 // ── Scriptlet trust gate (10.4.6, rule A of js/data/scriptlet-policy.js) ──
 // The single download helper is the one place every upstream text passes through with its own source URL, so the
@@ -21,17 +23,45 @@ const TRUST_GATE_CONFIG = Object.freeze({
     // Scriptlet-call markers: AdGuard (#%#//scriptlet(…)) and uBO (##+js(…)). Exceptions (#@%# / #@#+js) are not
     // matched: they only cancel a rule and run nothing.
     SCRIPTLET_CALL_RE: /(?:#%#\/\/scriptlet|##\+js)\(\s*(['"]?)([^'",)\s]+)\1/,
+    // (11.1.3) For the safe-replacement step: the AdGuard call marker, and the stand-in host the AdGuard line is parsed
+    // under (any plain hostname; only name and arguments are read back).
+    ADGUARD_CALL_MARK: '#%#//scriptlet(',
+    PARSE_PROBE_HOST:  'probe.invalid',
 });
 
-// Removes every line calling a scriptlet that needs trust when `url` is not an AdGuard Team source; each removed line
-// is recorded in droppedPolicyScriptlets. Returns the text unchanged for a trusted source.
+// (11.1.3, owner's decision) Before a refused line is dropped, the policy is asked for a safe equivalent
+// (safeReplacementFor). A line with one — uBO or AdGuard syntax — is rewritten to that safe scriptlet, in the AdGuard
+// form the build parses, and reported with reason REASON_REPLACED instead of being dropped.
+function safeReplacementLine(line) {
+    const parsed = parseUboScriptletLine(line) ?? parseAdguardScriptletLine(line);
+    if ( parsed === null || parsed.exception ) { return null; }
+    const safe = safeReplacementFor(parsed.name, parsed.args);
+    return safe === null ? null : formatAdguardScriptletLine(parsed.hosts, safe.name, safe.args);
+}
+
+// One AdGuard scriptlet line taken apart ({ hosts, exception: false, name, args }) by the build's own parser
+// (parseScriptletRules). The parser sees the call under a fixed probe host, so its reports on unusual host scopes
+// (negations, [$path=…]) are not filed twice; the line's own host text is kept as written for the later parse.
+function parseAdguardScriptletLine(line) {
+    const at = line.indexOf(TRUST_GATE_CONFIG.ADGUARD_CALL_MARK);
+    if ( at <= 0 ) { return null; }
+    const [ rule ] = parseScriptletRules(`${TRUST_GATE_CONFIG.PARSE_PROBE_HOST}${line.slice(at)}`, ( ) => true);
+    return rule === undefined ? null : { hosts: line.slice(0, at).trim(), exception: false, name: rule.name, args: rule.args };
+}
+
+// Removes every line calling a scriptlet that needs trust when `url` is not an AdGuard Team source, unless the policy
+// has a safe replacement for it (then the line is replaced). Each removed or replaced line is recorded in
+// droppedPolicyScriptlets. Returns the text unchanged for a trusted source.
 export function applyScriptletTrustGate(url, text) {
     if ( isTrustedScriptletSource(url) ) { return text; }
     const kept = [];
     for ( const line of text.split('\n') ) {
         const m = TRUST_GATE_CONFIG.SCRIPTLET_CALL_RE.exec(line);
         if ( m !== null && line.trimStart().startsWith('!') === false && requiresTrust(m[2]) ) {
-            droppedPolicyScriptlets.push({ source: url, name: m[2], args: [], reason: SCRIPTLET_POLICY.REASON_UNTRUSTED_SOURCE, line: line.trim() });
+            const replacement = safeReplacementLine(line);
+            const reason = replacement === null ? SCRIPTLET_POLICY.REASON_UNTRUSTED_SOURCE : SCRIPTLET_POLICY.REASON_REPLACED;
+            droppedPolicyScriptlets.push({ source: url, name: m[2], args: [], reason, line: line.trim() });
+            if ( replacement !== null ) { kept.push(replacement); }
             continue;
         }
         kept.push(line);

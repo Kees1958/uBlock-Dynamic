@@ -1,7 +1,7 @@
 [
   {
     "id": 36,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -18,7 +18,7 @@
   },
   {
     "id": 157,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -38,7 +38,7 @@
   },
   {
     "id": 246,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -64,7 +64,7 @@
   },
   {
     "id": 247,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -84,7 +84,7 @@
   },
   {
     "id": 289,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -104,7 +104,7 @@
   },
   {
     "id": 290,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -124,7 +124,7 @@
   },
   {
     "id": 294,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -144,7 +144,7 @@
   },
   {
     "id": 303,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -158,7 +158,7 @@
   },
   {
     "id": 356,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -178,7 +178,7 @@
   },
   {
     "id": 357,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -198,7 +198,7 @@
   },
   {
     "id": 358,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -229,7 +229,7 @@
   },
   {
     "id": 359,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -260,7 +260,7 @@
   },
   {
     "id": 360,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -291,7 +291,7 @@
   },
   {
     "id": 361,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -324,7 +324,7 @@
   },
   {
     "id": 367,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -344,7 +344,7 @@
   },
   {
     "id": 368,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -364,7 +364,7 @@
   },
   {
     "id": 369,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -384,7 +384,7 @@
   },
   {
     "id": 424,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -407,7 +407,7 @@
   },
   {
     "id": 425,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -431,7 +431,7 @@
   },
   {
     "id": 426,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -455,7 +455,7 @@
   },
   {
     "id": 444,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -479,7 +479,7 @@
   },
   {
     "id": 445,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -513,7 +513,7 @@
   },
   {
     "id": 446,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -530,7 +530,7 @@
   },
   {
     "id": 465,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -550,7 +550,7 @@
   },
   {
     "id": 466,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -570,7 +570,7 @@
   },
   {
     "id": 467,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -590,7 +590,7 @@
   },
   {
     "id": 476,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -607,7 +607,7 @@
   },
   {
     "id": 484,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -624,7 +624,7 @@
   },
   {
     "id": 489,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {

@@ -4,47 +4,27 @@
     delete self.__uboCustomScriptletArgs;
     var source = (a && a[0]) || {};
     var args = (a && a[1]) || [];
-    (function freezeElementProperty(source, args) {
-            const [ property = '', selector = '', pattern = '' ] = args || [];
-            if ( property === '' ) { return; }
-            const logPrefix = `[uBlock-Dynamic] freeze-element-property(${property}):`;
-            const negate = pattern.startsWith('!');
-            const rawPattern = negate ? pattern.slice(1) : pattern;
-            const asRegex = /^\/.+\/$/.test(rawPattern)
-                ? new RegExp(rawPattern.slice(1, -1))
-                : null;
-            const testPattern = text => {
-                if ( rawPattern === '' ) { return true; }
-                const hit = asRegex ? asRegex.test(text) : text.includes(rawPattern);
-                return negate ? !hit : hit;
-            };
-            const owner = (( ) => {
-                if ( Object.hasOwn(HTMLScriptElement.prototype, property) ) { return HTMLScriptElement.prototype; }
-                if ( Object.hasOwn(HTMLElement.prototype, property) ) { return HTMLElement.prototype; }
-                if ( Object.hasOwn(Element.prototype, property) ) { return Element.prototype; }
-                if ( Object.hasOwn(Node.prototype, property) ) { return Node.prototype; }
-                return null;
-            })();
-            if ( owner === null ) { return; }
-            const current = Object.getOwnPropertyDescriptor(owner, property);
-            if ( current === undefined ) { return; }
-            const shouldPreventSet = (elem, a) => {
-                if ( selector !== '' ) {
-                    if ( typeof elem.matches !== 'function' ) { return false; }
-                    if ( elem.matches(selector) === false ) { return false; }
+    (function setDataAttr(source, args) {
+            const [ selector = '', attr = '', value = '' ] = args || [];
+            const NAME_RE = /^data-[a-z0-9-]{1,64}$/i;
+            const VALUE_RE = /^[A-Za-z0-9_-]{1,32}$/;
+            if ( typeof selector !== 'string' || selector.trim() === '' ) { return; }
+            if ( NAME_RE.test(attr) === false || VALUE_RE.test(value) === false ) { return; }
+            let pending;
+            const apply = ( ) => {
+                pending = undefined;
+                let elems;
+                try { elems = document.querySelectorAll(selector); } catch { return false; }   // invalid selector
+                for ( const elem of elems ) {
+                    if ( elem.getAttribute(attr) !== value ) { elem.setAttribute(attr, value); }
                 }
-                return testPattern(`${a}`);
+                return true;
             };
-            Object.defineProperty(owner, property, {
-                get: function() { return current.get ? current.get.call(this) : current.value; },
-                set: function(a) {
-                    if ( shouldPreventSet(this, a) ) {
-                        if ( source.verbose ) { console.log(logPrefix, 'Assignment prevented'); }
-                    } else if ( current.set ) {
-                        current.set.call(this, a);
-                    }
-                    current.value = a;
-                },
+            if ( apply() === false ) { return; }
+            const observer = new MutationObserver(( ) => {
+                if ( pending !== undefined ) { return; }
+                pending = requestAnimationFrame(apply);
             });
+            observer.observe(document, { childList: true, subtree: true });
         })(source, args);
 })();

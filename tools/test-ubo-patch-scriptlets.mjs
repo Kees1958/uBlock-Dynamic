@@ -18,6 +18,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { JSDOM } from 'jsdom';
 import { UBO_PATCH_SCRIPTLETS } from '../js/resources/ubo-patch-scriptlets-source.mjs';
+import { SCRIPTLET_POLICY } from '../js/data/scriptlet-policy.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 void __dirname;
@@ -40,6 +41,7 @@ function newDom(html = '<!doctype html><body></body>') {
 }
 
 const source = { name: 'test', args: [], verbose: false, engine: 'test', uniqueId: 'u1' };
+const STORAGE_TEST_ORIGIN = 'https://example.com/';   // (11.1.3) set-storage-item-now case
 
 // ── prevent-dialog ───────────────────────────────────────────────────────
 {
@@ -175,6 +177,99 @@ const source = { name: 'test', args: [], verbose: false, engine: 'test', uniqueI
     try { byName.get('disable-fave-ssai')(source, []); global.window.FAVE.x = 1; } catch { threw = true; }
     check('tolerates a missing or null ads/instances structure', threw === false);
     delete global.window;
+}
+
+// ── blank-setattribute-value (11.1.3) ─────────────────────────────
+{
+    console.log(`${SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME}:`);
+    const fn = byName.get(SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME);
+    function fresh() { const { window } = newDom(); global.Element = window.Element; return window; }
+    // The uAssets Ad-Shield pattern shape (regex literal with commas and escaped characters).
+    const AD_SHIELD_PATTERN = '/error-report|new Promise|;await new|:\\[?window|&&window,|adShieldError/';
+    let win = fresh();
+    const nativeText = Function.prototype.toString.call(win.Element.prototype.setAttribute);
+    fn(source, [ AD_SHIELD_PATTERN ]);
+    let el = win.document.createElement('script');
+    el.setAttribute('onerror', 'location.href="https://report.error-report.com/modal"');
+    check('blanks a value that matches the regex', el.getAttribute('onerror') === '');
+    el.setAttribute('id', 'keep-me');
+    check('leaves a value that does not match alone', el.getAttribute('id') === 'keep-me');
+    el.setAttribute('data-x', 'a&&window,b');
+    check('regex with a comma in it works', el.getAttribute('data-x') === '');
+    check('setAttribute still looks native (toString)', Function.prototype.toString.call(win.Element.prototype.setAttribute) === nativeText);
+    win = fresh();
+    fn(source, [ 'adShieldError' ]);
+    el = win.document.createElement('div');
+    el.setAttribute('title', 'x adShieldError y');
+    check('plain-text pattern blanks a value containing it', el.getAttribute('title') === '');
+    win = fresh();
+    fn(source, [ '/a/g' ]);
+    el = win.document.createElement('div');
+    el.setAttribute('a1', 'a'); el.setAttribute('a2', 'a');
+    check('g flag ignored: every matching call is blanked, not every other one', el.getAttribute('a1') === '' && el.getAttribute('a2') === '');
+    for ( const bad of [ '', '/[/', 'x'.repeat(1001) ] ) {
+        win = fresh();
+        const before = win.Element.prototype.setAttribute;
+        fn(source, [ bad ]);
+        check(`does nothing for an empty, invalid or too long pattern (${bad.length} chars)`, win.Element.prototype.setAttribute === before);
+    }
+    delete global.Element;
+}
+
+// ── set-storage-item-now (11.1.3) ─────────────────────────────────
+{
+    console.log(`${SCRIPTLET_POLICY.SET_STORAGE_ITEM_NOW_NAME}:`);
+    const fn = byName.get(SCRIPTLET_POLICY.SET_STORAGE_ITEM_NOW_NAME);
+    // Web storage needs a real origin (about:blank has none).
+    const { window } = new JSDOM('<!doctype html><body></body>', { url: STORAGE_TEST_ORIGIN });
+    global.self = window;
+    const K = SCRIPTLET_POLICY.STORAGE_KINDS;
+    const before = Date.now();
+    fn(source, [ K.LOCAL, 'lastAd' ]);
+    fn(source, [ K.SESSION, 'lastPop' ]);
+    const local = Number(window.localStorage.getItem('lastAd'));
+    const session = Number(window.sessionStorage.getItem('lastPop'));
+    check('writes the current time to localStorage', local >= before && local <= Date.now());
+    check('writes the current time to sessionStorage', session >= before && session <= Date.now());
+    fn(source, [ 'cookies', 'x' ]);
+    fn(source, [ K.LOCAL, '' ]);
+    fn(source, [ K.LOCAL, 'k'.repeat(SCRIPTLET_POLICY.MAX_KEY_LENGTH + 1) ]);
+    check('an unknown storage, empty key or too long key (policy limit) writes nothing', window.localStorage.length === 1 && window.sessionStorage.length === 1);
+    delete global.self;
+}
+
+// ── set-data-attr (11.1.3) ────────────────────────────────────────
+{
+    console.log(`${SCRIPTLET_POLICY.SET_DATA_ATTR_NAME}:`);
+    const fn = byName.get(SCRIPTLET_POLICY.SET_DATA_ATTR_NAME);
+    const { window } = newDom('<!doctype html><body><div class="p"></div></body>');
+    global.document = window.document;
+    global.MutationObserver = window.MutationObserver;
+    const frames = [];
+    global.requestAnimationFrame = cb => { frames.push(cb); return frames.length; };
+    fn(source, [ 'div.p', 'data-allok', 'y' ]);
+    check('sets the attribute on matching elements', window.document.querySelector('div.p').getAttribute('data-allok') === 'y');
+    const later = window.document.createElement('div');
+    later.className = 'p';
+    window.document.body.appendChild(later);
+    await new Promise(resolve => setTimeout(resolve, 0));   // let the MutationObserver callback run
+    for ( const cb of frames.splice(0) ) { cb(); }
+    check('sets it on a matching element added later', later.getAttribute('data-allok') === 'y');
+    // Every name/value the policy refuses, the scriptlet refuses too (limits agree).
+    for ( const [ attr, value ] of [ [ 'onerror', 'y' ], [ 'data-x', 'a b' ], [ 'data-x', 'https://x.y' ], [ 'data-x', 'v'.repeat(33) ] ] ) {
+        const policyOk = SCRIPTLET_POLICY.DATA_ATTR_NAME_RE.test(attr) && SCRIPTLET_POLICY.DATA_ATTR_VALUE_RE.test(value);
+        const el = window.document.createElement('span');
+        el.className = 'q';
+        window.document.body.appendChild(el);
+        fn(source, [ 'span.q', attr, value ]);
+        check(`refuses ${attr}=${value.slice(0, 12)} like the policy does`, policyOk === false && el.hasAttribute(attr) === false);
+        el.remove();
+    }
+    fn(source, [ '[[invalid', 'data-x', 'y' ]);
+    check('an invalid selector does nothing (no exception)', true);
+    // The scriptlet's observer lives as long as its page; a late callback finds a no-op frame scheduler, not a gap.
+    global.requestAnimationFrame = ( ) => 0;
+    delete global.document; delete global.MutationObserver;
 }
 
 console.log('');

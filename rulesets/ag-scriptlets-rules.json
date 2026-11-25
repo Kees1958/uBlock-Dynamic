@@ -1,17 +1,6 @@
 [
   {
     "hostnames": [
-      "foxnews.com"
-    ],
-    "name": "abort-current-inline-script",
-    "args": [
-      "document.createElement",
-      "__apNoHold"
-    ],
-    "ruleset": "ruleset_badfilter_quickfixes"
-  },
-  {
-    "hostnames": [
       "1800contacts.com"
     ],
     "name": "set-cookie",
@@ -4137,6 +4126,9 @@
   },
   {
     "hostnames": [
+      "comic18j-susu.com",
+      "jmcomic-zzz.one",
+      "18comic.vip",
       "hentaiocean.com",
       "pornhub-sexfilme.net",
       "pornojenny.net",
@@ -9004,6 +8996,7 @@
   },
   {
     "hostnames": [
+      "toon34.com",
       "supjav1.live",
       "cum.st",
       "gaystream.pw",
@@ -24719,19 +24712,6 @@
   },
   {
     "hostnames": [
-      "facebook.com",
-      "facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion"
-    ],
-    "name": "trusted-replace-xhr-response",
-    "args": [
-      "/\\{\"node\":\\{\"__typename\":\"MarketplaceFeedAdStory\"[^\\n]+?\"cursor\":(?:null|\"\\{[^\\n]+?\\}\"|[^\\n]+?MarketplaceSearchFeedStoriesEdge\")\\}/g",
-      "{}",
-      "/api/graphql"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
       "vumoo.life"
     ],
     "name": "set-constant",
@@ -26204,6 +26184,7 @@
   },
   {
     "hostnames": [
+      "gamejksokuhou.com",
       "trucs-et-astuces.co",
       "advnture.com",
       "androidcentral.com",
@@ -26798,6 +26779,7 @@
   },
   {
     "hostnames": [
+      "wykop.pl",
       "chamsko.pl",
       "lifeintheuktestweb.co.uk",
       "androidauthority.com",
@@ -29967,6 +29949,7 @@
   },
   {
     "hostnames": [
+      "echo24.de",
       "theverge.com",
       "gumtree.com"
     ],
@@ -30056,6 +30039,7 @@
   },
   {
     "hostnames": [
+      "echo24.de",
       "keizai.biz",
       "okuyami-information.com",
       "netvasco.com.br",
@@ -30526,6 +30510,7 @@
   },
   {
     "hostnames": [
+      "echo24.de",
       "theverge.com",
       "mavericktruckclub.com",
       "kprofiles.com",
@@ -30836,6 +30821,7 @@
   },
   {
     "hostnames": [
+      "wykop.pl",
       "chamsko.pl",
       "theverge.com",
       "notebookcheck.com",
@@ -30862,6 +30848,7 @@
   },
   {
     "hostnames": [
+      "wykop.pl",
       "chamsko.pl",
       "theverge.com",
       "notebookcheck.com",
@@ -30994,6 +30981,7 @@
   },
   {
     "hostnames": [
+      "wykop.pl",
       "chamsko.pl",
       "theverge.com"
     ],
@@ -31006,6 +30994,7 @@
   },
   {
     "hostnames": [
+      "wykop.pl",
       "chamsko.pl",
       "theverge.com"
     ],
@@ -31589,6 +31578,17 @@
   },
   {
     "hostnames": [
+      "rule34porno.cc"
+    ],
+    "name": "remove-node-text",
+    "args": [
+      "script",
+      "pop1stp"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
       "dramafren.org"
     ],
     "name": "prevent-addEventListener",
@@ -31654,6 +31654,7 @@
   },
   {
     "hostnames": [
+      "oisauh.com",
       "czzbgnw.com",
       "allpornstream.com"
     ],
@@ -35912,6 +35913,9 @@
   },
   {
     "hostnames": [
+      "comic18j-susu.com",
+      "jmcomic-zzz.one",
+      "18comic.vip",
       "mxzhxco8dft.com",
       "gasobni.com",
       "gaqghe.com",
@@ -40935,6 +40939,26 @@
   },
   {
     "hostnames": [
+      "x.com"
+    ],
+    "name": "json-prune",
+    "args": [
+      "$.data..[\"entries\",\"items\"][?(@.*.content.promoted_metadata)]"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
+      "x.com"
+    ],
+    "name": "json-prune",
+    "args": [
+      "data.*.home_timeline_urt.instructions.*.entries.[-].content.content.promoted_metadata data.threaded_conversation_with_injections_v2.instructions.*.entries.*.content.items.[-].item.content.promoted_metadata data.search_by_raw_query.search_timeline.timeline.instructions.*.entries.[-].content.content.promoted_metadata"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
       "webcams-vlissingen.nl"
     ],
     "name": "abort-current-inline-script",
@@ -44733,6 +44757,16 @@
       "/setInterval[\\s\\S]*?_0x[\\s\\S]*?</"
     ],
     "ruleset": "ruleset_adguard_german"
+  },
+  {
+    "hostnames": [
+      "vinteconto.com.br"
+    ],
+    "name": "abort-current-inline-script",
+    "args": [
+      "Swal.fire"
+    ],
+    "ruleset": "ruleset_adguard_french"
   },
   {
     "hostnames": [
@@ -57050,6 +57084,17 @@
   },
   {
     "hostnames": [
+      "myonlineradio.hu"
+    ],
+    "name": "set-cookie",
+    "args": [
+      "stpdsck",
+      "1"
+    ],
+    "ruleset": "ruleset_hungarian"
+  },
+  {
+    "hostnames": [
       "pcworld.hu"
     ],
     "name": "remove-class",
@@ -60361,6 +60406,17 @@
   },
   {
     "hostnames": [
+      "knshow.com"
+    ],
+    "name": "remove-node-text",
+    "args": [
+      "script",
+      "abwall"
+    ],
+    "ruleset": "ruleset_adguard_antiadblock"
+  },
+  {
+    "hostnames": [
       "zeta-ai.io"
     ],
     "name": "prevent-fetch",
@@ -61069,6 +61125,16 @@
     "name": "prevent-setTimeout",
     "args": [
       "Adblock"
+    ],
+    "ruleset": "ruleset_adguard_antiadblock"
+  },
+  {
+    "hostnames": [
+      "wispbyte.com"
+    ],
+    "name": "prevent-navigation",
+    "args": [
+      "disable-adblocker"
     ],
     "ruleset": "ruleset_adguard_antiadblock"
   },
@@ -78564,6 +78630,17 @@
   },
   {
     "hostnames": [
+      "peeplayer.com"
+    ],
+    "name": "abort-current-inline-script",
+    "args": [
+      "__psAb",
+      "__psAb"
+    ],
+    "ruleset": "ruleset_english_outside_top1m"
+  },
+  {
+    "hostnames": [
       "f4splay.vip"
     ],
     "name": "prevent-fetch",
@@ -78863,6 +78940,7 @@
   },
   {
     "hostnames": [
+      "fast-down.com",
       "linegee.net",
       "aii.sh"
     ],
@@ -79274,6 +79352,18 @@
     "name": "set-constant",
     "args": [
       "__dtRan",
+      "true"
+    ],
+    "ruleset": "ruleset_english_outside_top1m"
+  },
+  {
+    "hostnames": [
+      "strcsh.xyz",
+      "streamcash.to"
+    ],
+    "name": "set-constant",
+    "args": [
+      "__advExempt",
       "true"
     ],
     "ruleset": "ruleset_english_outside_top1m"
@@ -90835,6 +90925,3108 @@
   },
   {
     "hostnames": [
+      "1000logos.net",
+      "100daysofrealfood.com",
+      "101cookbooks.com",
+      "101cookingfortwo.com",
+      "101planners.com",
+      "123atc.com",
+      "123homeschool4me.com",
+      "15worksheets.com",
+      "1lumen.com",
+      "247wallst.com",
+      "30seconds.com",
+      "31daily.com",
+      "365daysofbakingandmore.com",
+      "365daysofcrockpot.com",
+      "411mania.com",
+      "4pics1-word.com",
+      "50isnotold.com",
+      "604now.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "1911addicts.com",
+      "1911forum.com",
+      "1919a4.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "10tv.com",
+      "11alive.com",
+      "12news.com",
+      "12newsnow.com",
+      "13newsnow.com",
+      "13wmaz.com",
+      "2822news.com",
+      "5newsonline.com",
+      "8newsnow.com",
+      "9news.com",
+      "abc10.com",
+      "abc27.com",
+      "abc4.com",
+      "bigcountryhomepage.com",
+      "binghamtonhomepage.com",
+      "cbs17.com",
+      "cbs19.tv",
+      "cbs8.com",
+      "conchovalleyhomepage.com",
+      "counton2.com",
+      "dcnewsnow.com",
+      "everythinglubbock.com",
+      "firstcoastnews.com",
+      "fourstateshomepage.com",
+      "fox16.com",
+      "fox21news.com",
+      "fox2now.com",
+      "fox40.com",
+      "fox43.com",
+      "fox4kc.com",
+      "fox56news.com",
+      "fox59.com",
+      "kare11.com",
+      "kcentv.com",
+      "kdvr.com",
+      "keloland.com",
+      "kens5.com",
+      "ketk.com",
+      "kfor.com",
+      "kget.com",
+      "kgw.com",
+      "khon2.com",
+      "khou.com",
+      "kiiitv.com",
+      "king5.com",
+      "klfy.com",
+      "koin.com",
+      "kold.com",
+      "krem.com",
+      "kron4.com",
+      "krqe.com",
+      "ksdk.com",
+      "ksn.com",
+      "ksnt.com",
+      "ktalnews.com",
+      "ktla.com",
+      "ktsm.com",
+      "ktvb.com",
+      "kvue.com",
+      "kxan.com",
+      "kxnet.com",
+      "localmemphis.com",
+      "localsyr.com",
+      "myarklamiss.com",
+      "myfox8.com",
+      "myhighplains.com",
+      "mypanhandle.com",
+      "mystateline.com",
+      "mytwintiers.com",
+      "mywabashvalley.com",
+      "news10.com",
+      "newscentermaine.com",
+      "newswest9.com",
+      "nwahomepage.com",
+      "ourquadcities.com",
+      "ozarksfirst.com",
+      "pix11.com",
+      "qcnews.com",
+      "rochesterfirst.com",
+      "rocketcitynow.com",
+      "texomashomepage.com",
+      "thv11.com",
+      "tristatehomepage.com",
+      "valleycentral.com",
+      "wane.com",
+      "wate.com",
+      "wavy.com",
+      "wbir.com",
+      "wboy.com",
+      "wbtw.com",
+      "wcia.com",
+      "wcnc.com",
+      "wdhn.com",
+      "wdtn.com",
+      "wearegreenbay.com",
+      "westernslopenow.com",
+      "wfaa.com",
+      "wfmynews2.com",
+      "wgno.com",
+      "wgntv.com",
+      "wgrz.com",
+      "whas11.com",
+      "whnt.com",
+      "who13.com",
+      "wivb.com",
+      "wjbf.com",
+      "wjhl.com",
+      "wjtv.com",
+      "wkbn.com",
+      "wkrg.com",
+      "wkrn.com",
+      "wkyc.com",
+      "wlns.com",
+      "wltx.com",
+      "wnct.com",
+      "wnep.com",
+      "woodtv.com",
+      "wowktv.com",
+      "wpri.com",
+      "wqad.com",
+      "wrbl.com",
+      "wreg.com",
+      "wric.com",
+      "wsav.com",
+      "wspa.com",
+      "wtaj.com",
+      "wthr.com",
+      "wtnh.com",
+      "wtol.com",
+      "wtrf.com",
+      "wtsp.com",
+      "wusa9.com",
+      "wvnstv.com",
+      "wwlp.com",
+      "wwltv.com",
+      "wzzm13.com",
+      "yourcentralvalley.com",
+      "yourerie.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/admiral|\\[\\]\\)\\.push\\(arguments\\)/",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "12thmanrising.com",
+      "allucanheat.com",
+      "aroundthefoghorn.com",
+      "arrowheadaddict.com",
+      "bamahammer.com",
+      "beargoggleson.com",
+      "beyondtheflag.com",
+      "birdswatcher.com",
+      "blackandteal.com",
+      "blogredmachine.com",
+      "bluemanhoop.com",
+      "boltbeat.com",
+      "bosoxinjection.com",
+      "buffalowdown.com",
+      "caneswarning.com",
+      "catcrave.com",
+      "chopchat.com",
+      "climbingtalshill.com",
+      "cubbiescrib.com",
+      "dailyknicks.com",
+      "dairylandexpress.com",
+      "dawgpounddaily.com",
+      "dawindycity.com",
+      "dawnofthedawg.com",
+      "detroitjockcity.com",
+      "dodgersway.com",
+      "ebonybird.com",
+      "fansided.com",
+      "flywareagle.com",
+      "gbmwolverine.com",
+      "gmenhq.com",
+      "hailfloridahail.com",
+      "halohangout.com",
+      "hardwoodhoudini.com",
+      "horseshoeheroes.com",
+      "housethathankbuilt.com",
+      "huskercorner.com",
+      "insidetheiggles.com",
+      "jaysjournal.com",
+      "justblogbaby.com",
+      "kckingdom.com",
+      "kingjamesgospel.com",
+      "lakeshowlife.com",
+      "lombardiave.com",
+      "mentalfloss.com",
+      "motorcitybengals.com",
+      "musketfire.com",
+      "nflspinzone.com",
+      "ninernoise.com",
+      "nugglove.com",
+      "onechicagocenter.com",
+      "phinphanatic.com",
+      "pistonpowered.com",
+      "predominantlyorange.com",
+      "ramblinfan.com",
+      "redbirdrants.com",
+      "reviewingthebrew.com",
+      "riggosrag.com",
+      "ripcityproject.com",
+      "risingapple.com",
+      "rumbunter.com",
+      "scarletandgame.com",
+      "sidelionreport.com",
+      "slapthesign.com",
+      "sodomojo.com",
+      "southsideshowdown.com",
+      "stillcurtain.com",
+      "stormininnorman.com",
+      "stripehype.com",
+      "thatballsouttahere.com",
+      "thecelticbhoys.com",
+      "thejetpress.com",
+      "thelandryhat.com",
+      "thepewterplank.com",
+      "thesmokingcuban.com",
+      "thevikingage.com",
+      "thunderousintentions.com",
+      "undeadwalking.com",
+      "valleyofthesuns.com",
+      "whodatdish.com",
+      "winteriscoming.net",
+      "yanksgoyard.com"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      "[native code]",
+      "500"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "12thmanrising.com",
+      "allucanheat.com",
+      "aroundthefoghorn.com",
+      "arrowheadaddict.com",
+      "bamahammer.com",
+      "beargoggleson.com",
+      "beyondtheflag.com",
+      "birdswatcher.com",
+      "blackandteal.com",
+      "blogredmachine.com",
+      "bluemanhoop.com",
+      "boltbeat.com",
+      "bosoxinjection.com",
+      "buffalowdown.com",
+      "caneswarning.com",
+      "catcrave.com",
+      "chopchat.com",
+      "climbingtalshill.com",
+      "cubbiescrib.com",
+      "dailyknicks.com",
+      "dairylandexpress.com",
+      "dawgpounddaily.com",
+      "dawindycity.com",
+      "dawnofthedawg.com",
+      "detroitjockcity.com",
+      "dodgersway.com",
+      "ebonybird.com",
+      "fansided.com",
+      "flywareagle.com",
+      "gbmwolverine.com",
+      "gmenhq.com",
+      "hailfloridahail.com",
+      "halohangout.com",
+      "hardwoodhoudini.com",
+      "horseshoeheroes.com",
+      "housethathankbuilt.com",
+      "huskercorner.com",
+      "insidetheiggles.com",
+      "jaysjournal.com",
+      "justblogbaby.com",
+      "kckingdom.com",
+      "kingjamesgospel.com",
+      "lakeshowlife.com",
+      "lombardiave.com",
+      "mentalfloss.com",
+      "motorcitybengals.com",
+      "musketfire.com",
+      "nflspinzone.com",
+      "ninernoise.com",
+      "nugglove.com",
+      "onechicagocenter.com",
+      "phinphanatic.com",
+      "pistonpowered.com",
+      "predominantlyorange.com",
+      "ramblinfan.com",
+      "redbirdrants.com",
+      "reviewingthebrew.com",
+      "riggosrag.com",
+      "ripcityproject.com",
+      "risingapple.com",
+      "rumbunter.com",
+      "scarletandgame.com",
+      "sidelionreport.com",
+      "slapthesign.com",
+      "sodomojo.com",
+      "southsideshowdown.com",
+      "stillcurtain.com",
+      "stormininnorman.com",
+      "stripehype.com",
+      "thatballsouttahere.com",
+      "thecelticbhoys.com",
+      "thejetpress.com",
+      "thelandryhat.com",
+      "thepewterplank.com",
+      "thesmokingcuban.com",
+      "thevikingage.com",
+      "thunderousintentions.com",
+      "undeadwalking.com",
+      "valleyofthesuns.com",
+      "whodatdish.com",
+      "winteriscoming.net",
+      "yanksgoyard.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "\"data-sdk\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "12thmanrising.com",
+      "allucanheat.com",
+      "aroundthefoghorn.com",
+      "arrowheadaddict.com",
+      "bamahammer.com",
+      "beargoggleson.com",
+      "beyondtheflag.com",
+      "birdswatcher.com",
+      "blackandteal.com",
+      "blogredmachine.com",
+      "bluemanhoop.com",
+      "boltbeat.com",
+      "bosoxinjection.com",
+      "buffalowdown.com",
+      "caneswarning.com",
+      "catcrave.com",
+      "chopchat.com",
+      "climbingtalshill.com",
+      "cubbiescrib.com",
+      "dailyknicks.com",
+      "dairylandexpress.com",
+      "dawgpounddaily.com",
+      "dawindycity.com",
+      "dawnofthedawg.com",
+      "detroitjockcity.com",
+      "dodgersway.com",
+      "ebonybird.com",
+      "fansided.com",
+      "flywareagle.com",
+      "gbmwolverine.com",
+      "gmenhq.com",
+      "hailfloridahail.com",
+      "halohangout.com",
+      "hardwoodhoudini.com",
+      "horseshoeheroes.com",
+      "housethathankbuilt.com",
+      "huskercorner.com",
+      "insidetheiggles.com",
+      "jaysjournal.com",
+      "justblogbaby.com",
+      "kckingdom.com",
+      "kingjamesgospel.com",
+      "lakeshowlife.com",
+      "lombardiave.com",
+      "mentalfloss.com",
+      "motorcitybengals.com",
+      "musketfire.com",
+      "nflspinzone.com",
+      "ninernoise.com",
+      "nugglove.com",
+      "onechicagocenter.com",
+      "phinphanatic.com",
+      "pistonpowered.com",
+      "predominantlyorange.com",
+      "ramblinfan.com",
+      "redbirdrants.com",
+      "reviewingthebrew.com",
+      "riggosrag.com",
+      "ripcityproject.com",
+      "risingapple.com",
+      "rumbunter.com",
+      "scarletandgame.com",
+      "sidelionreport.com",
+      "slapthesign.com",
+      "sodomojo.com",
+      "southsideshowdown.com",
+      "stillcurtain.com",
+      "stormininnorman.com",
+      "stripehype.com",
+      "thatballsouttahere.com",
+      "thecelticbhoys.com",
+      "thejetpress.com",
+      "thelandryhat.com",
+      "thepewterplank.com",
+      "thesmokingcuban.com",
+      "thevikingage.com",
+      "thunderousintentions.com",
+      "undeadwalking.com",
+      "valleyofthesuns.com",
+      "whodatdish.com",
+      "winteriscoming.net",
+      "yanksgoyard.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "13wham.com",
+      "komonews.com",
+      "wlos.com"
+    ],
+    "name": "ubo-rpnt",
+    "args": [
+      "script",
+      "/admiral-initializer\\\\\",\\\\\"children\\\\\":\\\\\"[^\"]+\\\\\"/",
+      "admiral-initializer\\\",\\\"children\\\":\\\"\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "373news.com",
+      "50states.com",
+      "actugaming.net",
+      "altarofgaming.com",
+      "anagram-solver.io",
+      "atvtrader.com",
+      "aucfree.com",
+      "automobile-catalog.com",
+      "babla.*",
+      "buchstaben.com",
+      "cafedelites.com",
+      "calculatorsoup.com",
+      "carscoops.com",
+      "campsitephotos.com",
+      "celebritynetworth.com",
+      "cesoirtv.com",
+      "chanto.jp.net",
+      "chocolatecoveredkatie.com",
+      "cinetrafic.fr",
+      "collinsdictionary.com",
+      "commercialtrucktrader.com",
+      "convertcase.net",
+      "crosswordsolver.com",
+      "culturequizz.com",
+      "curbsideclassic.com",
+      "cycletrader.com",
+      "dayspedia.com",
+      "dexerto.com",
+      "dict.cc",
+      "dictionary.cambridge.org",
+      "dictionnaire.lerobert.com",
+      "dnevno.hr",
+      "driveteslacanada.ca",
+      "ecranlarge.com",
+      "equipmenttrader.com",
+      "flagle.io",
+      "freeconvert.com",
+      "freemcserver.net",
+      "futabasha-change.com",
+      "fxstreet-id.com",
+      "fxstreet.*",
+      "games.arkadium.com",
+      "gazetaprawna.pl",
+      "geogridgame.com",
+      "geoguessr.com",
+      "gerbeaud.com",
+      "gesundheitsfrage.net",
+      "gigafile.nu",
+      "globalrph.com",
+      "golf-live.at",
+      "gutefrage.net",
+      "hang.hu",
+      "hb-nippon.com",
+      "heureka.cz",
+      "hochi.news",
+      "hotcopper.com.au",
+      "idokep.hu",
+      "indianhealthyrecipes.com",
+      "indiatimes.com",
+      "infor.pl",
+      "insider-gaming.com",
+      "invoice-generator.com",
+      "iphoneincanada.ca",
+      "j-cast.com",
+      "j-town.net",
+      "jigsawexplorer.com",
+      "jiji.com",
+      "judgehype.com",
+      "km77.com",
+      "kobe-journal.com",
+      "krepsinis.net",
+      "kreuzwortraetsel.de",
+      "kstp.com",
+      "kyoteibiyori.com",
+      "lacuarta.com",
+      "lacuarta.com",
+      "laleggepertutti.it",
+      "langenscheidt.com",
+      "laposte.net",
+      "laughingsquid.com",
+      "lawyersgunsmoneyblog.com",
+      "ldoceonline.com",
+      "lettersolver.com",
+      "liliputing.com",
+      "listentotaxman.com",
+      "livenewschat.eu",
+      "logicieleducatif.fr",
+      "mafab.hu",
+      "mahjongchest.com",
+      "maketecheasier.com",
+      "malaymail.com",
+      "marineinsight.com",
+      "mathplayzone.com",
+      "meteo60.fr",
+      "midhudsonnews.com",
+      "modhub.us",
+      "modsbase.com",
+      "modsfire.com",
+      "moin.de",
+      "motscroises.fr",
+      "movie-locations.com",
+      "muragon.com",
+      "mykoreankitchen.com",
+      "namemc.com",
+      "nana-press.com",
+      "nationaltoday.com",
+      "nbadraft.net",
+      "newatlas.com",
+      "news.zerkalo.io",
+      "newsinlevels.com",
+      "newsyou.info",
+      "niketalk.com",
+      "nintendoeverything.com",
+      "noorderland.nl",
+      "nouvelobs.com",
+      "oeffnungszeitenbuch.de",
+      "oilprice.com",
+      "onlineradiobox.com",
+      "operawire.com",
+      "optionsprofitcalculator.com",
+      "oraridiapertura24.it",
+      "overclock.net",
+      "oxfordlearnersdictionaries.com",
+      "percentagecalculator.net",
+      "persoenlich.com",
+      "petitfute.com",
+      "play-games.com",
+      "powerpyx.com",
+      "pptvhd36.com",
+      "profitline.hu",
+      "puzzlegarage.com",
+      "quefaire.be",
+      "raetsel-hilfe.de",
+      "raider.io",
+      "ranking.net",
+      "roleplayer.me",
+      "rostercon.com",
+      "russianmachineneverbreaks.com",
+      "rvtrader.com",
+      "samsungmagazine.eu",
+      "sankei.com",
+      "sanspo.com",
+      "scribens.com",
+      "scribens.fr",
+      "skyandtelescope.org",
+      "slashdot.org",
+      "soccerdigestweb.com",
+      "solitairehut.com",
+      "sotolover.com",
+      "sourceforge.net",
+      "speisekarte.de",
+      "spendwithpennies.com",
+      "standard.co.uk",
+      "statecollege.com",
+      "stocktwits.com",
+      "sudokutable.com",
+      "syosetu.com",
+      "szamoldki.hu",
+      "talkwithstranger.com",
+      "tastesbetterfromscratch.com",
+      "the-crossword-solver.com",
+      "thecelticblog.com",
+      "thedigestweb.com",
+      "thefirearmblog.com",
+      "traicy.com",
+      "transparentcalifornia.com",
+      "tunebat.com",
+      "tvtv.ca",
+      "tvtv.us",
+      "tweaktown.com",
+      "tyda.se",
+      "universalis.fr",
+      "uptodown.com",
+      "uscreditcardguide.com",
+      "v8sleuth.com.au",
+      "verkaufsoffener-sonntag.com",
+      "videocelts.com",
+      "vimm.net",
+      "wallpapers.com",
+      "watchdocumentaries.com",
+      "wattedoen.be",
+      "wdwnt.com",
+      "welt.de",
+      "wetteronline.de",
+      "wfmz.com",
+      "whec.com",
+      "wieistmeineip.*",
+      "wielerflits.be",
+      "wielerflits.nl",
+      "winfuture.de",
+      "word-grabber.com",
+      "wordfinderx.com",
+      "wordhippo.com",
+      "worldjournal.com",
+      "worldle.teuteuf.fr",
+      "wort-suchen.de",
+      "young-machine.com",
+      "yugioh-starlight.com",
+      "yutura.net",
+      "zagreb.info"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "247sports.com"
+    ],
+    "name": "ubo-rpnt",
+    "args": [
+      "script",
+      "/^/",
+      "(()=>{window.admiral=function(d,a,b){if(\"function\"==typeof b)try{b({})}catch(a){}}})();",
+      "sedCount",
+      "1"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "247sports.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "__INITIAL_DATA__.siteData.admiralScript"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "46matome.net",
+      "akb48matomemory.com",
+      "alfalfalfa.com",
+      "all-nationz.com",
+      "anihatsu.com",
+      "blog.esuteru.com",
+      "chaos2ch.com",
+      "crx7601.com",
+      "digital-thread.com",
+      "hacchaka.net",
+      "fesoku.net",
+      "fiveslot777.com",
+      "gamejksokuhou.com",
+      "girlsreport.net",
+      "girlsvip-matome.com",
+      "grasoku.com",
+      "gundamlog.com",
+      "ikarishintou.com",
+      "inutomo11.com",
+      "itainews.com",
+      "itaishinja.com",
+      "jin115.com",
+      "jisaka.com",
+      "jumpsokuhou.com",
+      "keyakizaka46matomemory.net",
+      "kidan-m.com",
+      "kijyomita.com",
+      "kitimama-matome.net",
+      "kitizawa.com",
+      "kyousoku.net",
+      "majikichi.com",
+      "matomelotte.com",
+      "matometemitatta.com",
+      "morikinoko.com",
+      "nandemo-uketori.com",
+      "nmb48-mtm.com",
+      "onecall2ch.com",
+      "onihimechan.com",
+      "orusoku.com",
+      "oumaga-times.com",
+      "pachinkopachisro.com",
+      "saikyo-jump.com",
+      "sutekinakijo.com",
+      "usi32.com",
+      "uwakich.com",
+      "vault76.info",
+      "vipsister23.com",
+      "world-fusigi.net",
+      "zch-vip.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "banburyguardian.co.uk",
+      "bedfordtoday.co.uk",
+      "birminghamworld.uk",
+      "blackpoolgazette.co.uk",
+      "bucksherald.co.uk",
+      "burnleyexpress.net",
+      "buxtonadvertiser.co.uk",
+      "chad.co.uk",
+      "derbyshiretimes.co.uk",
+      "derryjournal.com",
+      "dewsburyreporter.co.uk",
+      "doncasterfreepress.co.uk",
+      "donegallive.ie",
+      "expressandstar.com",
+      "falkirkherald.co.uk",
+      "farminglife.com",
+      "fifetoday.co.uk",
+      "glasgowworld.com",
+      "halifaxcourier.co.uk",
+      "harrogateadvertiser.co.uk",
+      "hartlepoolmail.co.uk",
+      "lancasterguardian.co.uk",
+      "lep.co.uk",
+      "limerickleader.ie",
+      "lincolnshireworld.com",
+      "lutontoday.co.uk",
+      "meltontimes.co.uk",
+      "miltonkeynes.co.uk",
+      "nationalworld.com",
+      "newcastleworld.com",
+      "newsletter.co.uk",
+      "northamptonchron.co.uk",
+      "northantstelegraph.co.uk",
+      "northdevongazette.co.uk",
+      "northernirelandworld.com",
+      "northumberlandgazette.co.uk",
+      "peterboroughtoday.co.uk",
+      "portsmouth.co.uk",
+      "rotherhamadvertiser.co.uk",
+      "scotsman.com",
+      "shieldsgazette.com",
+      "shropshirestar.com",
+      "sunderlandecho.com",
+      "sussexexpress.co.uk",
+      "thescarboroughnews.co.uk",
+      "thestar.co.uk",
+      "totallysnookered.com",
+      "wakefieldexpress.co.uk",
+      "warwickshireworld.com",
+      "wigantoday.net",
+      "worksopguardian.co.uk",
+      "yorkshireeveningpost.co.uk",
+      "yorkshirepost.co.uk"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "await eval"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "banburyguardian.co.uk",
+      "bedfordtoday.co.uk",
+      "birminghamworld.uk",
+      "blackpoolgazette.co.uk",
+      "bucksherald.co.uk",
+      "burnleyexpress.net",
+      "buxtonadvertiser.co.uk",
+      "chad.co.uk",
+      "derbyshiretimes.co.uk",
+      "derryjournal.com",
+      "dewsburyreporter.co.uk",
+      "doncasterfreepress.co.uk",
+      "donegallive.ie",
+      "expressandstar.com",
+      "falkirkherald.co.uk",
+      "farminglife.com",
+      "fifetoday.co.uk",
+      "glasgowworld.com",
+      "halifaxcourier.co.uk",
+      "harrogateadvertiser.co.uk",
+      "hartlepoolmail.co.uk",
+      "lancasterguardian.co.uk",
+      "lep.co.uk",
+      "limerickleader.ie",
+      "lincolnshireworld.com",
+      "lutontoday.co.uk",
+      "meltontimes.co.uk",
+      "miltonkeynes.co.uk",
+      "nationalworld.com",
+      "newcastleworld.com",
+      "newsletter.co.uk",
+      "northamptonchron.co.uk",
+      "northantstelegraph.co.uk",
+      "northdevongazette.co.uk",
+      "northernirelandworld.com",
+      "northumberlandgazette.co.uk",
+      "peterboroughtoday.co.uk",
+      "portsmouth.co.uk",
+      "rotherhamadvertiser.co.uk",
+      "scotsman.com",
+      "shieldsgazette.com",
+      "shropshirestar.com",
+      "sunderlandecho.com",
+      "sussexexpress.co.uk",
+      "thescarboroughnews.co.uk",
+      "thestar.co.uk",
+      "totallysnookered.com",
+      "wakefieldexpress.co.uk",
+      "warwickshireworld.com",
+      "wigantoday.net",
+      "worksopguardian.co.uk",
+      "yorkshireeveningpost.co.uk",
+      "yorkshirepost.co.uk"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "4runner6g.com",
+      "bronco6g.com",
+      "civicxi.com",
+      "cybertruckownersclub.com",
+      "f150gen14.com",
+      "f150lightningforum.com",
+      "jeepgladiatorforum.com",
+      "jlwranglerforums.com",
+      "macheforum.com",
+      "mavericktruckclub.com",
+      "mustang6g.com",
+      "mustang7g.com",
+      "ranger5g.com",
+      "ranger6g.com",
+      "rivianforums.com",
+      "slateforums.com",
+      "supramkv.com",
+      "tacoma4g.com",
+      "taycanforum.com"
+    ],
+    "name": "ubo-ra",
+    "args": [
+      "onerror",
+      "script[id][onerror]",
+      "asap",
+      "quitAfter",
+      "10"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "4runner6g.com",
+      "bronco6g.com",
+      "civicxi.com",
+      "cybertruckownersclub.com",
+      "f150gen14.com",
+      "f150lightningforum.com",
+      "jeepgladiatorforum.com",
+      "jlwranglerforums.com",
+      "macheforum.com",
+      "mavericktruckclub.com",
+      "mustang6g.com",
+      "mustang7g.com",
+      "ranger5g.com",
+      "ranger6g.com",
+      "rivianforums.com",
+      "slateforums.com",
+      "supramkv.com",
+      "tacoma4g.com",
+      "taycanforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/:window,|\\)\\.join\\(String\\.fromCharCode/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "4runner6g.com",
+      "bronco6g.com",
+      "civicxi.com",
+      "cybertruckownersclub.com",
+      "f150gen14.com",
+      "f150lightningforum.com",
+      "jeepgladiatorforum.com",
+      "jlwranglerforums.com",
+      "macheforum.com",
+      "mavericktruckclub.com",
+      "mustang6g.com",
+      "mustang7g.com",
+      "ranger5g.com",
+      "ranger6g.com",
+      "rivianforums.com",
+      "slateforums.com",
+      "supramkv.com",
+      "tacoma4g.com",
+      "taycanforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "4runner6g.com",
+      "bronco6g.com",
+      "civicxi.com",
+      "cybertruckownersclub.com",
+      "f150gen14.com",
+      "f150lightningforum.com",
+      "jeepgladiatorforum.com",
+      "jlwranglerforums.com",
+      "macheforum.com",
+      "mavericktruckclub.com",
+      "mustang6g.com",
+      "mustang7g.com",
+      "ranger5g.com",
+      "ranger6g.com",
+      "rivianforums.com",
+      "slateforums.com",
+      "supramkv.com",
+      "tacoma4g.com",
+      "taycanforum.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "7daystodie-servers.com",
+      "apnews.com",
+      "cwtv.com",
+      "minecraft-schematics.com",
+      "rust-servers.net"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/admiral|-engaged/",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "9gag.com",
+      "adrenaline.com.br",
+      "animalia.bio",
+      "astro-seek.com",
+      "augustacrime.com",
+      "automobile-catalog.com",
+      "babla.*",
+      "base64decode.org",
+      "boardingarea.com",
+      "buchstaben.com",
+      "calculatorsoup.com",
+      "canuckaudiomart.com",
+      "chloeting.com",
+      "collinsdictionary.com",
+      "convertcase.net",
+      "costcoinsider.com",
+      "crosswordsolver.com",
+      "culturequizz.com",
+      "daveockop.com",
+      "dict.cc",
+      "dictionary.cambridge.org",
+      "dictionnaire.lerobert.com",
+      "dnevnik.hr",
+      "doviz.com",
+      "elnacional.cat",
+      "eponuda.com",
+      "euronews.com",
+      "exceljet.net",
+      "fandom.com",
+      "fossbytes.com",
+      "freemcserver.net",
+      "gamebanana.com",
+      "gerbeaud.com",
+      "gesundheitsfrage.net",
+      "gezondnu.nl",
+      "girlschannel.net",
+      "greenwichmeantime.com",
+      "gutefrage.net",
+      "hb-nippon.com",
+      "higherorlowergame.com",
+      "hk01.com",
+      "hna.de",
+      "hochi.news",
+      "hollywoodlife.com",
+      "index.hr",
+      "infinityfree.com",
+      "inverse.com",
+      "itavisen.no",
+      "km77.com",
+      "kreuzwortraetsel.de",
+      "kurashiru.com",
+      "latlong.net",
+      "ldoceonline.com",
+      "leckerschmecker.me",
+      "lejdd.fr",
+      "lettersolver.com",
+      "liveandletsfly.com",
+      "livescience.com",
+      "looopings.nl",
+      "lootlemon.com",
+      "merinfo.se",
+      "moin.de",
+      "motscroises.fr",
+      "myinstants.com",
+      "namemc.com",
+      "nemzetisport.hu",
+      "neoseeker.com",
+      "netflixlife.com",
+      "newatlas.com",
+      "nextchessmove.com",
+      "nikkansports.com",
+      "nouvelobs.com",
+      "oeffnungszeitenbuch.de",
+      "omnicalculator.com",
+      "onlineradiobox.com",
+      "onemileatatime.com",
+      "optionsprofitcalculator.com",
+      "oraridiapertura24.it",
+      "oxfordlearnersdictionaries.com",
+      "pakkotoisto.com",
+      "perezhilton.com",
+      "picrew.me",
+      "pinterpoin.com",
+      "rotowire.com",
+      "saita-puls.com",
+      "satkurier.pl",
+      "scribd.com",
+      "singjupost.com",
+      "skinmc.net",
+      "slideshare.net",
+      "sms24.me",
+      "songfacts.com",
+      "sourceforge.net",
+      "the-crossword-solver.com",
+      "thefirearmblog.com",
+      "thelayoff.com",
+      "thetruthaboutcars.com",
+      "thingiverse.com",
+      "timeful.app",
+      "torontosun.com",
+      "toyokeizai.net",
+      "tunebat.com",
+      "tvtv.ca",
+      "tvtv.us",
+      "urbandictionary.com",
+      "urldecoder.org",
+      "usaudiomart.com",
+      "watchdocumentaries.com",
+      "welt.de",
+      "willyweather.*",
+      "winfuture.de",
+      "winteriscoming.net",
+      "word-grabber.com",
+      "wordfinderx.com",
+      "wordshake.com",
+      "worldjournal.com",
+      "zekamashi.net"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "9gag.com",
+      "adrenaline.com.br",
+      "automobile-catalog.com",
+      "calculatorsoup.com",
+      "culturequizz.com",
+      "dictionary.cambridge.org",
+      "eponuda.com",
+      "euronews.com",
+      "fandom.com",
+      "gerbeaud.com",
+      "gutefrage.net",
+      "latlong.net",
+      "myinstants.com",
+      "namemc.com",
+      "nikkansports.com",
+      "onemileatatime.com",
+      "optionsprofitcalculator.com",
+      "oxfordlearnersdictionaries.com",
+      "satkurier.pl",
+      "urbandictionary.com",
+      "welt.de",
+      "wordshake.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/:\\[?window,/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "9gag.com",
+      "animalia.bio",
+      "daveockop.com",
+      "doviz.com",
+      "looopings.nl",
+      "pakkotoisto.com",
+      "worldjournal.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "void 0||window,"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "9gag.com",
+      "aternos.org",
+      "automobile-catalog.com",
+      "base64decode.org",
+      "calculatorsoup.com",
+      "culturequizz.com",
+      "dictionary.cambridge.org",
+      "eponuda.com",
+      "euronews.com",
+      "fandom.com",
+      "gamebanana.com",
+      "hb-nippon.com",
+      "index.hr",
+      "latlong.net",
+      "myinstants.com",
+      "okuyami-information.com",
+      "optionsprofitcalculator.com",
+      "oxfordlearnersdictionaries.com",
+      "satkurier.pl",
+      "scribd.com",
+      "sms24.me",
+      "urldecoder.org",
+      "welt.de",
+      "worldjournal.com"
+    ],
+    "name": "ubo-ra",
+    "args": [
+      "onerror",
+      "script[id][onerror]",
+      "asap",
+      "quitAfter",
+      "10"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "9gag.com",
+      "augustacrime.com",
+      "base64decode.org",
+      "calculatorsoup.com",
+      "canuckaudiomart.com",
+      "costcoinsider.com",
+      "crosswordsolver.com",
+      "dict.cc",
+      "elnacional.cat",
+      "girlschannel.net",
+      "itavisen.no",
+      "kreuzwortraetsel.de",
+      "lettersolver.com",
+      "livescience.com",
+      "lootlemon.com",
+      "merinfo.se",
+      "motscroises.fr",
+      "nemzetisport.hu",
+      "oeffnungszeitenbuch.de",
+      "oraridiapertura24.it",
+      "pinterpoin.com",
+      "ppatour.com",
+      "rotowire.com",
+      "the-crossword-solver.com",
+      "tvtv.ca",
+      "tvtv.us",
+      "urldecoder.org",
+      "watchdocumentaries.com",
+      "word-grabber.com",
+      "wort-suchen.de"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "()=>eval"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "a-ha.io",
+      "cboard.net",
+      "viva100.com"
+    ],
+    "name": "ubo-noeval-if",
+    "args": [
+      "/content-loader\\.com|css-load\\.com|html-load\\.com/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "abakingjourney.com",
+      "abeautifulmess.com",
+      "acedarspoon.com",
+      "aconsciousrethink.com",
+      "acouplecooks.com",
+      "acozykitchen.com",
+      "acrochetedsimplicity.com",
+      "activewild.com",
+      "adamantkitchen.com",
+      "adayinourshoes.com",
+      "addapinch.com",
+      "addictedtodates.com",
+      "adventuresofmel.com",
+      "aeclectic.net",
+      "aerocorner.com",
+      "afarmgirlsdabbles.com",
+      "aflavorfulbite.com",
+      "aflavorjournal.com",
+      "aheadofthyme.com",
+      "airforums.com",
+      "aisleofshame.com",
+      "alattefood.com",
+      "aldireviewer.com",
+      "alekasgettogether.com",
+      "alexandracooks.com",
+      "alicedias.com",
+      "aline-made.com",
+      "allaboutjazz.com",
+      "alldayidreamaboutfood.com",
+      "allears.net",
+      "allkpop.com",
+      "allnurses.com",
+      "allnutritious.com",
+      "allsides.com",
+      "allthehealthythings.com",
+      "allthings.how",
+      "allthingsmamma.com",
+      "almanac.com",
+      "almarsguides.com",
+      "alphafoodie.com",
+      "alphahistory.com",
+      "alphr.com",
+      "altarofgaming.com",
+      "alxnow.com",
+      "amandacooksandstyles.com",
+      "amandascookin.com",
+      "amazingribs.com",
+      "ambitiouskitchen.com",
+      "american-rails.com",
+      "americanwx.com",
+      "amindfullmom.com",
+      "amiraspantry.com",
+      "amish365.com",
+      "amishamerica.com",
+      "amodernhomestead.com",
+      "amtraktrains.com",
+      "amybakesbread.com",
+      "ana-white.com",
+      "anagrammer.com",
+      "androidheadlines.com",
+      "animalcrossingworld.com",
+      "animalspot.net",
+      "anitalianinmykitchen.com",
+      "anniedesigncrochet.com",
+      "anoregoncottage.com",
+      "antiqueradios.com",
+      "anythingtranslate.com",
+      "apeachyplate.com",
+      "apetogentleman.com",
+      "applegreencottage.com",
+      "appunwrapper.com",
+      "aprettylifeinthesuburbs.com",
+      "aquiltinglife.com",
+      "arboristsite.com",
+      "arizonasportsfans.com",
+      "arlnow.com",
+      "arrmaforum.com",
+      "artandthekitchen.com",
+      "artprojectsforkids.org",
+      "artycraftykids.com",
+      "arzyelbuilds.com",
+      "ashbaber.com",
+      "asimplepalate.com",
+      "asouthernsoul.com",
+      "aspicyperspective.com",
+      "astrologyking.com",
+      "astrostyle.com",
+      "astyleset.com",
+      "asvabpracticetests.com",
+      "atlantablackstar.com",
+      "attainable-sustainable.net",
+      "attractionsmagazine.com",
+      "automaticwasher.org",
+      "averiecooks.com",
+      "avforums.com",
+      "aviationa2z.com",
+      "avirtualvegan.com",
+      "avocadoskillet.com",
+      "awealthofcommonsense.com",
+      "awellstyledlife.com",
+      "awfulannouncing.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "alfabb.com",
+      "alfaowner.com",
+      "archerytalk.com",
+      "arkansashunting.net",
+      "avsforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "amarillo.com",
+      "amestrib.com",
+      "app.com",
+      "argusleader.com",
+      "augustachronicle.com",
+      "azcentral.com",
+      "battlecreekenquirer.com",
+      "beaconjournal.com",
+      "burlingtonfreepress.com",
+      "caller.com",
+      "cantonrep.com",
+      "capecodtimes.com",
+      "chieftain.com",
+      "chillicothegazette.com",
+      "cincinnati.com",
+      "citizen-times.com",
+      "cjonline.com",
+      "clarionledger.com",
+      "coloradoan.com",
+      "columbiatribune.com",
+      "commercialappeal.com",
+      "courier-journal.com",
+      "courierpostonline.com",
+      "courierpress.com",
+      "dailyamerican.com",
+      "dailyrecord.com",
+      "delawareonline.com",
+      "delmarvanow.com",
+      "democratandchronicle.com",
+      "desertsun.com",
+      "desmoinesregister.com",
+      "detroitnews.com",
+      "dispatch.com",
+      "elpasotimes.com",
+      "enterprisenews.com",
+      "eveningsun.com",
+      "eveningtribune.com",
+      "fayobserver.com",
+      "fdlreporter.com",
+      "floridatoday.com",
+      "fosters.com",
+      "freep.com",
+      "gainesville.com",
+      "galesburg.com",
+      "gastongazette.com",
+      "goerie.com",
+      "goupstate.com",
+      "greatfallstribune.com",
+      "greenbaypressgazette.com",
+      "greenvilleonline.com",
+      "heraldmailmedia.com",
+      "heraldnews.com",
+      "heraldtimesonline.com",
+      "heraldtribune.com",
+      "hollandsentinel.com",
+      "houmatoday.com",
+      "htrnews.com",
+      "indeonline.com",
+      "indystar.com",
+      "ithacajournal.com",
+      "jacksonville.com",
+      "jconline.com",
+      "jsonline.com",
+      "kitsapsun.com",
+      "knoxnews.com",
+      "lancastereaglegazette.com",
+      "lansingstatejournal.com",
+      "lcsun-news.com",
+      "lohud.com",
+      "lubbockonline.com",
+      "mansfieldnewsjournal.com",
+      "marionstar.com",
+      "marshfieldnewsherald.com",
+      "metrowestdailynews.com",
+      "monroenews.com",
+      "montgomeryadvertiser.com",
+      "mycentraljersey.com",
+      "naplesnews.com",
+      "newarkadvocate.com",
+      "news-journalonline.com",
+      "news-leader.com",
+      "news-press.com",
+      "newsherald.com",
+      "newsleader.com",
+      "njherald.com",
+      "northjersey.com",
+      "norwichbulletin.com",
+      "nwfdailynews.com",
+      "ocala.com",
+      "oklahoman.com",
+      "onlineathens.com",
+      "pal-item.com",
+      "palmbeachdailynews.com",
+      "palmbeachpost.com",
+      "patriotledger.com",
+      "petoskeynews.com",
+      "phillyburbs.com",
+      "pjstar.com",
+      "pnj.com",
+      "poconorecord.com",
+      "postcrescent.com",
+      "poughkeepsiejournal.com",
+      "press-citizen.com",
+      "pressconnects.com",
+      "providencejournal.com",
+      "publicopiniononline.com",
+      "record-courier.com",
+      "recordnet.com",
+      "recordonline.com",
+      "redding.com",
+      "registerguard.com",
+      "reporternews.com",
+      "rgj.com",
+      "rrstar.com",
+      "salina.com",
+      "savannahnow.com",
+      "sctimes.com",
+      "seacoastonline.com",
+      "sheboyganpress.com",
+      "shreveporttimes.com",
+      "sj-r.com",
+      "southbendtribune.com",
+      "southcoasttoday.com",
+      "stargazette.com",
+      "starnewsonline.com",
+      "statesman.com",
+      "statesmanjournal.com",
+      "stevenspointjournal.com",
+      "swtimes.com",
+      "tallahassee.com",
+      "tauntongazette.com",
+      "tcpalm.com",
+      "telegram.com",
+      "tennessean.com",
+      "the-daily-record.com",
+      "the-leader.com",
+      "the-review.com",
+      "theadvertiser.com",
+      "thedailyjournal.com",
+      "thegardnernews.com",
+      "theledger.com",
+      "thenews-messenger.com",
+      "thenorthwestern.com",
+      "thestarpress.com",
+      "thetimesherald.com",
+      "times-gazette.com",
+      "timesonline.com",
+      "timesrecordnews.com",
+      "timesreporter.com",
+      "tuscaloosanews.com",
+      "usatoday.com",
+      "uticaod.com",
+      "vcstar.com",
+      "visaliatimesdelta.com",
+      "vvdailypress.com",
+      "wausaudailyherald.com",
+      "wisconsinrapidstribune.com",
+      "ydr.com",
+      "zanesvilletimesrecorder.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "gnt.x.uam",
+      "undefined",
+      "runAt",
+      "interactive"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "addictinggames.com",
+      "ev.io",
+      "fantasyfootballscout.co.uk",
+      "gameknot.com",
+      "icy-veins.com",
+      "plan.livefpl.net",
+      "pocketgamer.com",
+      "poe-vault.com",
+      "probuildstats.com",
+      "thesimsresource.com",
+      "tracklock.gg",
+      "u.gg"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "androidcentral.com",
+      "cinemablend.com",
+      "countrylife.co.uk",
+      "creativebloq.com",
+      "cyclingnews.com",
+      "cyclingweekly.com",
+      "decanter.com",
+      "digitalcameraworld.com",
+      "fitandwell.com",
+      "fourfourtwo.com",
+      "gamesradar.com",
+      "gardeningknowhow.com",
+      "golfmonthly.com",
+      "goodto.com",
+      "guitarplayer.com",
+      "guitarworld.com",
+      "homebuilding.co.uk",
+      "homesandgardens.com",
+      "idealhome.co.uk",
+      "itpro.com",
+      "kiplinger.com",
+      "laptopmag.com",
+      "livescience.com",
+      "livingetc.com",
+      "loudersound.com",
+      "marieclaire.co.uk",
+      "marieclaire.com",
+      "moneyweek.com",
+      "musicradar.com",
+      "pcgamer.com",
+      "realhomes.com",
+      "space.com",
+      "t3.com",
+      "techradar.com",
+      "theweek.com",
+      "tomsguide.com",
+      "tomshardware.com",
+      "wallpaper.com",
+      "whathifi.com",
+      "whattowatch.com",
+      "whowhatwear.com",
+      "windowscentral.com",
+      "womanandhome.com"
+    ],
+    "name": "ubo-ra",
+    "args": [
+      "onerror",
+      "script[id][onerror]",
+      "asap",
+      "quitAfter",
+      "10"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "androidcentral.com",
+      "cinemablend.com",
+      "countrylife.co.uk",
+      "creativebloq.com",
+      "cyclingnews.com",
+      "cyclingweekly.com",
+      "decanter.com",
+      "digitalcameraworld.com",
+      "fitandwell.com",
+      "fourfourtwo.com",
+      "gamesradar.com",
+      "gardeningknowhow.com",
+      "golfmonthly.com",
+      "goodto.com",
+      "guitarplayer.com",
+      "guitarworld.com",
+      "homebuilding.co.uk",
+      "homesandgardens.com",
+      "idealhome.co.uk",
+      "itpro.com",
+      "kiplinger.com",
+      "laptopmag.com",
+      "livescience.com",
+      "livingetc.com",
+      "loudersound.com",
+      "marieclaire.co.uk",
+      "marieclaire.com",
+      "moneyweek.com",
+      "musicradar.com",
+      "pcgamer.com",
+      "realhomes.com",
+      "space.com",
+      "t3.com",
+      "techradar.com",
+      "theweek.com",
+      "tomsguide.com",
+      "tomshardware.com",
+      "wallpaper.com",
+      "whathifi.com",
+      "whattowatch.com",
+      "whowhatwear.com",
+      "windowscentral.com",
+      "womanandhome.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/html-load\\.com|:\\[?window,/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "androidcentral.com",
+      "cinemablend.com",
+      "countrylife.co.uk",
+      "creativebloq.com",
+      "cyclingnews.com",
+      "cyclingweekly.com",
+      "decanter.com",
+      "digitalcameraworld.com",
+      "fitandwell.com",
+      "fourfourtwo.com",
+      "gamesradar.com",
+      "gardeningknowhow.com",
+      "golfmonthly.com",
+      "goodto.com",
+      "guitarplayer.com",
+      "guitarworld.com",
+      "homebuilding.co.uk",
+      "homesandgardens.com",
+      "idealhome.co.uk",
+      "itpro.com",
+      "kiplinger.com",
+      "laptopmag.com",
+      "livescience.com",
+      "livingetc.com",
+      "loudersound.com",
+      "marieclaire.co.uk",
+      "marieclaire.com",
+      "moneyweek.com",
+      "musicradar.com",
+      "pcgamer.com",
+      "realhomes.com",
+      "space.com",
+      "t3.com",
+      "techradar.com",
+      "theweek.com",
+      "tomsguide.com",
+      "tomshardware.com",
+      "wallpaper.com",
+      "whathifi.com",
+      "whattowatch.com",
+      "whowhatwear.com",
+      "windowscentral.com",
+      "womanandhome.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "essence.com",
+      "refinery29.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adshield"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "afrotech.com",
+      "blavity.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "aina.lt",
+      "alfa.lt",
+      "alkas.lt",
+      "alytusplius.lt",
+      "anyksta.lt",
+      "etaplius.lt",
+      "manonamai.lt",
+      "raskakcija.lt",
+      "respublika.lt",
+      "sekunde.lt",
+      "tv3.lt"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "astro-seek.com",
+      "babla.*",
+      "boardingarea.com",
+      "collinsdictionary.com",
+      "conselhosetruques.com",
+      "dictionary.cambridge.org",
+      "dictionnaire.lerobert.com",
+      "dnevnik.hr",
+      "exceljet.net",
+      "freemcserver.net",
+      "gesundheitsfrage.net",
+      "gezondnu.nl",
+      "gutefrage.net",
+      "infinityfree.com",
+      "ldoceonline.com",
+      "liveandletsfly.com",
+      "neoseeker.com",
+      "newatlas.com",
+      "oxfordlearnersdictionaries.com",
+      "pinterpoin.com",
+      "sinemalar.com",
+      "torontosun.com",
+      "toyokeizai.net",
+      "usaudiomart.com",
+      "welt.de"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "await eval"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "al.com",
+      "cleveland.com",
+      "lehighvalleylive.com",
+      "masslive.com",
+      "mlive.com",
+      "nj.com",
+      "oregonlive.com",
+      "pennlive.com",
+      "silive.com",
+      "syracuse.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adblockerDisabled",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "alloaadvertiser.com",
+      "andoveradvertiser.co.uk",
+      "ardrossanherald.com",
+      "ayradvertiser.com",
+      "barkinganddagenhampost.co.uk",
+      "barryanddistrictnews.co.uk",
+      "basingstokegazette.co.uk",
+      "becclesandbungayjournal.co.uk",
+      "birmingham-now.co.uk",
+      "bordercountiesadvertizer.co.uk",
+      "bordertelegraph.com",
+      "bournemouthecho.co.uk",
+      "bracknellnews.co.uk",
+      "braintreeandwithamtimes.co.uk",
+      "bridgwatermercury.co.uk",
+      "bridportnews.co.uk",
+      "bromsgroveadvertiser.co.uk",
+      "bucksfreepress.co.uk",
+      "burytimes.co.uk",
+      "cambstimes.co.uk",
+      "celticway.co.uk",
+      "centralfifetimes.com",
+      "chardandilminsternews.co.uk",
+      "chesterstandard.co.uk",
+      "clactonandfrintongazette.co.uk",
+      "clydebankpost.co.uk",
+      "cotswoldjournal.co.uk",
+      "countypress.co.uk",
+      "countytimes.co.uk",
+      "cravenherald.co.uk",
+      "cumnockchronicle.com",
+      "dailyecho.co.uk",
+      "darlingtonandstocktontimes.co.uk",
+      "derehamtimes.co.uk",
+      "dorsetecho.co.uk",
+      "dudleynews.co.uk",
+      "dumbartonreporter.co.uk",
+      "dunfermlinepress.com",
+      "eadt.co.uk",
+      "eastlothiancourier.com",
+      "echo-news.co.uk",
+      "edp24.co.uk",
+      "elystandard.co.uk",
+      "eveningnews24.co.uk",
+      "eveshamjournal.co.uk",
+      "exchangeandmart.co.uk",
+      "exmouthjournal.co.uk",
+      "fakenhamtimes.co.uk",
+      "falmouthpacket.co.uk",
+      "gazette-news.co.uk",
+      "gazetteandherald.co.uk",
+      "gazetteherald.co.uk",
+      "gazetteseries.co.uk",
+      "glasgowtimes.co.uk",
+      "greatbritishlife.co.uk",
+      "greatyarmouthmercury.co.uk",
+      "greenocktelegraph.co.uk",
+      "halesowennews.co.uk",
+      "hamhigh.co.uk",
+      "hampshirechronicle.co.uk",
+      "harwichandmanningtreestandard.co.uk",
+      "heartsstandard.co.uk",
+      "helensburghadvertiser.co.uk",
+      "heraldscotland.com",
+      "heraldseries.co.uk",
+      "herefordtimes.com",
+      "hertsad.co.uk",
+      "hexham-courant.co.uk",
+      "huntspost.co.uk",
+      "ilkleygazette.co.uk",
+      "impartialreporter.com",
+      "ipswichstar.co.uk",
+      "irvinetimes.com",
+      "keighleynews.co.uk",
+      "kidderminstershuttle.co.uk",
+      "kilburntimes.co.uk",
+      "knutsfordguardian.co.uk",
+      "lancashiretelegraph.co.uk",
+      "largsandmillportnews.com",
+      "leaderlive.co.uk",
+      "leighjournal.co.uk",
+      "london-now.co.uk",
+      "lowestoftjournal.co.uk",
+      "maldonandburnhamstandard.co.uk",
+      "malverngazette.co.uk",
+      "messengernewspapers.co.uk",
+      "midweekherald.co.uk",
+      "newsandstar.co.uk",
+      "newsshopper.co.uk",
+      "northnorfolknews.co.uk",
+      "northsomersettimes.co.uk",
+      "northwaleschronicle.co.uk",
+      "northwalespioneer.co.uk",
+      "northwichguardian.co.uk",
+      "nwemail.co.uk",
+      "oxfordmail.co.uk",
+      "peeblesshirenews.com",
+      "penarthtimes.co.uk",
+      "pinkun.com",
+      "rangersreview.co.uk",
+      "readingchronicle.co.uk",
+      "redditchadvertiser.co.uk",
+      "rhyljournal.co.uk",
+      "romfordrecorder.co.uk",
+      "runcornandwidnesworld.co.uk",
+      "salisburyjournal.co.uk",
+      "sidmouthherald.co.uk",
+      "sloughobserver.co.uk",
+      "somersetcountygazette.co.uk",
+      "southwalesargus.co.uk",
+      "southwalesguardian.co.uk",
+      "sthelensstar.co.uk",
+      "stourbridgenews.co.uk",
+      "stroudnewsandjournal.co.uk",
+      "swindonadvertiser.co.uk",
+      "the-gazette.co.uk",
+      "theargus.co.uk",
+      "theboltonnews.co.uk",
+      "thecomet.net",
+      "thenational.scot",
+      "thenorthernecho.co.uk",
+      "theoldhamtimes.co.uk",
+      "thescottishfarmer.co.uk",
+      "thetelegraphandargus.co.uk",
+      "thewestmorlandgazette.co.uk",
+      "thewestonmercury.co.uk",
+      "thisisoxfordshire.co.uk",
+      "thisiswiltshire.co.uk",
+      "thurrockgazette.co.uk",
+      "timesandstar.co.uk",
+      "tivysideadvertiser.co.uk",
+      "warringtonguardian.co.uk",
+      "watfordobserver.co.uk",
+      "westerntelegraph.co.uk",
+      "whitchurchherald.co.uk",
+      "whitehavennews.co.uk",
+      "whtimes.co.uk",
+      "wiltsglosstandard.co.uk",
+      "wiltshiretimes.co.uk",
+      "wirralglobe.co.uk",
+      "witneygazette.co.uk",
+      "worcesternews.co.uk",
+      "yorkpress.co.uk",
+      "yourlocalguardian.co.uk"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "adLight",
+      "true"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "allrecipes.com",
+      "bhg.com",
+      "brides.com",
+      "byrdie.com",
+      "dailypaws.com",
+      "eatingwell.com",
+      "ew.com",
+      "foodandwine.com",
+      "health.com",
+      "instyle.com",
+      "investopedia.com",
+      "lifewire.com",
+      "liquor.com",
+      "marthastewart.com",
+      "myrecipes.com",
+      "parents.com",
+      "people.com",
+      "peopleenespanol.com",
+      "realsimple.com",
+      "seriouseats.com",
+      "shape.com",
+      "simplyrecipes.com",
+      "southernliving.com",
+      "thebalancemoney.com",
+      "thespruce.com",
+      "thesprucepets.com",
+      "thoughtco.com",
+      "treehugger.com",
+      "tripsavvy.com",
+      "verywellfit.com",
+      "verywellhealth.com",
+      "verywellmind.com",
+      "woodmagazine.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "biblegateway.com",
+      "blogmura.com",
+      "cpu-monkey.com",
+      "deckshop.pro",
+      "dic.pixiv.net",
+      "kr-weathernews.com",
+      "laposte.net",
+      "motor-talk.de",
+      "myforecast.com",
+      "newser.com",
+      "oilprice.com",
+      "reneweconomy.com.au",
+      "signupgenius.com",
+      "slickdeals.net",
+      "smithsonianmag.com",
+      "thefreebieguy.com",
+      "worldhistory.org",
+      "zerogpt.com"
+    ],
+    "name": "ubo-acs",
+    "args": [
+      "document.createElement",
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/="
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "amindfullmom.com",
+      "choosingchia.com",
+      "creativecanning.com",
+      "downshiftology.com",
+      "gardeninthekitchen.com",
+      "heygrillhey.com",
+      "modernhoney.com",
+      "plainchicken.com",
+      "practicalselfreliance.com",
+      "sipandfeast.com",
+      "stellanspice.com",
+      "thecookierookie.com",
+      "thefoodcharlatan.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "androidpolice.com",
+      "carbuzz.com",
+      "cbr.com",
+      "collider.com",
+      "dualshockers.com",
+      "eater.com",
+      "gamerant.com",
+      "howtogeek.com",
+      "makeuseof.com",
+      "movieweb.com",
+      "screenrant.com",
+      "thegamer.com",
+      "worldstar.com",
+      "worldstarhiphop.com",
+      "xda-developers.com"
+    ],
+    "name": "ubo-acs",
+    "args": [
+      "admiral"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "androidpolice.com",
+      "cbr.com",
+      "gamerant.com",
+      "howtogeek.com",
+      "thegamer.com"
+    ],
+    "name": "ubo-aeld",
+    "args": [
+      "error",
+      "blocker"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "ap7am.com",
+      "dolldivine.com",
+      "giornalone.it",
+      "iplocation.net",
+      "jutarnji.hr",
+      "kompasiana.com",
+      "mediaindonesia.com",
+      "slobodnadalmacija.hr"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adrecover.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "applevalleynewsnow.com",
+      "channel3000.com",
+      "crossroadstoday.com",
+      "koamnewsnow.com",
+      "kxly.com",
+      "news8000.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adblockerDisabled",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "artforum.com",
+      "artnews.com",
+      "bgr.com",
+      "billboard.com",
+      "deadline.com",
+      "goldderby.com",
+      "hollywoodreporter.com",
+      "indiewire.com",
+      "robbreport.com",
+      "rollingstone.com",
+      "sportico.com",
+      "sxsw.com",
+      "tvline.com",
+      "variety.com",
+      "vibe.com",
+      "wwd.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      ").join(String.fromCharCode"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "artforum.com",
+      "artnews.com",
+      "bgr.com",
+      "billboard.com",
+      "deadline.com",
+      "goldderby.com",
+      "hollywoodreporter.com",
+      "indiewire.com",
+      "robbreport.com",
+      "rollingstone.com",
+      "sportico.com",
+      "sxsw.com",
+      "tvline.com",
+      "variety.com",
+      "vibe.com",
+      "wwd.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "artforum.com",
+      "artnews.com",
+      "bgr.com",
+      "billboard.com",
+      "deadline.com",
+      "goldderby.com",
+      "hollywoodreporter.com",
+      "indiewire.com",
+      "robbreport.com",
+      "rollingstone.com",
+      "sportico.com",
+      "sxsw.com",
+      "tvline.com",
+      "variety.com",
+      "vibe.com",
+      "wwd.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adblockerDisabled",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "artforum.com",
+      "artnews.com",
+      "bgr.com",
+      "billboard.com",
+      "deadline.com",
+      "goldderby.com",
+      "hollywoodreporter.com",
+      "indiewire.com",
+      "robbreport.com",
+      "rollingstone.com",
+      "sportico.com",
+      "sxsw.com",
+      "tvline.com",
+      "variety.com",
+      "vibe.com",
+      "wwd.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "artforum.com",
+      "artnews.com",
+      "bgr.com",
+      "billboard.com",
+      "deadline.com",
+      "goldderby.com",
+      "hollywoodreporter.com",
+      "indiewire.com",
+      "robbreport.com",
+      "rollingstone.com",
+      "sportico.com",
+      "sxsw.com",
+      "tvline.com",
+      "variety.com",
+      "vibe.com",
+      "wwd.com",
+      "zekamashi.net"
+    ],
+    "name": "ubo-ra",
+    "args": [
+      "onerror",
+      "script[id][onerror]",
+      "asap",
+      "quitAfter",
+      "10"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "gamezop.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "aternos.org"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\:window,/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "atv.com",
+      "autoguide.com",
+      "motorcycle.com",
+      "thetruthaboutcars.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "loadShield",
+      "noopFunc"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "audizine.com",
+      "blackenterprise.com",
+      "cwtv.com",
+      "magesy.*",
+      "pastes.io"
+    ],
+    "name": "ubo-acs",
+    "args": [
+      "document.createElement",
+      "admiral"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "auto-swiat.pl",
+      "businessinsider.com.pl",
+      "fakt.pl",
+      "forbes.pl",
+      "jakdojade.pl",
+      "komputerswiat.pl",
+      "lendi.pl",
+      "medonet.pl",
+      "newsweek.pl",
+      "noizz.pl",
+      "ofeminin.pl",
+      "onet.pl",
+      "opineo.pl",
+      "plejada.pl",
+      "skapiec.pl"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "__adblocker",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "autobild.de",
+      "bild.de",
+      "bz-berlin.de",
+      "computerbild.de",
+      "fitbook.de",
+      "myhomebook.de",
+      "petbook.de",
+      "techbook.de",
+      "travelbook.de"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\(\\)=>eval|html-load\\.com|await eval|:\\[?window,/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "autobild.de",
+      "bild.de",
+      "bz-berlin.de",
+      "computerbild.de",
+      "fitbook.de",
+      "myhomebook.de",
+      "petbook.de",
+      "techbook.de",
+      "travelbook.de"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "autosport.com",
+      "insideevs.com",
+      "motor1.com",
+      "motorsport.com",
+      "motorsportjobs.com",
+      "rideapart.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "automobile-catalog.com",
+      "forum.mobilism.me",
+      "gbatemp.net",
+      "gentosha-go.com",
+      "kezdo5.hu",
+      "krepsinis.net",
+      "sharemods.com",
+      "wisevoter.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "error-report.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "automobile-catalog.com",
+      "hna.de",
+      "index.hr",
+      "skinmc.net"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      ",window]"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "automobile-catalog.com",
+      "maketecheasier.com"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      "loader.min.js"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "autonews.com",
+      "cnet.com",
+      "inc.com",
+      "mtv.com",
+      "polygon.com",
+      "prydwen.gg",
+      "theverge.com",
+      "vox.com",
+      "weather.com",
+      "wunderground.com",
+      "zdnet.com"
+    ],
+    "name": "ubo-acs",
+    "args": [
+      "admiral"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "autosport.com",
+      "formel1.de",
+      "insideevs.com",
+      "motor1.com",
+      "motorsport-total.com",
+      "motorsport.com",
+      "motorsportjobs.com",
+      "rideapart.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      ".cmd.unshift",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "avanti24.pl",
+      "chillizet.pl",
+      "czterykaty.pl",
+      "edziecko.pl",
+      "g.pl",
+      "gazeta.pl",
+      "haps.pl",
+      "magazyn-kuchnia.pl",
+      "meloradio.pl",
+      "moto.pl",
+      "planeta.pl",
+      "plotek.pl",
+      "publio.pl",
+      "radiopogoda.pl",
+      "radiozet.pl",
+      "sport.pl",
+      "tokfm.pl",
+      "wyborcza.biz",
+      "wyborcza.pl",
+      "wysokieobcasy.pl",
+      "zakupy-czterykaty.pl"
+    ],
+    "name": "ubo-ra",
+    "args": [
+      "onerror",
+      "script[id][onerror]",
+      "asap",
+      "quitAfter",
+      "10"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "avanti24.pl",
+      "chillizet.pl",
+      "czterykaty.pl",
+      "edziecko.pl",
+      "g.pl",
+      "gazeta.pl",
+      "haps.pl",
+      "magazyn-kuchnia.pl",
+      "meloradio.pl",
+      "moto.pl",
+      "planeta.pl",
+      "plotek.pl",
+      "publio.pl",
+      "radiopogoda.pl",
+      "radiozet.pl",
+      "sport.pl",
+      "tokfm.pl",
+      "wyborcza.biz",
+      "wyborcza.pl",
+      "wysokieobcasy.pl",
+      "zakupy-czterykaty.pl"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/:\\[?window,/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "avanti24.pl",
+      "chillizet.pl",
+      "czterykaty.pl",
+      "edziecko.pl",
+      "g.pl",
+      "gazeta.pl",
+      "haps.pl",
+      "magazyn-kuchnia.pl",
+      "meloradio.pl",
+      "moto.pl",
+      "planeta.pl",
+      "plotek.pl",
+      "publio.pl",
+      "radiopogoda.pl",
+      "radiozet.pl",
+      "sport.pl",
+      "tokfm.pl",
+      "wyborcza.biz",
+      "wyborcza.pl",
+      "wysokieobcasy.pl",
+      "zakupy-czterykaty.pl"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "az-online.de",
+      "azlyrics.com",
+      "base64decode.org",
+      "carsized.com",
+      "dictionary.cambridge.org",
+      "euronews.com",
+      "fandom.com",
+      "fr.de",
+      "gumtree.com",
+      "index.hr",
+      "izurvive.com",
+      "kprofiles.com",
+      "nextchessmove.com",
+      "oxfordlearnersdictionaries.com",
+      "relogioonline.com.br",
+      "reneweconomy.com.au",
+      "spanjevandaag.com",
+      "telegraph.co.uk",
+      "urldecoder.org",
+      "vclock.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "babaganosh.org",
+      "baby-chick.com",
+      "babyfoode.com",
+      "badbatchbaking.com",
+      "bakeatmidnite.com",
+      "bakedbree.com",
+      "bakefromscratch.com",
+      "bakeitwithlove.com",
+      "bakeorbreak.com",
+      "bakeplaysmile.com",
+      "bakerbynature.com",
+      "bakerita.com",
+      "bakingamoment.com",
+      "bakingbeauty.net",
+      "bakingwithgranny.co.uk",
+      "balancingmotherhood.com",
+      "barchart.com",
+      "barefeetinthekitchen.com",
+      "barleyandsage.com",
+      "basicswithbails.com",
+      "beatofhawaii.com",
+      "beatsperminuteonline.com",
+      "beatthebudget.com",
+      "bedroomproducersblog.com",
+      "behindthevoiceactors.com",
+      "believeintherun.com",
+      "bellyfull.net",
+      "bemorewithless.com",
+      "benzinga.com",
+      "berlyskitchen.com",
+      "best-minecraft-servers.co",
+      "bestiefy.com",
+      "betweencarpools.com",
+      "beyondfrosting.com",
+      "beyondkimchee.com",
+      "beyondthebutter.com",
+      "bgr.com",
+      "bhookedcrochet.com",
+      "biancazapatka.com",
+      "biddytarot.com",
+      "bigbearswife.com",
+      "biggerbolderbaking.com",
+      "bigoven.com",
+      "bigsoccer.com",
+      "bigtimer.net",
+      "bikeexif.com",
+      "billyparisi.com",
+      "birdforum.net",
+      "bizapedia.com",
+      "bjpenn.com",
+      "blackberrybabe.com",
+      "blankcalendarpages.com",
+      "blesserhouse.com",
+      "blessthismessplease.com",
+      "blogilates.com",
+      "blogmickey.com",
+      "blogofdoom.com",
+      "bluearchive.gg",
+      "bluebowlrecipes.com",
+      "bluetracker.gg",
+      "boardgamequest.com",
+      "bojongourmet.com",
+      "bolde.com",
+      "boldjourney.com",
+      "bonappeteach.com",
+      "booknotification.com",
+      "bookroo.com",
+      "boredpanda.com",
+      "borrowedbites.com",
+      "botanicalinterests.com",
+      "bowl-me-over.com",
+      "boxentriq.com",
+      "boxing247.com",
+      "boxthislap.org",
+      "brandeating.com",
+      "braziliankitchenabroad.com",
+      "breadboozebacon.com",
+      "breaddad.com",
+      "breakingbourbon.com",
+      "brewerfanatic.com",
+      "brianakdesigns.com",
+      "brianlagerstrom.com",
+      "bricksandlogic.co.uk",
+      "brilliantmaps.com",
+      "brisbanekids.com.au",
+      "britannica.com",
+      "britneybreaksbread.com",
+      "brobible.com",
+      "broccyourbody.com",
+      "brokenovenbaking.com",
+      "bromabakery.com",
+      "bromefields.com",
+      "browneyedbaker.com",
+      "brownsnation.com",
+      "bucketlisttummy.com",
+      "budgetbytes.com",
+      "buildgreennh.com",
+      "buildyourbite.com",
+      "bulbagarden.net",
+      "bunnymuffins.lol",
+      "bunsinmyoven.com",
+      "busytoddler.com",
+      "butterandbaggage.com",
+      "butterbeready.com",
+      "buttermilkbysam.com",
+      "butternutbakeryblog.com",
+      "bytheforkful.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "benzworld.org",
+      "bimmerfest.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "base64decode.org",
+      "fandom.com",
+      "sms24.me",
+      "urldecoder.org"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      ").join(String.fromCharCode"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "comingsoon.net",
+      "dogtime.com",
+      "gamerevolution.com",
+      "mandatory.com",
+      "playstationlifestyle.net",
+      "realitytea.com",
+      "sherdog.com",
+      "superherohype.com",
+      "thefashionspot.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adblockerDisabled",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "bellinghamherald.com",
+      "bnd.com",
+      "bradenton.com",
+      "centredaily.com",
+      "charlotteobserver.com",
+      "elnuevoherald.com",
+      "fresnobee.com",
+      "heraldonline.com",
+      "idahostatesman.com",
+      "islandpacket.com",
+      "kansas.com",
+      "kansascity.com",
+      "kentucky.com",
+      "mercedsunstar.com",
+      "miamiherald.com",
+      "modbee.com",
+      "newsobserver.com",
+      "sacbee.com",
+      "sanluisobispo.com",
+      "star-telegram.com",
+      "sunherald.com",
+      "thenewstribune.com",
+      "theolympian.com",
+      "thestate.com",
+      "tri-cityherald.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "[]).push(arguments)",
+      "excludes",
+      "/,\\\\\"|self\\.__next|pageProps/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "betches.com",
+      "gamingbible.com",
+      "ladbible.com",
+      "sportbible.com",
+      "tyla.com",
+      "unilad.com",
+      "uniladtech.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "\"nowprocket\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "biblestudytools.com",
+      "bibliavida.com",
+      "childrens-ministry-deals.com",
+      "christianity.com",
+      "crosswalk.com",
+      "godtube.com",
+      "ibelieve.com",
+      "lifeaudio.com",
+      "oneplace.com",
+      "praywithme.com",
+      "sermonsearch.com",
+      "teachertube.com",
+      "worshiphousemedia.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "[]).push(arguments)",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "lasisa.net",
+      "vague.style"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      ").join(String.fromCharCode"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "lasisa.net",
+      "vague.style"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "bikerumor.com",
+      "explorersweb.com",
+      "gearjunkie.com",
+      "irunfar.com",
+      "packhacker.com",
+      "switchbacktravel.com",
+      "theinertia.com"
+    ],
+    "name": "ubo-ra",
+    "args": [
+      "onerror",
+      "script[id][onerror]",
+      "asap",
+      "quitAfter",
+      "10"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "bikerumor.com",
+      "explorersweb.com",
+      "gearjunkie.com",
+      "irunfar.com",
+      "packhacker.com",
+      "switchbacktravel.com",
+      "theinertia.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      ").join(String.fromCharCode"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "bikerumor.com",
+      "explorersweb.com",
+      "gearjunkie.com",
+      "irunfar.com",
+      "packhacker.com",
+      "switchbacktravel.com",
+      "theinertia.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "birdsandblooms.com",
+      "familyhandyman.com",
+      "rd.com",
+      "tasteofhome.com",
+      "thehealthy.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "[]).push(arguments)",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "birminghammail.co.uk",
+      "business-live.co.uk",
+      "cambridge-news.co.uk",
+      "chroniclelive.co.uk",
+      "cornwalllive.com",
+      "dailypost.co.uk",
+      "dailystar.co.uk",
+      "derbytelegraph.co.uk",
+      "devonlive.com",
+      "edinburghlive.co.uk",
+      "essexlive.news",
+      "examinerlive.co.uk",
+      "gazettelive.co.uk",
+      "getsurrey.co.uk",
+      "glasgowlive.co.uk",
+      "grimsbytelegraph.co.uk",
+      "irishstar.com",
+      "kentlive.news",
+      "leeds-live.co.uk",
+      "leicestermercury.co.uk",
+      "liverpoolecho.co.uk",
+      "mirror.co.uk",
+      "mylondon.news",
+      "ok.co.uk",
+      "plymouthherald.co.uk",
+      "rsvplive.ie",
+      "scottishdailyexpress.co.uk",
+      "somersetlive.co.uk",
+      "stokesentinel.co.uk",
+      "themirror.com",
+      "walesonline.co.uk"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "nowprocket",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "bleepingcomputer.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "Ad-Shield"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "bloxd.io",
+      "minecraftskins.com",
+      "murlok.io",
+      "neopets.com"
+    ],
+    "name": "ubo-noeval-if",
+    "args": [
+      "page-kit.io"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "bloxd.io",
+      "minecraftskins.com",
+      "murlok.io",
+      "neopets.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "window.__as_"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
       "boston.com",
       "dogtime.com",
       "freep.com",
@@ -90858,6 +94050,642 @@
   },
   {
     "hostnames": [
+      "brawlytix.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "nowprocket"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "buchstaben.com",
+      "nemzetisport.hu"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "() => eval"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "buienalarm.be",
+      "buienalarm.nl",
+      "meteoradar.co.uk",
+      "meteox.com",
+      "niederschlagsradar.de",
+      "sat24.com",
+      "weerplaza.nl",
+      "weerslag.nl"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "buienalarm.be",
+      "buienalarm.nl",
+      "meteoradar.co.uk",
+      "meteox.com",
+      "niederschlagsradar.de",
+      "sat24.com",
+      "weerslag.nl"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\)\\.join\\(String\\.fromCharCode|siteActivateScripts/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "cadillacforums.com",
+      "carolinashootersclub.com",
+      "challengertalk.com",
+      "chevelles.com",
+      "clubfrontier.org",
+      "coloradofans.com",
+      "coltforum.com",
+      "crossbownation.com",
+      "crvownersclub.com",
+      "cumminsforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "cafedelites.com",
+      "cake-babe.com",
+      "cakebycourtney.com",
+      "cakesbymk.com",
+      "cakewhiz.com",
+      "calculateme.com",
+      "calculator.academy",
+      "californiathroughmylens.com",
+      "cambreabakes.com",
+      "camillestyles.com",
+      "campsitephotos.com",
+      "canonrumors.com",
+      "capitalizemytitle.com",
+      "carolinescooking.com",
+      "cats.com",
+      "catster.com",
+      "cattletoday.com",
+      "celebritynetworth.com",
+      "centreofexcellence.com",
+      "cfb.fan",
+      "chamberofcommerce.com",
+      "champsorchumps.us",
+      "charactercounter.com",
+      "chartmasters.org",
+      "cheatcc.com",
+      "cheatsheet.com",
+      "cheerfulcook.com",
+      "chefalli.com",
+      "chefjar.com",
+      "chefjonwatts.com",
+      "cheflindseyfarr.com",
+      "chefnotrequired.com",
+      "chefsavvy.com",
+      "chefspencil.com",
+      "chelseasmessyapron.com",
+      "chelsweets.com",
+      "chemicalaid.com",
+      "chemistrylearner.com",
+      "cheneetoday.com",
+      "chewoutloud.com",
+      "childhoodmagic.com",
+      "chinasichuanfood.com",
+      "chiselandfork.com",
+      "chocolatecoveredkatie.com",
+      "chocolatewithgrace.com",
+      "choosingchia.com",
+      "chopstickchronicles.com",
+      "chordsworld.com",
+      "chrislovesjulia.com",
+      "christinascucina.com",
+      "chunkbase.com",
+      "ciaoflorentina.com",
+      "cincyshopper.com",
+      "cindyhattersleydesign.com",
+      "citefast.com",
+      "cjeatsrecipes.com",
+      "cjponyparts.com",
+      "ck5.com",
+      "clashguideswithdusk.net",
+      "classic-armory.org",
+      "classpop.com",
+      "cleananddelicious.com",
+      "cleanfoodcrush.com",
+      "cleverlysimple.com",
+      "clock.zone",
+      "closetcooking.com",
+      "cloudykitchen.com",
+      "cloudynights.com",
+      "clutchpoints.com",
+      "cnevpost.com",
+      "cocinadominicana.com",
+      "codeshack.io",
+      "codewordsolver.com",
+      "coleycooks.com",
+      "collective.world",
+      "collectorfreaks.com",
+      "collegefootball.gg",
+      "collegefootballnetwork.com",
+      "collegetransitions.com",
+      "color-meanings.com",
+      "colorkit.co",
+      "colorxs.com",
+      "comicbasics.com",
+      "comicsands.com",
+      "competitionplus.com",
+      "completelydelicious.com",
+      "concertarchives.org",
+      "connoisseurusveg.com",
+      "construct101.com",
+      "cookathomemom.com",
+      "cookedandloved.com",
+      "cookedbyjulie.com",
+      "cookieandkate.com",
+      "cookiedoughandovenmitt.com",
+      "cookiesandcups.com",
+      "cookiesfordays.com",
+      "cookincanuck.com",
+      "cooking-therapy.com",
+      "cookingclassy.com",
+      "cookingforkeeps.com",
+      "cookingforpeanuts.com",
+      "cookingwithayeh.com",
+      "cookingwithcarlee.com",
+      "cookingwithcocktailrings.com",
+      "cookingwithkarli.com",
+      "cookingwithkatiecross.com",
+      "cookingwithmammac.com",
+      "cookingwithria.com",
+      "cookitrealgood.com",
+      "cookthestory.com",
+      "cooktoria.com",
+      "cookwithmanali.com",
+      "coopcancook.com",
+      "copykat.com",
+      "corvsport.com",
+      "cottercrunch.com",
+      "counterstats.net",
+      "countryrebel.com",
+      "countryroadssourdough.com",
+      "couponcravings.com",
+      "courtneyssweets.com",
+      "cowboyszone.com",
+      "cozinhalegal.com.br",
+      "cozymeal.com",
+      "cozypeachkitchen.com",
+      "craftingagreenworld.com",
+      "craftsonsea.co.uk",
+      "craftsyhacks.com",
+      "craftymorning.com",
+      "cravinghomecooked.com",
+      "cravingtasty.com",
+      "crayonsandcravings.com",
+      "crazyforcrust.com",
+      "crazylittleprojects.com",
+      "crazymonkeygames.com",
+      "createprintables.com",
+      "creativecanning.com",
+      "creepycatalog.com",
+      "crochet-patterns-free.com",
+      "crochet365knittoo.com",
+      "crochetconcupiscence.com",
+      "crockpotsandflipflops.com",
+      "crosswordanswers911.net",
+      "crosswordbuzz.com",
+      "crosswordjam.net",
+      "crowdedkitchen.com",
+      "cruisehive.com",
+      "cruisemummy.co.uk",
+      "cruisersforum.com",
+      "crunchycreamysweet.com",
+      "cryptoquoteanswer.com",
+      "cucinabyelena.com",
+      "culinaryginger.com",
+      "culinaryhill.com",
+      "cupcakesandkalechips.com",
+      "cupofjo.com",
+      "curbsideclassic.com",
+      "curlygirlkitchen.com",
+      "curlynikki.com",
+      "cushyspa.com",
+      "cwbchicago.com",
+      "czn.gg"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "calgaryherald.com",
+      "calgarysun.com",
+      "canoe.com",
+      "driving.ca",
+      "edmontonjournal.com",
+      "edmontonsun.com",
+      "financialpost.com",
+      "intelligencer.ca",
+      "leaderpost.com",
+      "lfpress.com",
+      "montrealgazette.com",
+      "nationalpost.com",
+      "ottawacitizen.com",
+      "ottawasun.com",
+      "recorder.ca",
+      "standard-freeholder.com",
+      "theprovince.com",
+      "thestarphoenix.com",
+      "thewhig.com",
+      "timminspress.com",
+      "tj.news",
+      "torontosun.com",
+      "vancouversun.com",
+      "windsorstar.com",
+      "winnipegsun.com"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      "getComputedStyle"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "calgaryherald.com",
+      "calgarysun.com",
+      "canoe.com",
+      "driving.ca",
+      "edmontonjournal.com",
+      "edmontonsun.com",
+      "financialpost.com",
+      "intelligencer.ca",
+      "leaderpost.com",
+      "lfpress.com",
+      "montrealgazette.com",
+      "nationalpost.com",
+      "ottawacitizen.com",
+      "ottawasun.com",
+      "recorder.ca",
+      "standard-freeholder.com",
+      "theprovince.com",
+      "thestarphoenix.com",
+      "thewhig.com",
+      "timminspress.com",
+      "tj.news",
+      "torontosun.com",
+      "vancouversun.com",
+      "windsorstar.com",
+      "winnipegsun.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "calgaryherald.com",
+      "calgarysun.com",
+      "canoe.com",
+      "driving.ca",
+      "edmontonjournal.com",
+      "edmontonsun.com",
+      "financialpost.com",
+      "intelligencer.ca",
+      "leaderpost.com",
+      "lfpress.com",
+      "montrealgazette.com",
+      "nationalpost.com",
+      "ottawacitizen.com",
+      "ottawasun.com",
+      "recorder.ca",
+      "standard-freeholder.com",
+      "theprovince.com",
+      "thestarphoenix.com",
+      "thewhig.com",
+      "timminspress.com",
+      "tj.news",
+      "torontosun.com",
+      "vancouversun.com",
+      "windsorstar.com",
+      "winnipegsun.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\(\\)=>eval|html-load\\.com|await eval|:window/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "calgaryherald.com",
+      "calgarysun.com",
+      "canoe.com",
+      "driving.ca",
+      "edmontonjournal.com",
+      "edmontonsun.com",
+      "financialpost.com",
+      "intelligencer.ca",
+      "leaderpost.com",
+      "lfpress.com",
+      "montrealgazette.com",
+      "nationalpost.com",
+      "ottawacitizen.com",
+      "ottawasun.com",
+      "recorder.ca",
+      "standard-freeholder.com",
+      "theprovince.com",
+      "thestarphoenix.com",
+      "thewhig.com",
+      "timminspress.com",
+      "tj.news",
+      "torontosun.com",
+      "vancouversun.com",
+      "windsorstar.com",
+      "winnipegsun.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "calgaryherald.com",
+      "calgarysun.com",
+      "canoe.com",
+      "driving.ca",
+      "edmontonjournal.com",
+      "edmontonsun.com",
+      "financialpost.com",
+      "leaderpost.com",
+      "lfpress.com",
+      "montrealgazette.com",
+      "nationalpost.com",
+      "ottawacitizen.com",
+      "ottawasun.com",
+      "recorder.ca",
+      "standard-freeholder.com",
+      "theprovince.com",
+      "thestarphoenix.com",
+      "thewhig.com",
+      "timminspress.com",
+      "tj.news",
+      "torontosun.com",
+      "vancouversun.com",
+      "windsorstar.com",
+      "winnipegsun.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/admiral|adblockerDisabled/i",
+      "excludes",
+      "/,\\\\\"|self\\.__next|pageProps/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "caminteresse.fr",
+      "capital.fr",
+      "cotemaison.fr",
+      "croq-kilos.com",
+      "cuisineaz.com",
+      "deco.fr",
+      "femmeactuelle.fr",
+      "fourchette-et-bikini.fr",
+      "gamesider.com",
+      "geo.fr",
+      "harpersbazaar.fr",
+      "hbrfrance.fr",
+      "meteocity.com",
+      "passeportsante.net",
+      "programme.tv",
+      "programme-tv.net",
+      "turbo.fr",
+      "voici.fr"
+    ],
+    "name": "ubo-ra",
+    "args": [
+      "onerror",
+      "script[id][onerror]",
+      "asap",
+      "quitAfter",
+      "10"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "caminteresse.fr",
+      "capital.fr",
+      "cotemaison.fr",
+      "croq-kilos.com",
+      "cuisineaz.com",
+      "deco.fr",
+      "femmeactuelle.fr",
+      "fourchette-et-bikini.fr",
+      "gamesider.com",
+      "geo.fr",
+      "harpersbazaar.fr",
+      "hbrfrance.fr",
+      "meteocity.com",
+      "passeportsante.net",
+      "programme.tv",
+      "programme-tv.net",
+      "turbo.fr",
+      "voici.fr"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\(\\)=>eval|&&window\\}/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "caminteresse.fr",
+      "capital.fr",
+      "cotemaison.fr",
+      "croq-kilos.com",
+      "cuisineaz.com",
+      "deco.fr",
+      "femmeactuelle.fr",
+      "fourchette-et-bikini.fr",
+      "gamesider.com",
+      "geo.fr",
+      "harpersbazaar.fr",
+      "hbrfrance.fr",
+      "meteocity.com",
+      "passeportsante.net",
+      "programme.tv",
+      "programme-tv.net",
+      "turbo.fr",
+      "voici.fr"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "emisoras-puertorico.com",
+      "emisorascolombianas.co",
+      "fmradiofree.com",
+      "internetradio-horen.de",
+      "internetradio-schweiz.ch",
+      "mytuner-radio.com",
+      "radio-ao-vivo.com",
+      "radio-australia.org",
+      "radio-belgie.be",
+      "radio-danmark.dk",
+      "radio-dominicana.com",
+      "radio-ecuador.org",
+      "radio-en-ligne.fr",
+      "radio-en-vivo.mx",
+      "radio-espana.es",
+      "radio-hrvatska.com",
+      "radio-italiane.it",
+      "radio-maroc.org",
+      "radio-nederland.nl",
+      "radio-norge.org",
+      "radio-osterreich.at",
+      "radio-philippines.com",
+      "radio-polska.pl",
+      "radio-singapore.com",
+      "radio-sveriges.se",
+      "radio-thai.com",
+      "radio-ua.com",
+      "radio-uk.co.uk",
+      "radioindonesia.org",
+      "radiojapan.org",
+      "radiomalaysia.org",
+      "radios-argentinas.org",
+      "radios-bolivia.com",
+      "radios-chilenas.com",
+      "radios-guatemala.com",
+      "radios-online.pt",
+      "radios-uruguay.com",
+      "radios-venezuela.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "emisoras-puertorico.com",
+      "emisorascolombianas.co",
+      "fmradiofree.com",
+      "internetradio-horen.de",
+      "internetradio-schweiz.ch",
+      "mytuner-radio.com",
+      "radio-ao-vivo.com",
+      "radio-australia.org",
+      "radio-belgie.be",
+      "radio-danmark.dk",
+      "radio-dominicana.com",
+      "radio-ecuador.org",
+      "radio-en-ligne.fr",
+      "radio-en-vivo.mx",
+      "radio-espana.es",
+      "radio-hrvatska.com",
+      "radio-italiane.it",
+      "radio-maroc.org",
+      "radio-nederland.nl",
+      "radio-norge.org",
+      "radio-osterreich.at",
+      "radio-philippines.com",
+      "radio-polska.pl",
+      "radio-singapore.com",
+      "radio-sveriges.se",
+      "radio-thai.com",
+      "radio-ua.com",
+      "radio-uk.co.uk",
+      "radioindonesia.org",
+      "radiojapan.org",
+      "radiomalaysia.org",
+      "radios-argentinas.org",
+      "radios-bolivia.com",
+      "radios-chilenas.com",
+      "radios-guatemala.com",
+      "radios-online.pt",
+      "radios-uruguay.com",
+      "radios-venezuela.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\)\\.join\\(String\\.fromCharCode|html-load\\.com/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "carscoops.com",
+      "flatpanelshd.com",
+      "issuya.com",
+      "itainews.com",
+      "mynet.com",
+      "onlinegdb.com",
+      "picrew.me",
+      "sportsseoul.com",
+      "text-compare.com",
+      "wfmz.com",
+      "winfuture.de",
+      "worldhistory.org",
+      "motscroises.fr",
+      "w.grapps.me",
+      "gazetaprawna.pl",
+      "pressian.com"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      "error-report.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
       "cbssports.com"
     ],
     "name": "ubo-rmnt",
@@ -90869,12 +94697,1443 @@
   },
   {
     "hostnames": [
+      "chloeting.com"
+    ],
+    "name": "ubo-prevent-innerHTML",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "consejosytrucos.co",
+      "conselhosetruques.com",
+      "consiglietrucchi.com",
+      "poradyiwskazowki.pl",
+      "tippsundtricks.co",
+      "tips-and-tricks.co",
+      "tipsandtricksjapan.com",
+      "tipsandtrickskorea.com",
+      "tipsenweetjes.nl",
+      "trucs-et-astuces.co"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "await eval"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "consejosytrucos.co",
+      "conselhosetruques.com",
+      "consiglietrucchi.com",
+      "poradyiwskazowki.pl",
+      "tippsundtricks.co",
+      "tips-and-tricks.co",
+      "tipsandtricksjapan.com",
+      "tipsandtrickskorea.com",
+      "tipsenweetjes.nl",
+      "trucs-et-astuces.co"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "cracked.com",
+      "denofgeek.com",
+      "ebaumsworld.com",
+      "knowyourmeme.com",
+      "melmagazine.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/adblockerDisabled|\\.cmd\\.unshift|admiral/",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "cults3d.com"
+    ],
+    "name": "ubo-acs",
+    "args": [
+      "document.createElement",
+      "/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789/i"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "currently.att.yahoo.com",
+      "fantasysports.yahoo.com",
+      "sports.yahoo.com"
+    ],
+    "name": "ubo-prevent-innerHTML",
+    "args": [
+      "script",
+      "/loadRecoveryScripts|nowprocket/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "cwtv.com",
+      "marketwatch.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "[]).push(arguments)",
+      "excludes",
+      "/,\\\\\"|self\\.__next|pageProps/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "detailingworld.co.uk",
+      "diychatroom.com",
+      "diymobileaudio.com",
+      "dodgedurango.net",
+      "dootalk.com",
+      "driveaccord.net",
+      "ducati.ms",
+      "duramaxforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "dadcooksdinner.com",
+      "daenskitchen.com",
+      "dailyactor.com",
+      "dailynous.com",
+      "damndelicious.net",
+      "dancearoundthekitchen.com",
+      "danishealthyeats.com",
+      "daringgourmet.com",
+      "dashofjazz.com",
+      "dashofsanity.com",
+      "daysofjay.com",
+      "dcurbanmom.com",
+      "dearcrissy.com",
+      "deliciouslyseasoned.com",
+      "deliciouslysprinkled.com",
+      "delishdlites.com",
+      "delishknowledge.com",
+      "delscookingtwist.com",
+      "deltiasgaming.com",
+      "desertislanddishes.co",
+      "designeatrepeat.com",
+      "dessertfortwo.com",
+      "dessertnowdinnerlater.com",
+      "dessertsonadime.com",
+      "destinyislands.com",
+      "detoxinista.com",
+      "dgcoursereview.com",
+      "diaryofaquilter.com",
+      "diethood.com",
+      "diffen.com",
+      "digitalcitizen.life",
+      "dimitrasdishes.com",
+      "dinersdriveinsdiveslocations.com",
+      "dinneratthezoo.com",
+      "dinnerin321.com",
+      "dinnersdishesanddesserts.com",
+      "dinnersdonequick.com",
+      "dinnerthendessert.com",
+      "discordtemplates.me",
+      "dishbydish.net",
+      "dishedbykate.com",
+      "dishnthekitchen.com",
+      "disneyfanatic.com",
+      "disneyfoodblog.com",
+      "disneytouristblog.com",
+      "displacedhousewife.com",
+      "distiller.com",
+      "divascancook.com",
+      "diygarden.co.uk",
+      "doctorsofrunning.com",
+      "dogster.com",
+      "dollartimes.com",
+      "domesticsuperhero.com",
+      "dominicancooking.com",
+      "dontgobaconmyheart.co.uk",
+      "dotafire.com",
+      "dotgg.gg",
+      "downshiftology.com",
+      "dpreview.com",
+      "draftsim.com",
+      "dramabeans.com",
+      "dreamdictionary.org",
+      "drifted.com",
+      "drivemehungry.com",
+      "driveteslacanada.ca",
+      "drizzleanddip.com",
+      "dronexl.co",
+      "drummerworld.com",
+      "drveganblog.com",
+      "dsmtuners.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "dailycaller.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "dc.adfree",
+      "true"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "deadline.com",
+      "divinedaolibrary.com",
+      "doviz.com",
+      "hollywoodlife.com",
+      "lejdd.fr",
+      "scribd.com",
+      "slideshare.net",
+      "songfacts.com",
+      "thelayoff.com",
+      "tips-and-tricks.co",
+      "wwd.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\(async\\s*\\(\\)\\s*=>\\s*\\{\\s*try\\s*\\{\\s*(const|var)/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "divinedaolibrary.com",
+      "jaysbrickblog.com",
+      "mp1st.com",
+      "uranai.nosv.org",
+      "yakkun.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "dnevnik.hr",
+      "neowin.net",
+      "newatlas.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/^\\(async\\(\\)=>\\{function.{1,200}head.{1,100}\\.bind.{1,900}location\\.href.{1,100}\\}\\)\\(\\);$/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "dodgerblue.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "error-report.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "dogdrip.net"
+    ],
+    "name": "ubo-no-fetch-if",
+    "args": [
+      "/ad\\.doubleclick\\.net|static\\.dable\\.io/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "dotesports.com",
+      "epicstream.com",
+      "gamesgames.com",
+      "gamerevolution.com",
+      "gazettenet.com",
+      "insidenova.com",
+      "jetztspielen.de",
+      "leitesculinaria.com",
+      "nbcnews.com",
+      "notevibes.com",
+      "prad.de",
+      "progameguides.com",
+      "ranker.com",
+      "realityblurb.com",
+      "sanangelolive.com",
+      "sanfoundry.com",
+      "siliconera.com",
+      "sporcle.com",
+      "thesportster.com",
+      "upi.com",
+      "visualcapitalist.com",
+      "wegotthiscovered.com",
+      "primagames.com"
+    ],
+    "name": "ubo-aopr",
+    "args": [
+      "googletag"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "e46fanatics.com",
+      "edsupportforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "eandpcrochet.com",
+      "earthsky.org",
+      "easycheesyvegetarian.com",
+      "easychickenrecipes.com",
+      "easydrawingguides.com",
+      "easyfamilyrecipes.com",
+      "easyweeknightrecipes.com",
+      "eatatmaudes.com",
+      "eatingbirdfood.com",
+      "eatingbyelaine.com",
+      "eatingeuropean.com",
+      "eatingonadime.com",
+      "eatlittlebird.com",
+      "eatthegains.com",
+      "eatwithcarmen.com",
+      "eatwithclarity.com",
+      "eatyourselfskinny.com",
+      "eazypeazymealz.com",
+      "economicshelp.org",
+      "effortlessfoodie.com",
+      "eightforestlane.com",
+      "elavegan.com",
+      "eletric-vehicles.com",
+      "eliteprospects.com",
+      "elizabethrider.com",
+      "elliott.org",
+      "elmundoeats.com",
+      "emilybites.com",
+      "emiraforum.com",
+      "emojiflashcards.com",
+      "encyclopedia-titanica.org",
+      "encyclopedia.com",
+      "englishlinx.com",
+      "entertainmentnow.com",
+      "entirelyelizabeth.com",
+      "epicgardening.com",
+      "episodehive.com",
+      "eregulations.com",
+      "erinliveswhole.com",
+      "erinscozykitchen.com",
+      "errenskitchen.com",
+      "escapeforum.org",
+      "esportstales.com",
+      "essenparadies.com",
+      "eurasiareview.com",
+      "evergreenkitchen.ca",
+      "everyday-reading.com",
+      "everydaycheapskate.com",
+      "everydayfamilycooking.com",
+      "everylastbite.com",
+      "everylittlecrumb.com",
+      "evolvingtable.com",
+      "exceldemy.com",
+      "expeditionforum.com",
+      "exrx.net",
+      "extremeweatherwatch.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "flyfishing.co.uk",
+      "fordtransitusaforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "fadeawayworld.net",
+      "familystylefood.com",
+      "famivita.com.br",
+      "fanbuzz.com",
+      "fansfocus.com",
+      "fantabulosity.com",
+      "fantasycalc.com",
+      "fantasydata.com",
+      "fantasyfootballcalculator.com",
+      "farmersalmanac.com",
+      "fashionbeans.com",
+      "fatcalc.com",
+      "fatimacooks.net",
+      "favfamilyrecipes.com",
+      "fearlessdining.com",
+      "feastandwest.com",
+      "feastingathome.com",
+      "fedandfit.com",
+      "feedgrump.com",
+      "feedingtinybellies.com",
+      "feedmephoebe.com",
+      "feelgoodfoodie.net",
+      "feelingfoodish.com",
+      "feelslikehomeblog.com",
+      "ffxnow.com",
+      "fiatforum.com",
+      "fiberglassrv.com",
+      "fictionhorizon.com",
+      "fifteenspatulas.com",
+      "filmcolossus.com",
+      "financebuzz.com",
+      "financestrategists.com",
+      "financialsamurai.com",
+      "findmyguitar.com",
+      "firstdown.studio",
+      "firsthomelovelife.com",
+      "fivehearthome.com",
+      "flaggle.net",
+      "flagle-game.com",
+      "flavorfulife.com",
+      "flavormosaic.com",
+      "flightaware.com",
+      "flipsimu.com",
+      "fodmapeveryday.com",
+      "foldnfly.com",
+      "foodal.com",
+      "foodbanjo.com",
+      "foodbymaria.com",
+      "fooddoodles.com",
+      "foodess.com",
+      "foodfaithfitness.com",
+      "foodfolksandfun.net",
+      "foodforfitness.co.uk",
+      "foodie.com",
+      "foodiecrush.com",
+      "foodiewithfamily.com",
+      "foodmetamorphosis.com",
+      "foodrepublic.com",
+      "foodstruct.com",
+      "foodwithfeeling.com",
+      "foolproofliving.com",
+      "fordauthority.com",
+      "fordraptorforum.com",
+      "fordtremor.com",
+      "forestriverforums.com",
+      "forkinthekitchen.com",
+      "forkknifeswoon.com",
+      "forktospoon.com",
+      "formatlibrary.com",
+      "forthefrills.com",
+      "foxandbriar.com",
+      "foxeslovelemons.com",
+      "foxestalk.co.uk",
+      "foxyfolksy.com",
+      "fpl.team",
+      "framedcooks.com",
+      "frameratetest.com",
+      "freeslp.com",
+      "freezermeals101.com",
+      "freshaprilflours.com",
+      "freshoffthegrid.com",
+      "fromachefskitchen.com",
+      "frommybowl.com",
+      "fromvalerieskitchen.com",
+      "frontrangefed.com",
+      "frugalfarmwife.com",
+      "frugalfun4boys.com",
+      "frugalyabundante.com",
+      "frvr.com",
+      "fuelly.com",
+      "fullofplants.com",
+      "funlearningforkids.com",
+      "funmoneymom.com",
+      "futmind.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "fantasysports.yahoo.com",
+      "sports.yahoo.com"
+    ],
+    "name": "ubo-json-prune",
+    "args": [
+      "autoRecovery"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "fantasysports.yahoo.com",
+      "sports.yahoo.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "benjiAdblock",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "fantasysports.yahoo.com",
+      "sports.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "__benjiAdblock",
+      "undefined"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "filmibeat.com",
+      "mykhel.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "detectAdBlock",
+      "noopFunc"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "finance.yahoo.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/loadRecoveryScripts|nowprocket/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "fmradiofree.com",
+      "internetradio-horen.de",
+      "radio-australia.org",
+      "radio-danmark.dk",
+      "radio-hrvatska.com",
+      "radio-norge.org",
+      "radio-osterreich.at"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "followfollow.com",
+      "sporcle.com",
+      "tapology.com",
+      "wsj.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "admiral",
+      "excludes",
+      "/,\\\\\"|self\\.__next|pageProps/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "foodtalkdaily.com",
+      "hometalk.com",
+      "redesigndaily.com",
+      "thesimplifydaily.com",
+      "upstyledaily.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "loadShield",
+      "noopFunc"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "foxbusiness.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/typeof [a-z]\\.unshift/",
+      "excludes",
+      "/,\\\\\"|self\\.__next|pageProps/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "foxbusiness.com",
+      "huskermax.com",
+      "iphoneincanada.ca",
+      "premierguitar.com",
+      "techcrunch.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adblockerDisabled",
+      "excludes",
+      "/,\\\\\"|self\\.__next|pageProps/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "foxnews.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "__apNoHold"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "foxnews.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "document.referrer.indexOf"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "freemcserver.net"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "window,void 0"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "giuliaforums.com",
+      "gl1800riders.com",
+      "glocktalk.com",
+      "greentractortalk.com",
+      "guitars101.com",
+      "guitarscanada.com",
+      "gunboards.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "gadgetreview.com",
+      "gadgetsandwearables.com",
+      "gameanswer.net",
+      "gameslikefinder.com",
+      "gamespew.com",
+      "gamestouse.com",
+      "gamezebo.com",
+      "gamingsmart.com",
+      "gardenbetty.com",
+      "gardenerspath.com",
+      "gardeninthekitchen.com",
+      "garlicandzest.com",
+      "garminrumors.com",
+      "gcaptain.com",
+      "gearpatrol.com",
+      "gedpracticetest.net",
+      "geekspin.co",
+      "genealogyexplained.com",
+      "genevieveogleman.ca",
+      "gentlemansgazette.com",
+      "getinspiredeveryday.com",
+      "getonmyplate.com",
+      "giadzy.com",
+      "giangiskitchen.com",
+      "giftofhospitality.com",
+      "gimmedelicious.com",
+      "gimmesomeoven.com",
+      "gina-michele.com",
+      "girlversusdough.com",
+      "giverecipe.com",
+      "glam.com",
+      "glorioustreats.com",
+      "glow-diaries.com",
+      "gluesticksblog.com",
+      "glutenfreeonashoestring.com",
+      "glutenfreepalate.com",
+      "gmauthority.com",
+      "gmsquarebody.com",
+      "gmt400.com",
+      "gocomics.com",
+      "godairyfree.org",
+      "goldengracekitchen.com",
+      "gonnawantseconds.com",
+      "good.is",
+      "gopherhole.com",
+      "grabcraft.com",
+      "gracelikerainblog.com",
+      "gradecalculator.com",
+      "grammarist.com",
+      "grandbaby-cakes.com",
+      "grannysquare.me",
+      "greatergood.com",
+      "greaterlongisland.com",
+      "greatgrubdelicioustreats.com",
+      "greatschools.org",
+      "greedygourmet.com",
+      "greenweddingshoes.com",
+      "grilledcheesesocial.com",
+      "grillonadime.com",
+      "gritsandgouda.com",
+      "gritsandpinecones.com",
+      "groupdiy.com",
+      "growagoodlife.com",
+      "growforagecookferment.com",
+      "grownandflown.com",
+      "grumpyrecipes.com",
+      "grunge.com",
+      "gtaboom.com",
+      "guided.news",
+      "guidingtech.com",
+      "guitarnick.com",
+      "gymnastics-now.com",
+      "gymnaverse.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "gamebanana.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/admiral|adshield/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "gentside.*",
+      "ohmymag.*"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "()=>eval"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "gentside.*",
+      "ohmymag.*"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "gol24.pl",
+      "gra.pl",
+      "gs24.pl",
+      "i.pl",
+      "motofakty.pl",
+      "naszemiasto.pl",
+      "nekrologi.net",
+      "regiodom.pl",
+      "shownews.pl",
+      "sportowy24.pl",
+      "strefabiznesu.pl",
+      "strefaedukacji.pl",
+      "strefaobrony.pl",
+      "stronakobiet.pl",
+      "stronazdrowia.pl",
+      "telemagazyn.pl"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "admiral",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
       "golfdigest.com"
     ],
     "name": "ubo-aost",
     "args": [
       "document.createElement",
       "admiral"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "greenwichmeantime.com",
+      "higherorlowergame.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "void 0 || window,"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "gumtree.com"
+    ],
+    "name": "ubo-json-prune",
+    "args": [
+      "features.ad02 features.adshield"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "gutefrage.net"
+    ],
+    "name": "ubo-nosiif",
+    "args": [
+      "0x"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "hacksaholic.com",
+      "halfbakedharvest.com",
+      "handylittleme.com",
+      "hanjancrochet.com",
+      "hannahmageerd.com",
+      "happity.co.uk",
+      "happyhealthymama.com",
+      "happymoneysaver.com",
+      "happyveggiekitchen.com",
+      "hauntedplaces.org",
+      "hauteandhealthyliving.com",
+      "hawaii.com",
+      "hdontap.com",
+      "headfonia.com",
+      "healthdigest.com",
+      "healthecooks.com",
+      "healthfulblondie.com",
+      "healthyfitnessmeals.com",
+      "healthygffamily.com",
+      "healthykitchen.com",
+      "healthylittlefoodies.com",
+      "healthylittlepeach.com",
+      "healthynibblesandbits.com",
+      "healthyrecipesblogs.com",
+      "hearthookhome.com",
+      "hearthpwn.com",
+      "heartscontentfarmhouse.com",
+      "heavy.com",
+      "heightcomparison.com",
+      "hellopharmacist.com",
+      "hellosewing.com",
+      "heresyourdinner.com",
+      "hermanathome.com",
+      "heygrillhey.com",
+      "heyitsfree.net",
+      "hifiplus.com",
+      "highschooltestprep.com",
+      "hildaskitchenblog.com",
+      "histordle.com",
+      "historic-uk.com",
+      "hockeywilderness.com",
+      "hogwarts.cafe",
+      "holycowvegan.net",
+      "homebrewtalk.com",
+      "homecookingadventure.com",
+      "homecookingmemories.com",
+      "homecrux.com",
+      "homemade-gifts-made-easy.com",
+      "homemadeheather.com",
+      "homemadehooplah.com",
+      "homemadeinterest.com",
+      "homeschoolof1.com",
+      "homeschoolpreschool.net",
+      "homesicktexan.com",
+      "homesteadandchill.com",
+      "homeworthy.com",
+      "honestcooking.com",
+      "hostthetoast.com",
+      "hot-thai-kitchen.com",
+      "hotcouponworld.com",
+      "hothardware.com",
+      "housedigest.com",
+      "houseofnasheats.com",
+      "howsweeteats.com",
+      "howtofeedaloon.com",
+      "html.cafe",
+      "hummingbirdhigh.com",
+      "hummusapien.com",
+      "hungryhappens.net",
+      "hungryhealthyhappy.com",
+      "hungryinthailand.com",
+      "hungrypaprikas.com",
+      "hunker.com",
+      "huskermax.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "halloweenforum.com",
+      "hardcoresledder.com",
+      "hkpro.com",
+      "hondashadow.net",
+      "huntingpa.com",
+      "hyundai-forums.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "hometownstation.com"
+    ],
+    "name": "ubo-rpnt",
+    "args": [
+      "script",
+      "window.dataLayer =",
+      "/*start*/(function(){let link=document.createElement(\"link\");link.rel=\"stylesheet\";link.href=\"/wp-content/themes/hts_v2/style.css\";document.head.appendChild(link)})();document.currentScript.textContent=document.currentScript.textContent.replace(/\\/\\*start\\*\\/(.*)\\/\\*end\\*\\//g,\"\");/*end*/window.dataLayer ="
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "huffpost.com"
+    ],
+    "name": "ubo-json-prune",
+    "args": [
+      "RT-1562-AdShield-script-on-Huffpost"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "huffpost.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "disableAdShield",
+      "true"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "ifish.net",
+      "indianmotorcycles.net"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "iambaker.net",
+      "iamhomesteader.com",
+      "iamneverfull.com",
+      "iankewks.com",
+      "icancrochetthat.com",
+      "iclarified.com",
+      "idleontoolbox.com",
+      "idownloadblog.com",
+      "idrlabs.com",
+      "ifoodreal.com",
+      "iheartcraftythings.com",
+      "ihearteating.com",
+      "iheartnaptime.net",
+      "iheartrecipes.com",
+      "iheartumami.com",
+      "iheartvegetables.com",
+      "ihorror.com",
+      "illinoisloyalty.com",
+      "imaging-resource.com",
+      "imamother.com",
+      "immigrantstable.com",
+      "imodeler.com",
+      "in2013dollars.com",
+      "inbloombakery.com",
+      "inchcalculator.com",
+      "indianhealthyrecipes.com",
+      "indianveggiedelight.com",
+      "infinite-fusion.net",
+      "inkdecks.com",
+      "inmamamaggieskitchen.com",
+      "inquiringchef.com",
+      "insider-gaming.com",
+      "insidethemagic.net",
+      "insidetherustickitchen.com",
+      "inspiredbycharm.com",
+      "inspiredtaste.net",
+      "instantstreetview.com",
+      "instrupix.com",
+      "interestingengineering.com",
+      "interestingliterature.com",
+      "intoindiegames.com",
+      "iowagirleats.com",
+      "iphoneincanada.ca",
+      "irunfar.com",
+      "irv2.com",
+      "isabeleats.com",
+      "isitpacked.com",
+      "islands.com",
+      "itdoesnttastelikechicken.com",
+      "itechguides.com",
+      "itisakeeper.com",
+      "itrwrestling.com",
+      "itsalwaysautumn.com",
+      "itsavegworldafterall.com",
+      "itsnotcomplicatedrecipes.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "index.hr"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      "getComputedStyle"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "indiatimes.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "objAd.loadAdShield",
+      "noopFunc"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "a-ha.io",
+      "cboard.net",
+      "viva100.com",
+      "maketecheasier.com",
+      "mlbpark.donga.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "KCgpPT57bGV0IGU"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "lgbtqnation.com",
+      "outsports.com",
+      "queerty.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adblockerDisabled"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "isplus.com"
+    ],
+    "name": "ubo-rpnt",
+    "args": [
+      "script",
+      "window.dataLayer =",
+      "/*start*/(function(){let link=document.createElement(\"link\");link.rel=\"stylesheet\";link.href=\"/css_renew/pc/common.css\";document.head.appendChild(link)})();document.currentScript.textContent=document.currentScript.textContent.replace(/\\/\\*start\\*\\/(.*)\\/\\*end\\*\\//g,\"\");/*end*/window.dataLayer ="
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "jamaicanfoodsandrecipes.com",
+      "jamesandcatrin.com",
+      "jamjarkitchen.com",
+      "japanese-names.info",
+      "jaroflemons.com",
+      "jaycoowners.com",
+      "jaysbrickblog.com",
+      "jcookingodyssey.com",
+      "jenneatsgoood.com",
+      "jenniferbanz.com",
+      "jerseydigs.com",
+      "jesshuff.com",
+      "jessicagavin.com",
+      "jetpunk.com",
+      "jetsxfactor.com",
+      "jigsawexplorer.com",
+      "jobsinfootball.com",
+      "jocooks.com",
+      "jolynneshane.com",
+      "josephwriteranderson.com",
+      "joshuaweissman.com",
+      "jototheworld.com",
+      "joybauer.com",
+      "joyfilledeats.com",
+      "joyfoodsunshine.com",
+      "joyfulhealthyeats.com",
+      "joyfullymad.com",
+      "joyofmotioncrochet.com",
+      "joyousapron.com",
+      "joythebaker.com",
+      "joyusgarden.com",
+      "juliapacheco.com",
+      "juliasalbum.com",
+      "juliemarieeats.com",
+      "jumbleanswer.com",
+      "justamumnz.com",
+      "justapinch.com",
+      "justataste.com",
+      "justfreshkicks.com",
+      "justinesnacks.com",
+      "justonecookbook.com",
+      "justsotasty.com",
+      "justweather.org",
+      "jz-eats.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "jeepforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "kia-forums.com",
+      "kiaownersclub.co.uk",
+      "knittingparadise.com",
+      "kugaownersclub.co.uk"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "kaaltv.com",
+      "katheats.com",
+      "kathleenscravings.com",
+      "kathrynskitchenblog.com",
+      "katiescucina.com",
+      "kawalingpinoy.com",
+      "kdnuggets.com",
+      "keepingitsimpleblog.com",
+      "keepthescore.com",
+      "keeptradecut.com",
+      "ketocookingchristian.com",
+      "keviniscooking.com",
+      "keystoneforums.com",
+      "keytomylime.com",
+      "kiddingaroundgreenville.com",
+      "kidfriendlythingstodo.com",
+      "kidsactivitiesblog.com",
+      "kimchimari.com",
+      "kimscravings.com",
+      "kindlyunspoken.com",
+      "kingshotcalculator.com",
+      "kingshotdata.com",
+      "kingshotoptimizer.com",
+      "kirbiecravings.com",
+      "kirstenhollowaydesigns.com",
+      "kitchenathoskins.com",
+      "kitchenconfidante.com",
+      "kitchendivas.com",
+      "kitchenfunwithmy3sons.com",
+      "kitchenknifeforums.com",
+      "kitchensanctuary.com",
+      "kitchenseer.com",
+      "kitchentreaty.com",
+      "knowing-jesus.com",
+      "kob.com",
+      "kpople.net",
+      "kpreps.com",
+      "krogerkrazy.com",
+      "krollskorner.com",
+      "kstp.com",
+      "kyleecooks.com",
+      "kylieminteriors.ca"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "kinobox.cz"
+    ],
+    "name": "ubo-prevent-innerHTML",
+    "args": [
+      "script",
+      ".cmd.unshift"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "kio.ac"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "HTMLScriptElement.prototype.onload",
+      "undefined"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "km77.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "await new Promise"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "km77.com",
+      "onlineradiobox.com",
+      "timeful.app",
+      "willyweather.*"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "&&window,"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "ladysavings.com",
+      "lakemchenryscanner.com",
+      "lakersdaily.com",
+      "lambertslately.com",
+      "lanascooking.com",
+      "landcruiserforum.com",
+      "laughingplace.com",
+      "laughingspatula.com",
+      "laughingsquid.com",
+      "laurafuentes.com",
+      "laurenfromscratch.com",
+      "laurenslatest.com",
+      "lawandcrime.com",
+      "laylita.com",
+      "lazyadmin.nl",
+      "lazycatkitchen.com",
+      "leagueofgraphs.com",
+      "leasehackr.com",
+      "lecremedelacrumb.com",
+      "leelalicious.com",
+      "legacy-wow.com",
+      "legendsofamerica.com",
+      "leitesculinaria.com",
+      "lemonblossoms.com",
+      "lemonsandzest.com",
+      "letthebakingbegin.com",
+      "letthemeatgfcake.com",
+      "lexiscleankitchen.com",
+      "life-in-the-lofthouse.com",
+      "lifeasastrawberry.com",
+      "lifecurrentsblog.com",
+      "lifeloveandgoodfood.com",
+      "lifeloveandsugar.com",
+      "lifemadesimplebakes.com",
+      "lifemadesweeter.com",
+      "lifestyleofafoodie.com",
+      "lifewiththecrustcutoff.com",
+      "liftvault.com",
+      "liliputing.com",
+      "lillieeatsandtells.com",
+      "lilluna.com",
+      "lindsaypleskot.com",
+      "linuxize.com",
+      "listverse.com",
+      "littlebinsforlittlehands.com",
+      "littlehousebigalaska.com",
+      "littlespicejar.com",
+      "littlespoonfarm.com",
+      "littlesugarsnaps.com",
+      "littlesunnykitchen.com",
+      "littlesweetbaker.com",
+      "liveeatlearn.com",
+      "liveforlivemusic.com",
+      "livesimply.me",
+      "livingcost.org",
+      "livingrichwithcoupons.com",
+      "lmld.org",
+      "longrangehunting.com",
+      "lorcanaplayer.com",
+      "loremipsum.io",
+      "lotteryusa.com",
+      "lovableloops.com",
+      "loveandlemons.com",
+      "lovefromtheoven.com",
+      "lovelifeyarn.com",
+      "lovelydelites.com",
+      "lovelygreens.com",
+      "lovemeow.com",
+      "lowcarbspark.com",
+      "lsathacks.com",
+      "lsd.law",
+      "luxurylaunches.com",
+      "lynnswayoflife.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "lawnsite.com",
+      "lotustalk.com",
+      "lumberjocks.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -90902,12 +96161,1262 @@
   },
   {
     "hostnames": [
+      "lostcoastoutpost.com"
+    ],
+    "name": "ubo-aost",
+    "args": [
+      "decodeURI",
+      "CACHE"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "lostcoastoutpost.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\.cmd\\.unshift|adblockerDisabled/",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "m.economictimes.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "objVc.ad_shield_wap",
+      "undefined"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "m.economictimes.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "m14forum.com",
+      "marlinowners.com",
+      "mazda3revolution.com",
+      "menstennisforums.com",
+      "michigan-sportsman.com",
+      "mountainbuzz.com",
+      "mtbr.com",
+      "mytractorforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "maangchi.com",
+      "machinelearningmastery.com",
+      "machiningdoctor.com",
+      "macrumors.com",
+      "madaboutfood.co",
+      "madaboutmacarons.com",
+      "madden-school.com",
+      "maddysavenue.com",
+      "madewithlau.com",
+      "maebells.com",
+      "makeanddocrew.com",
+      "makeit-loveit.com",
+      "makeitdairyfree.com",
+      "maketecheasier.com",
+      "makingthymeforhealth.com",
+      "mallorythedietitian.com",
+      "mamagourmand.com",
+      "mamainastitch.com",
+      "mamaknowsglutenfree.com",
+      "mamalovesfood.com",
+      "mamanatural.com",
+      "manforhimself.com",
+      "mangiawithmichele.com",
+      "mapcrunch.com",
+      "maplejubilee.com",
+      "mapleleafshotstove.com",
+      "mapmaster.io",
+      "marathonhandbook.com",
+      "marcandangel.com",
+      "marcellinaincucina.com",
+      "mariashriversundaypaper.com",
+      "maricruzavalos.com",
+      "marijuanamoment.net",
+      "marineinsight.com",
+      "marlybird.com",
+      "marvel.church",
+      "marvelrivals.gg",
+      "marvelsnapzone.com",
+      "maryswholelife.com",
+      "mashed.com",
+      "masonfit.com",
+      "matchsimulator.com",
+      "matchthememory.com",
+      "math-salamanders.com",
+      "mathcracker.com",
+      "mathler.com",
+      "mathmonks.com",
+      "mathwarehouse.com",
+      "mattadlard.com",
+      "mattsfitchef.com",
+      "mealprepify.com",
+      "mealprepmanual.com",
+      "meaningfuleats.com",
+      "meatloafandmelodrama.com",
+      "meaww.com",
+      "mech9.com",
+      "mediaite.com",
+      "mediatakeout.com",
+      "medievalists.net",
+      "melaniecooks.com",
+      "melissaknorris.com",
+      "melissassouthernstylekitchen.com",
+      "mellysews.com",
+      "melskitchencafe.com",
+      "merriam-webster.com",
+      "meta-chart.com",
+      "mexicoenmicocina.com",
+      "mgevs.com",
+      "miakouppa.com",
+      "michaelfairmantv.com",
+      "mickeyvisit.com",
+      "midgetmomma.com",
+      "midwestfoodieblog.com",
+      "mindfulmocktail.com",
+      "minecraftforum.net",
+      "minecraftmaps.com",
+      "minimalistbaker.com",
+      "ministryofcurry.com",
+      "missallieskitchen.com",
+      "missinthekitchen.com",
+      "mixandmatchmama.com",
+      "mjandhungryman.com",
+      "mjsoffthehookdesigns.com",
+      "mmo-champion.com",
+      "mobafire.com",
+      "mobilesuitarena.com",
+      "mochimommy.com",
+      "mocoshow.com",
+      "modernfarmhouseeats.com",
+      "modernhoney.com",
+      "modpodgerocksblog.com",
+      "momcrieff.com",
+      "momfoodie.com",
+      "mommyhatescooking.com",
+      "mommyonpurpose.com",
+      "mommyshomecooking.com",
+      "momontimeout.com",
+      "momooze.com",
+      "momscravings.com",
+      "momsdinner.net",
+      "momsdish.com",
+      "moneysavingmom.com",
+      "moneywise.com",
+      "monologueblogger.com",
+      "mooglyblog.com",
+      "moonandspoonandyum.com",
+      "motorbiscuit.com",
+      "motorious.com",
+      "motormatchup.com",
+      "mp1st.com",
+      "msfsaddons.com",
+      "mtgazone.com",
+      "mtgdecks.net",
+      "mtgsalvation.com",
+      "munchiesbymallory.com",
+      "munchinwithmaddie.blog",
+      "munchygoddess.com",
+      "murphysmultiverse.com",
+      "musiccoder.com",
+      "mut.gg",
+      "muybuenoblog.com",
+      "muydelish.com",
+      "muzzleloadingforum.com",
+      "mybakingaddiction.com",
+      "mybartender.com",
+      "mycolombianrecipes.com",
+      "mydinner.co.uk",
+      "myeverydaytable.com",
+      "myfederalretirement.com",
+      "myfooddata.com",
+      "myfoodstory.com",
+      "mygolfspy.com",
+      "mygorgeousrecipes.com",
+      "mygrandrv.com",
+      "myheartbeets.com",
+      "myheavenlyrecipes.com",
+      "myhomemaderoots.com",
+      "myincrediblerecipes.com",
+      "mykidslickthebowl.com",
+      "mykoreankitchen.com",
+      "mylatinatable.com",
+      "mylifeelsewhere.com",
+      "mymodernmet.com",
+      "myquietkitchen.com",
+      "myriadrecipes.com",
+      "mysavings.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "macwelt.de",
+      "macworld.com",
+      "pcworld.com",
+      "pcwelt.de",
+      "techadvisor.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "window.admiral",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mail.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AppBootstrapData.__initializeFeatures__.adshieldAdblockRecovery.enabled",
+      "false"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mail.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AppBootstrapData.__initializeFeatures__.adshieldAdblockRecovery.enabled",
+      "false",
+      "runAt",
+      "interactive"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mail.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AppBootstrapData.config.adshieldAdblockRecovery",
+      "false"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mail.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AppBootstrapData.config.adshieldAdblockRecovery",
+      "false",
+      "runAt",
+      "interactive"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mail.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AppBootstrapData.config.adshieldNativeAdRecovery",
+      "false"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mail.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AppBootstrapData.config.adshieldNativeAdRecovery",
+      "false",
+      "runAt",
+      "interactive"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mail.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AppState.reduxState.features.adshieldAdblockRecovery",
+      "false"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mail.yahoo.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AppState.reduxState.features.adshieldAdblockRecovery",
+      "false",
+      "runAt",
+      "interactive"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "pickleball.com",
+      "pickleballtournaments.com",
+      "ppatour.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mandiner.hu"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "Object.prototype.htmlLoadScriptService.loadScript",
+      "noopFunc"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "melaterevancha.com",
+      "resultadostris.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "await eval"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "melaterevancha.com",
+      "resultadostris.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mlbpark.donga.com"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      "content-loader.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mountain-forecast.com",
+      "snow-forecast.com",
+      "surf-forecast.com",
+      "tide-forecast.com",
+      "weather-forecast.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      ".cmd.unshift",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "mountain-forecast.com",
+      "snow-forecast.com",
+      "surf-forecast.com",
+      "tide-forecast.com",
+      "weather-forecast.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "[]).push(arguments)",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "nanascraftyhome.com",
+      "natashalh.com",
+      "natashaskitchen.com",
+      "naturallieplantbased.com",
+      "navylookout.com",
+      "nbadraftroom.com",
+      "neighborfoodblog.com",
+      "newengland.com",
+      "newser.com",
+      "nflperry.com",
+      "nhltraderumors.me",
+      "nickishomemadecrafts.com",
+      "nickiswift.com",
+      "nickskitchen.com",
+      "nikke.gg",
+      "nikkisplate.com",
+      "nishkitchen.com",
+      "njwoodsandwater.com",
+      "noblepig.com",
+      "nofilmschool.com",
+      "nomnompaleo.com",
+      "noracooks.com",
+      "nordichook.com",
+      "norecipes.com",
+      "norinesnest.com",
+      "northsidebaseball.com",
+      "noshingwiththenolands.com",
+      "nosweatshakespeare.com",
+      "notateslaapp.com",
+      "nourish-and-fete.com",
+      "nourishedbynic.com",
+      "nourishmovelove.com",
+      "novelgames.com",
+      "nowgeorgia.com",
+      "number-2-pencil.com",
+      "numstheword.com",
+      "nutritiontofit.com",
+      "nycforfree.co",
+      "nytbee.com",
+      "nytcrossword.org",
+      "nytcrosswordanswers.org",
+      "nywoodsandwater.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "neowin.net",
+      "newatlas.com",
+      "nextchessmove.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "head.appendChild.bind"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "neowin.net",
+      "newatlas.com",
+      "tz.de"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      "[native code]",
+      "500"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "netzwelt.de"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "window.myAd.runAd",
+      "noopFunc"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "notebookcheck.*",
+      "notebookcheck-hu.com",
+      "notebookcheck-ru.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "&&window,"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "notebookcheck.*",
+      "notebookcheck-hu.com",
+      "notebookcheck-ru.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "ohsheglows.com",
+      "ohsweetbasil.com",
+      "okonomikitchen.com",
+      "oldest.org",
+      "oldhousesunder100k.com",
+      "oldhousesunder50k.com",
+      "oldhousesusa.com",
+      "olgasflavorfactory.com",
+      "oliveandmango.com",
+      "olivesnthyme.com",
+      "olivetomato.com",
+      "omegaforums.net",
+      "omgchocolatedesserts.com",
+      "omnivorescookbook.com",
+      "on3.com",
+      "onceuponachef.com",
+      "onedishkitchen.com",
+      "onegoodthingbyjillee.com",
+      "onehappybite.com",
+      "onelittleproject.com",
+      "onelovelylife.com",
+      "onepiece.gg",
+      "onesweetappetite.com",
+      "online-solitaire.com",
+      "onlinemictest.com",
+      "onlyinyourstate.com",
+      "onmykidsplate.com",
+      "onolicioushawaii.com",
+      "oombawkadesigncrochet.com",
+      "orangebloods.com",
+      "organizedisland.com",
+      "origamiway.com",
+      "osxdaily.com",
+      "ourbestbites.com",
+      "ournourishingtable.com",
+      "oursaltykitchen.com",
+      "outagescope.com",
+      "overframe.gg",
+      "overthefirecooking.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "odyclub.com",
+      "ohiogamefishing.com",
+      "overclock.net"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "optionsprofitcalculator.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\(async\\(\\)=>\\{try\\{(const|var)/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "personalitycafe.com",
+      "peugeotforums.com",
+      "piloteers.org",
+      "polestar-forum.com",
+      "powerstroke.org"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "packinsider.com",
+      "paleorunningmomma.com",
+      "panlasangpinoy.com",
+      "pantrymama.com",
+      "papertraildesign.com",
+      "parametric-architecture.com",
+      "passionatecrafter.com",
+      "patsfans.com",
+      "pcguide.com",
+      "pd2.tools",
+      "peakbagger.com",
+      "peasandcrayons.com",
+      "peelwithzeal.com",
+      "pennantchase.com",
+      "percolately.com",
+      "persnicketyplates.com",
+      "personalitymax.com",
+      "pewterreport.com",
+      "phillyvoice.com",
+      "physicianassistantforum.com",
+      "pickerwheel.com",
+      "pickledplum.com",
+      "picksandparlays.net",
+      "pickyeaterblog.com",
+      "piesandtacos.com",
+      "piloncilloyvainilla.com",
+      "pinchandswirl.com",
+      "pinchofyum.com",
+      "pipandebby.com",
+      "pipingpotcurry.com",
+      "pistolsfiringblog.com",
+      "pivotalweather.com",
+      "pkmncards.com",
+      "plainchicken.com",
+      "plantbaes.com",
+      "plantbasedonabudget.com",
+      "plantbasedrdblog.com",
+      "plantyou.com",
+      "platedcravings.com",
+      "platingsandpairings.com",
+      "playpartyplan.com",
+      "playswellwithbutter.com",
+      "plowingthroughlife.com",
+      "pluggedingolf.com",
+      "pocus101.com",
+      "poemanalysis.com",
+      "pokedata.io",
+      "pokemon-zone.com",
+      "pokemoncard.io",
+      "pokemoncoders.com",
+      "pokequestrecipes.me",
+      "polkadotchair.com",
+      "pookspantry.com",
+      "populationpyramid.net",
+      "populationpyramids.org",
+      "popville.com",
+      "porofessor.gg",
+      "positivepsychology.com",
+      "powerhungry.com",
+      "practicallyhomemade.com",
+      "practicalselfreliance.com",
+      "preciouscore.com",
+      "preppykitchen.com",
+      "preschoolplayandlearn.com",
+      "pressurecookrecipes.com",
+      "prettyprovidence.com",
+      "prettysimplesweet.com",
+      "pricescope.com",
+      "primaverakitchen.com",
+      "primermagazine.com",
+      "princesspinkygirl.com",
+      "printablesforlife.com",
+      "printabulls.com",
+      "profootballnetwork.com",
+      "protoolreviews.com",
+      "prudentpennypincher.com",
+      "psychologyjunkie.com",
+      "ptcgpocket.gg",
+      "pumpkinnspice.com",
+      "punchbowl.com",
+      "pupswithchopsticks.com",
+      "purelykaylie.com",
+      "purseblog.com",
+      "puzzlepagecheats.com",
+      "puzzles-to-print.com",
+      "puzzleseveryday.com",
+      "pynative.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "pc-builds.com",
+      "today.com",
+      "wrestlinginc.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "admiral",
+      "noopFunc"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "pcgamebenchmark.com",
+      "pcgamesn.com",
+      "pockettactics.com",
+      "wargamer.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "()=>eval"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "pcgamebenchmark.com",
+      "pcgamesn.com",
+      "pockettactics.com",
+      "wargamer.com"
+    ],
+    "name": "blank-setattribute-value",
+    "args": [
+      "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "sporcle.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\\.cmd\\.unshift|adblockerDisabled/",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "prydwen.gg"
+    ],
+    "name": "ubo-json-prune-fetch-response",
+    "args": [
+      "ads",
+      "",
+      "propsToMatch",
+      "/runtime-config"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "queue-times.com",
+      "quizwise.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "rangerovers.net",
+      "rav4world.com",
+      "renaultforums.co.uk",
+      "ridgelineownersclub.com",
+      "rimfirecentral.com",
+      "rugerforum.net",
+      "rzrforums.net"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "rachaelsgoodeats.com",
+      "rachelcooks.com",
+      "rachlmansfield.com",
+      "radiokorea.com",
+      "raffamusadesigns.com",
+      "raiderking.com",
+      "raidersbeat.com",
+      "rainbownourishments.com",
+      "rainbowplantlife.com",
+      "rakskitchen.net",
+      "ram-rho.com",
+      "ram-trx.com",
+      "ramforum.com",
+      "random.country",
+      "randomgenerators.com",
+      "randymajors.org",
+      "ranker.com",
+      "ratracerebellion.com",
+      "rctalk.com",
+      "rdr2.org",
+      "realfoodwholelife.com",
+      "realfoodwithsarah.com",
+      "realgreekrecipes.com",
+      "realhousemoms.com",
+      "realmenrealstyle.com",
+      "realsimplegood.com",
+      "recipegirl.com",
+      "recipesthatcrock.com",
+      "recipeteacher.com",
+      "recipethis.com",
+      "recipetineats.com",
+      "redcurrantbakery.com",
+      "redhousespice.com",
+      "redtedart.com",
+      "religiousforums.com",
+      "reluctantentertainer.com",
+      "repeatcrafterme.com",
+      "resetera.com",
+      "restlesschipotle.com",
+      "retailshout.com",
+      "richtexturescrochet.com",
+      "riftbound.gg",
+      "riftdecks.com",
+      "riftmana.com",
+      "rivertenkitchen.com",
+      "rocketryforum.com",
+      "rockyourhomeschool.net",
+      "rogallylife.com",
+      "rogerebert.com",
+      "rosebakes.com",
+      "rotoballer.com",
+      "rulergame.net",
+      "runbundle.com",
+      "runeterrafire.com",
+      "runningshoesguru.com",
+      "runningtothekitchen.com",
+      "runtothefinish.com",
+      "russellstreetreport.com",
+      "russianmachineneverbreaks.com",
+      "rvforum.net",
+      "rvlife.com",
+      "rvtravel.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "indiatimes.com",
+      "missyusa.com"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      "error-report.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "ranker.com"
+    ],
+    "name": "ubo-aeld",
+    "args": [
+      "/admiral/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
       "ranker.com"
     ],
     "name": "ubo-set",
     "args": [
       "admiral",
       "undefined"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "ranker.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "runtimeConfig.AM_PATH",
+      "undefined"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "relogioonline.com.br"
+    ],
+    "name": "ubo-acs",
+    "args": [
+      "btoa",
+      "_contentWindow"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "reuters.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adshieldScript"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "salmonfishingforum.com",
+      "saxontheweb.net",
+      "shipsnostalgia.com",
+      "shotgunworld.com",
+      "sigtalk.com",
+      "silveradosierra.com",
+      "skyscrapercity.com",
+      "slkworld.com",
+      "slotforum.com",
+      "speakev.com",
+      "speypages.com",
+      "subaruforester.org",
+      "subaruoutback.org",
+      "survivalistboards.com",
+      "suzuki-forums.com",
+      "swedespeed.com"
+    ],
+    "name": "ubo-ra",
+    "args": [
+      "onerror",
+      "script[id][onerror]",
+      "asap",
+      "quitAfter",
+      "10"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "salmonfishingforum.com",
+      "saxontheweb.net",
+      "shipsnostalgia.com",
+      "shotgunworld.com",
+      "sigtalk.com",
+      "silveradosierra.com",
+      "skyscrapercity.com",
+      "slkworld.com",
+      "slotforum.com",
+      "speakev.com",
+      "speypages.com",
+      "subaruforester.org",
+      "subaruoutback.org",
+      "survivalistboards.com",
+      "suzuki-forums.com",
+      "swedespeed.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "sailorbailey.com",
+      "sallysbakingaddiction.com",
+      "saltandbaker.com",
+      "samdoesherbest.com",
+      "samoaobserver.ws",
+      "sarahsvegankitchen.com",
+      "sarahtitus.com",
+      "savingadvice.com",
+      "savingdessert.com",
+      "savoringitaly.com",
+      "savoringthegood.com",
+      "savoryexperiments.com",
+      "savoryspin.com",
+      "savvysavingcouple.net",
+      "scam-detector.com",
+      "scatteredthoughtsofacraftymom.com",
+      "science-sparks.com",
+      "sciencefacts.net",
+      "scienceofpeople.com",
+      "scientificallysweet.com",
+      "seahawks.net",
+      "seasonsandsuppers.ca",
+      "sedecordle.com",
+      "seededatthetable.com",
+      "seekatesew.com",
+      "seekinggoodeats.com",
+      "selfdecode.com",
+      "selfproclaimedfoodie.com",
+      "senseandedibility.com",
+      "septle.com",
+      "seriesgraph.com",
+      "servsafepracticetest.com",
+      "sewcanshe.com",
+      "sewguide.com",
+      "shaneandsimple.com",
+      "sharktankblog.com",
+      "shoppingtelly.com",
+      "shotkit.com",
+      "shouldwewatch.com",
+      "silkroadrecipes.com",
+      "silodrome.com",
+      "silverrecyclers.com",
+      "simmerandsage.com",
+      "simple-nourished-living.com",
+      "simple-veganista.com",
+      "simpleeverydaymom.com",
+      "simplejoy.com",
+      "simplicityandastarter.com",
+      "simply-delicious-food.com",
+      "simplycanning.com",
+      "simplyhappenings.com",
+      "simplyhappyfoodie.com",
+      "simplyhomecooked.com",
+      "simplylakita.com",
+      "simplyquinoa.com",
+      "simplyscratch.com",
+      "simplystacie.net",
+      "simplywhisked.com",
+      "simscommunity.info",
+      "sinfullyspicy.com",
+      "singingcarrots.com",
+      "sipandfeast.com",
+      "sipbitego.com",
+      "sixmanfootball.com",
+      "sixtyandme.com",
+      "sizzlingeats.com",
+      "sketchok.com",
+      "skinnyfitalicious.com",
+      "skinnytaste.com",
+      "skiptomylou.org",
+      "slashfilm.com",
+      "slashgear.com",
+      "slenderkitchen.com",
+      "slowcookerclub.com",
+      "slowcookermeals.com",
+      "smalltownwoman.com",
+      "smartschoolhouse.com",
+      "smitefire.com",
+      "smokedbbqsource.com",
+      "smokinandgrillinwitab.com",
+      "smoking-meat.com",
+      "smokingmeatforums.com",
+      "smoothdraw.com",
+      "snap.fan",
+      "sneakerfiles.com",
+      "snootysims.com",
+      "snowest.com",
+      "soapcentral.com",
+      "soapoperadigest.com",
+      "soapoperamagazine.com",
+      "soapoperanetwork.com",
+      "somethingnutritiousblog.com",
+      "somuchfoodblog.com",
+      "soulfullymade.com",
+      "southernbite.com",
+      "southerndiscourse.com",
+      "southernplate.com",
+      "spanishsabores.com",
+      "spatuladesserts.com",
+      "spendwithpennies.com",
+      "spicedblog.com",
+      "spiceupthecurry.com",
+      "spicysouthernkitchen.com",
+      "spoonforkbacon.com",
+      "spoonfulofflavor.com",
+      "sporked.com",
+      "sportscardforum.com",
+      "spotifystats.com",
+      "spreadsheetpoint.com",
+      "sprinklebakes.com",
+      "sprinklesandsprouts.com",
+      "stageagent.com",
+      "starterstory.com",
+      "stateofdinner.com",
+      "statsalt.com",
+      "statscrew.com",
+      "stayfitmom.com",
+      "steampoweredfamily.com",
+      "steelersdepot.com",
+      "stellanspice.com",
+      "stephaniessweets.com",
+      "stephreallife.com",
+      "stereogum.com",
+      "sticktothemodel.com",
+      "stitchbyfay.com",
+      "stitching-together.com",
+      "stockcharts.com",
+      "stocktitan.net",
+      "storyberries.com",
+      "strandsgame.me",
+      "streetstylis.com",
+      "stripedspatula.com",
+      "studyfinds.com",
+      "stylebyemilyhenderson.com",
+      "suebeehomemaker.com",
+      "sugarandcharm.com",
+      "sugarandsoul.co",
+      "sugarandsparrow.com",
+      "sugarapron.com",
+      "sugarfreelondoner.com",
+      "sugargeekshow.com",
+      "sugarhero.com",
+      "sugarmaplefarmhouse.com",
+      "sugarologie.com",
+      "sugarsaltmagic.com",
+      "sugarspunrun.com",
+      "sulaandspice.com",
+      "summle.net",
+      "sundayschoolzone.com",
+      "sundaysuppermovement.com",
+      "superage.com",
+      "supercars.net",
+      "supercheats.com",
+      "supergoldenbakes.com",
+      "superhealthykids.com",
+      "superherojacked.com",
+      "svg.com",
+      "sweetandsavorybyshinee.com",
+      "sweetandsavorymeals.com",
+      "sweetashoney.co",
+      "sweetcsdesigns.com",
+      "sweetestmenu.com",
+      "sweetlittlebluebird.com",
+      "sweetlycakes.com",
+      "sweetpeasandsaffron.com",
+      "sweetpeaskitchen.com",
+      "sweetsimplevegan.com",
+      "sweetsofties.com",
+      "sweetteaandthyme.com",
+      "swgoh.gg",
+      "swtorista.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "savvytime.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "\"nowprocket\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "scribd.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "adShieldError"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "scrumpoker-online.org"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "Object.prototype._adShieldLoaded",
+      "true"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "si.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "\"https://html-load.com/loader.min.js\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "singjupost.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "domain=?eventId=&error="
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "sparkchess.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.cc"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -90922,6 +97431,769 @@
       "",
       "sedCount",
       "1"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "talkaboutmarriage.com",
+      "talkclassical.com",
+      "tennisforum.com",
+      "theakforum.net",
+      "thecombineforum.com",
+      "theflyfishingforum.com",
+      "thewatchforum.co.uk",
+      "tivocommunity.com",
+      "toyotanation.com",
+      "tradtalk.com",
+      "trapshooters.com",
+      "trifive.com",
+      "triumphrat.net",
+      "ttforum.co.uk"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "tablefortwoblog.com",
+      "talesfromthekitchenshed.com",
+      "talkandroid.com",
+      "talkbass.com",
+      "tanga.com",
+      "tarateaspoon.com",
+      "tarotgoddess.com",
+      "tasteandtellblog.com",
+      "tastefullygrace.com",
+      "tasteofartisan.com",
+      "tastesbetterfromscratch.com",
+      "tasteslovely.com",
+      "tastesoflizzyt.com",
+      "tastingtable.com",
+      "tastyoven.com",
+      "tatyanaseverydayfood.com",
+      "tcdb.com",
+      "tdalabamamag.com",
+      "teachbesideme.com",
+      "teaforturmeric.com",
+      "teakandthyme.com",
+      "techwiser.com",
+      "temeculablogs.com",
+      "temptalia.com",
+      "tennisworldusa.org",
+      "texanerin.com",
+      "textfixer.com",
+      "thatgirlcookshealthy.com",
+      "thatlowcarblife.com",
+      "the-bella-vita.com",
+      "the-digital-picture.com",
+      "the-girl-who-ate-everything.com",
+      "the5krunner.com",
+      "thealmondeater.com",
+      "theartofdoingstuff.com",
+      "thebakermama.com",
+      "thebakingchocolatess.com",
+      "thebalancednutritionist.com",
+      "thebananadiaries.com",
+      "thebatavian.com",
+      "thebaynet.com",
+      "thebeachhousekitchen.com",
+      "thebensonstreet.com",
+      "thebestideasforkids.com",
+      "thebestketorecipes.com",
+      "thebigmansworld.com",
+      "theblondcook.com",
+      "theburntbuttertable.com",
+      "thebusybaker.ca",
+      "thebutteryfairytale.com",
+      "thecafesucrefarine.com",
+      "thecaffeinatedsnail.com",
+      "thecaglediaries.com",
+      "thecalculatorsite.com",
+      "thecarefreekitchen.com",
+      "thecatsite.com",
+      "theclassicvaluer.com",
+      "thecleaneatingcouple.com",
+      "theclevercarrot.com",
+      "theclevermeal.com",
+      "thecollector.com",
+      "thecollegeinvestor.com",
+      "theconsciousplantkitchen.com",
+      "thecookful.com",
+      "thecookiedoughdiaries.com",
+      "thecookierookie.com",
+      "thecookinchicks.com",
+      "thecookingfoodie.com",
+      "thecookingjar.com",
+      "thecountrycook.net",
+      "thecozyapron.com",
+      "thecraftpatchblog.com",
+      "thecrafttrain.com",
+      "thecrazycraftlady.com",
+      "thedebrief.org",
+      "thedefineddish.com",
+      "thediaryofarealhousewife.com",
+      "thediggings.com",
+      "thedinkpickleball.com",
+      "thedinnerbite.com",
+      "thedizzycook.com",
+      "thedomesticrebel.com",
+      "theeastcoastkitchen.com",
+      "theeburgerdude.com",
+      "theendlessmeal.com",
+      "thefamilyfoodkitchen.com",
+      "thefamilyfreezer.com",
+      "thefeatherednester.com",
+      "thefedoralounge.com",
+      "thefirstmess.com",
+      "thefirstyearblog.com",
+      "theflavorbender.com",
+      "theflavoursofkitchen.com",
+      "thefoodcharlatan.com",
+      "thefoodhussy.com",
+      "thefoodietakesflight.com",
+      "theforkedspoon.com",
+      "thefreshcooky.com",
+      "thefriendlyredfox.com",
+      "thefrugalgirls.com",
+      "thegirlinspired.com",
+      "thegirlonbloor.com",
+      "theglutenfreeaustrian.com",
+      "thegoodride.com",
+      "thegraciouswife.com",
+      "thegraphicsfairy.com",
+      "thegreekfoodie.com",
+      "thegunnysack.com",
+      "thehappierhomemaker.com",
+      "thehiddenveggies.com",
+      "thehonoursystem.com",
+      "thehoopsgeek.com",
+      "theimpulsivebuy.com",
+      "theirishmanswife.com",
+      "thejudge13.com",
+      "thekitchengirl.com",
+      "thekitchenmagpie.com",
+      "thelazydish.com",
+      "thelemonbowl.com",
+      "thelifejolie.com",
+      "thelist.com",
+      "thelittleblogofvegan.com",
+      "theloopylamb.com",
+      "theloopywhisk.com",
+      "themagicalslowcooker.com",
+      "themediterraneandish.com",
+      "themeparkinsider.com",
+      "themodernnonna.com",
+      "themodernproper.com",
+      "themodestman.com",
+      "themom100.com",
+      "themuse.com",
+      "thenaturalnurturer.com",
+      "thenerdstash.com",
+      "thenewcamera.com",
+      "thenicolechase.com",
+      "theoi.com",
+      "theoldhouselife.com",
+      "theoregondietitian.com",
+      "theottoolbox.com",
+      "thepancakeprincess.com",
+      "theperfectfrench.com",
+      "theperfectloaf.com",
+      "theplantbasedschool.com",
+      "therealfooddietitians.com",
+      "therecipecritic.com",
+      "thereciperebel.com",
+      "therecipewell.com",
+      "thereisfoodathome.com",
+      "thereviewgeek.com",
+      "theriagames.com",
+      "theroastedroot.net",
+      "theroyalforums.com",
+      "theroyalobserver.com",
+      "theruntesters.com",
+      "thesaltedsweets.com",
+      "thesaltycooker.com",
+      "thesaltymarshmallow.com",
+      "thescranline.com",
+      "theseasonedmom.com",
+      "theseoldcookbooks.com",
+      "theshaderoom.com",
+      "theshadowleague.com",
+      "thesimpleparent.com",
+      "theskinnyishdish.com",
+      "thesoccermomblog.com",
+      "thesouthernladycooks.com",
+      "thespeckledpalate.com",
+      "thesqueakymixer.com",
+      "thestayathomechef.com",
+      "thesugarfreediva.com",
+      "thetakeout.com",
+      "thetarotguide.com",
+      "thevegspace.co.uk",
+      "theviewfromgreatisland.com",
+      "theweeklyad.com",
+      "thewholecook.com",
+      "thewholesomedish.com",
+      "thewoksoflife.com",
+      "thewoodenskillet.com",
+      "theworkathomewoman.com",
+      "theyummybowl.com",
+      "thisdelicioushouse.com",
+      "thisdishisvegetarian.com",
+      "thisfarmgirlcooks.com",
+      "thisisreno.com",
+      "thisitaliankitchen.com",
+      "thisjess.com",
+      "thisoldbaker.com",
+      "thisreadingmama.com",
+      "thissavoryvegan.com",
+      "thissillygirlskitchen.com",
+      "thistlewoodfarms.com",
+      "thorforums.com",
+      "thoughtcatalog.com",
+      "threadsmonthly.com",
+      "thriftyfrugalmom.com",
+      "thriftytraveler.com",
+      "thrivinghomeblog.com",
+      "thrivinginparenting.com",
+      "throughthefibrofog.com",
+      "thurrott.com",
+      "tiaclara.com",
+      "ticotimes.net",
+      "tidefans.com",
+      "tideking.com",
+      "tideschart.com",
+      "tiffycooks.com",
+      "tipranks.com",
+      "tjrwrestling.net",
+      "tlycblog.com",
+      "togetherasfamily.com",
+      "top40weekly.com",
+      "topsecretrecipes.com",
+      "tornadopath.com",
+      "tortoiseforum.org",
+      "totallythebomb.com",
+      "toucharcade.com",
+      "touringplans.com",
+      "toyhabits.com",
+      "tractorbynet.com",
+      "traderie.com",
+      "travellemming.com",
+      "travelmath.com",
+      "trawlerforum.com",
+      "treasurenet.com",
+      "triedandtruerecipe.com",
+      "troprockin.com",
+      "true-north-kitchen.com",
+      "truity.com",
+      "trumpexcel.com",
+      "tryhardguides.com",
+      "tsipracticetest.com",
+      "tuner.ninja",
+      "turbli.com",
+      "tvline.com",
+      "tvovermind.com",
+      "twinsdaily.com",
+      "twobrokewatchsnobs.com",
+      "twokooksinthekitchen.com",
+      "twoofwands.com",
+      "twopeasandtheirpod.com",
+      "twoplaidaprons.com",
+      "twopurplefigs.com",
+      "twosisterscrafting.com",
+      "typerush.com",
+      "typinggames.zone"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "techcrunch.com"
+    ],
+    "name": "ubo-aeld",
+    "args": [
+      "error",
+      ".indexOf"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "techcrunch.com"
+    ],
+    "name": "ubo-aeld",
+    "args": [
+      "load",
+      ".indexOf"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "techcrunch.com"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      ".indexOf"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "theaustralian.com.au"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "[]).push(arguments)",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "theaustralian.com.au"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "admiral",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "thegatewaypundit.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "__apNoHold"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "thenerdstash.com"
+    ],
+    "name": "ubo-acs",
+    "args": [
+      "String.prototype.match",
+      "__adblocker",
+      "/^data:/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "thingiverse.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/:\\\"length\\\"\\}\\);$/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "tmz.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "loadAdmiralJs"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "umamigirl.com",
+      "unboundwellness.com",
+      "uncovercolorado.com",
+      "unicode-explorer.com",
+      "unicornsinthekitchen.com",
+      "unofficialnetworks.com",
+      "unscramble.me",
+      "unscramble.org",
+      "unscramblerer.com",
+      "unscramblex.com",
+      "upstateramblings.com",
+      "upworthy.com",
+      "urbanblisslife.com",
+      "urbancowgirllife.com",
+      "urbanfarmandkitchen.com",
+      "urbanfarmie.com",
+      "usethinkscript.com",
+      "utahsadventurefamily.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "uberpeople.net",
+      "uk-muscle.co.uk"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "usatoday.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "gnt.u.z",
+      "true"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "vintage-mustang.com",
+      "vwvortex.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "valentinascorner.com",
+      "vancouverwithlove.com",
+      "vandymania.com",
+      "vanillaandbean.com",
+      "vanillabeancuisine.com",
+      "veenaazmanov.com",
+      "veganricha.com",
+      "vegetablerecipes.com",
+      "vegrecipesofindia.com",
+      "veronikaskitchen.com",
+      "vickypham.com",
+      "videochums.com",
+      "vikalinka.com",
+      "vincenzosplate.com",
+      "vintagekitchennotes.com",
+      "vintageleatherjackets.org",
+      "virtualdrumming.com",
+      "visualcapitalist.com",
+      "vivcrochets.com",
+      "voronoiapp.com",
+      "voyagela.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "watchuseek.com",
+      "worldseafishing.com",
+      "wranglerforum.com",
+      "wrestlingforum.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "walderwellness.com",
+      "walkingonsunshinerecipes.com",
+      "wandercooks.com",
+      "watchers.news",
+      "wdio.com",
+      "wdw-magazine.com",
+      "wdwmagic.com",
+      "wdwnt.com",
+      "webbikeworld.com",
+      "webisjericho.com",
+      "weddingpioneer.com",
+      "weddlegame.com",
+      "wellnessbykay.com",
+      "wellplated.com",
+      "wellseasonedstudio.com",
+      "wendypolisi.com",
+      "wgrv.com",
+      "whatgreatgrandmaate.com",
+      "whatismyelevation.com",
+      "whatmollymade.com",
+      "whatnow.com",
+      "whatsgabycooking.com",
+      "whatsinthepan.com",
+      "whatsmomcookin.com",
+      "whatsonglasgow.co.uk",
+      "whattocooktoday.com",
+      "whec.com",
+      "whereismyspoon.co",
+      "whiskaffair.com",
+      "whiskeyriff.com",
+      "whiteonricecouple.com",
+      "whitneybond.com",
+      "wholefully.com",
+      "wholelottayum.com",
+      "wholesomelicious.com",
+      "wholesomeyum.com",
+      "whollytasteful.com",
+      "wideopencountry.com",
+      "wildriftfire.com",
+      "wilmade.com",
+      "windingcreekranch.org",
+      "windingroadcrochet.com",
+      "windowsreport.com",
+      "winnersandwhiners.com",
+      "winsipedia.com",
+      "wired2fish.com",
+      "withinhours.com",
+      "wnyt.com",
+      "womangettingmarried.com",
+      "womansworld.com",
+      "women.com",
+      "wonderfuldiy.com",
+      "wonkywonderful.com",
+      "woodshopdiaries.com",
+      "word500.com",
+      "wordbrain.info",
+      "wordcollectanswers.com",
+      "wordconnect.info",
+      "wordcookies.info",
+      "worddb.com",
+      "wordhikehelp.com",
+      "wordmaker.info",
+      "wordnerd.co",
+      "wordsaladgame.com",
+      "wordscapeshelp.com",
+      "wordtrip.net",
+      "worksheetplace.com",
+      "worldhistory.org",
+      "worldofcardgames.com",
+      "worldofprintables.com",
+      "worldpopulationreview.com",
+      "wrestlecrap.com",
+      "wrestleview.com",
+      "wrestlinginc.com",
+      "writingexercises.co.uk",
+      "wyseguide.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "walterfootball.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/window\\.admiral|adblockerDisabled/",
+      "excludes",
+      ",\\\""
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "weatherzone.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "Object.prototype.removeAdScripts",
+      "true"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "weerplaza.nl"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/:\\[?window,/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "welt.de"
+    ],
+    "name": "ubo-no-fetch-if",
+    "args": [
+      "-load.com/script/",
+      "length:101"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "welt.de"
+    ],
+    "name": "ubo-nostif",
+    "args": [
+      ")](this,...",
+      "3000-6000"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "wetter.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/wcomAdBlock|error-report\\.com/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "whatismyip.com"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "__disableAds",
+      "true"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "wikily.gg"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "nowprocket",
+      "excludes",
+      "self.__next"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "winfuture.de"
+    ],
+    "name": "ubo-aeld",
+    "args": [
+      "load",
+      "error-report.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "worldhistory.org"
+    ],
+    "name": "ubo-set",
+    "args": [
+      "AHE.is_member",
+      "1"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "www.yahoo.com"
+    ],
+    "name": "ubo-prevent-innerHTML",
+    "args": [
+      "script",
+      "/error-report|nowprocket/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "xoxobella.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "yellowbullet.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "html-load.com"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "yaycoloringpages.com",
+      "yellowblissroad.com",
+      "younghouselove.com",
+      "yourastrologyreading.com",
+      "yourfreecareertest.com",
+      "yourhomebasedmom.com",
+      "yourteenmag.com",
+      "yourtherapysource.com",
+      "yummyaddiction.com",
+      "yummyhealthyeasy.com",
+      "yummytoddlerfood.com",
+      "yummytummyaarthi.com",
+      "yupitsvegan.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
+      "zestfulkitchen.com",
+      "zhangcatherine.com",
+      "zipgameonline.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/__adblocker|html-load/"
     ],
     "ruleset": "ruleset_antiadmiral"
   }

@@ -1,7 +1,7 @@
 [
   {
     "id": 1242987,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -18,7 +18,7 @@
   },
   {
     "id": 1487210,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -38,7 +38,7 @@
   },
   {
     "id": 394919,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -55,7 +55,7 @@
   },
   {
     "id": 296051,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -72,7 +72,7 @@
   },
   {
     "id": 144954,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -92,7 +92,7 @@
   },
   {
     "id": 438303,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -113,7 +113,7 @@
   },
   {
     "id": 353110,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -135,7 +135,7 @@
   },
   {
     "id": 1900157,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -155,7 +155,7 @@
   },
   {
     "id": 717243,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -176,7 +176,7 @@
   },
   {
     "id": 943691,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -196,7 +196,7 @@
   },
   {
     "id": 822804,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -217,7 +217,7 @@
   },
   {
     "id": 598114,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -237,7 +237,7 @@
   },
   {
     "id": 12610,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -258,7 +258,7 @@
   },
   {
     "id": 1218106,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -279,7 +279,7 @@
   },
   {
     "id": 332138,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -300,7 +300,7 @@
   },
   {
     "id": 191785,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -320,7 +320,7 @@
   },
   {
     "id": 1961700,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -340,7 +340,7 @@
   },
   {
     "id": 597592,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -360,7 +360,7 @@
   },
   {
     "id": 1583692,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -380,7 +380,7 @@
   },
   {
     "id": 23191,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -401,7 +401,7 @@
   },
   {
     "id": 218106,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -421,7 +421,7 @@
   },
   {
     "id": 1365208,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -441,7 +441,7 @@
   },
   {
     "id": 1257763,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -458,7 +458,7 @@
   },
   {
     "id": 1357617,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -478,7 +478,7 @@
   },
   {
     "id": 670442,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {

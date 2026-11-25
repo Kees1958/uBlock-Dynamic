@@ -1,7 +1,7 @@
 [
   {
     "id": 1948215,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "block"
     },
@@ -941,7 +941,7 @@
   },
   {
     "id": 21181,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "block"
     },
@@ -1001,7 +1001,7 @@
   },
   {
     "id": 440218,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "block"
     },

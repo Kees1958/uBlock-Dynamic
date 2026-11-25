@@ -1,0 +1,141 @@
+[
+  {
+    "id": 796360,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "||ads.adthrive.com/abd/abd.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 284871,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||asloader.tz.de^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1678583,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mlbpark.donga.com"
+      ],
+      "urlFilter": "||content-loader.com/loader.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1322222,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "carscoops.com",
+        "cruciverba.it",
+        "dziennik.pl",
+        "flatpanelshd.com",
+        "gazetaprawna.pl",
+        "issuya.com",
+        "logicieleducatif.fr",
+        "maketecheasier.com",
+        "motscroises.fr",
+        "mynet.com",
+        "onlinegdb.com",
+        "pressian.com",
+        "sportsseoul.com",
+        "text-compare.com",
+        "w.grapps.me",
+        "wetter.com",
+        "wfmz.com",
+        "winfuture.de",
+        "worldhistory.org"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 86634,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "indiatimes.com",
+        "missyusa.com"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 606456,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "neowin.net"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1187924,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||web-kit.io^",
+      "isUrlFilterCaseSensitive": false
+    }
+  }
+]

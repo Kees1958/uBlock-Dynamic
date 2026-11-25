@@ -9,7 +9,7 @@
 // Public interface: parseBlockRule, parseRemoveparamRules
 // Dependencies: see the imports below (strictly acyclic; no module imports one that imports it).
 import { SITE_MODE_OPTIONS, RETIRED_SITE_MODE_OPTIONS } from '../../js/util/site-mode-parser.js';
-import { STATIC_FILTER_LIST_PRIORITY, STATIC_IMPORTANT_PRIORITY_OFFSET } from '../../js/core/dnr-budgets.js';
+import { STATIC_EXCEPTION_PRIORITY_OFFSET, STATIC_FILTER_LIST_PRIORITY, STATIC_IMPORTANT_PRIORITY_OFFSET, STATIC_REDIRECT_PRIORITY_OFFSET } from '../../js/core/dnr-budgets.js';
 import { droppedWildcardDomains, expandedWildcardDomains, topSitesSet } from './build-state.mjs';
 import { topSiteDomainsByName } from './crux-top-sites.mjs';
 import { isTLDKept } from './tld-scope.mjs';
@@ -96,6 +96,15 @@ function badfilterNotBlockReason(actionType) {
 const EXEMPT_OPTION_FLAGS = Object.freeze({
     [SITE_MODE_OPTIONS.WORRYFREE]:   'worryfreeExempt',
 });
+
+// (11.1.3) The step a compiled rule takes above its list's own priority — see STATIC_*_PRIORITY_OFFSET.
+const STATIC_EXCEPTION_ACTION_TYPES = Object.freeze([ 'allow', 'allowAllRequests' ]);
+function staticPriorityOffset(action, important) {
+    if ( important ) { return STATIC_IMPORTANT_PRIORITY_OFFSET; }
+    if ( STATIC_EXCEPTION_ACTION_TYPES.includes(action?.type) ) { return STATIC_EXCEPTION_PRIORITY_OFFSET; }
+    if ( action?.type === 'redirect' ) { return STATIC_REDIRECT_PRIORITY_OFFSET; }
+    return 0;
+}
 
 export function parseBlockRule(line, id, priority = STATIC_FILTER_LIST_PRIORITY, options = {}) {
     const t = line.trim();
@@ -252,8 +261,9 @@ export function parseBlockRule(line, id, priority = STATIC_FILTER_LIST_PRIORITY,
         return { id, priority: options.badfilterPriority ?? priority, action: { type: 'allow' }, condition };
     }
 
-    // (10.7.6, owner's decision) "$important": above this list's own "@@" exceptions (STATIC_IMPORTANT_PRIORITY_OFFSET).
-    return { id, priority: important ? priority + STATIC_IMPORTANT_PRIORITY_OFFSET : priority, action, condition };
+    // (10.7.6 / 11.1.3, owner's decisions) The order within this list's tier (js/core/dnr-budgets.js):
+    // block < $redirect < "@@" exception < "$important".
+    return { id, priority: priority + staticPriorityOffset(action, important), action, condition };
 }
 
 /******************************************************************************/

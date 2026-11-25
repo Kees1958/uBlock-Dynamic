@@ -9,6 +9,7 @@
         'trusted-create-element':         [ -1 ],   // parent, tag, attributes, text
         'trusted-set-attr':               [ 2 ],    // selector, attribute, VALUE
         'set-attr':                       [ 2 ],
+        'set-data-attr':                  [ 2 ],    // (11.1.3) project scriptlet: selector, data-attribute, VALUE
         'trusted-replace-argument':       [ 2 ],    // method, index, VALUE, pattern
         'trusted-replace-node-text':      [ 3 ],    // node, text match, pattern, REPLACEMENT
         'trusted-replace-fetch-response': [ 1 ],    // pattern, REPLACEMENT

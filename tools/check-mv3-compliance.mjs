@@ -23,7 +23,7 @@
 // Pure read of the tree (plus in-memory fixtures) — nothing to initialise, clear or release.
 import fs from 'fs';
 import path from 'path';
-import { SCRIPTLET_POLICY, isBlockedScriptletFamily, isTrustedScriptletSource, requiresTrust, scriptletPolicyViolation, scriptletRuleRejection, scriptletViolationAnySource } from '../js/data/scriptlet-policy.js';
+import { SCRIPTLET_POLICY, isBlockedScriptletFamily, isTrustedScriptletSource, requiresTrust, safeReplacementFor, scriptletPolicyViolation, scriptletRuleRejection, scriptletViolationAnySource } from '../js/data/scriptlet-policy.js';
 import { applyScriptletTrustGate } from './build/fetch-helpers.mjs';
 import { convertUboScriptletSyntax } from './build/ubo-scriptlet-syntax.mjs';
 import { DISPATCH_LAYOUT_CONFIG, decodeDispatchSource, decodeLibrarySource, encodeDispatchTables, renderScriptletFile } from './build/scriptlet-dispatch-layout.mjs';
@@ -34,6 +34,26 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 
 // ── CONFIG (every example, path and pattern of this check, one place) ─────────
 const CHECK_CONFIG = Object.freeze({
+    // (11.1.3) Rule A's safe replacement: a uAssets Ad-Shield line (shape of uAssets filters-general.txt), a
+    // trusted-replace-argument that inserts a real value (stays dropped), and what the gate must leave.
+    SAFE_REPLACEMENT: Object.freeze({
+        REPLACEABLE:     "a.com,b.com##+js(trusted-replace-argument, Element.prototype.setAttribute, 1, , condition, '/error-report|&&window,|adShieldError/')",
+        NOT_REPLACEABLE: 'c.com##+js(trusted-replace-argument, document.getElementById, 0, json:"freestar-bootstrap", condition, adblock)',
+        EXPECTED:        `a.com,b.com#%#//scriptlet('${SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME}', '/error-report|&&window,|adShieldError/')`,
+        // [ trusted name, args, expected { name, args } or null ] — shapes seen in uAssets (2026-11-25).
+        SHAPES: P => [
+            [ 'trusted-set-local-storage-item', [ 'pbs_action_time', P.NOW_VALUE_TOKEN ], { name: P.SET_STORAGE_ITEM_NOW_NAME, args: [ P.STORAGE_KINDS.LOCAL, 'pbs_action_time' ] } ],
+            [ 'trusted-set-session-storage-item', [ 'lastAdTime', P.NOW_VALUE_TOKEN ], { name: P.SET_STORAGE_ITEM_NOW_NAME, args: [ P.STORAGE_KINDS.SESSION, 'lastAdTime' ] } ],
+            [ 'trusted-set-local-storage-item', [ 'dvt_p_ts', `[${P.NOW_VALUE_TOKEN}]` ], null ],
+            [ 'trusted-set-attr', [ 'body', 'data-allok', 'y' ], { name: P.SET_DATA_ATTR_NAME, args: [ 'body', 'data-allok', 'y' ] } ],
+            [ 'trusted-set-attr', [ 'img', 'onerror', 'y' ], null ],
+            [ 'trusted-set-cookie', [ 'stpdsck', '1' ], { name: P.TWINS['trusted-set-cookie'].twin, args: [ 'stpdsck', '1' ] } ],
+            [ 'trusted-set-constant', [ 'ConFig.config.ads', 'json:{"pause":{"state":{}}}' ], null ],
+            [ 'trusted-set-local-storage-item', [ 'gtv_adfree_status_v1', '{"active":true}' ], null ],
+            [ 'trusted-set-cookie-reload', [ 's', '180,,4,,a' ], null ],
+            [ 'trusted-click-element', [ 'button' ], null ],
+        ],
+    }),
     // The rule Chrome Web Store rejected (2026-10-23), verbatim arguments.
     REJECTED_RULE: Object.freeze({ name: 'trusted-create-element', args: [ 'head', 'script', '',
         '(()=>{window.addEventListener("load",(()=>{document.querySelector(".vsly-player")&&(()=>{const e=document.createElement("script");e.id="xieg6Sie",e.src="https://cdn.viously.com/js/sdk/boot.js",document.head.appendChild(e)})()}));})();' ] }),
@@ -152,6 +172,37 @@ function checkTrustGate() {
     expect(gated.includes('b.com#%#'), 'gate: ordinary scriptlet dropped');
     expect(gated.includes('d.com#@%#'), 'gate: exception line dropped (it runs nothing)');
     expect(applyScriptletTrustGate(CHECK_CONFIG.ADGUARD_URL, text) === text, 'gate: AdGuard Team source changed');
+    // (11.1.3) Safe replacement: the exact uAssets Ad-Shield shape becomes the project scriptlet; any other shape of the
+    // same trusted scriptlet (a real value to insert) is still dropped.
+    const S = CHECK_CONFIG.SAFE_REPLACEMENT;
+    const replaced = applyScriptletTrustGate(CHECK_CONFIG.NON_ADGUARD_URL, [ S.REPLACEABLE, S.NOT_REPLACEABLE ].join('\n'));
+    expect(replaced === S.EXPECTED, `gate: safe replacement wrong — got ${JSON.stringify(replaced).slice(0, 300)}`);
+    // (11.1.3) The same step for an AdGuard-syntax line (EasyList anti-adblock writes those): host scope kept as written.
+    const agLine = "x.com,~y.x.com#%#//scriptlet('trusted-set-cookie', 'consent', '1')";
+    const agWant = `x.com,~y.x.com#%#//scriptlet('${SCRIPTLET_POLICY.TWINS['trusted-set-cookie'].twin}', 'consent', '1')`;
+    expect(applyScriptletTrustGate(CHECK_CONFIG.NON_ADGUARD_URL, agLine) === agWant, 'gate: AdGuard-syntax trusted line with a safe twin not replaced');
+    const safe = safeReplacementFor('ubo-trusted-replace-argument', [ 'Element.prototype.setAttribute', '1', '', 'condition', '/x/' ]);
+    expect(safe !== null && safe.name === SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME && safe.args.length === 1 && safe.args[0] === '/x/',
+        'policy: safe replacement not found for the alias spelling ubo-trusted-replace-argument');
+    expect(safeReplacementFor('trusted-replace-argument', [ 'Element.prototype.setAttribute', '1', 'x', 'condition', '/x/' ]) === null,
+        'policy: a trusted-replace-argument that INSERTS a value got a safe replacement');
+    expect(safeReplacementFor('trusted-replace-argument', [ 'Element.prototype.setAttribute', '1', '', 'condition', '' ]) === null,
+        'policy: safe replacement given for an empty pattern');
+    expect(scriptletRuleRejection('trusted-replace-argument', [ 'Element.prototype.setAttribute', '1', '', 'condition', '/x/' ])
+        .includes(SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME), 'policy: own-rule message does not name the safe replacement');
+    expect(scriptletPolicyViolation(SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME, [ '/x/' ]) === null && requiresTrust(SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME) === false,
+        'policy: the safe replacement scriptlet itself is refused');
+    // (11.1.3) The other replacement shapes, and what must stay refused.
+    const P = SCRIPTLET_POLICY;
+    for ( const [ name, args, want ] of CHECK_CONFIG.SAFE_REPLACEMENT.SHAPES(P) ) {
+        const got = safeReplacementFor(name, args);
+        expect(JSON.stringify(got) === JSON.stringify(want), `policy: safeReplacementFor(${name}, ${JSON.stringify(args).slice(0, 80)}) -> ${JSON.stringify(got)}, expected ${JSON.stringify(want)}`);
+    }
+    for ( const safeName of [ P.SET_STORAGE_ITEM_NOW_NAME, P.SET_DATA_ATTR_NAME, ...Object.values(P.TWINS).map(t => t.twin) ] ) {
+        expect(requiresTrust(safeName) === false, `policy: replacement ${safeName} itself needs trust`);
+    }
+    expect(scriptletPolicyViolation(P.SET_DATA_ATTR_NAME, [ 'body', 'data-x', 'https://x.example/' ]) === P.REASON_EXTERNAL_RESOURCE,
+        'policy (rule C): set-data-attr value is not checked as an inserted value (serialized name out of step with SCRIPTLET_POLICY)');
     expect(/return applyScriptletTrustGate\(url, await fetchListText\(url\)\);/.test(readText('tools/build/fetch-helpers.mjs')),
         'wiring: fetchList() does not pass its downloads through applyScriptletTrustGate()');
 }

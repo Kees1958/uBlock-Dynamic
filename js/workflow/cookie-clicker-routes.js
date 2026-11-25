@@ -58,7 +58,7 @@ import {
     resumeAfterPicker,
     expirePickerResumeFallback,
 } from '../core/cookie-clicker-autodeny-manager.js';
-import { catchExpected, EXPECTED_ERRORS } from '../data/expected-errors.js';
+import { catchExpected, EXPECTED_ERRORS, isExpectedError, PAGE_INJECTION_EXPECTED_ERRORS } from '../data/expected-errors.js';
 
 // (10.7.1) AUTO_DENY_BUNDLE_PATH removed: the immediate-apply executeScript call below takes the same bundle the
 // session registration uses (scripting-manager.js), from the one shared source js/data/cookie-banner-action.js —
@@ -525,7 +525,11 @@ export async function injectSeamlessPrompt(tabId, label) {
             target: { tabId },
         });
     } catch (reason) {
-        console.error(`[uBlock-Dynamic] ${label} executeScript FAILED, tabId=`, tabId, reason);
+        // (11.1.3) A page Chrome never lets an extension script (the Chrome Web Store, an error page) or a tab that
+        // went away is an expected outcome (PAGE_INJECTION_EXPECTED_ERRORS, C5 rule 1), not an error: not logged.
+        if ( isExpectedError(reason, PAGE_INJECTION_EXPECTED_ERRORS) === false ) {
+            console.error(`[uBlock-Dynamic] ${label} executeScript FAILED, tabId=`, tabId, reason);
+        }
         return { ok: false, error: String(reason?.message ?? reason) };
     }
     return { ok: true, action: 'launched' };

@@ -816,7 +816,7 @@ await run('87. Hover text has no internal code references', () => {
 });
 
 // (11.0.0, owner's decision) EFF Privacy Badger "needed" hosts stop the four Seamless tracker lists from breaking sites:
-// cookieblock only, exact host, at the tracker lists' priority, never lifting another list's block.
+// cookieblock only, exact host, at the tracker lists' "@@" step, never lifting another list's block.
 await run('88. Privacy Badger unbreak — needed hosts excepted for the tracker lists only', () => {
     execFileSync(process.execPath, [ 'tools/test-privacy-badger-unbreak.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
@@ -853,6 +853,12 @@ await run('93. Tier direction — downward imports only, no route file imports a
 // DDG Tracker Radar = low, none = unknown — rule, shipped-data parse, per-tier examples, load/release, display.
 await run('94. DNR tracking filter Break risk — rule, shipped data, lifecycle, every verdict displayable', () => {
     execFileSync(process.execPath, [ 'tools/test-breakage-risk.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+
+// (11.1.3, owner's decision) Anti-Admiral takes uBlock Origin's whole Admiral and Ad-Shield sections: preprocessor as
+// uBO Lite on Chromium, section bounds, missing-section guard, and rule A's safe replacement in the trust gate.
+await run('95. Anti-Admiral — uAssets Admiral/Ad-Shield sections, MV3 preprocessor, safe scriptlet replacement', () => {
+    execFileSync(process.execPath, [ 'tools/test-anti-admiral-sections.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
 
 // ── Summary ───────────────────────────────────────────────────────────

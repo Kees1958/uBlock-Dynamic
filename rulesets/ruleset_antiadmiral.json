@@ -1,6 +1,3354 @@
 [
   {
-    "id": 1901440,
+    "id": 1068084,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/.api/admiral",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 191136,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "addictinggames.com",
+        "ev.io",
+        "fantasyfootballscout.co.uk",
+        "gameknot.com",
+        "icy-veins.com",
+        "plan.livefpl.net",
+        "pocketgamer.com",
+        "poe-vault.com",
+        "probuildstats.com",
+        "thesimsresource.com",
+        "tracklock.gg",
+        "u.gg"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/[a-z]{3,}\\.[a-z]{7,}\\.[a-z]{2,4}\\/([^\\/]+\\/)+[-_a-zA-Z0-9]{11,}$",
+      "isUrlFilterCaseSensitive": true
+    }
+  },
+  {
+    "id": 1852617,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "azlyrics.com",
+        "izurvive.com",
+        "kprofiles.com",
+        "nextchessmove.com",
+        "relogioonline.com.br",
+        "reneweconomy.com.au",
+        "telegraph.co.uk",
+        "vclock.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/[a-z]{3,}\\.[a-z]{7,}\\.[a-z]{2,4}\\/([^\\/]+\\/)+[-_a-zA-Z0-9]{11,}$",
+      "isUrlFilterCaseSensitive": true
+    }
+  },
+  {
+    "id": 901997,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "4runner6g.com",
+        "bronco6g.com",
+        "civicxi.com",
+        "cybertruckownersclub.com",
+        "f150gen14.com",
+        "f150lightningforum.com",
+        "jeepgladiatorforum.com",
+        "jlwranglerforums.com",
+        "macheforum.com",
+        "mavericktruckclub.com",
+        "mustang6g.com",
+        "mustang7g.com",
+        "ranger5g.com",
+        "ranger6g.com",
+        "rivianforums.com",
+        "slateforums.com",
+        "supramkv.com",
+        "tacoma4g.com",
+        "taycanforum.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/[a-z]{3,}\\.[a-z]{7,}\\.[a-z]{2,4}\\/([^\\/]+\\/)+[-_a-zA-Z0-9]{5,10}$",
+      "isUrlFilterCaseSensitive": true
+    }
+  },
+  {
+    "id": 826191,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "az-online.de",
+        "base64decode.org",
+        "carsized.com",
+        "euronews.com",
+        "fandom.com",
+        "fr.de",
+        "index.hr",
+        "spanjevandaag.com",
+        "urldecoder.org"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/[a-z]{3,}\\.[a-z]{7,}\\.[a-z]{2,4}\\/([^\\/]+\\/)+[-_a-zA-Z0-9]{5,10}$",
+      "isUrlFilterCaseSensitive": true
+    }
+  },
+  {
+    "id": 1979967,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "emisoras-puertorico.com",
+        "emisorascolombianas.co",
+        "fmradiofree.com",
+        "internetradio-horen.de",
+        "internetradio-schweiz.ch",
+        "mytuner-radio.com",
+        "radio-ao-vivo.com",
+        "radio-australia.org",
+        "radio-belgie.be",
+        "radio-danmark.dk",
+        "radio-dominicana.com",
+        "radio-ecuador.org",
+        "radio-en-ligne.fr",
+        "radio-en-vivo.mx",
+        "radio-espana.es",
+        "radio-hrvatska.com",
+        "radio-italiane.it",
+        "radio-maroc.org",
+        "radio-nederland.nl",
+        "radio-norge.org",
+        "radio-osterreich.at",
+        "radio-philippines.com",
+        "radio-polska.pl",
+        "radio-singapore.com",
+        "radio-sveriges.se",
+        "radio-thai.com",
+        "radio-ua.com",
+        "radio-uk.co.uk",
+        "radioindonesia.org",
+        "radiojapan.org",
+        "radiomalaysia.org",
+        "radios-argentinas.org",
+        "radios-bolivia.com",
+        "radios-chilenas.com",
+        "radios-guatemala.com",
+        "radios-online.pt",
+        "radios-uruguay.com",
+        "radios-venezuela.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/[a-z]{3,}\\.[a-z]{7,}\\.[a-z]{2,4}\\/([^\\/]+\\/)+[-_a-zA-Z0-9]{5,10}$",
+      "isUrlFilterCaseSensitive": true
+    }
+  },
+  {
+    "id": 866863,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/admiral/script",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 218249,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "urlFilter": "/htdocs/js/admiral/init.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1297505,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "worldhistory.org"
+      ],
+      "urlFilter": "/loader.min.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 596995,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/polite-msg-js/|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 90762,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "excludedInitiatorDomains": [
+        "lilly.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/scripts/delayed.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1300344,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mail.yahoo.com"
+      ],
+      "urlFilter": "/shadow/*adshield",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 262390,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/wp-content/client-mu-plugins/pmd-ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 774834,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "/wp-json/navy/v*/tag?pid=",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1546203,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "mail.yahoo.com"
+      ],
+      "urlFilter": "/ybar/mail.yahoo.com/*adshield",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 998927,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "mail.yahoo.com"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "/ybar/mail.yahoo.com/_t/ahr0c*",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1084060,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "artforum.com",
+        "artnews.com",
+        "bgr.com",
+        "billboard.com",
+        "deadline.com",
+        "goldderby.com",
+        "hollywoodreporter.com",
+        "indiewire.com",
+        "robbreport.com",
+        "rollingstone.com",
+        "sportico.com",
+        "sxsw.com",
+        "tvline.com",
+        "variety.com",
+        "vibe.com",
+        "wwd.com"
+      ],
+      "excludedRequestDomains": [
+        "ai",
+        "amazonaws.com",
+        "ampproject.org",
+        "app-mind.com",
+        "apple.com",
+        "au",
+        "awswaf.com",
+        "be",
+        "bootstrapcdn.com",
+        "br",
+        "cdn-apple.com",
+        "ch",
+        "cloudflare.com",
+        "co.jp",
+        "co.uk",
+        "com.au",
+        "com.br",
+        "cookiebot.com",
+        "cookielaw.org",
+        "cz",
+        "dailymotion.com",
+        "de",
+        "disqus.com",
+        "dk",
+        "edu",
+        "es",
+        "facebook.com",
+        "fr",
+        "global-roam.com",
+        "google.com",
+        "googleapis.com",
+        "gov",
+        "gstatic.com",
+        "hr",
+        "inmobi.com",
+        "instagram.com",
+        "io",
+        "jp",
+        "jquery.com",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "media",
+        "musixmatch.com",
+        "myshoptet.com",
+        "net",
+        "nl",
+        "onesignal.com",
+        "onetrust.com",
+        "org.au",
+        "paypal.com",
+        "paypalobjects.com",
+        "pl",
+        "powerbeans-ai.com",
+        "primis.tech",
+        "privacy-center.org",
+        "privacy-mgmt.com",
+        "recurly.com",
+        "ru",
+        "spot.im",
+        "tiktok.com",
+        "tinypass.com",
+        "tv",
+        "twitter.com",
+        "uk",
+        "uservoice.com",
+        "wp.com",
+        "x.com",
+        "youtube.com",
+        "yumpu.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "://*/*/*/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 105399,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "4runner6g.com",
+        "bronco6g.com",
+        "civicxi.com",
+        "cybertruckownersclub.com",
+        "f150gen14.com",
+        "f150lightningforum.com",
+        "jeepgladiatorforum.com",
+        "jlwranglerforums.com",
+        "macheforum.com",
+        "mavericktruckclub.com",
+        "mustang6g.com",
+        "mustang7g.com",
+        "ranger5g.com",
+        "ranger6g.com",
+        "rivianforums.com",
+        "slateforums.com",
+        "supramkv.com",
+        "tacoma4g.com",
+        "taycanforum.com"
+      ],
+      "excludedRequestDomains": [
+        "ai",
+        "amazonaws.com",
+        "ampproject.org",
+        "app-mind.com",
+        "apple.com",
+        "au",
+        "awswaf.com",
+        "be",
+        "bootstrapcdn.com",
+        "br",
+        "cdn-apple.com",
+        "ch",
+        "cloudflare.com",
+        "co.jp",
+        "co.uk",
+        "com.au",
+        "com.br",
+        "cookiebot.com",
+        "cookielaw.org",
+        "cz",
+        "dailymotion.com",
+        "de",
+        "disqus.com",
+        "dk",
+        "edu",
+        "es",
+        "facebook.com",
+        "fr",
+        "global-roam.com",
+        "google.com",
+        "googleapis.com",
+        "gov",
+        "gstatic.com",
+        "hr",
+        "inmobi.com",
+        "instagram.com",
+        "io",
+        "jp",
+        "jquery.com",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "media",
+        "musixmatch.com",
+        "myshoptet.com",
+        "net",
+        "nl",
+        "onesignal.com",
+        "onetrust.com",
+        "org.au",
+        "paypal.com",
+        "paypalobjects.com",
+        "pl",
+        "powerbeans-ai.com",
+        "primis.tech",
+        "privacy-center.org",
+        "privacy-mgmt.com",
+        "recurly.com",
+        "ru",
+        "spot.im",
+        "tiktok.com",
+        "tinypass.com",
+        "tv",
+        "twitter.com",
+        "uk",
+        "uservoice.com",
+        "wp.com",
+        "x.com",
+        "youtube.com",
+        "yumpu.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "://*/*/*/*.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 854868,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "az-online.de",
+        "azlyrics.com",
+        "base64decode.org",
+        "carsized.com",
+        "dictionary.cambridge.org",
+        "euronews.com",
+        "fandom.com",
+        "fr.de",
+        "gumtree.com",
+        "index.hr",
+        "izurvive.com",
+        "kprofiles.com",
+        "nextchessmove.com",
+        "oxfordlearnersdictionaries.com",
+        "relogioonline.com.br",
+        "reneweconomy.com.au",
+        "spanjevandaag.com",
+        "telegraph.co.uk",
+        "urldecoder.org",
+        "vclock.com"
+      ],
+      "excludedRequestDomains": [
+        "ai",
+        "amazonaws.com",
+        "ampproject.org",
+        "app-mind.com",
+        "apple.com",
+        "au",
+        "awswaf.com",
+        "be",
+        "bootstrapcdn.com",
+        "br",
+        "cdn-apple.com",
+        "ch",
+        "cloudflare.com",
+        "co.jp",
+        "co.uk",
+        "com.au",
+        "com.br",
+        "cookiebot.com",
+        "cookielaw.org",
+        "cz",
+        "dailymotion.com",
+        "de",
+        "disqus.com",
+        "dk",
+        "edu",
+        "es",
+        "facebook.com",
+        "fr",
+        "global-roam.com",
+        "google.com",
+        "googleapis.com",
+        "gov",
+        "gstatic.com",
+        "hr",
+        "inmobi.com",
+        "instagram.com",
+        "io",
+        "jp",
+        "jquery.com",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "media",
+        "musixmatch.com",
+        "myshoptet.com",
+        "net",
+        "nl",
+        "onesignal.com",
+        "onetrust.com",
+        "org.au",
+        "paypal.com",
+        "paypalobjects.com",
+        "pl",
+        "powerbeans-ai.com",
+        "primis.tech",
+        "privacy-center.org",
+        "privacy-mgmt.com",
+        "recurly.com",
+        "ru",
+        "spot.im",
+        "tiktok.com",
+        "tinypass.com",
+        "tv",
+        "twitter.com",
+        "uk",
+        "uservoice.com",
+        "wp.com",
+        "x.com",
+        "youtube.com",
+        "yumpu.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "://*/*/*/*.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1830656,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "calgaryherald.com",
+        "calgarysun.com",
+        "canoe.com",
+        "driving.ca",
+        "edmontonjournal.com",
+        "edmontonsun.com",
+        "financialpost.com",
+        "intelligencer.ca",
+        "leaderpost.com",
+        "lfpress.com",
+        "montrealgazette.com",
+        "nationalpost.com",
+        "ottawacitizen.com",
+        "ottawasun.com",
+        "recorder.ca",
+        "standard-freeholder.com",
+        "theprovince.com",
+        "thestarphoenix.com",
+        "thewhig.com",
+        "timminspress.com",
+        "tj.news",
+        "torontosun.com",
+        "vancouversun.com",
+        "windsorstar.com",
+        "winnipegsun.com"
+      ],
+      "excludedRequestDomains": [
+        "ai",
+        "amazonaws.com",
+        "ampproject.org",
+        "app-mind.com",
+        "apple.com",
+        "au",
+        "awswaf.com",
+        "be",
+        "bootstrapcdn.com",
+        "br",
+        "cdn-apple.com",
+        "ch",
+        "cloudflare.com",
+        "co.jp",
+        "co.uk",
+        "com.au",
+        "com.br",
+        "cookiebot.com",
+        "cookielaw.org",
+        "cz",
+        "dailymotion.com",
+        "de",
+        "disqus.com",
+        "dk",
+        "edu",
+        "es",
+        "facebook.com",
+        "fr",
+        "global-roam.com",
+        "google.com",
+        "googleapis.com",
+        "gov",
+        "gstatic.com",
+        "hr",
+        "inmobi.com",
+        "instagram.com",
+        "io",
+        "jp",
+        "jquery.com",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "media",
+        "musixmatch.com",
+        "myshoptet.com",
+        "net",
+        "nl",
+        "onesignal.com",
+        "onetrust.com",
+        "org.au",
+        "paypal.com",
+        "paypalobjects.com",
+        "pl",
+        "powerbeans-ai.com",
+        "primis.tech",
+        "privacy-center.org",
+        "privacy-mgmt.com",
+        "recurly.com",
+        "ru",
+        "spot.im",
+        "tiktok.com",
+        "tinypass.com",
+        "tv",
+        "twitter.com",
+        "uk",
+        "uservoice.com",
+        "wp.com",
+        "x.com",
+        "youtube.com",
+        "yumpu.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "://*/*/*/*.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 172457,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "emisoras-puertorico.com",
+        "emisorascolombianas.co",
+        "fmradiofree.com",
+        "internetradio-horen.de",
+        "internetradio-schweiz.ch",
+        "mytuner-radio.com",
+        "radio-ao-vivo.com",
+        "radio-australia.org",
+        "radio-belgie.be",
+        "radio-danmark.dk",
+        "radio-dominicana.com",
+        "radio-ecuador.org",
+        "radio-en-ligne.fr",
+        "radio-en-vivo.mx",
+        "radio-espana.es",
+        "radio-hrvatska.com",
+        "radio-italiane.it",
+        "radio-maroc.org",
+        "radio-nederland.nl",
+        "radio-norge.org",
+        "radio-osterreich.at",
+        "radio-philippines.com",
+        "radio-polska.pl",
+        "radio-singapore.com",
+        "radio-sveriges.se",
+        "radio-thai.com",
+        "radio-ua.com",
+        "radio-uk.co.uk",
+        "radioindonesia.org",
+        "radiojapan.org",
+        "radiomalaysia.org",
+        "radios-argentinas.org",
+        "radios-bolivia.com",
+        "radios-chilenas.com",
+        "radios-guatemala.com",
+        "radios-online.pt",
+        "radios-uruguay.com",
+        "radios-venezuela.com"
+      ],
+      "excludedRequestDomains": [
+        "ai",
+        "amazonaws.com",
+        "ampproject.org",
+        "app-mind.com",
+        "apple.com",
+        "au",
+        "awswaf.com",
+        "be",
+        "bootstrapcdn.com",
+        "br",
+        "cdn-apple.com",
+        "ch",
+        "cloudflare.com",
+        "co.jp",
+        "co.uk",
+        "com.au",
+        "com.br",
+        "cookiebot.com",
+        "cookielaw.org",
+        "cz",
+        "dailymotion.com",
+        "de",
+        "disqus.com",
+        "dk",
+        "edu",
+        "es",
+        "facebook.com",
+        "fr",
+        "global-roam.com",
+        "google.com",
+        "googleapis.com",
+        "gov",
+        "gstatic.com",
+        "hr",
+        "inmobi.com",
+        "instagram.com",
+        "io",
+        "jp",
+        "jquery.com",
+        "jwpcdn.com",
+        "jwplatform.com",
+        "jwplayer.com",
+        "media",
+        "musixmatch.com",
+        "myshoptet.com",
+        "net",
+        "nl",
+        "onesignal.com",
+        "onetrust.com",
+        "org.au",
+        "paypal.com",
+        "paypalobjects.com",
+        "pl",
+        "powerbeans-ai.com",
+        "primis.tech",
+        "privacy-center.org",
+        "privacy-mgmt.com",
+        "recurly.com",
+        "ru",
+        "spot.im",
+        "tiktok.com",
+        "tinypass.com",
+        "tv",
+        "twitter.com",
+        "uk",
+        "uservoice.com",
+        "wp.com",
+        "x.com",
+        "youtube.com",
+        "yumpu.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "://*/*/*/*.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 988717,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "initiatorDomains": [
+        "crosswordsolver.com",
+        "gutefrage.net",
+        "kreuzwortraetsel.de",
+        "motscroises.fr",
+        "oeffnungszeitenbuch.de",
+        "oraridiapertura24.it",
+        "word-grabber.com",
+        "wort-suchen.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "://loader.*.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1036720,
+    "priority": 10002,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dogdrip.net"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1470773,
+    "priority": 10002,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dogdrip.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 493107,
+    "priority": 10002,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dogdrip.net"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||static.criteo.net/js/ld/publishertag.prebid.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 674453,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "hometownstation.com",
+        "isplus.com",
+        "tenasia.hankyung.com"
+      ],
+      "urlFilter": "||07c225f3.online^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1285347,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "font",
+        "ping"
+      ],
+      "urlFilter": "||07c225f3.online^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 688594,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sourceforge.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||a.fsdn.com/con/js/sftheme/vendor/bizx-prebid.js?",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 77498,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||abeagle-public.buzzfeed.com/*-adshield-",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 784115,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "index.hr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||com/layout/*.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1663014,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "domainType": "thirdParty",
+      "initiatorDomains": [
+        "sparkchess.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||com/script/*.js|",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1006136,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "font",
+        "ping"
+      ],
+      "urlFilter": "||content-loader.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1841601,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "nexusmods.com"
+      ],
+      "urlFilter": "||cookiebot.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1230431,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "font",
+        "ping"
+      ],
+      "urlFilter": "||css-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1192537,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||flightview.com/shield.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1329567,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fokstatic.nl/fp/global/*adshield.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1078574,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||gamingsmart.com/abr.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 626118,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||helpers.publisherdesk.com/main.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 296562,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "freemcserver.net"
+      ],
+      "urlFilter": "||html-load.com/loader.min.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1988925,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "allrecipes.com",
+        "bhg.com",
+        "brides.com",
+        "byrdie.com",
+        "dailypaws.com",
+        "eatingwell.com",
+        "ew.com",
+        "foodandwine.com",
+        "health.com",
+        "instyle.com",
+        "investopedia.com",
+        "lifewire.com",
+        "liquor.com",
+        "marthastewart.com",
+        "myrecipes.com",
+        "parents.com",
+        "people.com",
+        "peopleenespanol.com",
+        "realsimple.com",
+        "seriouseats.com",
+        "shape.com",
+        "simplyrecipes.com",
+        "southernliving.com",
+        "thebalancemoney.com",
+        "thespruce.com",
+        "thesprucepets.com",
+        "thoughtco.com",
+        "treehugger.com",
+        "tripsavvy.com",
+        "verywellfit.com",
+        "verywellhealth.com",
+        "verywellmind.com",
+        "woodmagazine.com"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1906882,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autobahn.eu",
+        "beaumonde.nl",
+        "elegance.nl",
+        "gezondnu.nl",
+        "grazia.nl",
+        "marieclaire.nl",
+        "nautique.nl",
+        "noorderland.nl",
+        "nouveau.nl",
+        "panorama.nl",
+        "revu.nl",
+        "upcoming.nl",
+        "wielerrevue.nl"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 577695,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "font",
+        "ping"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1561623,
+    "priority": 10003,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "agriculture.com",
+        "learnreligions.com",
+        "netflixlife.com",
+        "travelandleisure.com"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1083679,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "12thmanrising.com",
+        "allucanheat.com",
+        "aroundthefoghorn.com",
+        "arrowheadaddict.com",
+        "bamahammer.com",
+        "beargoggleson.com",
+        "beyondtheflag.com",
+        "birdswatcher.com",
+        "blackandteal.com",
+        "blogredmachine.com",
+        "bluemanhoop.com",
+        "boltbeat.com",
+        "bosoxinjection.com",
+        "buffalowdown.com",
+        "caneswarning.com",
+        "catcrave.com",
+        "chopchat.com",
+        "climbingtalshill.com",
+        "cubbiescrib.com",
+        "dailyknicks.com",
+        "dairylandexpress.com",
+        "dawgpounddaily.com",
+        "dawindycity.com",
+        "dawnofthedawg.com",
+        "detroitjockcity.com",
+        "dodgersway.com",
+        "ebonybird.com",
+        "fansided.com",
+        "flywareagle.com",
+        "gbmwolverine.com",
+        "gmenhq.com",
+        "hailfloridahail.com",
+        "halohangout.com",
+        "hardwoodhoudini.com",
+        "horseshoeheroes.com",
+        "housethathankbuilt.com",
+        "huskercorner.com",
+        "insidetheiggles.com",
+        "jaysjournal.com",
+        "justblogbaby.com",
+        "kckingdom.com",
+        "kingjamesgospel.com",
+        "lakeshowlife.com",
+        "lombardiave.com",
+        "mentalfloss.com",
+        "motorcitybengals.com",
+        "musketfire.com",
+        "nflspinzone.com",
+        "ninernoise.com",
+        "nugglove.com",
+        "onechicagocenter.com",
+        "phinphanatic.com",
+        "pistonpowered.com",
+        "predominantlyorange.com",
+        "ramblinfan.com",
+        "redbirdrants.com",
+        "reviewingthebrew.com",
+        "riggosrag.com",
+        "ripcityproject.com",
+        "risingapple.com",
+        "rumbunter.com",
+        "scarletandgame.com",
+        "sidelionreport.com",
+        "slapthesign.com",
+        "sodomojo.com",
+        "southsideshowdown.com",
+        "stillcurtain.com",
+        "stormininnorman.com",
+        "stripehype.com",
+        "thatballsouttahere.com",
+        "thecelticbhoys.com",
+        "thejetpress.com",
+        "thelandryhat.com",
+        "thepewterplank.com",
+        "thesmokingcuban.com",
+        "thevikingage.com",
+        "thunderousintentions.com",
+        "undeadwalking.com",
+        "valleyofthesuns.com",
+        "whodatdish.com",
+        "winteriscoming.net",
+        "yanksgoyard.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1099263,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "a-z-animals.com",
+        "acedarspoon.com",
+        "acouplecooks.com",
+        "addapinch.com",
+        "adrenaline.com.br",
+        "aheadofthyme.com",
+        "amandascookin.com",
+        "amybakesbread.com",
+        "androidheadlines.com",
+        "aprettylifeinthesuburbs.com",
+        "averiecooks.com",
+        "awealthofcommonsense.com",
+        "awellstyledlife.com",
+        "bakedbree.com",
+        "bakeitwithlove.com",
+        "browneyedbaker.com",
+        "budgetbytes.com",
+        "butterbeready.com",
+        "cafedelites.com",
+        "campsitephotos.com",
+        "celebritynetworth.com",
+        "chocolatecoveredkatie.com",
+        "chocolatewithgrace.com",
+        "cleananddelicious.com",
+        "closetcooking.com",
+        "connoisseurusveg.com",
+        "cookieandkate.com",
+        "cookiedoughandovenmitt.com",
+        "cookincanuck.com",
+        "cookingclassy.com",
+        "crayonsandcravings.com",
+        "crunchycreamysweet.com",
+        "culinaryhill.com",
+        "curbsideclassic.com",
+        "damndelicious.net",
+        "dancearoundthekitchen.com",
+        "diethood.com",
+        "dinneratthezoo.com",
+        "driveteslacanada.ca",
+        "eatingonadime.com",
+        "eatlittlebird.com",
+        "elliott.org",
+        "emilybites.com",
+        "evolvingtable.com",
+        "favfamilyrecipes.com",
+        "feastingathome.com",
+        "feedmephoebe.com",
+        "feelgoodfoodie.net",
+        "foodfaithfitness.com",
+        "forkknifeswoon.com",
+        "foxeslovelemons.com",
+        "foxyfolksy.com",
+        "framedcooks.com",
+        "fromvalerieskitchen.com",
+        "frvr.com",
+        "gamingsmart.com",
+        "garminrumors.com",
+        "gcaptain.com",
+        "gearpatrol.com",
+        "gimmesomeoven.com",
+        "godairyfree.org",
+        "greaterlongisland.com",
+        "happyveggiekitchen.com",
+        "healthyfitnessmeals.com",
+        "healthylittlefoodies.com",
+        "howsweeteats.com",
+        "hummingbirdhigh.com",
+        "hummusapien.com",
+        "hungrypaprikas.com",
+        "iambaker.net",
+        "iamhomesteader.com",
+        "idownloadblog.com",
+        "iheartnaptime.net",
+        "isabeleats.com",
+        "jocooks.com",
+        "joyfoodsunshine.com",
+        "juliasalbum.com",
+        "julieblanner.com",
+        "julieseatsandtreats.com",
+        "justonecookbook.com",
+        "kimscravings.com",
+        "kingshotcalculator.com",
+        "kirbiecravings.com",
+        "kitchendivas.com",
+        "kitchenfunwithmy3sons.com",
+        "laughingspatula.com",
+        "laurafuentes.com",
+        "littlesunnykitchen.com",
+        "makeitdairyfree.com",
+        "makingthymeforhealth.com",
+        "mamainastitch.com",
+        "marvel.church",
+        "medievalists.net",
+        "melskitchencafe.com",
+        "minimalistbaker.com",
+        "momsdish.com",
+        "mybakingaddiction.com",
+        "mycolombianrecipes.com",
+        "mygolfspy.com",
+        "myquietkitchen.com",
+        "natashaskitchen.com",
+        "neighborfoodblog.com",
+        "nomnompaleo.com",
+        "nourishedbynic.com",
+        "ohsheglows.com",
+        "onceuponachef.com",
+        "onelittleproject.com",
+        "pantrymama.com",
+        "pinchofyum.com",
+        "pipandebby.com",
+        "platingsandpairings.com",
+        "pumpkinnspice.com",
+        "rdr2.org",
+        "recipetineats.com",
+        "redcurrantbakery.com",
+        "runningtothekitchen.com",
+        "runtothefinish.com",
+        "seededatthetable.com",
+        "shugarysweets.com",
+        "simply-delicious-food.com",
+        "simplywhisked.com",
+        "skinnytaste.com",
+        "spicysouthernkitchen.com",
+        "sundaysuppermovement.com",
+        "tasteandtellblog.com",
+        "the-girl-who-ate-everything.com",
+        "the5krunner.com",
+        "thebakermama.com",
+        "thebestideasforkids.com",
+        "theendlessmeal.com",
+        "thekitchenmagpie.com",
+        "themediterraneandish.com",
+        "theplantbasedschool.com",
+        "therecipecritic.com",
+        "thescranline.com",
+        "thewoksoflife.com",
+        "thurrott.com",
+        "twopeasandtheirpod.com",
+        "umamigirl.com",
+        "vincenzosplate.com",
+        "visualcapitalist.com",
+        "wellnessbykay.com",
+        "wellplated.com",
+        "welt.de",
+        "whatgreatgrandmaate.com",
+        "yourhomebasedmom.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 120094,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "banburyguardian.co.uk",
+        "bedfordtoday.co.uk",
+        "birminghamworld.uk",
+        "blackpoolgazette.co.uk",
+        "bucksherald.co.uk",
+        "burnleyexpress.net",
+        "buxtonadvertiser.co.uk",
+        "chad.co.uk",
+        "derbyshiretimes.co.uk",
+        "derryjournal.com",
+        "dewsburyreporter.co.uk",
+        "doncasterfreepress.co.uk",
+        "donegallive.ie",
+        "expressandstar.com",
+        "falkirkherald.co.uk",
+        "farminglife.com",
+        "fifetoday.co.uk",
+        "glasgowworld.com",
+        "halifaxcourier.co.uk",
+        "harrogateadvertiser.co.uk",
+        "hartlepoolmail.co.uk",
+        "lancasterguardian.co.uk",
+        "lep.co.uk",
+        "limerickleader.ie",
+        "lincolnshireworld.com",
+        "lutontoday.co.uk",
+        "meltontimes.co.uk",
+        "miltonkeynes.co.uk",
+        "nationalworld.com",
+        "newcastleworld.com",
+        "newsletter.co.uk",
+        "northamptonchron.co.uk",
+        "northantstelegraph.co.uk",
+        "northdevongazette.co.uk",
+        "northernirelandworld.com",
+        "northumberlandgazette.co.uk",
+        "peterboroughtoday.co.uk",
+        "portsmouth.co.uk",
+        "rotherhamadvertiser.co.uk",
+        "scotsman.com",
+        "shieldsgazette.com",
+        "shropshirestar.com",
+        "sunderlandecho.com",
+        "sussexexpress.co.uk",
+        "thescarboroughnews.co.uk",
+        "thestar.co.uk",
+        "totallysnookered.com",
+        "wakefieldexpress.co.uk",
+        "warwickshireworld.com",
+        "wigantoday.net",
+        "worksopguardian.co.uk",
+        "yorkshireeveningpost.co.uk",
+        "yorkshirepost.co.uk"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1301697,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "4runner6g.com",
+        "bronco6g.com",
+        "civicxi.com",
+        "cybertruckownersclub.com",
+        "f150gen14.com",
+        "f150lightningforum.com",
+        "jeepgladiatorforum.com",
+        "jlwranglerforums.com",
+        "macheforum.com",
+        "mavericktruckclub.com",
+        "mustang6g.com",
+        "mustang7g.com",
+        "ranger5g.com",
+        "ranger6g.com",
+        "rivianforums.com",
+        "slateforums.com",
+        "supramkv.com",
+        "tacoma4g.com",
+        "taycanforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1389390,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "androidcentral.com",
+        "cinemablend.com",
+        "countrylife.co.uk",
+        "creativebloq.com",
+        "cyclingnews.com",
+        "cyclingweekly.com",
+        "decanter.com",
+        "digitalcameraworld.com",
+        "fitandwell.com",
+        "fourfourtwo.com",
+        "gamesradar.com",
+        "gardeningknowhow.com",
+        "golfmonthly.com",
+        "goodto.com",
+        "guitarplayer.com",
+        "guitarworld.com",
+        "homebuilding.co.uk",
+        "homesandgardens.com",
+        "idealhome.co.uk",
+        "itpro.com",
+        "kiplinger.com",
+        "laptopmag.com",
+        "livescience.com",
+        "livingetc.com",
+        "loudersound.com",
+        "marieclaire.co.uk",
+        "marieclaire.com",
+        "moneyweek.com",
+        "musicradar.com",
+        "pcgamer.com",
+        "realhomes.com",
+        "space.com",
+        "t3.com",
+        "techradar.com",
+        "theweek.com",
+        "tomsguide.com",
+        "tomshardware.com",
+        "wallpaper.com",
+        "whathifi.com",
+        "whattowatch.com",
+        "whowhatwear.com",
+        "windowscentral.com",
+        "womanandhome.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1927104,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "afrotech.com",
+        "blavity.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 689793,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aina.lt",
+        "alfa.lt",
+        "alkas.lt",
+        "alytusplius.lt",
+        "anyksta.lt",
+        "etaplius.lt",
+        "manonamai.lt",
+        "raskakcija.lt",
+        "respublika.lt",
+        "sekunde.lt",
+        "tavovaikas.lt",
+        "tv3.lt"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 809657,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "amindfullmom.com",
+        "choosingchia.com",
+        "creativecanning.com",
+        "downshiftology.com",
+        "gardeninthekitchen.com",
+        "heygrillhey.com",
+        "modernhoney.com",
+        "plainchicken.com",
+        "practicalselfreliance.com",
+        "sipandfeast.com",
+        "stellanspice.com",
+        "thecookierookie.com",
+        "thefoodcharlatan.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1393237,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "artforum.com",
+        "artnews.com",
+        "bgr.com",
+        "billboard.com",
+        "deadline.com",
+        "goldderby.com",
+        "hollywoodreporter.com",
+        "indiewire.com",
+        "robbreport.com",
+        "rollingstone.com",
+        "sportico.com",
+        "sxsw.com",
+        "tvline.com",
+        "variety.com",
+        "vibe.com",
+        "wwd.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1854408,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gamezop.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1491513,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autosport.com",
+        "insideevs.com",
+        "motor1.com",
+        "motorsport.com",
+        "motorsportjobs.com",
+        "rideapart.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1434307,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "avanti24.pl",
+        "chillizet.pl",
+        "czterykaty.pl",
+        "edziecko.pl",
+        "g.pl",
+        "gazeta.pl",
+        "haps.pl",
+        "magazyn-kuchnia.pl",
+        "meloradio.pl",
+        "moto.pl",
+        "planeta.pl",
+        "plotek.pl",
+        "publio.pl",
+        "radiopogoda.pl",
+        "radiozet.pl",
+        "sport.pl",
+        "tokfm.pl",
+        "wyborcza.biz",
+        "wyborcza.pl",
+        "wysokieobcasy.pl",
+        "zakupy-czterykaty.pl"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 240564,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "babla.gr",
+        "fxstreet.com",
+        "fxstreet.es",
+        "gentside.com",
+        "gentside.de",
+        "ohmymag.com",
+        "wieistmeineip.de",
+        "willyweather.com",
+        "willyweather.com.au"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1678754,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lasisa.net",
+        "vague.style"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 890041,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bikerumor.com",
+        "explorersweb.com",
+        "gearjunkie.com",
+        "irunfar.com",
+        "packhacker.com",
+        "switchbacktravel.com",
+        "theinertia.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1739808,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bluearchive.gg",
+        "dotgg.gg",
+        "marvelrivals.gg",
+        "marvelsnapzone.com",
+        "nikke.gg",
+        "onepiece.gg",
+        "ptcgpocket.gg",
+        "riftbound.gg"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1062858,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "buienalarm.be",
+        "buienalarm.nl",
+        "meteoradar.co.uk",
+        "meteox.com",
+        "niederschlagsradar.de",
+        "sat24.com",
+        "weerplaza.nl",
+        "weerslag.nl"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 896708,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "calgaryherald.com",
+        "calgarysun.com",
+        "canoe.com",
+        "driving.ca",
+        "edmontonjournal.com",
+        "edmontonsun.com",
+        "financialpost.com",
+        "intelligencer.ca",
+        "leaderpost.com",
+        "lfpress.com",
+        "montrealgazette.com",
+        "nationalpost.com",
+        "ottawacitizen.com",
+        "ottawasun.com",
+        "recorder.ca",
+        "standard-freeholder.com",
+        "theprovince.com",
+        "thestarphoenix.com",
+        "thewhig.com",
+        "timminspress.com",
+        "tj.news",
+        "torontosun.com",
+        "vancouversun.com",
+        "windsorstar.com",
+        "winnipegsun.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1142318,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "caminteresse.fr",
+        "capital.fr",
+        "cotemaison.fr",
+        "croq-kilos.com",
+        "cuisineaz.com",
+        "deco.fr",
+        "femmeactuelle.fr",
+        "fourchette-et-bikini.fr",
+        "gamesider.com",
+        "geo.fr",
+        "harpersbazaar.fr",
+        "hbrfrance.fr",
+        "meteocity.com",
+        "passeportsante.net",
+        "programme-tv.net",
+        "programme.tv",
+        "turbo.fr",
+        "voici.fr"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 150033,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "emisoras-puertorico.com",
+        "emisorascolombianas.co",
+        "fmradiofree.com",
+        "internetradio-horen.de",
+        "internetradio-schweiz.ch",
+        "mytuner-radio.com",
+        "radio-ao-vivo.com",
+        "radio-australia.org",
+        "radio-belgie.be",
+        "radio-danmark.dk",
+        "radio-dominicana.com",
+        "radio-ecuador.org",
+        "radio-en-ligne.fr",
+        "radio-en-vivo.mx",
+        "radio-espana.es",
+        "radio-hrvatska.com",
+        "radio-italiane.it",
+        "radio-maroc.org",
+        "radio-nederland.nl",
+        "radio-norge.org",
+        "radio-osterreich.at",
+        "radio-philippines.com",
+        "radio-polska.pl",
+        "radio-singapore.com",
+        "radio-sveriges.se",
+        "radio-thai.com",
+        "radio-ua.com",
+        "radio-uk.co.uk",
+        "radioindonesia.org",
+        "radiojapan.org",
+        "radiomalaysia.org",
+        "radios-argentinas.org",
+        "radios-bolivia.com",
+        "radios-chilenas.com",
+        "radios-guatemala.com",
+        "radios-online.pt",
+        "radios-uruguay.com",
+        "radios-venezuela.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 649353,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "consejosytrucos.co",
+        "conselhosetruques.com",
+        "consiglietrucchi.com",
+        "poradyiwskazowki.pl",
+        "tippsundtricks.co",
+        "tips-and-tricks.co",
+        "tipsandtricksjapan.com",
+        "tipsandtrickskorea.com",
+        "tipsenweetjes.nl",
+        "trucs-et-astuces.co"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 463379,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "dodgerblue.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 961379,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gentside.com",
+        "gentside.de",
+        "ohmymag.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 359629,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "melaterevancha.com",
+        "resultadostris.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1144531,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "notebookcheck-hu.com",
+        "notebookcheck-ru.com",
+        "notebookcheck.biz",
+        "notebookcheck.com",
+        "notebookcheck.info",
+        "notebookcheck.it",
+        "notebookcheck.net",
+        "notebookcheck.nl",
+        "notebookcheck.org",
+        "notebookcheck.pl"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1988498,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pcgamebenchmark.com",
+        "pcgamesn.com",
+        "pockettactics.com",
+        "wargamer.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 138711,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "pickleball.com",
+        "pickleballtournaments.com",
+        "ppatour.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1696122,
+    "priority": 10003,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "373news.com",
+        "50states.com",
+        "9gag.com",
+        "actugaming.net",
+        "altarofgaming.com",
+        "anagram-solver.io",
+        "animalia.bio",
+        "atvtrader.com",
+        "aucfree.com",
+        "augustacrime.com",
+        "automobile-catalog.com",
+        "babla.gr",
+        "base64decode.org",
+        "boardingarea.com",
+        "buchstaben.com",
+        "calculatorsoup.com",
+        "canuckaudiomart.com",
+        "cesoirtv.com",
+        "chanto.jp.net",
+        "chloeting.com",
+        "cinetrafic.fr",
+        "collinsdictionary.com",
+        "commercialtrucktrader.com",
+        "convertcase.net",
+        "costcoinsider.com",
+        "crosswordsolver.com",
+        "culturequizz.com",
+        "cycletrader.com",
+        "daveockop.com",
+        "dayspedia.com",
+        "dexerto.com",
+        "dict.cc",
+        "dictionary.cambridge.org",
+        "dictionnaire.lerobert.com",
+        "divinedaolibrary.com",
+        "dnevnik.hr",
+        "dnevno.hr",
+        "doviz.com",
+        "ecranlarge.com",
+        "elnacional.cat",
+        "equipmenttrader.com",
+        "euronews.com",
+        "exceljet.net",
+        "fandom.com",
+        "flagle.io",
+        "fossbytes.com",
+        "freeconvert.com",
+        "freemcserver.net",
+        "futabasha-change.com",
+        "fxstreet-id.com",
+        "fxstreet.com",
+        "fxstreet.cz",
+        "fxstreet.es",
+        "gamebanana.com",
+        "games.arkadium.com",
+        "gazetaprawna.pl",
+        "gentosha-go.com",
+        "geogridgame.com",
+        "geoguessr.com",
+        "gerbeaud.com",
+        "gesundheitsfrage.net",
+        "gezondnu.nl",
+        "gigafile.nu",
+        "girlschannel.net",
+        "globalrph.com",
+        "gloria.hr",
+        "golf-live.at",
+        "greenwichmeantime.com",
+        "gutefrage.net",
+        "hang.hu",
+        "hb-nippon.com",
+        "heureka.cz",
+        "higherorlowergame.com",
+        "hk01.com",
+        "hna.de",
+        "hochi.news",
+        "hollywoodlife.com",
+        "hotcopper.com.au",
+        "idokep.hu",
+        "index.hr",
+        "indianhealthyrecipes.com",
+        "infinityfree.com",
+        "infor.pl",
+        "insider-gaming.com",
+        "inverse.com",
+        "invoice-generator.com",
+        "iphoneincanada.ca",
+        "itavisen.no",
+        "j-cast.com",
+        "j-town.net",
+        "jawapos.com",
+        "jigsawexplorer.com",
+        "jiji.com",
+        "joemonster.org",
+        "judgehype.com",
+        "km77.com",
+        "kobe-journal.com",
+        "kompasiana.com",
+        "krepsinis.net",
+        "kreuzwortraetsel.de",
+        "kstp.com",
+        "kurashiru.com",
+        "kyoteibiyori.com",
+        "lacuarta.com",
+        "laleggepertutti.it",
+        "langenscheidt.com",
+        "laposte.net",
+        "latlong.net",
+        "laughingsquid.com",
+        "lawyersgunsmoneyblog.com",
+        "ldoceonline.com",
+        "leckerschmecker.me",
+        "lejdd.fr",
+        "lettersolver.com",
+        "liliputing.com",
+        "liquor.com",
+        "listentotaxman.com",
+        "liveandletsfly.com",
+        "livenewschat.eu",
+        "livescience.com",
+        "looopings.nl",
+        "lootlemon.com",
+        "m.economictimes.com",
+        "mafab.hu",
+        "mahjongchest.com",
+        "maketecheasier.com",
+        "malaymail.com",
+        "marineinsight.com",
+        "mathplayzone.com",
+        "merinfo.se",
+        "meteo60.fr",
+        "midhudsonnews.com",
+        "modhub.us",
+        "modsbase.com",
+        "modsfire.com",
+        "moin.de",
+        "motor-talk.de",
+        "motscroises.fr",
+        "movie-locations.com",
+        "muragon.com",
+        "myinstants.com",
+        "mykoreankitchen.com",
+        "namemc.com",
+        "nana-press.com",
+        "nationaltoday.com",
+        "nbadraft.net",
+        "nemzetisport.hu",
+        "neoseeker.com",
+        "newatlas.com",
+        "news.zerkalo.io",
+        "newsyou.info",
+        "nextchessmove.com",
+        "niketalk.com",
+        "nikkansports.com",
+        "nintendoeverything.com",
+        "nouvelobs.com",
+        "oeffnungszeitenbuch.de",
+        "okuyami-information.com",
+        "omnicalculator.com",
+        "ondemandkorea.com",
+        "onemileatatime.com",
+        "onlineradiobox.com",
+        "operawire.com",
+        "optionsprofitcalculator.com",
+        "oraridiapertura24.it",
+        "overclock.net",
+        "oxfordlearnersdictionaries.com",
+        "pakkotoisto.com",
+        "percentagecalculator.net",
+        "perezhilton.com",
+        "persoenlich.com",
+        "petitfute.com",
+        "picksandparlays.net",
+        "picrew.me",
+        "pinterpoin.com",
+        "play-games.com",
+        "powerpyx.com",
+        "pptvhd36.com",
+        "profitline.hu",
+        "puzzlegarage.com",
+        "quefaire.be",
+        "radio-australia.org",
+        "radio-osterreich.at",
+        "raetsel-hilfe.de",
+        "raider.io",
+        "ranking.net",
+        "roleplayer.me",
+        "rostercon.com",
+        "rotowire.com",
+        "russianmachineneverbreaks.com",
+        "rvtrader.com",
+        "saita-puls.com",
+        "samsungmagazine.eu",
+        "sankei.com",
+        "sanspo.com",
+        "satkurier.pl",
+        "scribd.com",
+        "scribens.com",
+        "scribens.fr",
+        "si.com",
+        "sinemalar.com",
+        "singjupost.com",
+        "skinmc.net",
+        "skyandtelescope.org",
+        "slashdot.org",
+        "slideshare.net",
+        "sms24.me",
+        "soccerdigestweb.com",
+        "solitairehut.com",
+        "songfacts.com",
+        "sotolover.com",
+        "sourceforge.net",
+        "speisekarte.de",
+        "spendwithpennies.com",
+        "statecollege.com",
+        "stocktwits.com",
+        "sudokutable.com",
+        "syosetu.com",
+        "szamoldki.hu",
+        "talkwithstranger.com",
+        "tastesbetterfromscratch.com",
+        "the-crossword-solver.com",
+        "thecelticblog.com",
+        "thedigestweb.com",
+        "thefirearmblog.com",
+        "thelayoff.com",
+        "thetruthaboutcars.com",
+        "thingiverse.com",
+        "timeful.app",
+        "torontosun.com",
+        "toyokeizai.net",
+        "traicy.com",
+        "transparentcalifornia.com",
+        "tunebat.com",
+        "tvtv.ca",
+        "tvtv.us",
+        "tweaktown.com",
+        "tyda.se",
+        "universalis.fr",
+        "uptodown.com",
+        "uranai.nosv.org",
+        "urbandictionary.com",
+        "urldecoder.org",
+        "usaudiomart.com",
+        "uscreditcardguide.com",
+        "v8sleuth.com.au",
+        "verkaufsoffener-sonntag.com",
+        "videocelts.com",
+        "vimm.net",
+        "wallpapers.com",
+        "watchdocumentaries.com",
+        "wattedoen.be",
+        "wdwnt.com",
+        "wetteronline.de",
+        "wfmz.com",
+        "whec.com",
+        "wieistmeineip.de",
+        "wielerflits.be",
+        "wielerflits.nl",
+        "willyweather.com",
+        "willyweather.com.au",
+        "winfuture.de",
+        "word-grabber.com",
+        "wordfinderx.com",
+        "wordhippo.com",
+        "wordshake.com",
+        "worldjournal.com",
+        "worldle.teuteuf.fr",
+        "wort-suchen.de",
+        "yakkun.com",
+        "young-machine.com",
+        "yugioh-starlight.com",
+        "yutura.net",
+        "zagreb.info",
+        "zekamashi.net"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 213797,
+    "priority": 10003,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "46matome.net",
+        "akb48matomemory.com",
+        "alfalfalfa.com",
+        "all-nationz.com",
+        "anihatsu.com",
+        "blog.esuteru.com",
+        "chaos2ch.com",
+        "crx7601.com",
+        "digital-thread.com",
+        "fesoku.net",
+        "fiveslot777.com",
+        "gamejksokuhou.com",
+        "girlsreport.net",
+        "girlsvip-matome.com",
+        "grasoku.com",
+        "gundamlog.com",
+        "hacchaka.net",
+        "ikarishintou.com",
+        "inutomo11.com",
+        "itainews.com",
+        "itaishinja.com",
+        "jin115.com",
+        "jisaka.com",
+        "jumpsokuhou.com",
+        "keyakizaka46matomemory.net",
+        "kidan-m.com",
+        "kijyomita.com",
+        "kitimama-matome.net",
+        "kitizawa.com",
+        "kyousoku.net",
+        "majikichi.com",
+        "matomelotte.com",
+        "matometemitatta.com",
+        "morikinoko.com",
+        "nandemo-uketori.com",
+        "newsinlevels.com",
+        "nmb48-mtm.com",
+        "onecall2ch.com",
+        "onihimechan.com",
+        "orusoku.com",
+        "oumaga-times.com",
+        "pachinkopachisro.com",
+        "saikyo-jump.com",
+        "sutekinakijo.com",
+        "usi32.com",
+        "uwakich.com",
+        "vault76.info",
+        "vipsister23.com",
+        "world-fusigi.net",
+        "zch-vip.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 771431,
+    "priority": 10003,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "autobild.de",
+        "bild.de",
+        "bz-berlin.de",
+        "computerbild.de",
+        "fitbook.de",
+        "myhomebook.de",
+        "petbook.de",
+        "techbook.de",
+        "travelbook.de"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 143802,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "1911addicts.com",
+        "1911forum.com",
+        "1919a4.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 186676,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "alfabb.com",
+        "alfaowner.com",
+        "archerytalk.com",
+        "arkansashunting.net",
+        "avsforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 814753,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "benzworld.org",
+        "bimmerfest.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1538248,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cadillacforums.com",
+        "carolinashootersclub.com",
+        "challengertalk.com",
+        "chevelles.com",
+        "clubfrontier.org",
+        "coloradofans.com",
+        "coltforum.com",
+        "crossbownation.com",
+        "crvownersclub.com",
+        "cumminsforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1632137,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "detailingworld.co.uk",
+        "diychatroom.com",
+        "diymobileaudio.com",
+        "dodgedurango.net",
+        "dootalk.com",
+        "driveaccord.net",
+        "ducati.ms",
+        "duramaxforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 466499,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "e46fanatics.com",
+        "edsupportforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 312850,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "flyfishing.co.uk",
+        "fordtransitusaforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 403721,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "giuliaforums.com",
+        "gl1800riders.com",
+        "glocktalk.com",
+        "greentractortalk.com",
+        "guitars101.com",
+        "guitarscanada.com",
+        "gunboards.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1756282,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "halloweenforum.com",
+        "hardcoresledder.com",
+        "hkpro.com",
+        "hondashadow.net",
+        "huntingpa.com",
+        "hyundai-forums.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1236697,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ifish.net",
+        "indianmotorcycles.net"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1105205,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "jeepforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1819596,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kia-forums.com",
+        "kiaownersclub.co.uk",
+        "knittingparadise.com",
+        "kugaownersclub.co.uk"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1503467,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "lawnsite.com",
+        "lotustalk.com",
+        "lumberjocks.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1325907,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "m14forum.com",
+        "marlinowners.com",
+        "mazda3revolution.com",
+        "menstennisforums.com",
+        "michigan-sportsman.com",
+        "mountainbuzz.com",
+        "mtbr.com",
+        "mytractorforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1196234,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "odyclub.com",
+        "ohiogamefishing.com",
+        "overclock.net"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 337645,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "personalitycafe.com",
+        "peugeotforums.com",
+        "piloteers.org",
+        "polestar-forum.com",
+        "powerstroke.org"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1172496,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rangerovers.net",
+        "rav4world.com",
+        "renaultforums.co.uk",
+        "ridgelineownersclub.com",
+        "rimfirecentral.com",
+        "rugerforum.net",
+        "rzrforums.net"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1798674,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "salmonfishingforum.com",
+        "saxontheweb.net",
+        "shipsnostalgia.com",
+        "shotgunworld.com",
+        "sigtalk.com",
+        "silveradosierra.com",
+        "skyscrapercity.com",
+        "slkworld.com",
+        "slotforum.com",
+        "speakev.com",
+        "speypages.com",
+        "subaruforester.org",
+        "subaruoutback.org",
+        "survivalistboards.com",
+        "suzuki-forums.com",
+        "swedespeed.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 954541,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "talkaboutmarriage.com",
+        "talkclassical.com",
+        "tennisforum.com",
+        "theakforum.net",
+        "thecombineforum.com",
+        "theflyfishingforum.com",
+        "thewatchforum.co.uk",
+        "tivocommunity.com",
+        "toyotanation.com",
+        "tradtalk.com",
+        "trapshooters.com",
+        "trifive.com",
+        "triumphrat.net",
+        "ttforum.co.uk"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 96269,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "uberpeople.net",
+        "uk-muscle.co.uk"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1042526,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vintage-mustang.com",
+        "vwvortex.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1597969,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "watchuseek.com",
+        "worldseafishing.com",
+        "wranglerforum.com",
+        "wrestlingforum.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1447621,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "yellowbullet.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||html-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1209958,
+    "priority": 10003,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "givemesport.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1212803,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": [
+        "font",
+        "ping"
+      ],
+      "urlFilter": "||img-load.com^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1743110,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lib.twnmm.com/admiral-remote-config.json",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1171332,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||minecraftskins.com/miscjs/as*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 897991,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||mopo.de/*/adshield.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 402522,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bloxd.io",
+        "minecraftskins.com",
+        "murlok.io",
+        "neopets.com"
+      ],
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||page-kit.io^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 953522,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||s.w-x.co/helios/twc/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 699167,
+    "priority": 10003,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "athlonsports.com",
+        "autoblog.com",
+        "dengarden.com",
+        "mensjournal.com",
+        "parade.com",
+        "paradepets.com",
+        "pethelpful.com",
+        "powder.com",
+        "shophq.com",
+        "surfer.com",
+        "thespun.com",
+        "thestreet.com"
+      ],
+      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1755550,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||storage.googleapis.com/pravda-ad-script/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 506645,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gutefrage.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||whykindlyoofword.com/sdk.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 940820,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||wielerflits.*/api/site-loader/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1892426,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||zaf.api.fanbyte.com/stable/js/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1852970,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3788,8 +7136,30 @@
         "zonewedgeshaft.com",
         "zowieamid.com",
         "zowiedead.com",
-        "zowiejump.com"
+        "zowiejump.com",
+        "ad-shield.cc",
+        "adsinteractive.com",
+        "ash.automobile-catalog.com",
+        "azerion.com",
+        "consent.wegotthiscovered.com",
+        "d222yr38kqru7v.cloudfront.net",
+        "dbloader.leboncoin.info",
+        "loader.horairesdouverture24.fr",
+        "restomp-excity.online"
       ]
+    }
+  },
+  {
+    "id": 1788367,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "adopsboost.com"
+      ],
+      "domainType": "thirdParty"
     }
   }
 ]

@@ -4,7 +4,7 @@
 //   1. Pure selection: needed hosts from seed.json (cookieblock only — never block/allow); a needed host blocked by the
 //      four Seamless tracker lists (HaGeZi Light, Peter Lowe, Kees1958, AdGuard tracking servers) becomes an EXACT-host
 //      exception — never one for its subdomains (a needed shared-hosting domain such as amazonaws.com unblocks nothing).
-//   2. Shipped rulesets: the exceptions are in the hidden tracker-exception ruleset, at the tracker lists' priority,
+//   2. Shipped rulesets: the exceptions are in the hidden tracker-exception ruleset, at the tracker lists' "@@" step,
 //      and HaGeZi Light is one of its parents.
 //   3. No side effect on other lists: an exception must not cover a host that a list at or below that priority (other
 //      than the four tracker lists) blocks domain-wide — it would silently lift that block.
@@ -12,6 +12,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { STATIC_EXCEPTION_PRIORITY_OFFSET } from '../js/core/dnr-budgets.js';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 function read(rel) { return fs.readFileSync(path.join(ROOT, rel), 'utf8'); }
@@ -109,7 +110,10 @@ const allowPriority = exceptionRules.find(r => r.action?.type === 'allow')?.prio
 const trackerPriorities = new Set(CONFIG.TRACKER_LISTS.flatMap(id => {
     try { return load(`rulesets/${id}.json`).filter(r => r.action?.type === 'block').map(r => r.priority); } catch { return []; }
 }));
-check('the exceptions sit at exactly the tracker lists\' priority', trackerPriorities.size === 1 && trackerPriorities.has(allowPriority),
+// (11.1.3) "@@" exceptions sit one ladder step above their tier's blocks (STATIC_EXCEPTION_PRIORITY_OFFSET), no longer on
+// the same number: still above the tracker lists' blocks and redirects, still below their $important and off-switch.
+check('the exceptions sit at the tracker lists\' "@@" step (blocks + STATIC_EXCEPTION_PRIORITY_OFFSET)',
+    trackerPriorities.size === 1 && [ ...trackerPriorities ][0] + STATIC_EXCEPTION_PRIORITY_OFFSET === allowPriority,
     `exceptions ${allowPriority}, tracker lists ${[ ...trackerPriorities ].join(',')}`);
 
 // ── 3. No side effect on other lists ──────────────────────────────────────────

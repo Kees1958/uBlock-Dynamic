@@ -78,21 +78,24 @@ export function ruleMatches(rule, req) {
     return true;
 }
 
-// Highest priority wins; allow beats block on a tie.
+// Highest priority wins; on a tie Chrome's action order decides: allow > allowAllRequests > block > redirect
+// (11.1.3: redirect modelled, for the in-tier order check; loadEnabledRules() still leaves redirects out).
+const ACTION_TIE_RANK = Object.freeze({ allow: 4, allowAllRequests: 3, block: 2, redirect: 1 });
+const ACTION_OUTCOME = Object.freeze({ allow: 'ALLOW', allowAllRequests: 'ALLOW', block: 'BLOCK', redirect: 'REDIRECT' });
 export function evaluate(rules, req) {
     let best = null;
     for ( const r of rules ) {
         const t = r.action?.type;
-        if ( t !== 'block' && t !== 'allow' && t !== 'allowAllRequests' ) { continue; }
+        const rank = ACTION_TIE_RANK[t];
+        if ( rank === undefined ) { continue; }
         if ( !ruleMatches(r, req) ) { continue; }
         const p = r.priority ?? 1;
-        const isAllow = t !== 'block';
-        if ( best === null || p > best.priority || (p === best.priority && isAllow && !best.isAllow) ) {
-            best = { priority: p, isAllow, rule: r };
+        if ( best === null || p > best.priority || (p === best.priority && rank > best.rank) ) {
+            best = { priority: p, rank, type: t, rule: r };
         }
     }
     return best === null ? { outcome: 'ALLOW', winner: null }
-        : { outcome: best.isAllow ? 'ALLOW' : 'BLOCK', winner: best.rule };
+        : { outcome: ACTION_OUTCOME[best.type], winner: best.rule };
 }
 
 // ── Loading ───────────────────────────────────────────────────────────────────

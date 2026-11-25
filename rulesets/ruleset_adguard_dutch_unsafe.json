@@ -1,7 +1,7 @@
 [
   {
     "id": 1635200,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -19,7 +19,7 @@
   },
   {
     "id": 1012432,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -40,7 +40,7 @@
   },
   {
     "id": 1704932,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -61,7 +61,7 @@
   },
   {
     "id": 820375,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -81,7 +81,7 @@
   },
   {
     "id": 431014,
-    "priority": 10000,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {

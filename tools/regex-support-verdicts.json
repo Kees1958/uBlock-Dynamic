@@ -1292,6 +1292,14 @@
       "supported": true,
       "chrome": "Chrome/153.0.8010.12"
     },
+    "cs:^https:\\/\\/[a-z]{3,}\\.[a-z]{7,}\\.[a-z]{2,4}\\/([^\\/]+\\/)+[-_a-zA-Z0-9]{11,}$": {
+      "supported": true,
+      "chrome": "Chrome/153.0.8010.12"
+    },
+    "cs:^https:\\/\\/[a-z]{3,}\\.[a-z]{7,}\\.[a-z]{2,4}\\/([^\\/]+\\/)+[-_a-zA-Z0-9]{5,10}$": {
+      "supported": true,
+      "chrome": "Chrome/153.0.8010.12"
+    },
     "cs:^https:\\/\\/[a-z]{3,}\\.[a-z]{7,}\\.com\\/[a-z]{6,}\\/[a-f0-9]{8}\\.js$": {
       "supported": true,
       "chrome": "Chrome/153.0.8010.12"

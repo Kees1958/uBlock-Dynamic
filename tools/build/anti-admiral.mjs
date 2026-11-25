@@ -6,10 +6,11 @@
 // build-state.mjs, and two data-file URLs. A replayed build is byte-identical
 // (tools/verify-build-unchanged.mjs).
 //
-// Public interface: buildAntiAdmiralSourceText, selectAdmiralSiteRules
+// Public interface: buildAntiAdmiralSourceText, selectAdmiralSiteRules, selectUassetsSectionRules, pruneForUbol
 // Dependencies: see the imports below (strictly acyclic; no module imports one that imports it).
 import { withRetry, fetchWithTimeout } from '../lib/fetch-with-retry.mjs';
 import { applyScriptletTrustGate, fetchList, fetchListText } from './fetch-helpers.mjs';
+import { utils } from '../../js/core/filter-parser-helpers.js';
 
 /******************************************************************************/
 // Anti-Admiral — three-source fetch, format-normalize, and domain-level
@@ -57,6 +58,43 @@ const ANTI_ADMIRAL_SITE_RULE_SOURCES = Object.freeze([
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2026.txt',
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/annoyances-others.txt',
 ]);
+// (11.1.3, owner's decision) uBlock Origin's VENDOR SECTIONS. filters-general.txt keeps every Admiral and
+// Ad-Shield rule between "! SECTION: <name>" and "! !SECTION: <name>". Admiral (getadmiral.com) and Ad-Shield
+// (html-load.com / content-loader.com / error-report.com) are two DIFFERENT anti-adblock vendors; the three domain
+// sources above (HaGeZi's ad-shield.txt in particular) already block both vendors' servers, but blocking Ad-Shield's
+// loader without its site rules makes its fallback reload the page in a loop (seen on tomshardware.com, 2026-11-25).
+// A section is taken WHOLE: the keyword match below would miss rules that never name the vendor, e.g.
+// "##+js(ra, onerror, script[id][onerror])". Every line still passes the scriptlet trust gate (rule A, with its safe
+// replacements) and every later gate (rules B/C/D, geographic scope, CrUX top-1M, generic hide rules dropped).
+const ANTI_ADMIRAL_SECTION_SOURCES = Object.freeze([
+    Object.freeze({
+        url:      'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-general.txt',
+        sections: Object.freeze([ 'Admiral', 'Ad-Shield' ]),
+    }),
+]);
+// How uAssets marks a section (start / end line, followed by the section name).
+const UASSETS_SECTION_MARKERS = Object.freeze({ START: '! SECTION: ', END: '! !SECTION: ' });
+// uBO's "!#if" preprocessor answered as uBO Lite answers it on Chromium (uBO's platform/mv3/make-rulesets.js env):
+// no HTML filtering, so a section's "!#else" branch (the MV3 form of its rules) is the one taken. Evaluated by the
+// project's own copy of uBO's preparser (js/core/filter-parser-helpers.js), not a second implementation.
+const UASSETS_PREPARSER_ENV = Object.freeze([ 'chromium', 'mv3', 'ublock', 'ubol', 'user_stylesheet' ]);
+
+// Pure: the rule lines of one uAssets section, after the preprocessor (comments and blank lines left out). Throws when
+// the section is missing, so an upstream reorganisation fails the build instead of silently shipping nothing.
+export function selectUassetsSectionRules(prunedLines, sectionName) {
+    const start = prunedLines.indexOf(`${UASSETS_SECTION_MARKERS.START}${sectionName}`);
+    const end = prunedLines.indexOf(`${UASSETS_SECTION_MARKERS.END}${sectionName}`);
+    if ( start === -1 || end <= start ) {
+        throw new Error(`uAssets section "${sectionName}" not found (markers "${UASSETS_SECTION_MARKERS.START}${sectionName}" … "${UASSETS_SECTION_MARKERS.END}${sectionName}") — aborting`);
+    }
+    return prunedLines.slice(start + 1, end).map(l => l.trim()).filter(l => l !== '' && l.startsWith('!') === false);
+}
+
+// Pure: a uAssets list after uBO's preprocessor for uBO Lite on Chromium, as lines.
+export function pruneForUbol(text) {
+    return utils.preparser.prune(text, UASSETS_PREPARSER_ENV).split('\n').map(l => l.trim());
+}
+
 // The vendor name as it appears in a rule's own part (scriptlet arguments or selector). Case-insensitive.
 const ADMIRAL_RULE_PART_RE = /admiral/i;
 // Cosmetic/scriptlet separators, longest first so "#@#" is not read as "#" + "@#".
@@ -169,7 +207,19 @@ export async function buildAntiAdmiralSourceText() {
             if ( rule !== '' ) { siteRules.add(rule); }
         }
     }
-    process.stdout.write(`(+${siteRules.size} uBlock Origin Admiral site rules) `);
+    const keywordCount = siteRules.size;
+    // (11.1.3) uBO's whole Admiral and Ad-Shield sections (see ANTI_ADMIRAL_SECTION_SOURCES). Same trust gate, same Set
+    // (a rule both selections find is kept once).
+    for ( const src of ANTI_ADMIRAL_SECTION_SOURCES ) {
+        const pruned = pruneForUbol(await fetchListText(src.url));
+        for ( const section of src.sections ) {
+            const selected = selectUassetsSectionRules(pruned, section).join('\n');
+            for ( const rule of applyScriptletTrustGate(src.url, selected).split('\n') ) {
+                if ( rule !== '' ) { siteRules.add(rule); }
+            }
+        }
+    }
+    process.stdout.write(`(+${keywordCount} uBlock Origin Admiral keyword rules, +${siteRules.size - keywordCount} from its Admiral/Ad-Shield sections) `);
 
     // RELEASE guard — the Set itself goes out of scope when this function
     // returns; nothing to explicitly clear. Emit as standard "||domain^"
@@ -179,7 +229,7 @@ export async function buildAntiAdmiralSourceText() {
     // path, no separate ruleset-details.json handling to maintain.
     return [
         ...[ ...seenDomains ].sort().map(d => `||${d}^`),
-        '!------------------ Admiral site rules: uBlockOrigin/uAssets ------------------!',
+        '!------------------ Admiral and Ad-Shield rules: uBlockOrigin/uAssets ------------------!',
         ...[ ...siteRules ].sort(),
     ].join('\n');
 }

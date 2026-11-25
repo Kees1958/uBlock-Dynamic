@@ -419,7 +419,7 @@ import {
 } from './cookie-clicker-routes.js';
 // (11.0.0) Ad leftover cleaner — launch and keep (js/data/ad-cleaner.js).
 import { handleAdCleanerKeep, handleAdCleanerLaunch } from './ad-cleaner-routes.js';
-import { isCookiePromptDue, markCookiePromptOffered } from '../core/seamless-cookie-prompt.js';
+import { isCookiePromptDue, markCookiePromptOffered, unmarkCookiePromptOffered } from '../core/seamless-cookie-prompt.js';
 import {
     handleMatrixDeadlineAlarm,
     reconcileMatrixDeadline,
@@ -1178,8 +1178,11 @@ async function maybeOfferSeamlessCookiePrompt(tabId, tab) {
     if ( SEAMLESS_PROMPT_PROTOCOLS.includes(url.protocol) === false ) { return; }
     if ( await isCookiePromptDue() === false ) { return; }
     if ( await getFilteringMode(url.hostname) === MODE_NONE ) { return; }
-    await markCookiePromptOffered();
-    await injectSeamlessPrompt(tabId, 'seamlessCookiePromptOffer');
+    await markCookiePromptOffered();   // before injecting: two tabs finishing at once must not both get the offer
+    const result = await injectSeamlessPrompt(tabId, 'seamlessCookiePromptOffer');
+    // (11.1.3) Not shown — the page cannot be scripted (e.g. the Chrome Web Store) or the tab went away: give the offer
+    // back, so the next ordinary page load shows it instead of losing it for this browser session.
+    if ( result?.ok !== true ) { await unmarkCookiePromptOffered(); }
 }
 
 browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {

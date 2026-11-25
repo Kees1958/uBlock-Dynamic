@@ -139,7 +139,7 @@ for ( const id of EXTRA_LIST_IDS ) {
         const scope = [ pick.r, ...allows ];
         const base = evaluate(scope, req);
         // The default-list exception (1000) may legitimately win; anything else must be this list's block.
-        if ( base.outcome !== 'BLOCK' && base.winner?.priority !== B.STATIC_FILTER_LIST_PRIORITY ) {
+        if ( base.outcome !== 'BLOCK' && base.winner?.priority !== B.STATIC_FILTER_LIST_PRIORITY + B.STATIC_EXCEPTION_PRIORITY_OFFSET ) {
             fail(`C: ${id}: ${type} ${host} -> ${base.outcome}, winner ${base.winner?._list}@${base.winner?.priority} (expected BLOCK by the list)`);
         }
         if ( evaluate([ ...scope, sw ], req).outcome !== 'ALLOW' ) { fail(`C: ${id}: ${type} ${host} still blocked with the per-list off-switch (${B.WORRY_FREE_EXTRA_ALLOW_PRIORITY}) present`); }
@@ -147,15 +147,38 @@ for ( const id of EXTRA_LIST_IDS ) {
             fail(`C: ${id}: sub_frame ${host} no longer blocked once Security is off (${B.SCP_SECURITY_SUPPRESS_PRIORITY} must not beat the list)`);
         }
     }
-    const exc = { id: 3, priority: B.STATIC_FILTER_LIST_PRIORITY, action: { type: 'allow' }, condition: { requestDomains: [ host ] }, _list: 'default-list @@' };
+    const exc = { id: 3, priority: B.STATIC_FILTER_LIST_PRIORITY + B.STATIC_EXCEPTION_PRIORITY_OFFSET, action: { type: 'allow' }, condition: { requestDomains: [ host ] }, _list: 'default-list @@' };
     if ( evaluate([ pick.r, ...allows, exc ], { url: pick.url, type: 'script', initiator: CONFIG.INITIATOR }).outcome !== 'ALLOW' ) {
-        fail(`C: ${id}: a default-list @@ exception (${B.STATIC_FILTER_LIST_PRIORITY}) no longer wins`);
+        fail(`C: ${id}: a default-list @@ exception (${exc.priority}) no longer wins`);
     }
 }
 
+// ── C2. (11.1.3) order WITHIN a static list's tier: block < $redirect < "@@" < "$important" ────────
+// Strictly increasing steps (never a tie, so Chrome's tie-break never decides), and the highest step of each static
+// tier stays below the next tier up: the default lists below the user-rule tier, the Worry-free extra lists below
+// their per-list off-switch.
+{
+    const steps = [ 0, B.STATIC_REDIRECT_PRIORITY_OFFSET, B.STATIC_EXCEPTION_PRIORITY_OFFSET, B.STATIC_IMPORTANT_PRIORITY_OFFSET ];
+    if ( steps.some(v => Number.isInteger(v) === false) || steps.some((v, i) => i > 0 && !(v > steps[i - 1])) ) {
+        fail(`C2: static tier steps must be strictly increasing block < redirect < @@ < $important, got ${steps.join(' < ')}`);
+    }
+    const top = B.STATIC_IMPORTANT_PRIORITY_OFFSET;
+    if ( !(B.STATIC_FILTER_LIST_PRIORITY + top < B.USER_RULES_PRIORITY) ) { fail(`C2: default lists' highest step (${B.STATIC_FILTER_LIST_PRIORITY + top}) reaches the user-rule tier`); }
+    if ( !(B.WORRY_FREE_EXTRA_LISTS_PRIORITY + top < B.WORRY_FREE_EXTRA_ALLOW_PRIORITY) ) {
+        fail(`C2: extra lists' highest step (${B.WORRY_FREE_EXTRA_LISTS_PRIORITY + top}) reaches their off-switch (${B.WORRY_FREE_EXTRA_ALLOW_PRIORITY})`);
+    }
+    // The case that motivated it: a list's $redirect must win over ANY list's plain block of the same request.
+    const req = { url: 'https://html-load.com/loader.js', type: 'script', initiator: CONFIG.INITIATOR };
+    const block = { id: 1, priority: B.STATIC_FILTER_LIST_PRIORITY, action: { type: 'block' }, condition: { requestDomains: [ 'html-load.com' ] }, _list: 'block' };
+    const redirect = { id: 2, priority: B.STATIC_FILTER_LIST_PRIORITY + B.STATIC_REDIRECT_PRIORITY_OFFSET, action: { type: 'redirect', redirect: { extensionPath: '/x.js' } }, condition: { requestDomains: [ 'html-load.com' ] }, _list: 'redirect' };
+    const got = evaluate([ block, redirect ], req);
+    if ( got.winner?._list !== 'redirect' ) { fail(`C2: a $redirect no longer beats a plain block of the same request (winner ${got.winner?._list})`); }
+}
+
 // ── D. (10.7.1) hidden tracking-server allow list ─────────────────────────────
-// Its allows must TIE the extra lists (an allow beats a block on a tie) and never rise above them: higher would
-// still be below 9 000, but would be a silent, unreviewed widening; lower would make every exception dead.
+// Its allows sit exactly on the extra lists' "@@" step (11.1.3: list priority + STATIC_EXCEPTION_PRIORITY_OFFSET; until
+// then they TIED the blocks and won on Chrome's tie-break) — above those lists' blocks and redirects, below their
+// $important and far below 9 000. Any other number is a silent, unreviewed change; lower makes every exception dead.
 // Then a real rule from the shipped file must actually beat the extra list it was selected for.
 const ALLOWLIST_ID = 'ruleset_tracking_servers_allowlist';
 if ( B.WORRY_FREE_EXTRA_LISTS_ALLOWLIST_PRIORITY !== B.WORRY_FREE_EXTRA_LISTS_PRIORITY ) {
@@ -164,8 +187,9 @@ if ( B.WORRY_FREE_EXTRA_LISTS_ALLOWLIST_PRIORITY !== B.WORRY_FREE_EXTRA_LISTS_PR
 {
     const own = rules.filter(r => r._list === ALLOWLIST_ID);
     if ( own.length === 0 ) { fail(`D: ${ALLOWLIST_ID} has no enabled rules`); }
-    const off = own.filter(r => r.action?.type !== 'allow' || r.priority !== B.WORRY_FREE_EXTRA_LISTS_ALLOWLIST_PRIORITY);
-    if ( off.length ) { fail(`D: ${ALLOWLIST_ID}: ${off.length} rule(s) not an allow at ${B.WORRY_FREE_EXTRA_LISTS_ALLOWLIST_PRIORITY}`); }
+    const atStep = B.WORRY_FREE_EXTRA_LISTS_ALLOWLIST_PRIORITY + B.STATIC_EXCEPTION_PRIORITY_OFFSET;
+    const off = own.filter(r => r.action?.type !== 'allow' || r.priority !== atStep);
+    if ( off.length ) { fail(`D: ${ALLOWLIST_ID}: ${off.length} rule(s) not an allow at ${atStep}`); }
     // Probe: a site-less, host-only exception (e.g. '||kiplinger.112.2o7.net^') against the extra lists' blocks.
     const probe = own.find(r => !r.condition.initiatorDomains && !r.condition.domainType
         && /^\|\|[a-z0-9.-]+[\^|]?$/.test(r.condition.urlFilter ?? '') && !r.condition.resourceTypes);   // 10.7.6: "||host^" (the separator is kept now)

@@ -64,7 +64,8 @@ export let droppedUnsupportedListLines = [];
 // droppedPolicyScriptlets (10.4.6) — same accumulate-and-report discipline, for scriptlet rules refused by the scriptlet
 // policy (js/data/scriptlet-policy.js): a trusted scriptlet from a non-AdGuard source (rule A, removed at download by
 // fetch-helpers.mjs), code as argument (rule B) or an inserted external URL (rule C) (both removed per list in
-// build-steps.mjs). Shape { source, name, args, reason }. Written to dropped-policy-scriptlets.txt. Cleared at the top
+// build-steps.mjs). (11.1.3) A rule-A line replaced by a safe project scriptlet is recorded too, with reason
+// REASON_REPLACED. Shape { source, name, args, reason }. Written to dropped-policy-scriptlets.txt. Cleared at the top
 // of build().
 export let droppedPolicyScriptlets = [];
 

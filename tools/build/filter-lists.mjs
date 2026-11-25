@@ -854,10 +854,12 @@ export const FILTER_LISTS = [
         firstLanguage: 'en',
         enabled:  false,
     },
-    // Anti-Admiral (v8.3.2) — dedicated block against getadmiral.com's
-    // ad-block-recovery / paywall-circumvention network (branded "Admiral" /
-    // "Ad-Shield"), combined + deduplicated at build time from three
-    // independent open-source lists that each cover this vendor from a
+    // Anti-Admiral (v8.3.2) — dedicated block against two anti-adblock
+    // vendors' ad-block-recovery / paywall-circumvention networks: Admiral
+    // (getadmiral.com) and Ad-Shield (html-load.com, content-loader.com,
+    // error-report.com) — two DIFFERENT vendors (corrected 11.1.3; this
+    // comment used to call them one), combined + deduplicated at build time
+    // from three independent open-source lists that each cover them from a
     // different angle (DNS-blocklist style domain enumeration, EasyPrivacy's
     // own tracking-server rules, and a dedicated uBO filter list). Deliberately
     // NOT sourced via the ordinary string/array `url` field above — those
@@ -873,11 +875,13 @@ export const FILTER_LISTS = [
     {
         id:      'ruleset_antiadmiral',
         // (2026-11-09) uBlock Origin added to the name: its Admiral site rules are now part of this list (anti-admiral.mjs).
-        name:    'Block Admiral anti-adblock (EasyList, HaGeZi, LanikSJ and uBlock Origin)',
+        // (11.1.3, owner's decision) + uBlock Origin's whole Admiral and Ad-Shield sections; Ad-Shield named. The id
+        // stays (a contract), so a user's on/off choice for this row carries over.
+        name:    'Block Admiral and Ad-Shield anti-adblock (EasyList, HaGeZi, LanikSJ and uBlock Origin)',
         customFetch: buildAntiAdmiralSourceText,
         enabled: true,
         // (2026-11-09, owner's decision) Same limit as the anti-adblock list. Only the uBO site rules are affected:
-        // the Admiral server domains carry no site, and blocked servers are never limited (build-steps.mjs).
+        // the Admiral and Ad-Shield server domains carry no site, and blocked servers are never limited (build-steps.mjs).
         popularityFilter: true,
     },
     // Worry-free extra blocklist (v8.3.6) — the reserved WORRY_FREE_EXTRA_*

@@ -1340,14 +1340,15 @@ export async function stepWriteReports(ctx) {
 
     // ── dropped-policy-scriptlets.txt (10.4.6) — every scriptlet rule the scriptlet policy refused
     // (js/data/scriptlet-policy.js): trusted scriptlets from a non-AdGuard source (rule A, at download), code as
-    // argument (rule B) and inserted external URLs (rule C). Always written, and summarised as an end-of-build
+    // argument (rule B) and inserted external URLs (rule C); (11.1.3) rule-A lines that got a safe replacement are listed
+    // too, under their own reason. Always written, and summarised as an end-of-build
     // NOTICE per reason, so the owner sees what the policy removed from each refresh.
     {
         const reportPath = path.join(ROOT, 'dropped-policy-scriptlets.txt');
         const byReason = new Map();
         for ( const d of droppedPolicyScriptlets ) { byReason.set(d.reason, (byReason.get(d.reason) ?? 0) + 1); }
         const lines = [
-            `Scriptlet rules refused by the scriptlet policy (js/data/scriptlet-policy.js) — ${new Date().toISOString().slice(0, 10)}`,
+            `Scriptlet rules refused (or, rule A, replaced by a safe project scriptlet) by the scriptlet policy (js/data/scriptlet-policy.js) — ${new Date().toISOString().slice(0, 10)}`,
             `${droppedPolicyScriptlets.length} total: ${[ ...byReason ].map(([ r, n ]) => `${n} ${r}`).join('; ') || 'none'}.`,
             '',
             ...droppedPolicyScriptlets.map(d => d.line !== undefined
@@ -1360,6 +1361,8 @@ export async function stepWriteReports(ctx) {
             const n = byReason.get(reason) ?? 0;
             if ( n !== 0 ) { buildNotices.push({ level: 'NOTICE', text: `Scriptlet policy: ${n} rule(s) dropped — ${reason} (see dropped-policy-scriptlets.txt).` }); }
         }
+        const replaced = byReason.get(SCRIPTLET_POLICY.REASON_REPLACED) ?? 0;
+        if ( replaced !== 0 ) { buildNotices.push({ level: 'NOTICE', text: `Scriptlet policy: ${replaced} rule(s) kept as a safe replacement — ${SCRIPTLET_POLICY.REASON_REPLACED} (see dropped-policy-scriptlets.txt).` }); }
     }
 
     // ── dropped-unsupported-list-lines.txt (10.1.8) — lines of a hand-written

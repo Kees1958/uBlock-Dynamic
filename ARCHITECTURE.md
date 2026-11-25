@@ -191,6 +191,8 @@ package and readable. The single policy (`js/data/scriptlet-policy.js`) is enfor
 `tools/build/build-steps.mjs`), the suite (`tools/check-mv3-compliance.mjs`, step 59), the extension input
 (`js/core/custom-scriptlets.js`) and run time (guard in `rulesets/scriptlet-library.js`, re-check before executeScript).
 - Trusted scriptlets (`trusted-*`, uBO requiresTrust names) only from AdGuard Team sources; never own rules.
+  (11.1.3) A refused rule of a known harmless shape is replaced by a safe equivalent instead of dropped
+  (`safeReplacementFor()`; project scriptlets or the non-trusted AdGuard twin) — never by loosening rule A.
 - No code as an argument; no external URL inserted into a page.
 - A documented decision that no code reads is not enforcement (the 9.8.0 exclusion constant was exactly that).
 - New code that loads anything from a URL (script, module, importScripts, CSP) fails step 59.

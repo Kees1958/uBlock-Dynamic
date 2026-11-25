@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -15,7 +15,7 @@
   },
   {
     "id": 2,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -34,7 +34,7 @@
   },
   {
     "id": 3,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -53,7 +53,7 @@
   },
   {
     "id": 4,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -72,7 +72,7 @@
   },
   {
     "id": 5,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -91,7 +91,7 @@
   },
   {
     "id": 6,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -110,7 +110,7 @@
   },
   {
     "id": 7,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -129,7 +129,7 @@
   },
   {
     "id": 8,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -148,7 +148,7 @@
   },
   {
     "id": 9,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -167,7 +167,7 @@
   },
   {
     "id": 10,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -186,7 +186,7 @@
   },
   {
     "id": 11,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
       "type": "allow"
     },
@@ -224,7 +224,7 @@
   },
   {
     "id": 13,
-    "priority": 10001,
+    "priority": 10003,
     "action": {
       "type": "block"
     },

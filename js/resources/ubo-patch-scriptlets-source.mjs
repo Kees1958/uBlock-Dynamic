@@ -51,6 +51,8 @@
  *     hand-port size ceiling.
  */
 
+import { SCRIPTLET_POLICY } from '../data/scriptlet-policy.js';
+
 // ── UBO_PATCH_SCRIPTLETS ────────────────────────────────────────────────────
 // One entry per distinct function. `names` lists every alias this
 // scriptlet should be reachable by (bare form only — the generic
@@ -126,6 +128,120 @@ export const UBO_PATCH_SCRIPTLETS = [
                     return Reflect.set(target, prop, value, receiver);
                 },
             });
+        },
+    },
+    {
+        names: [ SCRIPTLET_POLICY.BLANK_SETATTRIBUTE_VALUE_NAME ],
+        // Own implementation (11.1.3), the safe replacement of one rule-A shape (js/data/scriptlet-policy.js,
+        // SAFE_SCRIPTLET_REPLACEMENTS). uBlock Origin's Ad-Shield fixes use
+        //   site##+js(trusted-replace-argument, Element.prototype.setAttribute, 1, , condition, /pattern/)
+        // which needs trust only because trusted-replace-argument can write ANY value into ANY call. This scriptlet does
+        // the one thing those rules use it for: when a setAttribute() VALUE matches the pattern, the value becomes ''.
+        // It cannot insert anything else. Ad-Shield writes its recovery code into script attributes (onerror …); an
+        // emptied attribute runs nothing. Usage (Quick-fixes list, or written by the build for the rule above):
+        //   example.com##+js(blank-setattribute-value, /pattern/)
+        // Args: 1 = pattern, a /regex/ (flags allowed, g and y ignored) or plain text to look for. An empty, too long or
+        // invalid pattern makes it do nothing. setAttribute is wrapped in a Proxy whose toString() answers like the original.
+        scriptlet: function blankSetAttributeValue(source, args) {
+            const [ pattern = '' ] = args || [];
+            // Limits and fixed values — the only place they live.
+            const MAX_PATTERN_LENGTH = 1000;
+            const REGEX_LITERAL = /^\/(.+)\/([a-z]*)$/;
+            const STATEFUL_FLAGS = /[gy]/g;   // would make test() depend on the previous call
+            const BLANK_VALUE = '';
+            const VALUE_INDEX = 1;            // setAttribute(name, VALUE)
+            const logPrefix = '[uBlock-Dynamic] blank-setattribute-value:';
+            if ( typeof pattern !== 'string' || pattern === '' || pattern.length > MAX_PATTERN_LENGTH ) { return; }
+            let matches;
+            const literal = REGEX_LITERAL.exec(pattern);
+            if ( literal !== null ) {
+                let re;
+                try { re = new RegExp(literal[1], literal[2].replace(STATEFUL_FLAGS, '')); } catch { return; }
+                matches = text => re.test(text);
+            } else {
+                matches = text => text.includes(pattern);
+            }
+            const original = Element.prototype.setAttribute;
+            if ( typeof original !== 'function' ) { return; }
+            const wrapped = new Proxy(original, {
+                apply(target, thisArg, callArgs) {
+                    if ( callArgs.length > VALUE_INDEX ) {
+                        let text = null;
+                        try { text = String(callArgs[VALUE_INDEX]); } catch { /* e.g. a Symbol: leave the call alone */ }
+                        if ( text !== null && matches(text) ) {
+                            callArgs[VALUE_INDEX] = BLANK_VALUE;
+                            if ( source.verbose ) { console.log(logPrefix, 'Value blanked'); }
+                        }
+                    }
+                    return Reflect.apply(target, thisArg, callArgs);
+                },
+            });
+            // Hide the wrapper the way uBO's proxyApplyFn does: toString() of the wrapper (and of the toString wrapper
+            // itself) answers with the original's text, so a page cannot spot the change by reading the source text.
+            const nativeToString = Function.prototype.toString;
+            const toStringWrapper = new Proxy(nativeToString, {
+                apply(target, thisArg, callArgs) {
+                    const real = thisArg === wrapped ? original : thisArg === toStringWrapper ? nativeToString : thisArg;
+                    return Reflect.apply(target, real, callArgs);
+                },
+            });
+            Function.prototype.toString = toStringWrapper;
+            Element.prototype.setAttribute = wrapped;
+        },
+    },
+    {
+        names: [ SCRIPTLET_POLICY.SET_STORAGE_ITEM_NOW_NAME ],
+        // Own implementation (11.1.3), the safe replacement of
+        //   site##+js(trusted-set-local-storage-item, key, $now$)   /   …trusted-set-session-storage-item, key, $now$)
+        // (js/data/scriptlet-policy.js, SAFE_SCRIPTLET_REPLACEMENTS): "remember when the ad was last shown", so a site's
+        // pop-under or interstitial waits. Writes ONLY the current time (Date.now(), as the trusted scriptlet's $now$
+        // does) — never a value from the rule. Usage:  example.com##+js(set-storage-item-now, local, lastAdTime)
+        // Args: 1 = 'local' or 'session', 2 = the key. Anything else, or a storage that refuses, does nothing.
+        // The limits repeat SCRIPTLET_POLICY's (this function runs stand-alone in the page; the suite checks they agree).
+        scriptlet: function setStorageItemNow(source, args) {
+            const [ kind = '', key = '' ] = args || [];
+            const STORAGE_BY_KIND = { local: 'localStorage', session: 'sessionStorage' };
+            const MAX_KEY_LENGTH = 256;
+            const storageName = STORAGE_BY_KIND[kind];
+            if ( storageName === undefined || typeof key !== 'string' || key.trim() === '' || key.length > MAX_KEY_LENGTH ) { return; }
+            try {
+                self[storageName].setItem(key, String(Date.now()));
+                if ( source.verbose ) { console.log('[uBlock-Dynamic] set-storage-item-now:', kind, key); }
+            } catch { /* storage disabled or full: nothing to do */ }
+        },
+    },
+    {
+        names: [ SCRIPTLET_POLICY.SET_DATA_ATTR_NAME ],
+        // Own implementation (11.1.3), the safe replacement of
+        //   site##+js(trusted-set-attr, selector, data-x, word)
+        // for the shape "a data-* attribute set to a short plain word" — anti-adblock probes such as data-allok=y. A
+        // data-* attribute is never run as code and the value is letters, digits, "-" or "_" only (32 at most).
+        // Usage:  example.com##+js(set-data-attr, body, data-allok, y)
+        // Args: 1 = selector, 2 = data-* attribute name, 3 = value. Sets it on matching elements now and on matching
+        // elements added later (one MutationObserver, batched per animation frame). Invalid arguments do nothing.
+        // The limits repeat SCRIPTLET_POLICY's (this function runs stand-alone in the page; the suite checks they agree).
+        scriptlet: function setDataAttr(source, args) {
+            const [ selector = '', attr = '', value = '' ] = args || [];
+            const NAME_RE = /^data-[a-z0-9-]{1,64}$/i;
+            const VALUE_RE = /^[A-Za-z0-9_-]{1,32}$/;
+            if ( typeof selector !== 'string' || selector.trim() === '' ) { return; }
+            if ( NAME_RE.test(attr) === false || VALUE_RE.test(value) === false ) { return; }
+            let pending;
+            const apply = ( ) => {
+                pending = undefined;
+                let elems;
+                try { elems = document.querySelectorAll(selector); } catch { return false; }   // invalid selector
+                for ( const elem of elems ) {
+                    if ( elem.getAttribute(attr) !== value ) { elem.setAttribute(attr, value); }
+                }
+                return true;
+            };
+            if ( apply() === false ) { return; }
+            const observer = new MutationObserver(( ) => {
+                if ( pending !== undefined ) { return; }
+                pending = requestAnimationFrame(apply);
+            });
+            observer.observe(document, { childList: true, subtree: true });
         },
     },
     {
