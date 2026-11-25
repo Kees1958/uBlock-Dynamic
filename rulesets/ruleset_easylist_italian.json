@@ -10845,40 +10845,6 @@
     }
   },
   {
-    "id": 839270,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cronachedellacampania.it",
-        "cronachesalerno.it",
-        "francescopelliccia.it",
-        "tuxnews.it"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1689121,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cronachedellacampania.it",
-        "cronachesalerno.it",
-        "francescopelliccia.it",
-        "tuxnews.it"
-      ],
-      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1443256,
     "priority": 10000,
     "action": {
@@ -10908,67 +10874,6 @@
     }
   },
   {
-    "id": 992272,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "agorablog.it",
-        "domhouse.it",
-        "informatykit.it"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1783540,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "eventiavversinews.it"
-      ],
-      "urlFilter": "||ads-api.twitter.com^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 860049,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "conoscereilrischioclinico.it",
-        "eventiavversinews.it",
-        "gazzettarossonera.it",
-        "starwarsaddicted.it"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 532983,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "automoto.it"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1317598,
     "priority": 10002,
     "action": {
@@ -10979,104 +10884,6 @@
         "mtv.it"
       ],
       "urlFilter": "||mssl.fwmrm.net/libs/adm/*/admanager.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1789115,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mtv.it"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 740359,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mtv.it"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/pal/sdkloader/pal.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1790888,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mtv.it"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 495298,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myradioonline.it"
-      ],
-      "urlFilter": "||connect.facebook.net/en_us/fbevents.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1177673,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myradioonline.it"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1362336,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "adshrink.it"
-      ],
-      "urlFilter": "||shrink-service.it/ads.php",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1502053,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "adshrink.it"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -11105,20 +10912,6 @@
         "notebookcheck.it"
       ],
       "urlFilter": "/ads.*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 782202,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "notebookcheck.it"
-      ],
-      "urlFilter": "||snigelweb-com.videoplayerhub.com/videoloader.js",
       "isUrlFilterCaseSensitive": false
     }
   },

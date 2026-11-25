@@ -1,5 +1,46 @@
 [
   {
+    "id": 1622368,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "qub.ca"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1250844,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "oqee.tv",
+        "tv.free.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 487018,
     "priority": 10003,
     "action": {
@@ -40,6 +81,27 @@
         "script"
       ],
       "urlFilter": "||platform.pubadx.one/pubadx-ad.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 772743,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "animationdigitalnetwork.com",
+        "animationdigitalnetwork.fr"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -282,6 +344,26 @@
     }
   },
   {
+    "id": 11165,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "geo.dailymotion.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 1651785,
     "priority": 10001,
     "action": {
@@ -358,26 +440,6 @@
         "script"
       ],
       "urlFilter": "||prismamedia-com.videoplayerhub.com/galleryplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 324783,
-    "priority": 10003,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/web_accessible_resources/noop.js"
-      }
-    },
-    "condition": {
-      "initiatorDomains": [
-        "purepeople.com"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||cdn.lib.getjad.io/library/",
       "isUrlFilterCaseSensitive": false
     }
   },

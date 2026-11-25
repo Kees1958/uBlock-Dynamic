@@ -389,21 +389,7 @@
     }
   },
   {
-    "id": 27,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "retroradio.hu"
-      ],
-      "urlFilter": "||hu.adocean.pl/files/js/ado.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 29,
+    "id": 28,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -414,7 +400,7 @@
     }
   },
   {
-    "id": 30,
+    "id": 29,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -425,7 +411,7 @@
     }
   },
   {
-    "id": 31,
+    "id": 30,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -436,7 +422,7 @@
     }
   },
   {
-    "id": 32,
+    "id": 31,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -453,10 +439,18 @@
       "type": "allow"
     },
     "condition": {
-      "initiatorDomains": [
-        "hvg.hu"
-      ],
-      "urlFilter": "||ad.adverticum.net/g3.js",
+      "urlFilter": "||totalcar.hu/assets/js/adbd/ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 34,
+    "priority": 10002,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "urlFilter": "||napi.hu/js/advertisement.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -467,7 +461,10 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||totalcar.hu/assets/js/adbd/ads.js",
+      "initiatorDomains": [
+        "port.hu"
+      ],
+      "urlFilter": "||ad.adverticum.net/g3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -479,11 +476,9 @@
     },
     "condition": {
       "initiatorDomains": [
-        "divany.hu",
-        "totalbike.hu",
-        "totalcar.hu"
+        "port.hu"
       ],
-      "urlFilter": "||ad.adverticum.net/|",
+      "urlFilter": "||ad.adverticum.net/scripts/goa3/main/*/goa3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -494,99 +489,12 @@
       "type": "allow"
     },
     "condition": {
-      "initiatorDomains": [
-        "divany.hu",
-        "totalbike.hu",
-        "totalcar.hu"
-      ],
-      "urlFilter": "||ad.adverticum.net/g3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 38,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "divany.hu",
-        "totalbike.hu",
-        "totalcar.hu"
-      ],
-      "urlFilter": "||ad.adverticum.net/scripts/goa3/main/*/goa3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 39,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "divany.hu",
-        "totalbike.hu",
-        "totalcar.hu"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 40,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||napi.hu/js/advertisement.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 41,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "port.hu"
-      ],
-      "urlFilter": "||ad.adverticum.net/g3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 42,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "port.hu"
-      ],
-      "urlFilter": "||ad.adverticum.net/scripts/goa3/main/*/goa3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 43,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
       "urlFilter": "||port.hu/js/advert.min.js",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
-    "id": 44,
+    "id": 38,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -600,21 +508,7 @@
     }
   },
   {
-    "id": 45,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "embed.indavideo.hu"
-      ],
-      "urlFilter": "||indexhu.adocean.pl/*ad.json",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 46,
+    "id": 39,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -625,7 +519,7 @@
     }
   },
   {
-    "id": 47,
+    "id": 40,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -636,7 +530,7 @@
     }
   },
   {
-    "id": 48,
+    "id": 41,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -647,7 +541,7 @@
     }
   },
   {
-    "id": 49,
+    "id": 42,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -658,7 +552,7 @@
     }
   },
   {
-    "id": 50,
+    "id": 43,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -672,7 +566,7 @@
     }
   },
   {
-    "id": 51,
+    "id": 44,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -683,7 +577,7 @@
     }
   },
   {
-    "id": 52,
+    "id": 45,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -694,7 +588,7 @@
     }
   },
   {
-    "id": 53,
+    "id": 46,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -705,7 +599,7 @@
     }
   },
   {
-    "id": 54,
+    "id": 47,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -719,7 +613,7 @@
     }
   },
   {
-    "id": 55,
+    "id": 48,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -730,7 +624,7 @@
     }
   },
   {
-    "id": 56,
+    "id": 49,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -741,7 +635,7 @@
     }
   },
   {
-    "id": 57,
+    "id": 50,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -752,7 +646,7 @@
     }
   },
   {
-    "id": 58,
+    "id": 51,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -764,7 +658,7 @@
     }
   },
   {
-    "id": 59,
+    "id": 52,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -775,7 +669,7 @@
     }
   },
   {
-    "id": 60,
+    "id": 53,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -786,7 +680,7 @@
     }
   },
   {
-    "id": 61,
+    "id": 54,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -797,7 +691,7 @@
     }
   },
   {
-    "id": 62,
+    "id": 55,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -808,7 +702,7 @@
     }
   },
   {
-    "id": 63,
+    "id": 56,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -819,7 +713,7 @@
     }
   },
   {
-    "id": 64,
+    "id": 57,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -831,7 +725,7 @@
     }
   },
   {
-    "id": 65,
+    "id": 58,
     "priority": 10000,
     "action": {
       "type": "block"

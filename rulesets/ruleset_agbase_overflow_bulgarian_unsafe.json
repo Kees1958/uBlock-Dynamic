@@ -1,6 +1,43 @@
 [
   {
-    "id": 119,
+    "id": 23,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rtl.hr"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 76,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sigmatv.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||s0.2mdn.net/instream/html5/ima3_debug.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 112,
     "priority": 10001,
     "action": {
       "type": "redirect",

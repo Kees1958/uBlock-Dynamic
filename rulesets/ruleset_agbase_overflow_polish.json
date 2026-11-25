@@ -520,20 +520,6 @@
   },
   {
     "id": 33,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tvn.pl"
-      ],
-      "urlFilter": "||lib.wtg-ads.com/prebid/prebid_*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 34,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -544,7 +530,7 @@
     }
   },
   {
-    "id": 35,
+    "id": 34,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -558,7 +544,7 @@
     }
   },
   {
-    "id": 37,
+    "id": 36,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -569,7 +555,7 @@
     }
   },
   {
-    "id": 38,
+    "id": 37,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -580,7 +566,7 @@
     }
   },
   {
-    "id": 39,
+    "id": 38,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -591,7 +577,7 @@
     }
   },
   {
-    "id": 40,
+    "id": 39,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -602,7 +588,7 @@
     }
   },
   {
-    "id": 41,
+    "id": 40,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -613,7 +599,7 @@
     }
   },
   {
-    "id": 42,
+    "id": 41,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -628,7 +614,7 @@
     }
   },
   {
-    "id": 43,
+    "id": 42,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -639,7 +625,7 @@
     }
   },
   {
-    "id": 44,
+    "id": 43,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -650,7 +636,7 @@
     }
   },
   {
-    "id": 45,
+    "id": 44,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -661,7 +647,7 @@
     }
   },
   {
-    "id": 46,
+    "id": 45,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -672,7 +658,7 @@
     }
   },
   {
-    "id": 47,
+    "id": 46,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -686,7 +672,7 @@
     }
   },
   {
-    "id": 48,
+    "id": 47,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -697,7 +683,7 @@
     }
   },
   {
-    "id": 49,
+    "id": 48,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -708,7 +694,7 @@
     }
   },
   {
-    "id": 50,
+    "id": 49,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -719,7 +705,7 @@
     }
   },
   {
-    "id": 51,
+    "id": 50,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -730,7 +716,7 @@
     }
   },
   {
-    "id": 52,
+    "id": 51,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -741,7 +727,7 @@
     }
   },
   {
-    "id": 53,
+    "id": 52,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -752,7 +738,7 @@
     }
   },
   {
-    "id": 54,
+    "id": 53,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -763,7 +749,7 @@
     }
   },
   {
-    "id": 55,
+    "id": 54,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -774,7 +760,7 @@
     }
   },
   {
-    "id": 56,
+    "id": 55,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -785,7 +771,7 @@
     }
   },
   {
-    "id": 57,
+    "id": 56,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -796,7 +782,7 @@
     }
   },
   {
-    "id": 58,
+    "id": 57,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -807,7 +793,7 @@
     }
   },
   {
-    "id": 59,
+    "id": 58,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -818,7 +804,7 @@
     }
   },
   {
-    "id": 60,
+    "id": 59,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -829,7 +815,7 @@
     }
   },
   {
-    "id": 61,
+    "id": 60,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -840,7 +826,7 @@
     }
   },
   {
-    "id": 62,
+    "id": 61,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -854,7 +840,7 @@
     }
   },
   {
-    "id": 63,
+    "id": 62,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -868,7 +854,7 @@
     }
   },
   {
-    "id": 64,
+    "id": 63,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -879,7 +865,7 @@
     }
   },
   {
-    "id": 65,
+    "id": 64,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -890,7 +876,7 @@
     }
   },
   {
-    "id": 66,
+    "id": 65,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -901,7 +887,7 @@
     }
   },
   {
-    "id": 67,
+    "id": 66,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -927,7 +913,7 @@
     }
   },
   {
-    "id": 68,
+    "id": 67,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -938,7 +924,7 @@
     }
   },
   {
-    "id": 69,
+    "id": 68,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -949,7 +935,7 @@
     }
   },
   {
-    "id": 70,
+    "id": 69,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -960,7 +946,7 @@
     }
   },
   {
-    "id": 71,
+    "id": 70,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -971,7 +957,7 @@
     }
   },
   {
-    "id": 72,
+    "id": 71,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -982,7 +968,7 @@
     }
   },
   {
-    "id": 73,
+    "id": 72,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -993,7 +979,7 @@
     }
   },
   {
-    "id": 74,
+    "id": 73,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1004,7 +990,7 @@
     }
   },
   {
-    "id": 75,
+    "id": 74,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1024,7 +1010,7 @@
     }
   },
   {
-    "id": 76,
+    "id": 75,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1035,7 +1021,7 @@
     }
   },
   {
-    "id": 77,
+    "id": 76,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1052,7 +1038,7 @@
     }
   },
   {
-    "id": 78,
+    "id": 77,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1069,7 +1055,7 @@
     }
   },
   {
-    "id": 79,
+    "id": 78,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1080,7 +1066,7 @@
     }
   },
   {
-    "id": 80,
+    "id": 79,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -1094,7 +1080,7 @@
     }
   },
   {
-    "id": 81,
+    "id": 80,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1105,21 +1091,7 @@
     }
   },
   {
-    "id": 82,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ostrow24.tv"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 83,
+    "id": 81,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1130,18 +1102,7 @@
     }
   },
   {
-    "id": 84,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||ads.zw.pl/www/delivery/asyncjs.php",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 85,
+    "id": 82,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1152,38 +1113,7 @@
     }
   },
   {
-    "id": 86,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "strimov.site"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 87,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "odsluchane.eu"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 88,
+    "id": 83,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1201,7 +1131,7 @@
     }
   },
   {
-    "id": 89,
+    "id": 84,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1212,7 +1142,7 @@
     }
   },
   {
-    "id": 90,
+    "id": 85,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1223,7 +1153,7 @@
     }
   },
   {
-    "id": 91,
+    "id": 87,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1234,7 +1164,7 @@
     }
   },
   {
-    "id": 92,
+    "id": 88,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1245,7 +1175,7 @@
     }
   },
   {
-    "id": 93,
+    "id": 89,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1256,7 +1186,7 @@
     }
   },
   {
-    "id": 94,
+    "id": 90,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1267,7 +1197,7 @@
     }
   },
   {
-    "id": 95,
+    "id": 91,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1278,7 +1208,7 @@
     }
   },
   {
-    "id": 96,
+    "id": 92,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1289,7 +1219,7 @@
     }
   },
   {
-    "id": 97,
+    "id": 93,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1300,21 +1230,7 @@
     }
   },
   {
-    "id": 98,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "halorzeszow.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 99,
+    "id": 95,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1325,35 +1241,7 @@
     }
   },
   {
-    "id": 100,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "poszkole.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 101,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "poszkole.pl"
-      ],
-      "urlFilter": "||redefine.hit.stat24.com/*/ad.xml?id=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 102,
+    "id": 97,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1364,7 +1252,7 @@
     }
   },
   {
-    "id": 103,
+    "id": 98,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1378,21 +1266,7 @@
     }
   },
   {
-    "id": 104,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gazetaolsztynska.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 105,
+    "id": 100,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1403,7 +1277,7 @@
     }
   },
   {
-    "id": 106,
+    "id": 101,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1414,7 +1288,7 @@
     }
   },
   {
-    "id": 107,
+    "id": 102,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1425,7 +1299,7 @@
     }
   },
   {
-    "id": 108,
+    "id": 103,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1442,7 +1316,7 @@
     }
   },
   {
-    "id": 109,
+    "id": 104,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1453,7 +1327,7 @@
     }
   },
   {
-    "id": 110,
+    "id": 105,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1464,7 +1338,7 @@
     }
   },
   {
-    "id": 111,
+    "id": 106,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1478,21 +1352,7 @@
     }
   },
   {
-    "id": 112,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "swiatgwiazd.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 113,
+    "id": 108,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1515,21 +1375,7 @@
     }
   },
   {
-    "id": 114,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "audiostereo.pl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 115,
+    "id": 109,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1540,7 +1386,7 @@
     }
   },
   {
-    "id": 116,
+    "id": 110,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1551,88 +1397,7 @@
     }
   },
   {
-    "id": 117,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "discoverychannel.pl",
-        "metro.tv",
-        "ttv.pl",
-        "tvn24.pl",
-        "tvnfabula.pl",
-        "tvnturbo.pl"
-      ],
-      "urlFilter": "||edge.permutive.app/*-web.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 118,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "discoverychannel.pl",
-        "metro.tv",
-        "ttv.pl",
-        "tvn24.pl",
-        "tvnfabula.pl",
-        "tvnturbo.pl"
-      ],
-      "urlFilter": "||tvn.hit.gemius.pl/gplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 119,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "uwaga.tvn.pl"
-      ],
-      "urlFilter": "||tvn.hit.gemius.pl/gstream.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 120,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "uwaga.tvn.pl"
-      ],
-      "urlFilter": "||tvn.hit.gemius.pl/xgemius.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 121,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tvn24.pl",
-        "uwaga.tvn.pl"
-      ],
-      "urlFilter": "||tvn.hit.gemius.pl/*/redot.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 122,
+    "id": 111,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1643,7 +1408,7 @@
     }
   },
   {
-    "id": 123,
+    "id": 112,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1654,7 +1419,7 @@
     }
   },
   {
-    "id": 124,
+    "id": 113,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1668,49 +1433,7 @@
     }
   },
   {
-    "id": 125,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "pepper.pl"
-      ],
-      "urlFilter": "||track.webgains.com/click.html?",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 126,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "pepper.pl"
-      ],
-      "urlFilter": "||clk.tradedoubler.com/click?",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 127,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "pepper.pl"
-      ],
-      "urlFilter": "||ad.doubleclick.net/ddm/clk/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 128,
+    "id": 114,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1727,7 +1450,7 @@
     }
   },
   {
-    "id": 129,
+    "id": 115,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1738,47 +1461,7 @@
     }
   },
   {
-    "id": 130,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "megane.com.pl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 131,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "aleklasa.pl",
-        "biznesinfo.pl",
-        "domekiogrodek.pl",
-        "goniec.pl",
-        "goracetematy.pl",
-        "lelum.pl",
-        "pacjenci.pl",
-        "portalparentingowy.pl",
-        "rolnikinfo.pl",
-        "rynek-kolejowy.pl",
-        "smakosze.pl",
-        "swiatzwierzat.pl",
-        "turysci.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 132,
+    "id": 117,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1795,7 +1478,7 @@
     }
   },
   {
-    "id": 133,
+    "id": 118,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1809,7 +1492,7 @@
     }
   },
   {
-    "id": 134,
+    "id": 119,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1820,21 +1503,7 @@
     }
   },
   {
-    "id": 135,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "slowopodlasia.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 136,
+    "id": 121,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1848,7 +1517,7 @@
     }
   },
   {
-    "id": 137,
+    "id": 122,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1862,7 +1531,7 @@
     }
   },
   {
-    "id": 138,
+    "id": 123,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1879,7 +1548,7 @@
     }
   },
   {
-    "id": 139,
+    "id": 124,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1890,7 +1559,7 @@
     }
   },
   {
-    "id": 140,
+    "id": 125,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1904,7 +1573,7 @@
     }
   },
   {
-    "id": 141,
+    "id": 126,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1915,21 +1584,7 @@
     }
   },
   {
-    "id": 142,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "rmfon.pl"
-      ],
-      "urlFilter": "||cdn.adswizz.com/adswizz/js/synchroclient2.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 143,
+    "id": 127,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1940,7 +1595,7 @@
     }
   },
   {
-    "id": 144,
+    "id": 128,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1951,7 +1606,7 @@
     }
   },
   {
-    "id": 145,
+    "id": 129,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1962,7 +1617,7 @@
     }
   },
   {
-    "id": 146,
+    "id": 130,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1976,7 +1631,7 @@
     }
   },
   {
-    "id": 147,
+    "id": 131,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1987,7 +1642,7 @@
     }
   },
   {
-    "id": 148,
+    "id": 132,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1998,7 +1653,7 @@
     }
   },
   {
-    "id": 149,
+    "id": 133,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2009,7 +1664,7 @@
     }
   },
   {
-    "id": 150,
+    "id": 134,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2020,7 +1675,7 @@
     }
   },
   {
-    "id": 151,
+    "id": 135,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2031,7 +1686,7 @@
     }
   },
   {
-    "id": 152,
+    "id": 136,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2042,7 +1697,7 @@
     }
   },
   {
-    "id": 153,
+    "id": 137,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2053,7 +1708,7 @@
     }
   },
   {
-    "id": 154,
+    "id": 138,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2067,7 +1722,7 @@
     }
   },
   {
-    "id": 155,
+    "id": 139,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2078,7 +1733,7 @@
     }
   },
   {
-    "id": 156,
+    "id": 140,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2090,21 +1745,7 @@
     }
   },
   {
-    "id": 158,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "senda.pl"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js?id=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 159,
+    "id": 142,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2121,7 +1762,7 @@
     }
   },
   {
-    "id": 160,
+    "id": 143,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2132,7 +1773,7 @@
     }
   },
   {
-    "id": 161,
+    "id": 144,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2143,7 +1784,7 @@
     }
   },
   {
-    "id": 162,
+    "id": 145,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2154,63 +1795,7 @@
     }
   },
   {
-    "id": 163,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tarnowska.tv"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 164,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tarnowska.tv"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 165,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "biletomat.pl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 166,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "kanalsportowy.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 167,
+    "id": 148,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2221,7 +1806,7 @@
     }
   },
   {
-    "id": 168,
+    "id": 149,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2232,7 +1817,7 @@
     }
   },
   {
-    "id": 169,
+    "id": 150,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2246,7 +1831,7 @@
     }
   },
   {
-    "id": 170,
+    "id": 151,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2257,7 +1842,7 @@
     }
   },
   {
-    "id": 171,
+    "id": 152,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2268,7 +1853,7 @@
     }
   },
   {
-    "id": 172,
+    "id": 153,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2279,7 +1864,7 @@
     }
   },
   {
-    "id": 173,
+    "id": 154,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2290,7 +1875,7 @@
     }
   },
   {
-    "id": 174,
+    "id": 155,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2301,7 +1886,7 @@
     }
   },
   {
-    "id": 175,
+    "id": 156,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2312,7 +1897,7 @@
     }
   },
   {
-    "id": 176,
+    "id": 157,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2323,7 +1908,7 @@
     }
   },
   {
-    "id": 177,
+    "id": 158,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2334,7 +1919,7 @@
     }
   },
   {
-    "id": 178,
+    "id": 159,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2348,7 +1933,7 @@
     }
   },
   {
-    "id": 179,
+    "id": 160,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2362,7 +1947,7 @@
     }
   },
   {
-    "id": 180,
+    "id": 161,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2376,7 +1961,7 @@
     }
   },
   {
-    "id": 181,
+    "id": 162,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2390,7 +1975,7 @@
     }
   },
   {
-    "id": 182,
+    "id": 163,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2404,7 +1989,7 @@
     }
   },
   {
-    "id": 183,
+    "id": 164,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2418,7 +2003,7 @@
     }
   },
   {
-    "id": 184,
+    "id": 165,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2429,7 +2014,7 @@
     }
   },
   {
-    "id": 185,
+    "id": 166,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2440,7 +2025,7 @@
     }
   },
   {
-    "id": 186,
+    "id": 167,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2451,21 +2036,7 @@
     }
   },
   {
-    "id": 187,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "zeriun.cc"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 188,
+    "id": 168,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2479,7 +2050,7 @@
     }
   },
   {
-    "id": 189,
+    "id": 169,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2493,7 +2064,7 @@
     }
   },
   {
-    "id": 190,
+    "id": 170,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2504,7 +2075,7 @@
     }
   },
   {
-    "id": 191,
+    "id": 171,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2515,7 +2086,7 @@
     }
   },
   {
-    "id": 192,
+    "id": 172,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2526,7 +2097,7 @@
     }
   },
   {
-    "id": 193,
+    "id": 173,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2540,7 +2111,7 @@
     }
   },
   {
-    "id": 194,
+    "id": 174,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2551,7 +2122,7 @@
     }
   },
   {
-    "id": 195,
+    "id": 175,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2562,7 +2133,7 @@
     }
   },
   {
-    "id": 196,
+    "id": 176,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2573,7 +2144,7 @@
     }
   },
   {
-    "id": 197,
+    "id": 177,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2584,7 +2155,7 @@
     }
   },
   {
-    "id": 198,
+    "id": 178,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2595,7 +2166,7 @@
     }
   },
   {
-    "id": 199,
+    "id": 179,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2606,7 +2177,7 @@
     }
   },
   {
-    "id": 200,
+    "id": 180,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2617,7 +2188,7 @@
     }
   },
   {
-    "id": 201,
+    "id": 181,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2628,7 +2199,7 @@
     }
   },
   {
-    "id": 202,
+    "id": 182,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2639,7 +2210,7 @@
     }
   },
   {
-    "id": 203,
+    "id": 183,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2653,7 +2224,7 @@
     }
   },
   {
-    "id": 204,
+    "id": 184,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2664,7 +2235,7 @@
     }
   },
   {
-    "id": 205,
+    "id": 185,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2675,7 +2246,7 @@
     }
   },
   {
-    "id": 206,
+    "id": 186,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2686,7 +2257,7 @@
     }
   },
   {
-    "id": 207,
+    "id": 187,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2703,7 +2274,7 @@
     }
   },
   {
-    "id": 208,
+    "id": 188,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2714,7 +2285,7 @@
     }
   },
   {
-    "id": 209,
+    "id": 189,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2725,7 +2296,7 @@
     }
   },
   {
-    "id": 210,
+    "id": 190,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2736,7 +2307,7 @@
     }
   },
   {
-    "id": 211,
+    "id": 191,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2747,7 +2318,7 @@
     }
   },
   {
-    "id": 212,
+    "id": 192,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2758,7 +2329,7 @@
     }
   },
   {
-    "id": 213,
+    "id": 193,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2772,7 +2343,7 @@
     }
   },
   {
-    "id": 214,
+    "id": 194,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2786,7 +2357,7 @@
     }
   },
   {
-    "id": 215,
+    "id": 195,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2797,7 +2368,7 @@
     }
   },
   {
-    "id": 216,
+    "id": 196,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2808,7 +2379,7 @@
     }
   },
   {
-    "id": 217,
+    "id": 197,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2822,7 +2393,7 @@
     }
   },
   {
-    "id": 218,
+    "id": 198,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2833,7 +2404,7 @@
     }
   },
   {
-    "id": 219,
+    "id": 199,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2844,7 +2415,7 @@
     }
   },
   {
-    "id": 220,
+    "id": 200,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2855,7 +2426,7 @@
     }
   },
   {
-    "id": 221,
+    "id": 201,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2866,7 +2437,7 @@
     }
   },
   {
-    "id": 222,
+    "id": 202,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2877,7 +2448,7 @@
     }
   },
   {
-    "id": 223,
+    "id": 203,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2888,7 +2459,7 @@
     }
   },
   {
-    "id": 224,
+    "id": 204,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2899,7 +2470,7 @@
     }
   },
   {
-    "id": 225,
+    "id": 205,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2910,7 +2481,7 @@
     }
   },
   {
-    "id": 226,
+    "id": 206,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2921,7 +2492,7 @@
     }
   },
   {
-    "id": 227,
+    "id": 207,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2932,7 +2503,7 @@
     }
   },
   {
-    "id": 228,
+    "id": 208,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2943,7 +2514,7 @@
     }
   },
   {
-    "id": 229,
+    "id": 209,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2954,7 +2525,7 @@
     }
   },
   {
-    "id": 230,
+    "id": 210,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2965,7 +2536,7 @@
     }
   },
   {
-    "id": 231,
+    "id": 211,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2976,7 +2547,7 @@
     }
   },
   {
-    "id": 232,
+    "id": 212,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2990,7 +2561,7 @@
     }
   },
   {
-    "id": 233,
+    "id": 213,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3004,7 +2575,7 @@
     }
   },
   {
-    "id": 234,
+    "id": 214,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3015,7 +2586,7 @@
     }
   },
   {
-    "id": 235,
+    "id": 215,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3026,7 +2597,7 @@
     }
   },
   {
-    "id": 236,
+    "id": 216,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3037,7 +2608,7 @@
     }
   },
   {
-    "id": 237,
+    "id": 217,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3048,21 +2619,7 @@
     }
   },
   {
-    "id": 238,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "satkurier.pl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 239,
+    "id": 218,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3073,7 +2630,7 @@
     }
   },
   {
-    "id": 240,
+    "id": 219,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3087,7 +2644,7 @@
     }
   },
   {
-    "id": 241,
+    "id": 220,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3098,7 +2655,7 @@
     }
   },
   {
-    "id": 242,
+    "id": 221,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3109,7 +2666,7 @@
     }
   },
   {
-    "id": 243,
+    "id": 222,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3120,7 +2677,7 @@
     }
   },
   {
-    "id": 244,
+    "id": 223,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3131,7 +2688,7 @@
     }
   },
   {
-    "id": 245,
+    "id": 224,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3142,7 +2699,7 @@
     }
   },
   {
-    "id": 248,
+    "id": 227,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3153,7 +2710,7 @@
     }
   },
   {
-    "id": 249,
+    "id": 228,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3164,7 +2721,7 @@
     }
   },
   {
-    "id": 250,
+    "id": 229,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3175,7 +2732,7 @@
     }
   },
   {
-    "id": 251,
+    "id": 230,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3186,21 +2743,7 @@
     }
   },
   {
-    "id": 252,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "meczyki.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 253,
+    "id": 232,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3214,7 +2757,7 @@
     }
   },
   {
-    "id": 254,
+    "id": 233,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3225,7 +2768,7 @@
     }
   },
   {
-    "id": 255,
+    "id": 234,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3236,7 +2779,7 @@
     }
   },
   {
-    "id": 256,
+    "id": 235,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3247,7 +2790,7 @@
     }
   },
   {
-    "id": 257,
+    "id": 236,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3261,7 +2804,7 @@
     }
   },
   {
-    "id": 258,
+    "id": 237,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3272,7 +2815,7 @@
     }
   },
   {
-    "id": 259,
+    "id": 238,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3286,7 +2829,7 @@
     }
   },
   {
-    "id": 260,
+    "id": 239,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3297,7 +2840,7 @@
     }
   },
   {
-    "id": 261,
+    "id": 240,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3311,21 +2854,7 @@
     }
   },
   {
-    "id": 262,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gifyagusi.pl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 263,
+    "id": 241,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3336,7 +2865,7 @@
     }
   },
   {
-    "id": 264,
+    "id": 242,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3350,7 +2879,7 @@
     }
   },
   {
-    "id": 265,
+    "id": 243,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3364,7 +2893,7 @@
     }
   },
   {
-    "id": 266,
+    "id": 244,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3378,7 +2907,7 @@
     }
   },
   {
-    "id": 267,
+    "id": 245,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3392,7 +2921,7 @@
     }
   },
   {
-    "id": 268,
+    "id": 246,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3404,7 +2933,7 @@
     }
   },
   {
-    "id": 269,
+    "id": 247,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3418,7 +2947,7 @@
     }
   },
   {
-    "id": 270,
+    "id": 248,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3432,7 +2961,7 @@
     }
   },
   {
-    "id": 271,
+    "id": 249,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3448,7 +2977,7 @@
     }
   },
   {
-    "id": 272,
+    "id": 250,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3462,7 +2991,7 @@
     }
   },
   {
-    "id": 273,
+    "id": 251,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3473,7 +3002,7 @@
     }
   },
   {
-    "id": 274,
+    "id": 252,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3484,7 +3013,7 @@
     }
   },
   {
-    "id": 275,
+    "id": 253,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3498,7 +3027,7 @@
     }
   },
   {
-    "id": 276,
+    "id": 254,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3509,7 +3038,7 @@
     }
   },
   {
-    "id": 277,
+    "id": 255,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3523,7 +3052,7 @@
     }
   },
   {
-    "id": 278,
+    "id": 256,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3537,7 +3066,7 @@
     }
   },
   {
-    "id": 279,
+    "id": 257,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3551,21 +3080,7 @@
     }
   },
   {
-    "id": 280,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "eska.pl"
-      ],
-      "urlFilter": "||ced.sascdn.com/tag/*/smart.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 281,
+    "id": 258,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -3579,7 +3094,7 @@
     }
   },
   {
-    "id": 282,
+    "id": 259,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3590,7 +3105,7 @@
     }
   },
   {
-    "id": 283,
+    "id": 260,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3601,21 +3116,7 @@
     }
   },
   {
-    "id": 284,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "allegro.pl"
-      ],
-      "urlFilter": "||a.allegroimg.com^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 285,
+    "id": 261,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3630,7 +3131,7 @@
     }
   },
   {
-    "id": 286,
+    "id": 262,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3641,7 +3142,7 @@
     }
   },
   {
-    "id": 287,
+    "id": 263,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3655,7 +3156,7 @@
     }
   },
   {
-    "id": 288,
+    "id": 264,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3666,35 +3167,7 @@
     }
   },
   {
-    "id": 291,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "synonimy.pl"
-      ],
-      "urlFilter": "||smartadserver.com/config.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 292,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "synonimy.pl"
-      ],
-      "urlFilter": "||stats.g.doubleclick.net/dc.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 293,
+    "id": 267,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3705,21 +3178,7 @@
     }
   },
   {
-    "id": 295,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "filmozercy.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 296,
+    "id": 269,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3730,7 +3189,7 @@
     }
   },
   {
-    "id": 297,
+    "id": 270,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3744,7 +3203,7 @@
     }
   },
   {
-    "id": 298,
+    "id": 271,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3758,7 +3217,7 @@
     }
   },
   {
-    "id": 299,
+    "id": 272,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3769,7 +3228,7 @@
     }
   },
   {
-    "id": 300,
+    "id": 273,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3780,7 +3239,7 @@
     }
   },
   {
-    "id": 301,
+    "id": 274,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3791,7 +3250,7 @@
     }
   },
   {
-    "id": 302,
+    "id": 275,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -3802,32 +3261,7 @@
     }
   },
   {
-    "id": 304,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "trojmiasto.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 305,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||r.trojmiasto.pl/adxmlrpc/json.php",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 306,
+    "id": 278,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3838,18 +3272,7 @@
     }
   },
   {
-    "id": 307,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||resetoff.pl/static/js/application/views/advertise/advertise_view.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 308,
+    "id": 279,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3863,7 +3286,7 @@
     }
   },
   {
-    "id": 309,
+    "id": 280,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3882,7 +3305,7 @@
     }
   },
   {
-    "id": 310,
+    "id": 281,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3893,7 +3316,7 @@
     }
   },
   {
-    "id": 311,
+    "id": 282,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3904,7 +3327,7 @@
     }
   },
   {
-    "id": 312,
+    "id": 283,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3915,7 +3338,7 @@
     }
   },
   {
-    "id": 313,
+    "id": 284,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3929,21 +3352,7 @@
     }
   },
   {
-    "id": 314,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "zobacz.ws"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 315,
+    "id": 285,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3954,7 +3363,7 @@
     }
   },
   {
-    "id": 316,
+    "id": 286,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -3965,7 +3374,7 @@
     }
   },
   {
-    "id": 317,
+    "id": 287,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -3984,7 +3393,7 @@
     }
   },
   {
-    "id": 318,
+    "id": 288,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4003,32 +3412,7 @@
     }
   },
   {
-    "id": 319,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "eska.pl",
-        "eskarock.pl",
-        "mediateka.pl",
-        "mjakmama24.pl",
-        "muratordom.pl",
-        "poradnikzdrowie.pl",
-        "radioplus.pl",
-        "radiosupernova.pl",
-        "se.pl",
-        "urzadzamy.pl",
-        "vibefm.pl",
-        "voxfm.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 320,
+    "id": 290,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4042,7 +3426,7 @@
     }
   },
   {
-    "id": 321,
+    "id": 291,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4053,7 +3437,7 @@
     }
   },
   {
-    "id": 322,
+    "id": 292,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4069,7 +3453,7 @@
     }
   },
   {
-    "id": 323,
+    "id": 293,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4083,7 +3467,7 @@
     }
   },
   {
-    "id": 324,
+    "id": 294,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4094,7 +3478,7 @@
     }
   },
   {
-    "id": 325,
+    "id": 295,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4108,7 +3492,7 @@
     }
   },
   {
-    "id": 326,
+    "id": 296,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4122,7 +3506,7 @@
     }
   },
   {
-    "id": 327,
+    "id": 297,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4136,7 +3520,7 @@
     }
   },
   {
-    "id": 328,
+    "id": 298,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4147,7 +3531,7 @@
     }
   },
   {
-    "id": 329,
+    "id": 299,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4158,7 +3542,7 @@
     }
   },
   {
-    "id": 330,
+    "id": 300,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4172,7 +3556,7 @@
     }
   },
   {
-    "id": 331,
+    "id": 301,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4186,21 +3570,7 @@
     }
   },
   {
-    "id": 332,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "meczyki.pl"
-      ],
-      "urlFilter": "||cdn-a.yieldlove.com/yieldlove-bidder.js?meczyki.pl_mobile",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 333,
+    "id": 302,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4214,7 +3584,7 @@
     }
   },
   {
-    "id": 334,
+    "id": 303,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4225,7 +3595,7 @@
     }
   },
   {
-    "id": 335,
+    "id": 304,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4239,7 +3609,7 @@
     }
   },
   {
-    "id": 336,
+    "id": 305,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4250,7 +3620,7 @@
     }
   },
   {
-    "id": 337,
+    "id": 306,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4261,7 +3631,7 @@
     }
   },
   {
-    "id": 338,
+    "id": 307,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4272,7 +3642,7 @@
     }
   },
   {
-    "id": 339,
+    "id": 308,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -4283,7 +3653,7 @@
     }
   },
   {
-    "id": 340,
+    "id": 309,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4300,7 +3670,7 @@
     }
   },
   {
-    "id": 341,
+    "id": 310,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4311,7 +3681,7 @@
     }
   },
   {
-    "id": 342,
+    "id": 311,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4325,7 +3695,7 @@
     }
   },
   {
-    "id": 343,
+    "id": 312,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4339,21 +3709,7 @@
     }
   },
   {
-    "id": 344,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "drogerium.pl"
-      ],
-      "urlFilter": "||s0.2mdn.net/ads/studio/enabler.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 345,
+    "id": 313,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4364,7 +3720,7 @@
     }
   },
   {
-    "id": 346,
+    "id": 314,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4379,7 +3735,7 @@
     }
   },
   {
-    "id": 347,
+    "id": 315,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4428,7 +3784,7 @@
     }
   },
   {
-    "id": 348,
+    "id": 316,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4443,7 +3799,7 @@
     }
   },
   {
-    "id": 349,
+    "id": 317,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4457,7 +3813,7 @@
     }
   },
   {
-    "id": 350,
+    "id": 318,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4472,7 +3828,7 @@
     }
   },
   {
-    "id": 351,
+    "id": 319,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4487,7 +3843,7 @@
     }
   },
   {
-    "id": 352,
+    "id": 320,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4498,7 +3854,7 @@
     }
   },
   {
-    "id": 353,
+    "id": 321,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4512,7 +3868,7 @@
     }
   },
   {
-    "id": 354,
+    "id": 322,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4530,7 +3886,7 @@
     }
   },
   {
-    "id": 355,
+    "id": 323,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4541,7 +3897,7 @@
     }
   },
   {
-    "id": 362,
+    "id": 331,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4552,7 +3908,7 @@
     }
   },
   {
-    "id": 363,
+    "id": 332,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4563,7 +3919,7 @@
     }
   },
   {
-    "id": 364,
+    "id": 333,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4577,7 +3933,7 @@
     }
   },
   {
-    "id": 365,
+    "id": 334,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4588,7 +3944,7 @@
     }
   },
   {
-    "id": 366,
+    "id": 335,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4605,7 +3961,7 @@
     }
   },
   {
-    "id": 370,
+    "id": 339,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4619,7 +3975,7 @@
     }
   },
   {
-    "id": 371,
+    "id": 340,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4633,7 +3989,7 @@
     }
   },
   {
-    "id": 372,
+    "id": 341,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4647,7 +4003,7 @@
     }
   },
   {
-    "id": 373,
+    "id": 342,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4661,7 +4017,7 @@
     }
   },
   {
-    "id": 374,
+    "id": 343,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4675,7 +4031,7 @@
     }
   },
   {
-    "id": 375,
+    "id": 344,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4686,7 +4042,7 @@
     }
   },
   {
-    "id": 376,
+    "id": 345,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4697,7 +4053,7 @@
     }
   },
   {
-    "id": 377,
+    "id": 346,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4708,7 +4064,7 @@
     }
   },
   {
-    "id": 378,
+    "id": 347,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4722,7 +4078,7 @@
     }
   },
   {
-    "id": 379,
+    "id": 348,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4739,7 +4095,7 @@
     }
   },
   {
-    "id": 380,
+    "id": 349,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4756,7 +4112,7 @@
     }
   },
   {
-    "id": 381,
+    "id": 350,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4767,7 +4123,7 @@
     }
   },
   {
-    "id": 382,
+    "id": 351,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4778,7 +4134,7 @@
     }
   },
   {
-    "id": 383,
+    "id": 352,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4789,7 +4145,7 @@
     }
   },
   {
-    "id": 384,
+    "id": 353,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4800,7 +4156,7 @@
     }
   },
   {
-    "id": 385,
+    "id": 354,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4811,7 +4167,7 @@
     }
   },
   {
-    "id": 386,
+    "id": 355,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4825,7 +4181,7 @@
     }
   },
   {
-    "id": 387,
+    "id": 356,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4836,7 +4192,7 @@
     }
   },
   {
-    "id": 388,
+    "id": 357,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4847,7 +4203,7 @@
     }
   },
   {
-    "id": 389,
+    "id": 358,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4862,7 +4218,7 @@
     }
   },
   {
-    "id": 390,
+    "id": 359,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4876,7 +4232,7 @@
     }
   },
   {
-    "id": 391,
+    "id": 360,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4887,7 +4243,7 @@
     }
   },
   {
-    "id": 392,
+    "id": 361,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4898,7 +4254,7 @@
     }
   },
   {
-    "id": 393,
+    "id": 362,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4909,7 +4265,7 @@
     }
   },
   {
-    "id": 394,
+    "id": 363,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4923,7 +4279,7 @@
     }
   },
   {
-    "id": 395,
+    "id": 364,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -4937,7 +4293,7 @@
     }
   },
   {
-    "id": 396,
+    "id": 365,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4951,7 +4307,7 @@
     }
   },
   {
-    "id": 397,
+    "id": 366,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4965,7 +4321,7 @@
     }
   },
   {
-    "id": 398,
+    "id": 367,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -4976,7 +4332,7 @@
     }
   },
   {
-    "id": 399,
+    "id": 368,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -4993,7 +4349,7 @@
     }
   },
   {
-    "id": 400,
+    "id": 369,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5007,7 +4363,7 @@
     }
   },
   {
-    "id": 401,
+    "id": 370,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5022,7 +4378,7 @@
     }
   },
   {
-    "id": 402,
+    "id": 371,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5033,7 +4389,7 @@
     }
   },
   {
-    "id": 403,
+    "id": 372,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5044,7 +4400,7 @@
     }
   },
   {
-    "id": 404,
+    "id": 373,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5055,7 +4411,7 @@
     }
   },
   {
-    "id": 405,
+    "id": 374,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5066,7 +4422,7 @@
     }
   },
   {
-    "id": 406,
+    "id": 375,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5077,7 +4433,7 @@
     }
   },
   {
-    "id": 407,
+    "id": 376,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5091,22 +4447,7 @@
     }
   },
   {
-    "id": 408,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "domainType": "firstParty",
-      "resourceTypes": [
-        "image"
-      ],
-      "urlFilter": "||pcworld.pl/*/news/thumbnails/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 409,
+    "id": 377,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5117,7 +4458,7 @@
     }
   },
   {
-    "id": 410,
+    "id": 378,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5132,35 +4473,7 @@
     }
   },
   {
-    "id": 411,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "samnaprawiam.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 412,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "samnaprawiam.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/r*/show_ads_impl.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 413,
+    "id": 379,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5174,7 +4487,7 @@
     }
   },
   {
-    "id": 414,
+    "id": 380,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5188,7 +4501,7 @@
     }
   },
   {
-    "id": 415,
+    "id": 381,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5199,7 +4512,7 @@
     }
   },
   {
-    "id": 416,
+    "id": 382,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5210,7 +4523,7 @@
     }
   },
   {
-    "id": 417,
+    "id": 383,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5221,7 +4534,7 @@
     }
   },
   {
-    "id": 418,
+    "id": 384,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5232,7 +4545,7 @@
     }
   },
   {
-    "id": 419,
+    "id": 385,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5243,7 +4556,7 @@
     }
   },
   {
-    "id": 420,
+    "id": 386,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5254,7 +4567,7 @@
     }
   },
   {
-    "id": 421,
+    "id": 387,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5265,7 +4578,7 @@
     }
   },
   {
-    "id": 422,
+    "id": 388,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5280,7 +4593,7 @@
     }
   },
   {
-    "id": 423,
+    "id": 389,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5294,61 +4607,7 @@
     }
   },
   {
-    "id": 427,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "swipeto.pl",
-        "tvp.info",
-        "tvp.pl",
-        "tvpparlament.pl"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 428,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "swipeto.pl",
-        "tvp.info",
-        "tvp.pl",
-        "tvpparlament.pl"
-      ],
-      "urlFilter": "||hit.gemius.pl/gplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 429,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "swipeto.pl",
-        "tvp.info",
-        "tvp.pl",
-        "tvpparlament.pl"
-      ],
-      "urlFilter": "||hit.gemius.pl/gstream.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 430,
+    "id": 393,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5362,7 +4621,7 @@
     }
   },
   {
-    "id": 431,
+    "id": 394,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5373,7 +4632,7 @@
     }
   },
   {
-    "id": 432,
+    "id": 395,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5391,7 +4650,7 @@
     }
   },
   {
-    "id": 433,
+    "id": 396,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5408,7 +4667,7 @@
     }
   },
   {
-    "id": 434,
+    "id": 397,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5426,7 +4685,7 @@
     }
   },
   {
-    "id": 435,
+    "id": 398,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5444,7 +4703,7 @@
     }
   },
   {
-    "id": 436,
+    "id": 399,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5462,7 +4721,7 @@
     }
   },
   {
-    "id": 437,
+    "id": 400,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5479,7 +4738,7 @@
     }
   },
   {
-    "id": 438,
+    "id": 401,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5493,7 +4752,7 @@
     }
   },
   {
-    "id": 439,
+    "id": 402,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5507,22 +4766,7 @@
     }
   },
   {
-    "id": 440,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tvp.info",
-        "tvp.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 441,
+    "id": 404,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5533,7 +4777,7 @@
     }
   },
   {
-    "id": 442,
+    "id": 405,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5544,7 +4788,7 @@
     }
   },
   {
-    "id": 443,
+    "id": 406,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5558,7 +4802,7 @@
     }
   },
   {
-    "id": 447,
+    "id": 410,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5569,21 +4813,7 @@
     }
   },
   {
-    "id": 448,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tokfm.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 449,
+    "id": 412,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5594,7 +4824,7 @@
     }
   },
   {
-    "id": 450,
+    "id": 413,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5608,7 +4838,7 @@
     }
   },
   {
-    "id": 451,
+    "id": 414,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5619,7 +4849,7 @@
     }
   },
   {
-    "id": 452,
+    "id": 415,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5638,7 +4868,7 @@
     }
   },
   {
-    "id": 453,
+    "id": 417,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5649,7 +4879,7 @@
     }
   },
   {
-    "id": 454,
+    "id": 418,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5663,7 +4893,7 @@
     }
   },
   {
-    "id": 455,
+    "id": 419,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5677,7 +4907,7 @@
     }
   },
   {
-    "id": 456,
+    "id": 420,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5694,7 +4924,7 @@
     }
   },
   {
-    "id": 457,
+    "id": 421,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5705,24 +4935,7 @@
     }
   },
   {
-    "id": 458,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mmorpg.org.pl"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||lib.wtg-ads.com/publisher/mmorpg.org.pl/lib.min.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 459,
+    "id": 422,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5733,7 +4946,7 @@
     }
   },
   {
-    "id": 460,
+    "id": 423,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5744,7 +4957,7 @@
     }
   },
   {
-    "id": 461,
+    "id": 424,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5755,7 +4968,7 @@
     }
   },
   {
-    "id": 462,
+    "id": 425,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5766,7 +4979,7 @@
     }
   },
   {
-    "id": 463,
+    "id": 426,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5777,7 +4990,7 @@
     }
   },
   {
-    "id": 464,
+    "id": 427,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -5791,7 +5004,7 @@
     }
   },
   {
-    "id": 468,
+    "id": 431,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -5805,7 +5018,7 @@
     }
   },
   {
-    "id": 469,
+    "id": 432,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -5819,21 +5032,7 @@
     }
   },
   {
-    "id": 470,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "shinden.pl"
-      ],
-      "urlFilter": "||cdn.jsdelivr.net/npm/fuckadblock*/fuckadblock.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 471,
+    "id": 433,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5844,7 +5043,7 @@
     }
   },
   {
-    "id": 472,
+    "id": 434,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5855,7 +5054,7 @@
     }
   },
   {
-    "id": 473,
+    "id": 436,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5866,7 +5065,7 @@
     }
   },
   {
-    "id": 474,
+    "id": 437,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5877,7 +5076,7 @@
     }
   },
   {
-    "id": 475,
+    "id": 438,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5888,7 +5087,7 @@
     }
   },
   {
-    "id": 477,
+    "id": 440,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5902,7 +5101,7 @@
     }
   },
   {
-    "id": 478,
+    "id": 441,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5916,7 +5115,7 @@
     }
   },
   {
-    "id": 479,
+    "id": 442,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5927,7 +5126,7 @@
     }
   },
   {
-    "id": 480,
+    "id": 443,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5941,7 +5140,7 @@
     }
   },
   {
-    "id": 481,
+    "id": 444,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5952,7 +5151,7 @@
     }
   },
   {
-    "id": 482,
+    "id": 445,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5963,7 +5162,7 @@
     }
   },
   {
-    "id": 483,
+    "id": 446,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5977,7 +5176,7 @@
     }
   },
   {
-    "id": 485,
+    "id": 447,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -5993,7 +5192,7 @@
     }
   },
   {
-    "id": 486,
+    "id": 448,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6011,7 +5210,7 @@
     }
   },
   {
-    "id": 487,
+    "id": 449,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6031,7 +5230,7 @@
     }
   },
   {
-    "id": 488,
+    "id": 450,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6045,7 +5244,7 @@
     }
   },
   {
-    "id": 490,
+    "id": 452,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6060,7 +5259,7 @@
     }
   },
   {
-    "id": 491,
+    "id": 453,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6077,7 +5276,7 @@
     }
   },
   {
-    "id": 492,
+    "id": 454,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6094,7 +5293,7 @@
     }
   },
   {
-    "id": 493,
+    "id": 455,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6108,7 +5307,7 @@
     }
   },
   {
-    "id": 494,
+    "id": 456,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6123,23 +5322,7 @@
     }
   },
   {
-    "id": 495,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "player.pl",
-        "tvn24.pl",
-        "vod.pl"
-      ],
-      "urlFilter": "||tvn.hit.gemius.pl/*redot.gif",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 496,
+    "id": 459,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6153,7 +5336,7 @@
     }
   },
   {
-    "id": 497,
+    "id": 460,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6169,7 +5352,7 @@
     }
   },
   {
-    "id": 498,
+    "id": 461,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6190,30 +5373,7 @@
     }
   },
   {
-    "id": 499,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "geekweek.pl",
-        "polsatboxgo.pl",
-        "polsatnews.pl",
-        "polsatsport.pl",
-        "redcdn.pl",
-        "redefine.pl",
-        "twojapogoda.pl"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 500,
+    "id": 462,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6224,7 +5384,7 @@
     }
   },
   {
-    "id": 501,
+    "id": 463,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6238,7 +5398,7 @@
     }
   },
   {
-    "id": 502,
+    "id": 464,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6252,7 +5412,7 @@
     }
   },
   {
-    "id": 503,
+    "id": 465,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6266,7 +5426,7 @@
     }
   },
   {
-    "id": 504,
+    "id": 466,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -6284,7 +5444,7 @@
     }
   },
   {
-    "id": 505,
+    "id": 467,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6295,7 +5455,7 @@
     }
   },
   {
-    "id": 506,
+    "id": 468,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -6309,7 +5469,7 @@
     }
   },
   {
-    "id": 507,
+    "id": 469,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -6320,7 +5480,7 @@
     }
   },
   {
-    "id": 508,
+    "id": 470,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -6335,7 +5495,7 @@
     }
   },
   {
-    "id": 509,
+    "id": 471,
     "priority": 10000,
     "action": {
       "type": "block"

@@ -7,9 +7,14 @@
     },
     "condition": {
       "initiatorDomains": [
-        "lessentiel.lu"
+        "google.com.cy",
+        "google.com.mt",
+        "google.lu"
       ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adsense.google.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -28,7 +33,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://adsense.google.",
+      "urlFilter": "http://adwords.google.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -47,7 +52,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://adwords.google.",
+      "urlFilter": "http://google.*/adsense",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -66,7 +71,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://google.*/adsense",
+      "urlFilter": "http://google.*/adwords",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -85,7 +90,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://google.*/adwords",
+      "urlFilter": "http://www.google.*/adsense",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -104,7 +109,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://www.google.*/adsense",
+      "urlFilter": "http://www.google.*/adwords",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -123,7 +128,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://www.google.*/adwords",
+      "urlFilter": "https://adsense.google.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -142,7 +147,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "https://adsense.google.",
+      "urlFilter": "https://adwords.google.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -161,31 +166,12 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "https://adwords.google.",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 10,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "google.com.cy",
-        "google.com.mt",
-        "google.lu"
-      ],
-      "resourceTypes": [
-        "main_frame"
-      ],
       "urlFilter": "https://www.google.*/adsense",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
-    "id": 11,
+    "id": 10,
     "priority": 10002,
     "action": {
       "type": "allow"

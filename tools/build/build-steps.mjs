@@ -14,7 +14,7 @@ import { STATIC_FILTER_LIST_PRIORITY } from '../../js/core/dnr-budgets.js';
 import { SCRIPTLET_POLICY, scriptletViolationAnySource } from '../../js/data/scriptlet-policy.js';
 import { ROOT, __dirname } from './build-paths.mjs';
 import { UNSUPPORTED_LINES_CONFIG } from './unsupported-lines.mjs';
-import { STEP_OK, agBaseLanguageBucketText, buildNotices, droppedBadfilters, droppedGenericDomainQualifiers, droppedPolicyScriptlets, droppedUnsupportedListLines, droppedUnsupportedScriptletScopes, droppedWildcardDomains, expandedWildcardDomains, resetBuildAccumulators, setTopSitesSet, topSitesSet, worryfreeExemptDomains } from './build-state.mjs';
+import { STEP_OK, agBaseLanguageBucketText, buildNotices, droppedBadfilters, droppedGenericDomainQualifiers, droppedPlatformLines, droppedPolicyScriptlets, droppedUnsupportedListLines, droppedUnsupportedScriptletScopes, droppedWildcardDomains, expandedWildcardDomains, resetBuildAccumulators, setTopSitesSet, topSitesSet, worryfreeExemptDomains } from './build-state.mjs';
 import { COSMETIC_SPECIFIC_CONFIG, buildCosmeticFile, buildCosmeticSpecificData, buildCosmeticSpecificLoader, stampCosmeticSpecificData } from './cosmetic-data.mjs';
 import { extractCountryOverflow } from './country-overflow.mjs';
 import { easylistCookieTextFor, resetEasylistCookieCache } from './easylist-cookie-international.mjs';
@@ -1363,6 +1363,26 @@ export async function stepWriteReports(ctx) {
         }
         const replaced = byReason.get(SCRIPTLET_POLICY.REASON_REPLACED) ?? 0;
         if ( replaced !== 0 ) { buildNotices.push({ level: 'NOTICE', text: `Scriptlet policy: ${replaced} rule(s) kept as a safe replacement — ${SCRIPTLET_POLICY.REASON_REPLACED} (see dropped-policy-scriptlets.txt).` }); }
+    }
+
+    // ── dropped-platform-rules.txt (11.1.3) — rules a list itself marks as meant for another blocker ("!+ PLATFORM(…)"
+    // hints, "!#if" blocks), left out at download by applyListDirectives() (tools/build/list-directives.mjs). A source
+    // fetched by several lists is listed once. Always written, so an empty file shows the step ran.
+    {
+        const reportPath = path.join(ROOT, 'dropped-platform-rules.txt');
+        const unique = new Map();
+        for ( const d of droppedPlatformLines ) { unique.set(`${d.source}\n${d.line}`, d); }
+        const byReason = new Map();
+        for ( const d of unique.values() ) { byReason.set(d.reason, (byReason.get(d.reason) ?? 0) + 1); }
+        const lines = [
+            `Rules left out because their list marks them for another platform (tools/build/list-directives.mjs) — ${new Date().toISOString().slice(0, 10)}`,
+            `${unique.size} total: ${[ ...byReason ].map(([ r, n ]) => `${n} ${r}`).join('; ') || 'none'}.`,
+            '',
+            ...[ ...unique.values() ].map(d => `[${d.reason}] ${d.source}\n    ${d.line}`),
+        ];
+        await fs.writeFile(reportPath, lines.join('\n') + '\n', 'utf8');
+        console.log(`Wrote dropped-platform-rules.txt (${unique.size} entries).`);
+        if ( unique.size !== 0 ) { buildNotices.push({ level: 'NOTICE', text: `Platform directives: ${unique.size} rule(s) left out — marked for another blocker (see dropped-platform-rules.txt).` }); }
     }
 
     // ── dropped-unsupported-list-lines.txt (10.1.8) — lines of a hand-written

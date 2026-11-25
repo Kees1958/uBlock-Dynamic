@@ -1,18 +1,41 @@
 [
   {
-    "id": 1089560,
+    "id": 1383646,
     "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
-        "extensionPath": "/web_accessible_resources/noop.js"
+        "extensionPath": "/web_accessible_resources/google-ima.js"
       }
     },
     "condition": {
+      "initiatorDomains": [
+        "dailyme.de"
+      ],
       "resourceTypes": [
         "script"
       ],
-      "urlFilter": "||stern.de/resource/themes/stern/vendor/msg-*.js",
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 75097,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "games.focus.de"
+      ],
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -51,6 +74,26 @@
     }
   },
   {
+    "id": 687083,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sportdeutschland.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 830281,
     "priority": 10003,
     "action": {
@@ -67,6 +110,26 @@
         "script"
       ],
       "urlFilter": "||asadcdn.com/adlib/pages/sport1.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1897433,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "chip.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -122,6 +185,26 @@
     }
   },
   {
+    "id": 1688975,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "wetteronline.de"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 1959745,
     "priority": 10001,
     "action": {
@@ -138,6 +221,26 @@
         "script"
       ],
       "urlFilter": "||widgets.outbrain.com/outbrain.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1072019,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "player.motorsport-magazin.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },

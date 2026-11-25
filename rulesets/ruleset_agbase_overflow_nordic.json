@@ -373,24 +373,6 @@
     "condition": {
       "domainType": "thirdParty",
       "initiatorDomains": [
-        "moviesjoy.is"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "regexFilter": "^https:\\/\\/[a-z][a-z][a-z]+\\.[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]+\\.top\\/[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]+\\/[a-z][a-z][a-z][a-z][a-z]+$",
-      "isUrlFilterCaseSensitive": true
-    }
-  },
-  {
-    "id": 22,
-    "priority": 10000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "domainType": "thirdParty",
-      "initiatorDomains": [
         "hianime.dk"
       ],
       "resourceTypes": [
@@ -402,7 +384,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 22,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -421,7 +403,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 23,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -440,7 +422,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 24,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -459,7 +441,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 25,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -478,7 +460,7 @@
     }
   },
   {
-    "id": 27,
+    "id": 26,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -626,7 +608,7 @@
     }
   },
   {
-    "id": 28,
+    "id": 27,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -641,7 +623,7 @@
     }
   },
   {
-    "id": 29,
+    "id": 28,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -663,7 +645,7 @@
     }
   },
   {
-    "id": 30,
+    "id": 29,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -678,21 +660,7 @@
     }
   },
   {
-    "id": 31,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "bold.dk"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/gampad/ads",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 32,
+    "id": 30,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -703,7 +671,7 @@
     }
   },
   {
-    "id": 33,
+    "id": 31,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -720,69 +688,12 @@
       "type": "allow"
     },
     "condition": {
-      "initiatorDomains": [
-        "fuelfinder.dk"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 35,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "berlingske.dk",
-        "bt.dk"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 36,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "bt.dk"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 37,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "feltet.dk"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 38,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
       "urlFilter": "||bt.dk/build/prebid-ads-advertisement_adbanner.*.js",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
-    "id": 39,
+    "id": 35,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -796,7 +707,7 @@
     }
   },
   {
-    "id": 40,
+    "id": 36,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -807,7 +718,7 @@
     }
   },
   {
-    "id": 41,
+    "id": 37,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -818,7 +729,7 @@
     }
   },
   {
-    "id": 42,
+    "id": 38,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -829,7 +740,7 @@
     }
   },
   {
-    "id": 43,
+    "id": 39,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -843,7 +754,7 @@
     }
   },
   {
-    "id": 44,
+    "id": 40,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -857,7 +768,7 @@
     }
   },
   {
-    "id": 45,
+    "id": 41,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -871,7 +782,7 @@
     }
   },
   {
-    "id": 47,
+    "id": 43,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -888,7 +799,7 @@
     }
   },
   {
-    "id": 48,
+    "id": 44,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -899,7 +810,7 @@
     }
   },
   {
-    "id": 49,
+    "id": 45,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -910,7 +821,7 @@
     }
   },
   {
-    "id": 50,
+    "id": 46,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -921,7 +832,7 @@
     }
   },
   {
-    "id": 51,
+    "id": 47,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -932,7 +843,7 @@
     }
   },
   {
-    "id": 52,
+    "id": 48,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -946,7 +857,7 @@
     }
   },
   {
-    "id": 53,
+    "id": 49,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -961,7 +872,7 @@
     }
   },
   {
-    "id": 54,
+    "id": 50,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -972,7 +883,7 @@
     }
   },
   {
-    "id": 55,
+    "id": 51,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -986,7 +897,7 @@
     }
   },
   {
-    "id": 56,
+    "id": 52,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -997,21 +908,7 @@
     }
   },
   {
-    "id": 57,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "embed.viaplay.com"
-      ],
-      "urlFilter": "||v.fwmrm.net/ad/g/1",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 58,
+    "id": 53,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1025,7 +922,7 @@
     }
   },
   {
-    "id": 59,
+    "id": 54,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1039,7 +936,7 @@
     }
   },
   {
-    "id": 60,
+    "id": 55,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1053,7 +950,7 @@
     }
   },
   {
-    "id": 61,
+    "id": 56,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1067,7 +964,7 @@
     }
   },
   {
-    "id": 62,
+    "id": 57,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1081,7 +978,7 @@
     }
   },
   {
-    "id": 63,
+    "id": 58,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1092,7 +989,7 @@
     }
   },
   {
-    "id": 64,
+    "id": 59,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1103,7 +1000,7 @@
     }
   },
   {
-    "id": 65,
+    "id": 60,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1117,7 +1014,7 @@
     }
   },
   {
-    "id": 66,
+    "id": 61,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1128,7 +1025,7 @@
     }
   },
   {
-    "id": 67,
+    "id": 62,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1139,7 +1036,7 @@
     }
   },
   {
-    "id": 68,
+    "id": 63,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1153,7 +1050,7 @@
     }
   },
   {
-    "id": 69,
+    "id": 64,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1167,7 +1064,7 @@
     }
   },
   {
-    "id": 70,
+    "id": 65,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1179,7 +1076,7 @@
     }
   },
   {
-    "id": 71,
+    "id": 66,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1191,22 +1088,7 @@
     }
   },
   {
-    "id": 72,
-    "priority": 10003,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "vg.no",
-        "vgtv.no"
-      ],
-      "urlFilter": "||no-vg.videoplaza.tv/proxy/distributor/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 73,
+    "id": 67,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1220,7 +1102,7 @@
     }
   },
   {
-    "id": 74,
+    "id": 68,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1234,7 +1116,7 @@
     }
   },
   {
-    "id": 75,
+    "id": 69,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1248,67 +1130,7 @@
     }
   },
   {
-    "id": 76,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "happypancake.fi",
-        "happypancake.se"
-      ],
-      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 77,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "happypancake.fi",
-        "happypancake.se"
-      ],
-      "urlFilter": "||happypancake.se/static/prebid.*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 78,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "happypancake.fi",
-        "happypancake.se"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 79,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "happypancake.fi",
-        "happypancake.se"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 80,
+    "id": 70,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1322,7 +1144,7 @@
     }
   },
   {
-    "id": 81,
+    "id": 71,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1336,7 +1158,7 @@
     }
   },
   {
-    "id": 82,
+    "id": 72,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1350,7 +1172,7 @@
     }
   },
   {
-    "id": 83,
+    "id": 73,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1364,7 +1186,7 @@
     }
   },
   {
-    "id": 85,
+    "id": 75,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1375,7 +1197,7 @@
     }
   },
   {
-    "id": 86,
+    "id": 76,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1386,7 +1208,7 @@
     }
   },
   {
-    "id": 87,
+    "id": 77,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1397,7 +1219,7 @@
     }
   },
   {
-    "id": 88,
+    "id": 78,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1411,7 +1233,7 @@
     }
   },
   {
-    "id": 89,
+    "id": 79,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1425,7 +1247,7 @@
     }
   },
   {
-    "id": 90,
+    "id": 80,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1439,7 +1261,7 @@
     }
   },
   {
-    "id": 91,
+    "id": 81,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1453,7 +1275,7 @@
     }
   },
   {
-    "id": 92,
+    "id": 82,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1464,7 +1286,7 @@
     }
   },
   {
-    "id": 93,
+    "id": 83,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1475,7 +1297,7 @@
     }
   },
   {
-    "id": 94,
+    "id": 84,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1489,7 +1311,7 @@
     }
   },
   {
-    "id": 95,
+    "id": 85,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -1503,21 +1325,7 @@
     }
   },
   {
-    "id": 97,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "aftonbladet.se"
-      ],
-      "urlFilter": "||ib.adnxs.com/ut/v3",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 98,
+    "id": 87,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1531,21 +1339,7 @@
     }
   },
   {
-    "id": 99,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ekstrabladet.dk"
-      ],
-      "urlFilter": "||acdn.adnxs.com/ast/ast.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 100,
+    "id": 88,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1556,7 +1350,7 @@
     }
   },
   {
-    "id": 101,
+    "id": 89,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1568,7 +1362,7 @@
     }
   },
   {
-    "id": 102,
+    "id": 90,
     "priority": 10000,
     "action": {
       "type": "block"

@@ -49,9 +49,12 @@
     },
     "condition": {
       "initiatorDomains": [
-        "mensenlinq.nl"
+        "google.nl"
       ],
-      "urlFilter": "||mensenlinq.nl/site/advertentie/",
+      "resourceTypes": [
+        "main_frame"
+      ],
+      "urlFilter": "http://adsense.google.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -68,7 +71,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://adsense.google.",
+      "urlFilter": "http://adwords.google.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -85,7 +88,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://adwords.google.",
+      "urlFilter": "http://google.*/adsense",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -102,7 +105,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://google.*/adsense",
+      "urlFilter": "http://google.*/adwords",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -119,7 +122,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://google.*/adwords",
+      "urlFilter": "http://www.google.*/adsense",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -136,7 +139,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://www.google.*/adsense",
+      "urlFilter": "http://www.google.*/adwords",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -153,7 +156,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "http://www.google.*/adwords",
+      "urlFilter": "https://adsense.google.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -170,7 +173,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "https://adsense.google.",
+      "urlFilter": "https://adwords.google.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -187,7 +190,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "https://adwords.google.",
+      "urlFilter": "https://www.google.*/adsense",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -204,7 +207,7 @@
       "resourceTypes": [
         "main_frame"
       ],
-      "urlFilter": "https://www.google.*/adsense",
+      "urlFilter": "https://www.google.*/adwords",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -218,29 +221,12 @@
       "initiatorDomains": [
         "google.nl"
       ],
-      "resourceTypes": [
-        "main_frame"
-      ],
-      "urlFilter": "https://www.google.*/adwords",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 15,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "google.nl"
-      ],
       "urlFilter": "||googleadservices.com^",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
-    "id": 16,
+    "id": 15,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -255,7 +241,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 16,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -276,7 +262,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 17,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -293,7 +279,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 18,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -307,7 +293,7 @@
     }
   },
   {
-    "id": 20,
+    "id": 19,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -327,7 +313,7 @@
     }
   },
   {
-    "id": 21,
+    "id": 20,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -341,7 +327,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 21,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -355,7 +341,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 22,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -372,7 +358,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 23,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -386,7 +372,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 24,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -400,7 +386,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 25,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -414,7 +400,7 @@
     }
   },
   {
-    "id": 27,
+    "id": 26,
     "priority": 10000,
     "action": {
       "type": "block"

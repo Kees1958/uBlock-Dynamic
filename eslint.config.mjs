@@ -152,7 +152,9 @@ const commonRules = {
 };
 
 export default [
-    { ignores: [ 'lib/**', 'rulesets/**', 'node_modules/**', 'js/generated/**', 'js/resources/ag-scriptlets-corelibs.json' ] },
+    // (11.1.3) web_accessible_resources/google-ima.js is uBO's/Mozilla's IMA surrogate, shipped with its code unchanged
+    // (THIRD_PARTY_LICENSES.md) — vendored like lib/**, so it is not held to this project's style rules.
+    { ignores: [ 'lib/**', 'rulesets/**', 'node_modules/**', 'js/generated/**', 'js/resources/ag-scriptlets-corelibs.json', 'web_accessible_resources/google-ima.js' ] },
 
     // ── ES modules (service worker + page contexts + shared modules) ──────
     {

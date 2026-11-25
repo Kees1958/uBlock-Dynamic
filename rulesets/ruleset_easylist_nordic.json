@@ -6508,23 +6508,6 @@
     }
   },
   {
-    "id": 1350042,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ekstrabladet.dk"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||sp-prod.net^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 696182,
     "priority": 10002,
     "action": {
@@ -11353,20 +11336,6 @@
     }
   },
   {
-    "id": 688026,
-    "priority": 10000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "resourceTypes": [
-        "main_frame"
-      ],
-      "urlFilter": "://193.143.1.",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 969835,
     "priority": 10000,
     "action": {
@@ -14806,20 +14775,6 @@
     }
   },
   {
-    "id": 732513,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "vidd.se"
-      ],
-      "urlFilter": "||static.trafficjunky.com/ab/ads_test.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1576507,
     "priority": 10002,
     "action": {
@@ -14863,85 +14818,6 @@
     }
   },
   {
-    "id": 1825671,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "weshare.is"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 370204,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "weshare.is"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1642114,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "y2mate.is"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1768416,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "kissanime.is"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 129344,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "png.is"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1706948,
     "priority": 10002,
     "action": {
@@ -14966,20 +14842,6 @@
         "notebookcheck.se"
       ],
       "urlFilter": "/ads.*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 804665,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "notebookcheck.se"
-      ],
-      "urlFilter": "||snigelweb-com.videoplayerhub.com/videoloader.js",
       "isUrlFilterCaseSensitive": false
     }
   },

@@ -4802,20 +4802,6 @@
     }
   },
   {
-    "id": 1550543,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "webcams-vlissingen.nl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 507689,
     "priority": 10002,
     "action": {
@@ -4833,23 +4819,6 @@
     }
   },
   {
-    "id": 1730050,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "filmvandaag.nl"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 463252,
     "priority": 10002,
     "action": {
@@ -4861,48 +4830,6 @@
         "script"
       ],
       "urlFilter": "||looopings.nl/*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 81038,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "webcam-binnenvaart.nl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 964440,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "vtmgo.be"
-      ],
-      "urlFilter": "||5e124.v.fwmrm.net/ad/g/1?prof=385316%3adpg_csai_html5&nw=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 97321,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "webcams-texel.nl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -4984,21 +4911,6 @@
     }
   },
   {
-    "id": 725323,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "goplay.be",
-        "play.tv"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1483961,
     "priority": 10002,
     "action": {
@@ -5013,37 +4925,6 @@
         "script"
       ],
       "urlFilter": "||pagead2.googlesyndication.com/omsdk/releases/live/omweb-v1.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 175269,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "goplay.be"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||sdk.privacy-center.org^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1982776,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "goplay.be"
-      ],
-      "urlFilter": "||pubads.g.doubleclick.net/gampad/ads?*&output=vast&",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5072,17 +4953,6 @@
     },
     "condition": {
       "urlFilter": "||goplay.be/js/sourcepoint/msg?v=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 669237,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||ab.tweakers.nl/pool/lib/",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5711,20 +5581,6 @@
     }
   },
   {
-    "id": 373575,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "moviemeter.nl"
-      ],
-      "urlFilter": "||content.adswag.nl/bcfeed/*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1928080,
     "priority": 10002,
     "action": {
@@ -5740,59 +5596,6 @@
     }
   },
   {
-    "id": 1251709,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "viraal.nl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 364132,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "vkmag.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1742125,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "vkmag.com"
-      ],
-      "urlFilter": "||tags.refinery89.com/vkmagcom.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1628622,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||mmcdn.nl/tags/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1644512,
     "priority": 10002,
     "action": {
@@ -5800,17 +5603,6 @@
     },
     "condition": {
       "urlFilter": "||mmcdn.nl/tags/vkmag.com/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1248695,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||marktplaats.nl/link/advertenties/",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5984,76 +5776,6 @@
     }
   },
   {
-    "id": 307896,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "an1me.nl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 421287,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "an1me.nl"
-      ],
-      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 336525,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "31mag.nl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 706279,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myonlineradio.nl"
-      ],
-      "urlFilter": "||connect.facebook.net/en_us/fbevents.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 183696,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myonlineradio.nl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 841814,
     "priority": 10002,
     "action": {
@@ -6082,21 +5804,7 @@
     }
   },
   {
-    "id": 999935,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "notebookcheck.nl"
-      ],
-      "urlFilter": "||snigelweb-com.videoplayerhub.com/videoloader.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 405408,
+    "id": 721978,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -6141,8 +5849,7 @@
         "ab.hwigroup.com",
         "aa.tweakers.nl",
         "ab.tweakers.nl",
-        "a.medialaancdn.be",
-        "https-filtering-check.adtidy.org"
+        "a.medialaancdn.be"
       ]
     }
   },

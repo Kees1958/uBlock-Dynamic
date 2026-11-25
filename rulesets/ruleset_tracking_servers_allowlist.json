@@ -352,34 +352,6 @@
     }
   },
   {
-    "id": 1795469,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "parkedin.com"
-      ],
-      "urlFilter": "||cdn.amplitude.com/libs/analytics-browser-*-min.js.gz",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 674840,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "bbc.com"
-      ],
-      "urlFilter": "||pub.doubleverify.com/dvtag/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 428590,
     "priority": 8002,
     "action": {
@@ -613,90 +585,6 @@
     }
   },
   {
-    "id": 1025466,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "footballtransfers.com"
-      ],
-      "urlFilter": "||ad.doubleclick.net/favicon.ico?",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 747018,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "footballtransfers.com"
-      ],
-      "urlFilter": "||browser.covatic.io/profiles/www.footballtransfers.com.json",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 417464,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "footballtransfers.com"
-      ],
-      "urlFilter": "||browser.covatic.io/sdk/*/latest.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1748094,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "footballtransfers.com"
-      ],
-      "urlFilter": "||uk-script.dotmetrics.net/scripts/dotmetricsvideotracking.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 286762,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "footballtransfers.com"
-      ],
-      "urlFilter": "||uk-script.dotmetrics.net/videoplugin",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1991437,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "footballtransfers.com"
-      ],
-      "urlFilter": "||rm-script.dotmetrics.net/videopluginhit.gif?",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1923415,
     "priority": 8002,
     "action": {
@@ -791,20 +679,6 @@
         "tickpick.com"
       ],
       "urlFilter": "||try.abtasty.com/39d783b9bc0b6b495e430e140bd1eedc.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 25474,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "suse.com"
-      ],
-      "urlFilter": "||dxp.optimizely.com^",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1099,23 +973,6 @@
     }
   },
   {
-    "id": 1364985,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "auto.cz"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||spir.hit.gemius.pl/gplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 589195,
     "priority": 8002,
     "action": {
@@ -1168,23 +1025,6 @@
         "wired.com"
       ],
       "urlFilter": "||martech.condenastdigital.com/lib/martech.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 890467,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hentaila.tv"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||syndication.realsrv.com/splash.php?idzone=",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1372,23 +1212,6 @@
     }
   },
   {
-    "id": 1999807,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "dkb.de"
-      ],
-      "resourceTypes": [
-        "sub_frame"
-      ],
-      "urlFilter": "||googletagmanager.com/ns.html",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1165524,
     "priority": 8002,
     "action": {
@@ -1553,23 +1376,6 @@
         "gillette.de"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1410474,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "southpark.de",
-        "southpark.lat",
-        "southparkstudios.com",
-        "southparkstudios.com.br"
-      ],
-      "urlFilter": "||tags.tiqcdn.com/utag/cbsi/webplex-intl/prod/utag.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1750,34 +1556,6 @@
     }
   },
   {
-    "id": 1793167,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "telex.hu"
-      ],
-      "urlFilter": "||gahu.hit.gemius.pl/gplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1482820,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nexon.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1107296,
     "priority": 8002,
     "action": {
@@ -1878,17 +1656,6 @@
         "hepsiburada.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 839589,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||rd.bizrate.com/rd2?t=",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2121,20 +1888,6 @@
     }
   },
   {
-    "id": 1100544,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "appmetrica.yandex.com"
-      ],
-      "urlFilter": "||appmetrica.yandex.com^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 463489,
     "priority": 8002,
     "action": {
@@ -2265,23 +2018,6 @@
         "iltalehti.fi"
       ],
       "urlFilter": "||cdn.almamedia.tech/esm/geo-client/v*/geo-client.min.mjs",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 119357,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "kb.arlo.com"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||dev.visualwebsiteoptimizer.com/j.php",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2451,20 +2187,6 @@
     }
   },
   {
-    "id": 118217,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "taughtie.campusfrance.org"
-      ],
-      "urlFilter": "||tag.aticdn.net/piano-analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 294464,
     "priority": 8002,
     "action": {
@@ -2521,20 +2243,6 @@
     }
   },
   {
-    "id": 489346,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "rmfon.pl"
-      ],
-      "urlFilter": "||rmf.hit.gemius.pl/gplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1341817,
     "priority": 8002,
     "action": {
@@ -2573,20 +2281,6 @@
         "analytics.google.com"
       ],
       "urlFilter": "://analytics.google.com/analytics/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 237494,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nbclosangeles.com"
-      ],
-      "urlFilter": "||sb.scorecardresearch.com/*/streamingtag_plugin_jwplayer.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2636,20 +2330,6 @@
     }
   },
   {
-    "id": 1033914,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ohmynews.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1037929,
     "priority": 8002,
     "action": {
@@ -2686,20 +2366,6 @@
     "condition": {
       "initiatorDomains": [
         "flets.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1324805,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hgtv.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
@@ -2765,20 +2431,6 @@
     }
   },
   {
-    "id": 800291,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "homeleisuredirect.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1928429,
     "priority": 8002,
     "action": {
@@ -2789,20 +2441,6 @@
         "playactivate.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1605760,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "dvdmax.pl"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js?id=",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2831,48 +2469,6 @@
         "paypal.com"
       ],
       "urlFilter": "||api.sprig.com/sdk/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 147368,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sfd.pl"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 369324,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "healthcare.gov"
-      ],
-      "urlFilter": "||gov1.siteintercept.qualtrics.com^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1827764,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nbcbayarea.com"
-      ],
-      "urlFilter": "||sb.scorecardresearch.com/*/streamingtag_plugin_jwplayer.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2943,20 +2539,6 @@
         "square-enix.com"
       ],
       "urlFilter": "||googletagmanager.com/gtag/js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 940414,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "samsung.com"
-      ],
-      "urlFilter": "||mpsnare.iesnare.com/snare.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3087,20 +2669,6 @@
     }
   },
   {
-    "id": 924019,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "phileweb.com"
-      ],
-      "urlFilter": "||clarity.ms/tag/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 519790,
     "priority": 8002,
     "action": {
@@ -3139,76 +2707,6 @@
         "tvaplus.ca"
       ],
       "urlFilter": "||api.cxense.com/segment/lookup?callback=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1433218,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "jooble.org"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1442022,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "variety.com"
-      ],
-      "urlFilter": "||cdn.cxense.com/cx.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 951495,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "variety.com"
-      ],
-      "urlFilter": "||cdn.cxense.com/cx.cce.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1202359,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "globo.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 114526,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "globo.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3265,17 +2763,6 @@
         "eki-net.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 352521,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||c.webengage.com/lw/*.jpg?p=",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3406,34 +2893,6 @@
     }
   },
   {
-    "id": 1017475,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "zillow.com"
-      ],
-      "urlFilter": "||e.zg-api.com/*/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1657477,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "pullandbear.com"
-      ],
-      "urlFilter": "||widget.fitanalytics.com/widget.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1502946,
     "priority": 8002,
     "action": {
@@ -3458,43 +2917,6 @@
         "irishtimes.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 80859,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ofiii.com"
-      ],
-      "urlFilter": "||scorecardresearch.com/beacon.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 583635,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "resourceTypes": [
-        "sub_frame",
-        "stylesheet",
-        "script",
-        "font",
-        "object",
-        "xmlhttprequest",
-        "ping",
-        "media",
-        "websocket",
-        "other"
-      ],
-      "urlFilter": "||eu.spgo.io/*~/aaa",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3614,20 +3036,6 @@
     }
   },
   {
-    "id": 333244,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "holtrenfrew.com"
-      ],
-      "urlFilter": "||cdn.ometria.com/tags/*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1693514,
     "priority": 8002,
     "action": {
@@ -3652,20 +3060,6 @@
         "forum.paradoxplaza.com"
       ],
       "urlFilter": "||js.appboycdn.com/web-sdk/*/braze.min.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 913104,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "inea.pl"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3810,20 +3204,6 @@
     }
   },
   {
-    "id": 1022811,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ilsecoloxix.it"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1115283,
     "priority": 8002,
     "action": {
@@ -3858,20 +3238,6 @@
     }
   },
   {
-    "id": 1975838,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nbcsports.com"
-      ],
-      "urlFilter": "||sb.scorecardresearch.com/*/streamingtag_plugin_jwplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 85804,
     "priority": 8002,
     "action": {
@@ -3885,34 +3251,6 @@
         "script"
       ],
       "urlFilter": "||dlswbr.baidu.com/heicha/mw/abclite-",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 653789,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "muratorplus.pl"
-      ],
-      "urlFilter": "||idm.hit.gemius.pl/gplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 334751,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "alfemminile.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3983,20 +3321,6 @@
         "tvnet.lv"
       ],
       "urlFilter": "||api.cxense.com/public/widget/data?",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 44450,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "health.confused.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js?id=",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -4114,20 +3438,6 @@
     "condition": {
       "initiatorDomains": [
         "liberation.fr"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 190130,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "huffingtonpost.it"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
@@ -4256,34 +3566,6 @@
         "reuters.com"
       ],
       "urlFilter": "||cdn.segment.com/analytics.js/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1267011,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mobile01.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1705233,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mobile01.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -4448,76 +3730,6 @@
     }
   },
   {
-    "id": 1017932,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "chelseafc.com"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1152927,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "worthpoint.com"
-      ],
-      "urlFilter": "||cdn.adapex.io/hb/aaw.worthpoint.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1504706,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "yankeecandle.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1358821,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "yorkshirepost.co.uk"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 876095,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "yorkshirepost.co.uk"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 866359,
     "priority": 8002,
     "action": {
@@ -4550,34 +3762,6 @@
     },
     "condition": {
       "urlFilter": "||optout.rlcdn.com^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 88247,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "starblast.io"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 575213,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "starblast.io"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -4730,20 +3914,6 @@
     }
   },
   {
-    "id": 1783174,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "futura-sciences.com"
-      ],
-      "urlFilter": "||tag.aticdn.net/piano-analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1692475,
     "priority": 8002,
     "action": {
@@ -4836,20 +4006,6 @@
         "nehannn.com"
       ],
       "urlFilter": "||googletagservices.com/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 870746,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "platform.autods.com"
-      ],
-      "urlFilter": "||convertexperiments.com/js/*.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -4992,52 +4148,6 @@
     }
   },
   {
-    "id": 694454,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "make.dmm.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1259032,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "capital.it",
-        "deejay.it",
-        "m2o.it"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 880782,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "capital.it",
-        "deejay.it",
-        "m2o.it"
-      ],
-      "urlFilter": "||static.chartbeat.com/js/chartbeat_brightcove_plugin.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 227889,
     "priority": 8002,
     "action": {
@@ -5157,20 +4267,6 @@
     }
   },
   {
-    "id": 110429,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "theglobeandmail.com"
-      ],
-      "urlFilter": "||cdn.permutive.app/*-web.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 751527,
     "priority": 8002,
     "action": {
@@ -5181,20 +4277,6 @@
         "repubblica.it"
       ],
       "urlFilter": "||static.chartbeat.com/js/chartbeat_brightcove_plugin.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 630028,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ads.spotify.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5242,20 +4324,6 @@
     }
   },
   {
-    "id": 1940447,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cerbahealthcare.it"
-      ],
-      "urlFilter": "||tag.aticdn.net/piano-analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 124005,
     "priority": 8002,
     "action": {
@@ -5266,20 +4334,6 @@
         "acrobat.adobe.com"
       ],
       "urlFilter": "||adobe.tt.omtrdc.net/rest/v1/delivery?client=adobe&sessionid=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1773036,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "biedronka.pl"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5336,21 +4390,6 @@
         "nordvpn.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1285474,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gala.fr",
-        "voici.fr"
-      ],
-      "urlFilter": "||datadoghq-browser-agent.com/datadog-rum-v*.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5464,20 +4503,6 @@
     }
   },
   {
-    "id": 1203091,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "member.neofinancial.com"
-      ],
-      "urlFilter": "||fpnpmcdn.net/v*/*/loader_*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 652428,
     "priority": 8002,
     "action": {
@@ -5521,48 +4546,6 @@
     }
   },
   {
-    "id": 278969,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tv5monde.com"
-      ],
-      "urlFilter": "||tag.aticdn.net/*/at.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1693781,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "itsu.com"
-      ],
-      "urlFilter": "||tracking.atreemo.com/scripts/trackinginit.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 351705,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "pracuj.pl"
-      ],
-      "urlFilter": "||trc.gpcdn.pl/*/tracker.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 267603,
     "priority": 8002,
     "action": {
@@ -5573,42 +4556,6 @@
         "spektrum.de"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1474915,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "embed.rtl.hu"
-      ],
-      "urlFilter": "||pro.hit.gemius.pl/gstream.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 260768,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "eska.pl",
-        "eskarock.pl",
-        "mjakmama24.pl",
-        "muratordom.pl",
-        "poradnikzdrowie.pl",
-        "radioplus.pl",
-        "se.pl",
-        "urzadzamy.pl",
-        "voxfm.pl"
-      ],
-      "urlFilter": "||idm.hit.gemius.pl/gplayer.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5937,20 +4884,6 @@
     }
   },
   {
-    "id": 687385,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "willyweather.com.au"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 169418,
     "priority": 8002,
     "action": {
@@ -6101,50 +5034,6 @@
         "journaldemontreal.com"
       ],
       "urlFilter": "||api.cxense.com/public/widget/data?json=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 996668,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tvp.info",
-        "tvp.pl"
-      ],
-      "urlFilter": "||tvppl.hit.gemius.pl/*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1132212,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tvp.info",
-        "tvp.pl"
-      ],
-      "urlFilter": "||tvpgapl.hit.gemius.pl/*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1698989,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sport.tvp.pl"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -6347,20 +5236,6 @@
         "image"
       ],
       "urlFilter": "||images.taboola.com/taboola/image/fetch/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1584105,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "azby.fmworld.net"
-      ],
-      "urlFilter": "||api.taboola.com/2.0/json/*/recommendations.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -6603,20 +5478,6 @@
     }
   },
   {
-    "id": 1147256,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "voici.fr"
-      ],
-      "urlFilter": "||btloader.com/tag?",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1916130,
     "priority": 8002,
     "action": {
@@ -6673,20 +5534,6 @@
     }
   },
   {
-    "id": 457196,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "configurator.ducati.com"
-      ],
-      "urlFilter": "||wurfl.io/wurfl.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 781100,
     "priority": 8002,
     "action": {
@@ -6709,20 +5556,6 @@
     "condition": {
       "initiatorDomains": [
         "muscleandfitness.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 977431,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "repubblica.it"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
@@ -6754,20 +5587,6 @@
         "aliexpress.us"
       ],
       "urlFilter": "||mmstat.com/eg.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 362743,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "game.co.uk"
-      ],
-      "urlFilter": "||timmy.superpointlesshamsters.com/clicktrue_invocation.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -6820,20 +5639,6 @@
     }
   },
   {
-    "id": 269563,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "athabascau.ca"
-      ],
-      "urlFilter": "||wurfl.io/wurfl.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 868649,
     "priority": 8002,
     "action": {
@@ -6844,35 +5649,6 @@
         "phileweb.com"
       ],
       "urlFilter": "||googletagservices.com/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1120076,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "harveynorman.co.nz",
-        "harveynorman.com.au"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1728777,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "snake.io"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -7057,34 +5833,6 @@
     }
   },
   {
-    "id": 705341,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "whoer.net"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 107382,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gala.fr"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1133535,
     "priority": 8002,
     "action": {
@@ -7095,48 +5843,6 @@
         "nike.com"
       ],
       "urlFilter": "||cdn.optimizely.com/datafiles/*.json/tag.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1225686,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "userstyles.org"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1039940,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sammobile.com"
-      ],
-      "urlFilter": "||plausible.io/js/plausible.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1285001,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sammobile.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -7183,20 +5889,6 @@
     }
   },
   {
-    "id": 1007228,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "leukerecepten.nl"
-      ],
-      "urlFilter": "||googleoptimize.com/optimize.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 803722,
     "priority": 8002,
     "action": {
@@ -7225,20 +5917,6 @@
     }
   },
   {
-    "id": 1758908,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "filmzie.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1005010,
     "priority": 8002,
     "action": {
@@ -7247,76 +5925,6 @@
     "condition": {
       "initiatorDomains": [
         "systemrequirementslab.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1651477,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ttv.pl"
-      ],
-      "urlFilter": "||pro.hit.gemius.pl/gstream.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1387664,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "evofone.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 249459,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lodgecastiron.com"
-      ],
-      "urlFilter": "||googleoptimize.com/optimize.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1406688,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lodgecastiron.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 485210,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "n11.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
@@ -7403,23 +6011,6 @@
         "radiotimes.com"
       ],
       "urlFilter": "||datadoghq-browser-agent.com/datadog-logs-v*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1247392,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gmx.at",
-        "gmx.ch",
-        "gmx.net",
-        "web.de"
-      ],
-      "urlFilter": "||uim.tifbs.net/js/*.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -7679,21 +6270,6 @@
     }
   },
   {
-    "id": 188191,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "alternative.me",
-        "r-graph-gallery.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js?id=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 207444,
     "priority": 8002,
     "action": {
@@ -7792,20 +6368,6 @@
     }
   },
   {
-    "id": 1072072,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "live.vodafone.de"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 61589,
     "priority": 8002,
     "action": {
@@ -7862,20 +6424,6 @@
     }
   },
   {
-    "id": 1300595,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "venturebeat.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1011802,
     "priority": 8002,
     "action": {
@@ -7900,20 +6448,6 @@
         "kicker.de"
       ],
       "urlFilter": "||tag.aticdn.net/*/smarttag.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1799979,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "infoq.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -8100,32 +6634,6 @@
     }
   },
   {
-    "id": 314909,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "domainType": "firstParty",
-      "urlFilter": "||euronewsgroup.demdex.net/event?d_event=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1220730,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "laprovence.com"
-      ],
-      "urlFilter": "||tag.aticdn.net/*/smarttag.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1175942,
     "priority": 8002,
     "action": {
@@ -8137,20 +6645,6 @@
       ],
       "resourceTypes": [
         "script"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 38202,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "aena.es"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
@@ -8255,20 +6749,6 @@
     }
   },
   {
-    "id": 718976,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "comingsoon.net"
-      ],
-      "urlFilter": "||rumcdn.geoedge.be/*/grumi.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 110603,
     "priority": 8002,
     "action": {
@@ -8293,34 +6773,6 @@
         "cwtv.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 643532,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cwtv.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 444439,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "notonthehighstreet.com"
-      ],
-      "urlFilter": "||datadoghq-browser-agent.com/datadog-rum.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -8353,34 +6805,6 @@
     }
   },
   {
-    "id": 1622604,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "learning.edx.org"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1656928,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "learning.edx.org"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 688219,
     "priority": 8002,
     "action": {
@@ -8391,20 +6815,6 @@
         "kawasaki.com"
       ],
       "urlFilter": "||googletagmanager.com/gtag/js?id=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 986072,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "wopilo.com"
-      ],
-      "urlFilter": "||analytics.tiktok.com/*/pixel/sdk.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -8434,20 +6844,6 @@
       ],
       "resourceTypes": [
         "script"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 499486,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "morningstar.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
@@ -8537,21 +6933,6 @@
         "script"
       ],
       "urlFilter": "||googleadservices.com/pagead/conversion_async.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 102343,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "al.to",
-        "x-kom.pl"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -8668,20 +7049,6 @@
     }
   },
   {
-    "id": 1425742,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lrytas.lt"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 508003,
     "priority": 8002,
     "action": {
@@ -8692,20 +7059,6 @@
         "talktalk.co.uk"
       ],
       "urlFilter": "||cdn.optimizely.com/datafiles/*.json",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 468230,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "whatcar.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -8836,20 +7189,6 @@
     }
   },
   {
-    "id": 1528147,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "automaton-media.com"
-      ],
-      "urlFilter": "||anymind360.com/js/*/ats.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 791091,
     "priority": 8002,
     "action": {
@@ -8948,48 +7287,6 @@
     }
   },
   {
-    "id": 1799748,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "store.line.me"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 8782,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "store.line.me"
-      ],
-      "urlFilter": "||google-analytics.com/gtm/js?id=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1808604,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "store.line.me"
-      ],
-      "urlFilter": "||google-analytics.com/plugins/ua/ec.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1784923,
     "priority": 8002,
     "action": {
@@ -9056,20 +7353,6 @@
         "independent.co.uk"
       ],
       "urlFilter": "||cdn.permutive.com/*-web.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1285931,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "game-owl.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -9148,20 +7431,6 @@
     }
   },
   {
-    "id": 1327419,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "einthusan.tv"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1432782,
     "priority": 8002,
     "action": {
@@ -9172,48 +7441,6 @@
         "starlingbank.com"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 148931,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "zeelandnet.nl"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1982731,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "zeelandnet.nl"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1867773,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "zeelandnet.nl"
-      ],
-      "urlFilter": "||google-analytics.com/gtm/js?id=",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -9239,34 +7466,6 @@
         "dafiti.com.co"
       ],
       "urlFilter": "||st.dynamicyield.com/st?",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1256689,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "dafiti.com.co"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 604174,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "dafiti.com.co"
-      ],
-      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -9355,79 +7554,6 @@
     }
   },
   {
-    "id": 1432575,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "chronicle.com"
-      ],
-      "urlFilter": "||cdn.blueconic.net/chronicle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 322122,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "chronicle.com"
-      ],
-      "urlFilter": "||chronicle.blueconic.net/*/json",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 200633,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mediamarkt.be",
-        "mediamarkt.ch"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1959597,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mediamarkt.be",
-        "mediamarkt.ch"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 550177,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mediamarkt.be",
-        "mediamarkt.ch"
-      ],
-      "urlFilter": "||google-analytics.com/plugins/ua/ec.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1472526,
     "priority": 8002,
     "action": {
@@ -9464,62 +7590,6 @@
     "condition": {
       "initiatorDomains": [
         "seattletimes.com"
-      ],
-      "urlFilter": "||google-analytics.com/gtm/js?id=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1023540,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "playphrase.me"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1810005,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "avast.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 60905,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "avast.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 197679,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "avast.com"
       ],
       "urlFilter": "||google-analytics.com/gtm/js?id=",
       "isUrlFilterCaseSensitive": false
@@ -9638,48 +7708,6 @@
     }
   },
   {
-    "id": 1249696,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "beymen.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 704580,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "beymen.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 178034,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "beymen.com"
-      ],
-      "urlFilter": "||google-analytics.com/gtm/js?id=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1252046,
     "priority": 8002,
     "action": {
@@ -9690,90 +7718,6 @@
         "html5.gamedistribution.com"
       ],
       "urlFilter": "||tags.crwdcntrl.net/c/*/cc.js?ns=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 993794,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "html5.gamedistribution.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1673378,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "html5.gamedistribution.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 189378,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "yargici.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 166314,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "yargici.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1797354,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "yargici.com"
-      ],
-      "urlFilter": "||google-analytics.com/plugins/ua/ec.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1732964,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "yargici.com"
-      ],
-      "urlFilter": "||google-analytics.com/gtm/js?id=",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -9834,20 +7778,6 @@
     }
   },
   {
-    "id": 2959,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hvg.hu"
-      ],
-      "urlFilter": "||ssl.google-analytics.com/ga_exp.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1096771,
     "priority": 8002,
     "action": {
@@ -9890,34 +7820,6 @@
         "shop.fender.com"
       ],
       "urlFilter": "||cdn.segment.com/analytics.js/v1/*/analytics.min.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 877979,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "4kdownload.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1890526,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "4kdownload.com"
-      ],
-      "urlFilter": "||google-analytics.com/gtm/js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -10034,20 +7936,6 @@
         "citethisforme.com"
       ],
       "urlFilter": "||google-analytics.com/gtm/js?id=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 334886,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "pcmag.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -10241,20 +8129,6 @@
         "displate.com"
       ],
       "urlFilter": "||google-analytics.com/plugins/ua/ecommerce.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 505034,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "plus.net"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -10752,31 +8626,6 @@
     }
   },
   {
-    "id": 274043,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||cdn.taboola.com/libtrc/*/tfa.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 965604,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "totv.org"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1850480,
     "priority": 8002,
     "action": {
@@ -10903,23 +8752,6 @@
     }
   },
   {
-    "id": 798651,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gpfans.com"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||wfpscripts.webspectator.com/bootstrap/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1252832,
     "priority": 8002,
     "action": {
@@ -10950,31 +8782,6 @@
         "player.radiozet.pl"
       ],
       "urlFilter": "||gapl.hit.gemius.pl/gplayer.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 187026,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "quackr.io"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 280105,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||logs1242.xiti.com/go.url",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -11231,20 +9038,6 @@
     }
   },
   {
-    "id": 799524,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mixpanel.com"
-      ],
-      "urlFilter": "||mixpanel.com^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1489129,
     "priority": 8002,
     "action": {
@@ -11395,20 +9188,6 @@
         "tbs.com"
       ],
       "urlFilter": "||ugdturner.com/xd.sjs",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 850067,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "anime-planet.com"
-      ],
-      "urlFilter": "||cdn.segment.com/analytics.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -11675,34 +9454,6 @@
         "manager-magazin.de"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 704632,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "paribucineverse.com"
-      ],
-      "urlFilter": "||visilabs.net/*/visilabs.min.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1509064,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "paribucineverse.com"
-      ],
-      "urlFilter": "||vsh.visilabs.net/visilabs.min.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -12249,20 +10000,6 @@
     }
   },
   {
-    "id": 1159279,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "kizi.com"
-      ],
-      "urlFilter": "||googleadservices.com/pagead/conversion_async.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1226942,
     "priority": 8002,
     "action": {
@@ -12459,20 +10196,6 @@
     }
   },
   {
-    "id": 1719008,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "xda-developers.com"
-      ],
-      "urlFilter": "||static.criteo.net/js/ld/publishertag.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1828940,
     "priority": 8002,
     "action": {
@@ -12483,17 +10206,6 @@
         "discovery.com"
       ],
       "urlFilter": "||sb.scorecardresearch.com/beacon.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1286498,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||apiservices.krxd.net/click_tracker^",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -12788,20 +10500,6 @@
         "carrefoursa.com"
       ],
       "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1258985,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "carrefoursa.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js^",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -13227,20 +10925,6 @@
     }
   },
   {
-    "id": 1288962,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nu.nl"
-      ],
-      "urlFilter": "||google-analytics.com/ga.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 964900,
     "priority": 8002,
     "action": {
@@ -13318,20 +11002,6 @@
         "cnet.com"
       ],
       "urlFilter": "||tags.bkrtx.com/js/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 940416,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "crunchbase.com"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js^",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -14079,20 +11749,6 @@
         "image"
       ],
       "urlFilter": "||pixel.facebook.com/ajax/notifications/mark_read.php?*&alert_ids%",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1511960,
-    "priority": 8002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tampabay.com"
-      ],
-      "urlFilter": "||static.chartbeat.com/js/chartbeat_mab.js",
       "isUrlFilterCaseSensitive": false
     }
   },

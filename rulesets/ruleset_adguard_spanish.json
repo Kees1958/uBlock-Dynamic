@@ -216,20 +216,6 @@
     }
   },
   {
-    "id": 498964,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nmas.com.mx"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1609796,
     "priority": 10002,
     "action": {
@@ -268,20 +254,6 @@
         "recordplus.com"
       ],
       "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1672346,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "recordplus.com"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -342,20 +314,6 @@
     }
   },
   {
-    "id": 1446377,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "playerclips.laliga.com"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1355190,
     "priority": 10002,
     "action": {
@@ -380,20 +338,6 @@
         "buy.tinypass.com"
       ],
       "urlFilter": "||media.gazetadopovo.com.br/*/curso-na-mira-dos-golpes_touchpoint_touchpoint_300x250-",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1789256,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cooperativa.cl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -426,20 +370,6 @@
     }
   },
   {
-    "id": 1464755,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cnnbrasil.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 157133,
     "priority": 10002,
     "action": {
@@ -450,37 +380,6 @@
         "turbo.pt"
       ],
       "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1936450,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "uol.com.br"
-      ],
-      "urlFilter": "||tm.jsuol.com.br/modules/external/admanager/carros_ads.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 117588,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mais.sbt.com.br"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_debug.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -537,34 +436,6 @@
         "cultura.uol.com.br"
       ],
       "urlFilter": "||googleads.github.io/videojs-ima/node_modules/video.js/dist/video-js.min.css",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1316857,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "terra.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1538672,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "terra.com.br"
-      ],
-      "urlFilter": "||amazon-adsystem.com/aax2/apstag.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -983,34 +854,6 @@
     }
   },
   {
-    "id": 522871,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "niusdiario.es"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1295013,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "webmotors.com.br"
-      ],
-      "urlFilter": "||webmotors.com.br/javascripts/prebid.*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 312653,
     "priority": 10002,
     "action": {
@@ -1084,20 +927,6 @@
     }
   },
   {
-    "id": 1305716,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "r7.com"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 705847,
     "priority": 10002,
     "action": {
@@ -1120,34 +949,6 @@
     },
     "condition": {
       "urlFilter": "||movistarplus.es/js/yomvi/player/publi.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1301231,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "jn.pt"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 678198,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "jn.pt"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1564,34 +1365,6 @@
     }
   },
   {
-    "id": 228231,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "suamusica.com.br"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 38268,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "suamusica.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 785039,
     "priority": 10002,
     "action": {
@@ -1745,20 +1518,6 @@
         "doramasmp4.com"
       ],
       "urlFilter": "||jwpcdn.com/player/plugins/vast/*/vast.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 668208,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tn.com.ar"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2469,62 +2228,6 @@
     }
   },
   {
-    "id": 1524438,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "xtusubs.com"
-      ],
-      "urlFilter": "||a.magsrv.com/ad-provider.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1168466,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "xtusubs.com"
-      ],
-      "urlFilter": "||s.magsrv.com/v1/api.php",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 759927,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nexusmangas.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 478115,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "novelaocs.top"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 530364,
     "priority": 10000,
     "action": {
@@ -2532,65 +2235,6 @@
     },
     "condition": {
       "urlFilter": "||topanimes.net/topanimes.net.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1376542,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sushianimes.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1775619,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "remedioscase.xyz"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 389526,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "3xyaoi.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": ".js^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1613690,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "3xyaoi.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2609,205 +2253,6 @@
     }
   },
   {
-    "id": 804132,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "minhatela.xyz"
-      ],
-      "urlFilter": "||static.doubleclick.net/instream/ad_status.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1387088,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "minhatela.xyz"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 572587,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "minhatela.xyz"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 586644,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hardwarepremium.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1427611,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hardwarepremium.com"
-      ],
-      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 492618,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "otakufilmes.org"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 415096,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "darkmahou.io"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||jsc.adskeeper.com/site/*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1187236,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "darkmahou.io"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1079881,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1585713,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1009364,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lycantoons.com"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1833090,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lycantoons.com"
-      ],
-      "urlFilter": "||platform.pubadx.one/pubadx-ad.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 719948,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lineup11.net"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1650306,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lineup11.net"
-      ],
-      "urlFilter": "||google-analytics.com/collect?v=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 516533,
     "priority": 10002,
     "action": {
@@ -2822,24 +2267,6 @@
     }
   },
   {
-    "id": 1592314,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "meuplayeronlinehd.com",
-        "multicanaistt.space"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||cloudfront.net^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 702313,
     "priority": 10000,
     "action": {
@@ -2847,20 +2274,6 @@
     },
     "condition": {
       "urlFilter": "||sushianimes.com.br/app/theme/assets/js/oksua-v3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 854852,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "azuretoons.com"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2879,23 +2292,6 @@
     }
   },
   {
-    "id": 1724135,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gnulahd.nu"
-      ],
-      "resourceTypes": [
-        "image"
-      ],
-      "urlFilter": "||cm.g.doubleclick.net/pixel?google_nid=appnexus&gnpv=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 196181,
     "priority": 10002,
     "action": {
@@ -2906,51 +2302,6 @@
         "nexustc18.com"
       ],
       "urlFilter": "||nexustc18.com/oncc-adbanner.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 994047,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "baixedetudo.net.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 945929,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "pornoenspanish.es"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1006403,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "file4go.lol"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||s4.cdnpc.net/vite-bundle/main.css",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3013,34 +2364,6 @@
     }
   },
   {
-    "id": 274156,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "luggames.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 344382,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lpfplay.com"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1102053,
     "priority": 10000,
     "action": {
@@ -3052,52 +2375,6 @@
     }
   },
   {
-    "id": 1433278,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "energytv.es",
-        "telecinco.es"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1680295,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hunter.fm"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1613691,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "3xyaoi.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1288125,
     "priority": 10000,
     "action": {
@@ -3105,51 +2382,6 @@
     },
     "condition": {
       "urlFilter": "||app.doramas.org/js/adb_plus.o.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1638701,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "darkmahou.org"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 942830,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "latamtoon.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1693156,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "devilnovels.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3178,150 +2410,6 @@
         "venevisionplay.com"
       ],
       "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1695593,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "venevisionplay.com"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 542912,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||leak.b-cdn.net/wp-content/cache/min/1/wp-content/plugins/advanced-ads/admin/assets/js/advertisement.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 849163,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "manhastro.net"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||googleads.g.doubleclick.net/pagead/ads|",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1907892,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "manhastro.net"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||static.ads-twitter.com/uwt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 128960,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "manhastro.net"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1232839,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "manhastro.net"
-      ],
-      "resourceTypes": [
-        "sub_frame"
-      ],
-      "urlFilter": "||googleads.g.doubleclick.net/pagead/ads?client=ca-pub-test|",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1384970,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "manhastro.net"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||googletagmanager.com/gtag/js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1348240,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "manhastro.net"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||connect.facebook.net/*/fbevents.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1567210,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "manhastro.net"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||google-analytics.com/analytics.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3376,22 +2464,6 @@
         "levante-emv.com"
       ],
       "urlFilter": "||trafico.prensaiberica.es/adm/min/pb_wrapper/pbwrapper.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 414816,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "informacion.es",
-        "laprovincia.es",
-        "levante-emv.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3455,22 +2527,6 @@
     }
   },
   {
-    "id": 1406725,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "netcinetv.lat",
-        "rrrv.lol",
-        "viciados.net"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1439769,
     "priority": 10000,
     "action": {
@@ -3496,23 +2552,6 @@
     }
   },
   {
-    "id": 1422485,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "fgtd.online"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||popads.net/js/adblock.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 428245,
     "priority": 10000,
     "action": {
@@ -3520,34 +2559,6 @@
     },
     "condition": {
       "urlFilter": "||eshentai.tv/app/eshentai/themes/assets/js/4dguard.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1170388,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "disneycdn.net"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1980549,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cinemastervip.com"
-      ],
-      "urlFilter": "||cinemastervip.com/wp-content/plugins/azo-ads/assets/js/ab-detector.min.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3580,37 +2591,6 @@
     }
   },
   {
-    "id": 1022972,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mediasetinfinity.es"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 314348,
-    "priority": 10003,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "jornaldacidadeonline.com.br"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 76371,
     "priority": 10002,
     "action": {
@@ -3619,20 +2599,6 @@
     "condition": {
       "initiatorDomains": [
         "jornaldacidadeonline.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1220974,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mitele.es"
       ],
       "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
@@ -3663,96 +2629,6 @@
         "script"
       ],
       "regexFilter": "^https:\\/\\/hunterscomics\\.com\\/wp-content\\/themes(\\/[a-f]{6}){2}\\.js\\?ver=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 413664,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hunterscomics.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1680296,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hunter.fm"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 798608,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "enlacito.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 425538,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "enlacito.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||googleadapis.l.google.com",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 507831,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "youtube-player.sbtlab.io"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1064571,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "file4go.net"
-      ],
-      "urlFilter": "||widgets.outbrain.com/outbrain.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -3913,37 +2789,6 @@
     }
   },
   {
-    "id": 878608,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "istigo.net"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 289004,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cozinhabr.top"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1698274,
     "priority": 10000,
     "action": {
@@ -3959,82 +2804,6 @@
     }
   },
   {
-    "id": 744335,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gamesperu2021.blogspot.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 42830,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "modescanlator.net"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 839748,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "r7.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 10545,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "daemon-hentai.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1619309,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "descargas2024gratis.blogspot.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1945288,
     "priority": 10000,
     "action": {
@@ -4042,109 +2811,6 @@
     },
     "condition": {
       "urlFilter": "||packsmega.info/abs.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1172375,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lura-toons.com",
-        "luratoons.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||jsc.adskeeper.com/l/u/luratoon.com.*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 296941,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lura-toons.com",
-        "luratoons.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1912819,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "playertv.org"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 149106,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "canal12.com.sv"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1962123,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "canal12.com.sv"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/pagead/ppub_config?ippd=www.canal12.com.sv",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1022433,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "canal12.com.sv"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1048932,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tv0800.tv"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -4160,110 +2826,6 @@
     }
   },
   {
-    "id": 1206513,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mwcmd.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1683975,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ggames.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 966041,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "elespanol.com"
-      ],
-      "urlFilter": "||npttech.com/advertising.js^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1259593,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "aqualapp.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1346516,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mundodonghua.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 272262,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "receitasoncaseiras.online"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 675442,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mundodevalor.me"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1305633,
     "priority": 10002,
     "action": {
@@ -4272,37 +2834,6 @@
     "condition": {
       "initiatorDomains": [
         "dicasvalores.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 827232,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tvguia.es"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 652800,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "expertplay.net"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
       ],
       "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
@@ -4336,34 +2867,6 @@
     }
   },
   {
-    "id": 836673,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "alarmadefraude.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1995811,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "modescanlator.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 191171,
     "priority": 10000,
     "action": {
@@ -4375,20 +2878,6 @@
     }
   },
   {
-    "id": 1228048,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "xerifetech.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 713881,
     "priority": 10000,
     "action": {
@@ -4396,23 +2885,6 @@
     },
     "condition": {
       "urlFilter": "||bluf.online/js/adblock",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1147909,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sabornutritivo.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -4447,175 +2919,6 @@
     }
   },
   {
-    "id": 78116,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "southpark.lat",
-        "southparkstudios.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/pal/sdkloader/pal.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 301055,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "southpark.lat",
-        "southparkstudios.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1507988,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "acortados.com",
-        "qwanturankpro.com",
-        "tulink.org"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||static.ads-twitter.com/uwt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 341566,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "acortados.com",
-        "notipostingt.com",
-        "qwanturankpro.com",
-        "tulink.org"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/|",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 551375,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "acortados.com",
-        "qwanturankpro.com",
-        "tulink.org"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||googleadapis.l.google.com/|",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1837093,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "antena7.com.do",
-        "atv.pe",
-        "c9n.com.py",
-        "canal12.com.sv",
-        "canal13mexico.com",
-        "chapintv.com",
-        "elcomercio.com",
-        "monumental.co.cr",
-        "redbolivision.tv.bo",
-        "repretel.com",
-        "rqp.com.bo",
-        "tn23.tv",
-        "vtv.com.hn"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 708646,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "antena7.com.do",
-        "atv.pe",
-        "c9n.com.py",
-        "canal12.com.sv",
-        "canal13mexico.com",
-        "chapintv.com",
-        "elcomercio.com",
-        "monumental.co.cr",
-        "redbolivision.tv.bo",
-        "repretel.com",
-        "rqp.com.bo",
-        "tn23.tv",
-        "vtv.com.hn"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/pagead/ppub_config",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1786630,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "antena7.com.do",
-        "atv.pe",
-        "c9n.com.py",
-        "canal12.com.sv",
-        "canal13mexico.com",
-        "chapintv.com",
-        "elcomercio.com",
-        "monumental.co.cr",
-        "redbolivision.tv.bo",
-        "repretel.com",
-        "rqp.com.bo",
-        "tn23.tv",
-        "vtv.com.hn"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1550759,
     "priority": 10002,
     "action": {
@@ -4642,134 +2945,6 @@
     }
   },
   {
-    "id": 1193368,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "teleculinaria.pt"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1290667,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "los40.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 988982,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "raulprietofernandez.net"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 183891,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||fichajes.com/build/js/admanager.*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 58353,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||fichajes.com/lib/prebid7.6.0.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1952881,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "negociosecommerce.com",
-        "puromarketing.com",
-        "todostartups.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 371567,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hinatasoul.com"
-      ],
-      "urlFilter": "||arc.io/widget.min.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 886857,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "hinatasoul.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1228049,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "xerifetech.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 312654,
     "priority": 10002,
     "action": {
@@ -4784,23 +2959,6 @@
     }
   },
   {
-    "id": 137909,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "independentespanol.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/pagead/ppub_config",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 38991,
     "priority": 10002,
     "action": {
@@ -4808,54 +2966,6 @@
     },
     "condition": {
       "urlFilter": "||mantrazscan.com/wp-content/plugins/dh-anti-adblocker/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 260934,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "inuyashadowns.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1678254,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nptmedia.tv"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||ads-api.twitter.com^|",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 914165,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "nptmedia.tv"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -4882,57 +2992,6 @@
     }
   },
   {
-    "id": 1954120,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "suaads.com",
-        "suaurl.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||ad-delivery.net/px.gif",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1295851,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "suaads.com",
-        "suaurl.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||get.optad360.io^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1427357,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "suaads.com",
-        "suaurl.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1111915,
     "priority": 10002,
     "action": {
@@ -4944,20 +3003,6 @@
     }
   },
   {
-    "id": 983493,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "themasterkramers.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 823547,
     "priority": 10000,
     "action": {
@@ -4965,34 +3010,6 @@
     },
     "condition": {
       "urlFilter": "||legendei.net/traduzidocodenew.min.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 551222,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "costumbresmexico.com"
-      ],
-      "urlFilter": "||static.ads-twitter.com/uwt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1104908,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "meutimao.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5032,23 +3049,6 @@
     },
     "condition": {
       "urlFilter": "||listas.pro/go/detecta.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 421657,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "minhaconexao.com.br"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/pagead/ppub_config",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5103,20 +3103,6 @@
     }
   },
   {
-    "id": 1713431,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tunovelaligera.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 205142,
     "priority": 10002,
     "action": {
@@ -5131,20 +3117,6 @@
     }
   },
   {
-    "id": 1946922,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "genshinpro.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1167052,
     "priority": 10002,
     "action": {
@@ -5155,48 +3127,6 @@
         "notipostingt.com"
       ],
       "urlFilter": "||static.ads-twitter.com/uwt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 372626,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "20minutos.es"
-      ],
-      "urlFilter": "||hb.20m.es/prebid/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 17769,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "20minutos.es"
-      ],
-      "urlFilter": "||c.amazon-adsystem.com/aax2/apstag.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1554909,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cadenaser.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5237,20 +3167,6 @@
     "condition": {
       "initiatorDomains": [
         "kepahoo.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 640072,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "texto.kom.gt"
       ],
       "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
@@ -5299,20 +3215,6 @@
     }
   },
   {
-    "id": 542476,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "comando.to"
-      ],
-      "urlFilter": "||aj1907.online/*&cp.adblock=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 644222,
     "priority": 10000,
     "action": {
@@ -5346,34 +3248,6 @@
     }
   },
   {
-    "id": 342968,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "maringapost.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 636211,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "maringapost.com.br"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 940003,
     "priority": 10000,
     "action": {
@@ -5395,20 +3269,6 @@
     },
     "condition": {
       "urlFilter": "||illamadas.es/public/javascripts/wp-banners.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 274738,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "stardeos.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5455,34 +3315,6 @@
         "serpadres.es"
       ],
       "urlFilter": "||tpc.googlesyndication.com/safeframe/*/html/container.html",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1752990,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "elcorreo.com"
-      ],
-      "urlFilter": "||static.vocento.com/dab/latest/strategy.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 563129,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "lawebdelprogramador.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5733,63 +3565,6 @@
     }
   },
   {
-    "id": 222145,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "anitube.vip",
-        "hinatasoul.com"
-      ],
-      "urlFilter": "||cdn.adligature.com/work.ink/prod/rules.css",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 382414,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "dicasgostosas.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 195657,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cozinha.minhasdelicias.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 371838,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "forum.lfspro.net"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 281711,
     "priority": 10002,
     "action": {
@@ -5854,21 +3629,6 @@
     }
   },
   {
-    "id": 26244,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "empregoestagios.com",
-        "satcesc.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1308616,
     "priority": 10000,
     "action": {
@@ -5876,20 +3636,6 @@
     },
     "condition": {
       "urlFilter": "||atlantapictures.net/f10-1.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1590707,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "xkekos.tv"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -5908,20 +3654,6 @@
     }
   },
   {
-    "id": 664715,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "haddoz.net"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1402660,
     "priority": 10002,
     "action": {
@@ -5932,20 +3664,6 @@
         "fantasy.lu"
       ],
       "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 200187,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "fantasy.lu"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -6327,20 +4045,6 @@
     }
   },
   {
-    "id": 974806,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "projetomotog.blogspot.com"
-      ],
-      "urlFilter": ".jpg#",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1188143,
     "priority": 10002,
     "action": {
@@ -6362,34 +4066,6 @@
         "radiotormentamx.com"
       ],
       "urlFilter": ".png#",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1280151,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "g1novelas.online"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1031297,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sejasaudavel.net"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -6589,29 +4265,6 @@
     }
   },
   {
-    "id": 1827321,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||static.logrosxbox.com/js/fuckadblock.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1637003,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "domainType": "firstParty",
-      "urlFilter": "||logrosxbox.com/ad/banner/*.ad.json",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1247977,
     "priority": 10002,
     "action": {
@@ -6699,34 +4352,6 @@
     },
     "condition": {
       "urlFilter": "||animeflv.net/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1254609,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cobachpl8.milaulas.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1218343,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cobachpl8.milaulas.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/r*/show_ads_impl.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -7224,17 +4849,6 @@
     }
   },
   {
-    "id": 1622153,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||diariodemallorca.es/servicios/ads/dfp.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1956853,
     "priority": 10002,
     "action": {
@@ -7245,45 +4859,6 @@
         "holadoctor.com"
       ],
       "urlFilter": "||hdstatic.net/holadoctor/*/js/default-rsp/common/adblock/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1704827,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||maisgasolina.com/ajax.php?loaddata=1&banner_id=ublock&somesoup=1",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 788113,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "maisgasolina.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 848463,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "maisgasolina.com"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -14550,77 +12125,7 @@
     }
   },
   {
-    "id": 1550404,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "electomania.es"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1326507,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "electomania.es"
-      ],
-      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 312926,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "tube8.es"
-      ],
-      "urlFilter": "||static.trafficjunky.com/ab/ads_test.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 671467,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myradioonline.es"
-      ],
-      "urlFilter": "||connect.facebook.net/en_us/fbevents.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 652108,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myradioonline.es"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 594465,
+    "id": 1381457,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -14716,8 +12221,7 @@
         "vitrine.lugarcerto.com.br",
         "vitrines.globo.com",
         "zahir2.aeiou.pt",
-        "zahirx.aeiou.pt",
-        "https-filtering-check.adtidy.org"
+        "zahirx.aeiou.pt"
       ]
     }
   },

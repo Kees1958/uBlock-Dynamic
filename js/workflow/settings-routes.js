@@ -144,8 +144,11 @@ export async function handleImportCustomRules(request) {
     }
 
     if ( Array.isArray(payload.cookieClickerRules) ) {
-        counts.cookieClickerRules = await importCookieClickerRules(payload.cookieClickerRules);
-        if ( counts.cookieClickerRules > 0 ) {
+        // (11.1.3) An identical stored rule is overwritten, not added again (Restore used to duplicate every rule);
+        // a changed on/off state also changes the registered sites, so it re-registers too.
+        const { added, changed } = await importCookieClickerRules(payload.cookieClickerRules);
+        counts.cookieClickerRules = added;
+        if ( added > 0 || changed > 0 ) {
             await registerCookieClickerContentScripts();
         }
     }

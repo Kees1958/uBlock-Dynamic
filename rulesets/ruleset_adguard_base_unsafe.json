@@ -1,6 +1,23 @@
 [
   {
-    "id": 1944,
+    "id": 1735,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bluebirdbanter.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1736,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -20,7 +37,101 @@
     }
   },
   {
-    "id": 1945,
+    "id": 1737,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "footballtransfers.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1738,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fortune.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1739,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "theplayerstribune.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1740,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tunegenie.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1741,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "bbc.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1742,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -37,7 +148,41 @@
     }
   },
   {
-    "id": 1946,
+    "id": 1743,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "p2pplay.pro"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1744,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "inc.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1745,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -57,7 +202,209 @@
     }
   },
   {
-    "id": 1948,
+    "id": 1746,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "earth.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1747,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "addictinggames.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1748,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cbssports.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1749,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "typingtest.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1750,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "howtogeek.com",
+        "makeuseof.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1751,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "worldstar.com",
+        "worldstarhiphop.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1752,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "worldsurfleague.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1753,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "viu.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1754,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "vix.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1755,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "france24.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1756,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -77,17 +424,17 @@
     }
   },
   {
-    "id": 1949,
-    "priority": 10003,
+    "id": 1757,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
-        "extensionPath": "/web_accessible_resources/noop.js"
+        "extensionPath": "/web_accessible_resources/google-ima.js"
       }
     },
     "condition": {
       "initiatorDomains": [
-        "bloomberg.com"
+        "mountathletics.com"
       ],
       "resourceTypes": [
         "script"
@@ -97,7 +444,109 @@
     }
   },
   {
-    "id": 1950,
+    "id": 1758,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "barrons.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1759,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "humix.com",
+        "mistergadget.tech"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1760,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "iheartradio.ca"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1761,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "soonersports.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1762,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kibagames.com",
+        "kraloyun.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1763,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -117,7 +566,149 @@
     }
   },
   {
-    "id": 1951,
+    "id": 1764,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "abcya.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1765,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "click2houston.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1766,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cargames.com",
+        "puzzlegame.com",
+        "yiv.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1767,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cbsnews.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3*.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1768,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zygomatic.arkadiumarena.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1769,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ksl.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1770,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "zee5.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1771,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -137,7 +728,27 @@
     }
   },
   {
-    "id": 1952,
+    "id": 1772,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "ultimedia.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1773,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -157,7 +768,27 @@
     }
   },
   {
-    "id": 1953,
+    "id": 1774,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sonyliv.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1775,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -177,28 +808,7 @@
     }
   },
   {
-    "id": 1954,
-    "priority": 10001,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/web_accessible_resources/noop.js"
-      }
-    },
-    "condition": {
-      "initiatorDomains": [
-        "aznude.com"
-      ],
-      "resourceTypes": [
-        "other",
-        "script"
-      ],
-      "urlFilter": "||hostadserver.com/www/delivery/asyncjs.php",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1957,
+    "id": 1777,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -218,7 +828,7 @@
     }
   },
   {
-    "id": 1958,
+    "id": 1778,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -238,7 +848,7 @@
     }
   },
   {
-    "id": 2023,
+    "id": 1843,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -260,7 +870,27 @@
     }
   },
   {
-    "id": 2033,
+    "id": 1853,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "fifa.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1854,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -280,7 +910,7 @@
     }
   },
   {
-    "id": 2034,
+    "id": 1855,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -302,7 +932,7 @@
     }
   },
   {
-    "id": 2035,
+    "id": 1856,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -319,7 +949,7 @@
     }
   },
   {
-    "id": 2044,
+    "id": 1865,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -336,7 +966,7 @@
     }
   },
   {
-    "id": 2064,
+    "id": 1883,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -353,7 +983,7 @@
     }
   },
   {
-    "id": 2086,
+    "id": 1904,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -370,7 +1000,7 @@
     }
   },
   {
-    "id": 2116,
+    "id": 1934,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -390,7 +1020,7 @@
     }
   },
   {
-    "id": 2117,
+    "id": 1935,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -410,7 +1040,7 @@
     }
   },
   {
-    "id": 2118,
+    "id": 1936,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -430,7 +1060,7 @@
     }
   },
   {
-    "id": 2119,
+    "id": 1937,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -450,7 +1080,7 @@
     }
   },
   {
-    "id": 2120,
+    "id": 1938,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -470,7 +1100,7 @@
     }
   },
   {
-    "id": 2121,
+    "id": 1939,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -490,7 +1120,7 @@
     }
   },
   {
-    "id": 2122,
+    "id": 1940,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -510,7 +1140,7 @@
     }
   },
   {
-    "id": 2295,
+    "id": 2103,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -531,7 +1161,27 @@
     }
   },
   {
-    "id": 2643,
+    "id": 2248,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "open.video"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2452,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -551,7 +1201,7 @@
     }
   },
   {
-    "id": 2682,
+    "id": 2491,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -569,7 +1219,7 @@
     }
   },
   {
-    "id": 2717,
+    "id": 2526,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -586,7 +1236,7 @@
     }
   },
   {
-    "id": 2783,
+    "id": 2592,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -606,7 +1256,27 @@
     }
   },
   {
-    "id": 2863,
+    "id": 2661,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "rumble.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2673,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -623,7 +1293,7 @@
     }
   },
   {
-    "id": 2934,
+    "id": 2744,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -640,7 +1310,28 @@
     }
   },
   {
-    "id": 3095,
+    "id": 2862,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "theguardian.com",
+        "timesofindia.indiatimes.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 2906,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -654,7 +1345,30 @@
     }
   },
   {
-    "id": 3216,
+    "id": 2966,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "crunchyroll.com",
+        "dailymotion.com",
+        "einthusan.tv",
+        "sbs.com.au"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3028,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -674,7 +1388,136 @@
     }
   },
   {
-    "id": 3456,
+    "id": 3163,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gamemonetize.co",
+        "gamemonetize.com",
+        "gamemonetize.video",
+        "gamessumo.com",
+        "mixfreegames.com",
+        "myfreegames.net",
+        "playjolt.com",
+        "ubestgames.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3164,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||playjolt.com/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3165,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||mixfreegames.com/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3166,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||gamessumo.com/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3167,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||ubestgames.com/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3168,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||gamemonetize.com/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3169,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||gamemonetize.com/api/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 3275,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -694,7 +1537,7 @@
     }
   },
   {
-    "id": 3716,
+    "id": 3535,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -711,7 +1554,7 @@
     }
   },
   {
-    "id": 3738,
+    "id": 3557,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -731,7 +1574,7 @@
     }
   },
   {
-    "id": 4013,
+    "id": 3832,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -748,7 +1591,7 @@
     }
   },
   {
-    "id": 4113,
+    "id": 3932,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -765,7 +1608,7 @@
     }
   },
   {
-    "id": 4129,
+    "id": 3948,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -782,7 +1625,7 @@
     }
   },
   {
-    "id": 4174,
+    "id": 3993,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -799,7 +1642,7 @@
     }
   },
   {
-    "id": 4365,
+    "id": 4184,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -821,7 +1664,7 @@
     }
   },
   {
-    "id": 4402,
+    "id": 4221,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -838,7 +1681,7 @@
     }
   },
   {
-    "id": 4445,
+    "id": 4264,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -858,7 +1701,7 @@
     }
   },
   {
-    "id": 4448,
+    "id": 4267,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -875,7 +1718,7 @@
     }
   },
   {
-    "id": 4485,
+    "id": 4304,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -896,7 +1739,7 @@
     }
   },
   {
-    "id": 4491,
+    "id": 4310,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -910,7 +1753,7 @@
     }
   },
   {
-    "id": 4492,
+    "id": 4311,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -924,7 +1767,7 @@
     }
   },
   {
-    "id": 5418,
+    "id": 5237,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -941,7 +1784,7 @@
     }
   },
   {
-    "id": 5650,
+    "id": 5468,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -980,7 +1823,7 @@
     }
   },
   {
-    "id": 5774,
+    "id": 5586,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -997,7 +1840,7 @@
     }
   },
   {
-    "id": 5806,
+    "id": 5611,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1017,7 +1860,7 @@
     }
   },
   {
-    "id": 5854,
+    "id": 5652,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1035,7 +1878,7 @@
     }
   },
   {
-    "id": 6066,
+    "id": 5854,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1054,7 +1897,7 @@
     }
   },
   {
-    "id": 6192,
+    "id": 5975,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1075,7 +1918,7 @@
     }
   },
   {
-    "id": 6193,
+    "id": 5976,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1096,7 +1939,7 @@
     }
   },
   {
-    "id": 6196,
+    "id": 5979,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1117,7 +1960,7 @@
     }
   },
   {
-    "id": 6199,
+    "id": 5982,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1139,7 +1982,7 @@
     }
   },
   {
-    "id": 6200,
+    "id": 5983,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1160,7 +2003,7 @@
     }
   },
   {
-    "id": 6204,
+    "id": 5987,
     "priority": 10000,
     "action": {
       "type": "redirect",

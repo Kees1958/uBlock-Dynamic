@@ -1836,21 +1836,6 @@
     }
   },
   {
-    "id": 502766,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "resourceTypes": [
-        "other",
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||mail.bg/message/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1183062,
     "priority": 10000,
     "action": {
@@ -1902,31 +1887,6 @@
     }
   },
   {
-    "id": 624529,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||btv.bg/static/bg/shared/js/admanager/ads.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1447389,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "btv.bg"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1479474,
     "priority": 10002,
     "action": {
@@ -1941,83 +1901,6 @@
         "businessnovinite.bg"
       ],
       "urlFilter": "/js/admanager/ads.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 982114,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "btv.bg"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 71995,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "play.nova.bg"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1956526,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "play.nova.bg"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||ssl.p.jwpcdn.com/player/v/*/googima.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1844708,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "i.cdn.bg",
-        "nova.bg"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1125041,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "pik.bg"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2096,20 +1979,6 @@
     },
     "condition": {
       "urlFilter": "||seirsanduk.com/ad-server.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1986929,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "bg-gledai.video"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -11409,34 +11278,6 @@
     }
   },
   {
-    "id": 1528599,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "routech.ro"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1908574,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "routech.ro"
-      ],
-      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1826625,
     "priority": 10000,
     "action": {
@@ -11447,100 +11288,6 @@
         "mocasoft.ro"
       ],
       "urlFilter": "/wp-content/plugins/kill-adblock/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 95839,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "edoga.biz.hr"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1512435,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "edoga.biz.hr"
-      ],
-      "resourceTypes": [
-        "script",
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 820006,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "edoga.biz.hr"
-      ],
-      "resourceTypes": [
-        "image"
-      ],
-      "urlFilter": "||google-analytics.com/collect?*ad-test",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 309816,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "competentedigitale.ro"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 14103,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "e-sanatatea.ro"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 202283,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "rtl.hr"
-      ],
-      "urlFilter": "||ads.api.24ur.si/adserver/adblock.",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -11558,83 +11305,6 @@
         "xmlhttprequest"
       ],
       "urlFilter": "||static.doubleclick.net/instream/ad_status.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1312844,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myradioonline.ro"
-      ],
-      "urlFilter": "||connect.facebook.net/en_us/fbevents.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1201911,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myradioonline.ro"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1944425,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "observatornews.ro"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 710367,
-    "priority": 10000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "domainType": "thirdParty",
-      "initiatorDomains": [
-        "jav.si"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": ".in/*/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 634258,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "vwforum.ro"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },

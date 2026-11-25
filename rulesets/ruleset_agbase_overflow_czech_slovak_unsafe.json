@@ -1,6 +1,46 @@
 [
   {
-    "id": 88,
+    "id": 37,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cnews.cz"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 61,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "media.joj.sk"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 79,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -21,7 +61,7 @@
     }
   },
   {
-    "id": 91,
+    "id": 81,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -42,7 +82,7 @@
     }
   },
   {
-    "id": 112,
+    "id": 90,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -62,7 +102,7 @@
     }
   },
   {
-    "id": 114,
+    "id": 92,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -82,7 +122,7 @@
     }
   },
   {
-    "id": 117,
+    "id": 95,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -104,7 +144,7 @@
     }
   },
   {
-    "id": 128,
+    "id": 102,
     "priority": 10003,
     "action": {
       "type": "redirect",

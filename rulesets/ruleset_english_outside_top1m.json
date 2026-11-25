@@ -1061,48 +1061,6 @@
     }
   },
   {
-    "id": 83173,
-    "priority": 10000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "domainType": "thirdParty",
-      "initiatorDomains": [
-        "18comic-gquu.vip",
-        "25img.com",
-        "advertape.net",
-        "animebr.org",
-        "animefire.io",
-        "arigl.com",
-        "celebritydeeplink.com",
-        "fc2ppv.stream",
-        "hentai2w.com",
-        "japaneseholes.com",
-        "javmeta.com",
-        "javpas.com",
-        "javx357.com",
-        "jmanga.coach",
-        "luluvids.top",
-        "mesex.pro",
-        "myvidplay.com",
-        "nsfwyoutube.com",
-        "play.playkrx18.site",
-        "porntin.com",
-        "shinshi-manga.net",
-        "upload18.com",
-        "verhentai.top",
-        "vevocloud.com",
-        "xmalay1.net"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": ".in/*/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 261972,
     "priority": 10000,
     "action": {
@@ -1475,20 +1433,6 @@
         "pinknews.co.uk"
       ],
       "urlFilter": "||tinypass.com^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 281381,
-    "priority": 10000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "computerhoy.com"
-      ],
-      "urlFilter": "||piano.io/api/tinypass.min.js",
       "isUrlFilterCaseSensitive": false
     }
   },

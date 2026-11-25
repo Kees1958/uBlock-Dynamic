@@ -1,6 +1,17 @@
 [
   {
     "hostnames": [
+      "foxnews.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "__apEarlyInstalled"
+    ],
+    "ruleset": "ruleset_badfilter_quickfixes"
+  },
+  {
+    "hostnames": [
       "1800contacts.com"
     ],
     "name": "set-cookie",
@@ -8901,17 +8912,6 @@
   },
   {
     "hostnames": [
-      "javbee.vip"
-    ],
-    "name": "prevent-addEventListener",
-    "args": [
-      "click",
-      "popMagic"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
       "4kporn.xxx",
       "technoob.info",
       "crazyporn.xxx"
@@ -11987,25 +11987,6 @@
     "args": [
       "href",
       "#videoPlayerContainer a[target=\"_blank\"]"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
-      "wsj.com"
-    ],
-    "name": "google-ima3",
-    "args": [],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
-      "wsj.com"
-    ],
-    "name": "prevent-element-src-loading",
-    "args": [
-      "script",
-      "/static\\.adsafeprotected\\.com|imasdk\\.googleapis\\.com\\/js\\/sdkloader\\/ima3\\.js/"
     ],
     "ruleset": "ruleset_adguard_base"
   },
@@ -20769,17 +20750,6 @@
   },
   {
     "hostnames": [
-      "bing.com"
-    ],
-    "name": "prevent-setInterval",
-    "args": [
-      "logQueue",
-      "10000"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
       "tui.click"
     ],
     "name": "prevent-window-open",
@@ -26184,286 +26154,6 @@
   },
   {
     "hostnames": [
-      "gamejksokuhou.com",
-      "trucs-et-astuces.co",
-      "advnture.com",
-      "androidcentral.com",
-      "avnetwork.com",
-      "bikeperfect.com",
-      "cinemablend.com",
-      "countrylife.co.uk",
-      "creativebloq.com",
-      "cyclingnews.com",
-      "cyclingweekly.com",
-      "decanter.com",
-      "digitalcameraworld.com",
-      "discover.futureplc.com",
-      "fitandwell.com",
-      "fourfourtwo.com",
-      "gamesradar.com",
-      "golfmonthly.com",
-      "guitarworld.com",
-      "homebuilding.co.uk",
-      "homesandgardens.com",
-      "idealhome.co.uk",
-      "imore.com",
-      "itpro.com",
-      "kiplinger.com",
-      "laptopmag.com",
-      "livescience.com",
-      "livingetc.com",
-      "loudersound.com",
-      "marieclaire.co.uk",
-      "marieclaire.com",
-      "moneyweek.com",
-      "pcgamer.com",
-      "space.com",
-      "t3.com",
-      "techradar.com",
-      "theweek.com",
-      "tomsguide.com",
-      "tvtechnology.com",
-      "wallpaper.com",
-      "whathifi.com",
-      "whattowatch.com",
-      "whowhatwear.com",
-      "womanandhome.com",
-      "tomshardware.com",
-      "windowscentral.com",
-      "oraridiapertura24.it",
-      "tacoma4g.com",
-      "mavericktruckclub.com",
-      "f150gen14.com",
-      "4runner6g.com",
-      "lfpress.com",
-      "taycanforum.com",
-      "deltiasgaming.com",
-      "broncosportforum.com",
-      "macheforum.com",
-      "all-nationz.com",
-      "ontariofarmer.com",
-      "yorkshirepost.co.uk",
-      "jlwranglerforums.com",
-      "cybertruckownersclub.com",
-      "meteo60.fr",
-      "robbreport.com",
-      "torontosun.com",
-      "saikyo-jump.com",
-      "livescience.com",
-      "elnacional.cat",
-      "parade.com",
-      "athlonsports.com",
-      "edmontonsun.com",
-      "canoe.com",
-      "driving.ca",
-      "vancouversun.com",
-      "seriouseats.com",
-      "alfalfalfa.com",
-      "aussieaudiomart.com",
-      "ukaudiomart.com",
-      "usaudiomart.com",
-      "canuckaudiomart.com"
-    ],
-    "name": "remove-node-text",
-    "args": [
-      "script",
-      "html-load.com"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
-      "keizai.biz",
-      "netvasco.com.br",
-      "manchestereveningnews.co.uk",
-      "gamingbible.com",
-      "merkur.de",
-      "przegladsportowy.onet.pl",
-      "walesonline.co.uk",
-      "trucs-et-astuces.co",
-      "pakkotoisto.com",
-      "advnture.com",
-      "androidcentral.com",
-      "avnetwork.com",
-      "bikeperfect.com",
-      "cinemablend.com",
-      "countrylife.co.uk",
-      "creativebloq.com",
-      "cyclingnews.com",
-      "cyclingweekly.com",
-      "decanter.com",
-      "digitalcameraworld.com",
-      "discover.futureplc.com",
-      "fitandwell.com",
-      "fourfourtwo.com",
-      "gamesradar.com",
-      "golfmonthly.com",
-      "guitarworld.com",
-      "homebuilding.co.uk",
-      "homesandgardens.com",
-      "idealhome.co.uk",
-      "imore.com",
-      "itpro.com",
-      "kiplinger.com",
-      "laptopmag.com",
-      "livescience.com",
-      "livingetc.com",
-      "loudersound.com",
-      "marieclaire.co.uk",
-      "marieclaire.com",
-      "moneyweek.com",
-      "pcgamer.com",
-      "space.com",
-      "t3.com",
-      "techradar.com",
-      "theweek.com",
-      "tomsguide.com",
-      "tvtechnology.com",
-      "wallpaper.com",
-      "whathifi.com",
-      "whattowatch.com",
-      "whowhatwear.com",
-      "womanandhome.com",
-      "tomshardware.com",
-      "windowscentral.com",
-      "oraridiapertura24.it",
-      "tacoma4g.com",
-      "mavericktruckclub.com",
-      "f150gen14.com",
-      "4runner6g.com",
-      "lfpress.com",
-      "urbandictionary.com",
-      "taycanforum.com",
-      "deltiasgaming.com",
-      "broncosportforum.com",
-      "macheforum.com",
-      "all-nationz.com",
-      "ontariofarmer.com",
-      "yorkshirepost.co.uk",
-      "jlwranglerforums.com",
-      "cybertruckownersclub.com",
-      "meteo60.fr",
-      "robbreport.com",
-      "torontosun.com",
-      "saikyo-jump.com",
-      "livescience.com",
-      "elnacional.cat",
-      "parade.com",
-      "thestarphoenix.com",
-      "leaderpost.com",
-      "athlonsports.com",
-      "edmontonsun.com",
-      "calgaryherald.com",
-      "theprovince.com",
-      "canoe.com",
-      "driving.ca",
-      "vancouversun.com",
-      "financialpost.com",
-      "followfollow.com",
-      "seriouseats.com",
-      "alfalfalfa.com",
-      "aussieaudiomart.com",
-      "ukaudiomart.com",
-      "usaudiomart.com",
-      "canuckaudiomart.com"
-    ],
-    "name": "trusted-replace-argument",
-    "args": [
-      "Element.prototype.setAttribute",
-      "1",
-      "replace:/.+(error-report|new Promise|:window|&&window,|\\|\\|window,|void 0\\]|\\)\\.join\\(String\\.fromCharCode|html-load\\.com[\\s\\S]*_onerror).+//g"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
-      "trucs-et-astuces.co",
-      "advnture.com",
-      "androidcentral.com",
-      "avnetwork.com",
-      "bikeperfect.com",
-      "cinemablend.com",
-      "countrylife.co.uk",
-      "creativebloq.com",
-      "cyclingnews.com",
-      "cyclingweekly.com",
-      "decanter.com",
-      "digitalcameraworld.com",
-      "discover.futureplc.com",
-      "fitandwell.com",
-      "fourfourtwo.com",
-      "gamesradar.com",
-      "golfmonthly.com",
-      "guitarworld.com",
-      "homebuilding.co.uk",
-      "homesandgardens.com",
-      "idealhome.co.uk",
-      "imore.com",
-      "itpro.com",
-      "kiplinger.com",
-      "laptopmag.com",
-      "livescience.com",
-      "livingetc.com",
-      "loudersound.com",
-      "marieclaire.co.uk",
-      "marieclaire.com",
-      "moneyweek.com",
-      "pcgamer.com",
-      "space.com",
-      "t3.com",
-      "techradar.com",
-      "theweek.com",
-      "tomsguide.com",
-      "tvtechnology.com",
-      "wallpaper.com",
-      "whathifi.com",
-      "whattowatch.com",
-      "whowhatwear.com",
-      "womanandhome.com",
-      "tomshardware.com",
-      "windowscentral.com",
-      "oraridiapertura24.it",
-      "tacoma4g.com",
-      "mavericktruckclub.com",
-      "f150gen14.com",
-      "4runner6g.com",
-      "lfpress.com",
-      "taycanforum.com",
-      "deltiasgaming.com",
-      "broncosportforum.com",
-      "macheforum.com",
-      "all-nationz.com",
-      "ontariofarmer.com",
-      "yorkshirepost.co.uk",
-      "jlwranglerforums.com",
-      "cybertruckownersclub.com",
-      "meteo60.fr",
-      "torontosun.com",
-      "saikyo-jump.com",
-      "livescience.com",
-      "elnacional.cat",
-      "parade.com",
-      "athlonsports.com",
-      "edmontonsun.com",
-      "canoe.com",
-      "driving.ca",
-      "vancouversun.com",
-      "seriouseats.com",
-      "alfalfalfa.com",
-      "aussieaudiomart.com",
-      "ukaudiomart.com",
-      "usaudiomart.com",
-      "canuckaudiomart.com"
-    ],
-    "name": "remove-node-text",
-    "args": [
-      "script",
-      "/:\\(\\)=>eval/"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
       "tacoma4g.com",
       "mavericktruckclub.com",
       "f150gen14.com",
@@ -26836,28 +26526,6 @@
       "HTMLScriptElement.prototype.setAttribute",
       "1",
       "replace:/.+(error-report|new Promise|:window|&&window,|\\|\\|window,|void 0\\]|\\)\\.join\\(String\\.fromCharCode|html-load\\.com[\\s\\S]*_onerror).+//g"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
-      "akinator.com"
-    ],
-    "name": "remove-node-text",
-    "args": [
-      "script",
-      "(async()=>{try"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
-      "akinator.com"
-    ],
-    "name": "set-constant",
-    "args": [
-      "__cfRLUnblockHandlers",
-      "true"
     ],
     "ruleset": "ruleset_adguard_base"
   },
@@ -39313,14 +38981,6 @@
   },
   {
     "hostnames": [
-      "livehindustan.com"
-    ],
-    "name": "googletagservices-gpt",
-    "args": [],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
       "prospectmagazine.co.uk"
     ],
     "name": "trusted-replace-node-text",
@@ -39830,18 +39490,6 @@
   {
     "hostnames": [
       "7mmtv.sx"
-    ],
-    "name": "trusted-click-element",
-    "args": [
-      "div[id^=\"mvspan_\"][id*=\"_s_k_i_p_b\"]",
-      "",
-      "500"
-    ],
-    "ruleset": "ruleset_adguard_base"
-  },
-  {
-    "hostnames": [
-      "7tv066.com"
     ],
     "name": "trusted-click-element",
     "args": [
@@ -41749,182 +41397,6 @@
   },
   {
     "hostnames": [
-      "24hamburg.de",
-      "news.de",
-      "web.de",
-      "gmx.net",
-      "gmx.at",
-      "freenet.de",
-      "quoka.de",
-      "tichyseinblick.de",
-      "mathebibel.de",
-      "fuldaerzeitung.de",
-      "vox.de",
-      "hersfelder-zeitung.de",
-      "az-online.de",
-      "hanauer.de",
-      "op-online.de",
-      "linux-community.de",
-      "epochtimes.de",
-      "merkur.de",
-      "fr.de",
-      "extratipp.com",
-      "auto-motor-und-sport.de",
-      "harzkurier.de",
-      "ikz-online.de",
-      "nrz.de",
-      "wp.de",
-      "boerse-online.de",
-      "salzgitter-zeitung.de",
-      "autobild.de",
-      "spiegel.de",
-      "mein-mmo.de",
-      "cinema.de",
-      "news38.de",
-      "waz.de",
-      "futurezone.de",
-      "wr.de",
-      "areamobile.de",
-      "sport.de",
-      "manager-magazin.de",
-      "bildderfrau.de",
-      "vip.de",
-      "tvspielfilm.de",
-      "fitforfun.de",
-      "heise.de",
-      "morgenpost.de",
-      "4fansites.de",
-      "kochbar.de",
-      "derwesten.de",
-      "abendblatt.de",
-      "wetter.de",
-      "baby-vornamen.de",
-      "9monate.de",
-      "abendzeitung-muenchen.de",
-      "ajaxshowtime.com",
-      "antenne.de",
-      "arcor.de",
-      "areadvd.de",
-      "boerse.de",
-      "brigitte.de",
-      "buffed.de",
-      "caravaning.de",
-      "chefkoch.de",
-      "computerhilfen.de",
-      "computerworld.nl",
-      "comunio.de",
-      "comunio.es",
-      "connect.de",
-      "de.pons.com",
-      "donnerwetter.de",
-      "eatsmarter.de",
-      "f1maximaal.nl",
-      "fettspielen.de",
-      "fid-gesundheitswissen.de",
-      "finanzen.at",
-      "finanzen.ch",
-      "finanzen.net",
-      "finanztreff.de",
-      "formel1.de",
-      "gala.de",
-      "gamepro.de",
-      "gamesaktuell.de",
-      "gamestar.de",
-      "gamezone.de",
-      "general-anzeiger-bonn.de",
-      "genialetricks.de",
-      "gipfelbuch.ch",
-      "gmuender-tagespost.de",
-      "golem.de",
-      "gusto.at",
-      "hamburg.de",
-      "hardwareluxx.de",
-      "heftig.de",
-      "heiseautos.de",
-      "hoerzu.de",
-      "ingame.de",
-      "inside-handy.de",
-      "jpgames.de",
-      "kamelle.de",
-      "knack.be",
-      "lablue.de",
-      "lampertheimer-zeitung.de",
-      "landwirt.com",
-      "leckerschmecker.me",
-      "levif.be",
-      "lifeline.de",
-      "likemag.com",
-      "lustaufsleben.at",
-      "lustich.de",
-      "macwelt.de",
-      "mehr-tanken.de",
-      "mein-wahres-ich.de",
-      "menshealth.de",
-      "metalflirt.de",
-      "mopo.de",
-      "motor-talk.de",
-      "motorbasar.de",
-      "motorradonline.de",
-      "motorsport-total.com",
-      "motortests.de",
-      "moviepilot.de",
-      "mtb-news.de",
-      "news.at",
-      "nnn.de",
-      "noz.de",
-      "nwzonline.de",
-      "paradisi.de",
-      "pcgames.de",
-      "pcgameshardware.de",
-      "pcwelt.de",
-      "pietsmiet.de",
-      "pnn.de",
-      "prignitzer.de",
-      "profil.at",
-      "promipool.de",
-      "promobil.de",
-      "prosieben.de",
-      "readmore.de",
-      "runnersworld.de",
-      "sat1.de",
-      "schwaebische-post.de",
-      "serienjunkies.de",
-      "shz.de",
-      "sixx.ch",
-      "sportal.de",
-      "spox.com",
-      "stern.de",
-      "svz.de",
-      "tagesspiegel.de",
-      "testedich.de",
-      "tiervermittlung.de",
-      "trend.at",
-      "tv-media.at",
-      "tvdigital.de",
-      "tvtoday.de",
-      "videogameszone.de",
-      "webfail.com",
-      "webfail.de",
-      "webwereld.nl",
-      "welt.de",
-      "wetter.com",
-      "wetteronline.de",
-      "wiesbadener-tagblatt.de",
-      "wn.de",
-      "woman.at",
-      "womenshealth.de",
-      "woxikon.de",
-      "yachtrevue.at"
-    ],
-    "name": "abort-current-inline-script",
-    "args": [
-      "navigator",
-      "Flags.autoRecov"
-    ],
-    "ruleset": "ruleset_adguard_german"
-  },
-  {
-    "hostnames": [
       "news.de",
       "web.de",
       "gmx.net",
@@ -43643,20 +43115,6 @@
     "args": [
       "document.dispatchEvent",
       "requestAds"
-    ],
-    "ruleset": "ruleset_adguard_german"
-  },
-  {
-    "hostnames": [
-      "giga.de",
-      "spiegel.de",
-      "welt.de",
-      "t-online.de"
-    ],
-    "name": "abort-on-stack-trace",
-    "args": [
-      "XMLHttpRequest",
-      "onreadystatechange"
     ],
     "ruleset": "ruleset_adguard_german"
   },
@@ -48163,16 +47621,6 @@
       "Document.prototype.querySelector",
       "\"body\"",
       "abort"
-    ],
-    "ruleset": "ruleset_adguard_spanish"
-  },
-  {
-    "hostnames": [
-      "jornaldacidadeonline.com.br"
-    ],
-    "name": "prevent-fetch",
-    "args": [
-      "pagead2.googlesyndication.com"
     ],
     "ruleset": "ruleset_adguard_spanish"
   },
@@ -54560,16 +54008,6 @@
   },
   {
     "hostnames": [
-      "jornaldacidadeonline.com.br"
-    ],
-    "name": "prevent-fetch",
-    "args": [
-      "pagead2.googlesyndication.com"
-    ],
-    "ruleset": "ruleset_easylist_portuguese"
-  },
-  {
-    "hostnames": [
       "seriesemcena.com.br"
     ],
     "name": "prevent-requestAnimationFrame",
@@ -57461,16 +56899,6 @@
     "name": "ubo-aopw",
     "args": [
       "__AB__"
-    ],
-    "ruleset": "ruleset_easylist_nordic"
-  },
-  {
-    "hostnames": [
-      "berlingske.dk"
-    ],
-    "name": "ubo-no-fetch-if",
-    "args": [
-      "googlesyndication"
     ],
     "ruleset": "ruleset_easylist_nordic"
   },
@@ -67008,17 +66436,6 @@
   },
   {
     "hostnames": [
-      "adshnk.com"
-    ],
-    "name": "prevent-setInterval",
-    "args": [
-      "adblocker",
-      "10000"
-    ],
-    "ruleset": "ruleset_adguard_antiadblock"
-  },
-  {
-    "hostnames": [
       "zeroupload.com"
     ],
     "name": "prevent-element-src-loading",
@@ -70452,36 +69869,6 @@
     "name": "abort-on-property-write",
     "args": [
       "__pcodeAllActiveTestIds"
-    ],
-    "ruleset": "ruleset_adguard_antiadblock"
-  },
-  {
-    "hostnames": [
-      "yandex.*"
-    ],
-    "name": "abort-on-property-write",
-    "args": [
-      "ctxScript"
-    ],
-    "ruleset": "ruleset_adguard_antiadblock"
-  },
-  {
-    "hostnames": [
-      "yandex.*"
-    ],
-    "name": "prevent-eval-if",
-    "args": [
-      "Id\":\"R-I"
-    ],
-    "ruleset": "ruleset_adguard_antiadblock"
-  },
-  {
-    "hostnames": [
-      "yandex.*"
-    ],
-    "name": "json-prune",
-    "args": [
-      "rtb"
     ],
     "ruleset": "ruleset_adguard_antiadblock"
   },
@@ -84384,17 +83771,6 @@
     "args": [
       "document.addEventListener",
       "onerror"
-    ],
-    "ruleset": "ruleset_english_outside_top1m"
-  },
-  {
-    "hostnames": [
-      "graphicux.com"
-    ],
-    "name": "prevent-element-src-loading",
-    "args": [
-      "script",
-      "pagead2.googlesyndication.com"
     ],
     "ruleset": "ruleset_english_outside_top1m"
   },

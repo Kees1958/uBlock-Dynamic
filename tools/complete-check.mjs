@@ -861,6 +861,12 @@ await run('95. Anti-Admiral — uAssets Admiral/Ad-Shield sections, MV3 preproce
     execFileSync(process.execPath, [ 'tools/test-anti-admiral-sections.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
 
+// (11.1.3) Every downloaded list's own platform directives ("!+ PLATFORM(…)" hints, "!#if" blocks) are applied as
+// AdGuard's Chrome MV3 build (AdGuard sources) or uBO Lite on Chromium (other sources) applies them.
+await run('96. Platform directives — AdGuard hints and !#if blocks applied at download', () => {
+    execFileSync(process.execPath, [ 'tools/test-list-directives.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+
 // ── Summary ───────────────────────────────────────────────────────────
 console.log(`\n${'═'.repeat(70)}\nSUMMARY\n${'═'.repeat(70)}`);
 for ( const r of results ) {

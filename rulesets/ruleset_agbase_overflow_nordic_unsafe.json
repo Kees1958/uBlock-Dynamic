@@ -1,6 +1,47 @@
 [
   {
-    "id": 46,
+    "id": 32,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "berlingske.dk",
+        "bt.dk"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 33,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "feltet.dk"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 42,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -20,7 +61,7 @@
     }
   },
   {
-    "id": 84,
+    "id": 74,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -38,7 +79,7 @@
     }
   },
   {
-    "id": 96,
+    "id": 86,
     "priority": 10001,
     "action": {
       "type": "redirect",

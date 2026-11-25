@@ -24,7 +24,7 @@
     },
     "condition": {
       "initiatorDomains": [
-        "rtl.hr"
+        "skai.gr"
       ],
       "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
@@ -40,26 +40,12 @@
       "initiatorDomains": [
         "skai.gr"
       ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 4,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "skai.gr"
-      ],
       "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_dai.js",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
-    "id": 5,
+    "id": 4,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -74,7 +60,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 5,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -88,7 +74,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 6,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -103,35 +89,7 @@
     }
   },
   {
-    "id": 8,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "enikos.gr"
-      ],
-      "urlFilter": "||googletagservices.com/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 9,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "enikos.gr"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 10,
+    "id": 7,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -147,7 +105,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 8,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -163,7 +121,7 @@
     }
   },
   {
-    "id": 12,
+    "id": 9,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -177,7 +135,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 10,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -191,7 +149,7 @@
     }
   },
   {
-    "id": 14,
+    "id": 11,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -216,7 +174,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 12,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -241,7 +199,7 @@
     }
   },
   {
-    "id": 16,
+    "id": 13,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -266,7 +224,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 14,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -291,7 +249,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 15,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -316,7 +274,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 16,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -341,7 +299,7 @@
     }
   },
   {
-    "id": 20,
+    "id": 17,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -366,7 +324,7 @@
     }
   },
   {
-    "id": 21,
+    "id": 18,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -391,7 +349,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 19,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -416,7 +374,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 20,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -441,7 +399,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 21,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -457,7 +415,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 22,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -474,7 +432,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 24,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -492,7 +450,7 @@
     }
   },
   {
-    "id": 27,
+    "id": 25,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -506,7 +464,7 @@
     }
   },
   {
-    "id": 28,
+    "id": 26,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -525,7 +483,7 @@
     }
   },
   {
-    "id": 29,
+    "id": 27,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -543,7 +501,7 @@
     }
   },
   {
-    "id": 30,
+    "id": 28,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -561,7 +519,7 @@
     }
   },
   {
-    "id": 31,
+    "id": 29,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -582,7 +540,7 @@
     }
   },
   {
-    "id": 32,
+    "id": 30,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -729,7 +687,7 @@
     }
   },
   {
-    "id": 33,
+    "id": 31,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -743,7 +701,7 @@
     }
   },
   {
-    "id": 34,
+    "id": 32,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -762,7 +720,7 @@
     }
   },
   {
-    "id": 35,
+    "id": 33,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -777,7 +735,7 @@
     }
   },
   {
-    "id": 36,
+    "id": 34,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -791,7 +749,7 @@
     }
   },
   {
-    "id": 37,
+    "id": 35,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -804,7 +762,7 @@
     }
   },
   {
-    "id": 38,
+    "id": 36,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -819,7 +777,7 @@
     }
   },
   {
-    "id": 39,
+    "id": 37,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -830,7 +788,7 @@
     }
   },
   {
-    "id": 40,
+    "id": 38,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -841,21 +799,7 @@
     }
   },
   {
-    "id": 41,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "animeshqip.org"
-      ],
-      "urlFilter": "^abcheck=",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 42,
+    "id": 39,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -866,7 +810,7 @@
     }
   },
   {
-    "id": 43,
+    "id": 40,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -880,7 +824,7 @@
     }
   },
   {
-    "id": 44,
+    "id": 41,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -891,7 +835,7 @@
     }
   },
   {
-    "id": 45,
+    "id": 42,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -902,7 +846,7 @@
     }
   },
   {
-    "id": 46,
+    "id": 43,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -913,7 +857,7 @@
     }
   },
   {
-    "id": 47,
+    "id": 44,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -928,7 +872,7 @@
     }
   },
   {
-    "id": 48,
+    "id": 45,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -939,7 +883,7 @@
     }
   },
   {
-    "id": 49,
+    "id": 46,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -954,7 +898,7 @@
     }
   },
   {
-    "id": 50,
+    "id": 47,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -965,7 +909,7 @@
     }
   },
   {
-    "id": 51,
+    "id": 48,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -976,7 +920,7 @@
     }
   },
   {
-    "id": 52,
+    "id": 49,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -987,7 +931,7 @@
     }
   },
   {
-    "id": 53,
+    "id": 50,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -998,21 +942,7 @@
     }
   },
   {
-    "id": 54,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "balkantelevizija.net"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 55,
+    "id": 51,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1023,7 +953,7 @@
     }
   },
   {
-    "id": 56,
+    "id": 52,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1037,7 +967,7 @@
     }
   },
   {
-    "id": 57,
+    "id": 53,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1048,7 +978,7 @@
     }
   },
   {
-    "id": 58,
+    "id": 54,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1059,7 +989,7 @@
     }
   },
   {
-    "id": 59,
+    "id": 55,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1070,7 +1000,7 @@
     }
   },
   {
-    "id": 60,
+    "id": 56,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1081,7 +1011,7 @@
     }
   },
   {
-    "id": 61,
+    "id": 57,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1092,7 +1022,7 @@
     }
   },
   {
-    "id": 62,
+    "id": 58,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1103,7 +1033,7 @@
     }
   },
   {
-    "id": 63,
+    "id": 59,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1114,7 +1044,7 @@
     }
   },
   {
-    "id": 64,
+    "id": 60,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1125,7 +1055,7 @@
     }
   },
   {
-    "id": 65,
+    "id": 61,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1136,7 +1066,7 @@
     }
   },
   {
-    "id": 66,
+    "id": 62,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1150,7 +1080,7 @@
     }
   },
   {
-    "id": 67,
+    "id": 63,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1161,7 +1091,7 @@
     }
   },
   {
-    "id": 68,
+    "id": 64,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1172,7 +1102,7 @@
     }
   },
   {
-    "id": 69,
+    "id": 65,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1183,7 +1113,7 @@
     }
   },
   {
-    "id": 70,
+    "id": 66,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1197,7 +1127,7 @@
     }
   },
   {
-    "id": 71,
+    "id": 67,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1208,7 +1138,7 @@
     }
   },
   {
-    "id": 72,
+    "id": 68,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1219,7 +1149,7 @@
     }
   },
   {
-    "id": 73,
+    "id": 69,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1230,7 +1160,7 @@
     }
   },
   {
-    "id": 74,
+    "id": 70,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1241,7 +1171,7 @@
     }
   },
   {
-    "id": 75,
+    "id": 71,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1255,7 +1185,7 @@
     }
   },
   {
-    "id": 76,
+    "id": 72,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1266,7 +1196,7 @@
     }
   },
   {
-    "id": 77,
+    "id": 73,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1277,13 +1207,52 @@
     }
   },
   {
-    "id": 78,
+    "id": 74,
     "priority": 10000,
     "action": {
       "type": "block"
     },
     "condition": {
       "urlFilter": "||lawspot.gr/sites/default/files/partner_images/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 75,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||lexigram.gr/lex/abusers.php",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 77,
+    "priority": 10002,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sportday.gr"
+      ],
+      "urlFilter": "||player.ex.co/config",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 78,
+    "priority": 10002,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "sportday.gr"
+      ],
+      "urlFilter": "||player.ex.co/player/",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1295,20 +1264,23 @@
     },
     "condition": {
       "initiatorDomains": [
-        "alphatv.gr"
+        "sportday.gr"
       ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "urlFilter": "||cdn.ex.co/player/*.js",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
     "id": 80,
-    "priority": 10000,
+    "priority": 10002,
     "action": {
-      "type": "block"
+      "type": "allow"
     },
     "condition": {
-      "urlFilter": "||lexigram.gr/lex/abusers.php",
+      "initiatorDomains": [
+        "sportday.gr"
+      ],
+      "urlFilter": "||cdn.ex.co/transformations/production/",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1320,9 +1292,9 @@
     },
     "condition": {
       "initiatorDomains": [
-        "sigmatv.com"
+        "sport24.gr"
       ],
-      "urlFilter": "||s0.2mdn.net/instream/html5/ima3_debug.js",
+      "urlFilter": "||player.ex.co/config",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1334,9 +1306,9 @@
     },
     "condition": {
       "initiatorDomains": [
-        "sportday.gr"
+        "sport24.gr"
       ],
-      "urlFilter": "||player.ex.co/config",
+      "urlFilter": "||player.ex.co/player/",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1348,9 +1320,9 @@
     },
     "condition": {
       "initiatorDomains": [
-        "sportday.gr"
+        "sport24.gr"
       ],
-      "urlFilter": "||player.ex.co/player/",
+      "urlFilter": "||cdn.ex.co/player/*.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1362,84 +1334,14 @@
     },
     "condition": {
       "initiatorDomains": [
-        "sportday.gr"
+        "sport24.gr"
       ],
-      "urlFilter": "||cdn.ex.co/player/*.js",
+      "urlFilter": "||cdn.ex.co/transformations/production/",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
     "id": 85,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sportday.gr"
-      ],
-      "urlFilter": "||cdn.ex.co/transformations/production/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 86,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sport24.gr"
-      ],
-      "urlFilter": "||player.ex.co/config",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 87,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sport24.gr"
-      ],
-      "urlFilter": "||player.ex.co/player/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 88,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sport24.gr"
-      ],
-      "urlFilter": "||cdn.ex.co/player/*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 89,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sport24.gr"
-      ],
-      "urlFilter": "||cdn.ex.co/transformations/production/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 90,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1450,7 +1352,7 @@
     }
   },
   {
-    "id": 91,
+    "id": 86,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1461,21 +1363,7 @@
     }
   },
   {
-    "id": 92,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "gazzetta.gr"
-      ],
-      "urlFilter": "||static.adman.gr/adman.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 93,
+    "id": 87,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1489,7 +1377,7 @@
     }
   },
   {
-    "id": 94,
+    "id": 88,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1500,7 +1388,7 @@
     }
   },
   {
-    "id": 95,
+    "id": 89,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1514,7 +1402,7 @@
     }
   },
   {
-    "id": 96,
+    "id": 90,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1525,7 +1413,7 @@
     }
   },
   {
-    "id": 97,
+    "id": 91,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1539,7 +1427,7 @@
     }
   },
   {
-    "id": 98,
+    "id": 92,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1550,7 +1438,7 @@
     }
   },
   {
-    "id": 99,
+    "id": 93,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1561,7 +1449,7 @@
     }
   },
   {
-    "id": 100,
+    "id": 94,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1572,7 +1460,7 @@
     }
   },
   {
-    "id": 101,
+    "id": 95,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1583,7 +1471,7 @@
     }
   },
   {
-    "id": 102,
+    "id": 96,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1594,7 +1482,7 @@
     }
   },
   {
-    "id": 103,
+    "id": 97,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1605,7 +1493,7 @@
     }
   },
   {
-    "id": 104,
+    "id": 98,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1616,7 +1504,7 @@
     }
   },
   {
-    "id": 105,
+    "id": 99,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1630,7 +1518,7 @@
     }
   },
   {
-    "id": 106,
+    "id": 100,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1644,7 +1532,7 @@
     }
   },
   {
-    "id": 107,
+    "id": 101,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1655,7 +1543,7 @@
     }
   },
   {
-    "id": 108,
+    "id": 102,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1666,7 +1554,7 @@
     }
   },
   {
-    "id": 109,
+    "id": 103,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1680,7 +1568,7 @@
     }
   },
   {
-    "id": 110,
+    "id": 104,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1691,21 +1579,7 @@
     }
   },
   {
-    "id": 111,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "stirileprotv.ro"
-      ],
-      "urlFilter": "||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 112,
+    "id": 105,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1716,7 +1590,7 @@
     }
   },
   {
-    "id": 113,
+    "id": 106,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1727,7 +1601,7 @@
     }
   },
   {
-    "id": 114,
+    "id": 107,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1738,7 +1612,7 @@
     }
   },
   {
-    "id": 115,
+    "id": 108,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1752,7 +1626,7 @@
     }
   },
   {
-    "id": 116,
+    "id": 109,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -1766,7 +1640,7 @@
     }
   },
   {
-    "id": 117,
+    "id": 110,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1780,7 +1654,7 @@
     }
   },
   {
-    "id": 118,
+    "id": 111,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1794,21 +1668,7 @@
     }
   },
   {
-    "id": 120,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "protvplus.ro"
-      ],
-      "urlFilter": "||trackad.cz/adtrack.php",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 121,
+    "id": 113,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1822,7 +1682,7 @@
     }
   },
   {
-    "id": 122,
+    "id": 114,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1836,7 +1696,7 @@
     }
   },
   {
-    "id": 123,
+    "id": 115,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1850,7 +1710,7 @@
     }
   },
   {
-    "id": 124,
+    "id": 116,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1862,7 +1722,7 @@
     }
   },
   {
-    "id": 125,
+    "id": 117,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1876,7 +1736,7 @@
     }
   },
   {
-    "id": 126,
+    "id": 118,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1890,7 +1750,7 @@
     }
   },
   {
-    "id": 127,
+    "id": 119,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1904,7 +1764,7 @@
     }
   },
   {
-    "id": 128,
+    "id": 120,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1918,7 +1778,7 @@
     }
   },
   {
-    "id": 129,
+    "id": 121,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1929,7 +1789,7 @@
     }
   },
   {
-    "id": 130,
+    "id": 122,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1940,7 +1800,7 @@
     }
   },
   {
-    "id": 131,
+    "id": 123,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1951,7 +1811,7 @@
     }
   },
   {
-    "id": 132,
+    "id": 124,
     "priority": 10003,
     "action": {
       "type": "block"
@@ -1965,7 +1825,7 @@
     }
   },
   {
-    "id": 133,
+    "id": 125,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -1979,7 +1839,7 @@
     }
   },
   {
-    "id": 134,
+    "id": 126,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -1993,7 +1853,7 @@
     }
   },
   {
-    "id": 135,
+    "id": 127,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2004,35 +1864,7 @@
     }
   },
   {
-    "id": 136,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "olx.ba"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 137,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "olx.ba"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 138,
+    "id": 128,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2043,37 +1875,7 @@
     }
   },
   {
-    "id": 139,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "telegraf.rs",
-        "telegraf.tv"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 140,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "telegraf.rs",
-        "telegraf.tv"
-      ],
-      "urlFilter": "/static/js/video/videojs-contrib-ads.min.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 141,
+    "id": 129,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2087,7 +1889,7 @@
     }
   },
   {
-    "id": 142,
+    "id": 130,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2098,7 +1900,7 @@
     }
   },
   {
-    "id": 143,
+    "id": 131,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2109,7 +1911,7 @@
     }
   },
   {
-    "id": 144,
+    "id": 132,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2123,7 +1925,7 @@
     }
   },
   {
-    "id": 145,
+    "id": 133,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2134,7 +1936,7 @@
     }
   },
   {
-    "id": 146,
+    "id": 134,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2145,7 +1947,7 @@
     }
   },
   {
-    "id": 147,
+    "id": 135,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2156,7 +1958,7 @@
     }
   },
   {
-    "id": 148,
+    "id": 136,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2170,7 +1972,7 @@
     }
   },
   {
-    "id": 149,
+    "id": 137,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2181,7 +1983,7 @@
     }
   },
   {
-    "id": 150,
+    "id": 138,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2195,7 +1997,7 @@
     }
   },
   {
-    "id": 151,
+    "id": 139,
     "priority": 10002,
     "action": {
       "type": "allow"
@@ -2209,7 +2011,7 @@
     }
   },
   {
-    "id": 152,
+    "id": 140,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -2234,7 +2036,7 @@
     }
   },
   {
-    "id": 153,
+    "id": 141,
     "priority": 10000,
     "action": {
       "type": "block"

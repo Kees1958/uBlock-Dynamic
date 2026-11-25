@@ -17,6 +17,43 @@ exception: every tools version still gets at least a one-line
 Entries below 9.7.1 were all written under the older every-version
 convention and are kept as they are.
 
+## 11.1.3 — Platform directives, IMA SDK surrogate, clicker-rule restore (owner's reports 2026-11-25)
+**Source version.** Working from 11.1.3 as committed (GitHub Kees1958/uBlock-Dynamic 7d68e84). **tools 3.0.10:**
+new `tools/build/list-directives.mjs`, new step 96 `tools/test-list-directives.mjs`, new report
+`dropped-platform-rules.txt`; test-network-translation and test-picker-hardening extended.
+
+**1. Platform directives (bug class).** *What:* every downloaded list now has its own platform directives applied
+before parsing — AdGuard's `!+ PLATFORM(…)` / `!+ NOT_PLATFORM(…)` hints and `!#if … !#endif` blocks. *Why:* the
+project reads AdGuard's RAW section files, where AdGuard's compiler has not yet removed the rules meant for other
+blockers, so they all shipped. The visible case: AdGuard Base's iOS/Safari/Android-content-blocker-only exception
+`@@||gn-web-assets.api.bbc.com/ngas/*/dotcom-ads.js$domain=bbc.com` beat AdGuard's own block of that script, and
+bbc.com's video ads played. *How:* `applyListDirectives()` runs once, inside `fetchListText()` (the one download helper
+every list, section and source passes through), so no consumer can miss it. AdGuard Team sources are answered as
+AdGuard's own Chrome MV3 build answers them (FiltersCompiler `EXTENSION_CHROMIUM_MV3`: platform `ext_chromium_mv3`,
+defines `adguard` + `adguard_ext_chromium_mv3`; the hint is the line directly above the rule, as in the compiler's
+`isPlatformSupported()`); every other source as uBO Lite on Chromium (the environment anti-admiral.mjs used, now one
+definition in `LIST_DIRECTIVES_CONFIG`). `!#if` blocks use the project's own copy of uBO's preparser. *Effect
+(build of 2026-11-25 against the same-day baseline):* 5,740 source lines left out (3,357 in `!#if` blocks, 2,383 by
+hints); in the shipped rulesets about 1,700 allow and 100 block rules fewer, 21 scriptlet rules fewer, the
+tracking-servers allow list 165 smaller — all of them marked by AdGuard for its iOS/Safari/Android content blockers
+or its desktop apps. Every left-out line is listed in `dropped-platform-rules.txt` (build-only, never zipped).
+*Known limitations:* follows AdGuard's markings as written; a rule AdGuard mismarks is mismarked here too.
+
+**2. Google IMA SDK surrogate.** `web_accessible_resources/google-ima.js` — uBlock Origin's surrogate (commit
+b8a305e, based on Mozilla's MPL-2.0 webcompat shim), code unchanged, header added. Redirect names `google-ima.js`,
+`ubo-google-ima.js` and AdGuard's `google-ima3` (`js/core/redirect-resources.js`); listed in the manifest's web
+accessible resources and in THIRD_PARTY_LICENSES.md. Until now every `$redirect=google-ima3` / `google-ima.js` line
+was dropped (no bundled target) — about 170 rules, AdGuard Base's bbc.com video-ad rule among them.
+
+**3. Cookie/consent-clicker rules on Restore / Import.** `importCookieClickerRules()` appended every rule in the file,
+so each Restore of a backup doubled every rule. Now a rule with the same identity (site, frame, selector, shadow host,
+text — `findSameRule()`, shared with `addCookieClickerRule()`) is overwritten: it takes the file's on/off state and
+keeps its own id and creation date, as `importMatrixOverrides()` does for a pair already present. Returns
+`{ added, changed }`; the caller re-registers the click script when either is non-zero (the registered sites depend
+on the on/off state). Consumer inventory: the one production caller (settings-routes.js `handleImportCustomRules()`,
+also used by the full-settings restore) and the test; the other three custom-rule sections (matrix overrides,
+cosmetic, scriptlet) already deduplicate on import.
+
 ## 11.1.0 — DNR tracking filter: Break risk column (owner's decision 2026-11-23)
 **Source version.** Working from 11.0.4 rebuilt (extension 11.0.4 / tools 3.0.8 / docs 11.0.4), GitHub
 Kees1958/uBlock-Dynamic 101237a. **tools 3.0.9** (bumped by the packager: new steps 94, build-needed-trackers.mjs,

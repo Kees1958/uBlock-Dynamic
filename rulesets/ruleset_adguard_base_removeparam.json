@@ -1,45 +1,6 @@
 [
   {
-    "id": 6188,
-    "priority": 500,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "transform": {
-          "queryTransform": {
-            "removeParams": [
-              "deviceAdInsertionTypeOverride"
-            ]
-          }
-        }
-      }
-    },
-    "condition": {
-      "urlFilter": "/getplaybackresources?",
-      "initiatorDomains": [
-        "amazon.co.uk",
-        "amazon.com",
-        "primevideo.com"
-      ],
-      "resourceTypes": [
-        "font",
-        "image",
-        "main_frame",
-        "media",
-        "object",
-        "other",
-        "ping",
-        "script",
-        "stylesheet",
-        "sub_frame",
-        "websocket",
-        "xmlhttprequest"
-      ],
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 6189,
+    "id": 5972,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -67,7 +28,7 @@
     }
   },
   {
-    "id": 6190,
+    "id": 5973,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -93,7 +54,7 @@
     }
   },
   {
-    "id": 6191,
+    "id": 5974,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -121,7 +82,7 @@
     }
   },
   {
-    "id": 6194,
+    "id": 5977,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -147,7 +108,7 @@
     }
   },
   {
-    "id": 6195,
+    "id": 5978,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -174,7 +135,7 @@
     }
   },
   {
-    "id": 6197,
+    "id": 5980,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -197,7 +158,7 @@
     }
   },
   {
-    "id": 6198,
+    "id": 5981,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -220,7 +181,7 @@
     }
   },
   {
-    "id": 6201,
+    "id": 5984,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -251,7 +212,7 @@
     }
   },
   {
-    "id": 6202,
+    "id": 5985,
     "priority": 500,
     "action": {
       "type": "redirect",
@@ -282,7 +243,7 @@
     }
   },
   {
-    "id": 6203,
+    "id": 5986,
     "priority": 500,
     "action": {
       "type": "redirect",

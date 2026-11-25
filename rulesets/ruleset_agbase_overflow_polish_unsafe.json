@@ -1,6 +1,6 @@
 [
   {
-    "id": 36,
+    "id": 35,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -17,7 +17,160 @@
     }
   },
   {
-    "id": 157,
+    "id": 86,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "wpolsce24.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 94,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "halorzeszow.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 96,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radiopogoda.pl",
+        "zloteprzeboje.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 99,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "gazetaolsztynska.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 107,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swiatgwiazd.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 116,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "aleklasa.pl",
+        "biznesinfo.pl",
+        "domekiogrodek.pl",
+        "goniec.pl",
+        "goracetematy.pl",
+        "lelum.pl",
+        "pacjenci.pl",
+        "portalparentingowy.pl",
+        "rolnikinfo.pl",
+        "rynek-kolejowy.pl",
+        "smakosze.pl",
+        "swiatzwierzat.pl",
+        "turysci.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 120,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "slowopodlasia.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 141,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -37,7 +190,47 @@
     }
   },
   {
-    "id": 246,
+    "id": 146,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tarnowska.tv"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 147,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "kanalsportowy.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 225,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -63,7 +256,7 @@
     }
   },
   {
-    "id": 247,
+    "id": 226,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -83,7 +276,27 @@
     }
   },
   {
-    "id": 289,
+    "id": 231,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "meczyki.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 265,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -103,7 +316,7 @@
     }
   },
   {
-    "id": 290,
+    "id": 266,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -123,7 +336,7 @@
     }
   },
   {
-    "id": 294,
+    "id": 268,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -143,7 +356,7 @@
     }
   },
   {
-    "id": 303,
+    "id": 276,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -157,7 +370,87 @@
     }
   },
   {
-    "id": 356,
+    "id": 277,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "trojmiasto.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 289,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "eska.pl",
+        "eskarock.pl",
+        "mediateka.pl",
+        "mjakmama24.pl",
+        "muratordom.pl",
+        "poradnikzdrowie.pl",
+        "radioplus.pl",
+        "radiosupernova.pl",
+        "se.pl",
+        "urzadzamy.pl",
+        "vibefm.pl",
+        "voxfm.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 324,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "benchmark.pl",
+        "dobreprogramy.pl",
+        "genialne.pl",
+        "jastrzabpost.pl",
+        "money.pl",
+        "o2.pl",
+        "polygamia.pl",
+        "pysznosci.pl",
+        "videostar.pl",
+        "wp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 325,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -177,7 +470,7 @@
     }
   },
   {
-    "id": 357,
+    "id": 326,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -197,7 +490,7 @@
     }
   },
   {
-    "id": 358,
+    "id": 327,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -228,7 +521,7 @@
     }
   },
   {
-    "id": 359,
+    "id": 328,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -259,7 +552,7 @@
     }
   },
   {
-    "id": 360,
+    "id": 329,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -290,7 +583,7 @@
     }
   },
   {
-    "id": 361,
+    "id": 330,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -323,7 +616,7 @@
     }
   },
   {
-    "id": 367,
+    "id": 336,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -343,7 +636,7 @@
     }
   },
   {
-    "id": 368,
+    "id": 337,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -363,7 +656,7 @@
     }
   },
   {
-    "id": 369,
+    "id": 338,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -383,7 +676,7 @@
     }
   },
   {
-    "id": 424,
+    "id": 390,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -406,7 +699,7 @@
     }
   },
   {
-    "id": 425,
+    "id": 391,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -430,7 +723,7 @@
     }
   },
   {
-    "id": 426,
+    "id": 392,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -454,7 +747,28 @@
     }
   },
   {
-    "id": 444,
+    "id": 403,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tvp.info",
+        "tvp.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 407,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -478,7 +792,7 @@
     }
   },
   {
-    "id": 445,
+    "id": 408,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -512,7 +826,7 @@
     }
   },
   {
-    "id": 446,
+    "id": 409,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -529,7 +843,47 @@
     }
   },
   {
-    "id": 465,
+    "id": 411,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "tokfm.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 416,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "filmweb.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 428,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -549,7 +903,7 @@
     }
   },
   {
-    "id": 466,
+    "id": 429,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -569,7 +923,7 @@
     }
   },
   {
-    "id": 467,
+    "id": 430,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -589,7 +943,27 @@
     }
   },
   {
-    "id": 476,
+    "id": 435,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "radiozet.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 439,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -606,24 +980,7 @@
     }
   },
   {
-    "id": 484,
-    "priority": 10003,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
-      }
-    },
-    "condition": {
-      "resourceTypes": [
-        "media"
-      ],
-      "urlFilter": "||redcdn.pl/*adserver/*.mp4",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 489,
+    "id": 451,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -639,6 +996,55 @@
         "media"
       ],
       "urlFilter": "||redcdn.pl/*/tvn-adserver/*.mp4",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 457,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "player.pl",
+        "tvn24.pl",
+        "vod.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 458,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "elevensports.pl",
+        "geekweek.pl",
+        "polsatboxgo.pl",
+        "polsatnews.pl",
+        "polsatsport.pl",
+        "redcdn.pl",
+        "redefine.pl",
+        "twojapogoda.pl"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   }

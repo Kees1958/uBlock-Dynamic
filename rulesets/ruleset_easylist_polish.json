@@ -12172,57 +12172,6 @@
     }
   },
   {
-    "id": 1097643,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "alilove.pl",
-        "epainfo.pl",
-        "legaartis.pl",
-        "rabaty-booking.pl",
-        "step-tech.pl",
-        "temi.pl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1796829,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "step-tech.pl"
-      ],
-      "urlFilter": "||static.doubleclick.net/instream/ad_status.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 49247,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "alilove.pl",
-        "epainfo.pl",
-        "legaartis.pl",
-        "step-tech.pl",
-        "temi.pl"
-      ],
-      "urlFilter": "||googleads.g.doubleclick.net/pagead/id",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1724315,
     "priority": 10002,
     "action": {
@@ -12276,62 +12225,6 @@
         "variatkowo.pl"
       ],
       "urlFilter": "/wp-content/uploads/*/*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1761829,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mamadu.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1266046,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "playeranimewatch.pl"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 677063,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myradioonline.pl"
-      ],
-      "urlFilter": "||connect.facebook.net/en_us/fbevents.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 853040,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "myradioonline.pl"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },

@@ -183,6 +183,46 @@
     }
   },
   {
+    "id": 538647,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "worpress.seeks.cloud"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1950015,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "1player.store"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 940271,
     "priority": 10001,
     "action": {
@@ -194,6 +234,46 @@
     "condition": {
       "initiatorDomains": [
         "vidplayer.live"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1577226,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "playerp2p.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1784726,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "swiss-sport.tv"
+      ],
+      "resourceTypes": [
+        "script"
       ],
       "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
@@ -221,6 +301,26 @@
         "script"
       ],
       "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 448320,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "titans.com.au"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -292,6 +392,23 @@
     }
   },
   {
+    "id": 1990274,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "onefootball.com"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 453769,
     "priority": 10001,
     "action": {
@@ -308,6 +425,26 @@
         "script"
       ],
       "urlFilter": "||pagead2.googlesyndication.com/pagead/show_ads.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1433868,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "shotstv.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -403,6 +540,26 @@
         "allfaucet.xyz"
       ],
       "urlFilter": "||googletagmanager.com/gtm.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1029843,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "thepublive.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1009,6 +1166,103 @@
     }
   },
   {
+    "id": 424752,
+    "priority": 10003,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "35volitantplimsoles5.com",
+        "adrianmissionminute.com",
+        "alejandrocenturyoil.com",
+        "alleneconomicmatter.com",
+        "antecoxalbobbing1010.com",
+        "benjaminreducecommunity.com",
+        "bethshouldercan.com",
+        "brittanyaheadnew.com",
+        "brittneystandardwestern.com",
+        "caseyseemavoid.com",
+        "charlessheimprove.com",
+        "charlestoughrace.com",
+        "christopheruntilpoint.com",
+        "crystaltreatmenteast.com",
+        "cyamidpulverulence530.com",
+        "dianaavoidthey.com",
+        "diananatureforeign.com",
+        "donaldlineelse.com",
+        "edwardarriveoften.com",
+        "evelynthankregion.com",
+        "guidon40hyporadius9.com",
+        "heatherdiscussionwhen.com",
+        "heatherwholeinvolve.com",
+        "housecardsummerbutton.com",
+        "ianrequireadult.com",
+        "jamessoundcost.com",
+        "jamiesamewalk.com",
+        "jayservicestuff.com",
+        "jefferycontrolmodel.com",
+        "jennifercertaindevelopment.com",
+        "jessicaclearout.com",
+        "jessicaglassauthor.com",
+        "jilliandescribecompany.com",
+        "johnalwayssame.com",
+        "johntryopen.com",
+        "jonathansociallike.com",
+        "josephseveralconcern.com",
+        "kathleenmemberhistory.com",
+        "kellywhatcould.com",
+        "kennethofficialitem.com",
+        "kimberlyonlocal.com",
+        "kristiesoundsimply.com",
+        "lancewhosedifficult.com",
+        "lauradaydo.com",
+        "lisatrialidea.com",
+        "lorimuchbenefit.com",
+        "lukecomparetwo.com",
+        "lukesitturn.com",
+        "mariatheserepublican.com",
+        "marissasharecareer.com",
+        "maryspecialwatch.com",
+        "maxfinishseveral.com",
+        "mikaylaarealike.com",
+        "morganoperationface.com",
+        "nathanfromsubject.com",
+        "nicholasbreakplan.com",
+        "paulkitchendark.com",
+        "phenomenalityuniform.com",
+        "rebeccasciencestreet.com",
+        "richardquestionbuilding.com",
+        "richardsignfish.com",
+        "richardstorehalf.com",
+        "robertordercharacter.com",
+        "robertplacespace.com",
+        "sandratableother.com",
+        "sarahnewspaperbeat.com",
+        "susanhavekeep.com",
+        "thomasalthoughhear.com",
+        "timmaybealready.com",
+        "toddpartneranimal.com",
+        "un-block-voe.net",
+        "urochsunloath.com",
+        "voeunbl0ck.com",
+        "voeunblk.com",
+        "voeunblock.com",
+        "voeunblock2.com",
+        "walterprettytheir.com",
+        "zacharycollectionmight.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 778079,
     "priority": 10001,
     "action": {
@@ -1065,6 +1319,26 @@
         "xmlhttprequest"
       ],
       "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1066784,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "10play.com.au"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1392,66 +1666,6 @@
     }
   },
   {
-    "id": 711598,
-    "priority": 10003,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/web_accessible_resources/noop.js"
-      }
-    },
-    "condition": {
-      "initiatorDomains": [
-        "radiotunes.com"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1778694,
-    "priority": 10003,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/web_accessible_resources/noop.js"
-      }
-    },
-    "condition": {
-      "initiatorDomains": [
-        "jazzradio.com"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1306664,
-    "priority": 10003,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/web_accessible_resources/noop.js"
-      }
-    },
-    "condition": {
-      "initiatorDomains": [
-        "943thex.com"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||adservice.google.com/adsid/integrator.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1700602,
     "priority": 10003,
     "action": {
@@ -1577,27 +1791,6 @@
     }
   },
   {
-    "id": 1747607,
-    "priority": 10003,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/web_accessible_resources/noop.js"
-      }
-    },
-    "condition": {
-      "initiatorDomains": [
-        "a2zupload.com",
-        "unlockapk.com"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1153248,
     "priority": 10003,
     "action": {
@@ -1677,6 +1870,26 @@
         "script"
       ],
       "urlFilter": "||googletagservices.com/tag/js/gpt.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1627231,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "d3f6gjnauy613m.cloudfront.net"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },

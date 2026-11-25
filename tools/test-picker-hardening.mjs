@@ -277,13 +277,24 @@ async function sectionE() {
 
     const rulesMod = await import(moduleUrl('js/core/cookie-clicker-rules.js'));
     const before = await rulesMod.countCookieClickerRules();
-    const n = await rulesMod.importCookieClickerRules([
+    const { added: n } = await rulesMod.importCookieClickerRules([
         { siteHostname: 'imp.example', frameHostname: 'imp.example', selector: '#ok' },
         { siteHostname: '*', frameHostname: 'imp.example', selector: '#x' },
         { siteHostname: 'imp.example', frameHostname: 'bad host', selector: '#x' },
         { siteHostname: 'imp.example', frameHostname: 'imp.example', selector: 'a'.repeat(2_001) },
     ]);
     check('cookie-rule import keeps only the valid rule', n === 1 && await rulesMod.countCookieClickerRules() === before + 1, String(n));
+    // (11.1.3) Restoring the same backup again overwrites instead of duplicating (owner's report): nothing is added,
+    // the on/off state from the file wins, and a manual pick of the same button returns the stored rule.
+    const again = await rulesMod.importCookieClickerRules([
+        { siteHostname: 'imp.example', frameHostname: 'imp.example', selector: '#ok', enabled: false },
+    ]);
+    const impRules = (await rulesMod.getAllCookieClickerRules()).filter(r => r.siteHostname === 'imp.example');
+    check('a second restore of the same rule adds nothing', again.added === 0 && impRules.length === 1, JSON.stringify(again));
+    check('the restored on/off state overwrites the stored one', again.changed === 1 && impRules[0]?.enabled === false, JSON.stringify(impRules));
+    const picked = await rulesMod.addCookieClickerRule({ siteHostname: 'imp.example', frameHostname: 'imp.example', selector: '#ok' });
+    check('picking the same button again reuses the stored rule (switched on)', picked?.uid === impRules[0]?.uid && picked?.enabled === true
+        && (await rulesMod.countCookieClickerRules()) === before + 1, JSON.stringify(picked));
 
     const manifest = JSON.parse(read('manifest.json'));
     check('no externally_connectable key (web pages cannot message uBD; an empty key only adds a Chrome warning)', Object.hasOwn(manifest, 'externally_connectable') === false);

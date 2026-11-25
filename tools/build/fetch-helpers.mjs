@@ -6,13 +6,14 @@
 // build-state.mjs, and two data-file URLs. A replayed build is byte-identical
 // (tools/verify-build-unchanged.mjs).
 //
-// Public interface: fetchList, applyScriptletTrustGate
+// Public interface: fetchList, fetchListText, fetchJsonData, applyScriptletTrustGate
 // Dependencies: see the imports below (strictly acyclic; no module imports one that imports it).
 import { withRetry, fetchWithTimeout } from '../lib/fetch-with-retry.mjs';
 import { isTrustedScriptletSource, requiresTrust, safeReplacementFor, SCRIPTLET_POLICY } from '../../js/data/scriptlet-policy.js';
 import { droppedPolicyScriptlets } from './build-state.mjs';
 import { formatAdguardScriptletLine, parseUboScriptletLine } from './ubo-scriptlet-syntax.mjs';
 import { parseScriptletRules } from './scriptlet-rules.mjs';
+import { applyListDirectives } from './list-directives.mjs';
 
 // ── Scriptlet trust gate (10.4.6, rule A of js/data/scriptlet-policy.js) ──
 // The single download helper is the one place every upstream text passes through with its own source URL, so the
@@ -82,8 +83,12 @@ export async function fetchList(url) {
 // (audit 10.6.4) The same download with the same guards, WITHOUT the trust gate — for a caller that takes only a few
 // selected lines from a large list (anti-admiral.mjs) and gates exactly those, so the drop report does not list
 // hundreds of trusted rules from that list that were never going to be used anyway.
+// (11.1.3) Every download leaves here with the list's own platform directives applied ("!+ PLATFORM(…)" hints and
+// "!#if" blocks for other blockers left out — list-directives.mjs), so no caller can parse a rule its source never
+// meant for this platform. Applied after the retry wrapper, so a retried download is reported once.
 export async function fetchListText(url) {
-    return withRetry(`filter list ${url}`, signal => fetchListOnce(url, signal));
+    const text = await withRetry(`filter list ${url}`, signal => fetchListOnce(url, signal));
+    return applyListDirectives(url, text);
 }
 
 // (11.0.0) The same download guards (retry, timeout, not-near-empty) for a JSON data file — Privacy Badger's

@@ -20,7 +20,10 @@
  *   clearCookieClickerRules()           — removes every rule, everywhere
  *   deleteCookieClickerRulesMatching(filter) — Manage Custom Rules'
  *                                       "Delete rules" toolbar button
- *   importCookieClickerRules(rules)     — Manage Custom Rules' Import
+ *   importCookieClickerRules(rules)     — Manage Custom Rules' Import and
+ *                                       Restore; overwrites an identical
+ *                                       stored rule (11.1.3), returns
+ *                                       { added, changed }
  *
  * Deliberately does NOT call registerCookieClickerContentScripts() (or
  * anything else in scripting-manager.js) itself on mutation — that would
@@ -157,6 +160,24 @@ function areRuleFieldsValid({ siteHostname, frameHostname, selector, shadowHostS
     return true;
 }
 
+// (11.1.3) A rule's identity: the fields that decide WHAT it clicks (site, frame, selector, shadow host, text). Two
+// rules with the same identity are the same rule, whatever their id, date or on/off state. Shared by a new pick
+// (addCookieClickerRule) and Import / Restore (importCookieClickerRules), so neither can store the same rule twice —
+// before 11.1.3 every Restore of a backup appended a second copy of every rule (owner's report).
+function normalizedShadowHost(shadowHostSelector) {
+    return typeof shadowHostSelector === 'string' && shadowHostSelector !== '' ? shadowHostSelector : null;
+}
+function normalizedTextFilter(textFilter) {
+    return typeof textFilter === 'string' ? textFilter : '';
+}
+function findSameRule(siteRules, { frameHostname, selector, shadowHostSelector, textFilter }) {
+    if ( Array.isArray(siteRules) === false ) { return undefined; }
+    const shadow = normalizedShadowHost(shadowHostSelector);
+    const text = normalizedTextFilter(textFilter);
+    return siteRules.find(r => r.frameHostname === frameHostname && r.selector === selector
+        && normalizedShadowHost(r.shadowHostSelector) === shadow && normalizedTextFilter(r.textFilter) === text);
+}
+
 /******************************************************************************/
 // uid encoding — a (siteHostname, id) pair as one string, mirroring
 // matrix-block-rules.js's uidFor()/parseUid() exactly (same '::'
@@ -257,17 +278,23 @@ export async function addCookieClickerRule({ siteHostname, frameHostname, select
     if ( !siteHostname || !frameHostname || !selector ) { return null; }
     // C6 (10.7.13): validate at the storage boundary, not only in the route.
     if ( areRuleFieldsValid({ siteHostname, frameHostname, selector, shadowHostSelector, textFilter }) === false ) { return null; }
+    const siteRules = rules.get(siteHostname) ?? [];
+    // (11.1.3) Picking the same button again returns the stored rule (switched on) instead of adding a copy.
+    const same = findSameRule(siteRules, { frameHostname, selector, shadowHostSelector, textFilter });
+    if ( same !== undefined ) {
+        if ( same.enabled !== true ) { same.enabled = true; await persist(); }
+        return { ...same, uid: uidFor(siteHostname, same.id) };
+    }
     if ( totalRuleCount() >= RULES_MAX ) { return null; } // RULES_MAX guard — see its own comment above
     const rule = {
         id: newRuleId(),
         frameHostname,
         selector,
-        shadowHostSelector: typeof shadowHostSelector === 'string' && shadowHostSelector !== '' ? shadowHostSelector : null,
-        textFilter: typeof textFilter === 'string' ? textFilter : '',
+        shadowHostSelector: normalizedShadowHost(shadowHostSelector),
+        textFilter: normalizedTextFilter(textFilter),
         enabled: true,
         createdAt: todayISODate(),
     };
-    const siteRules = rules.get(siteHostname) ?? [];
     siteRules.push(rule);
     rules.set(siteHostname, siteRules);
     await persist();
@@ -338,13 +365,18 @@ export async function deleteCookieClickerRulesMatching(filter) {
 // reads a user-supplied JSON file, not trusted internal data — same
 // posture as importMatrixOverrides()/importCosmeticFilters(). Returns the
 // count of rules actually imported.
+// (11.1.3) A rule already stored here (same identity, findSameRule) is OVERWRITTEN, not added again: it takes the
+// file's on/off state and keeps its own id and creation date — the same posture importMatrixOverrides() takes for a
+// site+domain pair already present. Returns { added, changed }: rules added, and stored rules whose on/off state the
+// file changed. Either one changes which sites the click script is registered on, so the caller re-registers when
+// either is non-zero; only `added` is reported to the user as imported. Any change is persisted.
 export async function importCookieClickerRules(rulesArray) {
     await ensureLoaded();
     let imported = 0;
+    let overwritten = 0;
     if ( Array.isArray(rulesArray) ) {
         let available = Math.max(0, RULES_MAX - totalRuleCount()); // RULES_MAX guard — see its own comment above
         for ( const entry of rulesArray ) {
-            if ( available <= 0 ) { break; }
             if ( !entry || typeof entry !== 'object' ) { continue; }
             const { siteHostname, frameHostname, selector, shadowHostSelector, textFilter, enabled, createdAt } = entry;
             if ( typeof siteHostname !== 'string' || siteHostname === '' ) { continue; }
@@ -352,26 +384,32 @@ export async function importCookieClickerRules(rulesArray) {
             if ( typeof selector !== 'string' || selector === '' ) { continue; }
             // (10.7.14) Same field check as a new pick — see areRuleFieldsValid().
             if ( areRuleFieldsValid({ siteHostname, frameHostname, selector, shadowHostSelector, textFilter }) === false ) { continue; }
+            const siteRules = rules.get(siteHostname) ?? [];
+            const same = findSameRule(siteRules, { frameHostname, selector, shadowHostSelector, textFilter });
+            if ( same !== undefined ) {
+                if ( same.enabled !== (enabled !== false) ) { same.enabled = enabled !== false; overwritten++; }
+                continue;
+            }
+            if ( available <= 0 ) { continue; }   // full: a NEW rule is skipped, an overwrite above still applies
             const rule = {
                 id: newRuleId(),
                 frameHostname,
                 selector,
-                shadowHostSelector: typeof shadowHostSelector === 'string' && shadowHostSelector !== '' ? shadowHostSelector : null,
-                textFilter: typeof textFilter === 'string' ? textFilter : '',
+                shadowHostSelector: normalizedShadowHost(shadowHostSelector),
+                textFilter: normalizedTextFilter(textFilter),
                 enabled: enabled !== false,
                 createdAt: isValidISODate(createdAt) ? createdAt : todayISODate(),
             };
-            const siteRules = rules.get(siteHostname) ?? [];
             siteRules.push(rule);
             rules.set(siteHostname, siteRules);
             imported++;
             available--;
         }
     }
-    if ( imported > 0 ) {
+    if ( imported > 0 || overwritten > 0 ) {
         await persist();
     }
-    return imported;
+    return { added: imported, changed: overwritten };
 }
 
 /******************************************************************************/

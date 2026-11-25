@@ -10168,57 +10168,6 @@
     }
   },
   {
-    "id": 1189517,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "telsu.fi"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||adform.net^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1869129,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "muropaketti.com"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||googletagmanager.com/gtm.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 285319,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "imasdk.googleapis.com"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pubads.g.doubleclick.net/gampad/ads?*sanavelho",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1431911,
     "priority": 10002,
     "action": {
@@ -10579,34 +10528,6 @@
     }
   },
   {
-    "id": 1276525,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "kursors.lv"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 449928,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ralli.ee"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1724229,
     "priority": 10002,
     "action": {
@@ -10617,34 +10538,6 @@
         "tv3.lv"
       ],
       "urlFilter": "/libs/advertisement.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 25063,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "teatmik.ee"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1768432,
-    "priority": 10000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "delfi.lv"
-      ],
-      "urlFilter": "||code.piano.io/api/tinypass.min.js",
       "isUrlFilterCaseSensitive": false
     }
   },

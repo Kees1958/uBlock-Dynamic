@@ -21,9 +21,17 @@ extension). The full technical account is CHANGELOG_HISTORY.md.
 - **Fixed: the once-after-update Seamless surfing question was lost** when the first page after the update was one
   the browser does not let extensions touch (such as the Chrome Web Store), and an error was logged. It now waits
   for the next ordinary page.
+- **Fixed: rules meant for other blockers were used too.** AdGuard marks some rules as only for its iPhone/Safari,
+  Android or desktop apps; uBD now leaves those out, exactly as AdGuard's own Chrome extension does (about 1,700
+  exceptions and 100 blocks fewer). Among them was an exception that let bbc.com's video ads through.
+- **Fixed: video ads on bbc.com (and about 170 other sites' video-ad rules).** uBD now includes uBlock Origin's
+  stand-in for Google's video-ad kit, so a video player that waits for its ads starts the video at once.
+- **Fixed: restoring settings or importing custom rules doubled every cookie/consent-clicker rule.** A rule that is
+  already there is now updated (on/off state) instead of added again; picking the same button twice also no longer
+  adds a copy.
 - **All filter lists refreshed** (full update, 2026-11-25), including the hide rules and scriptlets the 11.1.2 SAFE
-  update had to leave out. Bad filter fixes: the CNN ad-slot hide rule and the Fox News scriptlet are gone, as in the
-  list itself.
+  update had to leave out. Bad filter fixes: the CNN ad-slot hide rule is gone, as in the list itself; the Fox News
+  rule now removes Admiral's newer start-up script.
 
 ## 11.1.2
 - **SAFE filter update (skip-review) against the published 11.1.1:** network rules refreshed from their live sources

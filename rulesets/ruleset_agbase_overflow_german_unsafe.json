@@ -1,43 +1,26 @@
 [
   {
-    "id": 55,
-    "priority": 10000,
+    "id": 27,
+    "priority": 10001,
     "action": {
       "type": "redirect",
       "redirect": {
-        "transform": {
-          "queryTransform": {
-            "removeParams": [
-              "deviceAdInsertionTypeOverride"
-            ]
-          }
-        }
+        "extensionPath": "/web_accessible_resources/google-ima.js"
       }
     },
     "condition": {
-      "urlFilter": "/getplaybackresources?",
       "initiatorDomains": [
-        "amazon.de"
+        "20min.ch"
       ],
       "resourceTypes": [
-        "font",
-        "image",
-        "main_frame",
-        "media",
-        "object",
-        "other",
-        "ping",
-        "script",
-        "stylesheet",
-        "sub_frame",
-        "websocket",
-        "xmlhttprequest"
+        "script"
       ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
-    "id": 56,
+    "id": 49,
     "priority": 10000,
     "action": {
       "type": "redirect",

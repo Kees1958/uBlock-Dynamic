@@ -6,7 +6,7 @@
 // build-state.mjs, and two data-file URLs. A replayed build is byte-identical
 // (tools/verify-build-unchanged.mjs).
 //
-// Public interface: BUILD_PHASES, STEP_OK, agBaseBelgianText, agBaseLanguageBucketText, agSpanishGenericText, buildNotices, buildState, droppedBadfilters, droppedGenericDomainQualifiers, droppedPolicyScriptlets, droppedUnsupportedListLines, droppedUnsupportedScriptletScopes, droppedWildcardDomains, expandedWildcardDomains, resetBuildAccumulators, setAgBaseBelgianText, setAgBaseLanguageBucketText, setAgSpanishGenericText, setTopSitesSet, topSitesSet
+// Public interface: BUILD_PHASES, STEP_OK, agBaseBelgianText, agBaseLanguageBucketText, agSpanishGenericText, buildNotices, buildState, droppedBadfilters, droppedGenericDomainQualifiers, droppedPlatformLines, droppedPolicyScriptlets, droppedUnsupportedListLines, droppedUnsupportedScriptletScopes, droppedWildcardDomains, expandedWildcardDomains, resetBuildAccumulators, setAgBaseBelgianText, setAgBaseLanguageBucketText, setAgSpanishGenericText, setTopSitesSet, topSitesSet
 // Dependencies: see the imports below (strictly acyclic; no module imports one that imports it).
 
 // Shared state populated as a side effect of ruleset_adguard_base's own
@@ -68,6 +68,11 @@ export let droppedUnsupportedListLines = [];
 // REASON_REPLACED. Shape { source, name, args, reason }. Written to dropped-policy-scriptlets.txt. Cleared at the top
 // of build().
 export let droppedPolicyScriptlets = [];
+
+// droppedPlatformLines (11.1.3) — same accumulate-and-report discipline, for rules a list itself marks as meant for
+// another platform ("!+ PLATFORM(…)" hints, "!#if" blocks), left out by applyListDirectives() (list-directives.mjs).
+// One entry per left-out line: { source, line, reason }. Written to dropped-platform-rules.txt.
+export let droppedPlatformLines = [];
 
 // droppedWildcardDomains / expandedWildcardDomains — same accumulate-and-
 // report discipline as droppedBadfilters above, for the $domain=example.*
@@ -151,6 +156,7 @@ export function resetBuildAccumulators() {
     droppedUnsupportedScriptletScopes = [];
     droppedUnsupportedListLines = [];
     droppedPolicyScriptlets = [];
+    droppedPlatformLines = [];
     droppedWildcardDomains = [];
     expandedWildcardDomains = [];
     worryfreeExemptDomains = [];

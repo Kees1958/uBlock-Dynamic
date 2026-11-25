@@ -1793,20 +1793,6 @@
     }
   },
   {
-    "id": 1464755,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "cnnbrasil.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 157133,
     "priority": 10002,
     "action": {
@@ -1817,37 +1803,6 @@
         "turbo.pt"
       ],
       "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1936450,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "uol.com.br"
-      ],
-      "urlFilter": "||tm.jsuol.com.br/modules/external/admanager/carros_ads.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 117588,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "mais.sbt.com.br"
-      ],
-      "resourceTypes": [
-        "script"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3_debug.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1904,34 +1859,6 @@
         "cultura.uol.com.br"
       ],
       "urlFilter": "||googleads.github.io/videojs-ima/node_modules/video.js/dist/video-js.min.css",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1316857,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "terra.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1538672,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "terra.com.br"
-      ],
-      "urlFilter": "||amazon-adsystem.com/aax2/apstag.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2073,48 +2000,6 @@
     }
   },
   {
-    "id": 1295013,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "webmotors.com.br"
-      ],
-      "urlFilter": "||webmotors.com.br/javascripts/prebid.*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1301231,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "jn.pt"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 678198,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "jn.pt"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1671830,
     "priority": 10002,
     "action": {
@@ -2125,34 +2010,6 @@
         "algartelecom.com.br"
       ],
       "urlFilter": "||portal-algartelecom-files.s3.amazonaws.com/banners/imgs/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 228231,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "suamusica.com.br"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 38268,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "suamusica.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2249,20 +2106,6 @@
     }
   },
   {
-    "id": 1376542,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "sushianimes.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 516533,
     "priority": 10002,
     "action": {
@@ -2288,20 +2131,6 @@
     }
   },
   {
-    "id": 994047,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "baixedetudo.net.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1697940,
     "priority": 10000,
     "action": {
@@ -2309,23 +2138,6 @@
     },
     "condition": {
       "urlFilter": "||sushianimes.com.br/app/theme/assets/js/adwatch-network-*.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 314348,
-    "priority": 10003,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "jornaldacidadeonline.com.br"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2340,20 +2152,6 @@
         "jornaldacidadeonline.com.br"
       ],
       "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1683975,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "ggames.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js^",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -2388,109 +2186,6 @@
     }
   },
   {
-    "id": 78116,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "southpark.lat",
-        "southparkstudios.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/pal/sdkloader/pal.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 301055,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "southpark.lat",
-        "southparkstudios.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1193368,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "teleculinaria.pt"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 260934,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "inuyashadowns.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1104908,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "meutimao.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 421657,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "minhaconexao.com.br"
-      ],
-      "resourceTypes": [
-        "xmlhttprequest"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/pagead/ppub_config",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1946922,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "genshinpro.com.br"
-      ],
-      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1045765,
     "priority": 10002,
     "action": {
@@ -2498,34 +2193,6 @@
     },
     "condition": {
       "urlFilter": "||infojobs.com.br/*/ads-prebid.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 342968,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "maringapost.com.br"
-      ],
-      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 636211,
-    "priority": 10002,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "maringapost.com.br"
-      ],
-      "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
       "isUrlFilterCaseSensitive": false
     }
   },

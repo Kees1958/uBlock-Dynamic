@@ -38,5 +38,27 @@
       "urlFilter": "||damoh.vgtv.no/hic_qos",
       "isUrlFilterCaseSensitive": false
     }
+  },
+  {
+    "id": 697153,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/google-ima.js"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "berlingske.dk",
+        "bt.dk",
+        "feltet.dk"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "isUrlFilterCaseSensitive": false
+    }
   }
 ]
