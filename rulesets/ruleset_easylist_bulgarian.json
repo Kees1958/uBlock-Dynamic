@@ -5130,6 +5130,34 @@
     }
   },
   {
+    "id": 1110354,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||fls-a0a6331f-aa52-4911-bb98-f749c6b695c6.laravel.cloud/ads/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1559306,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "skopje1.mk"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "urlFilter": "||ctg.mk/wp-content/uploads/banners/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 478139,
     "priority": 10000,
     "action": {
@@ -11611,7 +11639,7 @@
     }
   },
   {
-    "id": 288949,
+    "id": 1475681,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -11798,6 +11826,7 @@
         "bid.aero",
         "x.bidswitch.net",
         "free.xjs.lol",
+        "gdebg.hit.gemius.pl",
         "jsecoin.com",
         "reasedoper.pw",
         "listat.biz",

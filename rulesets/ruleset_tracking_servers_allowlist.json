@@ -2331,20 +2331,6 @@
     }
   },
   {
-    "id": 1624461,
-    "priority": 8000,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "7plus.com.au"
-      ],
-      "urlFilter": "||snowplow.swm.digital/com.snowplowanalytics.snowplow/",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1542448,
     "priority": 8000,
     "action": {
@@ -17012,28 +16998,6 @@
     },
     "condition": {
       "urlFilter": "|http://inside-graph.com^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 74281,
-    "priority": 8000,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "|https://jioadsweb.akamaized.net^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1075316,
-    "priority": 8000,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "|http://jioadsweb.akamaized.net^",
       "isUrlFilterCaseSensitive": false
     }
   },

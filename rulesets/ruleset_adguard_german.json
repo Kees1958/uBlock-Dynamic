@@ -235,17 +235,6 @@
     }
   },
   {
-    "id": 108901,
-    "priority": 10000,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "urlFilter": "||ruhr24.de/bilder",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1197803,
     "priority": 10000,
     "action": {
@@ -5251,7 +5240,7 @@
     }
   },
   {
-    "id": 1502471,
+    "id": 292405,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -5268,6 +5257,7 @@
         "hna.de",
         "in-muenchen.de",
         "ludwigshafen24.de",
+        "ruhr24.de",
         "sauerlandkurier.de"
       ],
       "resourceTypes": [

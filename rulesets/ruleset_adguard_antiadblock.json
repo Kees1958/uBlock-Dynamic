@@ -1089,6 +1089,48 @@
     }
   },
   {
+    "id": 879951,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "knshow.com"
+      ],
+      "urlFilter": "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 109709,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "script"
+      ],
+      "urlFilter": "||peeplayer.com/psz/ad_",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 526628,
+    "priority": 10000,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": [
+        "image"
+      ],
+      "urlFilter": "||peeplayer.com/psz/ad",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 1256327,
     "priority": 10000,
     "action": {

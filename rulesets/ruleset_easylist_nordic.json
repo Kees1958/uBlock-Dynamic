@@ -2153,6 +2153,17 @@
     }
   },
   {
+    "id": 80540,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||tv2.no/admanifest^",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 688515,
     "priority": 10000,
     "action": {

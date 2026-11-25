@@ -288,7 +288,8 @@
         "satkurier.pl",
         "shinden.pl",
         "sport.pl",
-        "tibiopedia.pl"
+        "tibiopedia.pl",
+        "wykop.pl"
       ],
       "resourceTypes": [
         "script"

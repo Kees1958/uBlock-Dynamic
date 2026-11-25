@@ -68,17 +68,5 @@
       "urlFilter": "||eviltracker.net",
       "isUrlFilterCaseSensitive": false
     }
-  },
-  {
-    "id": 1791771,
-    "priority": 600000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "topspin.npo.nl"
-      ]
-    }
   }
 ]

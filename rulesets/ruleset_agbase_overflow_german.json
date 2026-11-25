@@ -512,6 +512,7 @@
     },
     "condition": {
       "initiatorDomains": [
+        "echo24.de",
         "motor-talk.de"
       ],
       "urlFilter": "||html-load.com^",

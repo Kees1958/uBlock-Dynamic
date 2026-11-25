@@ -4,6 +4,13 @@ Short, per-release summary of what changed — no implementation detail.
 Lives in the project's docs (since 10.1.4 it is no longer shipped inside the
 extension). The full technical account is CHANGELOG_HISTORY.md.
 
+## 11.1.2
+- **SAFE filter update (skip-review) against the published 11.1.1:** network rules refreshed from their live sources
+  (2026-11-25) for AdGuard Base, AdGuard tracking servers, AdGuard German and French, the German and Polish AdGuard
+  Base overflow lists, annoyances, AdGuard and EasyList anti-adblock, Anti-Admiral, Bad filter fixes (Quick-fixes),
+  HaGeZi's Multi light, Peter Lowe, EasyList Nordic and Bulgarian, and the tracking-servers allow list. Hide rules,
+  scriptlets and the AdGuard unsafe and remove-param rules wait for the next normal release.
+
 ## 11.1.1
 - **DNR tracking filter:** its yellow banner now starts with the same line as the Fingerprint inspector's:
   "Only use the DNR tracking filter on websites you visit often but never log in to."
