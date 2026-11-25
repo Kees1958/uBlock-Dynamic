@@ -90481,12 +90481,10 @@
       "yourcentralvalley.com",
       "yourerie.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/admiral|\\[\\]\\)\\.push\\(arguments\\)/",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:admiral|\\[\\]\\)\\.push\\(arguments\\))/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -91280,12 +91278,10 @@
       "tacoma4g.com",
       "taycanforum.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:HTMLIFrameElement|JSON\\[|_contentWindow)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -91325,12 +91321,10 @@
       "minecraft-schematics.com",
       "rust-servers.net"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/admiral|-engaged/",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:admiral|-engaged)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -91702,12 +91696,10 @@
       "awellstyledlife.com",
       "awfulannouncing.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -91912,12 +91904,10 @@
       "tracklock.gg",
       "u.gg"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:HTMLIFrameElement|JSON\\[|_contentWindow)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92174,12 +92164,10 @@
       "silive.com",
       "syracuse.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "adblockerDisabled",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:adblockerDisabled)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92496,12 +92484,10 @@
       "kxly.com",
       "news8000.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "adblockerDisabled",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:adblockerDisabled)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92550,12 +92536,10 @@
       "vibe.com",
       "wwd.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:HTMLIFrameElement|JSON\\[|_contentWindow)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92578,12 +92562,10 @@
       "vibe.com",
       "wwd.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "adblockerDisabled",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:adblockerDisabled)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92710,12 +92692,10 @@
       "plejada.pl",
       "skapiec.pl"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "__adblocker",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92846,12 +92826,10 @@
       "motorsportjobs.com",
       "rideapart.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      ".cmd.unshift",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:\\.cmd\\.unshift)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92973,12 +92951,10 @@
       "urldecoder.org",
       "vclock.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:HTMLIFrameElement|JSON\\[|_contentWindow)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93092,12 +93068,10 @@
       "butternutbakeryblog.com",
       "bytheforkful.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93139,12 +93113,10 @@
       "superherohype.com",
       "thefashionspot.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "adblockerDisabled",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:adblockerDisabled)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93176,12 +93148,10 @@
       "thestate.com",
       "tri-cityherald.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "[]).push(arguments)",
-      "excludes",
-      "/,\\\\\"|self\\.__next|pageProps/"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"|self\\.__next|pageProps))[\\s\\S]*?(?:\\[\\]\\)\\.push\\(arguments\\))/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93218,12 +93188,10 @@
       "teachertube.com",
       "worshiphousemedia.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "[]).push(arguments)",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:\\[\\]\\)\\.push\\(arguments\\))/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93311,12 +93279,10 @@
       "tasteofhome.com",
       "thehealthy.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "[]).push(arguments)",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:\\[\\]\\)\\.push\\(arguments\\))/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93354,12 +93320,10 @@
       "themirror.com",
       "walesonline.co.uk"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "nowprocket",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:nowprocket)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93666,12 +93630,10 @@
       "cwbchicago.com",
       "czn.gg"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93737,12 +93699,10 @@
       "windsorstar.com",
       "winnipegsun.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:HTMLIFrameElement|JSON\\[|_contentWindow)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93812,42 +93772,6 @@
     "name": "blank-setattribute-value",
     "args": [
       "/error-report|new Promise|;await new|:\\[?window|&&window,|void 0\\]|location\\.href|void 0\\|\\|window|,window,|void 0,window|,window\\]|\\)\\.join\\(String\\.fromCharCode|adShieldError/"
-    ],
-    "ruleset": "ruleset_antiadmiral"
-  },
-  {
-    "hostnames": [
-      "calgaryherald.com",
-      "calgarysun.com",
-      "canoe.com",
-      "driving.ca",
-      "edmontonjournal.com",
-      "edmontonsun.com",
-      "financialpost.com",
-      "leaderpost.com",
-      "lfpress.com",
-      "montrealgazette.com",
-      "nationalpost.com",
-      "ottawacitizen.com",
-      "ottawasun.com",
-      "recorder.ca",
-      "standard-freeholder.com",
-      "theprovince.com",
-      "thestarphoenix.com",
-      "thewhig.com",
-      "timminspress.com",
-      "tj.news",
-      "torontosun.com",
-      "vancouversun.com",
-      "windsorstar.com",
-      "winnipegsun.com"
-    ],
-    "name": "ubo-rmnt",
-    "args": [
-      "script",
-      "/admiral|adblockerDisabled/i",
-      "excludes",
-      "/,\\\\\"|self\\.__next|pageProps/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93978,12 +93902,10 @@
       "radios-uruguay.com",
       "radios-venezuela.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/HTMLIFrameElement|JSON\\[|_contentWindow/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:HTMLIFrameElement|JSON\\[|_contentWindow)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94129,12 +94051,10 @@
       "knowyourmeme.com",
       "melmagazine.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/adblockerDisabled|\\.cmd\\.unshift|admiral/",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:adblockerDisabled|\\.cmd\\.unshift|admiral)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94167,12 +94087,10 @@
       "cwtv.com",
       "marketwatch.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "[]).push(arguments)",
-      "excludes",
-      "/,\\\\\"|self\\.__next|pageProps/"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"|self\\.__next|pageProps))[\\s\\S]*?(?:\\[\\]\\)\\.push\\(arguments\\))/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94267,12 +94185,10 @@
       "drveganblog.com",
       "dsmtuners.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94576,12 +94492,10 @@
       "funmoneymom.com",
       "futmind.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94601,12 +94515,10 @@
       "fantasysports.yahoo.com",
       "sports.yahoo.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "benjiAdblock",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:benjiAdblock)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94638,12 +94550,10 @@
     "hostnames": [
       "finance.yahoo.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/loadRecoveryScripts|nowprocket/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:loadRecoveryScripts|nowprocket)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94670,12 +94580,10 @@
       "tapology.com",
       "wsj.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "admiral",
-      "excludes",
-      "/,\\\\\"|self\\.__next|pageProps/"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"|self\\.__next|pageProps))[\\s\\S]*?(?:admiral)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94698,12 +94606,10 @@
     "hostnames": [
       "foxbusiness.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/typeof [a-z]\\.unshift/",
-      "excludes",
-      "/,\\\\\"|self\\.__next|pageProps/"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"|self\\.__next|pageProps))[\\s\\S]*?(?:typeof [a-z]\\.unshift)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94715,12 +94621,10 @@
       "premierguitar.com",
       "techcrunch.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "adblockerDisabled",
-      "excludes",
-      "/,\\\\\"|self\\.__next|pageProps/"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"|self\\.__next|pageProps))[\\s\\S]*?(?:adblockerDisabled)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94850,12 +94754,10 @@
       "gymnastics-now.com",
       "gymnaverse.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94912,12 +94814,10 @@
       "stronazdrowia.pl",
       "telemagazyn.pl"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "admiral",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:admiral)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95041,12 +94941,10 @@
       "hunker.com",
       "huskermax.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95169,12 +95067,10 @@
       "itsavegworldafterall.com",
       "itsnotcomplicatedrecipes.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95550,12 +95446,10 @@
     "hostnames": [
       "lostcoastoutpost.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/\\.cmd\\.unshift|adblockerDisabled/",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:\\.cmd\\.unshift|adblockerDisabled)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95747,12 +95641,10 @@
       "myriadrecipes.com",
       "mysavings.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95764,12 +95656,10 @@
       "pcwelt.de",
       "techadvisor.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "window.admiral",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:window\\.admiral)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95933,12 +95823,10 @@
       "tide-forecast.com",
       "weather-forecast.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      ".cmd.unshift",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:\\.cmd\\.unshift)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95950,12 +95838,10 @@
       "tide-forecast.com",
       "weather-forecast.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "[]).push(arguments)",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:\\[\\]\\)\\.push\\(arguments\\))/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -96251,12 +96137,10 @@
       "puzzleseveryday.com",
       "pynative.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -96304,12 +96188,10 @@
     "hostnames": [
       "sporcle.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/\\.cmd\\.unshift|adblockerDisabled/",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:\\.cmd\\.unshift|adblockerDisabled)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -96721,12 +96603,10 @@
       "swgoh.gg",
       "swtorista.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -97084,12 +96964,10 @@
       "typerush.com",
       "typinggames.zone"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/__adblocker|html-load/",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:__adblocker|html-load)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -97129,12 +97007,10 @@
     "hostnames": [
       "theaustralian.com.au"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "[]).push(arguments)",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:\\[\\]\\)\\.push\\(arguments\\))/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -97142,12 +97018,10 @@
     "hostnames": [
       "theaustralian.com.au"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "admiral",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:admiral)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -97394,12 +97268,10 @@
     "hostnames": [
       "walterfootball.com"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "/window\\.admiral|adblockerDisabled/",
-      "excludes",
-      ",\\\""
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:,\\\\\"))[\\s\\S]*?(?:window\\.admiral|adblockerDisabled)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -97473,12 +97345,10 @@
     "hostnames": [
       "wikily.gg"
     ],
-    "name": "ubo-rmnt",
+    "name": "remove-node-text",
     "args": [
       "script",
-      "nowprocket",
-      "excludes",
-      "self.__next"
+      "/(?<![\\s\\S])(?![\\s\\S]*?(?:self\\.__next))[\\s\\S]*?(?:nowprocket)/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },

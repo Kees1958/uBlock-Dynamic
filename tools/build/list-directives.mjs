@@ -1,11 +1,11 @@
 // ── tools/build/list-directives.mjs ───────────────────────────────────────────────────
-// (11.1.3) A downloaded list's own platform directives, applied before anything parses the list.
+// (11.1.4) A downloaded list's own platform directives, applied before anything parses the list.
 //
 // Why: AdGuard writes some rules for ONE kind of blocker only and marks them, either with a hint line directly above
 // the rule ("!+ PLATFORM(ios, ext_safari)", "!+ NOT_PLATFORM(ext_ublock)") or with an "!#if … !#endif" block. AdGuard's
 // own compiler (AdguardTeam/FiltersCompiler, src/main/platforms/filter.js and platforms-config.js) leaves such a rule
 // out of every build it is not meant for. The project downloads the RAW AdGuard sections instead of a compiled build,
-// so until 11.1.3 every marked rule shipped — e.g. the iOS/Safari-only allow for bbc.com's dotcom-ads.js, which beat
+// so until 11.1.4 every marked rule shipped — e.g. the iOS/Safari-only allow for bbc.com's dotcom-ads.js, which beat
 // AdGuard Base's own block of that script and let bbc.com's video ads through.
 //
 // What this module does, for every downloaded list (called once, from fetchListText() in fetch-helpers.mjs):

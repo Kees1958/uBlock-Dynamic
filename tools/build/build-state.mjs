@@ -69,7 +69,7 @@ export let droppedUnsupportedListLines = [];
 // of build().
 export let droppedPolicyScriptlets = [];
 
-// droppedPlatformLines (11.1.3) — same accumulate-and-report discipline, for rules a list itself marks as meant for
+// droppedPlatformLines (11.1.4) — same accumulate-and-report discipline, for rules a list itself marks as meant for
 // another platform ("!+ PLATFORM(…)" hints, "!#if" blocks), left out by applyListDirectives() (list-directives.mjs).
 // One entry per left-out line: { source, line, reason }. Written to dropped-platform-rules.txt.
 export let droppedPlatformLines = [];

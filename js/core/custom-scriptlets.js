@@ -64,6 +64,7 @@
 import { browser, localRead, localWrite } from '../data/ext.js';
 import { SCRIPTLET_NAME_TO_FILE, KNOWN_SCRIPTLET_NAMES } from '../generated/custom-scriptlets-dispatch.mjs';
 import { scriptletRuleRejection } from '../data/scriptlet-policy.js';
+import { translateUboScriptletArgs } from '../data/ubo-scriptlet-args.js';
 import { todayISODate, isValidISODate, isValidHostnamePattern, isBoundedString } from '../util/utils.js';
 import { getFilteringMode, MODE_NONE } from './mode-manager.js';
 import { CUSTOM_SCRIPTLET_MAX } from './dnr-budgets.js';
@@ -642,7 +643,9 @@ export async function deletePrivacyScriptletRulesMatching(filter) {
 // exception marker, argument body) is shared structure, so the two forms
 // can never drift out of sync with each other the way two separate
 // regexes eventually would.
-const SCRIPTLET_LINE_RE = /^([^#]+)#(@?)(?:#\+js|%#\/\/scriptlet)\((.*)\)$/;
+// (11.1.4) The call marker is captured (group 3) so a uBO-syntax line's arguments get uBO's meaning.
+const SCRIPTLET_LINE_RE = /^([^#]+)#(@?)(#\+js|%#\/\/scriptlet)\((.*)\)$/;
+const UBO_CALL_MARKER = '#+js';
 
 // Splits a scriptlet call's argument list on top-level commas only — a
 // comma inside a quoted argument (single or double quotes) does not
@@ -708,11 +711,18 @@ export function parseScriptletLine(line) {
         };
     }
 
-    const args = splitScriptletArgs(m[3]);
-    const name = args.shift();
-    if ( !name ) {
+    const rawArgs = splitScriptletArgs(m[4]);
+    const rawName = rawArgs.shift();
+    if ( !rawName ) {
         return { error: 'Scriptlet call has no scriptlet name' };
     }
+    // (11.1.4) uBO's named extra arguments (e.g. rmnt's `excludes`) translated for AdGuard's scriptlet — the same
+    // translation the filter lists get (js/data/ubo-scriptlet-args.js), so a typed rule behaves like a list rule.
+    const translated = translateUboScriptletArgs(rawName, rawArgs, m[3] === UBO_CALL_MARKER);
+    if ( translated.error !== undefined ) {
+        return { error: `${translated.error} — ${rawName}` };
+    }
+    const { name, args } = translated;
 
     return { rules: hostnames.map(hostname => ({ hostname, name, args, exception })) };
 }

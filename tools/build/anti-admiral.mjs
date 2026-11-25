@@ -77,7 +77,7 @@ const ANTI_ADMIRAL_SECTION_SOURCES = Object.freeze([
 const UASSETS_SECTION_MARKERS = Object.freeze({ START: '! SECTION: ', END: '! !SECTION: ' });
 // uBO's "!#if" preprocessor answered as uBO Lite answers it on Chromium (uBO's platform/mv3/make-rulesets.js env):
 // no HTML filtering, so a section's "!#else" branch (the MV3 form of its rules) is the one taken. Evaluated by the
-// project's own copy of uBO's preparser (js/core/filter-parser-helpers.js), not a second implementation. (11.1.3) The
+// project's own copy of uBO's preparser (js/core/filter-parser-helpers.js), not a second implementation. (11.1.4) The
 // environment is the one every download now gets (list-directives.mjs) — one definition; pruning again is a no-op.
 const UASSETS_PREPARSER_ENV = LIST_DIRECTIVES_CONFIG.UBOL_PREPARSER_ENV;
 

@@ -260,7 +260,7 @@ const NEVER_SHIP = [
     'dropped-unsupported-list-lines.txt',
     // Same category (10.4.6): rules the scriptlet policy refused (js/data/scriptlet-policy.js). Never in the Store zip.
     'dropped-policy-scriptlets.txt',
-    // Same category (11.1.3): rules a list marks as meant for another platform (tools/build/list-directives.mjs).
+    // Same category (11.1.4): rules a list marks as meant for another platform (tools/build/list-directives.mjs).
     'dropped-platform-rules.txt',
     // Same category (10.7.6): regexFilter rules Chrome refused or could not verify (tools/build/regex-support.mjs).
     REGEX_SUPPORT_CONFIG.REPORT_FILE,

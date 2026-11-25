@@ -22,9 +22,9 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 4250,
+    "rawLineCount": 4251,
     "ruleCount": 1,
-    "domainCount": 3909,
+    "domainCount": 3910,
     "paramCount": 0,
     "blockCount": 1,
     "allowCount": 0,
@@ -1247,7 +1247,7 @@
     "blockCount": 107,
     "allowCount": 3,
     "redirectCount": 0,
-    "scriptletRuleCount": 259,
+    "scriptletRuleCount": 258,
     "cosmeticHostnameCount": 65
   },
   {

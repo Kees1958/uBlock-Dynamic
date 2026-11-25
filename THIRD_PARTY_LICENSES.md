@@ -78,7 +78,7 @@ code is used unchanged.
   Optimizely redirect surrogate (commit e68e05cde0), `Copyright (C)
   2026-present Fanboynz`, GPL-3.0-or-later. Code unchanged; only the header
   gained this project's lines next to the original copyright line.
-- **`web_accessible_resources/google-ima.js`** (added 11.1.3): uBlock Origin's
+- **`web_accessible_resources/google-ima.js`** (added 11.1.4): uBlock Origin's
   Google IMA SDK redirect surrogate (commit b8a305e), based on Mozilla's
   webcompat shim `browser/extensions/webcompat/shims/google-ima.js`
   (Mozilla Public License 2.0, notice kept in the file; MPL-2.0 is

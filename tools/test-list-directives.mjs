@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// test-list-directives.mjs — (11.1.3) a downloaded list's own platform directives are applied before parsing
+// test-list-directives.mjs — (11.1.4) a downloaded list's own platform directives are applied before parsing
 // (tools/build/list-directives.mjs, called from fetchListText()).
 //
 // Checked with the REAL function, on in-memory fixtures (no network):
@@ -9,7 +9,7 @@
 //   2. "!#if" blocks: an AdGuard source is answered as AdGuard's Chrome MV3 build (adguard, adguard_ext_chromium_mv3
 //      true; adguard_ext_chromium, ext_ublock, iOS/Safari false); any other source as uBO Lite on Chromium;
 //   3. every left-out rule is reported in droppedPlatformLines with its source.
-// The fixture reproduces the real case that started this (11.1.3): AdGuard Base's iOS/Safari-only allow for
+// The fixture reproduces the real case that started this (11.1.4): AdGuard Base's iOS/Safari-only allow for
 // bbc.com's dotcom-ads.js, which used to ship and beat AdGuard's own block of that script.
 //
 // Usage: node tools/test-list-directives.mjs   (step of tools/complete-check.mjs)

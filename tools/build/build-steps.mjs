@@ -1330,7 +1330,8 @@ export async function stepWriteReports(ctx) {
         const lines = [
             `Dropped scriptlet rule scopes that cannot be a hostname key — ${new Date().toISOString().slice(0, 10)}`,
             `${droppedUnsupportedScriptletScopes.length} total: ${byKind('bracket-modifier').length} bracket-modifier lines (dropped whole), ` +
-            `${byKind('negated-hostname').length} negated hostnames (only the ~host entry dropped; the rule still applies to its other hostnames).`,
+            `${byKind('negated-hostname').length} negated hostnames (only the ~host entry dropped; the rule still applies to its other hostnames), ` +
+            `${byKind('untranslatable-ubo-args').length} uBO rules whose extra arguments cannot be translated (dropped whole, 11.1.4).`,
             '',
             ...droppedUnsupportedScriptletScopes.map(({ kind, line }) => `[${kind}] ${line}`),
         ];
@@ -1365,7 +1366,7 @@ export async function stepWriteReports(ctx) {
         if ( replaced !== 0 ) { buildNotices.push({ level: 'NOTICE', text: `Scriptlet policy: ${replaced} rule(s) kept as a safe replacement — ${SCRIPTLET_POLICY.REASON_REPLACED} (see dropped-policy-scriptlets.txt).` }); }
     }
 
-    // ── dropped-platform-rules.txt (11.1.3) — rules a list itself marks as meant for another blocker ("!+ PLATFORM(…)"
+    // ── dropped-platform-rules.txt (11.1.4) — rules a list itself marks as meant for another blocker ("!+ PLATFORM(…)"
     // hints, "!#if" blocks), left out at download by applyListDirectives() (tools/build/list-directives.mjs). A source
     // fetched by several lists is listed once. Always written, so an empty file shows the step ran.
     {

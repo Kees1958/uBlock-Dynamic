@@ -42,6 +42,8 @@
  *   safeReplacementFor(name, args)         — rule A's safe equivalent of a trusted rule ({ name, args }), or null
  *   scriptletRuleRejection(name, args)     — rules D+A+B+C for rules from an untrusted source (user input):
  *                                            a user-facing message, or null
+ *   baseScriptletName(name)                — (11.1.4, exported for js/data/ubo-scriptlet-args.js) the name without
+ *                                            uBO's alias spellings, lower case
  * Pure functions and frozen data — nothing to initialise, clear or release.
  */
 
@@ -162,7 +164,7 @@ const SAFE_SCRIPTLET_REPLACEMENTS = Object.freeze([
 // The scriptlet's own name without uBO's alias spellings: "ubo-x.js" / "ubo-x" / "x.js" -> "x" (lower case).
 // (audit 10.6.4) Shared by rules A and D, so an alias spelling can never slip past either one — e.g. the build turns
 // uBO's `##+js(trusted-x, …)` into AdGuard's `ubo-trusted-x`, which the old prefix test did not see as trusted.
-function baseScriptletName(name) {
+export function baseScriptletName(name) {
     let base = name.trim().toLowerCase();
     if ( base.startsWith(SCRIPTLET_POLICY.ALIAS_PREFIX) ) { base = base.slice(SCRIPTLET_POLICY.ALIAS_PREFIX.length); }
     if ( base.endsWith(SCRIPTLET_POLICY.ALIAS_SUFFIX) ) { base = base.slice(0, -SCRIPTLET_POLICY.ALIAS_SUFFIX.length); }

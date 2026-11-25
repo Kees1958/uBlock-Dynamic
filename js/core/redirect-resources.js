@@ -33,7 +33,7 @@
 //   - optimizely.js  (11.0.4, uBO e68e05cde0) surrogate for cdn.optimizely.com/js/<id>.js and
 //                    /public/…_edge_helper.js: a working but empty window.optimizely, no experiments,
 //                    no cookies/storage, no beacons. Used from the owner's Quick-fixes list.
-//   - google-ima.js  (11.1.3, uBO b8a305e) surrogate for imasdk.googleapis.com/js/sdkloader/ima3.js: a working
+//   - google-ima.js  (11.1.4, uBO b8a305e) surrogate for imasdk.googleapis.com/js/sdkloader/ima3.js: a working
 //                    google.ima API that never loads an ad, so the player starts the video itself. Aliases are
 //                    uBO's own names and AdGuard's (`google-ima3`, e.g. AdGuard Base's bbc.com video-ad rule).
 

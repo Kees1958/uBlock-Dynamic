@@ -861,10 +861,16 @@ await run('95. Anti-Admiral — uAssets Admiral/Ad-Shield sections, MV3 preproce
     execFileSync(process.execPath, [ 'tools/test-anti-admiral-sections.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
 
-// (11.1.3) Every downloaded list's own platform directives ("!+ PLATFORM(…)" hints, "!#if" blocks) are applied as
+// (11.1.4) Every downloaded list's own platform directives ("!+ PLATFORM(…)" hints, "!#if" blocks) are applied as
 // AdGuard's Chrome MV3 build (AdGuard sources) or uBO Lite on Chromium (other sources) applies them.
 await run('96. Platform directives — AdGuard hints and !#if blocks applied at download', () => {
     execFileSync(process.execPath, [ 'tools/test-list-directives.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+
+// (11.1.4) uBO's named extra scriptlet arguments (rmnt's includes/excludes/condition) translated to AdGuard's one
+// pattern — same decision as uBO, in the build (rules and exceptions) and for the user's own rules.
+await run('97. uBO scriptlet arguments — translated for AdGuard, same decision, build and custom rules', () => {
+    execFileSync(process.execPath, [ 'tools/test-ubo-scriptlet-args.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
 
 // ── Summary ───────────────────────────────────────────────────────────

@@ -83,7 +83,7 @@ export async function fetchList(url) {
 // (audit 10.6.4) The same download with the same guards, WITHOUT the trust gate — for a caller that takes only a few
 // selected lines from a large list (anti-admiral.mjs) and gates exactly those, so the drop report does not list
 // hundreds of trusted rules from that list that were never going to be used anyway.
-// (11.1.3) Every download leaves here with the list's own platform directives applied ("!+ PLATFORM(…)" hints and
+// (11.1.4) Every download leaves here with the list's own platform directives applied ("!+ PLATFORM(…)" hints and
 // "!#if" blocks for other blockers left out — list-directives.mjs), so no caller can parse a rule its source never
 // meant for this platform. Applied after the retry wrapper, so a retried download is reported once.
 export async function fetchListText(url) {

@@ -10,6 +10,11 @@
 // Dependencies: see the imports below (strictly acyclic; no module imports one that imports it).
 import { droppedGenericDomainQualifiers, droppedUnsupportedScriptletScopes } from './build-state.mjs';
 import { GENERIC_DOMAIN_QUALIFIER_RE, filterGenericDomainQualifier, isTLDKept } from './tld-scope.mjs';
+import { translateUboScriptletArgs } from '../../js/data/ubo-scriptlet-args.js';
+
+// (11.1.4) Kind under which a uBO rule whose extra arguments cannot be translated is reported
+// (dropped-unsupported-scriptlet-scopes.txt); the reason from translateUboScriptletArgs() follows the line.
+const UNTRANSLATABLE_UBO_ARGS_KIND = 'untranslatable-ubo-args';
 
 /******************************************************************************/
 // AG scriptlet rule parser
@@ -118,8 +123,16 @@ export function parseScriptletRules(text, tldCheckFn = isTLDKept, allowGenericDo
         }
         if ( args.length === 0 ) { continue; }
 
-        const [name, ...scriptletArgs] = args;
-        if ( !name ) { continue; }
+        const [rawName, ...rawArgs] = args;
+        if ( !rawName ) { continue; }
+        // (11.1.4) uBO's named extra arguments (e.g. rmnt's `excludes`) mean something else to AdGuard's scriptlet:
+        // translated to the equivalent AdGuard rule, or the line is dropped and reported (js/data/ubo-scriptlet-args.js).
+        const translated = translateUboScriptletArgs(rawName, rawArgs);
+        if ( translated.error !== undefined ) {
+            droppedUnsupportedScriptletScopes.push({ kind: UNTRANSLATABLE_UBO_ARGS_KIND, line: `${t}  — ${translated.error}` });
+            continue;
+        }
+        const { name, args: scriptletArgs } = translated;
 
         rules.push({ hostnames, name, args: scriptletArgs });
     }
@@ -210,8 +223,16 @@ export function parseScriptletExceptionRules(text) {
         }
         if ( args.length === 0 ) { continue; }
 
-        const [name, ...scriptletArgs] = args;
-        if ( !name ) { continue; }
+        const [rawName, ...rawArgs] = args;
+        if ( !rawName ) { continue; }
+        // (11.1.4) Same translation as the rules above, so an exception written with uBO's arguments still names
+        // exactly the rule it cancels.
+        const translated = translateUboScriptletArgs(rawName, rawArgs);
+        if ( translated.error !== undefined ) {
+            droppedUnsupportedScriptletScopes.push({ kind: UNTRANSLATABLE_UBO_ARGS_KIND, line: `${t}  — ${translated.error}` });
+            continue;
+        }
+        const { name, args: scriptletArgs } = translated;
 
         for ( const hn of hostnames ) {
             exceptions.push({ hostname: hn, wildcard: false, name, args: scriptletArgs, line: t });

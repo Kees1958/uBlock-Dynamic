@@ -17,10 +17,12 @@ exception: every tools version still gets at least a one-line
 Entries below 9.7.1 were all written under the older every-version
 convention and are kept as they are.
 
-## 11.1.3 — Platform directives, IMA SDK surrogate, clicker-rule restore (owner's reports 2026-11-25)
-**Source version.** Working from 11.1.3 as committed (GitHub Kees1958/uBlock-Dynamic 7d68e84). **tools 3.0.10:**
-new `tools/build/list-directives.mjs`, new step 96 `tools/test-list-directives.mjs`, new report
-`dropped-platform-rules.txt`; test-network-translation and test-picker-hardening extended.
+## 11.1.4 — Platform directives, IMA SDK surrogate, clicker-rule restore, uBO rmnt arguments (owner's reports 2026-11-25)
+**Source version.** Working from 11.1.3 as committed (extension 11.1.3 / **tools 3.0.10** / docs 11.1.3, GitHub
+Kees1958/uBlock-Dynamic 7d68e84; 11.1.3 was never published, but the owner chose a new number). Tools changes (the
+packager bumps the tools version): new `tools/build/list-directives.mjs`, new steps 96 `tools/test-list-directives.mjs`
+and 97 `tools/test-ubo-scriptlet-args.mjs`, new report `dropped-platform-rules.txt`; test-network-translation and
+test-picker-hardening extended.
 
 **1. Platform directives (bug class).** *What:* every downloaded list now has its own platform directives applied
 before parsing — AdGuard's `!+ PLATFORM(…)` / `!+ NOT_PLATFORM(…)` hints and `!#if … !#endif` blocks. *Why:* the
@@ -53,6 +55,24 @@ keeps its own id and creation date, as `importMatrixOverrides()` does for a pair
 on the on/off state). Consumer inventory: the one production caller (settings-routes.js `handleImportCustomRules()`,
 also used by the full-settings restore) and the test; the other three custom-rule sections (matrix overrides,
 cosmetic, scriptlet) already deduplicate on import.
+
+**4. uBO's named extra scriptlet arguments.** uBO's remove-node-text (`rmnt`) accepts named arguments after its
+pattern — `includes`/`condition` (the text must also contain…) and `excludes` (…but not) — plus timing ones (`stay`,
+`quitAfter`, `sedCount`). The AdGuard library's remove-node-text reads a third argument as a parent-element SELECTOR,
+so every such rule got "excludes" as a CSS selector and never matched (uBO's Admiral fixes for foxbusiness.com, found
+2026-11-25). `js/data/ubo-scriptlet-args.js` folds them into AdGuard's one pattern:
+`/(?<![\s\S])(?![\s\S]*?(?:EXC))(?=[\s\S]*?(?:INC))[\s\S]*?(?:PAT)/flags` — string patterns literal, `/regex/flags`
+as written, as uBO's patternToRegex(); `(?<![\s\S])` is text start under any flag. Timing arguments are dropped
+(AdGuard's scriptlet runs for the page's life and empties every match — never a different node). Refused, with a
+reason, rather than guessed: an unknown named argument, a missing value, regexes with different flags. Applies to a
+uBO spelling of the name (`ubo-…`, `….js`, `rmnt`) or any name in a uBO-syntax `##+js(…)` line; AdGuard's own
+`remove-node-text` keeps its parent-selector meaning. Consumers: the build's scriptlet parser — rules AND scriptlet
+exceptions (`tools/build/scriptlet-rules.mjs`, so an exception still names the rule it cancels; refusals in
+`dropped-unsupported-scriptlet-scopes.txt` as `untranslatable-ubo-args`) — and the custom-rule parser
+(`js/core/custom-scriptlets.js` `parseScriptletLine()`, the call marker now captured). The translation is idempotent
+(its output is AdGuard's name with two arguments). Step 97 checks the translated pattern gives uBO's own decision on
+sample texts, including the real foxbusiness.com rules. *Known limitation:* a custom rule saved before 11.1.4 is
+translated when its box is saved again.
 
 ## 11.1.0 — DNR tracking filter: Break risk column (owner's decision 2026-11-23)
 **Source version.** Working from 11.0.4 rebuilt (extension 11.0.4 / tools 3.0.8 / docs 11.0.4), GitHub

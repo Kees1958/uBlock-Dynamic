@@ -284,7 +284,7 @@ async function sectionE() {
         { siteHostname: 'imp.example', frameHostname: 'imp.example', selector: 'a'.repeat(2_001) },
     ]);
     check('cookie-rule import keeps only the valid rule', n === 1 && await rulesMod.countCookieClickerRules() === before + 1, String(n));
-    // (11.1.3) Restoring the same backup again overwrites instead of duplicating (owner's report): nothing is added,
+    // (11.1.4) Restoring the same backup again overwrites instead of duplicating (owner's report): nothing is added,
     // the on/off state from the file wins, and a manual pick of the same button returns the stored rule.
     const again = await rulesMod.importCookieClickerRules([
         { siteHostname: 'imp.example', frameHostname: 'imp.example', selector: '#ok', enabled: false },

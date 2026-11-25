@@ -22,7 +22,7 @@
  *                                       "Delete rules" toolbar button
  *   importCookieClickerRules(rules)     — Manage Custom Rules' Import and
  *                                       Restore; overwrites an identical
- *                                       stored rule (11.1.3), returns
+ *                                       stored rule (11.1.4), returns
  *                                       { added, changed }
  *
  * Deliberately does NOT call registerCookieClickerContentScripts() (or
@@ -160,10 +160,10 @@ function areRuleFieldsValid({ siteHostname, frameHostname, selector, shadowHostS
     return true;
 }
 
-// (11.1.3) A rule's identity: the fields that decide WHAT it clicks (site, frame, selector, shadow host, text). Two
+// (11.1.4) A rule's identity: the fields that decide WHAT it clicks (site, frame, selector, shadow host, text). Two
 // rules with the same identity are the same rule, whatever their id, date or on/off state. Shared by a new pick
 // (addCookieClickerRule) and Import / Restore (importCookieClickerRules), so neither can store the same rule twice —
-// before 11.1.3 every Restore of a backup appended a second copy of every rule (owner's report).
+// before 11.1.4 every Restore of a backup appended a second copy of every rule (owner's report).
 function normalizedShadowHost(shadowHostSelector) {
     return typeof shadowHostSelector === 'string' && shadowHostSelector !== '' ? shadowHostSelector : null;
 }
@@ -279,7 +279,7 @@ export async function addCookieClickerRule({ siteHostname, frameHostname, select
     // C6 (10.7.13): validate at the storage boundary, not only in the route.
     if ( areRuleFieldsValid({ siteHostname, frameHostname, selector, shadowHostSelector, textFilter }) === false ) { return null; }
     const siteRules = rules.get(siteHostname) ?? [];
-    // (11.1.3) Picking the same button again returns the stored rule (switched on) instead of adding a copy.
+    // (11.1.4) Picking the same button again returns the stored rule (switched on) instead of adding a copy.
     const same = findSameRule(siteRules, { frameHostname, selector, shadowHostSelector, textFilter });
     if ( same !== undefined ) {
         if ( same.enabled !== true ) { same.enabled = true; await persist(); }
@@ -365,7 +365,7 @@ export async function deleteCookieClickerRulesMatching(filter) {
 // reads a user-supplied JSON file, not trusted internal data — same
 // posture as importMatrixOverrides()/importCosmeticFilters(). Returns the
 // count of rules actually imported.
-// (11.1.3) A rule already stored here (same identity, findSameRule) is OVERWRITTEN, not added again: it takes the
+// (11.1.4) A rule already stored here (same identity, findSameRule) is OVERWRITTEN, not added again: it takes the
 // file's on/off state and keeps its own id and creation date — the same posture importMatrixOverrides() takes for a
 // site+domain pair already present. Returns { added, changed }: rules added, and stored rules whose on/off state the
 // file changed. Either one changes which sites the click script is registered on, so the caller re-registers when
