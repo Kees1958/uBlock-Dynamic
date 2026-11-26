@@ -17,6 +17,32 @@ exception: every tools version still gets at least a one-line
 Entries below 9.7.1 were all written under the older every-version
 convention and are kept as they are.
 
+## 11.1.5 — Optimizely surrogate synced to uBO 74bcea2, full filter update (owner's request 2026-11-26)
+**Source version.** Working from 11.1.4 as committed (extension 11.1.4 / tools 3.0.11 / docs 11.1.4, GitHub
+Kees1958/uBlock-Dynamic b85ed86). Tools unchanged (3.0.11).
+
+**1. `web_accessible_resources/optimizely.js` synced to uBlock Origin 74bcea2** (was e68e05cde0, 11.0.4). Two upstream
+commits: ec0d053 (#3961) — `push(command, true)` runs only the six high-priority commands (`clientMetadata`,
+`cookieDomain`, `disable`, `load`, `optOut`, `rum`) and returns false for the rest, as the real client's boot
+expects (also correct for `arr.forEach(optimizely.push)`, whose index lands in that argument); `visitor.dcpData`;
+the Optimizely Classic api on the same object (about forty methods, the variation maps, `data.state`/`data.visitor`);
+Classic methods that are also v0 push names are the same function. 74bcea2 (#3962, PR commit 72421a192f) — the
+history wrappers captured nothing and read the shared `nativePushState`/`nativeReplaceState` at call time, so a
+re-subscription after another script wrapped `history` made a wrapper call itself (stack overflow on the page's own
+`pushState`); each wrapper pair now captures its own methods and a per-patch `active` flag, cleared on the last
+unsubscription, stops an orphaned wrapper from notifying. *How:* upstream file taken verbatim; only the two header
+lines (project name/copyright, Home + "Based on" commit) differ, as before. **WARNING FOR IMPLEMENTATION IMPACT:**
+pages behind the Quick-fixes Optimizely redirects see the larger api (Classic surface) instead of `undefined` for
+those names. *Consumers checked:* `js/core/redirect-resources.js` (uBO's table entry for optimizely.js is unchanged
+— no aliases, comment's commit reference updated), `THIRD_PARTY_LICENSES.md` (commit reference updated), the
+Quick-fixes list's two `$redirect=optimizely.js` lines (the only users; unchanged), `tools/test-network-translation.mjs`
+(translation of that redirect; unchanged), `FILTER_PROCESSING_REFERENCE.md` §1 (names the resource, no commit).
+
+**2. Full filter update** (`node tools/build-rulesets.mjs`, 2026-11-26): every list refreshed from its live source.
+
+**3. Docs:** `FILTER_PROCESSING_REFERENCE.md` §1 `$redirect=` row no longer says a redirect has a block's priority (stale
+since 11.1.3); it points to the "Priority order within a list" row. No other copy of the old sentence (grep).
+
 ## 11.1.4 — Platform directives, IMA SDK surrogate, clicker-rule restore, uBO rmnt arguments (owner's reports 2026-11-25)
 **Source version.** Working from 11.1.3 as committed (extension 11.1.3 / **tools 3.0.10** / docs 11.1.3, GitHub
 Kees1958/uBlock-Dynamic 7d68e84; 11.1.3 was never published, but the owner chose a new number). **tools 3.0.11**

@@ -3898,6 +3898,25 @@
   },
   {
     "hostnames": [
+      "clarksonathletics.com"
+    ],
+    "name": "google-ima3",
+    "args": [],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
+      "clarksonathletics.com"
+    ],
+    "name": "prevent-element-src-loading",
+    "args": [
+      "script",
+      "imasdk.googleapis.com/js/sdkloader/ima3.js"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
       "foxsports.com.au"
     ],
     "name": "google-ima3",
@@ -5178,6 +5197,7 @@
   },
   {
     "hostnames": [
+      "vvaassjjav.xyz",
       "lplaygo.com",
       "shii4u.media",
       "mxdrop.*",
@@ -8465,6 +8485,7 @@
   },
   {
     "hostnames": [
+      "str-cash.xyz",
       "pornvov.net",
       "javtnt.com",
       "missavporn.live",
@@ -8924,6 +8945,7 @@
   },
   {
     "hostnames": [
+      "str-cash.xyz",
       "cum.st",
       "gaystream.pw",
       "yufap.com",
@@ -8996,6 +9018,7 @@
   },
   {
     "hostnames": [
+      "str-cash.xyz",
       "toon34.com",
       "supjav1.live",
       "cum.st",
@@ -10654,6 +10677,8 @@
   },
   {
     "hostnames": [
+      "sosalkino.city",
+      "sosalkino.*",
       "thothd.com",
       "xnhau.pics",
       "xnhau.*",
@@ -25281,6 +25306,8 @@
   },
   {
     "hostnames": [
+      "redhousespice.com",
+      "thegirlinspired.com",
       "cherryonmysundae.com",
       "techjunkie.com",
       "ootrandomizer.com",
@@ -25695,6 +25722,8 @@
   },
   {
     "hostnames": [
+      "redhousespice.com",
+      "thegirlinspired.com",
       "cherryonmysundae.com",
       "techjunkie.com",
       "ootrandomizer.com",
@@ -29707,6 +29736,7 @@
   },
   {
     "hostnames": [
+      "wykop.pl",
       "echo24.de",
       "keizai.biz",
       "okuyami-information.com",
@@ -31246,6 +31276,28 @@
   },
   {
     "hostnames": [
+      "thebanks.eu"
+    ],
+    "name": "prevent-addEventListener",
+    "args": [
+      "DOMContentLoaded",
+      "top-widget"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
+      "filecrypt.cc"
+    ],
+    "name": "prevent-addEventListener",
+    "args": [
+      "mousedown",
+      "localStorage"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
       "rule34porno.cc"
     ],
     "name": "remove-node-text",
@@ -31957,6 +32009,17 @@
   },
   {
     "hostnames": [
+      "str-cash.xyz"
+    ],
+    "name": "json-prune",
+    "args": [
+      "qm wc ve cs"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
+      "str-cash.xyz",
       "strcsh.xyz",
       "streamcash.to"
     ],
@@ -34225,6 +34288,7 @@
   },
   {
     "hostnames": [
+      "vvaassjjav.xyz",
       "mxzhxco8dft.com",
       "gobsao8u.com",
       "as9u7bgh9.com",
@@ -40182,6 +40246,9 @@
   },
   {
     "hostnames": [
+      "ondemand.*",
+      "ondemand.st",
+      "ondemand.to",
       "retrovault.ch",
       "tossequip.net",
       "thedaddy.li",
@@ -59834,6 +59901,18 @@
   },
   {
     "hostnames": [
+      "themezon.net"
+    ],
+    "name": "trusted-suppress-native-method",
+    "args": [
+      "Element.prototype.getAttribute",
+      "\"data-adblock\"",
+      "prevent"
+    ],
+    "ruleset": "ruleset_adguard_antiadblock"
+  },
+  {
+    "hostnames": [
       "knshow.com"
     ],
     "name": "remove-node-text",
@@ -79345,6 +79424,7 @@
   },
   {
     "hostnames": [
+      "vvaassjjav.xyz",
       "fhjabs.com",
       "gobsao8u.com",
       "as9u7bgh9.com",
@@ -79367,6 +79447,7 @@
   },
   {
     "hostnames": [
+      "vvaassjjav.xyz",
       "fhjabs.com",
       "gobsao8u.com",
       "as9u7bgh9.com",
@@ -79390,6 +79471,7 @@
   },
   {
     "hostnames": [
+      "vvaassjjav.xyz",
       "fhjabs.com",
       "gobsao8u.com",
       "as9u7bgh9.com",
@@ -91446,6 +91528,7 @@
       "wordfinderx.com",
       "wordshake.com",
       "worldjournal.com",
+      "wykop.pl",
       "zekamashi.net"
     ],
     "name": "blank-setattribute-value",
@@ -91477,7 +91560,8 @@
       "satkurier.pl",
       "urbandictionary.com",
       "welt.de",
-      "wordshake.com"
+      "wordshake.com",
+      "wykop.pl"
     ],
     "name": "ubo-rmnt",
     "args": [
@@ -91528,7 +91612,8 @@
       "sms24.me",
       "urldecoder.org",
       "welt.de",
-      "worldjournal.com"
+      "worldjournal.com",
+      "wykop.pl"
     ],
     "name": "ubo-ra",
     "args": [

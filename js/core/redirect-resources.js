@@ -30,7 +30,7 @@
 // the Import ABP box alike — both read this table through js/core/ubo-parser.js):
 //   - noop.js        (dpgmedia.nl/dpgmedia.com$redirect=noop.js)
 //   - noop-1s.mp4    (cdn-ster-nl.akamaized.net/*.mp4$redirect=noopmp4-1s, on nos.nl)
-//   - optimizely.js  (11.0.4, uBO e68e05cde0) surrogate for cdn.optimizely.com/js/<id>.js and
+//   - optimizely.js  (11.0.4, synced to uBO 74bcea2 in 11.1.5) surrogate for cdn.optimizely.com/js/<id>.js and
 //                    /public/…_edge_helper.js: a working but empty window.optimizely, no experiments,
 //                    no cookies/storage, no beacons. Used from the owner's Quick-fixes list.
 //   - google-ima.js  (11.1.4, uBO b8a305e) surrogate for imasdk.googleapis.com/js/sdkloader/ima3.js: a working

@@ -593,6 +593,17 @@
     }
   },
   {
+    "id": 776368,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||ashemaletube.com/ast/bbb/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 977792,
     "priority": 10000,
     "action": {
@@ -967,6 +978,17 @@
     },
     "condition": {
       "urlFilter": "||boyfriendtv.com/bftv/bbb/img/",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1323548,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||boyfriendtv.com/bftv/bgg/",
       "isUrlFilterCaseSensitive": false
     }
   },

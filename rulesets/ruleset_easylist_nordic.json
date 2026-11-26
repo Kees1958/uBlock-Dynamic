@@ -14916,7 +14916,7 @@
     }
   },
   {
-    "id": 1440886,
+    "id": 441585,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -14955,6 +14955,7 @@
         "nichehuset.dk",
         "step.dk",
         "be.contimo.app",
+        "kilkaya.com",
         "collector.schibsted.io"
       ],
       "domainType": "thirdParty"

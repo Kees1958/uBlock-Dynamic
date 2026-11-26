@@ -4,6 +4,13 @@ Short, per-release summary of what changed — no implementation detail.
 Lives in the project's docs (since 10.1.4 it is no longer shipped inside the
 extension). The full technical account is CHANGELOG_HISTORY.md.
 
+## 11.1.5
+- **Fixed: pages could freeze with "Maximum call stack size exceeded" where Optimizely is replaced by uBD's stand-in**
+  (Bad filter fixes' Optimizely rules) and another script on the page also follows page navigation. The stand-in is
+  now uBlock Origin's current version, which also answers Optimizely's high-priority start-up pass correctly, knows
+  the Dynamic Customer Profile data, and covers sites still on the old Optimizely Classic snippet.
+- **All filter lists refreshed** (full update, 2026-11-26).
+
 ## 11.1.4
 - **Fixed: rules meant for other blockers were used too.** AdGuard marks some rules as only for its iPhone/Safari,
   Android or desktop apps; uBD now leaves those out, exactly as AdGuard's own Chrome extension does (about 1,700

@@ -9,13 +9,13 @@
     "id": "ruleset_annoyances",
     "specificDataFile": "rulesets/ruleset_annoyances-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_annoyances-cosmetic-loader.js",
-    "v": "64j52q"
+    "v": "2js08u"
   },
   {
     "id": "ruleset_adguard_base",
     "specificDataFile": "rulesets/ruleset_adguard_base-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_base-cosmetic-loader.js",
-    "v": "82ngtl"
+    "v": "1vbum67"
   },
   {
     "id": "ruleset_agbase_overflow_dutch",
@@ -75,7 +75,7 @@
     "id": "ruleset_agbase_overflow_bulgarian",
     "specificDataFile": "rulesets/ruleset_agbase_overflow_bulgarian-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_agbase_overflow_bulgarian-cosmetic-loader.js",
-    "v": "10dikxw"
+    "v": "m156wm"
   },
   {
     "id": "ruleset_agbase_overflow_nordic",
@@ -105,7 +105,7 @@
     "id": "ruleset_adguard_german",
     "specificDataFile": "rulesets/ruleset_adguard_german-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_german-cosmetic-loader.js",
-    "v": "15eaytp"
+    "v": "n244ty"
   },
   {
     "id": "ruleset_adguard_french",
@@ -159,13 +159,13 @@
     "id": "ruleset_easylist_nordic",
     "specificDataFile": "rulesets/ruleset_easylist_nordic-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_nordic-cosmetic-loader.js",
-    "v": "wo5g90"
+    "v": "1vjhqnx"
   },
   {
     "id": "ruleset_easylist_bulgarian",
     "specificDataFile": "rulesets/ruleset_easylist_bulgarian-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_bulgarian-cosmetic-loader.js",
-    "v": "99ms8u"
+    "v": "srxrhi"
   },
   {
     "id": "ruleset_adguard_antiadblock",
