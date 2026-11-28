@@ -1,6 +1,6 @@
 [
   {
-    "id": 1056595,
+    "id": 1193718,
     "priority": 8000,
     "action": {
       "type": "block"
@@ -209,6 +209,7 @@
         "1by8mw-launches.appsflyersdk.com",
         "1c-e0e78bd7d7fd408d87142c500d5b8890.ecs.us-west-1.on.aws",
         "1ccduz-cdn-settings.appsflyersdk.com",
+        "1ccduz-conversions.appsflyersdk.com",
         "1ccduz-inapps.appsflyersdk.com",
         "1ccduz-launches.appsflyersdk.com",
         "1cjxck-attr.appsflyersdk.com",
@@ -1151,7 +1152,6 @@
         "7dodecirdp8ka85d7flbka812.litix.io",
         "7dxka2-cdn-settings.appsflyersdk.com",
         "7dxka2-launches.appsflyersdk.com",
-        "7e0bb.v.fwmrm.net",
         "7e115.v.fwmrm.net",
         "7e14d.v.fwmrm.net",
         "7e1d2-dstack.v.fwmrm.net",
@@ -1246,6 +1246,8 @@
         "7tyy5l-cdn-settings.appsflyersdk.com",
         "7xcqu7-cdn-settings.appsflyersdk.com",
         "7xcqu7-launches.appsflyersdk.com",
+        "7zvaao-cdn-settings.appsflyersdk.com",
+        "7zvaao-launches.appsflyersdk.com",
         "80276.v.fwmrm.net",
         "8028ct-attr.appsflyersdk.com",
         "8028ct-cdn-settings.appsflyersdk.com",
@@ -1899,6 +1901,7 @@
         "acwlwn-cdn-settings.appsflyersdk.com",
         "acwlwn-conversions.appsflyersdk.com",
         "acwlwn-launches.appsflyersdk.com",
+        "acwyad-cdn-settings.appsflyersdk.com",
         "acwyad-inapps.appsflyersdk.com",
         "acwyad-launches.appsflyersdk.com",
         "ad-adapex.io",
@@ -2046,6 +2049,7 @@
         "ad.us.doubleclick.net",
         "ad.usatoday.com",
         "ad.weibo.com",
+        "ad.xiaomi.com.mgslb.com",
         "ad.xiaomi.com",
         "ad.youku.com",
         "ad.zetacx.net",
@@ -2377,7 +2381,6 @@
         "ads-product-integration.googleusercontent.com",
         "ads-production-public.s3.amazonaws.com",
         "ads-production-public.s3.us-east-1.amazonaws.com",
-        "ads-pubsfusion.com",
         "ads-redis.ecn.cl",
         "ads-resources.waze.com",
         "ads-router-noneu.truecaller.com",
@@ -2919,6 +2922,7 @@
         "advscdn.com",
         "advx.esprimo.com",
         "adw.sapo.pt",
+        "adx-ads-fr-heytapmobila-c7870.fr-w01.cngw.heytapmobile.com",
         "adx-ads-fr.heytapmobile.com",
         "adx-ads-ru.heytapmobile.com",
         "adx-dra.op.hicloud.com",
@@ -3216,6 +3220,7 @@
         "alw8p6-launches.appsflyersdk.com",
         "alw8p6-register.appsflyersdk.com",
         "alwingulla.com",
+        "alwxamfivx.com",
         "alx-api.exponea.com",
         "alxwrd.goatcounter.com",
         "am.contobox.com",
@@ -3744,8 +3749,10 @@
         "analytics.cocolog-nifty.com",
         "analytics.codechameleon.com",
         "analytics.codigo.se",
+        "analytics.coinbase.com",
         "analytics.cointiply.com",
         "analytics.coloringdaily.com",
+        "analytics.commercecloud.salesforce.com",
         "analytics.comune.fi.it",
         "analytics.conad.it",
         "analytics.console.redhat.com",
@@ -3766,6 +3773,7 @@
         "analytics.cube-digital.media",
         "analytics.cultureamp.com",
         "analytics.cutetarots.com",
+        "analytics.cz89100315www.mobile.de",
         "analytics.danija.lt",
         "analytics.data.lloydsbankinggroup.com",
         "analytics.data.visenze.com",
@@ -3998,7 +4006,18 @@
         "analytics.jamstackvietnam.com",
         "analytics.jazel.net",
         "analytics.jdsports.co.uk",
-        "analytics.jdsports.es",
+        "analytics.jdsports.es"
+      ]
+    }
+  },
+  {
+    "id": 1452927,
+    "priority": 8000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
         "analytics.jibecdn.com",
         "analytics.jimms.fi",
         "analytics.jjshouse.com",
@@ -4006,18 +4025,7 @@
         "analytics.josbank.com",
         "analytics.justdone.com",
         "analytics.justica.gov.pt",
-        "analytics.kallinich-media.de"
-      ]
-    }
-  },
-  {
-    "id": 1338939,
-    "priority": 8000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
+        "analytics.kallinich-media.de",
         "analytics.kaltura.com",
         "analytics.karakuri.ai",
         "analytics.karenmillen.com",
@@ -4505,6 +4513,7 @@
         "analytics.tourismusnetz.com",
         "analytics.tpdads.com",
         "analytics.tr.adjust.com",
+        "analytics.trackad.ai",
         "analytics.tradera.com",
         "analytics.transmatico.com",
         "analytics.trash.porn",
@@ -5220,7 +5229,6 @@
         "att-conversions.appsflyersdk.com",
         "att-dlsdk.appsflyersdk.com",
         "att-launches.appsflyersdk.com",
-        "attach.mail.daum.net",
         "attainplatform.io",
         "attdomainsecure.weebly.com",
         "attntags.com",
@@ -5579,6 +5587,7 @@
         "bcacinchprod.112.2o7.net",
         "bcaeuprod.112.2o7.net",
         "bcdymf-launches.appsflyersdk.com",
+        "bcgqtky.com",
         "bcjbwo-cdn-settings.appsflyersdk.com",
         "bcjbwo-gcdsdk.appsflyersdk.com",
         "bcjbwo-launches.appsflyersdk.com",
@@ -5686,6 +5695,7 @@
         "beadhive.goatcounter.com",
         "beagle.prod.tda.link",
         "beam-tracker.telex.hu",
+        "beam.denikn.cz",
         "beam.telegram.hr",
         "beam.telex.hu",
         "beamanalytics.b-cdn.net",
@@ -5834,6 +5844,7 @@
         "bilder.n-tv.de",
         "bilder11.markt.de",
         "bildirt.com",
+        "bildwl.mobile.de",
         "bilgin.pro",
         "bilsyndication.com",
         "bimmerpartswholesale.com.102.122.2o7.net",
@@ -6384,6 +6395,7 @@
         "camp-api.naver.com",
         "camp.inc.com",
         "campaign-remp.444.hu",
+        "campaign.denikn.cz",
         "campaign.fbot.me",
         "campaign.telegram.hr",
         "campaign.thehindubusinessline.com",
@@ -6564,6 +6576,7 @@
         "cdn.defractal.com",
         "cdn.destinilocators.com",
         "cdn.dfsdk.com",
+        "cdn.diginetica.net",
         "cdn.doubleverify.com",
         "cdn.dv.tech",
         "cdn.eaec.fpfis.tech.ec.europa.eu",
@@ -6941,7 +6954,6 @@
         "cloudfrant.net",
         "cloudi-in.browser.heytapmobile.com",
         "cloudi-sg.browser.heytapmobile.com",
-        "cloudlogobox.com",
         "cloudpiko.com",
         "cloudservices.roku.com",
         "clrstm.com",
@@ -8003,10 +8015,20 @@
         "data.abc.es",
         "data.accountsemea.coca-cola.com",
         "data.aeldresagen.dk",
-        "data.alerts.att.com",
         "data.alkosto.com",
         "data.allstate.com",
-        "data.analytics.clockwisemd.com",
+        "data.analytics.clockwisemd.com"
+      ]
+    }
+  },
+  {
+    "id": 1602870,
+    "priority": 8000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
         "data.ara-shoes.com",
         "data.autocasion.com",
         "data.barbour.com",
@@ -8017,18 +8039,7 @@
         "data.brasil.santander.com.br",
         "data.bulk.com",
         "data.burgosconecta.es",
-        "data.businessmail.verizon.com"
-      ]
-    }
-  },
-  {
-    "id": 1989567,
-    "priority": 8000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
+        "data.businessmail.verizon.com",
         "data.campaign.prenatal.com",
         "data.campaign.toyscenter.it",
         "data.campingwagner.de",
@@ -8122,6 +8133,7 @@
         "data.magento.opensourcebrokers.ca.greylabeldelivery.com",
         "data.magento2.opensourcebrokers.ca.greylabeldelivery.com",
         "data.mail.smiles.com.br",
+        "data.mainlinemenswear.co.uk",
         "data.marketing.att.com",
         "data.marketing.benavides.com.mx",
         "data.marketing.nascar.com",
@@ -8729,7 +8741,6 @@
         "dopjzr-conversions.appsflyersdk.com",
         "doppler-beacon.cbsivideo.com",
         "dorangesource.alicdn.com",
-        "doseg.site",
         "dot.wp.pl",
         "doubleclick.uk.net",
         "doug1izaerwt3.cloudfront.net",
@@ -9205,7 +9216,6 @@
         "eevegh-attr.appsflyersdk.com",
         "eevegh-cdn-settings.appsflyersdk.com",
         "eevegh-conversions.appsflyersdk.com",
-        "eevegh-gcdsdk.appsflyersdk.com",
         "eevegh-inapps.appsflyersdk.com",
         "eevegh-launches.appsflyersdk.com",
         "eevegh-register.appsflyersdk.com",
@@ -9446,7 +9456,6 @@
         "erln5u-skadsdk.appsflyersdk.com",
         "erln5u-skadsdkless.appsflyersdk.com",
         "ero-advertising.com",
-        "eroplkmfdbjhreyu.weebly.com",
         "err.ifengcloud.ifeng.com",
         "err.taobao.com",
         "error-tracker.pages.dev",
@@ -9553,6 +9562,7 @@
         "europehog.com",
         "europuls.eu",
         "eus.rubiconproject.com",
+        "euw1.smartadserver.com",
         "euw2.smartadserver.com",
         "ev-analytics-js.s3.eu-west-1.amazonaws.com",
         "ev-ed.smadex.com",
@@ -10391,6 +10401,7 @@
         "fsxqdz-cdn-settings.appsflyersdk.com",
         "fsxqdz-launches.appsflyersdk.com",
         "fsxvbi-cdn-settings.appsflyersdk.com",
+        "fsxvbi-conversions.appsflyersdk.com",
         "fsxvbi-launches.appsflyersdk.com",
         "ft79hc-cdn-settings.appsflyersdk.com",
         "ft79hc-launches.appsflyersdk.com",
@@ -10475,6 +10486,7 @@
         "fyk69f-dynamic-report-api.appsflyersdk.com",
         "fyk69f-gcdsdk.appsflyersdk.com",
         "fyk69f-skadsdk.appsflyersdk.com",
+        "fyk69f-skadsdkless.appsflyersdk.com",
         "fynrif-launches.appsflyersdk.com",
         "fywc6.chimeratool.com",
         "fzhrun-attr.appsflyersdk.com",
@@ -10820,6 +10832,7 @@
         "ggtyxk-inapps.appsflyersdk.com",
         "ggtyxk-launches.appsflyersdk.com",
         "ghftcv-cdn-settings.appsflyersdk.com",
+        "ghftcv-launches.appsflyersdk.com",
         "ghgng2-attr.appsflyersdk.com",
         "ghgng2-cdn-settings.appsflyersdk.com",
         "ghgng2-conversions.appsflyersdk.com",
@@ -10903,7 +10916,6 @@
         "glav78-inapps.appsflyersdk.com",
         "glav78-launches.appsflyersdk.com",
         "glav78-register.appsflyersdk.com",
-        "glcdn.githack.com",
         "glfa5y-cdn-settings.appsflyersdk.com",
         "glfa5y-inapps.appsflyersdk.com",
         "glfa5y-launches.appsflyersdk.com",
@@ -11179,6 +11191,7 @@
         "gtm.beterbed.nl",
         "gtm.bynogame.com",
         "gtm.calzedonia.com",
+        "gtm.centrum.sk",
         "gtm.coca-cola.com",
         "gtm.deepl.com",
         "gtm.desigual.com",
@@ -11187,6 +11200,7 @@
         "gtm.dyson.de",
         "gtm.dyson.it",
         "gtm.dyson.nl",
+        "gtm.dysoncanada.ca",
         "gtm.eduki.com",
         "gtm.elementor.com",
         "gtm.elisa.fi",
@@ -11547,7 +11561,6 @@
         "herbstarsbuilding.com",
         "herceptin.com.102.122.2o7.net",
         "hermes.jd.com",
-        "hersheyglobalprod2021.112.2o7.net",
         "hewettfamcom.112.2o7.net",
         "hexagon-analytics.com",
         "hey.lt",
@@ -12015,7 +12028,18 @@
         "iad4.ipromote.com",
         "iad61-nessy-float1.dotomi.com",
         "iadcontent.apple.com",
-        "iadmat.nosdn.127.net",
+        "iadmat.nosdn.127.net"
+      ]
+    }
+  },
+  {
+    "id": 249044,
+    "priority": 8000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
         "iadsdk.apple.com.akadns.net",
         "iadsdk.apple.com",
         "ian.prod.analytics.ellieservices.com.cdn.cloudflare.net",
@@ -12028,18 +12052,7 @@
         "iapa1g-register.appsflyersdk.com",
         "iavnkl-cdn-settings.appsflyersdk.com",
         "iavnkl-inapps.appsflyersdk.com",
-        "iavnkl-launches.appsflyersdk.com"
-      ]
-    }
-  },
-  {
-    "id": 636814,
-    "priority": 8000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
+        "iavnkl-launches.appsflyersdk.com",
         "ib-ibi.com",
         "ib8pqr-cdn-settings.appsflyersdk.com",
         "ib8pqr-conversions.appsflyersdk.com",
@@ -12635,7 +12648,6 @@
         "iuddgy-gcdsdk.appsflyersdk.com",
         "iujdwb-cdn-settings.appsflyersdk.com",
         "iujdwb-conversions.appsflyersdk.com",
-        "iuoiklioploi.weebly.com",
         "ivct2m-attr.appsflyersdk.com",
         "ivct2m-cdn-settings.appsflyersdk.com",
         "ivct2m-conversions.appsflyersdk.com",
@@ -12785,6 +12797,7 @@
         "jbettk-inapps.appsflyersdk.com",
         "jbettk-launches.appsflyersdk.com",
         "jbg1ey-cdn-settings.appsflyersdk.com",
+        "jbimu9-adrevenue.appsflyersdk.com",
         "jcaholdingclubegiroprodesntls.112.2o7.net",
         "jcaholdingjcaprodesntls.112.2o7.net",
         "jcaholdingwemobiprod.112.2o7.net",
@@ -12887,7 +12900,6 @@
         "jj2rie-inapps.appsflyersdk.com",
         "jj2rie-launches.appsflyersdk.com",
         "jj2rie-skadsdk.appsflyersdk.com",
-        "jja.analytics.trackad.ai",
         "jk4dlx-cdn-settings.appsflyersdk.com",
         "jk4dlx-conversions.appsflyersdk.com",
         "jk4dlx-dlsdk.appsflyersdk.com",
@@ -13070,6 +13082,7 @@
         "juicyads.me",
         "juicycash.net",
         "jukebox.pathfactory.com",
+        "jul.leyanord.best",
         "jullyambery.net",
         "julrdr.com",
         "jumbo.blinkit.com",
@@ -13393,6 +13406,7 @@
         "kkvfyv-cdn-settings.appsflyersdk.com",
         "kkvfyv-inapps.appsflyersdk.com",
         "kkvfyv-launches.appsflyersdk.com",
+        "kl4duo-cdn-settings.appsflyersdk.com",
         "kl4jar-cdn-settings.appsflyersdk.com",
         "kl4jar-launches.appsflyersdk.com",
         "klaao6-cdn-settings.appsflyersdk.com",
@@ -13468,6 +13482,7 @@
         "kpck4q-skadsdkless.appsflyersdk.com",
         "kphr9g-cdn-settings.appsflyersdk.com",
         "kphr9g-dynamic-report-api.appsflyersdk.com",
+        "kphr9g-gcdsdk.appsflyersdk.com",
         "kphr9g-inapps.appsflyersdk.com",
         "kphr9g-launches.appsflyersdk.com",
         "kpmediagaua.hit.gemius.pl",
@@ -13539,6 +13554,7 @@
         "kv41fw-launches.appsflyersdk.com",
         "kv41fw-register.appsflyersdk.com",
         "kvfqewz-pileje-fr-cddc.at-o.net",
+        "kvsjya-cdn-settings.appsflyersdk.com",
         "kw07wz-attr.appsflyersdk.com",
         "kw07wz-cdn-settings.appsflyersdk.com",
         "kw07wz-conversions.appsflyersdk.com",
@@ -14525,7 +14541,6 @@
         "mail-corp.com.102.122.2o7.net",
         "mail-ksp-gov-in.weebly.com",
         "mail-organized-update.weebly.com",
-        "mail-organizer.weebly.com",
         "mail-spinner.com",
         "maile-ad.linkedin.com",
         "mailinbox.com.br",
@@ -14737,7 +14752,6 @@
         "matomo.fotball.no",
         "matomo.fourchette-et-bikini.fr",
         "matomo.freeones.com",
-        "matomo.fsspx.org",
         "matomo.gab.com",
         "matomo.gda.host",
         "matomo.gep-hosting.de",
@@ -14862,7 +14876,6 @@
         "matomo.todesanzeigenportal.ch",
         "matomo.topothek.at",
         "matomo.toulouse-metropole.fr",
-        "matomo.triple-ds.de",
         "matomo.ttg.at",
         "matomo.tu-dresden.de",
         "matomo.uk-erlangen.de",
@@ -16026,7 +16039,18 @@
         "mutualdocs.com",
         "muv6jc-attr.appsflyersdk.com",
         "muv6jc-cdn-settings.appsflyersdk.com",
-        "muv6jc-conversions.appsflyersdk.com",
+        "muv6jc-conversions.appsflyersdk.com"
+      ]
+    }
+  },
+  {
+    "id": 916272,
+    "priority": 8000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
         "muv6jc-inapps.appsflyersdk.com",
         "muv6jc-launches.appsflyersdk.com",
         "muzwxn-adrevenue.appsflyersdk.com",
@@ -16039,18 +16063,7 @@
         "mwkphk-attr.appsflyersdk.com",
         "mwkphk-cdn-settings.appsflyersdk.com",
         "mwkphk-conversions.appsflyersdk.com",
-        "mwkphk-inapps.appsflyersdk.com"
-      ]
-    }
-  },
-  {
-    "id": 1223047,
-    "priority": 8000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
+        "mwkphk-inapps.appsflyersdk.com",
         "mwkphk-launches.appsflyersdk.com",
         "mwl8mm-inapps.appsflyersdk.com",
         "mwrf.com.102.122.2o7.net",
@@ -16524,6 +16537,7 @@
         "nsclick.baidu.com",
         "nsg.symantec.com",
         "nshow-apac1.smartadserver.com",
+        "nshow-euw1.smartadserver.com",
         "nsm.dell.com",
         "nsna6odmb01c4io48kgq6keai.litix.io",
         "nst.trex.media",
@@ -16536,7 +16550,6 @@
         "ntch6g-conversions.appsflyersdk.com",
         "ntch6g-inapps.appsflyersdk.com",
         "ntch6g-launches.appsflyersdk.com",
-        "ntdc-ngc-gov-pk.weebly.com",
         "ntesgsght.com",
         "ntm.122.2o7.net",
         "ntm.netmera-web.com",
@@ -17101,6 +17114,9 @@
         "oqlfxv-dlsdk.appsflyersdk.com",
         "oqlfxv-inapps.appsflyersdk.com",
         "oqlfxv-launches.appsflyersdk.com",
+        "oqrbgg-cdn-settings.appsflyersdk.com",
+        "oqrbgg-inapps.appsflyersdk.com",
+        "oqrbgg-launches.appsflyersdk.com",
         "oqri8s-cdn-settings.appsflyersdk.com",
         "oqri8s-inapps.appsflyersdk.com",
         "oqri8s-launches.appsflyersdk.com",
@@ -18603,6 +18619,8 @@
         "q2de87-cdn-settings.appsflyersdk.com",
         "q2de87-launches.appsflyersdk.com",
         "q3vhku-cdn-settings.appsflyersdk.com",
+        "q3vhku-inapps.appsflyersdk.com",
+        "q3vhku-launches.appsflyersdk.com",
         "q4vb4x-attr.appsflyersdk.com",
         "q4vb4x-cdn-settings.appsflyersdk.com",
         "q4vb4x-conversions.appsflyersdk.com",
@@ -19380,6 +19398,7 @@
         "ri7xzw-launches.appsflyersdk.com",
         "riamiavid.com",
         "richinfo.co",
+        "richmedia-direct.pushwoosh.com",
         "richmedia.pushwoosh.com",
         "richmedia.yimg.com",
         "richmediastudio.com",
@@ -19592,6 +19611,7 @@
         "rtbtrackie.com",
         "rtbuzz.net",
         "rtbvast-apac1.smartadserver.com",
+        "rtbvast-euw1.smartadserver.com",
         "rtbvast-use1.smartadserver.com",
         "rtbvast-usw1.smartadserver.com",
         "rtbwave.com",
@@ -20030,7 +20050,18 @@
         "samsungph.api.useinsider.com",
         "samsungsamcol.api.useinsider.com",
         "samsungsamcolepp.api.useinsider.com",
-        "samsungsebnnl.api.useinsider.com",
+        "samsungsebnnl.api.useinsider.com"
+      ]
+    }
+  },
+  {
+    "id": 513778,
+    "priority": 8000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
         "samsungseda.api.useinsider.com",
         "samsungsem.api.useinsider.com",
         "samsungsepr.api.useinsider.com",
@@ -20050,18 +20081,7 @@
         "sanalytics.hottopic.com",
         "sanalytics.ksta.de",
         "sanalytics.spark.co.nz",
-        "sanalytics.sydney.edu.au"
-      ]
-    }
-  },
-  {
-    "id": 127724,
-    "priority": 8000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
+        "sanalytics.sydney.edu.au",
         "sanalytics.tntsports.com.ar",
         "sanalytics.verizon.com",
         "sanalytics.visible.com",
@@ -20144,6 +20164,10 @@
         "sco8ek-cdn-settings.appsflyersdk.com",
         "sco8ek-inapps.appsflyersdk.com",
         "sco8ek-launches.appsflyersdk.com",
+        "scobf2-attr.appsflyersdk.com",
+        "scobf2-cdn-settings.appsflyersdk.com",
+        "scobf2-conversions.appsflyersdk.com",
+        "scobf2-launches.appsflyersdk.com",
         "scollect.17173.com",
         "scomcluster.cxense.com",
         "scontent.services.tvn.pl",
@@ -20399,6 +20423,7 @@
         "server-side-tagging-4yywuaej2q-uc.a.run.app",
         "server-side-tagging-522431191156.us-central1.run.app",
         "server-side-tagging-633178361708.us-central1.run.app",
+        "server-side-tagging-639769272032.us-central1.run.app",
         "server-side-tagging-693379370523.europe-west3.run.app",
         "server-side-tagging-69581242238.us-central1.run.app",
         "server-side-tagging-724771934193.europe-west2.run.app",
@@ -20732,6 +20757,7 @@
         "sgtm.medimops.de",
         "sgtm.megaubytovanie.sk",
         "sgtm.meny.no",
+        "sgtm.mid-tenshoku.com",
         "sgtm.mirjan24.de",
         "sgtm.mirjan24.pl",
         "sgtm.mondoconv.it",
@@ -21173,6 +21199,7 @@
         "smetrics.boostmobile.com",
         "smetrics.bostonglobe.com",
         "smetrics.britishgas.co.uk",
+        "smetrics.buyagift.co.uk",
         "smetrics.cadenaser.com",
         "smetrics.caesars.com",
         "smetrics.calvinklein.us",
@@ -21408,6 +21435,7 @@
         "smetrics.redhat.com",
         "smetrics.regions.com",
         "smetrics.rejuvenation.com",
+        "smetrics.repco.com.au",
         "smetrics.rogers.com",
         "smetrics.rolex.com",
         "smetrics.roomandboard.com",
@@ -21724,6 +21752,7 @@
         "speedyperformanceparts.com.102.122.2o7.net",
         "speee-ad.akamaized.net",
         "spellknight.com",
+        "speraspace.com",
         "spexjs.com",
         "spfy-pxl.archive-digger.com",
         "spicyrtb.com",
@@ -21833,6 +21862,7 @@
         "ss.macduggal.com",
         "ss.monicavinader.com",
         "ss.mytrendyphone.dk",
+        "ss.mytrendyphone.eu",
         "ss.platanomelon.com",
         "ss.salonline.com.br",
         "ss.selfmade.com",
@@ -21901,7 +21931,6 @@
         "ssgtm.futurism.com",
         "ssgtm.geo.de",
         "ssgtm.glami.bg",
-        "ssgtm.glami.cz",
         "ssgtm.glami.gr",
         "ssgtm.govplanet.com",
         "ssgtm.iaai.com",
@@ -22846,7 +22875,6 @@
         "sw.singsw.com",
         "sw88.abc.com",
         "sw88.disneynow.com",
-        "sw88.disneystore.co.uk",
         "sw88.disneystore.de",
         "sw88.nationalgeographic.com",
         "sw88.nationalgeographic.fr",
@@ -23576,6 +23604,7 @@
         "targetone-callback.chedraui.com.mx",
         "targetrtb.com",
         "tarimorman-gov.weebly.com",
+        "tarqivo.com",
         "tattle.api.osano.com",
         "taukibreez.iad-03.braze.com",
         "tavoos.net",
@@ -23972,7 +24001,6 @@
         "thtk.temu.com",
         "thtrck.com",
         "thubanoa.com",
-        "thump-night-stand.com",
         "thymes.com.102.122.2o7.net",
         "ti.tradetracker.net",
         "ti6gzx-cdn-settings.appsflyersdk.com",
@@ -24033,7 +24061,18 @@
         "tja-expiration-pa-cd-dev-com-cddc.at-o.net",
         "tjk-njk.com",
         "tju0w4-cdn-settings.appsflyersdk.com",
-        "tjx.edge.nc0.co",
+        "tjx.edge.nc0.co"
+      ]
+    }
+  },
+  {
+    "id": 1370372,
+    "priority": 8000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
         "tjxhomegoods.112.2o7.net",
         "tjyvfd-cdn-settings.appsflyersdk.com",
         "tjyvfd-launches.appsflyersdk.com",
@@ -24061,18 +24100,7 @@
         "tlmtr.org",
         "tls-lp-cm.non.li",
         "tls-rfi.non.li",
-        "tlvzcy-cdn-settings.appsflyersdk.com"
-      ]
-    }
-  },
-  {
-    "id": 1243868,
-    "priority": 8000,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
+        "tlvzcy-cdn-settings.appsflyersdk.com",
         "tlvzcy-launches.appsflyersdk.com",
         "tm-eu.beiersdorf.com",
         "tm-global.beiersdorf.com",
@@ -24471,7 +24499,6 @@
         "tracker-beam.tempo.co",
         "tracker-dot-optimeeze.appspot.com",
         "tracker-dot.ortb.net",
-        "tracker-rec.smart-bdash.com",
         "tracker-remp.premiumtimesng.com",
         "tracker-server.high-cdn.com",
         "tracker-shr.ortb.net",
@@ -24527,6 +24554,7 @@
         "trackier.com",
         "trackify.info",
         "tracking-api-apac1.smartadserver.com",
+        "tracking-api-euw1.smartadserver.com",
         "tracking-api-use1.smartadserver.com",
         "tracking-api-usw1.smartadserver.com",
         "tracking-api.g2.com",
@@ -24625,6 +24653,7 @@
         "tracking.nw.de",
         "tracking.offerista.com",
         "tracking.olx-st.com",
+        "tracking.onthemarket.com",
         "tracking.op.se",
         "tracking.ops.wube.software",
         "tracking.osterbottenstidning.fi",
@@ -25412,7 +25441,9 @@
         "us-east-1-trends.revcontent.com",
         "us-east-1.gb-ingest.com",
         "us-east-sync.richaudience.com",
+        "us-event.dengage.com",
         "us-events.api.iheart.com",
+        "us-pcdn.dengage.com",
         "us-pub.dengage.com",
         "us-tracking.nextdoor.com",
         "us-west-2-trends.revcontent.com",
@@ -26156,6 +26187,7 @@
         "vwd6.edge.nc0.co",
         "vwl7vw-cdn-settings.appsflyersdk.com",
         "vwl7vw-launches.appsflyersdk.com",
+        "vwonwkaqvq-a.global.ssl.fastly.net",
         "vws4brkfst.com",
         "vxuset-cdn-settings.appsflyersdk.com",
         "vxuset-launches.appsflyersdk.com",
@@ -26592,6 +26624,7 @@
         "wjvqhd-gcdsdk.appsflyersdk.com",
         "wjvqhd-inapps.appsflyersdk.com",
         "wjvqhd-launches.appsflyersdk.com",
+        "wkbrs1.tingyun.com",
         "wkctj.baidu.com",
         "wkmedovidsp2017.112.2o7.net",
         "wknd.ai",
@@ -26939,10 +26972,8 @@
         "x8lza9-launches.appsflyersdk.com",
         "x904.lansi-savo.fi",
         "xa.poringa.net",
-        "xab4ma-cdn-settings.appsflyersdk.com",
         "xab4ma-gcdsdk.appsflyersdk.com",
         "xab4ma-inapps.appsflyersdk.com",
-        "xab4ma-launches.appsflyersdk.com",
         "xad.dnoticias.pt",
         "xadsmart.com",
         "xaduf5-cdn-settings.appsflyersdk.com",
@@ -27164,7 +27195,6 @@
         "xxxmangasex.com",
         "xxxviiijmp.com",
         "xxxviijmp.com",
-        "xy-fileserverpcdn.cdn.huya.com",
         "xy8ffj-cdn-settings.appsflyersdk.com",
         "xy8ffj-inapps.appsflyersdk.com",
         "xy8ffj-launches.appsflyersdk.com",
@@ -27184,6 +27214,7 @@
         "xywpg3-dynamic-report-api.appsflyersdk.com",
         "xywpg3-launches.appsflyersdk.com",
         "xywpg3-skadsdk.appsflyersdk.com",
+        "xywpg3-skadsdkless.appsflyersdk.com",
         "xz-1507771301.cos.ap-singapore.myqcloud.com",
         "xz08dm-cdn-settings.appsflyersdk.com",
         "xz08dm-conversions.appsflyersdk.com",
@@ -27447,6 +27478,7 @@
         "yt.mmstat.com",
         "yt1.mmstat.com",
         "yt6ypc-cdn-settings.appsflyersdk.com",
+        "yt6ypc-dynamic-report-api.appsflyersdk.com",
         "yt6ypc-inapps.appsflyersdk.com",
         "yt6ypc-launches.appsflyersdk.com",
         "yt6ypc-skadsdk.appsflyersdk.com",
@@ -27565,7 +27597,6 @@
         "zacymt-cdn-settings.appsflyersdk.com",
         "zacymt-conversions.appsflyersdk.com",
         "zacymt-register.appsflyersdk.com",
-        "zadig-et-voltaire.analytics.trackad.ai",
         "zagg.com.102.122.2o7.net",
         "zanalytics.vip",
         "zanbpi-cdn-settings.appsflyersdk.com",
@@ -27843,6 +27874,8 @@
         "zyg6ot-inapps.appsflyersdk.com",
         "zyg6ot-launches.appsflyersdk.com",
         "zyg6ot-skadsdkless.appsflyersdk.com",
+        "zyv6no-inapps.appsflyersdk.com",
+        "zyv6no-launches.appsflyersdk.com",
         "zz.bdstatic.com",
         "zzazz.com",
         "zzlkes-cdn-settings.appsflyersdk.com",

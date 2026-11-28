@@ -1,6 +1,6 @@
 [
   {
-    "id": 1361618,
+    "id": 3408,
     "priority": 8000,
     "action": {
       "type": "block"
@@ -692,6 +692,7 @@
         "cdn.defractal.com",
         "cdn.deviceinf.com",
         "cdn.dfsdk.com",
+        "cdn.diginetica.net",
         "cdn.dsspn.com",
         "cdn.firstpromoter.com",
         "cdn.glassboxcdn.com",
@@ -2689,7 +2690,6 @@
         "rankings24.de",
         "rankinteractive.com",
         "ranklink.de",
-        "rapid-cdn.yottaa.com",
         "rapidcounter.com",
         "rapidstats.net",
         "rapidtrk.net",

@@ -2341,6 +2341,30 @@ because the check that would have caught it was absent, not just skipped.
 Whenever the extension's code changes, the release includes a full filter refresh (`node tools/build-rulesets.mjs`). A
 SAFE filter update (skip-review) changes only the named safe rulesets (`tools/build-safe-filters.mjs`).
 
+### Scriptlet semantics audit at every major version (owner's rule, 11.1.6)
+
+**Rule:** every MAJOR version (the first number changes, e.g. 9.x → 10.0) includes a full audit of every scriptlet the
+shipped lists use, recorded in `SCRIPTLET_AUDIT.md` (newest audit on top; findings, verdicts, what was fixed, what was
+accepted and why). uBD runs AdGuard's scriptlet library, uBD's own scriptlets and translated uBlock Origin rules; a rule
+written for one engine can mean something else in another without any error. The audit covers, per scriptlet name:
+
+1. **Arguments as read** — every rule's arguments counted against what its function accepts (a parser count, not a
+   regex: AdGuard's code is transpiled, so defaults appear as `arguments[N]`); too many arguments means a rule was split
+   in the wrong place or carries another engine's options.
+2. **Arguments as meant** — uBO's named extra arguments (`runAt`, `quitAfter`, `excludes`, `propsToMatch`, `as`, …) and
+   uBO-only values (`{}`, `[]`, `function() {}`) checked against what the AdGuard function does with them: translated
+   (`js/data/ubo-scriptlet-args.js`), refused with a reason, or knowingly accepted.
+3. **Behaviour** — for every uBO-origin rule running on an AdGuard port: the port compared with uBO's own source (what
+   it watches, when it stops, which nodes or calls it judges). Time-limited observers are listed explicitly.
+4. **Application** — how uBD injects compared with uBO Lite and AdGuard: world, frames (`allFrames`,
+   `matchOriginAsFallback`), run time, site matching.
+5. **Names** — a name used by a list but missing from the library is either mapped to its equivalent, classified by the
+   trust policy, or reported; never silently skipped.
+
+Every finding is reproduced before it is fixed (real Chrome for timing questions — `tools/e2e-*.mjs`), and every fix gets
+a fault-verified test. Between major versions, a newly vendored `@adguard/scriptlets` version with changed scriptlets
+triggers the same audit for the changed names only.
+
 ### Never hand over a loose file
 
 A fix to any file of the extension, tools or docs artifact is applied to the working tree, and what goes back is the
@@ -2378,6 +2402,8 @@ the moment the word "done" was used. The gate puts the check at the one moment e
 - [ ] Source version confirmed and stated in the release notes; it is the latest verified source.
 - [ ] No previously completed functionality regressed.
 - [ ] Full filter update done (code changes).
+- [ ] MAJOR version: scriptlet semantics audit done and recorded in `SCRIPTLET_AUDIT.md` (see "Scriptlet semantics audit at
+      every major version").
 - [ ] Changelogs written; versions bumped.
 - [ ] Pre-zip gate run and reported; the owner said yes.
 - [ ] `tools/package-release.mjs` built the zips; `tools/check-version-sync.mjs` passes afterwards.

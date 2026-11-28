@@ -65,6 +65,7 @@ import { browser, localRead, localWrite } from '../data/ext.js';
 import { SCRIPTLET_NAME_TO_FILE, KNOWN_SCRIPTLET_NAMES } from '../generated/custom-scriptlets-dispatch.mjs';
 import { scriptletRuleRejection } from '../data/scriptlet-policy.js';
 import { translateUboScriptletArgs } from '../data/ubo-scriptlet-args.js';
+import { splitAdguardScriptletArgs, splitUboScriptletArgs } from '../util/scriptlet-args.js';
 import { todayISODate, isValidISODate, isValidHostnamePattern, isBoundedString } from '../util/utils.js';
 import { getFilteringMode, MODE_NONE } from './mode-manager.js';
 import { CUSTOM_SCRIPTLET_MAX } from './dnr-budgets.js';
@@ -610,10 +611,9 @@ export async function deletePrivacyScriptletRulesMatching(filter) {
 // ArglistParser) — reusing that here isn't possible without violating
 // this project's five-tier dependency model (js/ui/ is a HIGHER tier
 // than js/core/; core/ may not import from ui/ — see ARCHITECTURE.md).
-// splitScriptletArgs() IS quote-aware — a comma inside a quoted argument
-// is not treated as a separator; still simplified relative to
-// ArglistParser (e.g. no escaped-quote handling), but correct for the
-// common case.
+// (11.1.6) The arguments are read by the shared, quote- and escape-aware
+// readers of js/util/scriptlet-args.js (the build's own), so the old
+// "no escaped-quote handling" limitation is gone.
 /******************************************************************************/
 
 // ── Scriptlet line syntax — one parser for both uBO and AdGuard forms ───────
@@ -647,30 +647,11 @@ export async function deletePrivacyScriptletRulesMatching(filter) {
 const SCRIPTLET_LINE_RE = /^([^#]+)#(@?)(#\+js|%#\/\/scriptlet)\((.*)\)$/;
 const UBO_CALL_MARKER = '#+js';
 
-// Splits a scriptlet call's argument list on top-level commas only — a
-// comma inside a quoted argument (single or double quotes) does not
-// split. Quote characters themselves are stripped from each argument.
-// Name kept syntax-neutral (not "AdGuard") now that both uBO- and
-// AdGuard-syntax lines share this same splitter — see this section's own
-// header comment for why unifying this specifically was the point.
-function splitScriptletArgs(argsText) {
-    const args = [];
-    let current = '';
-    let quoteChar = null;
-    for ( let i = 0; i < argsText.length; i++ ) {
-        const ch = argsText[i];
-        if ( quoteChar !== null ) {
-            if ( ch === quoteChar ) { quoteChar = null; }
-            else { current += ch; }
-            continue;
-        }
-        if ( ch === '\'' || ch === '"' ) { quoteChar = ch; continue; }
-        if ( ch === ',' ) { args.push(current.trim()); current = ''; continue; }
-        current += ch;
-    }
-    const last = current.trim();
-    if ( last !== '' || args.length > 0 ) { args.push(last); }
-    return args;
+// (11.1.6) Arguments are read by THE shared readers (js/util/scriptlet-args.js) — the same the build uses for the filter
+// lists, so a rule typed here is read exactly like the same line in a list: uBO syntax with `\,` and quoted tokens,
+// AdGuard syntax with `\'` / `\"` inside a quoted argument.
+function splitScriptletArgs(argsText, uboSyntax) {
+    return uboSyntax ? splitUboScriptletArgs(argsText) : splitAdguardScriptletArgs(argsText);
 }
 
 // Returns:
@@ -711,7 +692,7 @@ export function parseScriptletLine(line) {
         };
     }
 
-    const rawArgs = splitScriptletArgs(m[4]);
+    const rawArgs = splitScriptletArgs(m[4], m[3] === UBO_CALL_MARKER);
     const rawName = rawArgs.shift();
     if ( !rawName ) {
         return { error: 'Scriptlet call has no scriptlet name' };

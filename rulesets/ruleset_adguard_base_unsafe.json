@@ -1,6 +1,6 @@
 [
   {
-    "id": 1735,
+    "id": 1736,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "id": 1736,
+    "id": 1737,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -37,7 +37,7 @@
     }
   },
   {
-    "id": 1737,
+    "id": 1738,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -57,7 +57,7 @@
     }
   },
   {
-    "id": 1738,
+    "id": 1739,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -77,7 +77,7 @@
     }
   },
   {
-    "id": 1739,
+    "id": 1740,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -94,7 +94,7 @@
     }
   },
   {
-    "id": 1740,
+    "id": 1741,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -114,7 +114,7 @@
     }
   },
   {
-    "id": 1741,
+    "id": 1742,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -131,7 +131,7 @@
     }
   },
   {
-    "id": 1742,
+    "id": 1743,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -148,7 +148,7 @@
     }
   },
   {
-    "id": 1743,
+    "id": 1744,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -165,7 +165,7 @@
     }
   },
   {
-    "id": 1744,
+    "id": 1745,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -182,7 +182,7 @@
     }
   },
   {
-    "id": 1745,
+    "id": 1746,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -202,7 +202,7 @@
     }
   },
   {
-    "id": 1746,
+    "id": 1747,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -222,7 +222,7 @@
     }
   },
   {
-    "id": 1747,
+    "id": 1748,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -242,7 +242,7 @@
     }
   },
   {
-    "id": 1748,
+    "id": 1749,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -262,7 +262,7 @@
     }
   },
   {
-    "id": 1749,
+    "id": 1750,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -282,7 +282,7 @@
     }
   },
   {
-    "id": 1750,
+    "id": 1751,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -303,7 +303,7 @@
     }
   },
   {
-    "id": 1751,
+    "id": 1752,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -324,7 +324,7 @@
     }
   },
   {
-    "id": 1752,
+    "id": 1753,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -344,7 +344,7 @@
     }
   },
   {
-    "id": 1753,
+    "id": 1754,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -364,7 +364,7 @@
     }
   },
   {
-    "id": 1754,
+    "id": 1755,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -384,7 +384,7 @@
     }
   },
   {
-    "id": 1755,
+    "id": 1756,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -404,7 +404,7 @@
     }
   },
   {
-    "id": 1756,
+    "id": 1757,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -424,7 +424,7 @@
     }
   },
   {
-    "id": 1757,
+    "id": 1758,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -444,7 +444,7 @@
     }
   },
   {
-    "id": 1758,
+    "id": 1759,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -464,7 +464,7 @@
     }
   },
   {
-    "id": 1759,
+    "id": 1760,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -485,7 +485,7 @@
     }
   },
   {
-    "id": 1760,
+    "id": 1761,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -505,7 +505,7 @@
     }
   },
   {
-    "id": 1761,
+    "id": 1762,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -525,7 +525,7 @@
     }
   },
   {
-    "id": 1762,
+    "id": 1763,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -546,7 +546,7 @@
     }
   },
   {
-    "id": 1763,
+    "id": 1764,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -566,7 +566,7 @@
     }
   },
   {
-    "id": 1764,
+    "id": 1765,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -586,7 +586,7 @@
     }
   },
   {
-    "id": 1765,
+    "id": 1766,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -606,7 +606,7 @@
     }
   },
   {
-    "id": 1766,
+    "id": 1767,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -628,7 +628,7 @@
     }
   },
   {
-    "id": 1767,
+    "id": 1768,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -648,7 +648,7 @@
     }
   },
   {
-    "id": 1768,
+    "id": 1769,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -668,7 +668,7 @@
     }
   },
   {
-    "id": 1769,
+    "id": 1770,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -688,7 +688,7 @@
     }
   },
   {
-    "id": 1770,
+    "id": 1771,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -708,7 +708,7 @@
     }
   },
   {
-    "id": 1771,
+    "id": 1772,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -728,7 +728,7 @@
     }
   },
   {
-    "id": 1772,
+    "id": 1773,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -748,7 +748,7 @@
     }
   },
   {
-    "id": 1773,
+    "id": 1774,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -768,7 +768,7 @@
     }
   },
   {
-    "id": 1774,
+    "id": 1775,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -788,7 +788,7 @@
     }
   },
   {
-    "id": 1775,
+    "id": 1776,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -808,7 +808,7 @@
     }
   },
   {
-    "id": 1777,
+    "id": 1778,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -828,7 +828,7 @@
     }
   },
   {
-    "id": 1778,
+    "id": 1779,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -848,7 +848,7 @@
     }
   },
   {
-    "id": 1843,
+    "id": 1844,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -870,7 +870,7 @@
     }
   },
   {
-    "id": 1853,
+    "id": 1854,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -890,7 +890,7 @@
     }
   },
   {
-    "id": 1854,
+    "id": 1855,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -910,7 +910,7 @@
     }
   },
   {
-    "id": 1855,
+    "id": 1856,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -932,7 +932,7 @@
     }
   },
   {
-    "id": 1856,
+    "id": 1857,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -949,7 +949,7 @@
     }
   },
   {
-    "id": 1865,
+    "id": 1866,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -966,7 +966,7 @@
     }
   },
   {
-    "id": 1883,
+    "id": 1884,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -983,7 +983,7 @@
     }
   },
   {
-    "id": 1904,
+    "id": 1905,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -996,26 +996,6 @@
         "script"
       ],
       "urlFilter": "||asloader.tz.de^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
-    "id": 1934,
-    "priority": 10001,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
-      }
-    },
-    "condition": {
-      "initiatorDomains": [
-        "open.spotify.com"
-      ],
-      "resourceTypes": [
-        "media"
-      ],
-      "urlFilter": "||adstudio-assets.scdn.co/*.mp3",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1035,7 +1015,7 @@
       "resourceTypes": [
         "media"
       ],
-      "urlFilter": "||spotifycdn.com/audio/",
+      "urlFilter": "||adstudio-assets.scdn.co/*.mp3",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1050,12 +1030,12 @@
     },
     "condition": {
       "initiatorDomains": [
-        "spotify.com"
+        "open.spotify.com"
       ],
       "resourceTypes": [
         "media"
       ],
-      "urlFilter": "||media-us.amillionads.com/*.mp3",
+      "urlFilter": "||spotifycdn.com/audio/",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1075,7 +1055,7 @@
       "resourceTypes": [
         "media"
       ],
-      "urlFilter": "||cf.adxcel.com^",
+      "urlFilter": "||media-us.amillionads.com/*.mp3",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1095,7 +1075,7 @@
       "resourceTypes": [
         "media"
       ],
-      "urlFilter": "||audio-*.scdn.co/audio/",
+      "urlFilter": "||cf.adxcel.com^",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1115,7 +1095,7 @@
       "resourceTypes": [
         "media"
       ],
-      "urlFilter": "||creativeservice-production.scdn.co/mp3-ad/*.mp3",
+      "urlFilter": "||audio-*.scdn.co/audio/",
       "isUrlFilterCaseSensitive": false
     }
   },
@@ -1135,12 +1115,32 @@
       "resourceTypes": [
         "media"
       ],
+      "urlFilter": "||creativeservice-production.scdn.co/mp3-ad/*.mp3",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 1941,
+    "priority": 10001,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/web_accessible_resources/noop-1s.mp4"
+      }
+    },
+    "condition": {
+      "initiatorDomains": [
+        "spotify.com"
+      ],
+      "resourceTypes": [
+        "media"
+      ],
       "urlFilter": "||audio-ak*-*.akamaized.net/audio/",
       "isUrlFilterCaseSensitive": false
     }
   },
   {
-    "id": 2108,
+    "id": 2111,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1161,7 +1161,7 @@
     }
   },
   {
-    "id": 2253,
+    "id": 2256,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -1181,7 +1181,7 @@
     }
   },
   {
-    "id": 2457,
+    "id": 2460,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1201,7 +1201,7 @@
     }
   },
   {
-    "id": 2496,
+    "id": 2499,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1219,7 +1219,7 @@
     }
   },
   {
-    "id": 2531,
+    "id": 2534,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1236,7 +1236,7 @@
     }
   },
   {
-    "id": 2597,
+    "id": 2600,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1256,7 +1256,7 @@
     }
   },
   {
-    "id": 2666,
+    "id": 2669,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -1276,7 +1276,7 @@
     }
   },
   {
-    "id": 2678,
+    "id": 2681,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1293,7 +1293,7 @@
     }
   },
   {
-    "id": 2749,
+    "id": 2752,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1310,7 +1310,7 @@
     }
   },
   {
-    "id": 2867,
+    "id": 2870,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1331,7 +1331,7 @@
     }
   },
   {
-    "id": 2911,
+    "id": 2914,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1345,7 +1345,7 @@
     }
   },
   {
-    "id": 2971,
+    "id": 2974,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -1368,7 +1368,7 @@
     }
   },
   {
-    "id": 3033,
+    "id": 3036,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -1388,7 +1388,7 @@
     }
   },
   {
-    "id": 3168,
+    "id": 3171,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1415,7 +1415,7 @@
     }
   },
   {
-    "id": 3169,
+    "id": 3172,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1432,7 +1432,7 @@
     }
   },
   {
-    "id": 3170,
+    "id": 3173,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1449,7 +1449,7 @@
     }
   },
   {
-    "id": 3171,
+    "id": 3174,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1466,7 +1466,7 @@
     }
   },
   {
-    "id": 3172,
+    "id": 3175,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1483,7 +1483,7 @@
     }
   },
   {
-    "id": 3173,
+    "id": 3176,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1500,7 +1500,7 @@
     }
   },
   {
-    "id": 3174,
+    "id": 3177,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1517,7 +1517,7 @@
     }
   },
   {
-    "id": 3280,
+    "id": 3283,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1537,7 +1537,7 @@
     }
   },
   {
-    "id": 3540,
+    "id": 3543,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1554,7 +1554,7 @@
     }
   },
   {
-    "id": 3562,
+    "id": 3565,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -1574,7 +1574,7 @@
     }
   },
   {
-    "id": 3837,
+    "id": 3840,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1591,7 +1591,7 @@
     }
   },
   {
-    "id": 3937,
+    "id": 3940,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1608,7 +1608,7 @@
     }
   },
   {
-    "id": 3953,
+    "id": 3956,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1625,7 +1625,7 @@
     }
   },
   {
-    "id": 3998,
+    "id": 4001,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1642,7 +1642,7 @@
     }
   },
   {
-    "id": 4189,
+    "id": 4192,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1664,7 +1664,7 @@
     }
   },
   {
-    "id": 4226,
+    "id": 4229,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1681,7 +1681,7 @@
     }
   },
   {
-    "id": 4269,
+    "id": 4272,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1701,7 +1701,7 @@
     }
   },
   {
-    "id": 4272,
+    "id": 4275,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1718,7 +1718,7 @@
     }
   },
   {
-    "id": 4309,
+    "id": 4312,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1739,7 +1739,7 @@
     }
   },
   {
-    "id": 4315,
+    "id": 4318,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1753,7 +1753,7 @@
     }
   },
   {
-    "id": 4316,
+    "id": 4319,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1767,7 +1767,7 @@
     }
   },
   {
-    "id": 5242,
+    "id": 5245,
     "priority": 10003,
     "action": {
       "type": "redirect",
@@ -1784,7 +1784,7 @@
     }
   },
   {
-    "id": 5473,
+    "id": 5476,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1823,7 +1823,7 @@
     }
   },
   {
-    "id": 5591,
+    "id": 5594,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1840,7 +1840,7 @@
     }
   },
   {
-    "id": 5616,
+    "id": 5619,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1860,7 +1860,7 @@
     }
   },
   {
-    "id": 5657,
+    "id": 5660,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1878,7 +1878,7 @@
     }
   },
   {
-    "id": 5859,
+    "id": 5862,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1897,7 +1897,7 @@
     }
   },
   {
-    "id": 5980,
+    "id": 5983,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1918,7 +1918,7 @@
     }
   },
   {
-    "id": 5981,
+    "id": 5984,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1939,7 +1939,7 @@
     }
   },
   {
-    "id": 5984,
+    "id": 5987,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1960,7 +1960,7 @@
     }
   },
   {
-    "id": 5987,
+    "id": 5990,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -1982,7 +1982,7 @@
     }
   },
   {
-    "id": 5988,
+    "id": 5991,
     "priority": 10000,
     "action": {
       "type": "redirect",
@@ -2003,7 +2003,7 @@
     }
   },
   {
-    "id": 5992,
+    "id": 5995,
     "priority": 10000,
     "action": {
       "type": "redirect",

@@ -1,9 +1,5 @@
 [
   {
-    "id": "ruleset_badfilter_quickfixes",
-    "file": "rulesets/ruleset_badfilter_quickfixes-scriptlets.js"
-  },
-  {
     "id": "ruleset_annoyances",
     "file": "rulesets/ruleset_annoyances-scriptlets.js"
   },

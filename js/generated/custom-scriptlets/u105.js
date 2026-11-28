@@ -4,27 +4,25 @@
     delete self.__uboCustomScriptletArgs;
     var source = (a && a[0]) || {};
     var args = (a && a[1]) || [];
-    (function setDataAttr(source, args) {
-            const [ selector = '', attr = '', value = '' ] = args || [];
-            const NAME_RE = /^data-[a-z0-9-]{1,64}$/i;
-            const VALUE_RE = /^[A-Za-z0-9_-]{1,32}$/;
-            if ( typeof selector !== 'string' || selector.trim() === '' ) { return; }
-            if ( NAME_RE.test(attr) === false || VALUE_RE.test(value) === false ) { return; }
-            let pending;
-            const apply = ( ) => {
-                pending = undefined;
-                let elems;
-                try { elems = document.querySelectorAll(selector); } catch { return false; }   // invalid selector
+    (function preventDialog(source, args) {
+            const [ selector = '' ] = args || [];
+            const logPrefix = `[uBlock-Dynamic] prevent-dialog(${selector}):`;
+            const prevent = ( ) => {
+                debouncer = undefined;
+                const elems = document.querySelectorAll(`dialog${selector}`);
                 for ( const elem of elems ) {
-                    if ( elem.getAttribute(attr) !== value ) { elem.setAttribute(attr, value); }
+                    if ( typeof elem.close !== 'function' ) { continue; }
+                    if ( elem.open === false ) { continue; }
+                    elem.close();
+                    if ( source.verbose ) { console.log(logPrefix, 'Closed'); }
                 }
-                return true;
             };
-            if ( apply() === false ) { return; }
+            let debouncer;
             const observer = new MutationObserver(( ) => {
-                if ( pending !== undefined ) { return; }
-                pending = requestAnimationFrame(apply);
+                if ( debouncer !== undefined ) { return; }
+                debouncer = requestAnimationFrame(prevent);
             });
             observer.observe(document, { childList: true, subtree: true });
+            prevent();
         })(source, args);
 })();

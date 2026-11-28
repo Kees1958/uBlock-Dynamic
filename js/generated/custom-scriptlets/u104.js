@@ -4,15 +4,27 @@
     delete self.__uboCustomScriptletArgs;
     var source = (a && a[0]) || {};
     var args = (a && a[1]) || [];
-    (function setStorageItemNow(source, args) {
-            const [ kind = '', key = '' ] = args || [];
-            const STORAGE_BY_KIND = { local: 'localStorage', session: 'sessionStorage' };
-            const MAX_KEY_LENGTH = 256;
-            const storageName = STORAGE_BY_KIND[kind];
-            if ( storageName === undefined || typeof key !== 'string' || key.trim() === '' || key.length > MAX_KEY_LENGTH ) { return; }
-            try {
-                self[storageName].setItem(key, String(Date.now()));
-                if ( source.verbose ) { console.log('[uBlock-Dynamic] set-storage-item-now:', kind, key); }
-            } catch { /* storage disabled or full: nothing to do */ }
+    (function setDataAttr(source, args) {
+            const [ selector = '', attr = '', value = '' ] = args || [];
+            const NAME_RE = /^data-[a-z0-9-]{1,64}$/i;
+            const VALUE_RE = /^[A-Za-z0-9_-]{1,32}$/;
+            if ( typeof selector !== 'string' || selector.trim() === '' ) { return; }
+            if ( NAME_RE.test(attr) === false || VALUE_RE.test(value) === false ) { return; }
+            let pending;
+            const apply = ( ) => {
+                pending = undefined;
+                let elems;
+                try { elems = document.querySelectorAll(selector); } catch { return false; }   // invalid selector
+                for ( const elem of elems ) {
+                    if ( elem.getAttribute(attr) !== value ) { elem.setAttribute(attr, value); }
+                }
+                return true;
+            };
+            if ( apply() === false ) { return; }
+            const observer = new MutationObserver(( ) => {
+                if ( pending !== undefined ) { return; }
+                pending = requestAnimationFrame(apply);
+            });
+            observer.observe(document, { childList: true, subtree: true });
         })(source, args);
 })();

@@ -51,7 +51,9 @@ export const SCRIPTLET_POLICY = Object.freeze({
     // Rule A — AdGuard prefixes every scriptlet that needs trust with this.
     TRUSTED_NAME_PREFIX: 'trusted-',
     // Rule A — scriptlets that need trust WITHOUT the prefix (uBO registers them with requiresTrust: true).
-    REQUIRES_TRUST_NAMES: Object.freeze([ 'prevent-clipboard-write' ]),
+    // (11.1.6) + uBO's `replace-node-text` / `rpnt` — aliases of its trusted-replace-node-text.js (requiresTrust: true,
+    // uBO source); before, `ubo-rpnt` from uBlock Origin's lists slipped past rule A and was only reported as "missing".
+    REQUIRES_TRUST_NAMES: Object.freeze([ 'prevent-clipboard-write', 'replace-node-text', 'rpnt' ]),
     // Rule A — the only sources allowed to ship trusted scriptlets: AdGuard Team's own repositories
     // (AdguardFilters, FiltersRegistry). Matched as URL prefixes, so a look-alike owner name cannot pass.
     TRUSTED_SOURCE_URL_PREFIXES: Object.freeze([ 'https://raw.githubusercontent.com/AdguardTeam/' ]),

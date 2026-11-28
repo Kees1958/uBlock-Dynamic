@@ -16472,6 +16472,23 @@
     }
   },
   {
+    "id": 650568,
+    "priority": 10000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "intercelestial.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ],
+      "regexFilter": "^https:\\/\\/intercelestial\\.com\\/[a-z0-9]{10,14}\\/[a-z0-9._-]+\\.js(\\?.*)?$",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 1540648,
     "priority": 10000,
     "action": {

@@ -282,6 +282,15 @@ async function registerOrUpdateContentScripts(wanted, existingMap, {
 // Prefix for scriptlet content script IDs so they can be selectively updated. Every id below is built from this
 // prefix plus a fixed, non-ruleset-id suffix ("main", "entity", "sites-") or an actual ruleset id, which always
 // starts with "ruleset_" — none of those three fixed suffixes can ever collide with one, by construction.
+// (11.1.6, scriptlet audit finding 8) How EVERY scriptlet registration is injected — the filter lists' (SITES, ENTITY,
+// the all-sites fallback) and the cookie-notice lists'. `matchOriginAsFallback`: also into frames a page creates without
+// an address of its own (about:blank, srcdoc, blob:), judged by the page that created them — as uBO Lite registers its
+// scriptlets. Without it, such a frame had no scriptlets, and anti-adblock code could take clean, un-hooked browser
+// functions from it. Chrome requires every match pattern's path to be "/*" — every pattern here is (sitePattern(),
+// buildSiteModeMatchScope()). Deliberately NOT used for the cookie clicker, hide CSS and Never-consent bundle (CMP banners
+// live in frames with a real address — autoconsent 18.14.0: 16 of 1,606 CMP rules, all https; SCRIPTLET_AUDIT.md).
+const SCRIPTLET_INJECTION = Object.freeze({ world: 'MAIN', allFrames: true, matchOriginAsFallback: true, runAt: 'document_start' });
+
 const SCRIPTLET_CS_PREFIX = 'ag-scriptlets-';
 // The all-sites fallback id (10.5.5 shape; shared library + every wanted list's data file in one registration).
 // Up to 10.4.4 every enabled list had its own `ag-scriptlets-<ruleset id>` registration carrying its own copy of
@@ -444,7 +453,7 @@ async function registerScriptletContentScriptsImpl(precomputedScope, bypassAlway
     // (10.7.4) ONE combined SITES registration again (the 10.5.6 shape) — see SCRIPTLET_SITES_CS_ID for why the
     // 10.6.0 per-list split was reverted. ENTITY stays ONE combined registration (union of every list's entity files).
     const { wanted, allSiteKeys, entityFiles, sitesComplete } = getWantedScriptletEntries(scriptletFiles, enabledRulesets, bypassAlwaysOnIds);
-    const base = { world: 'MAIN', allFrames: true, runAt: 'document_start' };
+    const base = { ...SCRIPTLET_INJECTION };
     function withExcludes(directive, excludeMatches) {
         if ( excludeMatches.length > 0 ) { directive.excludeMatches = excludeMatches; }
         return directive;
@@ -1145,7 +1154,7 @@ async function cookieNoticeDirectives(modeFiles, siteModeScope, ruleSitePatterns
         directives.push({
             id: COOKIE_NOTICE_SCRIPTLET_CS_ID,
             js: [ `/${COOKIE_NOTICE_LIBRARY_FILE}`, `/${modeFiles.scriptlets}`, `/${COOKIE_NOTICE_LIBRARY_END_FILE}` ],
-            ...scriptletScope, world: 'MAIN', allFrames: true, runAt: 'document_start',
+            ...scriptletScope, ...SCRIPTLET_INJECTION,
         });
     }
     if ( modeFiles.hideFamily !== null ) {

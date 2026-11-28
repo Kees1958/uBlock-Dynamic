@@ -22,7 +22,9 @@
 // A dotted-quad IP key: Chrome's "*." host wildcard does not apply to an IP address, so it gets an exact pattern.
 const IPV4_RE = /^\d{1,3}(?:\.\d{1,3}){3}$/;
 // Fields of a registered content script compared by directiveUpdate() (everything this module's callers set).
-const COMPARED_FIELDS = Object.freeze([ 'js', 'matches', 'excludeMatches', 'world', 'runAt', 'allFrames' ]);
+const COMPARED_FIELDS = Object.freeze([ 'js', 'matches', 'excludeMatches', 'world', 'runAt', 'allFrames', 'matchOriginAsFallback' ]);
+// (11.1.6) On/off fields: Chrome may report an unset one as false — compared as booleans, so "unset" equals false.
+const BOOLEAN_FIELDS = Object.freeze([ 'allFrames', 'matchOriginAsFallback' ]);
 const LABEL_SEP = '.';
 
 // `*://*.example.com/*` matches example.com itself and every subdomain (verified in Chrome, 2026-11-03).
@@ -82,6 +84,7 @@ export function buildScriptletScopes(siteKeys, siteMode) {
 
 // Order-insensitive comparison for pattern lists, order-sensitive for js (file order matters).
 function sameField(field, a, b) {
+    if ( BOOLEAN_FIELDS.includes(field) ) { return Boolean(a) === Boolean(b); }
     if ( Array.isArray(a) || Array.isArray(b) ) {
         const x = a ?? [], y = b ?? [];
         if ( x.length !== y.length ) { return false; }

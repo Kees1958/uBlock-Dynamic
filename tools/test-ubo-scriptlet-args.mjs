@@ -10,11 +10,14 @@
 //      a two-argument rmnt), and a translated rule is stable when translated again;
 //   3. what cannot be expressed exactly is refused with a reason (unknown key, missing value, mixed flags);
 //   4. wiring: the build's scriptlet parser (rules AND exceptions) and the custom-rule parser use the translation.
+//   5. (11.1.6, scriptlet audit findings 4-7) ra/rc behaviour + quitAfter, set values / as / runAt, json-prune-*-response
+//      named arguments, acs context refusal, ubo-prevent-setTimeout, rpnt trust — each checked against uBO's source.
 //
 // Usage: node tools/test-ubo-scriptlet-args.mjs   (step 97 of tools/complete-check.mjs)
 // Pure: in-memory fixtures; resets the build's report accumulators before and after (RELEASE guard).
 
 import { translateUboScriptletArgs, UBO_SCRIPTLET_ARGS } from '../js/data/ubo-scriptlet-args.js';
+import { requiresTrust } from '../js/data/scriptlet-policy.js';
 import { parseScriptletExceptionRules, parseScriptletRules } from './build/scriptlet-rules.mjs';
 import { droppedUnsupportedScriptletScopes, resetBuildAccumulators } from './build/build-state.mjs';
 
@@ -97,7 +100,36 @@ try {
     const once = translateUboScriptletArgs('ubo-rmnt', [ 'script', 'x', 'excludes', 'y' ]);
     const twice = translateUboScriptletArgs(once.name, once.args);
     check('translating twice changes nothing', JSON.stringify(once) === JSON.stringify(twice));
-    check('other scriptlets are untouched', JSON.stringify(translateUboScriptletArgs('ubo-set', [ 'a', 'b', 'c', 'd' ]).args) === JSON.stringify([ 'a', 'b', 'c', 'd' ]));
+    check('scriptlets without uBO-only arguments are untouched', JSON.stringify(translateUboScriptletArgs('ubo-aeld', [ 'a', 'b', 'c', 'd' ]).args) === JSON.stringify([ 'a', 'b', 'c', 'd' ]));
+    // (11.1.6) scriptlet audit findings 4-7 — the real Anti-Admiral / Ad-Shield rules among the cases.
+    function tr(n, a) { return translateUboScriptletArgs(n, a); }
+    function eq(r, name, args) { return r?.name === name && JSON.stringify(r.args) === JSON.stringify(args); }
+    check('ra … asap, quitAfter, 10 → remove-attr "asap stay" (keeps watching, as uBO)',
+        eq(tr('ubo-ra', [ 'onerror', 'script[id][onerror]', 'asap', 'quitAfter', '10' ]), 'remove-attr', [ 'onerror', 'script[id][onerror]', 'asap stay' ]));
+    check('ra with behaviour words only keeps them', eq(tr('ubo-ra', [ 'href', 'a', 'complete stay' ]), 'remove-attr', [ 'href', 'a', 'complete stay' ]));
+    check('rc behaviour words pass; quitAfter is not an rc option (refused)',
+        eq(tr('ubo-rc', [ 'x', 'div', 'stay' ]), 'remove-class', [ 'x', 'div', 'stay' ]) && typeof tr('ubo-rc', [ 'x', 'div', 'asap', 'quitAfter', '5' ]).error === 'string');
+    check('ra with an unknown behaviour word or a non-number quitAfter is refused',
+        typeof tr('ubo-ra', [ 'a', 'b', 'interactive' ]).error === 'string' && typeof tr('ubo-ra', [ 'a', 'b', 'asap', 'quitAfter', 'soon' ]).error === 'string');
+    check('set … runAt, interactive → set-constant without the timing word',
+        eq(tr('ubo-set', [ 'gnt.x.uam', 'undefined', 'runAt', 'interactive' ]), 'set-constant', [ 'gnt.x.uam', 'undefined' ]));
+    check("set values {} [] '' → emptyObj emptyArr ''",
+        eq(tr('ubo-set', [ 'a', '{}' ]), 'set-constant', [ 'a', 'emptyObj' ]) && eq(tr('ubo-set', [ 'a', '[]' ]), 'set-constant', [ 'a', 'emptyArr' ])
+        && eq(tr('ubo-set', [ 'a', "''" ]), 'set-constant', [ 'a', '' ]));
+    check('set … as, function → AdGuard wrapper asFunction', eq(tr('ubo-set', [ 'a', 'true', 'as', 'function' ]), 'set-constant', [ 'a', 'true', '', 'asFunction' ]));
+    check('set values uBO itself ignores, or AdGuard cannot express, are refused',
+        typeof tr('ubo-set', [ 'a', 'function() {}' ]).error === 'string' && typeof tr('ubo-set', [ 'a', '-5' ]).error === 'string'
+        && typeof tr('ubo-set', [ 'a', '40000' ]).error === 'string');
+    check('a plain uBO set needs no translation', eq(tr('ubo-set', [ 'a', 'true' ]), 'ubo-set', [ 'a', 'true' ]));
+    check("AdGuard's own set-constant is never touched", eq(tr('set-constant', [ 'a', '{}' ]), 'set-constant', [ 'a', '{}' ]));
+    check('json-prune-fetch-response … propsToMatch, X → AdGuard 3rd position',
+        eq(tr('ubo-json-prune-fetch-response', [ 'ads', '', 'propsToMatch', '/runtime-config' ]), 'json-prune-fetch-response', [ 'ads', '', '/runtime-config' ]));
+    check('json-prune-xhr-response stackToMatch → AdGuard 4th position',
+        eq(tr('ubo-json-prune-xhr-response', [ 'a', '', 'stackToMatch', 'x' ]), 'json-prune-xhr-response', [ 'a', '', '', 'x' ]));
+    check('acs with a script-src context is refused (AdGuard has none)', typeof tr('ubo-acs', [ 'String.prototype.match', '__adblocker', '/^data:/' ]).error === 'string');
+    check('acs without context is untouched', eq(tr('ubo-acs', [ 'a', 'b' ]), 'ubo-acs', [ 'a', 'b' ]));
+    check('ubo-prevent-setTimeout → prevent-setTimeout', eq(tr('ubo-prevent-setTimeout', [ 'x', '100' ]), 'prevent-setTimeout', [ 'x', '100' ]));
+    check("uBO's rpnt / replace-node-text need trust (rule A)", requiresTrust('ubo-rpnt') && requiresTrust('rpnt.js') && requiresTrust('remove-node-text') === false);
     // 3. Refusals.
     check('an unknown named argument is refused', typeof translateUboScriptletArgs('rmnt', [ 'script', 'x', 'frobnicate', '1' ]).error === 'string');
     check('a named argument without value is refused', typeof translateUboScriptletArgs('rmnt', [ 'script', 'x', 'excludes' ]).error === 'string');

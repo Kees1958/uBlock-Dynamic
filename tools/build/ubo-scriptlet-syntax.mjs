@@ -16,73 +16,39 @@
 //   site#@#+js(name, a)     ->  site#@#//scriptlet('ubo-name', 'a')       (this project's exception form)
 //   site#@#+js()            ->  site#@#//scriptlet()                       (wildcard exception)
 //
-// A line that cannot be converted faithfully is DROPPED and counted (never passed on to the cosmetic parser):
-// an argument holding both quote characters, which the AdGuard parser (no escape support) cannot carry.
+// A line that cannot be converted faithfully is DROPPED and counted (never passed on to the cosmetic parser): a call
+// without a name, an empty non-exception call, or an argument no AdGuard spelling can carry (a trailing lone backslash).
+// (Until 11.1.6 also every argument holding both quote characters — now written with an escaped quote.)
 //
 // Public interface: convertUboScriptletSyntax(text) -> { text, converted, dropped }; parseUboScriptletLine(line);
 //                   formatAdguardScriptletLine(hosts, name, args)
 // Pure function — nothing to initialise, clear or release.
+
+import { splitUboScriptletArgs, quoteAdguardScriptletArg } from '../../js/util/scriptlet-args.js';
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 const UBO_SYNTAX_CONFIG = Object.freeze({
     // host part, optional "@" (exception), then the call body up to the LAST ")" of the line.
     LINE_RE: /^([^#]*)#(@?)#\+js\((.*)\)\s*$/,
     ALIAS_PREFIX: 'ubo-',                 // AdGuard's alias prefix for uBO scriptlet names
-    QUOTES: Object.freeze([ "'", '"', '`' ]),   // uBO accepts quoted arguments with any of these
-    OUTPUT_QUOTES: Object.freeze([ "'", '"' ]), // what the build's AdGuard parser reads
 });
 
-// Splits uBO arguments: separated by commas; `\,` is a literal comma; a token wrapped in matching quotes keeps its
-// commas and loses the quotes.
-function splitUboArgs(body) {
-    const out = [];
-    let i = 0;
-    while ( i <= body.length ) {
-        while ( body[i] === ' ' ) { i++; }
-        const q = UBO_SYNTAX_CONFIG.QUOTES.find(c => body[i] === c);
-        if ( q !== undefined ) {
-            const end = body.indexOf(q, i + 1);
-            const after = end === -1 ? -1 : body.slice(end + 1).search(/\S/);
-            if ( end !== -1 && (after === -1 || body[end + 1 + after] === ',') ) {
-                out.push(body.slice(i + 1, end));
-                const comma = body.indexOf(',', end + 1);
-                if ( comma === -1 ) { break; }
-                i = comma + 1;
-                continue;
-            }
-        }
-        let token = '';
-        while ( i < body.length ) {
-            if ( body[i] === '\\' && body[i + 1] === ',' ) { token += ','; i += 2; continue; }
-            if ( body[i] === ',' ) { break; }
-            token += body[i++];
-        }
-        out.push(token.trim());
-        if ( i >= body.length ) { break; }
-        i++;   // skip the comma
-    }
-    return out;
-}
-
-function quoteArg(arg) {
-    const q = UBO_SYNTAX_CONFIG.OUTPUT_QUOTES.find(c => arg.includes(c) === false);
-    return q === undefined ? null : `${q}${arg}${q}`;
-}
-
+// (11.1.6) Argument reading and writing live in js/util/scriptlet-args.js (one implementation, also for the user's
+// rules); quoteAdguardScriptletArg() escapes a quote instead of giving up, so no argument is dropped for holding both quote kinds.
 // (11.1.3) One uBO scriptlet line taken apart: { hosts, exception, name, args }, or null when the line is not a uBO
 // scriptlet call (or is an empty wildcard exception). Same LINE_RE and argument splitting as the conversion below.
 export function parseUboScriptletLine(line) {
     const m = UBO_SYNTAX_CONFIG.LINE_RE.exec(String(line).trim());
     if ( m === null || m[3].trim() === '' ) { return null; }
-    const [ name, ...args ] = splitUboArgs(m[3]);
+    const [ name, ...args ] = splitUboScriptletArgs(m[3]);
     if ( name === '' ) { return null; }
     return { hosts: m[1], exception: m[2] === '@', name, args };
 }
 
 // (11.1.3) Writes one rule in the AdGuard form the build parses (`hosts#%#//scriptlet('name', 'a')`), with the same
-// quoting as the conversion below. null when an argument cannot be carried (it holds both quote characters).
+// quoting as the conversion below. null when an argument cannot be carried (quoteAdguardScriptletArg()).
 export function formatAdguardScriptletLine(hosts, name, args) {
-    const quoted = [ name, ...args ].map(quoteArg);
+    const quoted = [ name, ...args ].map(quoteAdguardScriptletArg);
     return quoted.includes(null) ? null : `${hosts}#%#//scriptlet(${quoted.join(', ')})`;
 }
 
@@ -99,9 +65,9 @@ export function convertUboScriptletSyntax(text) {
             if ( at === '@' ) { out.push(`${hosts}${marker})`); converted++; } else { dropped++; }
             continue;
         }
-        const [ rawName, ...args ] = splitUboArgs(body);
+        const [ rawName, ...args ] = splitUboScriptletArgs(body);
         const name = rawName.startsWith(UBO_SYNTAX_CONFIG.ALIAS_PREFIX) ? rawName : `${UBO_SYNTAX_CONFIG.ALIAS_PREFIX}${rawName}`;
-        const quoted = [ name, ...args ].map(quoteArg);
+        const quoted = [ name, ...args ].map(quoteAdguardScriptletArg);
         if ( rawName === '' || quoted.includes(null) ) { dropped++; continue; }
         out.push(`${hosts}${marker}${quoted.join(', ')})`);
         converted++;

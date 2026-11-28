@@ -4,24 +4,31 @@
     delete self.__uboCustomScriptletArgs;
     var source = (a && a[0]) || {};
     var args = (a && a[1]) || [];
-    (function stubWindowObject(source, args) {
-            const [ propertyName = '', methodList = '', delayText = '0' ] = args || [];
-            // Limits: a global name and method names must be plain identifiers; the delay is capped.
-            const IDENTIFIER = /^[A-Za-z_$][\w$]*$/;
-            const MAX_DELAY_MS = 10000;
-            const methods = methodList.split(',').map(m => m.trim()).filter(m => m !== '');
-            if ( IDENTIFIER.test(propertyName) === false || methods.some(m => IDENTIFIER.test(m) === false) ) { return; }
-            const delay = Math.min(Math.max(parseInt(delayText, 10) || 0, 0), MAX_DELAY_MS);
-            const install = ( ) => {
-                const stub = {};
-                for ( const method of methods ) { stub[method] = function() {}; }
-                window[propertyName] = stub;
+    (function disableFaveSsai(source, args) {
+            void args;
+            // The SSAI switches this scriptlet turns off (inside ads.ssai.prod).
+            const SSAI_SWITCHES = [ 'clips', 'liveAuth', 'liveUnauth' ];
+            const switchOff = config => {
+                const prod = config?.ads?.ssai?.prod;
+                if ( prod === null || typeof prod !== 'object' ) { return; }
+                for ( const key of SSAI_SWITCHES ) {
+                    if ( prod[key]?.enabled ) { prod[key].enabled = false; }
+                }
             };
-            const schedule = ( ) => { setTimeout(install, delay); };
-            if ( document.readyState === 'loading' ) {
-                document.addEventListener('DOMContentLoaded', schedule, { once: true });
-            } else {
-                schedule();
-            }
+            const switchOffAll = fave => {
+                switchOff(fave?.settings);
+                const instances = fave?.player?.instances;
+                if ( instances === null || typeof instances !== 'object' ) { return; }
+                for ( const id of Object.keys(instances) ) { switchOff(instances[id]?.configs); }
+            };
+            window.FAVE = window.FAVE || {};
+            switchOffAll(window.FAVE);
+            window.FAVE = new Proxy(window.FAVE, {
+                set(target, prop, value, receiver) {
+                    if ( prop === 'settings' ) { switchOff(value); }
+                    switchOffAll(target);
+                    return Reflect.set(target, prop, value, receiver);
+                },
+            });
         })(source, args);
 })();

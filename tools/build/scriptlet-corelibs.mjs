@@ -6,7 +6,7 @@
 // build-state.mjs, and two data-file URLs. A replayed build is byte-identical
 // (tools/verify-build-unchanged.mjs).
 //
-// Public interface: buildTrimmedCorelibs, selectProjectScriptlets, fetchCorelibsFromNpm (10.6.0 — see that
+// Public interface: buildTrimmedCorelibs, selectProjectScriptlets, applyProjectReplacements (11.1.6), fetchCorelibsFromNpm (10.6.0 — see that
 // export's own comment at its declaration for why a 3rd caller needs it directly)
 // Dependencies: see the imports below (strictly acyclic; no module imports one that imports it).
 import { corelibsCreditFields } from './third-party-credits.mjs';
@@ -120,7 +120,36 @@ export async function fetchCorelibsFromNpm() {
             scriptletNames: names,
         }, null, 2) + '\n', 'utf8');
     }
-    return corelibs;
+    // (11.1.6) The ONE place a project scriptlet replaces an AdGuard one — every consumer (list rules, custom-rule
+    // dispatch, cookie-notice step) starts from this object. The lock file above still records AdGuard's own names.
+    return applyProjectReplacements(corelibs);
+}
+
+// (11.1.6) The `.js` suffix AdGuard adds to many uBO aliases; a name and its bare form are the same scriptlet.
+const SCRIPTLET_JS_SUFFIX = '.js';
+function bareScriptletName(name) {
+    return name.endsWith(SCRIPTLET_JS_SUFFIX) ? name.slice(0, -SCRIPTLET_JS_SUFFIX.length) : name;
+}
+
+// (11.1.6) Project scriptlets marked `replacesAdGuard: true` (js/resources/ubo-patch-scriptlets-source.mjs; the reason
+// is written at each entry) take the place of every AdGuard scriptlet that shares a name with them: same position, the
+// AdGuard entry's names unchanged, the project's function as the body.
+// An entry whose AdGuard counterpart has disappeared needs nothing here — it is then an ordinary project scriptlet.
+// Pure: returns a new object, keeps nothing.
+export function applyProjectReplacements(corelibs, projectScriptlets = UBO_PATCH_SCRIPTLETS) {
+    const replacements = projectScriptlets.filter(entry => entry.replacesAdGuard === true);
+    if ( replacements.length === 0 ) { return corelibs; }
+    const scriptlets = corelibs.scriptlets.map(agEntry => {
+        const agBare = new Set(agEntry.names.map(bareScriptletName));
+        const replacement = replacements.find(entry => entry.names.some(n => agBare.has(bareScriptletName(n))));
+        if ( replacement === undefined ) { return agEntry; }
+        // AdGuard's own names only: one project function may replace SEVERAL AdGuard entries (remove-node-text and
+        // trusted-replace-node-text), each keeping its first name — the library name a rule's source.name gets, which
+        // the function reads to know what it is doing. Every AdGuard alias still resolves; bare uBO spellings resolve
+        // as for any AdGuard entry (dispatch bare-alias rule, buildScriptletFile's ubo-<name>.js fallback).
+        return { names: [ ...agEntry.names ], scriptlet: replacement.scriptlet.toString() };
+    });
+    return { ...corelibs, scriptlets };
 }
 
 function extractCorelibsFromTarball(tgz, version) {
@@ -154,6 +183,8 @@ function extractCorelibsFromTarball(tgz, version) {
 export function selectProjectScriptlets(usedNames, agAvailableNames) {
     const selected = [];
     for ( const entry of UBO_PATCH_SCRIPTLETS ) {
+        // (11.1.6) A replacement whose AdGuard counterpart exists is already in place (applyProjectReplacements()).
+        if ( entry.replacesAdGuard === true && entry.names.some(n => agAvailableNames.has(n)) ) { continue; }
         const names = entry.names.filter(n => agAvailableNames.has(n) === false);
         if ( names.length === 0 || names.some(n => usedNames.has(n)) === false ) { continue; }
         selected.push({ names, scriptlet: entry.scriptlet.toString() });

@@ -591,6 +591,10 @@
       "supported": true,
       "chrome": "Chrome/153.0.8010.12"
     },
+    "ci:^https:\\/\\/intercelestial\\.com\\/[a-z0-9]{10,14}\\/[a-z0-9._-]+\\.js(\\?.*)?$": {
+      "supported": true,
+      "chrome": "Chrome/153.0.8010.12"
+    },
     "ci:^https:\\/\\/media\\.mediadirectory\\.net\\/storage\\/([a-f0-9]\\/){3}[a-f0-9]{40}\\/index\\.html#aid=": {
       "supported": false,
       "reason": "memoryLimitExceeded",

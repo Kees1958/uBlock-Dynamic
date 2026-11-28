@@ -9,13 +9,13 @@
     "id": "ruleset_annoyances",
     "specificDataFile": "rulesets/ruleset_annoyances-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_annoyances-cosmetic-loader.js",
-    "v": "2js08u"
+    "v": "vvj97i"
   },
   {
     "id": "ruleset_adguard_base",
     "specificDataFile": "rulesets/ruleset_adguard_base-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_base-cosmetic-loader.js",
-    "v": "1vbum67"
+    "v": "1rbe5ph"
   },
   {
     "id": "ruleset_agbase_overflow_dutch",
@@ -27,7 +27,7 @@
     "id": "ruleset_agbase_overflow_german",
     "specificDataFile": "rulesets/ruleset_agbase_overflow_german-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_agbase_overflow_german-cosmetic-loader.js",
-    "v": "pawez"
+    "v": "c6uk23"
   },
   {
     "id": "ruleset_agbase_overflow_french",
@@ -51,7 +51,7 @@
     "id": "ruleset_agbase_overflow_polish",
     "specificDataFile": "rulesets/ruleset_agbase_overflow_polish-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_agbase_overflow_polish-cosmetic-loader.js",
-    "v": "6bksfn"
+    "v": "1kxt1p1"
   },
   {
     "id": "ruleset_agbase_overflow_portuguese",
@@ -69,13 +69,13 @@
     "id": "ruleset_agbase_overflow_czech_slovak",
     "specificDataFile": "rulesets/ruleset_agbase_overflow_czech_slovak-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_agbase_overflow_czech_slovak-cosmetic-loader.js",
-    "v": "odz3sx"
+    "v": "g64q1g"
   },
   {
     "id": "ruleset_agbase_overflow_bulgarian",
     "specificDataFile": "rulesets/ruleset_agbase_overflow_bulgarian-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_agbase_overflow_bulgarian-cosmetic-loader.js",
-    "v": "m156wm"
+    "v": "101v62z"
   },
   {
     "id": "ruleset_agbase_overflow_nordic",
@@ -87,7 +87,7 @@
     "id": "ruleset_agbase_overflow_hungarian",
     "specificDataFile": "rulesets/ruleset_agbase_overflow_hungarian-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_agbase_overflow_hungarian-cosmetic-loader.js",
-    "v": "1kzclya"
+    "v": "1wolbxq"
   },
   {
     "id": "ruleset_agbase_overflow_other",
@@ -105,13 +105,13 @@
     "id": "ruleset_adguard_german",
     "specificDataFile": "rulesets/ruleset_adguard_german-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_german-cosmetic-loader.js",
-    "v": "n244ty"
+    "v": "odl50v"
   },
   {
     "id": "ruleset_adguard_french",
     "specificDataFile": "rulesets/ruleset_adguard_french-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_french-cosmetic-loader.js",
-    "v": "mbxdg3"
+    "v": "ewanp7"
   },
   {
     "id": "ruleset_adguard_spanish",
@@ -129,7 +129,7 @@
     "id": "ruleset_easylist_polish",
     "specificDataFile": "rulesets/ruleset_easylist_polish-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_polish-cosmetic-loader.js",
-    "v": "9wp6hq"
+    "v": "1s365f8"
   },
   {
     "id": "ruleset_easylist_portuguese",
@@ -159,25 +159,25 @@
     "id": "ruleset_easylist_nordic",
     "specificDataFile": "rulesets/ruleset_easylist_nordic-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_nordic-cosmetic-loader.js",
-    "v": "1vjhqnx"
+    "v": "1d87j36"
   },
   {
     "id": "ruleset_easylist_bulgarian",
     "specificDataFile": "rulesets/ruleset_easylist_bulgarian-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_easylist_bulgarian-cosmetic-loader.js",
-    "v": "srxrhi"
+    "v": "g5nrlm"
   },
   {
     "id": "ruleset_adguard_antiadblock",
     "specificDataFile": "rulesets/ruleset_adguard_antiadblock-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_adguard_antiadblock-cosmetic-loader.js",
-    "v": "m97ktn"
+    "v": "1o1uigb"
   },
   {
     "id": "ruleset_english_outside_top1m",
     "specificDataFile": "rulesets/ruleset_english_outside_top1m-cosmetic-specific.json",
     "loaderFile": "rulesets/ruleset_english_outside_top1m-cosmetic-loader.js",
-    "v": "1118izg"
+    "v": "1ywgbwq"
   },
   {
     "id": "ruleset_antiadmiral",

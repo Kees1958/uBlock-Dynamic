@@ -19,7 +19,7 @@ convention and are kept as they are.
 
 ## 11.1.6 — Block page stays out of paused pages; pause refresh (owner's request 2026-11-28)
 **Source version.** Working from 11.1.5 as committed (extension 11.1.5 / tools 3.0.11 / docs 11.1.5, GitHub
-Kees1958/uBlock-Dynamic 2a52567). **tools 3.0.12:** new `tools/test-pause-refresh.mjs` (complete check 98) and `tools/test-broadcast-channel.mjs` (99);
+Kees1958/uBlock-Dynamic 2a52567). **tools 3.0.12:** new `tools/test-pause-refresh.mjs` (complete check 98), `tools/test-broadcast-channel.mjs` (99), `tools/test-remove-node-text.mjs` (100), `tools/e2e-scriptlets.mjs` (101) and `tools/test-scriptlet-args.mjs` (102);
 `tools/test-tab-under-guard.mjs` gains the paused-host cases (mocked DNR + BroadcastChannel).
 
 **Why.** Owner's report: in Brave with Containers, uBD's block page appeared and kept appearing while uBD was paused;
@@ -53,6 +53,56 @@ the reference (no-op when nothing is open; the browser also releases it when the
 `BROADCAST_CHANNEL_NAME`, exported once and imported by `matrix/matrix-panel.js` (had its own copy) and
 `privacy/privacy-inspector.js` (had the bare literal). Receivers unchanged — both already close their channel when they
 end. Test: `tools/test-broadcast-channel.mjs` (complete check 99, real Node BroadcastChannel, fault-verified).
+
+**4. uBD's own remove-node-text replaces AdGuard's (owner's decision 2026-11-28).** Report: Fox News still showed
+Admiral's wall; "it hides and then comes back after 2 or 3 clicks". Live analysis on foxnews.com (Claude in Chrome):
+uBD active (Admiral requests blocked, `googlefc` locked to null, addEventListener wrapped), the inline Admiral starter
+(7,105 chars, contains `adblockerDisabled`) matched by the shipped translated uBO rule — yet it kept its text and ran.
+Reproduced in real Chrome (www.foxnews.com mapped to a local HTTPS server): AdGuard's removeNodeText (1) judges a node
+only when it is ADDED and skips it while empty — the parser adds an inline script's element first and its text later, so
+a script split over two packets ran with its full text; (2) disconnects its observer 10 s after start
+(`setTimeout(…disconnect, 1e4)`), so a matching script inserted at 12 s kept its text. uBO's rmnt has neither limit.
+New entry in `js/resources/ubo-patch-scriptlets-source.mjs` (names remove-node-text, ubo-remove-node-text, rmnt,
+ubo-rmnt), `replacesAdGuard: true`: AdGuard's arguments unchanged (node name or /regex/, text or /regex/flags, optional
+parent selector), observes `document` with childList + subtree + characterData, judges a text node by its parent element
+(script mode) and walks the text inside added blocks ('#text' mode); Trusted Types policy only to write '' into a
+script; once-guard as AdGuard's (uniqueId); lifetime (B10) — disconnect on pagehide, re-scan + restart on pageshow from
+the back/forward cache; invalid regex installs nothing. Build: `applyProjectReplacements()` in
+`tools/build/scriptlet-corelibs.mjs`, applied ONCE where the AdGuard package is read (`fetchCorelibsFromNpm`), so list
+rules, the custom-rule dispatch and the cookie-notice step all get it; AdGuard's names are kept (every alias resolves),
+the dispatch skips the entry instead of reporting it redundant. Affects 306 shipped rules (301 on `<script>`) on about
+4,800 sites. Tests: `tools/test-remove-node-text.mjs` (check 100, fault-verified with FAULT=adguard) and
+`tools/e2e-scriptlets.mjs` (check 101, real Chrome). Unavoidable, as in uBO: a script the page inserts later runs
+the moment it is inserted; only its text is emptied afterwards.
+WARNING FOR IMPLEMENTATION IMPACT: every remove-node-text / rmnt rule now matches more often (scripts that arrive in
+pieces, nodes added after 10 s, text inside added blocks) and its observer stays on for the page's life (also watching
+text changes) — intended, as uBO; a rule that was silently ineffective before now acts.
+**4b. Scriptlet semantics audit, findings 2-8 fixed (owner's decision 2026-11-28; full record `SCRIPTLET_AUDIT.md`,
+rule added to the principles doc: an audit at every major version).** 6,803 rules / 93 names checked against uBO's
+source and AdGuard's functions (espree argument count, uBO named arguments and values, observer time limits, injection).
+(2) `trusted-replace-node-text` (104 rules) runs on the same uBD function (replace mode, chosen by `source.name`; replace
+loop guarded by a per-node written-text WeakMap). `applyProjectReplacements()` now keeps each AdGuard entry's own names
+(one project function may replace several entries; each keeps its library name). (3) ONE argument reader/writer,
+`js/util/scriptlet-args.js` (no imports): AdGuard syntax honours `\'` / `\"` (doubled backslashes stay a pair, so `\\'`
+closes); uBO splitter moved there unchanged; the writer escapes instead of giving up and refuses only values no
+spelling can carry. Replaces two build copies (`tools/build/scriptlet-rules.mjs`) and the custom-rule splitter
+(`js/core/custom-scriptlets.js`, whose "no escaped-quote handling" limitation is gone). 7 shipped rules read whole now
+(one of them is the six-argument japscan rule). (4-6) `js/data/ubo-scriptlet-args.js` table-driven per uBO base name:
+ra/rc, set (values, `as`, `runAt`), json-prune-fetch/xhr-response, acs context refusal. (7) uBO spellings of
+prevent-setTimeout/-setInterval/-requestAnimationFrame mapped; `rpnt`/`replace-node-text` in REQUIRES_TRUST_NAMES.
+(8) `SCRIPTLET_INJECTION` constant (`js/core/scripting-manager.js`) with `matchOriginAsFallback: true` for the list and
+cookie-notice scriptlet registrations; `directiveUpdate()` compares it (as a boolean) so existing installs re-register;
+the generated lookup (`tools/build/scriptlet-dispatch-layout.mjs renderLookup()`) reads the site from `self.origin` when
+`location.hostname` is empty — found in real Chrome: with the flag alone the frames got the scriptlets but matched no
+site. Cookie clicker / hide CSS / Never-consent unchanged (decision and evidence in SCRIPTLET_AUDIT.md).
+WARNING FOR IMPLEMENTATION IMPACT: rules that silently did nothing now act (see SCRIPTLET_AUDIT.md "Implementation
+impact"); scriptlets also run in about:blank / srcdoc frames of their site.
+
+**5. Full filter update (2026-11-28).** Every list fetched fresh. Bad filter fixes list 2026.11.28: the
+`@@||fwmrm.net^$domain=bbc.com` allow and the foxnews.com `remove-node-text` scriptlet are gone from the source list
+(owner's decision, confirmed before the zip) — `ruleset_badfilter_quickfixes-scriptlets.js` is no longer generated.
+Build notes new since 11.1.5: scriptlet `ubo-rpnt` not in @adguard/scriptlets 2.6.0 (skipped); one annoyances
+`$redirect` rule (aucdn.net, xnxx/xvideos) dropped — that list has no unsafe-rule companion.
 
 **Known limitations.** A per-site pause covers that site's own domain: a top-frame redirect to another domain (e.g. a
 CMP) is a new page load on that domain and is filtered normally — if a uBD `$document`/`$all` rule matches there, the

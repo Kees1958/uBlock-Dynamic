@@ -215,7 +215,10 @@ function renderLookup(hasEntities) {
     // label ("kat.com" -> "kat") and look up "kat.*". Emitted only for files that contain an entity key.
     const entityStep = hasEntities ? 'const j=p.lastIndexOf(".");if(j>=0)f(p.slice(0,j)+".*");' : '';
     return [
-        'const h=location.hostname;const t=new Set();',
+        // (11.1.6, scriptlet audit finding 8) A frame without an address (about:blank, srcdoc) has no hostname but has
+        // inherited its creator's origin — the same thing Chrome's matchOriginAsFallback injected it by — so its site is
+        // read from self.origin then ("null" for a sandboxed frame: no site, no rules).
+        'const h=location.hostname||(()=>{try{return new URL(self.origin).hostname}catch{return""}})();const t=new Set();',
         // f(s): binary-search key s in the sorted array; on a hit add its row numbers to the Set t.
         `const f=s=>{let l=0,r=${H}.length;while(l<r){const m=l+r>>>1;if(${H}[m]<s)l=m+1;else r=m}`,
         `if(${H}[l]!==s)return;P??=${RS}.split("${L.SEP_ITEM}");for(const x of P[l].split("${L.SEP_NUM}"))t.add(+x)};`,

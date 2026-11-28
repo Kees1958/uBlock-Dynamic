@@ -4,5 +4,135 @@
     delete self.__uboCustomScriptletArgs;
     var source = (a && a[0]) || {};
     var args = (a && a[1]) || [];
-    (function removeNodeText(source,args){const uniqueIdentifier=source.uniqueId+source.name+"_"+(Array.isArray(args)?args.join("_"):"");if(source.uniqueId&&"done"===Window.prototype.toString[uniqueIdentifier])return;function handleExistingNodes(e,n,o){(o?document.querySelectorAll(o):[document]).forEach((function(o){return function(o){if("#text"===e){var r=nodeListToArray(o.childNodes).filter((function(e){return e.nodeType===Node.TEXT_NODE}));n(r)}else{var t=nodeListToArray(o.querySelectorAll(e));n(t)}}(o)}))}function nodeListToArray(r){for(var n=[],o=0;o<r.length;o+=1)n.push(r[o]);return n}function toRegExp(e){var r=e||"",t="/";if(""===r)return new RegExp(".?");var n,i,s=r.lastIndexOf(t),a=r.substring(s+1),g=r.substring(0,s+1),u=(i=a,(n=g).startsWith(t)&&n.endsWith(t)&&!n.endsWith("\\/")&&function(e){if(!e)return!1;try{return new RegExp("",e),!0}catch(e){return!1}}(i)?i:"");if(r.startsWith(t)&&r.endsWith(t)||u)return new RegExp((u?g:r).slice(1,-1),u);var c=r.replace(/\\'/g,"'").replace(/\\"/g,'"').replace(/[.*+?^${}()|[\]\\]/g,"\\$&");return new RegExp(c)}const updatedArgs=args?[].concat(source).concat(args):[source];try{(function(source,nodeName,textMatch,parentSelector){var{selector:selector,nodeNameMatch:nodeNameMatch,textContentMatch:textContentMatch}=function(t,e){var a,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null,r="/",s=!(t.startsWith(r)&&t.endsWith(r)),o=s?t:"*",h=s?t:toRegExp(t),i=e.startsWith(r)?toRegExp(e):e;return n&&(a=n.startsWith(r)?toRegExp(n):n),{selector:o,nodeNameMatch:h,textContentMatch:i,patternMatch:a}}(nodeName,textMatch),handleNodes=function(nodes){return nodes.forEach((function(node){(function(e,t,n){var{nodeName:o,textContent:s}=e,a=o.toLowerCase();return null!==s&&""!==s&&(t instanceof RegExp?t.test(a):t===a)&&(n instanceof RegExp?n.test(s):s.includes(n))})(node,nodeNameMatch,textContentMatch)&&function(e,t,n,r){var{textContent:a}=t;if(a){var i=a.replace(n,r);"SCRIPT"===t.nodeName&&(i=function(t){var r,e=null==t||null===(r=t.api)||void 0===r?void 0:r.policy;if(e)return e;var n="AGPolicy",i=window.trustedTypes,u=!!i,c={HTML:"TrustedHTML",Script:"TrustedScript",ScriptURL:"TrustedScriptURL"};if(!u)return{name:n,isSupported:u,TrustedType:c,createHTML:function(t){return t},createScript:function(t){return t},createScriptURL:function(t){return t},create:function(t,r){return r},getAttributeType:function(){return null},convertAttributeToTrusted:function(t,r,e){return e},getPropertyType:function(){return null},convertPropertyToTrusted:function(t,r,e){return e},isHTML:function(){return!1},isScript:function(){return!1},isScriptURL:function(){return!1}};var o=i.createPolicy(n,{createHTML:function(t){return t},createScript:function(t){return t},createScriptURL:function(t){return t}}),createHTML=function(t){return o.createHTML(t)},createScript=function(t){return o.createScript(t)},createScriptURL=function(t){return o.createScriptURL(t)},create=function(t,r){switch(t){case c.HTML:return createHTML(r);case c.Script:return createScript(r);case c.ScriptURL:return createScriptURL(r);default:return r}},p=i.getAttributeType.bind(i),T=i.getPropertyType.bind(i),s=i.isHTML.bind(i),a=i.isScript.bind(i),f=i.isScriptURL.bind(i);return{name:n,isSupported:u,TrustedType:c,createHTML:createHTML,createScript:createScript,createScriptURL:createScriptURL,create:create,getAttributeType:p,convertAttributeToTrusted:function(t,r,e,n,i){var u=p(t,r,n,i);return u?create(u,e):e},getPropertyType:T,convertPropertyToTrusted:function(t,r,e,n){var i=T(t,r,n);return i?create(i,e):e},isHTML:s,isScript:a,isScriptURL:f}}(e).createScript(i)),t.textContent=i,function(e){if(e.verbose){try{var n=console.trace.bind(console),i="[AdGuard] ";"corelibs"===e.engine?i+=e.ruleText:(e.domainName&&(i+=`${e.domainName}`),e.args?i+=`#%#//scriptlet('${e.name}', '${e.args.join("', '")}')`:i+=`#%#//scriptlet('${e.name}')`),n&&n(i)}catch(e){}"function"==typeof window.__debug&&window.__debug(e)}}(e)}}(source,node,/^[^]*$/,"")}))};document.documentElement&&handleExistingNodes(selector,handleNodes,parentSelector),function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{subtree:!0,childList:!0},n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1e4,o=new MutationObserver((function(n,o){o.disconnect(),e(n,o),o.observe(document.documentElement,t)}));o.observe(document.documentElement,t),"number"==typeof n&&setTimeout((function(){return o.disconnect()}),n)}((function(mutations){return d=handleNodes,e=selector,o=parentSelector,t=function(d){for(var e=[],r=0;r<d.length;r+=1)for(var{addedNodes:n}=d[r],o=0;o<n.length;o+=1)e.push(n[o]);return e}(mutations),void(e&&o?t.forEach((function(){handleExistingNodes(e,d,o)})):d(t));var d,e,o,t}))}).apply(this,updatedArgs),source.uniqueId&&Object.defineProperty(Window.prototype.toString,uniqueIdentifier,{value:"done",enumerable:!1,writable:!1,configurable:!1})}catch(e){console.log(e)}})(source, args);
+    (function removeNodeText(source, args) {
+            // Fixed values — the only place they live.
+            const REPLACE_NAME_RE = /replace-node-text|rpnt/;   // source.name of a replace rule (not remove)
+            const replaceMode = REPLACE_NAME_RE.test(String(source && source.name));
+            const list = Array.isArray(args) ? args : [];
+            const [ nodeNameArg = '', textArg = '' ] = list;
+            const parentSelector = replaceMode ? '' : (list[2] || '');
+            const patternArg = replaceMode ? (list[2] || '') : '';
+            const replacementArg = replaceMode ? (list[3] || '') : '';
+            const REGEX_LITERAL = /^\/(.+)\/([a-z]*)$/;
+            const STATEFUL_FLAGS = /[gy]/g;          // would make test() depend on the previous call
+            const TEXT_NODE_NAME = '#text';
+            const ANY_ELEMENT = '*';
+            const EMPTY_TEXT = '';
+            const OBSERVE_OPTIONS = { childList: true, subtree: true, characterData: true };
+            const TT_POLICY_NAME = 'uBD-remove-node-text';   // Trusted Types policy used only to write a script's new text
+            const DONE_MARK = 'done';
+            const logPrefix = '[uBlock-Dynamic] remove-node-text:';
+            if ( typeof nodeNameArg !== 'string' || typeof textArg !== 'string' || nodeNameArg === '' || textArg === '' ) { return; }
+            if ( replaceMode && patternArg === '' ) { return; }
+            // Guard (initialise once): the same rule injected twice into one page installs one observer.
+            const onceKey = source && source.uniqueId ? `${source.uniqueId}${source.name}_${args.join('_')}` : null;
+            if ( onceKey !== null && Window.prototype.toString[onceKey] === DONE_MARK ) { return; }
+            const toMatcher = arg => {
+                const literal = REGEX_LITERAL.exec(arg);
+                if ( literal === null ) { return null; }
+                return new RegExp(literal[1], literal[2].replace(STATEFUL_FLAGS, ''));
+            };
+            let nameRe, textRe, patternRe = null;
+            try {
+                nameRe = toMatcher(nodeNameArg);
+                textRe = toMatcher(textArg);
+                if ( replaceMode ) {   // the replace pattern keeps its g flag (replace all), as AdGuard's toRegExp does
+                    const literal = REGEX_LITERAL.exec(patternArg);
+                    patternRe = literal === null ? null : new RegExp(literal[1], literal[2]);
+                }
+            } catch { return; }   // invalid regex: nothing is installed
+            const wantedName = nodeNameArg.toLowerCase();
+            const textMode = nameRe === null && wantedName === TEXT_NODE_NAME;
+            const selector = nameRe === null ? wantedName : ANY_ELEMENT;
+            const nameMatches = node => {
+                const name = node.nodeName.toLowerCase();
+                return nameRe !== null ? nameRe.test(name) : name === wantedName;
+            };
+            const textMatches = text => textRe !== null ? textRe.test(text) : text.includes(textArg);
+            const parentMatches = node => {
+                if ( parentSelector === '' ) { return true; }
+                const parent = node.parentElement;
+                if ( parent === null ) { return false; }
+                try { return textMode ? parent.matches(parentSelector) : parent.closest(parentSelector) !== null; } catch { return false; }
+            };
+            let ttPolicy = null;   // null = not created yet, false = not available on this page
+            // The text a node gets: '' (remove), or its text with the pattern replaced (replace).
+            const newTextFor = text => {
+                if ( replaceMode === false ) { return EMPTY_TEXT; }
+                return patternRe !== null ? text.replace(patternRe, replacementArg) : text.replace(patternArg, replacementArg);
+            };
+            const written = new WeakMap();   // node -> text this scriptlet wrote, so its own write is not handled again
+            const scriptTextValue = text => {
+                if ( ttPolicy === null ) {
+                    ttPolicy = false;
+                    try {
+                        if ( self.trustedTypes && typeof self.trustedTypes.createPolicy === 'function' ) {
+                            ttPolicy = self.trustedTypes.createPolicy(TT_POLICY_NAME, { createScript: text => text });
+                        }
+                    } catch { /* the page's CSP forbids new policies: a plain string is tried below */ }
+                }
+                return ttPolicy ? ttPolicy.createScript(text) : text;
+            };
+            const clearIfMatching = node => {
+                if ( nameMatches(node) === false || parentMatches(node) === false ) { return; }
+                const text = node.textContent;
+                if ( typeof text !== 'string' || text === EMPTY_TEXT || written.get(node) === text || textMatches(text) === false ) { return; }
+                const next = newTextFor(text);
+                if ( next === text ) { return; }
+                try {
+                    node.textContent = node.nodeName === 'SCRIPT' ? scriptTextValue(next) : next;
+                    written.set(node, next);
+                    if ( source.verbose ) { console.log(logPrefix, nodeNameArg, textArg); }
+                } catch { /* Trusted Types refused the write: nothing else can be done for this node */ }
+            };
+            // One node from a mutation. Script mode: a text node is judged by its parent element — that is how the
+            // text of a parser-inserted script arrives, after its (still empty) element.
+            const consider = node => {
+                if ( node.nodeType === Node.TEXT_NODE ) {
+                    if ( textMode ) { clearIfMatching(node); return; }
+                    if ( node.parentElement !== null ) { clearIfMatching(node.parentElement); }
+                    return;
+                }
+                if ( node.nodeType !== Node.ELEMENT_NODE ) { return; }
+                if ( textMode ) {   // '#text': the text inside an added block (e.g. HTML added in one go)
+                    const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+                    for ( let n = walker.nextNode(); n !== null; n = walker.nextNode() ) { clearIfMatching(n); }
+                    return;
+                }
+                clearIfMatching(node);
+                if ( node.firstElementChild !== null ) {
+                    for ( const inner of node.querySelectorAll(selector) ) { clearIfMatching(inner); }
+                }
+            };
+            const scanExisting = ( ) => {
+                const root = document.documentElement;
+                if ( root === null ) { return; }
+                if ( textMode ) {
+                    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+                    for ( let n = walker.nextNode(); n !== null; n = walker.nextNode() ) { clearIfMatching(n); }
+                    return;
+                }
+                for ( const node of root.querySelectorAll(selector) ) { clearIfMatching(node); }
+            };
+            const onMutations = records => {
+                for ( const record of records ) {
+                    if ( record.type === 'characterData' ) { consider(record.target); continue; }
+                    for ( const node of record.addedNodes ) { consider(node); }
+                }
+            };
+            const observer = new MutationObserver(onMutations);
+            const start = ( ) => { observer.observe(document, OBSERVE_OPTIONS); };
+            scanExisting();
+            start();
+            // Release: no observer while the page is being left or sits in the back/forward cache.
+            self.addEventListener('pagehide', ( ) => { observer.disconnect(); });
+            self.addEventListener('pageshow', event => {
+                if ( event.persisted !== true ) { return; }
+                scanExisting();
+                start();
+            });
+            if ( onceKey !== null ) {
+                Object.defineProperty(Window.prototype.toString, onceKey, { value: DONE_MARK, enumerable: false, writable: false, configurable: false });
+            }
+        })(source, args);
 })();

@@ -333,7 +333,7 @@
     }
   },
   {
-    "id": 447531,
+    "id": 1800490,
     "priority": 10000,
     "action": {
       "type": "block"
@@ -381,6 +381,7 @@
         "dotmetrics.net",
         "ebacdn.com",
         "facebook.net",
+        "faselhdcdn.com",
         "fastcomments.com",
         "fastly-insights.com",
         "fastly.net",

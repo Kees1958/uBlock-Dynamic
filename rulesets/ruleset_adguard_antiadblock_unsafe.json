@@ -1817,7 +1817,7 @@
     }
   },
   {
-    "id": 718823,
+    "id": 536304,
     "priority": 10001,
     "action": {
       "type": "redirect",
@@ -1873,6 +1873,7 @@
         "thenation.com",
         "thisisanfield.com",
         "titantv.com",
+        "u.gg",
         "virtualpiano.net",
         "vsco.co",
         "wenxuecity.com"

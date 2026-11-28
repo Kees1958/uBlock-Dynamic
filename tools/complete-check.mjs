@@ -887,6 +887,25 @@ await run('99. Broadcast channel — one sending channel, reused and released, o
     execFileSync(process.execPath, [ 'tools/test-broadcast-channel.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
 
+// ── 100-101. remove-node-text (11.1.6, owner's decision 2026-11-28) ──
+// uBD's own remove-node-text replaces AdGuard's for every rule of that name (Fox News: Admiral's starter survived).
+// 100: jsdom — text arriving after its empty element, insertion after 10 s, arguments, once-guard, lifetime, build
+// wiring (fault-verified: FAULT=adguard fails parts 1 and 2). 101: real Chrome with the real extension — a script split
+// over two packets, and scriptlets in about:blank / srcdoc frames (skipped without Chrome or openssl).
+await run('100. remove-node-text — late-arriving script text, no 10 s cut-off, arguments, lifetime, wiring (11.1.6)', () => {
+    execFileSync(process.execPath, [ 'tools/test-remove-node-text.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+await run('101. Scriptlets in real Chrome — split inline script, late script, frames without an address (11.1.6; skipped without Chrome)', () => {
+    execFileSync(process.execPath, [ 'tools/e2e-scriptlets.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+
+// ── 102. Scriptlet arguments (11.1.6, scriptlet audit finding 3) ──────
+// ONE reader/writer for scriptlet arguments (build and the user's rules): AdGuard's escaped quotes, uBO's \, and quotes,
+// writer round trip (fault-verified: without the escape branch, the real-rule checks fail).
+await run('102. Scriptlet arguments — escaped quotes, one shared reader for build and custom rules (11.1.6)', () => {
+    execFileSync(process.execPath, [ 'tools/test-scriptlet-args.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+
 // ── Summary ───────────────────────────────────────────────────────────
 console.log(`\n${'═'.repeat(70)}\nSUMMARY\n${'═'.repeat(70)}`);
 for ( const r of results ) {

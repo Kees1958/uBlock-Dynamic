@@ -1,19 +1,5 @@
 [
   {
-    "id": 1384408,
-    "priority": 600000,
-    "action": {
-      "type": "allow"
-    },
-    "condition": {
-      "initiatorDomains": [
-        "bbc.com"
-      ],
-      "urlFilter": "||fwmrm.net^",
-      "isUrlFilterCaseSensitive": false
-    }
-  },
-  {
     "id": 1143771,
     "priority": 600000,
     "action": {

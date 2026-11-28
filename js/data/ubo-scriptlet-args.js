@@ -19,6 +19,24 @@
  *   A rule that cannot be expressed exactly is refused with a reason (never run with a guessed meaning): an unknown
  *   named argument, a missing value, or patterns whose regex flags differ (one regex has one set of flags).
  *
+ * (11.1.6, scriptlet audit findings 4-7 — every mapping checked against uBO's own source, gorhill/uBlock master):
+ *   ra / remove-attr, rc / remove-class (attr|class, selector, BEHAVIOUR [, quitAfter, N]) → AdGuard's
+ *     (…, selector, APPLYING): uBO's behaviour words asap / complete / stay are AdGuard's too; `quitAfter` means "keep
+ *     watching for N s after load", so it becomes AdGuard's `stay` (AdGuard has no time limit — it watches longer, it
+ *     never misses what uBO catches). Before: AdGuard read `asap` alone and made ONE pass.
+ *   set / set-constant (chain, VALUE [, runAt, X] [, as, Y]) → AdGuard's set-constant (chain, VALUE, '', WRAPPER):
+ *     uBO values `{}` `[]` `''` become emptyObj / emptyArr / ''; `as` function|callback|resolved|rejected becomes the
+ *     AdGuard wrapper asFunction|…; `runAt` is timing only (AdGuard sets from the start). A value uBO ITSELF does not
+ *     accept (e.g. `function() {}`) or AdGuard cannot express (a negative number other than -1) is refused.
+ *     Before: AdGuard silently ignored `{}` (rule did nothing) and read `runAt` as a value wrapper.
+ *   json-prune-fetch-response / json-prune-xhr-response (prune, required [, propsToMatch, P] [, stackToMatch, S]) →
+ *     AdGuard's positional (prune, required, P, S). Before: AdGuard took the WORD `propsToMatch` as the pattern.
+ *   acs / acis / abort-current-script (target, needle, CONTEXT): uBO's context (the script's src must match) has no
+ *     AdGuard equivalent — refused (AdGuard's function only judges inline scripts, so the rule did nothing).
+ *   Names: uBO's `prevent-setTimeout` / `prevent-setInterval` / `prevent-requestAnimationFrame` (uBO's primary names,
+ *     AdGuard's names too) when written with uBO's alias spelling (`ubo-prevent-setTimeout`), which AdGuard does not
+ *     register.
+ *
  * Read by: tools/build/scriptlet-rules.mjs (every filter list, rules and exceptions) and js/core/custom-scriptlets.js
  * (the user's own rules) — one translation, so a list rule and a typed rule behave the same (B15).
  * Public interface: UBO_SCRIPTLET_ARGS, translateUboScriptletArgs(name, args, uboSyntax)
@@ -54,6 +72,45 @@ export const UBO_SCRIPTLET_ARGS = Object.freeze({
     REASON_UNKNOWN_KEY:   'uBO argument this extension cannot translate',
     REASON_MISSING_VALUE: 'uBO named argument without a value',
     REASON_FLAG_MIX:      'uBO patterns with different regex flags cannot be combined into one',
+    // (11.1.6) remove-attr / remove-class — uBO's base names, AdGuard's names, behaviour words both understand.
+    REMOVE_ATTR_NAMES:  Object.freeze([ 'remove-attr', 'ra' ]),
+    REMOVE_CLASS_NAMES: Object.freeze([ 'remove-class', 'rc' ]),
+    ADGUARD_REMOVE_ATTR:  'remove-attr',
+    ADGUARD_REMOVE_CLASS: 'remove-class',
+    APPLYING_WORDS: Object.freeze([ 'asap', 'complete', 'stay' ]),
+    STAY_WORD: 'stay',
+    QUIT_AFTER_KEY: 'quitAfter',
+    // (11.1.6) set-constant — uBO's base names, AdGuard's name, value spellings, wrappers.
+    SET_CONSTANT_NAMES: Object.freeze([ 'set-constant', 'set' ]),
+    ADGUARD_SET_CONSTANT: 'set-constant',
+    SET_VALUE_SPELLINGS: Object.freeze({ '{}': 'emptyObj', '[]': 'emptyArr', "''": '' }),
+    // Values AdGuard's set-constant accepts (its own source, @adguard/scriptlets 2.6.0); numbers checked separately.
+    ADGUARD_SET_VALUES: Object.freeze([ 'undefined', 'false', 'true', 'null', 'emptyArr', 'emptyObj', 'noopFunc',
+        'noopCallbackFunc', 'trueFunc', 'falseFunc', 'throwFunc', 'noopPromiseResolve', 'noopPromiseReject', '', '-1',
+        'yes', 'no' ]),
+    ADGUARD_MAX_NUMBER: 32767,
+    UNSIGNED_NUMBER_RE: /^\d+$/,
+    SET_WRAPPERS: Object.freeze({ function: 'asFunction', callback: 'asCallback', resolved: 'asResolved', rejected: 'asRejected' }),
+    RUN_AT_KEY: 'runAt',
+    AS_KEY: 'as',
+    NO_STACK: '',
+    // (11.1.6) json-prune-*-response — uBO named → AdGuard positional (3rd, 4th).
+    JSON_PRUNE_RESPONSE_NAMES: Object.freeze([ 'json-prune-fetch-response', 'json-prune-xhr-response' ]),
+    PROPS_TO_MATCH_KEY: 'propsToMatch',
+    STACK_TO_MATCH_KEY: 'stackToMatch',
+    // (11.1.6) abort-current-script — uBO names whose third argument is the script-src context.
+    ACS_NAMES: Object.freeze([ 'abort-current-script', 'acs', 'abort-current-inline-script', 'acis' ]),
+    // (11.1.6) uBO alias spellings of names AdGuard registers only in its own spelling: uBO base → AdGuard name.
+    NAME_EQUIVALENTS: Object.freeze({
+        'prevent-settimeout': 'prevent-setTimeout',
+        'prevent-setinterval': 'prevent-setInterval',
+        'prevent-requestanimationframe': 'prevent-requestAnimationFrame',
+    }),
+    REASON_UNKNOWN_WORD:   'uBO behaviour word this extension cannot translate',
+    REASON_BAD_NUMBER:     'uBO number argument that is not a number',
+    REASON_SET_VALUE:      'uBO value AdGuard\'s set-constant cannot express (or uBO itself ignores)',
+    REASON_SET_WRAPPER:    'uBO "as" value this extension cannot translate',
+    REASON_ACS_CONTEXT:    'uBO script-src context has no AdGuard equivalent (the rule would do nothing)',
 });
 
 // True when `name` is uBO's (its spelling, or any name in a uBO-syntax line).
@@ -81,11 +138,94 @@ function sharedFlags(parts) {
     return flags;
 }
 
+// uBO's named arguments (key, value pairs) as a Map, or { error } when a value is missing.
+function namedArgs(varargs) {
+    if ( varargs.length % 2 !== 0 ) { return { error: UBO_SCRIPTLET_ARGS.REASON_MISSING_VALUE }; }
+    const named = new Map();
+    for ( let i = 0; i < varargs.length; i += 2 ) { named.set(varargs[i], varargs[i + 1]); }
+    return { named };
+}
+
+// The first key of `named` not in `allowed`, or undefined.
+function unknownKey(named, allowed) {
+    return [ ...named.keys() ].find(k => allowed.includes(k) === false);
+}
+
+// (11.1.6) ra / rc: uBO behaviour words + quitAfter → AdGuard's applying words.
+function translateRemoveAttrOrClass(name, list, adguardName, allowQuitAfter) {
+    const A = UBO_SCRIPTLET_ARGS;
+    if ( list.length <= 2 ) { return { name, args: list }; }   // no behaviour: AdGuard's default, as before
+    const [ token, selector, behaviour, ...varargs ] = list;
+    const parsed = namedArgs(varargs);
+    if ( parsed.error !== undefined ) { return parsed; }
+    const allowed = allowQuitAfter ? [ A.QUIT_AFTER_KEY ] : [];
+    const bad = unknownKey(parsed.named, allowed);
+    if ( bad !== undefined ) { return { error: `${A.REASON_UNKNOWN_KEY}: ${bad}` }; }
+    const words = behaviour.split(/\s+/).filter(w => w !== '');
+    const badWord = words.find(w => A.APPLYING_WORDS.includes(w) === false);
+    if ( badWord !== undefined ) { return { error: `${A.REASON_UNKNOWN_WORD}: ${badWord}` }; }
+    if ( parsed.named.has(A.QUIT_AFTER_KEY) ) {
+        if ( A.UNSIGNED_NUMBER_RE.test(parsed.named.get(A.QUIT_AFTER_KEY)) === false ) { return { error: A.REASON_BAD_NUMBER }; }
+        if ( words.includes(A.STAY_WORD) === false ) { words.push(A.STAY_WORD); }
+    }
+    return { name: adguardName, args: words.length === 0 ? [ token, selector ] : [ token, selector, words.join(' ') ] };
+}
+
+// (11.1.6) set: uBO value spellings, `as` wrappers, `runAt` (timing only) → AdGuard's set-constant.
+function translateSetConstant(name, list) {
+    const A = UBO_SCRIPTLET_ARGS;
+    if ( list.length < 2 ) { return { name, args: list }; }
+    const [ chain, rawValue, ...varargs ] = list;
+    const parsed = namedArgs(varargs);
+    if ( parsed.error !== undefined ) { return parsed; }
+    const bad = unknownKey(parsed.named, [ A.RUN_AT_KEY, A.AS_KEY ]);
+    if ( bad !== undefined ) { return { error: `${A.REASON_UNKNOWN_KEY}: ${bad}` }; }
+    const value = Object.hasOwn(A.SET_VALUE_SPELLINGS, rawValue) ? A.SET_VALUE_SPELLINGS[rawValue] : rawValue;
+    const isNumber = A.UNSIGNED_NUMBER_RE.test(value) && Number(value) <= A.ADGUARD_MAX_NUMBER;
+    if ( A.ADGUARD_SET_VALUES.includes(value) === false && isNumber === false ) { return { error: `${A.REASON_SET_VALUE}: ${rawValue}` }; }
+    let wrapper = '';
+    if ( parsed.named.has(A.AS_KEY) ) {
+        wrapper = A.SET_WRAPPERS[parsed.named.get(A.AS_KEY)] ?? null;
+        if ( wrapper === null ) { return { error: `${A.REASON_SET_WRAPPER}: ${parsed.named.get(A.AS_KEY)}` }; }
+    }
+    if ( value === rawValue && wrapper === '' && parsed.named.size === 0 ) { return { name, args: list }; }   // nothing to translate
+    return { name: A.ADGUARD_SET_CONSTANT, args: wrapper === '' ? [ chain, value ] : [ chain, value, A.NO_STACK, wrapper ] };
+}
+
+// (11.1.6) json-prune-*-response: uBO named propsToMatch / stackToMatch → AdGuard's 3rd / 4th position.
+function translateJsonPruneResponse(name, list, base) {
+    const A = UBO_SCRIPTLET_ARGS;
+    if ( list.length <= 2 ) { return { name, args: list }; }
+    const [ prune, required, ...varargs ] = list;
+    const parsed = namedArgs(varargs);
+    if ( parsed.error !== undefined ) { return parsed; }
+    const bad = unknownKey(parsed.named, [ A.PROPS_TO_MATCH_KEY, A.STACK_TO_MATCH_KEY ]);
+    if ( bad !== undefined ) { return { error: `${A.REASON_UNKNOWN_KEY}: ${bad}` }; }
+    const props = parsed.named.get(A.PROPS_TO_MATCH_KEY) ?? '';
+    const stack = parsed.named.get(A.STACK_TO_MATCH_KEY) ?? '';
+    return { name: base, args: stack === '' ? [ prune, required, props ] : [ prune, required, props, stack ] };
+}
+
 // { name, args } to run, or { error }. Rules that need no translation come back unchanged.
 export function translateUboScriptletArgs(name, args, uboSyntax = false) {
+    const A = UBO_SCRIPTLET_ARGS;
     const list = Array.isArray(args) ? args.map(String) : [];
     if ( typeof name !== 'string' || isUboSemantics(name, uboSyntax) === false ) { return { name, args: list }; }
-    if ( UBO_SCRIPTLET_ARGS.REMOVE_NODE_TEXT_NAMES.includes(baseScriptletName(name)) === false ) { return { name, args: list }; }
+    const base = baseScriptletName(name);
+    if ( Object.hasOwn(A.NAME_EQUIVALENTS, base) ) { return { name: A.NAME_EQUIVALENTS[base], args: list }; }
+    if ( A.REMOVE_ATTR_NAMES.includes(base) ) { return translateRemoveAttrOrClass(name, list, A.ADGUARD_REMOVE_ATTR, true); }
+    if ( A.REMOVE_CLASS_NAMES.includes(base) ) { return translateRemoveAttrOrClass(name, list, A.ADGUARD_REMOVE_CLASS, false); }
+    if ( A.SET_CONSTANT_NAMES.includes(base) ) { return translateSetConstant(name, list); }
+    if ( A.JSON_PRUNE_RESPONSE_NAMES.includes(base) ) { return translateJsonPruneResponse(name, list, base); }
+    if ( A.ACS_NAMES.includes(base) ) {
+        return list.length > 2 && list[2] !== '' ? { error: A.REASON_ACS_CONTEXT } : { name, args: list };
+    }
+    if ( A.REMOVE_NODE_TEXT_NAMES.includes(base) === false ) { return { name, args: list }; }
+    return translateRemoveNodeText(name, list);
+}
+
+// (11.1.4) rmnt / remove-node-text — moved out of translateUboScriptletArgs() unchanged (11.1.6).
+function translateRemoveNodeText(name, list) {
     if ( list.length <= 2 ) { return { name, args: list }; }   // node name + pattern only: same meaning in both
     const [ nodeName, pattern, ...varargs ] = list;
     if ( varargs.length % 2 !== 0 ) { return { error: UBO_SCRIPTLET_ARGS.REASON_MISSING_VALUE }; }

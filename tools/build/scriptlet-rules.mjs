@@ -11,6 +11,7 @@
 import { droppedGenericDomainQualifiers, droppedUnsupportedScriptletScopes } from './build-state.mjs';
 import { GENERIC_DOMAIN_QUALIFIER_RE, filterGenericDomainQualifier, isTLDKept } from './tld-scope.mjs';
 import { translateUboScriptletArgs } from '../../js/data/ubo-scriptlet-args.js';
+import { splitAdguardScriptletArgs } from '../../js/util/scriptlet-args.js';
 
 // (11.1.4) Kind under which a uBO rule whose extra arguments cannot be translated is reported
 // (dropped-unsupported-scriptlet-scopes.txt); the reason from translateUboScriptletArgs() follows the line.
@@ -101,26 +102,9 @@ export function parseScriptletRules(text, tldCheckFn = isTLDKept, allowGenericDo
         if ( callEnd <= callStart ) { continue; }
         const callContent = t.slice(callStart, callEnd);
 
-        // Parse quoted arguments — handles nested quotes in CSS selectors.
-        // e.g. 'div[data-testid="foo"] button' must be one arg.
-        const args = [];
-        {
-            let qi = 0;
-            while ( qi < callContent.length ) {
-                if ( callContent[qi] === ',' || callContent[qi] === ' ' ) { qi++; continue; }
-                if ( callContent[qi] === "'" || callContent[qi] === '"' ) {
-                    const q = callContent[qi++];
-                    let val = '';
-                    while ( qi < callContent.length ) {
-                        if ( callContent[qi] === q ) { qi++; break; }
-                        val += callContent[qi++];
-                    }
-                    args.push(val);
-                } else {
-                    qi++;
-                }
-            }
-        }
+        // (11.1.6) Quote- and escape-aware, ONE reader for rules, exceptions and the user's own rules
+        // (js/util/scriptlet-args.js) — `\'` inside '…' is a quote, not the end of the argument.
+        const args = splitAdguardScriptletArgs(callContent);
         if ( args.length === 0 ) { continue; }
 
         const [rawName, ...rawArgs] = args;
@@ -198,29 +182,8 @@ export function parseScriptletExceptionRules(text) {
             continue;
         }
 
-        // Named form — same quote-aware argument split as
-        // parseScriptletRules() uses for the injection form (see B15 —
-        // two parsers of the same underlying call syntax must share the
-        // splitting logic or they silently drift; this one is copied
-        // from, not re-derived independently of, that one).
-        const args = [];
-        {
-            let qi = 0;
-            while ( qi < callContent.length ) {
-                if ( callContent[qi] === ',' || callContent[qi] === ' ' ) { qi++; continue; }
-                if ( callContent[qi] === "'" || callContent[qi] === '"' ) {
-                    const q = callContent[qi++];
-                    let val = '';
-                    while ( qi < callContent.length ) {
-                        if ( callContent[qi] === q ) { qi++; break; }
-                        val += callContent[qi++];
-                    }
-                    args.push(val);
-                } else {
-                    qi++;
-                }
-            }
-        }
+        // Named form — (11.1.6) the same shared reader as parseScriptletRules() (js/util/scriptlet-args.js, B15).
+        const args = splitAdguardScriptletArgs(callContent);
         if ( args.length === 0 ) { continue; }
 
         const [rawName, ...rawArgs] = args;

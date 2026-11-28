@@ -1,17 +1,6 @@
 [
   {
     "hostnames": [
-      "foxnews.com"
-    ],
-    "name": "ubo-rmnt",
-    "args": [
-      "script",
-      "__apEarlyInstalled"
-    ],
-    "ruleset": "ruleset_badfilter_quickfixes"
-  },
-  {
-    "hostnames": [
       "1800contacts.com"
     ],
     "name": "set-cookie",
@@ -4012,8 +4001,7 @@
     "name": "remove-attr",
     "args": [
       "onerror",
-      "img[onerror=\"this.src=\\",
-      "\"]",
+      "img[onerror=\"this.src='/sample/placeholder.jpg'\"]",
       "stay"
     ],
     "ruleset": "ruleset_adguard_base"
@@ -13510,8 +13498,7 @@
     ],
     "name": "prevent-setTimeout",
     "args": [
-      "window[a0b(\\",
-      ""
+      "window[a0b('0x"
     ],
     "ruleset": "ruleset_adguard_base"
   },
@@ -26230,6 +26217,7 @@
   },
   {
     "hostnames": [
+      "reverso.net",
       "keizai.biz",
       "netvasco.com.br",
       "manchestereveningnews.co.uk",
@@ -27388,6 +27376,7 @@
   },
   {
     "hostnames": [
+      "jeeppatriot.com",
       "toyotanation.com"
     ],
     "name": "abort-on-stack-trace",
@@ -29646,6 +29635,17 @@
   },
   {
     "hostnames": [
+      "leeds-live.co.uk"
+    ],
+    "name": "abort-current-inline-script",
+    "args": [
+      "document.createElement",
+      "nowprocket"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
       "echo24.de",
       "theverge.com",
       "gumtree.com"
@@ -29729,13 +29729,13 @@
     "args": [
       "HTMLScriptElement.prototype.setAttribute",
       "1",
-      "replace:/.*(async[\\s]*\\(\\)[\\s]*=>[\\s]*\\{[\\s]*try[\\s]*\\{[\\s]*(const|var)[\\s]*e[\\s]*=[\\s]*e[\\s]*=>|if[\\s]*\\(await eval\\(|[a-z]\\([a-z]\\),setTimeout\\(\\(\\(\\)=>\\{[a-z]\\(!1\\)|\\(async\\(\\)=>[\\s\\S]*?\\(\\)=>eval\\)?,.:|\\(async \\(\\) =>[\\s\\S]*?\\(\\) => eval\\)?,\\n.*.:|:\\(\\)=>eval|;\\(async\\(\\)=>\\{\\([\\s\\S]*?:void 0\\|\\|window,|;\\(async\\(\\)=>\\{\\([\\s\\S]*?:\\d&&window,|\\(function\\(\\)\\{function[\\s\\S]*]===undefined\\)\\{var[\\s\\S]*:-0x|\\.adshield\\.|;\\(async\\(\\)=>\\{[\\s\\S]*?,..?:(\\",
-      ")|\\.join\\(String\\.fromCharCode.*?\\(async\\(\\)=>\\{var).*//g'"
+      "replace:/.*(async[\\s]*\\(\\)[\\s]*=>[\\s]*\\{[\\s]*try[\\s]*\\{[\\s]*(const|var)[\\s]*e[\\s]*=[\\s]*e[\\s]*=>|if[\\s]*\\(await eval\\(|[a-z]\\([a-z]\\),setTimeout\\(\\(\\(\\)=>\\{[a-z]\\(!1\\)|\\(async\\(\\)=>[\\s\\S]*?\\(\\)=>eval\\)?,.:|\\(async \\(\\) =>[\\s\\S]*?\\(\\) => eval\\)?,\\n.*.:|:\\(\\)=>eval|;\\(async\\(\\)=>\\{\\([\\s\\S]*?:void 0\\|\\|window,|;\\(async\\(\\)=>\\{\\([\\s\\S]*?:\\d&&window,|\\(function\\(\\)\\{function[\\s\\S]*]===undefined\\)\\{var[\\s\\S]*:-0x|\\.adshield\\.|;\\(async\\(\\)=>\\{[\\s\\S]*?,..?:('|\")|\\.join\\(String\\.fromCharCode.*?\\(async\\(\\)=>\\{var).*//g"
     ],
     "ruleset": "ruleset_adguard_base"
   },
   {
     "hostnames": [
+      "reverso.net",
       "wykop.pl",
       "echo24.de",
       "keizai.biz",
@@ -31276,6 +31276,17 @@
   },
   {
     "hostnames": [
+      "epicroms.net"
+    ],
+    "name": "remove-node-text",
+    "args": [
+      "script",
+      "/\\(\\)\\;void window\\;/"
+    ],
+    "ruleset": "ruleset_adguard_base"
+  },
+  {
+    "hostnames": [
       "thebanks.eu"
     ],
     "name": "prevent-addEventListener",
@@ -31374,6 +31385,7 @@
   },
   {
     "hostnames": [
+      "net11.cc",
       "oisauh.com",
       "czzbgnw.com",
       "allpornstream.com"
@@ -31628,6 +31640,7 @@
   },
   {
     "hostnames": [
+      "faselhd.cc",
       "scanwp.net",
       "viddown.net",
       "yt-shorts-dl.com",
@@ -31691,6 +31704,7 @@
   },
   {
     "hostnames": [
+      "f4splay.vip",
       "f4scdn.com"
     ],
     "name": "prevent-window-open",
@@ -31701,6 +31715,7 @@
   },
   {
     "hostnames": [
+      "f4splay.vip",
       "f4scdn.com"
     ],
     "name": "json-prune",
@@ -32723,8 +32738,7 @@
     "args": [
       "script",
       "html5player",
-      "if (typeof html5player.setupVideo === \\",
-      ")",
+      "if (typeof html5player.setupVideo === 'function')",
       "if (false)"
     ],
     "ruleset": "ruleset_adguard_base"
@@ -34077,8 +34091,7 @@
     "name": "prevent-addEventListener",
     "args": [
       "/click|DOMContentLoaded/",
-      "/new MouseEvent|SPONSOR_LINKS|_url,|\\[\\",
-      ""
+      "/new MouseEvent|SPONSOR_LINKS|_url,|\\['\\\\x/"
     ],
     "ruleset": "ruleset_adguard_base"
   },
@@ -34089,8 +34102,7 @@
     "name": "abort-current-inline-script",
     "args": [
       "document.createElement",
-      "/_url,|\\[\\",
-      ""
+      "/_url,|\\['\\x/"
     ],
     "ruleset": "ruleset_adguard_base"
   },
@@ -38479,7 +38491,7 @@
       "nuvid.tv",
       "fitpractise.com",
       "crystal-launcher.net",
-      "net77.cc",
+      "net11.cc",
       "kagane.to",
       "unicorn.asso.eu.org",
       "embedseek.com",
@@ -44807,11 +44819,7 @@
     "name": "remove-node-text",
     "args": [
       "script",
-      "/head\\.insertBefore|\\+['\\",
-      "\\\"`]|(([",
-      "`]\\+['\\",
-      "\\\"`]removeC|\\[\\s*d-z=|[",
-      "`]\\/007|Interstitial|alphabet=/"
+      "/head\\.insertBefore|\\+['\"`]Element|==\\s*undefined['\"`]|((['\"`]\\+['\"`])*[0-9A-Za-z]){36}\\+\\/=|jso\\$|[.'\"`]removeC|\\[\\s*d-z=|['\"`]\\/007|Interstitial|alphabet=/"
     ],
     "ruleset": "ruleset_adguard_french"
   },
@@ -48494,8 +48502,7 @@
     ],
     "name": "prevent-setTimeout",
     "args": [
-      "Promise[\\",
-      "](urls"
+      "Promise['all'](urls"
     ],
     "ruleset": "ruleset_adguard_spanish"
   },
@@ -52290,8 +52297,7 @@
     "args": [
       "script",
       "videoUrl",
-      "/alert\\(\\",
-      "\\);/",
+      "/alert\\('Publicidad antes del video. Redirigiendo...'\\);/",
       ""
     ],
     "ruleset": "ruleset_adguard_spanish"
@@ -56144,17 +56150,6 @@
   },
   {
     "hostnames": [
-      "liepajniekiem.lv"
-    ],
-    "name": "ubo-set",
-    "args": [
-      "window.liepajniekiemStats.event",
-      "function() {}"
-    ],
-    "ruleset": "ruleset_easylist_latvian"
-  },
-  {
-    "hostnames": [
       "torrent.ai",
       "torrent.lt"
     ],
@@ -57015,7 +57010,7 @@
     "hostnames": [
       "maskinbladet.dk"
     ],
-    "name": "ubo-prevent-setTimeout",
+    "name": "prevent-setTimeout",
     "args": [
       "/doCheck\\(.,.\\)/"
     ],
@@ -57319,10 +57314,10 @@
     "hostnames": [
       "tribunaplovdiv.bg"
     ],
-    "name": "ubo-set",
+    "name": "set-constant",
     "args": [
       "SGPB_POPUP_PARAMS",
-      "{}"
+      "emptyObj"
     ],
     "ruleset": "ruleset_easylist_bulgarian"
   },
@@ -57430,10 +57425,10 @@
       "btvsport.bg",
       "btvnovinite.bg"
     ],
-    "name": "ubo-set",
+    "name": "set-constant",
     "args": [
       "branDetective",
-      "{}"
+      "emptyObj"
     ],
     "ruleset": "ruleset_easylist_bulgarian"
   },
@@ -59379,6 +59374,7 @@
   },
   {
     "hostnames": [
+      "niganpro.com",
       "loanbixby.com",
       "fcportables.com",
       "financeguidz.com",
@@ -59967,6 +59963,17 @@
   },
   {
     "hostnames": [
+      "vpnjantit.com"
+    ],
+    "name": "prevent-element-src-loading",
+    "args": [
+      "script",
+      "adsbygoogle"
+    ],
+    "ruleset": "ruleset_adguard_antiadblock"
+  },
+  {
+    "hostnames": [
       "netmirror.plus"
     ],
     "name": "set-constant",
@@ -60234,7 +60241,6 @@
   {
     "hostnames": [
       "lnbzi.com",
-      "lnbzi.com",
       "srnky.com",
       "clksz.com",
       "fcportables.com",
@@ -60492,39 +60498,6 @@
     "name": "prevent-fetch",
     "args": [
       "cdn.bmcdn6.com"
-    ],
-    "ruleset": "ruleset_adguard_antiadblock"
-  },
-  {
-    "hostnames": [
-      "net77.cc"
-    ],
-    "name": "prevent-setTimeout",
-    "args": [
-      "/\\.removeClass/",
-      "5000"
-    ],
-    "ruleset": "ruleset_adguard_antiadblock"
-  },
-  {
-    "hostnames": [
-      "net77.cc"
-    ],
-    "name": "prevent-element-src-loading",
-    "args": [
-      "img",
-      "publishers.monetag.com"
-    ],
-    "ruleset": "ruleset_adguard_antiadblock"
-  },
-  {
-    "hostnames": [
-      "net77.cc"
-    ],
-    "name": "prevent-element-src-loading",
-    "args": [
-      "script",
-      "adsbygoogle"
     ],
     "ruleset": "ruleset_adguard_antiadblock"
   },
@@ -61914,8 +61887,7 @@
     "args": [
       "script",
       "displayVerificationResult",
-      "/var _0x[a-z0-9]{6}.*if\\(\\$.*\\[\\",
-      "\\].*return displayVerification.*\\)\\,!!\\[\\]\\);/",
+      "/var _0x[a-z0-9]{6}.*if\\(\\$.*\\['is'\\].*return displayVerification.*\\)\\,!!\\[\\]\\);/",
       ""
     ],
     "ruleset": "ruleset_adguard_antiadblock"
@@ -64658,6 +64630,16 @@
     "name": "prevent-fetch",
     "args": [
       "pagead2.googlesyndication.com"
+    ],
+    "ruleset": "ruleset_adguard_antiadblock"
+  },
+  {
+    "hostnames": [
+      "exeygo.com"
+    ],
+    "name": "prevent-fetch",
+    "args": [
+      "mode:no-cors"
     ],
     "ruleset": "ruleset_adguard_antiadblock"
   },
@@ -70207,6 +70189,7 @@
   },
   {
     "hostnames": [
+      "u.gg",
       "tapology.com",
       "onlineradiobox.com",
       "baseball-reference.com",
@@ -70231,6 +70214,7 @@
   },
   {
     "hostnames": [
+      "u.gg",
       "tapology.com",
       "onlineradiobox.com",
       "baseball-reference.com",
@@ -70252,6 +70236,7 @@
   },
   {
     "hostnames": [
+      "u.gg",
       "tapology.com",
       "onlineradiobox.com",
       "baseball-reference.com",
@@ -70299,6 +70284,7 @@
   },
   {
     "hostnames": [
+      "u.gg",
       "tapology.com",
       "onlineradiobox.com",
       "baseball-reference.com",
@@ -78096,6 +78082,28 @@
   },
   {
     "hostnames": [
+      "functioncube.com"
+    ],
+    "name": "prevent-element-src-loading",
+    "args": [
+      "script",
+      "adsbygoogle"
+    ],
+    "ruleset": "ruleset_english_outside_top1m"
+  },
+  {
+    "hostnames": [
+      "hwcooling.net"
+    ],
+    "name": "abort-current-inline-script",
+    "args": [
+      "document.getElementById",
+      "adsbygoogle"
+    ],
+    "ruleset": "ruleset_english_outside_top1m"
+  },
+  {
+    "hostnames": [
       "peeplayer.com"
     ],
     "name": "abort-current-inline-script",
@@ -78254,6 +78262,7 @@
   },
   {
     "hostnames": [
+      "f4splay.vip",
       "f4scdn.com"
     ],
     "name": "prevent-fetch",
@@ -78264,6 +78273,7 @@
   },
   {
     "hostnames": [
+      "f4splay.vip",
       "f4scdn.com"
     ],
     "name": "remove-attr",
@@ -78639,6 +78649,28 @@
     ],
     "name": "prevent-fetch",
     "args": [
+      "adsbygoogle"
+    ],
+    "ruleset": "ruleset_english_outside_top1m"
+  },
+  {
+    "hostnames": [
+      "net11.cc"
+    ],
+    "name": "prevent-setTimeout",
+    "args": [
+      "/\\.removeClass/",
+      "5000"
+    ],
+    "ruleset": "ruleset_english_outside_top1m"
+  },
+  {
+    "hostnames": [
+      "net11.cc"
+    ],
+    "name": "prevent-element-src-loading",
+    "args": [
+      "script",
       "adsbygoogle"
     ],
     "ruleset": "ruleset_english_outside_top1m"
@@ -79111,8 +79143,7 @@
     "args": [
       "script",
       "startSecureTimer",
-      "if (document.hidden || document.visibilityState === \\",
-      ")",
+      "if (document.hidden || document.visibilityState === 'hidden')",
       "if (!0)"
     ],
     "ruleset": "ruleset_english_outside_top1m"
@@ -84113,7 +84144,7 @@
       "vevocloud.com",
       "myvidplay.com",
       "arigl.com",
-      "jmanga.coach",
+      "jmanga.gripe",
       "hentai2w.com",
       "javpas.com",
       "porntin.com",
@@ -90572,6 +90603,115 @@
   },
   {
     "hostnames": [
+      "11alive.com",
+      "15min.lt",
+      "247sports.com",
+      "abc17news.com",
+      "addictinggames.com",
+      "agrodigital.com",
+      "allmovie.com",
+      "allmusic.com",
+      "arstechnica.com",
+      "audiomack.com",
+      "barcablaugranes.com",
+      "barnsleychronicle.com",
+      "blazersedge.com",
+      "blu-ray.com",
+      "boredpanda.com",
+      "brobible.com",
+      "cagesideseats.com",
+      "cbsnews.com",
+      "cbssports.com",
+      "chaptercheats.com",
+      "cheatsheet.com",
+      "clickondetroit.com",
+      "crooksandliars.com",
+      "dailydot.com",
+      "dailykos.com",
+      "dailyvoice.com",
+      "danslescoulisses.com",
+      "databazeknih.cz",
+      "decider.com",
+      "dpreview.com",
+      "egoallstars.com",
+      "eldiariony.com",
+      "fark.com",
+      "flickr.com",
+      "fmradiofree.com",
+      "forums.hfboards.com",
+      "free-power-point-templates.com",
+      "freeconvert.com",
+      "futbin.com",
+      "golfdigest.com",
+      "grunge.com",
+      "imgur.com",
+      "intouchweekly.com",
+      "iphoneincanada.ca",
+      "last.fm",
+      "localnews8.com",
+      "macwelt.de",
+      "maidenhead-advertiser.co.uk",
+      "mardomreport.net",
+      "miamiherald.com",
+      "mmamania.com",
+      "naszemiasto.pl",
+      "nationalpost.com",
+      "nationalreview.com",
+      "nbcsports.com",
+      "news.com.au",
+      "ninersnation.com",
+      "nydailynews.com",
+      "nypost.com",
+      "observer.com",
+      "ontvtonight.com",
+      "pagesix.com",
+      "patheos.com",
+      "pauladeen.com",
+      "pcbolsa.com",
+      "phillyvoice.com",
+      "premierguitar.com",
+      "pwinsider.com",
+      "royalmailchat.co.uk",
+      "sandrarose.com",
+      "sbnation.com",
+      "sheknows.com",
+      "sidereel.com",
+      "smartworld.it",
+      "sneakernews.com",
+      "soldionline.it",
+      "sport-fm.gr",
+      "sportsgamblingpodcast.com",
+      "stylecaster.com",
+      "tastingtable.com",
+      "techcrunch.com",
+      "thecelticblog.com",
+      "thedailymeal.com",
+      "themarysue.com",
+      "thenerdstash.com",
+      "tiermaker.com",
+      "timesofisrael.com",
+      "tiscali.cz",
+      "tokfm.pl",
+      "torontosun.com",
+      "usmagazine.com",
+      "wcnc.com",
+      "weather.com",
+      "wimp.com",
+      "woojr.com",
+      "worldstar.com",
+      "worldstarhiphop.com",
+      "worldsurfleague.com",
+      "yourcountdown.to"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/\"v4ac1eiZr0\"|\"\"\\)\\.split\\(\",\"\\)\\[4\\]|(\\.localStorage\\)|JSON\\.parse\\(\\w)\\.getItem\\(\"|[\"']_aQS0\\w+[\"']|decodeURI\\(decodeURI\\(\"|<a href=\"https:\\/\\/getad%|\"cmp\\.updated\"/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
       "12thmanrising.com",
       "allucanheat.com",
       "aroundthefoghorn.com",
@@ -90847,20 +90987,6 @@
   },
   {
     "hostnames": [
-      "13wham.com",
-      "komonews.com",
-      "wlos.com"
-    ],
-    "name": "ubo-rpnt",
-    "args": [
-      "script",
-      "/admiral-initializer\\\\\",\\\\\"children\\\\\":\\\\\"[^\"]+\\\\\"/",
-      "admiral-initializer\\\",\\\"children\\\":\\\"\\\""
-    ],
-    "ruleset": "ruleset_antiadmiral"
-  },
-  {
-    "hostnames": [
       "373news.com",
       "50states.com",
       "actugaming.net",
@@ -90905,7 +91031,6 @@
       "games.arkadium.com",
       "gazetaprawna.pl",
       "geogridgame.com",
-      "geoguessr.com",
       "gerbeaud.com",
       "gesundheitsfrage.net",
       "gigafile.nu",
@@ -91066,20 +91191,6 @@
     "args": [
       "script",
       "html-load.com"
-    ],
-    "ruleset": "ruleset_antiadmiral"
-  },
-  {
-    "hostnames": [
-      "247sports.com"
-    ],
-    "name": "ubo-rpnt",
-    "args": [
-      "script",
-      "/^/",
-      "(()=>{window.admiral=function(d,a,b){if(\"function\"==typeof b)try{b({})}catch(a){}}})();",
-      "sedCount",
-      "1"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -91299,13 +91410,11 @@
       "tacoma4g.com",
       "taycanforum.com"
     ],
-    "name": "ubo-ra",
+    "name": "remove-attr",
     "args": [
       "onerror",
       "script[id][onerror]",
-      "asap",
-      "quitAfter",
-      "10"
+      "asap stay"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -91615,13 +91724,11 @@
       "worldjournal.com",
       "wykop.pl"
     ],
-    "name": "ubo-ra",
+    "name": "remove-attr",
     "args": [
       "onerror",
       "script[id][onerror]",
-      "asap",
-      "quitAfter",
-      "10"
+      "asap stay"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -91965,12 +92072,10 @@
       "ydr.com",
       "zanesvilletimesrecorder.com"
     ],
-    "name": "ubo-set",
+    "name": "set-constant",
     "args": [
       "gnt.x.uam",
-      "undefined",
-      "runAt",
-      "interactive"
+      "undefined"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92042,13 +92147,11 @@
       "windowscentral.com",
       "womanandhome.com"
     ],
-    "name": "ubo-ra",
+    "name": "remove-attr",
     "args": [
       "onerror",
       "script[id][onerror]",
-      "asap",
-      "quitAfter",
-      "10"
+      "asap stay"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92699,13 +92802,11 @@
       "wwd.com",
       "zekamashi.net"
     ],
-    "name": "ubo-ra",
+    "name": "remove-attr",
     "args": [
       "onerror",
       "script[id][onerror]",
-      "asap",
-      "quitAfter",
-      "10"
+      "asap stay"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -92942,13 +93043,11 @@
       "wysokieobcasy.pl",
       "zakupy-czterykaty.pl"
     ],
-    "name": "ubo-ra",
+    "name": "remove-attr",
     "args": [
       "onerror",
       "script[id][onerror]",
-      "asap",
-      "quitAfter",
-      "10"
+      "asap stay"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93313,13 +93412,11 @@
       "switchbacktravel.com",
       "theinertia.com"
     ],
-    "name": "ubo-ra",
+    "name": "remove-attr",
     "args": [
       "onerror",
       "script[id][onerror]",
-      "asap",
-      "quitAfter",
-      "10"
+      "asap stay"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -93881,13 +93978,11 @@
       "turbo.fr",
       "voici.fr"
     ],
-    "name": "ubo-ra",
+    "name": "remove-attr",
     "args": [
       "onerror",
       "script[id][onerror]",
-      "asap",
-      "quitAfter",
-      "10"
+      "asap stay"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -94689,7 +94784,8 @@
   },
   {
     "hostnames": [
-      "foxbusiness.com"
+      "foxbusiness.com",
+      "foxnews.com"
     ],
     "name": "remove-node-text",
     "args": [
@@ -94701,6 +94797,7 @@
   {
     "hostnames": [
       "foxbusiness.com",
+      "foxnews.com",
       "huskermax.com",
       "iphoneincanada.ca",
       "premierguitar.com",
@@ -94882,6 +94979,17 @@
   },
   {
     "hostnames": [
+      "geoguessr.com"
+    ],
+    "name": "ubo-rmnt",
+    "args": [
+      "script",
+      "/^\\(function\\(\\)\\{.+html-load\\.com/"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
       "gol24.pl",
       "gra.pl",
       "gs24.pl",
@@ -95051,18 +95159,6 @@
   },
   {
     "hostnames": [
-      "hometownstation.com"
-    ],
-    "name": "ubo-rpnt",
-    "args": [
-      "script",
-      "window.dataLayer =",
-      "/*start*/(function(){let link=document.createElement(\"link\");link.rel=\"stylesheet\";link.href=\"/wp-content/themes/hts_v2/style.css\";document.head.appendChild(link)})();document.currentScript.textContent=document.currentScript.textContent.replace(/\\/\\*start\\*\\/(.*)\\/\\*end\\*\\//g,\"\");/*end*/window.dataLayer ="
-    ],
-    "ruleset": "ruleset_antiadmiral"
-  },
-  {
-    "hostnames": [
       "huffpost.com"
     ],
     "name": "ubo-json-prune",
@@ -95205,18 +95301,6 @@
     "args": [
       "script",
       "adblockerDisabled"
-    ],
-    "ruleset": "ruleset_antiadmiral"
-  },
-  {
-    "hostnames": [
-      "isplus.com"
-    ],
-    "name": "ubo-rpnt",
-    "args": [
-      "script",
-      "window.dataLayer =",
-      "/*start*/(function(){let link=document.createElement(\"link\");link.rel=\"stylesheet\";link.href=\"/css_renew/pc/common.css\";document.head.appendChild(link)})();document.currentScript.textContent=document.currentScript.textContent.replace(/\\/\\*start\\*\\/(.*)\\/\\*end\\*\\//g,\"\");/*end*/window.dataLayer ="
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95763,12 +95847,10 @@
     "hostnames": [
       "mail.yahoo.com"
     ],
-    "name": "ubo-set",
+    "name": "set-constant",
     "args": [
       "AppBootstrapData.__initializeFeatures__.adshieldAdblockRecovery.enabled",
-      "false",
-      "runAt",
-      "interactive"
+      "false"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95787,12 +95869,10 @@
     "hostnames": [
       "mail.yahoo.com"
     ],
-    "name": "ubo-set",
+    "name": "set-constant",
     "args": [
       "AppBootstrapData.config.adshieldAdblockRecovery",
-      "false",
-      "runAt",
-      "interactive"
+      "false"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95811,12 +95891,10 @@
     "hostnames": [
       "mail.yahoo.com"
     ],
-    "name": "ubo-set",
+    "name": "set-constant",
     "args": [
       "AppBootstrapData.config.adshieldNativeAdRecovery",
-      "false",
-      "runAt",
-      "interactive"
+      "false"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -95835,12 +95913,10 @@
     "hostnames": [
       "mail.yahoo.com"
     ],
-    "name": "ubo-set",
+    "name": "set-constant",
     "args": [
       "AppState.reduxState.features.adshieldAdblockRecovery",
-      "false",
-      "runAt",
-      "interactive"
+      "false"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -96284,11 +96360,10 @@
     "hostnames": [
       "prydwen.gg"
     ],
-    "name": "ubo-json-prune-fetch-response",
+    "name": "json-prune-fetch-response",
     "args": [
       "ads",
       "",
-      "propsToMatch",
       "/runtime-config"
     ],
     "ruleset": "ruleset_antiadmiral"
@@ -96461,6 +96536,18 @@
   },
   {
     "hostnames": [
+      "reverso.net"
+    ],
+    "name": "remove-attr",
+    "args": [
+      "onerror|onload",
+      "script[id][onerror][onload]",
+      "asap stay"
+    ],
+    "ruleset": "ruleset_antiadmiral"
+  },
+  {
+    "hostnames": [
       "salmonfishingforum.com",
       "saxontheweb.net",
       "shipsnostalgia.com",
@@ -96478,13 +96565,11 @@
       "suzuki-forums.com",
       "swedespeed.com"
     ],
-    "name": "ubo-ra",
+    "name": "remove-attr",
     "args": [
       "onerror",
       "script[id][onerror]",
-      "asap",
-      "quitAfter",
-      "10"
+      "asap stay"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -96758,20 +96843,6 @@
     "args": [
       "script",
       "html-load.cc"
-    ],
-    "ruleset": "ruleset_antiadmiral"
-  },
-  {
-    "hostnames": [
-      "startpage.com"
-    ],
-    "name": "ubo-rpnt",
-    "args": [
-      "script",
-      "/\"(?:(?:ad_admiral|adblock_paywall)\":[^,}]*|experiment_id\":\"(?:hard_block|adblock_paywall)_[^\"]*\"),?/",
-      "",
-      "sedCount",
-      "1"
     ],
     "ruleset": "ruleset_antiadmiral"
   },
@@ -97118,18 +97189,6 @@
     "args": [
       "script",
       "__apNoHold"
-    ],
-    "ruleset": "ruleset_antiadmiral"
-  },
-  {
-    "hostnames": [
-      "thenerdstash.com"
-    ],
-    "name": "ubo-acs",
-    "args": [
-      "String.prototype.match",
-      "__adblocker",
-      "/^data:/"
     ],
     "ruleset": "ruleset_antiadmiral"
   },

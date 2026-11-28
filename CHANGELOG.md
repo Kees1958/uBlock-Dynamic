@@ -14,6 +14,19 @@ extension). The full technical account is CHANGELOG_HISTORY.md.
   see it as it loads without filtering. Cookies, logins and other sites are never touched.
 - **Fixed: a small memory leak in the background.** Every live update to the Matrix panel, the Privacy inspector or
   the popup opened a new message channel that was never closed; uBD now uses one channel and reuses it.
+- **Fixed: Fox News (and other sites) could still show the "you're using an ad blocker" wall** although a rule was
+  meant to stop it. Rules that remove a site's anti-adblock starter from the page (306 rules on about 4,800 sites,
+  among them all Admiral fixes) missed the starter when it reached the browser in more than one piece, and stopped
+  working 10 seconds after a page opened. uBD now uses its own version of this tool, which checks the starter again
+  once it is complete and keeps working as long as the page is open.
+- **Fixed: about 30 more filter rules that silently did nothing** (found by a full check of every scriptlet against
+  uBlock Origin and AdGuard): rules with a quote inside their text were cut short, several uBlock Origin options were
+  misread (among them the Ad-Shield anti-adblock fixes), and three uBlock Origin values were ignored. Rules that rewrite
+  part of a page script now also work when the script arrives in pieces.
+- **Stronger against anti-adblock tricks:** a page can no longer escape uBD's page protections by running code in an
+  invisible empty frame; the protections now apply there too.
+- **All filter lists refreshed** (full update, 2026-11-28). Bad filter fixes: the bbc.com FreeWheel exception and the
+  Fox News Admiral rule were removed from the list.
 
 ## 11.1.5
 - **Fixed: pages could freeze with "Maximum call stack size exceeded" where Optimizely is replaced by uBD's stand-in**

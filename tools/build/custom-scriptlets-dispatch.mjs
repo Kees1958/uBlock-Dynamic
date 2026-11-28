@@ -125,6 +125,9 @@ export async function buildCustomScriptletsDispatch(full) {
     const { UBO_PATCH_SCRIPTLETS } = await import('../../js/resources/ubo-patch-scriptlets-source.mjs');
     const redundantPatchNames = [];
     for ( const entry of UBO_PATCH_SCRIPTLETS ) {
+        // (11.1.6) A `replacesAdGuard` entry already took the AdGuard entry's place in `full`
+        // (scriptlet-corelibs.mjs applyProjectReplacements()), so its body is already written above — not redundant.
+        if ( fnVarMap.has(entry.scriptlet.toString()) ) { continue; }
         const v = `u${varIndex++}`;
         fileWrites.push({ varName: v, code: renderCustomScriptletFile(entry.scriptlet.toString(), UBO_PATCH_SCRIPTLET_NOTICE) });
         for ( const name of entry.names ) {

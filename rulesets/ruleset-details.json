@@ -38,9 +38,9 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 3558,
+    "rawLineCount": 3566,
     "ruleCount": 1,
-    "domainCount": 3474,
+    "domainCount": 3482,
     "paramCount": 0,
     "blockCount": 1,
     "allowCount": 0,
@@ -55,14 +55,14 @@
     "locales": [],
     "url": "https://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/refs/heads/master/badfilter-quick-fixes.txt",
     "enabled": true,
-    "rawLineCount": 12,
-    "ruleCount": 5,
+    "rawLineCount": 10,
+    "ruleCount": 4,
     "domainCount": 0,
     "paramCount": 0,
     "blockCount": 2,
-    "allowCount": 3,
+    "allowCount": 2,
     "redirectCount": 0,
-    "scriptletRuleCount": 1,
+    "scriptletRuleCount": 0,
     "cosmeticHostnameCount": 1
   },
   {
@@ -85,7 +85,7 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 16014,
+    "rawLineCount": 16021,
     "ruleCount": 744,
     "domainCount": 450,
     "paramCount": 0,
@@ -93,7 +93,7 @@
     "allowCount": 0,
     "redirectCount": 0,
     "scriptletRuleCount": 355,
-    "cosmeticHostnameCount": 7459
+    "cosmeticHostnameCount": 7464
   },
   {
     "id": "ruleset_hagezi_light",
@@ -101,9 +101,9 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 29096,
+    "rawLineCount": 29133,
     "ruleCount": 7,
-    "domainCount": 27775,
+    "domainCount": 27808,
     "paramCount": 0,
     "blockCount": 7,
     "allowCount": 0,
@@ -134,15 +134,15 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 29844,
-    "ruleCount": 5880,
-    "domainCount": 1336,
+    "rawLineCount": 29867,
+    "ruleCount": 5883,
+    "domainCount": 1337,
     "paramCount": 0,
-    "blockCount": 4410,
+    "blockCount": 4413,
     "allowCount": 1470,
     "redirectCount": 0,
-    "scriptletRuleCount": 2170,
-    "cosmeticHostnameCount": 11027
+    "scriptletRuleCount": 2172,
+    "cosmeticHostnameCount": 11031
   },
   {
     "id": "ruleset_adguard_base_unsafe",
@@ -227,7 +227,7 @@
     "allowCount": 26,
     "redirectCount": 0,
     "scriptletRuleCount": 0,
-    "cosmeticHostnameCount": 63,
+    "cosmeticHostnameCount": 64,
     "hidden": true
   },
   {
@@ -347,7 +347,7 @@
     "allowCount": 138,
     "redirectCount": 0,
     "scriptletRuleCount": 0,
-    "cosmeticHostnameCount": 1115,
+    "cosmeticHostnameCount": 1116,
     "hidden": true
   },
   {
@@ -437,7 +437,7 @@
     "allowCount": 46,
     "redirectCount": 0,
     "scriptletRuleCount": 0,
-    "cosmeticHostnameCount": 208,
+    "cosmeticHostnameCount": 211,
     "hidden": true
   },
   {
@@ -467,7 +467,7 @@
     "allowCount": 50,
     "redirectCount": 0,
     "scriptletRuleCount": 0,
-    "cosmeticHostnameCount": 256,
+    "cosmeticHostnameCount": 259,
     "hidden": true
   },
   {
@@ -527,7 +527,7 @@
     "allowCount": 22,
     "redirectCount": 0,
     "scriptletRuleCount": 0,
-    "cosmeticHostnameCount": 99,
+    "cosmeticHostnameCount": 100,
     "hidden": true
   },
   {
@@ -608,7 +608,7 @@
     "language": "German",
     "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_6_German/filter.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_german.txt",
     "enabled": false,
-    "rawLineCount": 12219,
+    "rawLineCount": 12227,
     "ruleCount": 2595,
     "domainCount": 365,
     "paramCount": 0,
@@ -616,7 +616,7 @@
     "allowCount": 457,
     "redirectCount": 0,
     "scriptletRuleCount": 199,
-    "cosmeticHostnameCount": 3726
+    "cosmeticHostnameCount": 3727
   },
   {
     "id": "ruleset_adguard_german_unsafe",
@@ -642,7 +642,7 @@
     "language": "French",
     "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_16_French/filter.txt",
     "enabled": false,
-    "rawLineCount": 16814,
+    "rawLineCount": 16816,
     "ruleCount": 4263,
     "domainCount": 6280,
     "paramCount": 0,
@@ -855,7 +855,7 @@
     "blockCount": 754,
     "allowCount": 101,
     "redirectCount": 0,
-    "scriptletRuleCount": 26,
+    "scriptletRuleCount": 25,
     "cosmeticHostnameCount": 1053
   },
   {
@@ -1008,7 +1008,7 @@
     ],
     "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt",
     "enabled": false,
-    "rawLineCount": 2989,
+    "rawLineCount": 2988,
     "ruleCount": 901,
     "domainCount": 51,
     "paramCount": 0,
@@ -1178,14 +1178,14 @@
     "locales": [],
     "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/antiadblock.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/antiadblock.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_english.txt",
     "enabled": true,
-    "rawLineCount": 9080,
-    "ruleCount": 1761,
+    "rawLineCount": 9083,
+    "ruleCount": 1762,
     "domainCount": 2358,
     "paramCount": 0,
-    "blockCount": 498,
+    "blockCount": 499,
     "allowCount": 1263,
     "redirectCount": 0,
-    "scriptletRuleCount": 1310,
+    "scriptletRuleCount": 1309,
     "cosmeticHostnameCount": 811
   },
   {
@@ -1210,14 +1210,14 @@
     "firstLanguage": "en",
     "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/specific.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/antiadblock.txt + https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/antiadblock.txt + https://raw.githubusercontent.com/easylist/antiadblockfilters/master/antiadblockfilters/antiadblock_english.txt",
     "enabled": false,
-    "rawLineCount": 3080,
+    "rawLineCount": 3087,
     "ruleCount": 73,
     "domainCount": 0,
     "paramCount": 0,
     "blockCount": 73,
     "allowCount": 0,
     "redirectCount": 0,
-    "scriptletRuleCount": 1226,
+    "scriptletRuleCount": 1230,
     "cosmeticHostnameCount": 1498
   },
   {
@@ -1240,14 +1240,14 @@
     "category": "default",
     "locales": [],
     "enabled": true,
-    "rawLineCount": 4280,
-    "ruleCount": 110,
-    "domainCount": 3815,
+    "rawLineCount": 4305,
+    "ruleCount": 111,
+    "domainCount": 3842,
     "paramCount": 0,
-    "blockCount": 107,
+    "blockCount": 108,
     "allowCount": 3,
     "redirectCount": 0,
-    "scriptletRuleCount": 258,
+    "scriptletRuleCount": 255,
     "cosmeticHostnameCount": 65
   },
   {
