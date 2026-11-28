@@ -4,6 +4,15 @@ Short, per-release summary of what changed — no implementation detail.
 Lives in the project's docs (since 10.1.4 it is no longer shipped inside the
 extension). The full technical account is CHANGELOG_HISTORY.md.
 
+## 11.1.6
+- **Fixed: uBD's "page blocked" page could appear while filtering was paused** — and keep coming back. It showed
+  whenever the browser reported a blocked page load, even when something else had cancelled it (for example Brave
+  moving a page to another container). When filtering is off for that page (site switched off, or the global pause),
+  uBD now stays out of it and the browser's own error page shows instead.
+- **Pausing now refreshes the page you are on.** Starting "Pause filtering…" or switching a site off clears that
+  site's cached copies (its browser cache and the copies its own service worker keeps) and reloads the page, so you
+  see it as it loads without filtering. Cookies, logins and other sites are never touched.
+
 ## 11.1.5
 - **Fixed: pages could freeze with "Maximum call stack size exceeded" where Optimizely is replaced by uBD's stand-in**
   (Bad filter fixes' Optimizely rules) and another script on the page also follows page navigation. The stand-in is

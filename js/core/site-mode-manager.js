@@ -26,8 +26,10 @@
 //   filteringLevelForMode(mode)           — the toolbar/filtering level for a mode
 //   applySiteMode(hostname, mode, tabId, deps) — stores the mode, sets the filtering level, re-registers the
 //                                           content scripts and, given a tab, updates its icon and reloads it
+//                                           (switched OFF: the pause refresh — site caches cleared first)
 //
-// Dependencies: data/ext.js (storage, reloadTab), core/action.js (toolbar icon), data/expected-errors.js.
+// Dependencies: data/ext.js (storage, reloadTab), core/action.js (toolbar icon), data/expected-errors.js,
+//               core/pause-refresh.js (11.1.6: the refresh when a site is switched OFF).
 //
 // State owned:
 //   cache  {Map|null}  — hostname -> mode, mirror of storage key 'siteModes'; lost on SW restart (safe: re-read)
@@ -36,6 +38,7 @@
 import { localRead, localWrite, reloadTab } from '../data/ext.js';
 import { setToolbarIconForLevel } from './action.js';
 import { catchExpected, EXPECTED_ERRORS } from '../data/expected-errors.js';
+import { refreshTabAfterPause } from './pause-refresh.js';
 
 /******************************************************************************/
 
@@ -195,7 +198,15 @@ export async function applySiteMode(hostname, mode, tabId, {
         // browser.tabs.reload(tabId) here — what this line was until this
         // fix — had neither protection, despite needing both for the
         // exact same reason its siblings already do.
-        await reloadTab(tabId, '', true);
+        //
+        // (11.1.6) Switching a site OFF is a pause: it goes through the ONE pause refresh
+        // (js/core/pause-refresh.js), which also clears the site's cached copies before the same reload.
+        // Switching back to BASIC keeps the plain reload.
+        if ( mode === SITE_MODE_OFF ) {
+            await refreshTabAfterPause(tabId);
+        } else {
+            await reloadTab(tabId, '', true);
+        }
     }
     return { mode };
 }

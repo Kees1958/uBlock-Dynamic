@@ -13,7 +13,8 @@
 //      site / host / sub-frame, site-mode gate, loop guard, release, restart survival, LIGHT WAKE-UP PATH (entries read
 //      from storage.session without the startup loaders), isTabBeingSentBack()
 //   6. block page (js/core/block-page.js): a blocked top-frame load is sent to blocked/blocked.html?host=…; not for a
-//      sub-frame, another error, or a tab the guard is sending back; the page is NOT web-accessible
+//      sub-frame, another error, or a tab the guard is sending back; the page is NOT web-accessible; (11.1.6) not for
+//      a page whose filtering is OFF (site switched off, global pause) — but still for a site pinned ON during a pause
 //
 // Outcomes (C38): PASS / FINDINGS (fails) / DID NOT RUN (fails).
 import fs from 'fs';
@@ -51,6 +52,8 @@ function mkArea(store) { return {
     remove: async keys => { for ( const k of (typeof keys === 'string' ? [ keys ] : keys) ) { store.delete(k); } },
 }; }
 globalThis.self = globalThis;
+// (11.1.6) mode-manager.js broadcasts each mode change; a real channel would keep Node running after the test
+globalThis.BroadcastChannel = class { postMessage() {} close() {} };
 globalThis.chrome = globalThis.browser = {
     runtime: { getManifest: () => ({ version: '0.0.0' }), getURL: p => `chrome-extension://test${p}`, lastError: null, id: 'test' },
     storage: { local: mkArea(localStore), session: mkArea(sessionStore) },
@@ -58,6 +61,12 @@ globalThis.chrome = globalThis.browser = {
         update: async (tabId, props) => { updates.push({ tabId, url: props.url }); return {}; },
         remove: async tabId => { removals.push(tabId); },
         onRemoved: { addListener: () => {} },
+        TAB_ID_NONE: -1,
+    },
+    // (11.1.6) the block page reads the filtering mode (js/core/mode-manager.js), which writes the pause rules
+    declarativeNetRequest: {
+        getDynamicRules: async () => [], getSessionRules: async () => [],
+        updateDynamicRules: async () => {}, updateSessionRules: async () => {},
     },
     webNavigation: new Proxy({}, { get: (_, name) => ({
         addListener: fn => { (navListeners[name] ??= []).push(fn); },
@@ -238,6 +247,20 @@ expect(removals.length === 1 && removals[0] === 9 && updates.length === 0,
     `a blocked popup tab was not closed, or also got the block page (removed ${JSON.stringify(removals)}, updates ${JSON.stringify(updates)})`);
 await blockPage.showBlockPageForFailedLoad({ tabId: 10, frameId: 0, url: 'https://s.pemsrv.com/', error: BLOCKED });
 expect(removals.length === 1 && updates.length === 1 && updates[0].tabId === 10, 'a tab no page opened was closed instead of shown the block page');
+// (11.1.6) Filtering OFF for the blocked host: uBD's rules cannot have blocked it, so no block page — not for a site
+// switched off, not during the global pause; a site pinned ON during the global pause is still filtered, so it does.
+const modes = await import(modUrl('js/core/mode-manager.js'));   // same instance block-page.js imports
+function setModes(none, basic) { return modes.setFilteringModeDetails({ none: new Set(none), basic: new Set(basic) }); }
+updates.length = 0;
+await setModes([ 's.pemsrv.com' ], [ 'all-urls' ]);
+await blockPage.showBlockPageForFailedLoad({ tabId: 11, frameId: 0, url: 'https://s.pemsrv.com/', error: BLOCKED });
+expect(updates.length === 0, `block page shown for a site whose filtering is OFF (${JSON.stringify(updates)})`);
+await setModes([ 'all-urls' ], [ 'pinned.example' ]);
+await blockPage.showBlockPageForFailedLoad({ tabId: 11, frameId: 0, url: 'https://s.pemsrv.com/', error: BLOCKED });
+expect(updates.length === 0, `block page shown during the global pause (${JSON.stringify(updates)})`);
+await blockPage.showBlockPageForFailedLoad({ tabId: 12, frameId: 0, url: 'https://pinned.example/', error: BLOCKED });
+expect(updates.length === 1 && updates[0].tabId === 12, 'no block page for a site pinned ON during the global pause');
+await setModes([], [ 'all-urls' ]);   // release: back to the default (filtering on everywhere)
 const bgSource = read('js/workflow/background.js');
 expect((bgSource.match(/webNavigation\.onErrorOccurred\.addListener/g) ?? []).length === 1,
     'background.js must have exactly ONE onErrorOccurred listener (the block page decision)');
@@ -255,4 +278,4 @@ if ( findings.length > 0 ) {
     for ( const f of findings ) { console.log(`  - ${f}`); }
     process.exit(1);
 }
-console.log('PASS: parser, name guard, editor annotation, carriers, send-back (both channels, gates, loop guard, light wake-up), block page, popup closer coordination (10.7.5).');
+console.log('PASS: parser, name guard, editor annotation, carriers, send-back (both channels, gates, loop guard, light wake-up), block page (not when filtering is off, 11.1.6), popup closer coordination (10.7.5).');

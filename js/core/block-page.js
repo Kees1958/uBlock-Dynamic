@@ -11,6 +11,10 @@
 // rule.
 //
 // Coordination (10.7.5 — the ONE onErrorOccurred decision for a blocked top-level load, in this order):
+//   0. (11.1.6) a page whose filtering is OFF (site switched off, or the global pause) is left alone: uBD's rules
+//      cannot have blocked it, so the failure came from elsewhere (Brave, another extension, a browser feature
+//      cancelling the navigation) and uBD's page would wrongly claim it — and keep reappearing during a pause.
+//      The browser's own error page shows instead;
 //   1. a tab the tab-under guard (js/core/tab-under-guard.js) is sending back to its site is left alone —
 //      isTabBeingSentBack() waits for the guard's decision first;
 //   2. a popup tab a page opened moments ago is closed by js/core/blocked-popup-closer.js (10.7.3 behaviour);
@@ -24,6 +28,7 @@
 import { browser } from '../data/ext.js';
 import { isTabBeingSentBack } from './tab-under-guard.js';
 import { closeIfBlockedPopup } from './blocked-popup-closer.js';
+import { getFilteringMode, MODE_NONE } from './mode-manager.js';
 
 // ── Declared constants ────────────────────────────────────────────────────────
 const BLOCK_PAGE_CONFIG = Object.freeze({
@@ -50,6 +55,7 @@ export async function showBlockPageForFailedLoad(details) {
     const C = BLOCK_PAGE_CONFIG;
     const hostname = blockedHostnameOf(details);
     if ( hostname === null ) { return; }
+    if ( await getFilteringMode(hostname) === MODE_NONE ) { return; }   // (11.1.6) filtering off: not uBD's block
     if ( await isTabBeingSentBack(details.tabId) ) { return; }
     if ( closeIfBlockedPopup(details) ) { return; }   // (10.7.5) a blocked popup tab is closed, not shown a page
     const url = `${browser.runtime.getURL(C.PAGE_PATH)}?${C.HOST_PARAM}=${encodeURIComponent(hostname)}`;

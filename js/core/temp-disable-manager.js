@@ -31,8 +31,8 @@
  *   getTempDisableState()            — { active, untilMs?, remainingMs? }
  *                                       untilMs === null means "until
  *                                       browser restart" — no expiry at all.
- *   startTempDisable(minutes)        — begin (or restart) a timed pause
- *   startTempDisableUntilRestart()   — begin (or restart) an indefinite
+ *   startTempDisable(minutes, tabId) — begin (or restart) a timed pause
+ *   startTempDisableUntilRestart(tabId) — begin (or restart) an indefinite
  *                                       pause, ended only by
  *                                       clearTempDisableOnBrowserStartup()
  *   cancelTempDisable()              — end early (e.g. user clicks the panel)
@@ -60,7 +60,11 @@
  * filtered — consistent with how the per-site toggle already interacts
  * with the global default outside of this feature.
  *
- * SCOPE NOTE: does not force-reload already-open tabs. DNR blocking
+ * (11.1.6) The tab the popup was opened on IS refreshed when a pause
+ * starts (site caches cleared, then reloaded — js/core/pause-refresh.js,
+ * shared with the per-site OFF switch). Other open tabs are not:
+ *
+ * SCOPE NOTE: does not force-reload the other already-open tabs. DNR blocking
  * changes take effect immediately for new requests; cosmetic filters and
  * security scriptlets already injected into an already-loaded page keep
  * running until that page reloads or navigates, same tradeoff
@@ -88,6 +92,8 @@ import {
 } from './mode-manager.js';
 
 import { registerContentScripts } from './scripting-manager.js';
+
+import { refreshTabAfterPause } from './pause-refresh.js';
 
 /******************************************************************************/
 
@@ -174,7 +180,7 @@ async function restoreNow() {
 /******************************************************************************/
 
 // Starts (or restarts with a new duration) the temporary global disable.
-export async function startTempDisable(minutes) {
+export async function startTempDisable(minutes, tabId) {
     if ( ALLOWED_DURATIONS_MINUTES.includes(minutes) === false ) {
         throw new Error(`[uBlock-Dynamic] startTempDisable: unsupported duration ${minutes}`);
     }
@@ -201,6 +207,8 @@ export async function startTempDisable(minutes) {
 
     await setDefaultFilteringMode(MODE_NONE);
     await registerContentScripts();
+    // (11.1.6) The page the popup was opened on: site caches cleared, then reloaded (js/core/pause-refresh.js).
+    await refreshTabAfterPause(tabId);
 
     broadcastMessage({ tempDisable: { active: true, untilMs } });
     return { active: true, untilMs, startedAtMs };
@@ -211,7 +219,7 @@ export async function startTempDisable(minutes) {
 // "Until browser restart" — an indefinite pause with no timer at all;
 // only a genuine browser restart (browser.runtime.onStartup, see
 // clearTempDisableOnBrowserStartup() below) ever ends it automatically.
-export async function startTempDisableUntilRestart() {
+export async function startTempDisableUntilRestart(tabId) {
     const existing = await readState();
     const previousDefaultMode = existing !== null
         ? existing.previousDefaultMode
@@ -230,6 +238,8 @@ export async function startTempDisableUntilRestart() {
 
     await setDefaultFilteringMode(MODE_NONE);
     await registerContentScripts();
+    // (11.1.6) Same pause refresh as the timed pause above.
+    await refreshTabAfterPause(tabId);
 
     broadcastMessage({ tempDisable: { active: true, untilMs: null } });
     return { active: true, untilMs: null, startedAtMs };

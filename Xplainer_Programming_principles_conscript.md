@@ -1360,7 +1360,7 @@ adds or removes a permission.
 | `contextMenus` | The right-click items | `background.js` |
 | `webNavigation` | Block page, closing blocked popups, the tab-under guard, per-navigation custom scriptlets | `block-page.js`, `blocked-popup-closer.js`, `tab-under-guard.js`, `custom-scriptlets.js` |
 | `webRequest` | Observing (never blocking) requests while the Matrix panel is open | `core/matrix-panel.js` |
-| `browsingData` | Clear browsing history at start | `history-cleaner.js` |
+| `browsingData` | Clear browsing data at start; when a pause starts, the paused site's own HTTP cache and Cache Storage (11.1.6) | `history-cleaner.js`, `pause-refresh.js` |
 | host `<all_urls>` | A content blocker runs on every site | — |
 
 Optional permissions (C36) are preferred for a **new** feature that not everyone uses; converting an existing required

@@ -873,6 +873,13 @@ await run('97. uBO scriptlet arguments — translated for AdGuard, same decision
     execFileSync(process.execPath, [ 'tools/test-ubo-scriptlet-args.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
 
+// ── 98. Pause refresh (11.1.6, owner's request 2026-11-28) ────────────
+// The page the user pauses on: its own site's caches cleared, then reloaded — for the global pause and the per-site
+// OFF switch alike (fault-verified: fails without the clear, the reload, or either entry point's call).
+await run('98. Pause refresh — paused page\'s site caches cleared, then reloaded; both pause entry points (11.1.6)', () => {
+    execFileSync(process.execPath, [ 'tools/test-pause-refresh.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+
 // ── Summary ───────────────────────────────────────────────────────────
 console.log(`\n${'═'.repeat(70)}\nSUMMARY\n${'═'.repeat(70)}`);
 for ( const r of results ) {

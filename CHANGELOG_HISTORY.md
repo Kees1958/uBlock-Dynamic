@@ -17,6 +17,39 @@ exception: every tools version still gets at least a one-line
 Entries below 9.7.1 were all written under the older every-version
 convention and are kept as they are.
 
+## 11.1.6 — Block page stays out of paused pages; pause refresh (owner's request 2026-11-28)
+**Source version.** Working from 11.1.5 as committed (extension 11.1.5 / tools 3.0.11 / docs 11.1.5, GitHub
+Kees1958/uBlock-Dynamic 2a52567). **tools 3.0.12:** new `tools/test-pause-refresh.mjs` (complete check 98);
+`tools/test-tab-under-guard.mjs` gains the paused-host cases (mocked DNR + BroadcastChannel).
+
+**Why.** Owner's report: in Brave with Containers, uBD's block page appeared and kept appearing while uBD was paused;
+it disappeared once the CMP the page redirected to was put in the same container. Analysis: `block-page.js` reacts
+to EVERY top-frame `net::ERR_BLOCKED_BY_CLIENT` (Chrome does not say who blocked), and did not look at the filtering
+mode — so a cancel from Brave, another extension or a browser feature was shown as uBD's block, pause or not. Cause in
+Brave not verified (no documentation found on how Containers cancel a cross-container navigation).
+
+**1. Block page: filtering-off guard (`js/core/block-page.js`).** New step 0 of the ONE onErrorOccurred decision:
+`getFilteringMode(hostname) === MODE_NONE` → return. Covers a site switched OFF and the global pause (`all-urls` in
+`none`); a site pinned BASIC during the global pause is still filtered, so it still gets the page. The browser's own
+error page shows instead.
+
+**2. Pause refresh (`js/core/pause-refresh.js`, new).** `refreshTabAfterPause(tabId)`: the tab's web origin only →
+`browsingData.remove({ origins: [origin] }, { cache, cacheStorage })`, then `reloadTab(tabId, '', true)` (the existing
+delay + bypassCache). Switches and data types declared once in `PAUSE_REFRESH_CONFIG`; `serviceWorkers` off by
+default (removing a worker also ends the site's push notifications). Guards: bad/missing tab id, closed tab and
+non-web pages do nothing; a failed clear is logged and the reload still happens. No state, no resources held.
+Consumers (one fact — "filtering just went off for this page" — one implementation):
+`temp-disable-manager.js` `startTempDisable(minutes, tabId)` / `startTempDisableUntilRestart(tabId)` (after the
+rules and content scripts are updated), with the tab id sent by `popup/temp-disable-ui.js` (`getCurrentTabId()` from
+`popup.js`) through `temp-disable-routes.js`; `site-mode-manager.js` `applySiteMode()` for `SITE_MODE_OFF` (replaces its
+plain reload; BASIC keeps it). Not changed: `site-mode-apply.js` (bulk/restore — never reloaded, by design) and the end
+of a pause (filtering comes back; nothing cached needs clearing).
+
+**Known limitations.** A per-site pause covers that site's own domain: a top-frame redirect to another domain (e.g. a
+CMP) is a new page load on that domain and is filtered normally — if a uBD `$document`/`$all` rule matches there, the
+block page is genuine. Requests from Workers are still not reliably exempted (Chrome, see `ext-compat.js`). Only the
+popup's tab is refreshed; other open tabs keep their state until reloaded.
+
 ## 11.1.5 — Optimizely surrogate synced to uBO 74bcea2, full filter update (owner's request 2026-11-26)
 **Source version.** Working from 11.1.4 as committed (extension 11.1.4 / tools 3.0.11 / docs 11.1.4, GitHub
 Kees1958/uBlock-Dynamic b85ed86). Tools unchanged (3.0.11).

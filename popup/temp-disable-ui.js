@@ -16,7 +16,7 @@
 
 import { sendMessage } from '../js/data/ext.js';
 import { dom, qs$ } from '../js/ui/dom.js';
-import { setTempDisableActive } from './popup.js';
+import { getCurrentTabId, setTempDisableActive } from './popup.js';
 
 /******************************************************************************/
 
@@ -265,7 +265,7 @@ dom.on('#tempDisableConfirmBtn', 'click', async ev => {
     const confirmBtn = ev.currentTarget;
     confirmBtn.disabled = true;   // guard against a double-submit while the request is in flight
     try {
-        const resp = await sendMessage({ what: 'tempDisableStart', minutes: selectedMinutes });
+        const resp = await sendMessage({ what: 'tempDisableStart', minutes: selectedMinutes, tabId: getCurrentTabId() });
         closeModal();
         if ( resp?.active ) { applyActiveState(resp.untilMs, resp.startedAtMs); }
     } finally {
@@ -281,7 +281,7 @@ dom.on('#tempDisableUntilRestartBtn', 'click', async ev => {
     const btn = ev.currentTarget;
     btn.disabled = true;   // guard against a double-submit while the request is in flight
     try {
-        const resp = await sendMessage({ what: 'tempDisableStartUntilRestart' });
+        const resp = await sendMessage({ what: 'tempDisableStartUntilRestart', tabId: getCurrentTabId() });
         closeModal();
         if ( resp?.active ) { applyActiveState(resp.untilMs, resp.startedAtMs); }
     } finally {

@@ -47,11 +47,11 @@ export async function handleTempDisableGet() {
 }
 
 export async function handleTempDisableStart(request) {
-    return startTempDisable(request.minutes);
+    return startTempDisable(request.minutes, request.tabId);
 }
 
-export async function handleTempDisableStartUntilRestart() {
-    return startTempDisableUntilRestart();
+export async function handleTempDisableStartUntilRestart(request) {
+    return startTempDisableUntilRestart(request.tabId);
 }
 
 export async function handleTempDisableCancel() {

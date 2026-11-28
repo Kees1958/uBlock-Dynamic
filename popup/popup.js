@@ -89,6 +89,12 @@ function renderState(isOff = false) {
 // Called by temp-disable-ui.js whenever the global pause starts, ends
 // early, or expires — re-renders using whatever the current site's own
 // isOff state already was, so this never has to re-fetch it.
+// (11.1.6) The tab this popup was opened on — sent with a pause so the background can refresh that page
+// (js/core/pause-refresh.js). undefined until init() has read the tab; the background ignores a missing id.
+export function getCurrentTabId() {
+    return currentTab.id;
+}
+
 export function setTempDisableActive(active) {
     tempDisableActive = active;
     renderState(lastIsOff);
