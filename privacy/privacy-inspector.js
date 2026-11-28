@@ -8,6 +8,7 @@
 // one mechanism, not a JS import here and a script tag everywhere else.
 
 import { createInfoDropdown } from '../js/ui/info-tooltip.js';
+import { BROADCAST_CHANNEL_NAME } from '../js/data/broadcast.js';
 import { sendMessage } from '../js/data/ext.js';
 import { DEFAULT_SESSION_TIMEOUT_MS } from '../js/data/timing-constants.js';
 import { LOGICAL_LABELS, getScriptletRuleRisk, RISK_HIGH, RISK_MEDIUM, RISK_LOW } from '../js/data/scriptlet-rule-labels.js';
@@ -790,7 +791,7 @@ blockMediumButton.addEventListener('click', blockMedium);
 resumeButton.addEventListener('click', resume);
 exitButton.addEventListener('click', stopInspectorAndCloseWindow);
 
-const broadcastChannel = new BroadcastChannel('uBOL');
+const broadcastChannel = new BroadcastChannel(BROADCAST_CHANNEL_NAME);
 broadcastChannel.onmessage = event => {
     const message = event.data;
     if ( message?.what === MSG_PRIVACY_INSPECTOR_ENTRY ) {

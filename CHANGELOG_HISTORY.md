@@ -19,7 +19,7 @@ convention and are kept as they are.
 
 ## 11.1.6 — Block page stays out of paused pages; pause refresh (owner's request 2026-11-28)
 **Source version.** Working from 11.1.5 as committed (extension 11.1.5 / tools 3.0.11 / docs 11.1.5, GitHub
-Kees1958/uBlock-Dynamic 2a52567). **tools 3.0.12:** new `tools/test-pause-refresh.mjs` (complete check 98);
+Kees1958/uBlock-Dynamic 2a52567). **tools 3.0.12:** new `tools/test-pause-refresh.mjs` (complete check 98) and `tools/test-broadcast-channel.mjs` (99);
 `tools/test-tab-under-guard.mjs` gains the paused-host cases (mocked DNR + BroadcastChannel).
 
 **Why.** Owner's report: in Brave with Containers, uBD's block page appeared and kept appearing while uBD was paused;
@@ -44,6 +44,15 @@ rules and content scripts are updated), with the tab id sent by `popup/temp-disa
 `popup.js`) through `temp-disable-routes.js`; `site-mode-manager.js` `applySiteMode()` for `SITE_MODE_OFF` (replaces its
 plain reload; BASIC keeps it). Not changed: `site-mode-apply.js` (bulk/restore — never reloaded, by design) and the end
 of a pause (filtering comes back; nothing cached needs clearing).
+
+**3. One sending BroadcastChannel (`js/data/broadcast.js`).** Found during the analysis: `broadcastMessage()` did
+`new BroadcastChannel('uBOL')` on EVERY call and never closed it — one leaked channel per message, i.e. per observed
+request while the Matrix panel or Privacy inspector runs (B10: init / clear / release). Now: module state
+`sendChannel`, opened on first send by `openSendChannel()`, reused; `releaseBroadcastChannel()` closes it and clears
+the reference (no-op when nothing is open; the browser also releases it when the worker stops). The channel name is
+`BROADCAST_CHANNEL_NAME`, exported once and imported by `matrix/matrix-panel.js` (had its own copy) and
+`privacy/privacy-inspector.js` (had the bare literal). Receivers unchanged — both already close their channel when they
+end. Test: `tools/test-broadcast-channel.mjs` (complete check 99, real Node BroadcastChannel, fault-verified).
 
 **Known limitations.** A per-site pause covers that site's own domain: a top-frame redirect to another domain (e.g. a
 CMP) is a new page load on that domain and is filtered normally — if a uBD `$document`/`$all` rule matches there, the

@@ -81,6 +81,7 @@
 
 import { dom, qs$ } from '../js/ui/dom.js';
 import { sendMessage } from '../js/data/ext.js';
+import { BROADCAST_CHANNEL_NAME } from '../js/data/broadcast.js';   // the SW -> panel channel's ONE name
 import { loadRulesetDetailsMap } from '../js/data/ruleset-details-loader.js';
 import { isDescendantHostnameOfIter } from '../js/util/utils.js';
 import { DEFAULT_SESSION_TIMEOUT_MS } from '../js/data/timing-constants.js';
@@ -219,8 +220,6 @@ const STOP_MESSAGE_TIMEOUT_MS = 1500;
 // own PRIVACY_INSPECTOR_POLL_MS.
 const MATRIX_POLL_MS = 15000;
 
-// The SW -> panel BroadcastChannel (js/data/broadcast.js sends on the same name).
-const BROADCAST_CHANNEL_NAME = 'uBOL';
 
 /* ══════════════════════════════════════════════════════════════
    3. DOM REFERENCES

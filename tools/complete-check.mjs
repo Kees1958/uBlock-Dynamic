@@ -880,6 +880,13 @@ await run('98. Pause refresh — paused page\'s site caches cleared, then reload
     execFileSync(process.execPath, [ 'tools/test-pause-refresh.mjs' ], { stdio: 'inherit', cwd: ROOT });
 });
 
+// ── 99. Broadcast channel (11.1.6) ───────────────────────────────────
+// The service worker sends on ONE BroadcastChannel, opened on first use, reused, released by its guard; one shared
+// channel name (fault-verified: the pre-11.1.6 broadcast.js opened a channel per message and fails it).
+await run('99. Broadcast channel — one sending channel, reused and released, one shared name (11.1.6)', () => {
+    execFileSync(process.execPath, [ 'tools/test-broadcast-channel.mjs' ], { stdio: 'inherit', cwd: ROOT });
+});
+
 // ── Summary ───────────────────────────────────────────────────────────
 console.log(`\n${'═'.repeat(70)}\nSUMMARY\n${'═'.repeat(70)}`);
 for ( const r of results ) {

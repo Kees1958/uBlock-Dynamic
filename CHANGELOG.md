@@ -12,6 +12,8 @@ extension). The full technical account is CHANGELOG_HISTORY.md.
 - **Pausing now refreshes the page you are on.** Starting "Pause filtering…" or switching a site off clears that
   site's cached copies (its browser cache and the copies its own service worker keeps) and reloads the page, so you
   see it as it loads without filtering. Cookies, logins and other sites are never touched.
+- **Fixed: a small memory leak in the background.** Every live update to the Matrix panel, the Privacy inspector or
+  the popup opened a new message channel that was never closed; uBD now uses one channel and reuses it.
 
 ## 11.1.5
 - **Fixed: pages could freeze with "Maximum call stack size exceeded" where Optimizely is replaced by uBD's stand-in**
