@@ -4,6 +4,14 @@ Short, per-release summary of what changed — no implementation detail.
 Lives in the project's docs (since 10.1.4 it is no longer shipped inside the
 extension). The full technical account is CHANGELOG_HISTORY.md.
 
+## 11.1.7
+- **CNN video ads stopped.** CNN's clips now get their ads stitched into the video by CNN's own server; the filter
+  lists only removed the ad bookkeeping, so the ad still played. Two new Bad filter fixes rules block the
+  ad-stitched version of the video, so CNN's player should fall back to its
+  ad-free version (checked against CNN's own player data; not yet verified on the live site). The two CNN scriptlet rules
+  are back in the list as well.
+- **Only Bad filter fixes was refreshed** (2026-11-28); every other filter list is unchanged from 11.1.6.
+
 ## 11.1.6
 - **Fixed: uBD's "page blocked" page could appear while filtering was paused** — and keep coming back. It showed
   whenever the browser reported a blocked page load, even when something else had cancelled it (for example Brave

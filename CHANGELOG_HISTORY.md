@@ -17,6 +17,28 @@ exception: every tools version still gets at least a one-line
 Entries below 9.7.1 were all written under the older every-version
 convention and are kept as they are.
 
+## 11.1.7 — CNN SSAI video ads; Quick-fixes-only filter update (owner's report 2026-11-28)
+**Source version.** Working from 11.1.6 as committed (extension 11.1.6 / tools 3.0.12 / docs 11.1.6, GitHub
+Kees1958/uBlock-Dynamic 8dc0d3e). **tools 3.0.13:** `stepScriptletAssets()` (tools/build/build-steps.mjs) now adds the
+scriptlet names that carried-over lists' data files call to the used names before the corelibs are trimmed, and keeps
+those lists' rows in `ag-scriptlets-rules.json`.
+
+**Why.** CNN in-video ads were back. Live diagnosis on edition.cnn.com: the bolt player (wrapped by FAVE) fetches
+`…/playback/v1/playbackInfo`; its reply has `manifest` (`type: "ssai"`, `…/dash.mpd?rtype=s…`, ad stitched in by the
+server, FreeWheel pre-roll) and `fallback.manifest` (`type: "single-video"`, `…_fallback.mpd`, no ads). AdGuard's
+`json-prune-fetch-response('ssaiInfo fallback.ssaiInfo', '', 'playbackInfo')` ran (initiator "scriptlet") but only
+removes the ad timeline/beacons, so the ad still played. `disable-fave-ssai` (tested in a local 11.1.7 build) set
+every `FAVE.settings.ads.ssai.prod.*.enabled` to false without effect: the server decides.
+
+**What.** Owner's Quick-fixes list: `||prd.media.max.com^*/dash.mpd?rtype=s$domain=cnn.com` and
+`||prd.media.cnn.com^*/dash.mpd?rtype=s$domain=cnn.com` (both CDNs the reply names), plus the two CNN scriptlet lines
+again. Only the Quick-fixes list was rebuilt: every other list was made to fail on purpose so the build's own
+carry-over kept its 11.1.6 output byte for byte. That run exposed the tools bug fixed above (the trimmed corelibs
+missed functions only carried-over lists call; the build stopped with "no function source for …").
+
+**Known limitations.** Relies on the player switching to `fallback.manifest` when the SSAI manifest fails to load.
+Live streams (Watch) are stitched server-side without a fallback and are not covered.
+
 ## 11.1.6 — Block page stays out of paused pages; pause refresh (owner's request 2026-11-28)
 **Source version.** Working from 11.1.5 as committed (extension 11.1.5 / tools 3.0.11 / docs 11.1.5, GitHub
 Kees1958/uBlock-Dynamic 2a52567). **tools 3.0.12:** new `tools/test-pause-refresh.mjs` (complete check 98), `tools/test-broadcast-channel.mjs` (99), `tools/test-remove-node-text.mjs` (100), `tools/e2e-scriptlets.mjs` (101) and `tools/test-scriptlet-args.mjs` (102);

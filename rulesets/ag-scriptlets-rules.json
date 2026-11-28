@@ -1,6 +1,26 @@
 [
   {
     "hostnames": [
+      "cnn.com"
+    ],
+    "name": "disable-fave-ssai",
+    "args": [],
+    "ruleset": "ruleset_badfilter_quickfixes"
+  },
+  {
+    "hostnames": [
+      "cnn.com"
+    ],
+    "name": "stub-window-object",
+    "args": [
+      "AdFuel",
+      "queueRegistry,destroySlots",
+      "500"
+    ],
+    "ruleset": "ruleset_badfilter_quickfixes"
+  },
+  {
+    "hostnames": [
       "1800contacts.com"
     ],
     "name": "set-cookie",

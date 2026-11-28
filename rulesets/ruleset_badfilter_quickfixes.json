@@ -28,6 +28,34 @@
     }
   },
   {
+    "id": 1498412,
+    "priority": 600000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cnn.com"
+      ],
+      "urlFilter": "||prd.media.max.com^*/dash.mpd?rtype=s",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
+    "id": 894361,
+    "priority": 600000,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "cnn.com"
+      ],
+      "urlFilter": "||prd.media.cnn.com^*/dash.mpd?rtype=s",
+      "isUrlFilterCaseSensitive": false
+    }
+  },
+  {
     "id": 169469,
     "priority": 600000,
     "action": {

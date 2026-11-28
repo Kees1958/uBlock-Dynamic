@@ -698,15 +698,25 @@ export async function stepCompileLists(ctx) {
 
 /******************************************************************************/
 // Build step 3 of 9 — SCRIPTLET_ASSETS: write the combined scriptlet-rules file, the trimmed AdGuard corelibs, the custom-scriptlet dispatch and the safe-region exclude file.
-// Reads from ctx : rulesetDir, allScriptletRules, usedScriptletNames
-// Writes to ctx  : (nothing)
+// Reads from ctx : rulesetDir, allScriptletRules, usedScriptletNames, previousBuild, carriedOverIds
+// Writes to ctx  : (adds carried-over lists' scriptlet names to usedScriptletNames)
 // Body moved VERBATIM from the old single build() (phase 2, audit after
 // 9.7.5) — proven byte-identical in output and console by a replayed build.
 export async function stepScriptletAssets(ctx) {
-    const { rulesetDir, allScriptletRules, usedScriptletNames } = ctx;
+    const { rulesetDir, allScriptletRules, usedScriptletNames, previousBuild, carriedOverIds } = ctx;
     // Write combined AG scriptlet rules (kept for backward compat / debugging)
     const scriptletRulesPath = path.join(rulesetDir, 'ag-scriptlets-rules.json');
-    await fs.writeFile(scriptletRulesPath, JSON.stringify(allScriptletRules, null, 2), 'utf8');
+    // (tools 3.0.13) A carried-over list keeps its previous scriptlet data file, so (1) its rows stay in this record
+    // (read from the previous record before it is overwritten) and (2) the names its data file calls are added to the
+    // used names BEFORE the corelibs are trimmed — without that, the trimmed corelibs lacked every function only a
+    // carried-over list calls and stepWriteScriptletFiles() stopped ("no function source for …").
+    const carriedRecordRows = carriedOverIds.size === 0 ? [] :
+        (await readJsonOr(scriptletRulesPath, [])).filter(r => carriedOverIds.has(r?.ruleset));
+    for ( const entry of previousBuild.scriptletFiles ) {
+        if ( carriedOverIds.has(entry.id) === false ) { continue; }
+        for ( const n of await readCarriedOverScriptletNames(entry) ) { usedScriptletNames.add(n); }
+    }
+    await fs.writeFile(scriptletRulesPath, JSON.stringify([ ...allScriptletRules, ...carriedRecordRows ], null, 2), 'utf8');
     console.log(`\nAG scriptlet rules: ${allScriptletRules.length} total, ${usedScriptletNames.size} unique scriptlets`);
 
     // Build trimmed corelibs (for shipped filter-list scriptlets) and the

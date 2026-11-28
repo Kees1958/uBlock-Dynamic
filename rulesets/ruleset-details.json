@@ -55,14 +55,14 @@
     "locales": [],
     "url": "https://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/refs/heads/master/badfilter-quick-fixes.txt",
     "enabled": true,
-    "rawLineCount": 10,
-    "ruleCount": 4,
+    "rawLineCount": 14,
+    "ruleCount": 6,
     "domainCount": 0,
     "paramCount": 0,
-    "blockCount": 2,
+    "blockCount": 4,
     "allowCount": 2,
     "redirectCount": 0,
-    "scriptletRuleCount": 0,
+    "scriptletRuleCount": 2,
     "cosmeticHostnameCount": 1
   },
   {
