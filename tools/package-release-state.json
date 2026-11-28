@@ -1,17 +1,17 @@
 {
   "docs": {
-    "hash": "163c60a471ac6babef410ced82a0ae9b8aa9fff306f29855a955d32ae4ac30df",
-    "version": "11.1.5",
-    "files": 17
+    "hash": "b61fe98b6e3c6fabdd965520f154a44413517f1e22906620c0fe08321d7f36db",
+    "version": "11.1.6",
+    "files": 18
   },
   "tools": {
-    "hash": "cbbfa89b81000de9dd7dbae13e99d5d13dbf6a7497a2b5c3929e1448b9ce46fb",
-    "version": "3.0.11",
-    "files": 162
+    "hash": "8a292a8e6ca46d0bd007fd62cc9299135375e029ab4434b632aa440700bddb81",
+    "version": "3.0.12",
+    "files": 167
   },
   "extension": {
-    "hash": "8e12f4caebd055dcec0ee3415bd39bd832b6d0d258745cbbf539a7ba169c1e8f",
-    "version": "11.1.5",
+    "hash": "a56aa3153b9c901c2658860acfeb6988ee462ce7cd0f964ca25f8af073dec63e",
+    "version": "11.1.6",
     "files": 532,
     "shippedPermissions": {
       "permissions": [

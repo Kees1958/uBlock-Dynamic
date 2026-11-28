@@ -79,6 +79,9 @@ const DOC_FILES = [
     // project documents only — never part of the extension upload.
     'README.md',
     'PRIVACY.md',
+    // (11.1.6) Standing scriptlet semantics audit record — required at every major version (principles doc, "Scriptlet
+    // semantics audit at every major version"). Project documentation, never part of the extension upload.
+    'SCRIPTLET_AUDIT.md',
     // Working performance-optimization tracker — analysis + implementation
     // plan, same genre as the Xplainer_* files and the proposal doc above.
     // Added here for the same reason: keeps guardInit()'s drift check
